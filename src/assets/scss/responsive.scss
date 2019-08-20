@@ -113,9 +113,9 @@
     margin-top: 100px;
   }
   .home-two {
-    background-size: auto;
+    // background-size: auto;
     padding-bottom: 0;
-    height: auto !important;
+    // height: auto !important;
   }
 
   .contact-right {
@@ -235,7 +235,7 @@
     }
   }
   .home-two {
-    background-size: auto;
+    // background-size: auto;
   }
   .home-three {
     background-size: cover;
@@ -2797,4 +2797,147 @@
     top: 0;
     margin-top: 0;
   }
+}
+
+
+// Phuong's CSS customize
+
+@media(max-width: 1200px) {
+  .bg_wave {
+    width: 100%;
+    position: relative;
+    top: -60px;
+  }
+  .fe_wrap_video {
+    background-image: url(./images/home2/bg_video.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 280px;
+    text-align: center;
+    line-height: 280px;
+    padding: 140px 0;
+  }
+
+  .line_box_left1{
+    position: absolute;
+    top: 130px;
+    right: -75px;
+    width: 75px;
+  }
+  .line_box_left2{
+    position: absolute;
+    top: 65px;
+    right: -40px;
+    width: 40px;
+  }
+  .line_box_left3{
+    position: absolute;
+    top: -5px;
+    right: -75px;
+    width: 75px;
+  }
+  
+  .line_box_right1{
+    position: absolute;
+    top: 130px;
+    left: -75px;
+    width: 75px;
+  }
+  .line_box_right2{
+    position: absolute;
+    top: 65px;
+    left: -51px;
+    width: 50px;
+  }
+  .line_box_right3{
+    position: absolute;
+    top: 60px;
+    left: -75px;
+    width: 75px;
+  }
+}
+
+@media(max-width: 991px) {
+  .bg_wave {
+    width: 100%;
+    position: relative;
+    top: -45px;
+  }
+  .btn_header_mb{
+    display: block;
+    // position: relative;
+  }
+  .btn_header{
+    display: none;
+  }
+  .tag_line_home {
+    width: 100%;
+  }
+  .report_wrap ul {
+    width: 80%;
+  }
+  .img_kl {
+    width: 230px;
+    position: absolute;
+    bottom: -65px;
+  }
+  // Css for SS2 - Feature list
+  .fe_line_box{
+    display: none;
+  }
+  .fe_box_left_center{
+    margin-right: 0;
+  }
+  .fe_box_right_center{
+    margin-left: 0;
+  }
+  .fe_wrap_left ul li{
+    text-align: left;
+  }
+  .fe_wrap_video {
+    background-size: 280px;
+    text-align: center;
+    line-height: 300px; 
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media(max-width: 768px) {
+  .bg_wave {
+    width: 100%;
+    position: relative;
+    top: -35px;
+  }
+  .wrap_ss1_left{
+    display: none;
+  }
+  .report_wrap ul {
+    width: 100%;
+  }
+  .tag_line_home h1 {
+    margin-top: 70px;
+  }
+}
+
+@media(max-width: 576px) {
+.bg_wave {
+  width: 100%;
+  position: relative;
+  top: -25px;
+}
+.title_lud{
+  max-width: 100%;
+}
+  
+.ss1_report {
+  margin-right: 30px;
+}
+
+.feature_lud .container .row{
+  margin-right: 0;
+  margin-left: 0;
+}
+
 }

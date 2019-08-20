@@ -77,22 +77,20 @@
     }
 
     h1 {
-      line-height: 28px;
-      font-size: 63px;
+      line-height: 36px;
+      font-size: 38px;
       margin-top: 25px;
       margin-bottom: 40px;
       color: $color_bright_turquoise;
-      text-transform: uppercase;
       font-weight: 300;
     }
 
     h2 {
       line-height: 28px;
-      font-size: 30px;
+      font-size: 36px;
       font-weight: 300;
       margin-bottom: 32px;
       color: $color_tundora;
-      text-transform: uppercase;
       letter-spacing: 4px;
     }
 
@@ -166,7 +164,7 @@
     }
 
     section {
-      overflow: hidden;
+      // overflow: hidden;
     }
 
     .navbar-light {
@@ -2985,3 +2983,280 @@
         margin-left: 15px;
       }
     }
+
+    // Phuong's CSS
+
+    // CSS for Header
+    .btn_header_mb{
+      display: none;
+    }
+    .btn_header{
+      position: absolute;
+      right: 40px;
+    }
+    .btn_login{
+      border-radius: 50px;
+      background-color: white;
+      color: $color_bright_turquoise !important;
+      padding: 3px 15px;
+      font-size: 14px;
+    }
+    .flag_menu{
+      margin-left: 15px;
+      color: #fff;
+    }
+    .flag_menu img{
+      height: 15px;
+      border: 1px solid #fff;
+
+    }
+    // CSS for SS1
+    .con_ss1 {
+      height: 100%;
+    }
+    .con_ss1 .row{
+      height: 100%;
+    }
+    .tag_line_home{
+      width: 70%;
+    }
+    .tag_line_home h1{
+      color: white;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      line-height: 40px;
+
+    }
+    .btn_white{
+      background-color: #fff;
+      color: $color_bright_turquoise;
+      font-size: 14px;
+      border-radius: 50px;
+      padding: 10px 25px;
+      cursor: pointer;
+      border: none;
+      background-size: 300% 100%;
+      transition: all .4s ease-in-out;
+    }
+    .btn_white:hover{
+      background-image: linear-gradient(to bottom, rgb(255, 192, 102), rgb(245, 161, 41));
+      color: white;
+      box-shadow: 0px 3.5px 10.5px 0 rgba(0, 0, 0, 0.05);
+    }
+    .img_kl{
+      width: 260px;
+      position: absolute;
+      bottom: -74px;
+    }
+    .report_wrap ul{
+      border: 1px solid #2e2c2d;
+      border-radius: 3px;
+      width: 60%;
+      padding: 0;
+    }
+    .ss1_report{
+      position: absolute;
+      bottom: 20px;
+    }
+    .report_wrap ul li{
+      display: table-cell;
+      width: 30%;
+      padding: 0px 10px;
+    }
+    .report_wrap ul li label{
+      font-size: 12px;
+      opacity: 0.7;
+      line-height: 1.1em !important;
+    }
+    .report_wrap h2{
+      font-size: 26px;
+      font-weight: 700;
+      margin:6px 0 2px 0;
+    }
+    .report_wrap .li_line{
+      border-right: 1px solid #2e2c2d;
+    }
+
+// CSS for Section 2 - Feature list
+.feature_lud{
+  background-color: #f7f7f7;
+}
+.title_lud{
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 70%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.title_lud h1{
+  color: #364551;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+}
+.title_lud span{
+  font-size: 14px;
+  color: #707070;
+  font-weight: 200;
+}
+.focus_text{
+  color: $color_bright_turquoise !important;
+  font-weight: 600;
+}
+.fe_wrap_video{
+  background-image: url(./images/home2/bg_video.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 300px;
+  min-height: 300px;
+  // background-color: red;
+  text-align: center;
+  line-height: 300px;
+  padding: 65px 0;
+}
+.fe_wrap_video img{
+  vertical-align: middle;
+  width: 120px;
+}
+.fe_wrap_left ul{
+  padding: 0;
+}
+.fe_wrap_right ul{
+  padding: 0;
+}
+.fe_wrap_left ul li{
+  padding: 15px;
+  margin-bottom: 15px;
+  text-align: right;
+  position: relative;
+}
+.fe_wrap_right ul li{
+  padding: 15px;
+  margin-bottom: 15px;
+  text-align: left;
+  position: relative;
+}
+.fe_box_left_center {
+  margin-right: 20px;
+}
+.fe_box_right_center {
+  margin-left: 20px;
+}
+.fe_box{
+  border-radius: 3px;
+  border: solid 1px rgba(227, 227, 233, 0.9);
+  background-color: $white;
+}
+.fe_box h3{
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0 0 7px 0;
+}
+.fe_box p{
+  font-size: 0.8em;
+  color: #898989;
+  font-weight: 300;
+  line-height: 1.4 !important;
+  margin-bottom: 0;
+  text-transform: none;
+}
+.no_pad{
+  padding: 0;
+}
+.line_box_left1{
+  position: absolute;
+  top: 75px;
+  right: -75px;
+  width: 75px;
+}
+.line_box_left2{
+  position: absolute;
+  top: 65px;
+  right: -51px;
+  width: 50px;
+}
+.line_box_left3{
+  position: absolute;
+  top: -10px;
+  right: -75px;
+  width: 75px;
+}
+
+.line_box_right1{
+  position: absolute;
+  top: 75px;
+  left: -75px;
+  width: 75px;
+}
+.line_box_right2{
+  position: absolute;
+  top: 65px;
+  left: -51px;
+  width: 50px;
+}
+.line_box_right3{
+  position: absolute;
+  top: 20px;
+  left: -75px;
+  width: 75px;
+}
+
+// CSS for SS3: Multiple Industrial
+.industry{
+  background-color: #edf2fd;
+  padding-top: 0px;
+}
+.bg_wave{
+  width: 100%;
+  position: relative;
+  top: -80px;
+}
+.box_industry{
+  text-align: center;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: all .5s ease-in-out;
+}
+.box_industry:hover{
+  background: #fff;
+  box-shadow: 0px 1px 25px 0 rgba(0, 0, 0, 0.1);
+  transition: all .4s ease-in-out;
+}
+
+.box_industry h3{
+  margin-top: 15px;
+}
+
+.box_industry img{
+  width: 100%;
+  transform: scale(1);
+  transition: transform 1s, filter 3s ease-in-out;
+}
+.box_industry img:hover{
+  width: 100%;
+  transform: scale(1.05);
+  transition: transform 1s, filter 3s ease-in-out;
+}
+
+// CSS for SS3: Pricing table
+.pricing_lud{
+  background-color: #2f3c4e;
+}
+.pricing_lud .title_lud h1{
+  color: #fff;
+}
+.pricing_lud .title_lud span{
+  color: #fff;
+  opacity: 0.8;
+}
+.wrap_hiw{
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  max-width: 65%;
+  margin: 0 auto;
+}
+.hiw_content img{
+  width: 30px;
+  margin-right: 10px;
+}
