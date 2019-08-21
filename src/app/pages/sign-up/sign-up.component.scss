@@ -1,0 +1,59 @@
+.fix-boder {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.one-line {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.blue-text {
+    color: blue;
+}
+
+.title-input {
+    font-size: 0.8rem;
+}
+
+.header-form {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.descrition-page {}
+
+.header-page {
+    margin-bottom: 32px;
+}
+
+.one-item {
+    margin-top: 10px;
+}
+
+.fix-boder {
+    width: 100%;
+}
+
+.form-input-2 select {
+    width: 100%;
+}
+
+.form-input-1 select {
+    width: 100%;
+}
+
+.sugest-name p {
+    font-size: 0.8rem;
+}
+
+.invalid-feedback {
+    font-size: 80%;
+    color: #dc3545;
+}
+
+.is-invalid {
+    border: 1px solid red;
+}

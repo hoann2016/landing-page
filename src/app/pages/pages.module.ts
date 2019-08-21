@@ -14,6 +14,7 @@ import { FaqComponent } from './faq/faq.component';
 import { DownloadComponent } from './download/download.component';
 import { ComingsoonComponent } from './comingsoon/comingsoon.component';
 import { EmailTemplateComponent } from './email-template/email-template.component';
+import { FormErrorService } from '../shared/validator-helper/form-eror.service';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { EmailTemplateComponent } from './email-template/email-template.componen
     DownloadComponent,
     ComingsoonComponent,
     EmailTemplateComponent
-   ]
+   ],
+   providers:[FormErrorService]
 })
 export class PagesModule { }
