@@ -2801,8 +2801,38 @@
 
 
 // Phuong's CSS customize
+@media(max-width: 1366px) {
+  .img_kl{
+    width: 260px;
+    position: absolute;
+    bottom: -74px;
+  }
+  .tag_line_home h1{
+    color: white;
+    margin-top: 150px;
+    margin-bottom: 15px;
+    line-height: 45px;
+    font-size: 45px;
+    font-weight: 500;
+  }
+}
 
 @media(max-width: 1200px) {
+  .ss1_report {
+    position: absolute;
+    bottom: -10px;
+  }
+  .img_kl {
+    width: 260px;
+    position: absolute;
+    bottom: -95px;
+  }
+  .more_pad_1{
+    padding: 8px 0 !important;
+  }
+  .hiw_content{
+    height: 45px;
+  }
   .bg_wave {
     width: 100%;
     position: relative;
@@ -2858,6 +2888,43 @@
 }
 
 @media(max-width: 991px) {
+  .ss1_report {
+    position: absolute;
+    bottom: 90px;
+  }
+  .img_kl {
+    width: 230px;
+    position: absolute;
+    bottom: 15px;
+  }
+  .tag_line_home h1{
+    color: white;
+    margin-top: 70px;
+    margin-bottom: 15px;
+    line-height: 40px;
+    font-size: 40px;
+    font-weight: 500;
+  }
+  .ft_hotline .ct_hotline {
+    font-size: 25px;
+  }
+  .ft_hotline p {
+    margin-bottom: 10px;
+  }
+  .pricing-feature-intro{
+    display: none;
+  }
+  .more_pad_1{
+    padding: 0 5px !important;
+  }
+  .wrap_hiw{
+    color: #fff;
+    border-radius: 3px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    position: relative;
+  }
   .bg_wave {
     width: 100%;
     position: relative;
@@ -2876,11 +2943,7 @@
   .report_wrap ul {
     width: 80%;
   }
-  .img_kl {
-    width: 230px;
-    position: absolute;
-    bottom: -65px;
-  }
+
   // Css for SS2 - Feature list
   .fe_line_box{
     display: none;
@@ -2905,6 +2968,16 @@
 }
 
 @media(max-width: 768px) {
+.hiw_content {
+    border-right: none;
+    height: 30px;
+    margin: 10px 0 15px 0;
+  }
+  .hiw_content img{
+    width: 30px;
+    position: absolute;
+    top: 8px;
+  }
   .bg_wave {
     width: 100%;
     position: relative;
@@ -2922,6 +2995,11 @@
 }
 
 @media(max-width: 576px) {
+.con_ss1 .row {
+    height: 100%;
+    margin-right: 0;
+    margin-left: 0;
+}
 .bg_wave {
   width: 100%;
   position: relative;
@@ -2933,6 +3011,8 @@
   
 .ss1_report {
   margin-right: 30px;
+  position: absolute;
+  bottom: 70px;
 }
 
 .feature_lud .container .row{
