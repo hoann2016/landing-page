@@ -79,7 +79,7 @@
                                     <option value="phongkham" selected>Phòng khám</option>
                                     
                                   </select>
-                                    <div *ngIf="f.ServiceName.touched && f.ServiceName.errors?.required" class="text-danger">
+                                    <div *ngIf="f.ServiceName.touched && f.ServiceName.errors" class="text-danger">
                                         <div *ngIf="f.ServiceName.errors?.required">Thông tin bắt buộc, vui lòng không để trống</div>
 
                                     </div>
