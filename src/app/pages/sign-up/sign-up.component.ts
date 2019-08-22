@@ -54,7 +54,7 @@ export class SignUpComponent implements OnInit {
           Validators.maxLength(100)
         ]
       ],
-        ServiceName: [this.selectedPackage, Validators.required],
+        ServiceName: ["", Validators.required],
         Phone: ["",
         [
           Validators.required,
