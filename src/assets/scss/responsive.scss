@@ -2818,6 +2818,11 @@
 }
 
 @media(max-width: 1200px) {
+  .wrap_form_field {
+    padding: 15px !important;
+    width: 90% !important;
+    margin: 0 auto;
+  }
   .ss1_report {
     position: absolute;
     bottom: -10px;
