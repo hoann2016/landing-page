@@ -18,6 +18,8 @@ import { PriceComponent } from './price/price.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
@@ -26,7 +28,7 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
     SharedModule,
     ReactiveFormsModule,
     FormsModule,
-    OwlModule
+    OwlModule,
   ],
   declarations: [
     HomeTwoComponent,
@@ -41,7 +43,8 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
     PriceComponent,
     TestimonialComponent,
     ContactUsComponent,
-    NewsletterComponent
+    NewsletterComponent,
+   
   ],
   providers: []
 })

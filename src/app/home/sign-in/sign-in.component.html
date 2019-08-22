@@ -1,0 +1,96 @@
+<section class="section_signin">
+    <div class="container">
+        <!-- modal forgot password  -->
+        <ng-template #forgot_password_content let-modal style="max-width:80%;">
+            <div class="modal-header ">
+                <h4 class="modal-title " id="modal-basic-title ">Quên mật khẩu</h4>
+                <button type="button " class="close " aria-label="Close " (click)="modal.dismiss( 'Cross click') ">
+                <span aria-hidden="true ">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body ">
+                <form [formGroup]="sendPasswordForm">
+                    <div class="form-group ">
+                        <label for="email ">Email</label>
+                        <div class="input-group ">
+                            <input name="email" type="email" formControlName="Email" placeholder="Email" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 form-control" style="width: 100%;">
+
+
+                            <small *ngIf="f_recover.Email.touched && f_recover.Email.errors?.required" class="form-text text-muted text-danger">Thông tin bắt buộc, vui lòng không để trống</small>
+                            <small *ngIf="f_recover.Email.errors?.email" class="form-text text-muted text-danger">Thông tin email không hợp lệ</small>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer ">
+                <button [disabled]="!(validFormRecovery|async)" class="btn btn-outline-dark " (click)="modal.close( 'Save click') ">Save</button>
+            </div>
+        </ng-template>
+        <!-- end modal -->
+        <div class="wrap">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="header-page">
+                        <h2 class="header-form">Đăng nhập</h2>
+                    </div>
+
+                    <form class="register-form" [formGroup]="signInForm">
+
+                        <div class="row one-item">
+                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                <span class="title-input">Email</span>
+                                <div class="form-input-1">
+                                    <input type="email" class="fix-boder" formControlName="Email" placeholder="Email" required="required" [ngClass]="{ 'is-invalid': f.Email.touched && f.Email.errors }">
+                                    <div *ngIf="f.Email.touched && f.Email.errors" class="text-danger">
+                                        <span *ngIf="f.Email.errors?.required">Thông tin bắt buộc, vui lòng không để trống</span>
+                                        <span *ngIf="f.Email.errors?.email">Thông tin email không hợp lệ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row one-item">
+                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                <span class="title-input">Mật khẩu</span>
+                                <div class="form-input-2">
+                                    <input type="password" class=" fix-boder" formControlName="Password" placeholder="Password" required="required" [ngClass]="{ 'is-invalid': f.Password.touched && f.Password.errors }">
+                                    <div *ngIf=" f.Password.touched &&f.Password.errors" class="text-danger">
+                                        <div *ngIf="f.Password.errors.required">Thông tin bắt buộc, vui lòng không để trống</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row one-item">
+                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                <p>
+                                    <input name="remember_login" type="checkbox" formControlName="RememberLogin">
+                                    <label for="remember_login" style="padding-left:5px;"> Giữ tôi luôn đăng nhập</label>
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="row two-item">
+                            <div class="col-md-3 col-sm-12 col-xs-12 col-lg-3 one-line">
+
+                                <div class="form-input-2">
+                                    <button [disabled]="f.Password.errors?.required||f.Email.errors?.required||f.Email.errors?.email" (click)="onSubmit()">Đăng nhập</button>
+                                </div>
+                            </div>
+                            <div class="col-md-9 col-sm-12 col-xs-12 col-lg-9 one-line">
+                                <p>
+                                    <span (click)="forgotPassword(forgot_password_content)" style="cursor: pointer;">Forgot password</span></p>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

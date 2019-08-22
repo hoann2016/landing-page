@@ -3,6 +3,7 @@ import { FormBuilder, Validators, FormGroup } from "@angular/forms";
 import { MustMatch } from "./must-match.validator";
 import {CustomValidators} from "../../shared/validator-helper/custom-validator"
 import { FormErrorService } from '../../shared/validator-helper/form-eror.service';
+import { TranslateService } from "@ngx-translate/core";
 @Component({
   selector: "app-sign-up",
   templateUrl: "./sign-up.component.html",
@@ -30,8 +31,8 @@ export class SignUpComponent implements OnInit {
   get f() {
     return this.signUpForm.controls;
   }
-  constructor(public fb: FormBuilder,public formErrorService: FormErrorService) {
-    
+  constructor(public fb: FormBuilder,public formErrorService: FormErrorService,private translate: TranslateService) {
+   
   }
 
   
@@ -94,7 +95,9 @@ export class SignUpComponent implements OnInit {
 
     
   }
-  ngOnInit() {
+  ngOnInit() {  
+    
+    this.translate.use('en');
     this.selectedPackage="starter";
    this.buildForm();
   }

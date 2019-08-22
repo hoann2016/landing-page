@@ -4,7 +4,7 @@ import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { PagesRoutingModule } from './pages-routing.module';
-import { SignInComponent } from './sign-in/sign-in.component';
+import { SignInComponent } from '../home/sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
@@ -15,7 +15,13 @@ import { DownloadComponent } from './download/download.component';
 import { ComingsoonComponent } from './comingsoon/comingsoon.component';
 import { EmailTemplateComponent } from './email-template/email-template.component';
 import { FormErrorService } from '../shared/validator-helper/form-eror.service';
-
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import {TranslateModule, TranslateLoader, TranslateService} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   imports: [
@@ -23,10 +29,18 @@ import { FormErrorService } from '../shared/validator-helper/form-eror.service';
     PagesRoutingModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    NgbModule,
+   TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+  })
   ],
-  declarations: [
-    SignInComponent,
+  declarations: [    
     SignUpComponent,
     ForgetPasswordComponent,
     ThankYouComponent,
@@ -37,6 +51,6 @@ import { FormErrorService } from '../shared/validator-helper/form-eror.service';
     ComingsoonComponent,
     EmailTemplateComponent
    ],
-   providers:[FormErrorService]
+   providers:[FormErrorService,TranslateService]
 })
 export class PagesModule { }

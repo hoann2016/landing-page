@@ -9,20 +9,20 @@ declare var $: any;
 })
 export class IntroTwoComponent implements AfterViewInit {
 
-  @ViewChild('video') videoElement: ElementRef;	
+  // @ViewChild('video') videoElement: ElementRef;	
   
   constructor() { }
 
   // Magnific Popup 
   ngAfterViewInit(): void {
-  	$(this.videoElement.nativeElement).magnificPopup({ 
-		    disableOn: 700,
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false 
-    });
+  	// $(this.videoElement.nativeElement).magnificPopup({ 
+		//     disableOn: 700,
+    //     type: 'iframe',
+    //     mainClass: 'mfp-fade',
+    //     removalDelay: 160,
+    //     preloader: false,
+    //     fixedContentPos: false 
+    // });
   }
 
 }

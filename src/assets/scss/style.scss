@@ -231,7 +231,7 @@
 
 
     .home {
-
+      background-image: $url_2;
       width: 100vw;
       height: 100vh;
       background-repeat: no-repeat;
@@ -442,7 +442,13 @@
       max-width: 1580px;
     }
 
-
+    .back-img {
+      background-image: $url_0;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+    }
 
     .landing-circle {
       position: absolute;
@@ -510,7 +516,17 @@
       margin-top: 35px;
     }
 
-
+    .pc-bg {
+      background-image: $url_1;
+      width: 515px;
+      height: 290px;
+      display: inline-block;
+      position: relative;
+      background-repeat: no-repeat;
+      &:hover .img-scroll {
+        background-position: center 100%!important;
+      }
+    }
 
     .img-scroll {
       transition: all 9s ease-out 0s;
@@ -966,6 +982,7 @@
     }
 
     .home-three {
+      background-image: $url_4;
       background-size: contain;
       background-position: top;
       .home-right {
@@ -1084,6 +1101,7 @@
 
     .about {
       width: 100vw;
+      background-image: $url_5;
       background-size: cover;
       background-repeat: no-repeat;
       margin-top: 0;
@@ -1154,6 +1172,7 @@
     }
 
     .feature {
+      background-image: $url_6;
       width: 100vw;
       min-height: 855px;
       background-repeat: no-repeat;
@@ -1194,7 +1213,17 @@
       }
     }
 
-
+    .screenshot {
+      background-image: $url_7;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: 0;
+      align-items: center;
+      position: relative;
+      background-position: center;
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
 
     .screenshot-contain {
       display: flex;
@@ -1313,7 +1342,62 @@
       }
     }
 
-  
+    .team {
+      background-image: $url_8;
+      width: 100vw;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      background-position: 0 10%;
+      .team-circle1 {
+        position: absolute;
+        top: auto;
+        left: 100px;
+        bottom: 300px;
+      }
+      .team-circle2 {
+        position: absolute;
+        top: auto;
+        left: 180px;
+        bottom: 180px;
+      }
+      .team-circle3 {
+        position: absolute;
+        top: auto;
+        left: 0;
+        bottom: -150px;
+      }
+    }
+
+    .team-block {
+      background-image: $url_9;
+      width: 100%;
+      height: auto;
+      padding: 50px 30px;
+      .team-social {
+        left: 0;
+        right: 0;
+        text-align: center;
+        li a {
+          border: 1px solid #ddd;
+          border-radius: 100%;
+          padding: 8px;
+          text-align: center;
+          color: $color_turquoise_blue;
+          transition: all 0.3s ease;
+          i {
+            width: 20px;
+            font-size: 14px;
+            color: #444444;
+          }
+          &:hover {
+            background-color: $color_turquoise_blue;
+            border: 1px solid $color_turquoise_blue;
+            transition: all 0.3s ease;
+          }
+        }
+      }
+    }
 
     .team-box {
       background-color: $white;
@@ -1492,7 +1576,16 @@
       align-items: center;
     }
 
- 
+    .blog-block {
+      background-image: $url_9;
+      width: 100%;
+      height: auto;
+      padding: 15px;
+      &:hover img {
+        transform: rotate(3deg) scale(1.15);
+        transition: all 0.3s ease;
+      }
+    }
 
     .blog-box {
       padding: 5px;
@@ -1630,7 +1723,15 @@
       }
     }
 
- 
+    // .price {
+    //   background-image: $url_10;
+    //   position: relative;
+    //   background-size: cover;
+    //   background-repeat: no-repeat;
+    //   width: 100vw;
+    //   margin-top: 0;
+    //   align-items: center;
+    // }
 
     .price-block {
       background-color: $white;
@@ -1654,7 +1755,21 @@
       }
     }
 
-   
+    .price-type {
+      background-image: $url_11;
+      padding: 20px;
+      background-size: cover;
+      h2 {
+        background-color: $white;
+        padding: 10px;
+        text-align: center;
+        color: $color_bright_turquoise;
+        margin-bottom: 0;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        font-size: 24px;
+      }
+    }
 
     .mrp {
       h2 {
@@ -1701,7 +1816,16 @@
       }
     }
 
-  
+    .testimonial {
+      background-image: $url_12;
+      background-size: contain;
+      position: relative;
+      width: 100vw;
+      margin-top: 0;
+      align-content: center;
+      padding: 0;
+    }
+
     .testimonial-decor {
       .testi-circle1 {
         position: absolute;
@@ -1724,7 +1848,48 @@
       padding-bottom: 0;
     }
 
- 
+    .testimonial-avtar {
+      background-image: $url_13;
+      border-radius: 100%;
+      height: 120px;
+      width: 120px;
+      padding: 15px;
+      text-align: center;
+      margin: 0 auto;
+      background-size: cover;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      img {
+        border-radius: 100%;
+        height: 90px;
+      }
+      &:before {
+        animation: 2.5s anim-effct-testi 0s linear infinite;
+        box-shadow: 0 0 0 80px $color_gray_nurse;
+        position: absolute;
+        content: '';
+        width: 120px;
+        height: 120px;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        z-index: 0;
+      }
+      &:after {
+        animation: 2.5s anim-effct-testi-back 0s linear infinite;
+        box-shadow: 0 0 0 10px $wild_sand_100;
+        position: absolute;
+        content: '';
+        width: 120px;
+        height: 120px;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        z-index: 0;
+      }
+    }
 
     .testimonial-text {
       text-align: center;
@@ -1808,7 +1973,18 @@
       }
     }
 
-
+    .contact {
+      background-image: $url_14;
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow: hidden;
+      .contact-us {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
 
     .contact-decor {
       .contact-circle1 {
@@ -2535,6 +2711,7 @@
       align-items: center;
       justify-content: center;
       background: #fafafa;
+      background-image: url(./images/auth-bg.jpg);
       background-repeat: no-repeat;
       .innerpage-decor {
         .innerpage-circle1 {
@@ -2814,19 +2991,6 @@
       background-color: #fff;
       border-color: rgba(255, 255, 255, 0.54);
     }
-    .navbar-brand .nav_logo{
-      width: 130px;
-    }
-    .navbar-nav .nav-link:hover{
-      color: #f49c1e !important;
-      background-color: #fff;
-      border-radius: 3px;
-    }
-    .navbar-nav .active{
-      color: #f49c1e !important;
-      background-color: #fff;
-      border-radius: 3px;
-    }
     .btn_header_mb{
       display: none;
     }
@@ -2920,12 +3084,6 @@
     }
 
 // CSS for Section 2 - Feature list
-.fe_wrap_video .modal-body{
-  padding: 0;
-}
-.fe_wrap_video .modal-content{
-  line-height: 0 !important;
-}
 .feature_lud{
   background-color: #f7f7f7;
 }
@@ -3253,6 +3411,7 @@
   display: block;
   margin: 0 auto;
   position: relative;
+  line-height: 80px;
   height: 80px;
   width: 100px;
 }
@@ -3579,7 +3738,7 @@
 .style-3 .pricing-header h5 {
   background: #fff;
   color: #424242;
-  font-weight: 500;
+  border-bottom: 1px solid #ddd;
 }
 
 .style-3 .price-box {
@@ -3591,7 +3750,7 @@
 
 .style-3 .price {
   color: #616161;
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 400;
   line-height: normal;
 }
@@ -3647,18 +3806,8 @@
   position: absolute;
   right: 0;
 }
-.title_package h5{
-  font-size: 1.2em;
-}
-.lud_color_red{
-  color: #f44336 !important;
-}
-.lud_color_yel{
-  color: #ffc107 !important;
-}
-.lud_color_green{
-  color: #4caf50 !important;
-}
+
+
 
 .style-3 .person .plan {
   color: #757575;
@@ -3826,7 +3975,7 @@ color: #ed6464;
   }
 .price-box .free_tag{
   width: 70px;
-  margin: 14px;
+  margin-bottom: 15px;
 }
 // CSS for Pricing Table End
 
