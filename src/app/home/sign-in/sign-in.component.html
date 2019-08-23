@@ -1,5 +1,5 @@
 <section class="section_signin">
-    <div class="container">
+    <div class="con_wrap_signin">
         <!-- modal forgot password  -->
         <ng-template #forgot_password_content let-modal style="max-width:80%;">
             <div class="modal-header ">
@@ -24,73 +24,71 @@
                 </form>
             </div>
             <div class="modal-footer ">
-                <button [disabled]="!(validFormRecovery|async)" class="btn btn-outline-dark " (click)="modal.close( 'Save click') ">Save</button>
+                <button [disabled]="!(validFormRecovery|async)" class="btn btn-outline-dark " (click)="modal.close( 'Save click') ">Send</button>
             </div>
         </ng-template>
         <!-- end modal -->
         <div class="wrap">
             <div class="row">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    <div class="header-page">
-                        <h2 class="header-form">Đăng nhập</h2>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="login_content wrap_form_field">
+                        <div class="header-page">
+                            <h2 class="header-form">Đăng nhập</h2>
+                            <p class="no_acc">Nếu bạn chưa có tài khoản <a href="#">đăng ký ngay!</a></p>
+                        </div>
+                        <form class="register-form" [formGroup]="signInForm">
+    
+                            <div class="row one-item">
+                                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                    <span class="title-input">Email</span>
+                                    <div class="form-input-1">
+                                        <input type="email" class="fix-boder" formControlName="Email" placeholder="Email" required="required" [ngClass]="{ 'is-invalid': f.Email.touched && f.Email.errors }">
+                                        <div *ngIf="f.Email.touched && f.Email.errors" class="text-danger">
+                                            <span *ngIf="f.Email.errors?.required">Thông tin bắt buộc, vui lòng không để trống</span>
+                                            <span *ngIf="f.Email.errors?.email">Thông tin email không hợp lệ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row one-item">
+                                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                    <span class="title-input">Mật khẩu</span>
+                                    <div class="form-input-2">
+                                        <input type="password" class=" fix-boder" formControlName="Password" placeholder="Password" required="required" [ngClass]="{ 'is-invalid': f.Password.touched && f.Password.errors }">
+                                        <div *ngIf=" f.Password.touched &&f.Password.errors" class="text-danger">
+                                            <div *ngIf="f.Password.errors.required">Thông tin bắt buộc, vui lòng không để trống</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row one-item poli_form">
+                                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                    <p>
+                                        <input name="remember_login" type="checkbox" formControlName="RememberLogin">
+                                        <label for="remember_login" style="padding-left:5px;"> Giữ tôi luôn đăng nhập</label>
+                                    </p>
+    
+                                </div>
+                            </div>
+                            <div class="row two-item">
+                                <div class="one-line btn_submit_signup">
+    
+                                    <div class="form-input-2">
+                                        <button class="btn_login_form" [disabled]="f.Password.errors?.required||f.Email.errors?.required||f.Email.errors?.email" (click)="onSubmit()">Đăng nhập</button>
+                                    </div>
+                                </div>
+                                <div class="one-line forgot_text">
+                                    <p>
+                                        <span (click)="forgotPassword(forgot_password_content)" style="cursor: pointer;">Forgot password</span></p>
+                                </div>
+    
+                            </div>
+    
+                        </form>
                     </div>
-
-                    <form class="register-form" [formGroup]="signInForm">
-
-                        <div class="row one-item">
-                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                <span class="title-input">Email</span>
-                                <div class="form-input-1">
-                                    <input type="email" class="fix-boder" formControlName="Email" placeholder="Email" required="required" [ngClass]="{ 'is-invalid': f.Email.touched && f.Email.errors }">
-                                    <div *ngIf="f.Email.touched && f.Email.errors" class="text-danger">
-                                        <span *ngIf="f.Email.errors?.required">Thông tin bắt buộc, vui lòng không để trống</span>
-                                        <span *ngIf="f.Email.errors?.email">Thông tin email không hợp lệ</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row one-item">
-                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                <span class="title-input">Mật khẩu</span>
-                                <div class="form-input-2">
-                                    <input type="password" class=" fix-boder" formControlName="Password" placeholder="Password" required="required" [ngClass]="{ 'is-invalid': f.Password.touched && f.Password.errors }">
-                                    <div *ngIf=" f.Password.touched &&f.Password.errors" class="text-danger">
-                                        <div *ngIf="f.Password.errors.required">Thông tin bắt buộc, vui lòng không để trống</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row one-item">
-                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                <p>
-                                    <input name="remember_login" type="checkbox" formControlName="RememberLogin">
-                                    <label for="remember_login" style="padding-left:5px;"> Giữ tôi luôn đăng nhập</label>
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="row two-item">
-                            <div class="col-md-3 col-sm-12 col-xs-12 col-lg-3 one-line">
-
-                                <div class="form-input-2">
-                                    <button [disabled]="f.Password.errors?.required||f.Email.errors?.required||f.Email.errors?.email" (click)="onSubmit()">Đăng nhập</button>
-                                </div>
-                            </div>
-                            <div class="col-md-9 col-sm-12 col-xs-12 col-lg-9 one-line">
-                                <p>
-                                    <span (click)="forgotPassword(forgot_password_content)" style="cursor: pointer;">Forgot password</span></p>
-                            </div>
-
-                        </div>
-
-                    </form>
 
                 </div>
             </div>
         </div>
-
     </div>
 </section>

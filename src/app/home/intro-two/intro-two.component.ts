@@ -11,7 +11,7 @@ declare var $: any;
 })
 export class IntroTwoComponent implements AfterViewInit,OnInit {
 
-  // @ViewChild('video') videoElement: ElementRef;	
+  @ViewChild('video') videoElement: ElementRef;	
   
   constructor(private translate: TranslateService,
     private landingPageService: LandingPageService) { }
@@ -24,14 +24,14 @@ export class IntroTwoComponent implements AfterViewInit,OnInit {
 
   // Magnific Popup 
   ngAfterViewInit(): void {
-  	// $(this.videoElement.nativeElement).magnificPopup({ 
-		//     disableOn: 700,
-    //     type: 'iframe',
-    //     mainClass: 'mfp-fade',
-    //     removalDelay: 160,
-    //     preloader: false,
-    //     fixedContentPos: false 
-    // });
+  	$(this.videoElement.nativeElement).magnificPopup({ 
+		    disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false 
+    });
   }
 
 }

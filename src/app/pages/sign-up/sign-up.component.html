@@ -1,165 +1,183 @@
 <section class="section_signup">
-    <div class="container">
+    <div class="container_full_width">
         <div class="wrap">
             <div class="row">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    <div class="header-page">
-                        <h2 class="header-form"> Đăng ký</h2>
-                        <span class="descrition-page">Trải nghiệm dịch vụ đầy đủ của sản phẩm</span>
+                <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                    <div class="wrap_left_signin">
+                        <div class="welcome-container">
+                            <div class="wel_img">
+                                <img src="assets/images/sign-up/wel.png">
+                            </div>
+                            <h3 class="subtitle">To Ludiino Booking System</h3>
+                            <hr >
+                            <p>Get Ludiino Online Booking & Scheduling System to never miss a booking & book more clients</p>
+                        </div>
+                        <div class="device_mac">
+                            <img src="assets/images/sign-up/device.png" class="macbook_img">
+                        </div>
+                        <div class="ft_authen">
+                            <span>Powered by Ludiino ©2019</span>
+                        </div>
                     </div>
-
-                    <form class="register-form" [formGroup]="signUpForm">
-                        <div class="row two-item">
-                            <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 one-line">
-                                <span class="title-input">Họ tên</span><span class="blue-text">*</span>
-                                <div class="form-input-2">
-
-                                    <input type="text" name="CustomerName" class=" fix-boder" placeholder="Your name" formControlName="CustomerName" [ngClass]="{ 'is-invalid': f.CustomerName.touched && (f.CustomerName.errors?.required||formErrors?.CustomerName) }
-                                     ">
-
-                                    <div *ngIf="f.CustomerName.touched && (formErrors?.CustomerName||f.CustomerName.errors)" class="text-danger">
-                                        <span *ngIf="f.CustomerName.errors?.required" class="text-danger">
-                                                    Thông tin bắt buộc, vui lòng không để trống
-                                            </span>
-                                        <span *ngIf="f.CustomerName.errors?.minlength||f.CustomerName.errors?.maxlengh||f.CustomerName.errors?.pattern" class="text-danger">
-                                                Thông tin họ tên không hợp lệ
-                                        </span>
-                                    </div>
-
-                                </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 wrap_over_signin">
+                    <div class="wrap_form_field">
+                            <div class="header-page">
+                                <h2 class="header-form"> Đăng ký</h2>
+                                <span class="descrition-page">Trải nghiệm dịch vụ đầy đủ của sản phẩm</span>
                             </div>
-                            <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 one-line">
-                                <span class="title-input">Gói dịch vụ</span><span class="blue-text">*</span>
-                                <div class="form-input-2">
-                                    <select formControlName="PackageSelectedName" [ngClass]="{ 'is-invalid': f.PackageSelectedName.touched && f.PackageSelectedName.errors?.required }">
-                                    <option value="enterprise">Enterprise</option>
-                                    <option value="basic">Basic</option>
-                                    <option value="growth">Growth</option>
-                                    <option value="starter" selected>Starter</option>
-                                  </select>
-                                    <div *ngIf="f.PackageSelectedName.touched && f.PackageSelectedName.errors?.required" class="text-danger">
-                                        <div *ngIf="f.PackageSelectedName.errors?.required">Thông tin bắt buộc, vui lòng không để trống</div>
+            
+                            <form class="register-form" [formGroup]="signUpForm">
+                                <div class="row two-item">
+                                    <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 one-line">
+                                        <span class="title-input">Họ tên</span>
+                                        <div class="form-input-2">
+        
+                                            <input type="text" name="CustomerName" class=" fix-boder" placeholder="Họ tên" formControlName="CustomerName" [ngClass]="{ 'is-invalid': f.CustomerName.touched && (f.CustomerName.errors?.required||formErrors?.CustomerName) }
+                                                ">
+        
+                                            <div *ngIf="f.CustomerName.touched && (formErrors?.CustomerName||f.CustomerName.errors)" class="text-danger">
+                                                <span *ngIf="f.CustomerName.errors?.required" class="text-danger">
+                                                            Thông tin bắt buộc, vui lòng không để trống
+                                                    </span>
+                                                <span *ngIf="f.CustomerName.errors?.minlength||f.CustomerName.errors?.maxlengh||formErrors?.CustomerName" class="text-danger">
+                                                        Thông tin họ tên không hợp lệ
+                                                </span>
+                                            </div>
+        
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 one-line">
+                                        <span class="title-input">Gói dịch vụ</span>
+                                        <div class="form-input-2">
+                                            <select formControlName="PackageSelectedName" [ngClass]="{ 'is-invalid': f.PackageSelectedName.touched && f.PackageSelectedName.errors?.required }">
+                                            <option value="enterprise">Enterprise</option>
+                                            <option value="basic">Basic</option>
+                                            <option value="growth">Growth</option>
+                                            <option value="starter" selected>Starter</option>
+                                            </select>
+                                            <div *ngIf="f.PackageSelectedName.touched && f.PackageSelectedName.errors?.required" class="text-danger">
+                                                <div *ngIf="f.PackageSelectedName.errors?.required">Thông tin bắt buộc, vui lòng không để trống</div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
+                                <div class="row one-item">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                        <span class="title-input">Tên cửa hàng / tiệm của bạn</span><span class="blue-text">*</span>
+                                        <div class="form-input-1">
+                                            <input type="text" class="fix-boder" formControlName="ShopName" placeholder="Tên cửa hàng" required="required" [ngClass]="{ 'is-invalid': f.ShopName.touched && f.ShopName.errors?.required }">
+        
+                                            <div *ngIf="f.ShopName.touched && f.ShopName.errors" class="text-danger">
+                                                <span *ngIf="f.ShopName.errors?.required">Thông tin bắt buộc, vui lòng không để trống</span>
+                                                <span *ngIf="f.ShopName.errors?.minlength||f.ShopName.errors?.maxlength">Thông tin tên shop không hợp lệ</span>
+                                            </div>
+                                        </div>
+                                        <div class="sugest-name" *ngIf="shopDomain">
+                                            <div class="one-line" style="padding-top:10px;min-width: 50px;max-width: 50px; float:left;">
+                                                <img src="../../../assets/images/sign-up/iconmonstr-light-bulb-16.svg">
+                                            </div>
+                                            <div class="col-md-8 col-sm-8 col-xs-8 col-lg-10 one-line">
+                                                <p>Tên website của bạn sẽ là: <span>{{shopDomain}}</span> bạn có thể thay đổi trong cài đặt sau này
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                        </div>
-                        <div class="row one-item">
-                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                <span class="title-input">Tên cửa hàng / tiệm của bạn</span><span class="blue-text">*</span>
-                                <div class="form-input-1">
-                                    <input type="text" class="fix-boder" formControlName="ShopName" placeholder="shop name" required="required" [ngClass]="{ 'is-invalid': f.ShopName.touched && f.ShopName.errors?.required }">
-
-                                    <div *ngIf="f.ShopName.touched && f.ShopName.errors" class="text-danger">
-                                        <span *ngIf="f.ShopName.errors?.required">Thông tin bắt buộc, vui lòng không để trống</span>
-                                        <span *ngIf="f.ShopName.errors?.minlength||f.ShopName.errors?.maxlength">Thông tin tên shop không hợp lệ</span>
+                                <div class="row one-item">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                        <span class="title-input">Loại hình dịch vụ</span>
+                                        <div class="form-input-1">
+                                            <select formControlName="ServiceName" [ngClass]="{ 'is-invalid': f.ServiceName.touched && f.ServiceName.errors?.required }">
+                                            <option value="" disabled selected>Vui lòng chọn</option>
+                                            <option value="salon">Salon Tóc</option>
+                                            <option value="spa">Spa / Massage</option>
+                                            <option value="phongkham" selected>Phòng khám</option>
+                                            
+                                            </select>
+                                            <div *ngIf="f.ServiceName.touched && f.ServiceName.errors" class="text-danger">
+                                                <div *ngIf="f.ServiceName.errors?.required">Thông tin bắt buộc, vui lòng không để trống</div>
+        
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="sugest-name" *ngIf="shopDomain">
-                                    <div class="one-line" style="padding-top:10px;min-width: 50px;max-width: 50px; float:left;">
-                                        <img src="../../../assets/images/sign-up/iconmonstr-light-bulb-16.svg">
+                                <div class="row one-item">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                        <span class="title-input">Điện thoại liên hệ</span>
+                                        <div class="form-input-1">
+                                            <input type="text" class="fix-boder" formControlName="Phone" placeholder="Điện thoại" required="required" [ngClass]="{ 'is-invalid': f.Phone.touched && f.Phone.errors?.required }">
+                                            <div *ngIf="f.Phone.touched && f.Phone.errors" class="text-danger">
+                                                <div *ngIf="f.Phone.errors?.required">Thông tin bắt buộc, vui lòng không để trống</div>
+                                                <div *ngIf="f.Phone.errors?.pattern">Thông tin số điện thoại không hợp lệ</div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-8 col-sm-8 col-xs-8 col-lg-10 one-line">
-                                        <p>Tên website của bạn sẽ là: <span>{{shopDomain}}</span> bạn có thể thay đổi trong cài đặt sau này
+                                </div>
+                                <div class="row one-item">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                        <span class="title-input">Email</span>
+                                        <div class="form-input-1">
+                                            <input type="email" class="fix-boder" formControlName="Email" placeholder="Email" required="required" [ngClass]="{ 'is-invalid': f.Email.touched && f.Email.errors?.required }">
+                                        </div>
+                                        <div *ngIf="f.Email.touched && f.Email.errors" class="text-danger">
+                                            <div *ngIf="f.Email.errors?.required">Thông tin bắt buộc, vui lòng không để trống</div>
+                                            <div *ngIf="f.Email.errors?.email">Thông tin email không hợp lệ</div>
+        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row two-item">
+                                    <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 one-line">
+                                        <span class="title-input">Mật khẩu</span>
+                                        <div class="form-input-2">
+                                            <input type="password" class=" fix-boder" formControlName="Password" placeholder="Mật khẩu" required="required" [ngClass]="{ 'is-invalid': f.Password.touched && f.Password.errors }">
+                                            <div *ngIf=" f.Password.touched &&f.Password.errors" class="text-danger">
+                                                <div *ngIf="f.Password.errors.required">Thông tin bắt buộc, vui lòng không để trống</div>
+                                                <div *ngIf="f.Password.errors.minlength||f.Password.errors.maxlength">Thông tin mật khẩu không hợp lệ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 one-line">
+                                        <span class="title-input">Xác nhận mật khẩu</span>
+                                        <div class="form-input-2">
+                                            <input type="password" class=" fix-boder" placeholder="Nhập lại mật khẩu" formControlName="RetypePassword" required="required" [ngClass]="{ 'is-invalid': f.RetypePassword.touched &&f.RetypePassword.errors }">
+                                            <div *ngIf=" f.RetypePassword.touched &&(f.RetypePassword.errors?.mustMatch ||f.RetypePassword.errors?.required)" class="text-danger">
+                                                <div *ngIf="f.RetypePassword.errors.required">Thông tin bắt buộc, vui lòng không để trống</div>
+                                                <div *ngIf="f.RetypePassword.errors.mustMatch">Thông tin gõ lại mật khẩu không hợp lệ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
+                                <div class="row one-item poli_form">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                        <p [ngClass]="{ 'is-invalid': isSubmitted && f.IsComfirmed.value==false }">
+                                            <input class="ip_checkbox" type="checkbox" formControlName="IsComfirmed"> Tôi hoàn toàn đồng ý các chính sách về <a href="">điều khoản-điều kiện</a> sử dụng của Ludiino
                                         </p>
+                                        <div *ngIf="isSubmitted">
+                                            <span *ngIf="f.IsComfirmed.errors?.required">
+                                                    Bắt buộc phải đồng ý điều khoản
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row one-item">
-                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                <span class="title-input">Loại hình dịch vụ</span><span class="blue-text">*</span>
-                                <div class="form-input-1">
-                                    <select formControlName="ServiceName" [ngClass]="{ 'is-invalid': f.ServiceName.touched && f.ServiceName.errors?.required }">
-                                    <option value="salon">Salon Tóc</option>
-                                    <option value="spa">Spa / Massage</option>
-                                    <option value="phongkham" selected>Phòng khám</option>
-                                    
-                                  </select>
-                                    <div *ngIf="f.ServiceName.touched && f.ServiceName.errors" class="text-danger">
-                                        <div *ngIf="f.ServiceName.errors?.required">Thông tin bắt buộc, vui lòng không để trống</div>
-
+                                <div class="row two-item poli_form">
+                                    <div class="one-line btn_submit_signup">
+                                        <div class="form-input-2">
+                                            <button (click)="onSubmit()">Đăng ký</button>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row one-item">
-                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                <span class="title-input">Điện thoại liên hệ</span><span class="blue-text">*</span>
-                                <div class="form-input-1">
-                                    <input type="text" class="fix-boder" formControlName="Phone" placeholder="Phone number" required="required" [ngClass]="{ 'is-invalid': f.Phone.touched && f.Phone.errors?.required }">
-                                    <div *ngIf="f.Phone.touched && f.Phone.errors" class="text-danger">
-                                        <div *ngIf="f.Phone.errors?.required">Thông tin bắt buộc, vui lòng không để trống</div>
-                                        <div *ngIf="f.Phone.errors?.pattern">Thông tin số điện thoại không hợp lệ</div>
+                                    <div class="one-line">
+                                        <p>Tôi đã có tài khoản -<a href=""> Đăng nhập</a></p>
                                     </div>
+        
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row one-item">
-                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                <span class="title-input">Email</span><span class="blue-text">*</span>
-                                <div class="form-input-1">
-                                    <input type="email" class="fix-boder" formControlName="Email" placeholder="your name" required="required" [ngClass]="{ 'is-invalid': f.Email.touched && f.Email.errors?.required }">
-                                </div>
-                                <div *ngIf="f.Email.touched && f.Email.errors" class="text-danger">
-                                    <div *ngIf="f.Email.errors?.required">Thông tin bắt buộc, vui lòng không để trống</div>
-                                    <div *ngIf="f.Email.errors?.email">Thông tin email không hợp lệ</div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row two-item">
-                            <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 one-line">
-                                <span class="title-input">Mật khẩu</span><span class="blue-text">*</span>
-                                <div class="form-input-2">
-                                    <input type="password" class=" fix-boder" formControlName="Password" placeholder="Password" required="required" [ngClass]="{ 'is-invalid': f.Password.touched && f.Password.errors }">
-                                    <div *ngIf=" f.Password.touched &&f.Password.errors" class="text-danger">
-                                        <div *ngIf="f.Password.errors.required">Thông tin bắt buộc, vui lòng không để trống</div>
-                                        <div *ngIf="f.Password.errors.minlength||f.Password.errors.maxlength">Thông tin mật khẩu không hợp lệ</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 one-line">
-                                <span class="title-input">Xác nhận mật khẩu</span><span class="blue-text">*</span>
-                                <div class="form-input-2">
-                                    <input type="password" class=" fix-boder" placeholder="Retype Password" formControlName="RetypePassword" required="required" [ngClass]="{ 'is-invalid': f.RetypePassword.touched &&f.RetypePassword.errors }">
-                                    <div *ngIf=" f.RetypePassword.touched &&(f.RetypePassword.errors?.mustMatch ||f.RetypePassword.errors?.required)" class="text-danger">
-                                        <div *ngIf="f.RetypePassword.errors.required">Thông tin bắt buộc, vui lòng không để trống</div>
-                                        <div *ngIf="f.RetypePassword.errors.mustMatch">Thông tin gõ lại mật khẩu không hợp lệ</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="row one-item">
-                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                <p [ngClass]="{ 'is-invalid': isSubmitted && f.IsComfirmed.value==false }">
-                                    <input type="checkbox" formControlName="IsComfirmed"> Tôi hoàn toàn đồng ý các chính sách về <a href="">điều khoản-điều kiện</a> sử dụng của Ludiino
-                                </p>
-                                <div *ngIf="isSubmitted">
-                                    <span *ngIf="f.IsComfirmed.errors?.required">
-                                            Bắt buộc phải đồng ý điều khoản
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row two-item">
-                            <div class="col-md-3 col-sm-12 col-xs-12 col-lg-3 one-line">
-
-                                <div class="form-input-2">
-                                    <button (click)="onSubmit()">Đăng ký</button>
-                                </div>
-                            </div>
-                            <div class="col-md-9 col-sm-12 col-xs-12 col-lg-9 one-line">
-                                <p>Tôi đã có tài khoản-<a href="">Đăng nhập</a></p>
-                            </div>
-
-                        </div>
-
-                    </form>
+        
+                            </form>
+                    </div>
+                    
 
                 </div>
             </div>

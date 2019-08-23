@@ -2818,6 +2818,11 @@
 }
 
 @media(max-width: 1200px) {
+  .wrap_form_field {
+    padding: 15px !important;
+    width: 90% !important;
+    margin: 0 auto;
+  }
   .ss1_report {
     position: absolute;
     bottom: -10px;
@@ -2828,7 +2833,7 @@
     bottom: -95px;
   }
   .more_pad_1{
-    padding: 8px 0 !important;
+    padding: 10px 0 !important;
   }
   .hiw_content{
     height: 45px;
@@ -2888,6 +2893,12 @@
 }
 
 @media(max-width: 991px) {
+  .mar_left{
+    margin-left: 0;
+  }
+  .mar_right{
+    margin-right: 0;
+  }
   .ss1_report {
     position: absolute;
     bottom: 90px;
