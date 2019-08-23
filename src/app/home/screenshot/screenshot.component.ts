@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { LandingPageService } from 'src/app/shared/services/landing-page.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-screenshot',
@@ -10,7 +11,7 @@ import { LandingPageService } from 'src/app/shared/services/landing-page.service
 export class ScreenshotComponent implements OnInit {
     
     constructor(private translate: TranslateService,
-		private landingPageService: LandingPageService) { }
+		private landingPageService: LandingPageService,private router: Router) { }
     
     // Carousel Images  
 	public carouselImages = [{
@@ -44,6 +45,11 @@ export class ScreenshotComponent implements OnInit {
 			  this.translate.use(lang);
 			})
 	}
+	RedirectToRegister()
+  {
+    
+    this.router.navigate(['/pages/sign-up']);
+  }
 	// Carousel Options
 	public carouselOptions: any ={
 	    loop:true,
