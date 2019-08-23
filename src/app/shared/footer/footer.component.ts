@@ -34,7 +34,7 @@ export class FooterComponent implements OnInit {
         ]
       ],
       Email: ["", [Validators.required, Validators.email]],      
-      Content:["",Validators.required]
+      Content:["",[Validators.required,Validators.maxLength(255)]]
 
       }
     );
@@ -42,6 +42,8 @@ export class FooterComponent implements OnInit {
       {        
         this.translate.use(lang);
       })
+      
+        
    
   }
   onSubmit(){

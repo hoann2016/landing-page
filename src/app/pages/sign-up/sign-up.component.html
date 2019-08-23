@@ -33,7 +33,7 @@
                                     <span class="title-input">{{'Register.Register'|translate}}</span>
                                     <div class="form-input-2">
 
-                                        <input type="text" name="CustomerName" class=" fix-boder" placeholder="{{'Register.name'|translate}}" formControlName="CustomerName" [ngClass]="{ 'is-invalid': f.CustomerName.touched && (f.CustomerName.errors?.required||formErrors?.CustomerName) }
+                                        <input type="text" name="CustomerName" maxlength="100" class=" fix-boder" placeholder="{{'Register.name'|translate}}" formControlName="CustomerName" [ngClass]="{ 'is-invalid': f.CustomerName.touched && (f.CustomerName.errors?.required||formErrors?.CustomerName) }
                                                 ">
 
                                         <div *ngIf="isSubmitted && (formErrors?.CustomerName||f.CustomerName.errors)" class="text-danger">
@@ -65,9 +65,9 @@
                             </div>
                             <div class="row one-item">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                    <span class="title-input">{{'Register.shopname'|translate}}</span><span class="blue-text">*</span>
+                                    <span class="title-input">{{'Register.shopname'|translate}}</span>
                                     <div class="form-input-1">
-                                        <input type="text" class="fix-boder" formControlName="ShopName" placeholder="{{'Register.shopname-2'|translate}}" required="required" [ngClass]="{ 'is-invalid': f.ShopName.touched && f.ShopName.errors?.required }">
+                                        <input type="text" class="fix-boder" formControlName="ShopName" maxlength="100" placeholder="{{'Register.shopname-2'|translate}}" required="required" [ngClass]="{ 'is-invalid': f.ShopName.touched && f.ShopName.errors?.required }">
 
                                         <div *ngIf="isSubmitted && f.ShopName.errors" class="text-danger">
                                             <span *ngIf="f.ShopName.errors?.required">{{'Register.message-require'|translate}}</span>
@@ -132,7 +132,7 @@
                                 <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 one-line">
                                     <span class="title-input">{{'Register.Password'|translate}}</span>
                                     <div class="form-input-2">
-                                        <input type="password" class=" fix-boder" formControlName="Password" placeholder="{{'Register.Password'|translate}}" required="required" [ngClass]="{ 'is-invalid': f.Password.touched && f.Password.errors }">
+                                        <input type="password" class=" fix-boder" formControlName="Password" maxlength="20" placeholder="{{'Register.Password'|translate}}" required="required" [ngClass]="{ 'is-invalid': f.Password.touched && f.Password.errors }">
                                         <div *ngIf=" isSubmitted &&f.Password.errors" class="text-danger">
                                             <div *ngIf="f.Password.errors.required">{{'Register.message-require'|translate}}</div>
                                             <div *ngIf="f.Password.errors.minlength||f.Password.errors.maxlength">{{'Register.message-format-4'|translate}}</div>
@@ -142,7 +142,7 @@
                                 <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 one-line">
                                     <span class="title-input">{{'Register.re-password'|translate}}</span>
                                     <div class="form-input-2">
-                                        <input type="password" class=" fix-boder" placeholder="{{'Register.re-password-2'|translate}}" formControlName="RetypePassword" required="required" [ngClass]="{ 'is-invalid': f.RetypePassword.touched &&f.RetypePassword.errors }">
+                                        <input type="password" class=" fix-boder" placeholder="{{'Register.re-password-2'|translate}}" maxlength="20" formControlName="RetypePassword" required="required" [ngClass]="{ 'is-invalid': f.RetypePassword.touched &&f.RetypePassword.errors }">
                                         <div *ngIf="isSubmitted &&(f.RetypePassword.errors?.mustMatch ||f.RetypePassword.errors?.required)" class="text-danger">
                                             <div *ngIf="f.RetypePassword.errors.required">{{'Register.message-require'|translate}}</div>
                                             <div *ngIf="f.RetypePassword.errors.mustMatch">{{'Register.message-format-5'|translate}}</div>
@@ -155,7 +155,7 @@
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
                                     <p [ngClass]="{ 'is-invalid': isSubmitted && f.IsComfirmed.value==false }">
                                         <input class="ip_checkbox" type="checkbox" formControlName="IsComfirmed"> {{'Register.policy'|translate}}
-                                        <a href="#"> {{'Register.policy-2'|translate}}</a>
+                                        <a href="javascript:void(0)"> {{'Register.policy-2'|translate}}</a>
                                     </p>
                                     <div *ngIf="isSubmitted">
                                         <span *ngIf="f.IsComfirmed.errors?.required">                                                   
@@ -171,7 +171,7 @@
                                     </div>
                                 </div>
                                 <div class="one-line">
-                                    <p>{{'Register.have-account'|translate}} -<a href=""> {{'Shared.SigninBtnLabel'|translate}}</a></p>
+                                    <p>{{'Register.have-account'|translate}} -<a href="javascript:void(0)"> {{'Shared.SigninBtnLabel'|translate}}</a></p>
                                 </div>
 
                             </div>

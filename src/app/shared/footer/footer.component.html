@@ -28,18 +28,19 @@
                                 <div class="row">
                                     <div class="col-sm-12 col-md-6 md-fgrup-margin">
                                         <input type="text" name="name" class="form-control" autocomplete="off" placeholder="{{'Home.Footer.Form.Name'|translate}}" formControlName="CustomerName" required="required">
-                                        <small *ngIf="isSubmitted&& f.CustomerName.errors?.required" class="form-text text-muted text-danger">Thông tin bắt buộc, vui lòng không để trống</small>
+                                        <small *ngIf="isSubmitted&& f.CustomerName.errors?.required" class="form-text text-muted text-danger">{{'Register.message-require'|translate}}</small>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <input type="email" name="email" class="form-control" autocomplete="off" id="exampleFormControlInput1" formControlName="Email" placeholder="{{'Home.Footer.Form.Email'|translate}}" required="required">
-                                        <small *ngIf="isSubmitted && f.Email.errors?.required" class="form-text text-muted text-danger">Thông tin bắt buộc, vui lòng không để trống</small>
-                                        <small *ngIf="isSubmitted && f.Email.errors?.email" class="form-text text-muted text-danger">Thông tin email không hợp lệ</small>
+                                        <small *ngIf="isSubmitted && f.Email.errors?.required" class="form-text text-muted text-danger">{{'Register.message-require'|translate}}</small>
+                                        <small *ngIf="isSubmitted && f.Email.errors?.email" class="form-text text-muted text-danger">{{'Register.message-format-3'|translate}}</small>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" name="message" id="exampleFormControlTextarea1" autocomplete="off" rows="4" formControlName="Content" placeholder="{{'Home.Footer.Form.Content'|translate}}" required="required"></textarea>
-                                <small *ngIf="isSubmitted && f.Content.errors?.required" class="form-text text-muted text-danger">Thông tin bắt buộc, vui lòng không để trống</small>
+                                <textarea class="form-control" name="message" maxlength="255" id="exampleFormControlTextarea1" autocomplete="off" rows="4" formControlName="Content" placeholder="{{'Home.Footer.Form.Content'|translate}}" required="required"></textarea>
+                                <small *ngIf="isSubmitted && f.Content.errors?.required" class="form-text text-muted text-danger">{{'Register.message-require'|translate}}</small>
+                                <small *ngIf="isSubmitted && f.Content.errors?.maxlength" class="form-text text-muted text-danger"> {{'Home.Footer.Form.maximumMessage'|translate}}</small>
                             </div>
                             <div class="form-button">
                                 <button type="submit" class="btn btn-custom theme-color" (click)="onSubmit()">{{'Home.Footer.Form.Send'|translate}}</button>

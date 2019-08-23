@@ -15,7 +15,9 @@
 
         "About": {
             "HeaderMessage": "Bắt kịp xu hướng để Thay Đổi Với Khách Hàng 4.0",
-            "HeaderDescription": "Sử Dụng Hệ Thống Đặt & Quản Lý Lịch Hẹn Trực Tuyến qua web và ứng dụng di động để không bao giờ mất 'bookings' và thêm Khách Hàng mới mỗi ngày",
+            "HeaderDescription1": "Sử Dụng ",
+            "HeaderDescription2": "Hệ Thống Đặt & Quản Lý Lịch Hẹn Trực Tuyến qua web và ứng dụng di động",
+            "HeaderDescription3": "để không bao giờ mất 'bookings' và thêm Khách Hàng mới mỗi ngày",
             "MessageHeader_1": "Hệ thống Đặt Hẹn Trực Tuyến hoạt động kinh doanh liên tục 24/7 cho cửa hàng của bạn",
             "MessageContent_1": "1 trang web chuyên nghiệp miễn phí không chỉ trình bày thông tin về cửa hàng mà còn nhận đặt hẹn trực tuyến theo thời gian thực 3 bước đơn giản để tạo dịch vụ, đưa thời gian trống lên trang web, và nhận thông báo đặt hẹn trực tuyến ngay khi có booking",
             "MessageHeader_2": "Đặt Hẹn Trực Tuyến Trên Các Mạng Xã Hội",
@@ -47,7 +49,7 @@
             "RegisterNow_Freebie": "Đăng Ký Ngay",
             "RegisterNow_Newbie": "Đăng Ký Ngay",
             "RegisterNow_Biggie": "Đăng Ký Ngay",
-            "RegisterNow_Popular": ""
+            "RegisterNow_Popular": "Đăng Ký Ngay"
         },
         "SignIn": {
             "KeepLogedIn": "Giữ tôi luôn đăng nhập",
@@ -61,7 +63,8 @@
                 "Name": "Họ tên",
                 "Email": "Email",
                 "Content": "Nội dung",
-                "Send": "Gửi"
+                "Send": "Gửi",
+                "maximumMessage": "Thông không hợp lệ, tối đa 255 ký tự"
             },
             "Contact": {
                 "Header": "Contact",

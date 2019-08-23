@@ -3,6 +3,7 @@ import { FormBuilder, Validators, FormGroup } from "@angular/forms";
 import { MustMatch } from "./must-match.validator";
 import { TranslateService } from "@ngx-translate/core";
 import { LandingPageService } from "src/app/shared/services/landing-page.service";
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 @Component({
   selector: "app-sign-up",
   templateUrl: "./sign-up.component.html",
@@ -30,7 +31,7 @@ export class SignUpComponent implements OnInit {
   get f() {
     return this.signUpForm.controls;
   }
-  constructor(public fb: FormBuilder,private translate: TranslateService,
+  constructor(public fb: FormBuilder,private translate: TranslateService, private modalService: NgbModal,
     private landingPageService: LandingPageService) {
    
   }
@@ -112,7 +113,15 @@ export class SignUpComponent implements OnInit {
     }
     console.log(this.signUpForm);
   }
-
+  showLoginModal(content)
+  {
+   
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {      
+     console.log(result);
+    }, (reason) => {
+      console.log("result from modal,reason: ",reason);
+    });
+  }
   convertViToEn(str:string):string {
     
       str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");

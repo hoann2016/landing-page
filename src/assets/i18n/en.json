@@ -12,7 +12,9 @@
         },
         "About": {
             "HeaderMessage": "Change with Your Customer",
-            "HeaderDescription": "Get <strong class='focus_text'>Ludiino Online Booking & Scheduling</strong> System to never miss a booking & book more clients",
+            "HeaderDescription1": "Get ",
+            "HeaderDescription2": "Ludiino Online Booking & Scheduling",
+            "HeaderDescription3": "System to never miss a booking & book more clients",
             "MessageHeader_1": "A Professional Online Booking website that does business for you 24/7 non-stop",
             "MessageContent_1": "A free website for your business that not only displays information but also accepts online booking in real time 3 easy steps to create open time slots & services, publish them online for booking, and receive booking notification",
             "MessageHeader_2": "Integrate with your available social channels",
@@ -61,11 +63,12 @@
                 "Name": "Your name",
                 "Email": "Email",
                 "Content": "Message",
-                "Send": "Send"
+                "Send": "Send",
+                "maximumMessage": "Invalid Message, maximum 255 charactors"
             },
             "Contact": {
                 "Header": "Contact",
-                "Detail": "If there are any questions please contact us:"
+                "Detail": "If there are any questions please contact us"
             }
         }
     },
