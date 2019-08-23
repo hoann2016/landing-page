@@ -2833,7 +2833,7 @@
     bottom: -95px;
   }
   .more_pad_1{
-    padding: 8px 0 !important;
+    padding: 10px 0 !important;
   }
   .hiw_content{
     height: 45px;
@@ -2893,6 +2893,12 @@
 }
 
 @media(max-width: 991px) {
+  .mar_left{
+    margin-left: 0;
+  }
+  .mar_right{
+    margin-right: 0;
+  }
   .ss1_report {
     position: absolute;
     bottom: 90px;
