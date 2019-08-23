@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { LandingPageService } from 'src/app/shared/services/landing-page.service';
 
 @Component({
   selector: 'app-forget-password',
@@ -10,7 +12,8 @@ export class ForgetPasswordComponent implements OnInit {
    // variable
   show: boolean;
 
-  constructor() {
+  constructor(private translate: TranslateService,
+    private landingPageService: LandingPageService) {
   // initialize variable value
    this.show = false;
   }
@@ -21,6 +24,10 @@ export class ForgetPasswordComponent implements OnInit {
   }
   
   ngOnInit() {
+    this.landingPageService.getLangSelected().subscribe(lang=>
+      {        
+        this.translate.use(lang);
+      })
   }
 
 }

@@ -2,6 +2,8 @@ import { Component, HostListener, Inject, OnInit, ViewEncapsulation } from "@ang
 import { DOCUMENT } from '@angular/platform-browser';
 import { WINDOW } from "../services/windows.service";
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
+import { LandingPageService } from "../services/landing-page.service";
+import { TranslateService } from "@ngx-translate/core";
 declare var $: any;
 
 @Component({
@@ -19,12 +21,25 @@ export class HeaderComponent implements OnInit {
   constructor(
     @Inject(DOCUMENT) private document: Document,
     @Inject(WINDOW) private window,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private landingPageService: LandingPageService,
+    private translate: TranslateService
   ) { }
 
   ngOnInit() {
      $.getScript('./assets/js/script.js');
      $.getScript('./assets/js/tilt.jquery.js');
+     this.landingPageService.getLangSelected().subscribe(lang=>
+      {        
+        this.translate.use(lang);
+      })
+   }
+   changeLang(lang){
+       
+    if(lang=="vi")
+      this.landingPageService.changeLanguage("vi");
+    else
+      this.landingPageService.changeLanguage("en");
    }
   showLoginModal(content)
   {

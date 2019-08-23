@@ -22,8 +22,11 @@
         <a class="navbar-brand" [routerLink]="'/demo'"><img src="assets/images/logo.png" alt="logo"></a>
         <div class="btn_header_mb">
             <a href="#" class="btn_login" (click)="showLoginModal(content)">Login</a>
-            <a href="#" class="flag_menu navbar-light">
+            <a href="javascript:void(0)" class="flag_menu navbar-light" (click)="changeLang('en')">
                 <img src="assets/images/flag_en.png" alt=""> EN
+            </a>
+            <a href="javascript:void(0)" class="flag_menu navbar-light" (click)="changeLang('vi')">
+                <img src="assets/images/flag_vi.png" alt=""> VI
             </a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,8 +47,11 @@
             </ul>
             <div class="btn_header">
                 <a href="#" class="btn_login" (click)="showLoginModal(content)">Login</a>
-                <a href="#" class="flag_menu navbar-light">
+                <a href="javascript:void(0)" class="flag_menu navbar-light" (click)="changeLang('en')">
                     <img src="assets/images/flag_en.png" alt=""> EN
+                </a>
+                <a href="javascript:void(0)" class="flag_menu navbar-light" (click)="changeLang('vi')">
+                    <img src="assets/images/flag_vi.png" alt=""> VI
                 </a>
             </div>
         </div>

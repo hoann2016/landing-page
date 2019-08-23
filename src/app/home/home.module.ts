@@ -20,6 +20,13 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LandingPageService } from '../shared/services/landing-page.service';
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   imports: [
@@ -29,6 +36,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ReactiveFormsModule,
     FormsModule,
     OwlModule,
+    NgbModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+  })
   ],
   declarations: [
     HomeTwoComponent,
@@ -46,6 +62,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NewsletterComponent,
    
   ],
-  providers: []
+  providers:[TranslateService,LandingPageService]
 })
 export class HomeModule { }

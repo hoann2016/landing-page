@@ -1,5 +1,7 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import 'magnific-popup';
+import { TranslateService } from '@ngx-translate/core';
+import { LandingPageService } from 'src/app/shared/services/landing-page.service';
 declare var $: any;
 
 @Component({
@@ -7,12 +9,20 @@ declare var $: any;
   templateUrl: './intro-three.component.html',
   styleUrls: ['./intro-three.component.scss']
 })
-export class IntroThreeComponent implements AfterViewInit {
+export class IntroThreeComponent implements AfterViewInit,OnInit {
 
   @ViewChild('video') videoElement: ElementRef;	
   
-  constructor() { }
+  constructor(private translate: TranslateService,
+  private landingPageService: LandingPageService) {
 
+    }
+    ngOnInit(): void {
+    this.landingPageService.getLangSelected().subscribe(lang=>
+      {        
+        this.translate.use(lang);
+      })
+    }
   // Magnific Popup
   ngAfterViewInit(): void {
   	$(this.videoElement.nativeElement).magnificPopup({ 

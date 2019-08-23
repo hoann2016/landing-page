@@ -1,6 +1,15 @@
 {
-    "HOME": {
-        "TITLE": "trang chủ",
-        "SELECT": "đổi ngôn ngữ"
+    "Home": {
+        "Title": "Trang chủ",
+        "Select": "Thay đôi ngôn ngữ",
+        "Footer": {
+            "Title": "Để lại thông tin",
+            "Form": {
+                "Name": "Họ tên",
+                "Email": "Email",
+                "Content": "Nội dung",
+                "Send": "Gửi"
+            }
+        }
     }
 }

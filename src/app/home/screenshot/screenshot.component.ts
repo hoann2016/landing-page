@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { LandingPageService } from 'src/app/shared/services/landing-page.service';
 
 @Component({
   selector: 'app-screenshot',
   templateUrl: './screenshot.component.html',
   styleUrls: ['./screenshot.component.scss']
 })
-export class ScreenshotComponent {
+export class ScreenshotComponent implements OnInit {
     
-    constructor() { }
+    constructor(private translate: TranslateService,
+		private landingPageService: LandingPageService) { }
     
     // Carousel Images  
 	public carouselImages = [{
@@ -35,7 +38,12 @@ export class ScreenshotComponent {
 	  }, {
 	    image: 'assets/images/app/12.jpg',
     }]
-  
+	ngOnInit(): void {
+		this.landingPageService.getLangSelected().subscribe(lang=>
+			{        
+			  this.translate.use(lang);
+			})
+	}
 	// Carousel Options
 	public carouselOptions: any ={
 	    loop:true,

@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { LandingPageService } from './services/landing-page.service';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -49,7 +50,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   providers: [
     WINDOW_PROVIDERS,
     LandingFixService,
-    TranslateService
+    TranslateService,
+    LandingPageService
   ]
 })
 export class SharedModule { }

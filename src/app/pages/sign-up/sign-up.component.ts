@@ -1,9 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, Validators, FormGroup } from "@angular/forms";
 import { MustMatch } from "./must-match.validator";
-import {CustomValidators} from "../../shared/validator-helper/custom-validator"
-import { FormErrorService } from '../../shared/validator-helper/form-eror.service';
 import { TranslateService } from "@ngx-translate/core";
+import { LandingPageService } from "src/app/shared/services/landing-page.service";
 @Component({
   selector: "app-sign-up",
   templateUrl: "./sign-up.component.html",
@@ -31,7 +30,8 @@ export class SignUpComponent implements OnInit {
   get f() {
     return this.signUpForm.controls;
   }
-  constructor(public fb: FormBuilder,public formErrorService: FormErrorService,private translate: TranslateService) {
+  constructor(public fb: FormBuilder,private translate: TranslateService,
+    private landingPageService: LandingPageService) {
    
   }
 
@@ -44,7 +44,7 @@ export class SignUpComponent implements OnInit {
           Validators.required,         
           Validators.minLength(3),
           Validators.maxLength(100),
-          CustomValidators.validateCharacters
+          Validators.pattern(/[a-zA-Z|à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ|è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ|ì|í|ị|ỉ|ĩ|ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ|ỳ|ý|ỵ|ỷ|ỹ|đ|À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ|È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ|Ì|Í|Ị|Ỉ|Ĩ|Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ|Ỳ|Ý|Ỵ|Ỷ|Ỹ|Đ\d\s]+$/)
         ]
       ],
         PackageSelectedName: [this.selectedPackage, Validators.required],
@@ -80,9 +80,7 @@ export class SignUpComponent implements OnInit {
         validator: MustMatch("Password", "RetypePassword")
       }
     );
-    this.signUpForm.valueChanges.subscribe((data) => { 
-      this.formErrors = this.formErrorService.validateForm(this.signUpForm, this.formErrors, true)
-    })
+    
     console.log("shop name ", this.signUpForm.controls.ShopName);
     this.signUpForm.controls.ShopName.valueChanges.subscribe((val:string)=>
       {
@@ -97,7 +95,10 @@ export class SignUpComponent implements OnInit {
   }
   ngOnInit() {  
     
-    this.translate.use('en');
+    this.landingPageService.getLangSelected().subscribe(lang=>
+      {        
+        this.translate.use(lang);
+      })
     this.selectedPackage="starter";
    this.buildForm();
   }

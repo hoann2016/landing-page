@@ -1,16 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { LandingPageService } from 'src/app/shared/services/landing-page.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-team',
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.scss']
 })
-export class TeamComponent {
+export class TeamComponent implements OnInit{
     
     // DomSanitizer for safe html content.
-    constructor(private _sanitizer:DomSanitizer) { }
-
+    constructor(private _sanitizer:DomSanitizer,private translate: TranslateService,
+      private landingPageService: LandingPageService) { }
+    ngOnInit(): void {
+      this.landingPageService.getLangSelected().subscribe(lang=>
+        {        
+          this.translate.use(lang);
+        })
+    }
     // Team Carousel
     public team = [{
         image: 'assets/images/avtar/1.jpg',

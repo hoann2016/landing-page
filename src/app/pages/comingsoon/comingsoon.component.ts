@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { LandingPageService } from 'src/app/shared/services/landing-page.service';
 declare var $: any;
 
 @Component({
@@ -8,10 +10,15 @@ declare var $: any;
 })
 export class ComingsoonComponent implements OnInit {
 
-  constructor() { }
+  constructor(private translate: TranslateService,
+    private landingPageService: LandingPageService) { }
 
   ngOnInit() {
-  	  $.getScript('./assets/js/timer.js');
+      $.getScript('./assets/js/timer.js');
+      this.landingPageService.getLangSelected().subscribe(lang=>
+        {        
+          this.translate.use(lang);
+        })
   }
 
 }

@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { FormErrorService } from 'src/app/shared/validator-helper/form-eror.service';
 import { TranslateService } from '@ngx-translate/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import {  BehaviorSubject } from 'rxjs';
+import { LandingPageService } from 'src/app/shared/services/landing-page.service';
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -27,7 +27,7 @@ export class SignInComponent implements OnInit {
   }
 
   constructor(public fb: FormBuilder,private translate: TranslateService,
-    private modalService: NgbModal) {
+    private modalService: NgbModal,private landingPageService: LandingPageService) {
    
    this.show = false;
   }
@@ -75,6 +75,10 @@ export class SignInComponent implements OnInit {
       {
         this.validFormRecovery.next(this.sendPasswordForm.controls.Email.valid);
       });
+      this.landingPageService.getLangSelected().subscribe(lang=>
+        {        
+          this.translate.use(lang);
+        })
   }
   forgotPassword(content){    
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {      

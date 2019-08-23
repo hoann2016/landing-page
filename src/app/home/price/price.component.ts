@@ -1,15 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
+import { LandingPageService } from 'src/app/shared/services/landing-page.service';
 
 @Component({
   selector: 'app-price',
   templateUrl: './price.component.html',
   styleUrls: ['./price.component.scss']
 })
-export class PriceComponent {
+export class PriceComponent implements OnInit{
     
     // DomSanitizer for safe html content.
-    constructor(private _sanitizer:DomSanitizer) { }
+    constructor(private _sanitizer:DomSanitizer,private translate: TranslateService,
+        private landingPageService: LandingPageService) { }
 
     // Pricing Carousel
     public price = [{
@@ -31,7 +34,12 @@ export class PriceComponent {
         duration: 'per year',
         feature: this._sanitizer.bypassSecurityTrustHtml('<li>1 GB of space</li><li>real time sync</li><li>unlimited attachment</li><li>customize theme</li><li>priority email support</li>'),
     }]
-
+    ngOnInit(): void {
+        this.landingPageService.getLangSelected().subscribe(lang=>
+            {        
+              this.translate.use(lang);
+            })  
+    }
 
     // Pricing Carousel Options
 	public pricingCarousel: any ={

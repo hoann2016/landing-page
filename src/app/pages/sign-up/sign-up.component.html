@@ -24,7 +24,7 @@
                                         <span *ngIf="f.CustomerName.errors?.required" class="text-danger">
                                                     Thông tin bắt buộc, vui lòng không để trống
                                             </span>
-                                        <span *ngIf="f.CustomerName.errors?.minlength||f.CustomerName.errors?.maxlengh||formErrors?.CustomerName" class="text-danger">
+                                        <span *ngIf="f.CustomerName.errors?.minlength||f.CustomerName.errors?.maxlengh||f.CustomerName.errors?.pattern" class="text-danger">
                                                 Thông tin họ tên không hợp lệ
                                         </span>
                                     </div>

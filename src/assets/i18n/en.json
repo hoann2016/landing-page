@@ -1,6 +1,15 @@
 {
-    "HOME": {
-        "TITLE": "hompage",
-        "SELECT": "Change language"
+    "Home": {
+        "Title": "hompage",
+        "Select": "Change language",
+        "Footer": {
+            "Title": "Get in touch",
+            "Form": {
+                "Name": "Your name",
+                "Email": "Email",
+                "Content": "Message",
+                "Send": "Send"
+            }
+        }
     }
 }
