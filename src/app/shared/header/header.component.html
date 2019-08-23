@@ -1,51 +1,57 @@
 <!-- Nav Start -->
 <nav class="navbar navbar-expand-lg navbar-light theme-nav fixed-top" [class.darkHeader]="darkHeader">
-  <div class="container">
-    <!-- start modal -->
-    <ng-template #content let-modal>
-        <div class="modal-body modal_body_signin">
-            <button type="button " class="close" aria-label="Close " (click)="modal.dismiss( 'Cross click') ">
+    <div class="container">
+        <!-- start modal -->
+        <ng-template #content let-modal>
+            <div class="modal-body modal_body_signin">
+                <button type="button " class="close" aria-label="Close " (click)="modal.dismiss( 'Cross click') ">
                 <span aria-hidden="true ">&times;</span>
               </button>
-            <app-sign-in></app-sign-in>
-        </div>
-        <!-- <div class="modal-footer ">
+                <app-sign-in></app-sign-in>
+            </div>
+            <!-- <div class="modal-footer ">
             <button [disabled]="!(validFormRecovery|async)" class="btn btn-outline-dark " (click)="modal.close( 'Save click') ">Save</button>
         </div> -->
-    </ng-template>
+        </ng-template>
 
 
-    <!-- end modal -->
-    <a class="navbar-brand" [routerLink]="'/demo'"><img class="nav_logo" src="assets/images/logo.png" alt="logo"></a>
-    <div class="btn_header_mb">
-        <a href="#" class="btn_login" (click)="showLoginModal(content)">Login</a>
-        <a href="#" class="flag_menu navbar-light">
-          <img src="assets/images/flag_en.png" alt=""> EN
-        </a>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- end modal -->
+        <a class="navbar-brand" [routerLink]="'/demo'"><img class="nav_logo" src="assets/images/logo.png" alt="logo"></a>
+        <div class="btn_header_mb">
+            <a href="#" class="btn_login" (click)="showLoginModal(content)">Login</a>
+            <a href="javascript:void(0)" class="flag_menu navbar-light" (click)="changeLang('en')">
+                <img src="assets/images/flag_en.png" alt=""> EN
+            </a>
+            <a href="javascript:void(0)" class="flag_menu navbar-light" (click)="changeLang('vi')">
+                <img src="assets/images/flag_vi.png" alt=""> VI
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse default-nav" id="navbarSupportedContent">
-      <ul class="navbar-nav" id="mymenu">
-        <li class="nav-item">
-          <a class="nav-link" href="#home" [pageScrollOffset]="80" pageScroll><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#feature_lud" [pageScrollOffset]="80" pageScroll>Solution & Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#feature" [pageScrollOffset]="80" pageScroll>BLOG</a>
-        </li>
-      </ul>
-      <div class="btn_header">
-        <a href="#" class="btn_login" (click)="showLoginModal(content)">Login</a>
-        <a href="#" class="flag_menu navbar-light">
-          <img src="assets/images/flag_en.png" alt=""> EN
-        </a>
-      </div>
+        <div class="collapse navbar-collapse default-nav" id="navbarSupportedContent">
+            <ul class="navbar-nav" id="mymenu">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home" [pageScrollOffset]="80" pageScroll><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#feature_lud" [pageScrollOffset]="80" pageScroll>Solution & Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#feature" [pageScrollOffset]="80" pageScroll>BLOG</a>
+                </li>
+            </ul>
+            <div class="btn_header">
+                <a href="#" class="btn_login" (click)="showLoginModal(content)">Login</a>
+                <a href="javascript:void(0)" class="flag_menu navbar-light" (click)="changeLang('en')">
+                    <img src="assets/images/flag_en.png" alt=""> EN
+                </a>
+                <a href="javascript:void(0)" class="flag_menu navbar-light" (click)="changeLang('vi')">
+                    <img src="assets/images/flag_vi.png" alt=""> VI
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
 </nav>
 <!-- Nav end-->

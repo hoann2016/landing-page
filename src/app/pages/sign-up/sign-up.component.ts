@@ -100,6 +100,7 @@ export class SignUpComponent implements OnInit {
         this.translate.use(lang);
       })
     this.selectedPackage="starter";
+    
    this.buildForm();
   }
   onSubmit() {

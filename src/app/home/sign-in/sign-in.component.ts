@@ -96,6 +96,7 @@ export class SignInComponent implements OnInit {
     });
   }
   onSubmit(){
+    this.isSubmitted=true;
     console.log("value form submited ! ",this.signInForm.value);
     if(this.signInForm.valid){
       alert("login information is oke")
