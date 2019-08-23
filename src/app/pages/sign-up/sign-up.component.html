@@ -23,14 +23,14 @@
                 <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 wrap_over_signin">
                     <div class="wrap_form_field">
                         <div class="header-page">
-                            <h2 class="header-form"> Đăng ký</h2>
-                            <span class="descrition-page">Trải nghiệm dịch vụ đầy đủ của sản phẩm</span>
+                            <h2 class="header-form"> {{'Register.Register'|translate}}</h2>
+                            <span class="descrition-page">{{'Register.subtitle'|translate}}</span>
                         </div>
 
                         <form class="register-form" [formGroup]="signUpForm">
                             <div class="row two-item">
                                 <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 one-line">
-                                    <span class="title-input">Họ tên</span>
+                                    <span class="title-input">{{'Register.Register'|translate}}</span>
                                     <div class="form-input-2">
 
                                         <input type="text" name="CustomerName" class=" fix-boder" placeholder="Họ tên" formControlName="CustomerName" [ngClass]="{ 'is-invalid': f.CustomerName.touched && (f.CustomerName.errors?.required||formErrors?.CustomerName) }
@@ -38,17 +38,17 @@
 
                                         <div *ngIf="isSubmitted && (formErrors?.CustomerName||f.CustomerName.errors)" class="text-danger">
                                             <span *ngIf="f.CustomerName.errors?.required" class="text-danger">
-                                                            Thông tin bắt buộc, vui lòng không để trống
-                                                    </span>
+                                                {{'Register.message-require'|translate}}
+                                            </span>
                                             <span *ngIf="f.CustomerName.errors?.minlength||f.CustomerName.errors?.maxlengh||f.CustomerName.errors?.pattern" class="text-danger">
-                                                        Thông tin họ tên không hợp lệ
-                                                </span>
+                                                {{'Register.message-format'|translate}}
+                                            </span>
                                         </div>
 
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 one-line">
-                                    <span class="title-input">Gói dịch vụ</span>
+                                    <span class="title-input">{{'Register.package'|translate}}</span>
                                     <div class="form-input-2">
                                         <select formControlName="PackageSelectedName" [ngClass]="{ 'is-invalid': f.PackageSelectedName.touched && f.PackageSelectedName.errors?.required }">
                                             <option value="enterprise">Enterprise</option>
@@ -57,7 +57,7 @@
                                             <option value="starter" selected>Starter</option>
                                             </select>
                                         <div *ngIf="isSubmitted&& f.PackageSelectedName.errors?.required" class="text-danger">
-                                            <div *ngIf="f.PackageSelectedName.errors?.required">Thông tin bắt buộc, vui lòng không để trống</div>
+                                            <div *ngIf="f.PackageSelectedName.errors?.required">{{'Register.message-require'|translate}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -65,13 +65,13 @@
                             </div>
                             <div class="row one-item">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                    <span class="title-input">Tên cửa hàng / tiệm của bạn</span><span class="blue-text">*</span>
+                                    <span class="title-input">{{'Register.shopname'|translate}}</span><span class="blue-text">*</span>
                                     <div class="form-input-1">
                                         <input type="text" class="fix-boder" formControlName="ShopName" placeholder="Tên cửa hàng" required="required" [ngClass]="{ 'is-invalid': f.ShopName.touched && f.ShopName.errors?.required }">
 
                                         <div *ngIf="isSubmitted && f.ShopName.errors" class="text-danger">
-                                            <span *ngIf="f.ShopName.errors?.required">Thông tin bắt buộc, vui lòng không để trống</span>
-                                            <span *ngIf="f.ShopName.errors?.minlength||f.ShopName.errors?.maxlength">Thông tin tên shop không hợp lệ</span>
+                                            <span *ngIf="f.ShopName.errors?.required">{{'Register.message-require'|translate}}</span>
+                                            <span *ngIf="f.ShopName.errors?.minlength||f.ShopName.errors?.maxlength">{{'Register.message-format-6'|translate}}</span>
                                         </div>
                                     </div>
                                     <div class="sugest-name" *ngIf="shopDomain">
@@ -79,7 +79,7 @@
                                             <img src="../../../assets/images/sign-up/iconmonstr-light-bulb-16.svg">
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-xs-8 col-lg-10 one-line">
-                                            <p>Tên website của bạn sẽ là: <span>{{shopDomain}}</span> bạn có thể thay đổi trong cài đặt sau này
+                                            <p>{{'Register.message-tips'|translate}}: <span>{{shopDomain}}</span> {{'Register.message-tips2'|translate}}
                                             </p>
                                         </div>
                                     </div>
@@ -87,17 +87,17 @@
                             </div>
                             <div class="row one-item">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                    <span class="title-input">Loại hình dịch vụ</span>
+                                    <span class="title-input">{{'Register.shop-type'|translate}}</span>
                                     <div class="form-input-1">
                                         <select formControlName="ServiceName" [ngClass]="{ 'is-invalid': f.ServiceName.touched && f.ServiceName.errors?.required }">
-                                            <option value="" disabled selected>Vui lòng chọn</option>
-                                            <option value="salon">Salon Tóc</option>
-                                            <option value="spa">Spa / Massage</option>
-                                            <option value="phongkham" selected>Phòng khám</option>
+                                            <option value="" disabled selected>{{'Register.shop-type0'|translate}}</option>
+                                            <option value="salon">{{'Register.shop-type1'|translate}}</option>
+                                            <option value="spa">{{'Register.shop-type2'|translate}}</option>
+                                            <option value="phongkham" selected>{{'Register.shop-type3'|translate}}</option>
                                             
                                             </select>
                                         <div *ngIf="isSubmitted && f.ServiceName.errors" class="text-danger">
-                                            <div *ngIf="f.ServiceName.errors?.required">Thông tin bắt buộc, vui lòng không để trống</div>
+                                            <div *ngIf="f.ServiceName.errors?.required">{{'Register.message-require'|translate}}</div>
 
                                         </div>
                                     </div>
@@ -105,47 +105,47 @@
                             </div>
                             <div class="row one-item">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                    <span class="title-input">Điện thoại liên hệ</span>
+                                    <span class="title-input">{{'Register.phone-1'|translate}}</span>
                                     <div class="form-input-1">
                                         <input type="text" class="fix-boder" formControlName="Phone" placeholder="Điện thoại" required="required" [ngClass]="{ 'is-invalid': f.Phone.touched && f.Phone.errors?.required }">
                                         <div *ngIf="isSubmitted && f.Phone.errors" class="text-danger">
-                                            <div *ngIf="f.Phone.errors?.required">Thông tin bắt buộc, vui lòng không để trống</div>
-                                            <div *ngIf="f.Phone.errors?.pattern">Thông tin số điện thoại không hợp lệ</div>
+                                            <div *ngIf="f.Phone.errors?.required">{{'Register.message-require'|translate}}</div>
+                                            <div *ngIf="f.Phone.errors?.pattern">{{'Register.message-format-2'|translate}}</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row one-item">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                    <span class="title-input">Email</span>
+                                    <span class="title-input">{{'Register.Email'|translate}}</span>
                                     <div class="form-input-1">
                                         <input type="email" class="fix-boder" formControlName="Email" placeholder="Email" required="required" [ngClass]="{ 'is-invalid': f.Email.touched && f.Email.errors?.required }">
                                     </div>
                                     <div *ngIf="isSubmitted && f.Email.errors" class="text-danger">
-                                        <div *ngIf="f.Email.errors?.required">Thông tin bắt buộc, vui lòng không để trống</div>
-                                        <div *ngIf="f.Email.errors?.email">Thông tin email không hợp lệ</div>
+                                        <div *ngIf="f.Email.errors?.required">{{'Register.message-require'|translate}}</div>
+                                        <div *ngIf="f.Email.errors?.email">{{'Register.message-format-3'|translate}}</div>
 
                                     </div>
                                 </div>
                             </div>
                             <div class="row two-item">
                                 <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 one-line">
-                                    <span class="title-input">Mật khẩu</span>
+                                    <span class="title-input">{{'Register.Password'|translate}}</span>
                                     <div class="form-input-2">
                                         <input type="password" class=" fix-boder" formControlName="Password" placeholder="Mật khẩu" required="required" [ngClass]="{ 'is-invalid': f.Password.touched && f.Password.errors }">
                                         <div *ngIf=" isSubmitted &&f.Password.errors" class="text-danger">
-                                            <div *ngIf="f.Password.errors.required">Thông tin bắt buộc, vui lòng không để trống</div>
-                                            <div *ngIf="f.Password.errors.minlength||f.Password.errors.maxlength">Thông tin mật khẩu không hợp lệ</div>
+                                            <div *ngIf="f.Password.errors.required">{{'Register.message-require'|translate}}</div>
+                                            <div *ngIf="f.Password.errors.minlength||f.Password.errors.maxlength">{{'Register.message-format-4'|translate}}</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 one-line">
-                                    <span class="title-input">Xác nhận mật khẩu</span>
+                                    <span class="title-input">{{'Register.re-password'|translate}}</span>
                                     <div class="form-input-2">
                                         <input type="password" class=" fix-boder" placeholder="Nhập lại mật khẩu" formControlName="RetypePassword" required="required" [ngClass]="{ 'is-invalid': f.RetypePassword.touched &&f.RetypePassword.errors }">
                                         <div *ngIf="isSubmitted &&(f.RetypePassword.errors?.mustMatch ||f.RetypePassword.errors?.required)" class="text-danger">
-                                            <div *ngIf="f.RetypePassword.errors.required">Thông tin bắt buộc, vui lòng không để trống</div>
-                                            <div *ngIf="f.RetypePassword.errors.mustMatch">Thông tin gõ lại mật khẩu không hợp lệ</div>
+                                            <div *ngIf="f.RetypePassword.errors.required">{{'Register.message-require'|translate}}</div>
+                                            <div *ngIf="f.RetypePassword.errors.mustMatch">{{'Register.message-format-5'|translate}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -154,11 +154,11 @@
                             <div class="row one-item poli_form">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
                                     <p [ngClass]="{ 'is-invalid': isSubmitted && f.IsComfirmed.value==false }">
-                                        <input class="ip_checkbox" type="checkbox" formControlName="IsComfirmed"> Tôi hoàn toàn đồng ý các chính sách về <a href="">điều khoản-điều kiện</a> sử dụng của Ludiino
+                                        <input class="ip_checkbox" type="checkbox" formControlName="IsComfirmed"> {{'Register.policy'|translate}}
                                     </p>
                                     <div *ngIf="isSubmitted">
-                                        <span *ngIf="f.IsComfirmed.errors?.required">
-                                                    Bắt buộc phải đồng ý điều khoản
+                                        <span *ngIf="f.IsComfirmed.errors?.required">                                                   
+                                                    {{'Register.message-require'|translate}}
                                             </span>
                                     </div>
                                 </div>
@@ -170,7 +170,7 @@
                                     </div>
                                 </div>
                                 <div class="one-line">
-                                    <p>Tôi đã có tài khoản -<a href=""> Đăng nhập</a></p>
+                                    <p>{{'Register.have-account'|translate}} -<a href=""> {{'Shared.SigninBtnLabel'|translate}}</a></p>
                                 </div>
 
                             </div>

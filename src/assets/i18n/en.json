@@ -57,9 +57,10 @@
             }
         }
     },
-    "Register":{
-        "Email":"Email",
-        "Password":"Password",
+    "Register": {
+        "DescriptionHeader": "Trải nghiệm dịch vụ đầy đủ của sản phẩm",
+        "Email": "Email",
+        "Password": "Password",
         "re-password": "Confirm Password",
         "re-password-2": "Retype Password",
         "Register": "Register",
@@ -81,7 +82,16 @@
         "message-format-3": "Invalid email",
         "message-format-4": "Invalid password",
         "message-format-5": "Invalid confirm password",
+        "message-format-6": "Invalid shop name",
         "message-tips": "Your website domain will be",
-        "message-tips2": "You can change it later."
+        "message-tips2": "You can change it later.",
+        "shop-type0": "Select",
+        "shop-type1": "Salon",
+        "shop-type2": "Spa / Massage",
+        "shop-type3": "Medical Clinic"
+    },
+    "Shared": {
+        "RegisterBtnLabel": "Register",
+        "SigninBtnLabel": "Sign In"
     }
 }

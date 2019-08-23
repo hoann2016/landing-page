@@ -59,9 +59,10 @@
             }
         }
     },
-    "Register":{
-        "Email":"Email",
-        "Password":"Mật khẩu",
+    "Register": {
+        "DescriptionHeader": "Trải nghiệm dịch vụ đầy đủ của sản phẩm",
+        "Email": "Email",
+        "Password": "Mật khẩu",
         "re-password": "Xác nhận mật khẩu",
         "re-password-2": "Nhập lại mật khẩu",
         "Register": "Đăng ký",
@@ -83,7 +84,17 @@
         "message-format-3": "Thông tin email không hợp lệ",
         "message-format-4": "Thông tin mật khẩu không hợp lệ",
         "message-format-5": "Thông tin gõ lại mật khẩu không hợp lệ",
+        "message-format-6": "Thông tin tên shop không hợp lệ",
         "message-tips": "Tên Website Của Bạn Sẽ Là",
-        "message-tips2": "Bạn Có Thể Thay Đổi Trong Cài Đặt Sau Này"
+        "message-tips2": "Bạn Có Thể Thay Đổi Trong Cài Đặt Sau Này",
+        "shop-type0": "Vui lòng chọn",
+        "shop-type1": "Salon Tóc",
+        "shop-type2": "Spa / Massage",
+        "shop-type3": "Phòng khám"
+    },
+    "Shared": {
+        "RegisterBtnLabel": "Đăng ký",
+        "SigninBtnLabel": "Đăng nhập"
     }
+
 }
