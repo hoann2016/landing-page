@@ -2,6 +2,7 @@
     "Home": {
         "Title": "Trang chủ",
         "Select": "Thay đôi ngôn ngữ",
+        "Header1": "Giải Pháp & Chi Phí",
         "Intro": {
 
             "Message": "Khách Hàng Kỷ Nguyên 4.0 sẽ tìm và đặt dịch vụ trực tuyến bất kỳ khi nào họ muốn bằng các thiết bị thông minh?",
@@ -43,7 +44,16 @@
         "SelectPackage": {
             "SelectPlant": "Chọn Gói Dịch Vụ phù hợp nhất với bạn!",
             "AddTooltip": "add tool tip",
-            "RegisterNow": "Đăng Ký Ngay"
+            "RegisterNow_Freebie": "Đăng Ký Ngay",
+            "RegisterNow_Newbie": "Đăng Ký Ngay",
+            "RegisterNow_Biggie": "Đăng Ký Ngay",
+            "RegisterNow_Popular": ""
+        },
+        "SignIn": {
+            "KeepLogedIn": "Giữ tôi luôn đăng nhập",
+            "IfDontHaveAcc": "Nếu bạn chưa có tài khoản",
+            "RegisterNow": "Đăng Ký Ngay",
+            "ForgotPassword": "Quên mật khẩu"
         },
         "Footer": {
             "Title": "Để lại thông tin",
@@ -75,7 +85,8 @@
         "select": "Vui lòng chọn",
         "phone-1": "Điện thoại liên hệ",
         "phone": "Điện thoại",
-        "policy": "Tôi hoàn toàn đồng ý các chính sách về điều khoản-điều kiện sử dụng của Ludiino",
+        "policy": "Tôi hoàn toàn đồng ý các chính sách về",
+        "policy-2": "Điều khoản và chính sách",
         "have-account": "Tôi đã có tài khoản",
         "sign-in": "Đăng nhập",
         "message-require": "Thông tin bắt buộc, vui lòng không để trống",
@@ -94,7 +105,9 @@
     },
     "Shared": {
         "RegisterBtnLabel": "Đăng ký",
-        "SigninBtnLabel": "Đăng nhập"
+        "SigninBtnLabel": "Đăng nhập",
+        "Send": "Gửi"
+
     }
 
 }

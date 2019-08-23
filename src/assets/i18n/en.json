@@ -2,6 +2,7 @@
     "Home": {
         "Title": "hompage",
         "Select": "Change language",
+        "Header1": "Solution & Pricing",
         "Intro": {
             "Message": "Mordern customers will go online to book what they want when they want it",
             "ButtonLabel": "START FOR FREE",
@@ -41,7 +42,18 @@
         "SelectPackage": {
             "SelectPlant": "Select the Plan that works for you!",
             "AddTooltip": "add tool tip",
-            "RegisterNow": "Register Now"
+            "RegisterNow_Freebie": "Get Freebie",
+            "RegisterNow_Newbie": "Get Newbie",
+            "RegisterNow_Biggie": "Get Biggie",
+            "RegisterNow_Popular": "Get Hulk"
+
+
+        },
+        "SignIn": {
+            "KeepLogedIn": "Keep me loged in",
+            "IfDontHaveAcc": "If you dont have an Account",
+            "RegisterNow": "Register now",
+            "ForgotPassword": "Forgot password"
         },
         "Footer": {
             "Title": "Get in touch",
@@ -73,7 +85,8 @@
         "select": "Select",
         "phone-1": "Phone",
         "phone": "Phone",
-        "policy": "I agree to the Terms of Service and Privacy Policy.",
+        "policy": "I agree to the",
+        "policy-2": "Terms of Service and Privacy Policy.",
         "have-account": "Already have an account?",
         "sign-in": "Sign In",
         "message-require": "Do not leave blank; this information is required.",

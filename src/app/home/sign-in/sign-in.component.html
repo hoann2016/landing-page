@@ -3,7 +3,7 @@
         <!-- modal forgot password  -->
         <ng-template #forgot_password_content let-modal style="max-width:80%;">
             <div class="modal-header ">
-                <h4 class="modal-title " id="modal-basic-title ">Quên mật khẩu</h4>
+                <h4 class="modal-title " id="modal-basic-title ">{{'Home.SignIn.ForgotPassword'|translate}}</h4>
                 <button type="button " class="close " aria-label="Close " (click)="modal.dismiss( 'Cross click') ">
                 <span aria-hidden="true ">&times;</span>
               </button>
@@ -11,18 +11,18 @@
             <div class="modal-body ">
                 <form [formGroup]="sendPasswordForm">
                     <div class="form-group ">
-                        <label for="email ">Email</label>
+                        <label for="email ">{{'Register.Email'|translate}}</label>
                         <div class="input-group ">
-                            <input name="email" type="email" formControlName="Email" placeholder="Email" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 form-control" style="width: 100%;">
-                            <small *ngIf="f_recover.Email.touched && f_recover.Email.errors?.required" class="form-text text-muted text-danger">Thông tin bắt buộc, vui lòng không để trống</small>
-                            <small *ngIf="f_recover.Email.errors?.email" class="form-text text-muted text-danger">Thông tin email không hợp lệ</small>
+                            <input name="email" type="email" formControlName="Email" placeholder="{{'Register.Email'|translate}}" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 form-control" style="width: 100%;">
+                            <small *ngIf="f_recover.Email.touched && f_recover.Email.errors?.required" class="form-text text-muted text-danger">{{'Register.message-require'|translate}}</small>
+                            <small *ngIf="f_recover.Email.errors?.email" class="form-text text-muted text-danger">{{'Register.message-format-3'|translate}}</small>
 
                         </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer ">
-                <button [disabled]="!(validFormRecovery|async)" class="btn btn-outline-dark " (click)="modal.close( 'Save click') ">Send</button>
+                <button [disabled]="!(validFormRecovery|async)" class="btn btn-outline-dark " (click)="modal.close( 'Save click') ">{{'Shared.Send'|translate}}</button>
             </div>
         </ng-template>
         <!-- end modal -->
@@ -31,30 +31,30 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <div class="login_content wrap_form_field">
                         <div class="header-page">
-                            <h2 class="header-form">Đăng nhập</h2>
-                            <p class="no_acc">Nếu bạn chưa có tài khoản <a href="javascript:void(0)" (click)="RedirectToRegister()">đăng ký ngay!</a></p>
+                            <h2 class="header-form">{{'Shared.SigninBtnLabel'|translate}}</h2>
+                            <p class="no_acc">{{'Home.SignIn.IfDontHaveAcc'|translate}} <a href="javascript:void(0)" (click)="RedirectToRegister()">{{'Home.SignIn.RegisterNow'|translate}}!</a></p>
                         </div>
                         <form class="register-form" [formGroup]="signInForm">
 
                             <div class="row one-item">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                    <span class="title-input">Email</span>
+                                    <span class="title-input">{{'Register.Email'|translate}} </span>
                                     <div class="form-input-1">
-                                        <input type="email" class="fix-boder" formControlName="Email" placeholder="Email" required="required" [ngClass]="{ 'is-invalid': f.Email.touched && f.Email.errors }">
+                                        <input type="email" class="fix-boder" formControlName="Email" placeholder="{{'Register.Email'|translate}}" required="required" [ngClass]="{ 'is-invalid': f.Email.touched && f.Email.errors }">
                                         <div *ngIf="isSubmitted && f.Email.errors" class="text-danger">
-                                            <span *ngIf="f.Email.errors?.required">Thông tin bắt buộc, vui lòng không để trống</span>
-                                            <span *ngIf="f.Email.errors?.email">Thông tin email không hợp lệ</span>
+                                            <span *ngIf="f.Email.errors?.required">{{'Register.message-require'|translate}} </span>
+                                            <span *ngIf="f.Email.errors?.email">{{'Register.message-format-3'|translate}} </span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row one-item">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                    <span class="title-input">Mật khẩu</span>
+                                    <span class="title-input">{{'Register.Password'|translate}} </span>
                                     <div class="form-input-2">
-                                        <input type="password" class=" fix-boder" formControlName="Password" placeholder="Password" required="required" [ngClass]="{ 'is-invalid': f.Password.touched && f.Password.errors }">
+                                        <input type="password" class=" fix-boder" formControlName="Password" placeholder="{{'Register.Password'|translate}}" required="required" [ngClass]="{ 'is-invalid': f.Password.touched && f.Password.errors }">
                                         <div *ngIf="isSubmitted &&f.Password.errors" class="text-danger">
-                                            <div *ngIf="f.Password.errors.required">Thông tin bắt buộc, vui lòng không để trống</div>
+                                            <div *ngIf="f.Password.errors.required">{{'Register.message-require'|translate}} </div>
                                         </div>
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
                                     <p>
                                         <input name="remember_login" type="checkbox" formControlName="RememberLogin">
-                                        <label for="remember_login" style="padding-left:5px;"> Giữ tôi luôn đăng nhập</label>
+                                        <label for="remember_login" style="padding-left:5px;"> {{'Home.SignIn.KeepLogedIn'|translate}}</label>
                                     </p>
 
                                 </div>
@@ -72,7 +72,7 @@
                                 <div class="one-line btn_submit_signup">
 
                                     <div class="form-input-2">
-                                        <button class="btn_login_form" (click)="onSubmit()">Đăng nhập</button>
+                                        <button class="btn_login_form" (click)="onSubmit()"> {{'Shared.SigninBtnLabel'|translate}}</button>
                                     </div>
                                 </div>
                                 <div class="one-line forgot_text">
