@@ -58,5 +58,32 @@
                 "Detail": "Nếu có bất kỳ câu hỏi liên hệ ngay với chúng tôi:"
             }
         }
+    },
+    "Register":{
+        "Email":"Email",
+        "Password":"Mật khẩu",
+        "re-password": "Xác nhận mật khẩu",
+        "re-password-2": "Nhập lại mật khẩu",
+        "Register": "Đăng ký",
+        "subtitle": "Trải nghiệm dịch vụ đầy đủ của sản phẩm",
+        "name": "Họ tên",
+        "package": "Gói dịch vụ",
+        "shopname": "Tên cửa hàng / tiệm của bạn",
+        "shopname-2": "Tên cửa hàng",
+        "shop-type": "Loại hình dịch vụ",
+        "select": "Vui lòng chọn",
+        "phone-1": "Điện thoại liên hệ",
+        "phone": "Điện thoại",
+        "policy": "Tôi hoàn toàn đồng ý các chính sách về điều khoản-điều kiện sử dụng của Ludiino",
+        "have-account": "Tôi đã có tài khoản",
+        "sign-in": "Đăng nhập",
+        "message-require": "Thông tin bắt buộc, vui lòng không để trống",
+        "message-format": "Thông tin họ tên không hợp lệ",
+        "message-format-2": "Thông tin số điện thoại không hợp lệ",
+        "message-format-3": "Thông tin email không hợp lệ",
+        "message-format-4": "Thông tin mật khẩu không hợp lệ",
+        "message-format-5": "Thông tin gõ lại mật khẩu không hợp lệ",
+        "message-tips": "Tên Website Của Bạn Sẽ Là",
+        "message-tips2": "Bạn Có Thể Thay Đổi Trong Cài Đặt Sau Này"
     }
 }
