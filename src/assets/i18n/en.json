@@ -70,7 +70,6 @@
         }
     },
     "Register": {
-        "DescriptionHeader": "Trải nghiệm dịch vụ đầy đủ của sản phẩm",
         "Email": "Email",
         "Password": "Password",
         "re-password": "Confirm Password",
