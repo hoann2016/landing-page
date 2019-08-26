@@ -44,55 +44,55 @@
                             </div>
                             <div class="pricing-feature pricing-feature-intro">
                                 <li>
-                                    <p>Web Site</p>
+                                    <p>{{'Home.SelectPackage.TableFeature.Website'|translate}}</p>
                                 </li>
                                 <li>
-                                    <p>Rating & Review</p>
+                                    <p>{{'Home.SelectPackage.TableFeature.RatingReview'|translate}}</p>
                                 </li>
                                 <li>
-                                    <p>Services & Pricing</p>
+                                    <p>{{'Home.SelectPackage.TableFeature.ServicePricing'|translate}}</p>
                                 </li>
                                 <li>
-                                    <p>Time Slots Booking & Confirmation</p>
+                                    <p>{{'Home.SelectPackage.TableFeature.TimeSlotBookingConfirmation'|translate}}</p>
                                 </li>
                                 <li>
-                                    <p>No. of Bookings Month</p>
+                                     <p>{{'Home.SelectPackage.TableFeature.NoOfBooking'|translate}}</p>
                                 </li>
                                 <li>
-                                    <p class="more_pad_1">Payment method</p>
+                                    <p class="more_pad_1">{{'Home.SelectPackage.TableFeature.PaymentMethod'|translate}}</p>
                                 </li>
                                 <li>
-                                    <p>Deal & Promotion</p>
+                                    <p>{{'Home.SelectPackage.TableFeature.DealPromotion'|translate}}</p>
                                 </li>
                                 <li>
-                                    <p>Checkin & Checkout</p>
+                                    <p>{{'Home.SelectPackage.TableFeature.CheckInCheckOut'|translate}}</p>
                                 </li>
                                 <li>
-                                    <p>Cancellation</p>
+                                    <p>{{'Home.SelectPackage.TableFeature.Cancellation'|translate}}</p>
                                 </li>
                                 <li>
-                                    <p>Calendar View</p>
+                                    <p>{{'Home.SelectPackage.TableFeature.CalendarView'|translate}}</p>
                                 </li>
                                 <li>
-                                    <p>Chat Widget</p>
+                                    <p>{{'Home.SelectPackage.TableFeature.ChatWidget'|translate}}</p>
                                 </li>
                                 <li>
-                                    <p>Technician Scheduling & Booking</p>
+                                    <p>{{'Home.SelectPackage.TableFeature.TechnicianSchedulingBooking'|translate}}</p>
                                 </li>
                                 <li>
-                                    <p>Customer Membership</p>
+                                   <p>{{'Home.SelectPackage.TableFeature.CustomerMembership'|translate}}</p>
                                 </li>
                                 <li>
-                                    <p>Product Commerce</p>
+                                    <p>{{'Home.SelectPackage.TableFeature.ProductCommerce'|translate}}</p>
                                 </li>
                                 <li>
-                                    <p>Dashboards</p>
+                                   <p>{{'Home.SelectPackage.TableFeature.CalendarView'|translate}}</p>
                                 </li>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 pricing-col person">
-                        <a href="javascript:void(0)" class="pricing-card" (click)="RedirectToRegister()">
+                        <a href="javascript:void(0)" class="pricing-card" (click)="RedirectToRegister('FREEBIE')">
                             <div class="pricing-header title_package">
                                 <h5>Freebie</h5>
                                 <div class="price-box">
@@ -178,7 +178,7 @@
 
                             </div>
                             <div class="pricing-footer">
-                                <a href="javascript:void(0)" class="btn btn-act rounded btn-line" (click)="RedirectToRegister()">
+                                <a href="javascript:void(0)" class="btn btn-act rounded btn-line" (click)="RedirectToRegister('FREEBIE')">
                                     <span>{{'Home.SelectPackage.RegisterNow_Freebie'|translate}}</span>
                                     <i class="fa fa-arrow-right"></i>
                                 </a>
@@ -186,7 +186,7 @@
                         </a>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 pricing-col unlim">
-                        <a href="javascript:void(0)" class="pricing-card" (click)="RedirectToRegister()">
+                        <a href="javascript:void(0)" class="pricing-card" (click)="RedirectToRegister('NEWBIE')">
                             <div class="pricing-header title_package">
                                 <h5 class="lud_color_red">Newbie</h5>
                                 <div class="price-box">
@@ -274,7 +274,7 @@
                                 </li>
                             </div>
                             <div class="pricing-footer">
-                                <a href="javascript:void(0)" class="btn btn-act rounded btn-line" (click)="RedirectToRegister()">
+                                <a href="javascript:void(0)" class="btn btn-act rounded btn-line" (click)="RedirectToRegister('NEWBIE')">
                                     <span>{{'Home.SelectPackage.RegisterNow_Newbie'|translate}}</span>
                                     <i class="fa fa-arrow-right"></i>
                                 </a>
@@ -282,7 +282,7 @@
                         </a>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 pricing-col business">
-                        <a href="javascript:void(0)" class="pricing-card" (click)="RedirectToRegister()">
+                        <a href="javascript:void(0)" class="pricing-card" (click)="RedirectToRegister('BIGGIE')">
                             <div class="pricing-header title_package">
                                 <h5 class="lud_color_yel">Biggie</h5>
                                 <!-- <a href="" class="ribbon">
@@ -374,7 +374,7 @@
                                 </li>
                             </div>
                             <div class="pricing-footer">
-                                <a href="javascript:void(0)" class="btn btn-act rounded btn-line" (click)="RedirectToRegister()">
+                                <a href="javascript:void(0)" class="btn btn-act rounded btn-line" (click)="RedirectToRegister('BIGGIE')">
                                     <span>{{'Home.SelectPackage.RegisterNow_Biggie'|translate}}</span>
                                     <i class="fa fa-arrow-right"></i>
                                 </a>
@@ -382,7 +382,7 @@
                         </a>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 pricing-col corp">
-                        <a href="javascript:void(0)" class="pricing-card" (click)="RedirectToRegister()">
+                        <a href="javascript:void(0)" class="pricing-card" (click)="RedirectToRegister('HULK')">
                             <div class="pricing-header title_package">
                                 <h5 class="lud_color_green">Hulk</h5>
                                 <a href="" class="ribbon">
@@ -474,8 +474,8 @@
                                 </li>
                             </div>
                             <div class="pricing-footer">
-                                <a href="javascript:void(0)" class="btn btn-act rounded btn-line" (click)="RedirectToRegister()">
-                                    <span>{{'Home.SelectPackage.RegisterNow_Popular'|translate}}</span>
+                                <a href="javascript:void(0)" class="btn btn-act rounded btn-line" (click)="RedirectToRegister('HULK')">
+                                    <span>{{'Home.SelectPackage.RegisterNow_Hulk'|translate}}</span>
                                     <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>

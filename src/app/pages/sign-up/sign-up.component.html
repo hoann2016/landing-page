@@ -1,6 +1,23 @@
 <section class="section_signup">
     <div class="container_full_width">
         <div class="wrap">
+             <ng-template
+            #content
+            let-modal
+        >
+            <div class="modal-body modal_body_signin">
+                <button
+                    type="button "
+                    class="close"
+                    aria-label="Close "
+                    (click)="modal.dismiss( 'Cross click') "
+                >
+                    <span aria-hidden="true ">&times;</span>
+                </button>
+                <app-sign-in></app-sign-in>
+            </div>
+        </ng-template>
+
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
                     <div class="wrap_left_signin">
@@ -51,10 +68,11 @@
                                     <span class="title-input">{{'Register.package'|translate}}</span><span class="blue-text">*</span>
                                     <div class="form-input-2">
                                         <select formControlName="PackageSelectedName" [ngClass]="{ 'is-invalid': f.PackageSelectedName.touched && f.PackageSelectedName.errors?.required }">
-                                            <option value="enterprise">Enterprise</option>
-                                            <option value="basic">Basic</option>
-                                            <option value="growth">Growth</option>
-                                            <option value="starter" selected>Starter</option>
+                                            <option value="FREEBIE">FREEBIE</option>
+                                            <option value="NEWBIE">NEWBIE</option>
+                                            <option value="BIGGIE">BIGGIE</option>
+                                            <option value="HULK">HULK</option>
+                                            <option value="" disabled>Select</option>
                                             </select>
                                         <div *ngIf="isSubmitted&& f.PackageSelectedName.errors?.required" class="text-danger">
                                             <div *ngIf="f.PackageSelectedName.errors?.required">{{'Register.message-require'|translate}}</div>
@@ -90,7 +108,7 @@
                                     <span class="title-input">{{'Register.shop-type'|translate}}</span><span class="blue-text">*</span>
                                     <div class="form-input-1">
                                         <select formControlName="ServiceName" [ngClass]="{ 'is-invalid': f.ServiceName.touched && f.ServiceName.errors?.required }">
-                                            <option value="" disabled selected>{{'Register.shop-type0'|translate}}</option>
+                                            <!-- <option value="" disabled selected>{{'Register.shop-type0'|translate}}</option> -->
                                             <option value="salon">{{'Register.shop-type1'|translate}}</option>
                                             <option value="spa">{{'Register.shop-type2'|translate}}</option>
                                             <option value="phongkham" selected>{{'Register.shop-type3'|translate}}</option>
@@ -171,7 +189,7 @@
                                     </div>
                                 </div>
                                 <div class="one-line">
-                                    <p>{{'Register.have-account'|translate}} -<a href="javascript:void(0)"> {{'Shared.SigninBtnLabel'|translate}}</a></p>
+                                    <p>{{'Register.have-account'|translate}} -<a href="javascript:void(0)" (click)="showLoginModal(content)"> {{'Shared.SigninBtnLabel'|translate}}</a></p>
                                 </div>
 
                             </div>
