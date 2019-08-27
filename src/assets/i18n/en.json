@@ -5,10 +5,10 @@
     "Header1": "Solution & Pricing",
     "Intro": {
       "Message": "Mordern customers will go online to book what they want when they want it",
-      "ButtonLabel": "START FOR FREE",
-      "BookingOutside": "of Bookings done outside of business hours",
+      "ButtonLabel": "START NOW FOR FREE",
+      "BookingOutside": "Of Bookings done outside of business hours",
       "BookingOnline": "Clients only book online",
-      "ReminderSystem": "no-shows due to reminder system"
+      "ReminderSystem": "No-shows due to reminder system"
     },
     "About": {
       "HeaderMessage": "Change with Your Customer",
@@ -32,22 +32,22 @@
     },
     "Feature": {
       "Header": "An Online Solution that works for multiple industries",
-      "Description1": "Whether you own a Beauty Salon, a Sport Center, an Automobile Dealership, or a Medical Clinic, you will certainly need an online booking software for your clients to book & pay for the provided services, and Ludiino is the only solution for all your needs",
+      "Description": "Whether you own a Beauty Salon, a Sport Center, an Automobile Dealership or a Medical Clinic. You will certainly need an online booking software for your clients to book & pay for the provided services, and Ludiino is the only solution for all your needs",
       "ServicesName": {
         "HairSalon": "Hair Salon",
         "BeautySalon": "Beauty Salon",
         "SpaMassage": "Spa & Massage",
-        "GymSportCenter": "Sport & Gym",
-        "Health": "Health",
-        "RepairServices": "Repair Services"
+        "GymSportCenter": "Gym & Sport Center",
+        "Health": "Medical Clinic",
+        "RepairServices": "Repair Service"
       }
     },
     "ScreenShot": {
       "Header": "Start Free with Ludiino Online Booking & Scheduling Solution",
-      "SmallDescription": "No credit card, no……. Here is how it works!",
+      "SmallDescription": "No credit card, no trial period, unlimited use for free. Here is how it works!",
       "SignupAccount": "Sign up for an Account",
       "SetupService": "Setup your services & pricing",
-      "CreateOpenTime": "Create Open Time Slots & Publish it online for booking"
+      "CreateOpenTime": "Create & Publish time slot online for booking"
     },
     "SelectPackage": {
       "SelectPlant": "Select the Plan that works for you!",
@@ -131,6 +131,6 @@
   "Shared": {
     "RegisterBtnLabel": "Register",
     "SigninBtnLabel": "Sign In",
-    "Login_Register": " Login | Register "
+    "Login_Register": "Login"
   }
 }

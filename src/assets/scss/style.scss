@@ -2906,7 +2906,7 @@
       padding: 0px 10px;
     }
     .report_wrap ul li label{
-      font-size: 12px;
+      font-size: 14px;
       opacity: 0.7;
       line-height: 1.1em !important;
     }
@@ -2929,6 +2929,9 @@
 .feature_lud{
   background-color: #f7f7f7;
 }
+.feature_lud .title_lud{
+  margin-top: 15px;
+}
 .title_lud{
   text-align: center;
   margin-bottom: 50px;
@@ -2943,8 +2946,7 @@
 }
 .title_lud span{
   font-size: 14px;
-  color: #707070;
-  font-weight: 200;
+  color: #424242;
 }
 .focus_text{
   color: $color_bright_turquoise !important;
@@ -2998,10 +3000,11 @@
   font-size: 14px;
   line-height: 16px;
   margin: 0 0 7px 0;
+  color: #f49c1e;
 }
 .fe_box p{
-  font-size: 0.8em;
-  color: #727272;
+  font-size: 14px;
+  color: #424242;
   line-height: 1.4 !important;
   margin-bottom: 0;
   text-transform: none;
@@ -3023,7 +3026,7 @@
 }
 .line_box_left3{
   position: absolute;
-  top: -10px;
+  top: -20px;
   right: -75px;
   width: 75px;
 }
@@ -3042,7 +3045,7 @@
 }
 .line_box_right3{
   position: absolute;
-  top: 20px;
+  top: 0;
   left: -75px;
   width: 75px;
 }
@@ -3334,7 +3337,6 @@
 .pricing-feature li p {
   margin: 0;
   font-size: 14px;
-  font-weight: 300;
   text-transform: capitalize;
   padding: 0 5px;
   line-height: normal;
@@ -3590,7 +3592,7 @@
 .style-3 .price-box {
   border-radius: 0;
   width: 100%;
-  height: auto;
+  height: 60px;
   border-bottom: 1px solid #ddd;
 }
 
@@ -3889,6 +3891,7 @@ margin-top: 0;
 .ft_hotline p{
   color: #fff;
   font-size: 14px;
+  text-transform: none;
 }
 .ft_hotline .ct_hotline{
   font-size: 37px;
