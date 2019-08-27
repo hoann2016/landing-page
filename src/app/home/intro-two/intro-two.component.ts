@@ -14,7 +14,7 @@ export class IntroTwoComponent implements AfterViewInit,OnInit {
 
   @ViewChild('video') videoElement: ElementRef;	
 
-  private langSelected:string;
+  public langSelected:string;
   
   constructor(private translate: TranslateService,
     private landingPageService: LandingPageService,

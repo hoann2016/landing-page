@@ -18,6 +18,7 @@ export class SignInComponent implements OnInit {
   signInForm: FormGroup;
   sendPasswordForm: FormGroup;
   validFormRecovery = new BehaviorSubject(false);
+  IsHidden=false;
   get f() {
     return this.signInForm.controls;
   }
@@ -66,6 +67,7 @@ export class SignInComponent implements OnInit {
     });
   }
   forgotPassword(content) {
+    this.IsHidden=true;
     this.modalService
       .open(content, { ariaLabelledBy: "modal-basic-title" })
       .result.then(
@@ -79,6 +81,7 @@ export class SignInComponent implements OnInit {
         },
         reason => {
           console.log("result from modal,reason: ", reason);
+          this.modalService.dismissAll();
         }
       );
   }
