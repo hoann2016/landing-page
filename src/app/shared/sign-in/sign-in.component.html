@@ -3,12 +3,13 @@
         <!-- modal forgot password  -->
         <ng-template #forgot_password_content let-modal style="max-width:80%;">
             <div class="modal-header ">
-                <h2 class="header-form">{{'Home.SignIn.ForgotPassword'|translate}}</h2>
-                <button type="button " class="close " aria-label="Close " (click)="modal.dismiss( 'Cross click') ">
+                <h4 class="header-form" style="margin-bottom:0px;">{{'Home.SignIn.ForgotPassword'|translate}}</h4>
+                <button type="button " class="close " aria-label="Close " (click)="modal.dismiss( 'Cross click') " >
                 <span aria-hidden="true ">&times;</span>
               </button>
             </div>
             <div class="modal-body ">
+                
                 <form [formGroup]="sendPasswordForm">
                     <div class="form-group ">
                         <label for="email ">{{'Register.Email'|translate}}</label>
