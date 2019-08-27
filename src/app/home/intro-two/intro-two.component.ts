@@ -13,14 +13,18 @@ declare var $: any;
 export class IntroTwoComponent implements AfterViewInit,OnInit {
 
   @ViewChild('video') videoElement: ElementRef;	
+
+  private langSelected:string;
   
   constructor(private translate: TranslateService,
     private landingPageService: LandingPageService,
+   
     private router: Router) { }
   ngOnInit(): void {
     this.landingPageService.getLangSelected().subscribe(lang=>
       {        
         this.translate.use(lang);
+        this.langSelected=lang;
       })
   }
 

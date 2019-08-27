@@ -72,7 +72,13 @@
         "CustomerMembership": "Quản Lý Khách Hàng Thân Thiết",
         "ProductCommerce": "Quản Lý Sản Phẩm Hàng Bán",
         "Dashboards": "Báo Cáo",
-        "CalendarView": "Calendar View"
+        "CalendarView": "Calendar View",
+        "ContentTable":{
+          "Unlimited":"Không giới hạn",
+          "10BookingPerMonth":"10 Lượt/Tháng",
+          "PayAtStore":"Tại cửa hàng",
+          "PayNow":"Thanh toán ngay"
+        }
       }
     },
     "SignIn": {
@@ -91,7 +97,7 @@
         "maximumMessage": "Thông không hợp lệ, tối đa 255 ký tự"
       },
       "Contact": {
-        "Header": "Contact",
+        "Header": "Liên hệ",
         "Detail": "Nếu có bất kỳ câu hỏi liên hệ ngay với chúng tôi"
       }
     }

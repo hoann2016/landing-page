@@ -71,7 +71,13 @@
         "CustomerMembership": "Customer Membership",
         "ProductCommerce": "Product Commerce",
         "Dashboards": "Dashboards",
-        "CalendarView": "Calendar View"
+        "CalendarView": "Calendar View",
+        "ContentTable":{
+          "Unlimited":"Unlimited",
+          "10BookingPerMonth":"10 booking / Month",
+          "PayAtStore":"Pay At Store",
+          "PayNow":"Pay Now"
+        }
       }
     },
     "SignIn": {
