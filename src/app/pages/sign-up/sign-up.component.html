@@ -71,8 +71,7 @@
                                             <option value="FREEBIE">FREEBIE</option>
                                             <option value="NEWBIE">NEWBIE</option>
                                             <option value="BIGGIE">BIGGIE</option>
-                                            <option value="HULK">HULK</option>
-                                            <option value="" disabled>Select</option>
+                                            <option value="HULK">HULK</option>                                          
                                             </select>
                                         <div *ngIf="isSubmitted&& f.PackageSelectedName.errors?.required" class="text-danger">
                                             <div *ngIf="f.PackageSelectedName.errors?.required">{{'Register.message-require'|translate}}</div>
