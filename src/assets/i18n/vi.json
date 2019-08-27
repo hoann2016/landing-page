@@ -76,7 +76,7 @@
         "ContentTable":{
           "Unlimited":"Không giới hạn",
           "10BookingPerMonth":"10 Lượt/Tháng",
-          "PayAtStore":"Tại cửa hàng",
+          "PayAtStore":"Thanh toán tại cửa hàng",
           "PayNow":"Thanh toán ngay"
         }
       }
