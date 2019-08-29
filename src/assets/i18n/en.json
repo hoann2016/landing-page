@@ -36,7 +36,9 @@
       },
     "Feature": {
       "Header": "An Online Solution that works for multiple industries",
-      "Description": "Whether you own a Beauty Salon, a Sport Center, an Automobile Dealership or a Medical Clinic. You will certainly need an online booking software for your clients to book & pay for the provided services, and Ludiino is the only solution for all your needs",
+      "Description": "Whether you own a Beauty Salon, a Sport Center, an Automobile Dealership or a Medical Clinic. You will certainly need an online booking software for your clients to book & pay for the provided services, and",
+      "Description2":" Ludiino",
+      "Description3":" is the only solution for all your needs",
       "ServicesName": {
         "HairSalon": "Hair Salon",
         "BeautySalon": "Beauty Salon",

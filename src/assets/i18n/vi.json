@@ -38,7 +38,9 @@
     },
     "Feature": {
       "Header": "Giải pháp đặt dịch vụ trực tuyến phù hợp với nhiều ngành dịch vụ",
-      "Description": "Dù bạn sở hữu Tiệm Cắt Tóc, Spa, Phòng Khám, Trung Tâm Thể Thao hay Cửa Hàng Sửa Xe, bạn chắc chắn sẽ cần một hệ thống đặt hẹn trực tuyến để khách hàng của bạn có thể tiện lợi đặt dịch vụ và thanh toán không tiền mặt; Ludiino là giải pháp cho tất cả yêu cầu của bạn  ",
+      "Description": "Dù bạn sở hữu Tiệm Cắt Tóc, Spa, Phòng Khám, Trung Tâm Thể Thao hay Cửa Hàng Sửa Xe, bạn chắc chắn sẽ cần một hệ thống đặt hẹn trực tuyến để khách hàng của bạn có thể tiện lợi đặt dịch vụ và thanh toán không tiền mặt;",
+      "Description2": " Ludiino",
+      "Description3":" là giải pháp cho tất cả yêu cầu của bạn  ",
       "ServicesName": {
         "HairSalon": "Tiệm Cắt Tóc",
         "BeautySalon": "Tiệm Làm Đẹp",
