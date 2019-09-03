@@ -1,0 +1,12 @@
+export interface UserRegister{
+    group_id:number;
+    industry_id:number;
+    country_id:number;
+    name:string;
+    store_name:string;
+    password:string;
+    confirm_password:string;
+    email:string;
+    phone:string;
+    status:string;
+}

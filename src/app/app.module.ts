@@ -7,6 +7,7 @@ import { SharedModule } from "./shared/shared.module";
 import { rootRouterConfig } from './app.routes';
 import { AppComponent } from './app.component';
 import * as $ from 'jquery';
+import { AppService } from './app.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import * as $ from 'jquery';
     SharedModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: false, anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' })
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { LandingPageService } from '../services/landing-page.service';
+import { AppService } from 'src/app/app.service';
 
 @Component({
   selector: 'app-footer',
@@ -13,7 +14,7 @@ export class FooterComponent implements OnInit {
   guessMessageForm :FormGroup;
   isSubmitted:boolean=false;
   today: number = Date.now();
-  constructor(public fb: FormBuilder,private translate: TranslateService,
+  constructor(public fb: FormBuilder,private translate: TranslateService,private appService:AppService,
     private landingPageService: LandingPageService){
 
   }
@@ -50,7 +51,14 @@ export class FooterComponent implements OnInit {
     this.isSubmitted=true;
     if(this.guessMessageForm.valid)
     {
-      alert("Form infor is oke")
+      this.appService.sendNewLetter({email:this.guessMessageForm.controls.Email.value,content:this.guessMessageForm.controls.Content.value,name:this.guessMessageForm.controls.CustomerName.value}).
+      subscribe(response=>{
+        console.log(response);
+        this.guessMessageForm.reset();
+      },
+      error=>{
+        console.log(error);
+      })
     }else{
       alert("Not oke");
     }

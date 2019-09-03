@@ -2,9 +2,13 @@ import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { TranslateService } from "@ngx-translate/core";
 import { NgbModal, ModalDismissReasons } from "@ng-bootstrap/ng-bootstrap";
-import { BehaviorSubject } from "rxjs";
+import { BehaviorSubject, throwError } from "rxjs";
 import { LandingPageService } from "src/app/shared/services/landing-page.service";
 import { Router } from "@angular/router";
+import { AppService } from "src/app/app.service";
+import { tap, catchError } from "rxjs/operators";
+import { UserLogedInModel } from "../models/user-models/user-logedin.model";
+import * as jwt_decode from "jwt-decode";
 @Component({
   selector: "app-sign-in",
   templateUrl: "./sign-in.component.html",
@@ -18,7 +22,8 @@ export class SignInComponent implements OnInit {
   signInForm: FormGroup;
   sendPasswordForm: FormGroup;
   validFormRecovery = new BehaviorSubject(false);
-  IsHidden=false;
+  IsHidden = false;
+  errorMessage: string;
   get f() {
     return this.signInForm.controls;
   }
@@ -32,7 +37,8 @@ export class SignInComponent implements OnInit {
     private translate: TranslateService,
     private modalService: NgbModal,
     private landingPageService: LandingPageService,
-    private router: Router
+    private router: Router,
+    private appService: AppService
   ) {
     this.show = false;
   }
@@ -52,8 +58,8 @@ export class SignInComponent implements OnInit {
           Validators.minLength(3),
           Validators.maxLength(100)
         ]
-      ],
-      RememberLogin: [false]
+      ]
+
     });
   }
   ngOnInit() {
@@ -67,7 +73,7 @@ export class SignInComponent implements OnInit {
     });
   }
   forgotPassword(content) {
-    this.IsHidden=true;
+    this.IsHidden = true;
     this.modalService
       .open(content, { ariaLabelledBy: "modal-basic-title" })
       .result.then(
@@ -87,13 +93,27 @@ export class SignInComponent implements OnInit {
   }
   onSubmit() {
     this.isSubmitted = true;
-    console.log("value form submited ! ", this.signInForm.value);
+    this.errorMessage = "";
     if (this.signInForm.valid) {
-      alert("login information is oke");
+      this.appService.logIn({ email: this.signInForm.controls.Email.value, password: this.signInForm.controls.Password.value }).subscribe((res: any) => {
+              
+          if (res.success) {
+            console.log("res.data.token", jwt_decode(res.data.token));
+            var userLogedIn: UserLogedInModel = jwt_decode(res.data.token) as UserLogedInModel;
+            sessionStorage.setItem('landingPageToken', res.data.token)
+            console.log("stating redirect....");
+          } else {
+            this.errorMessage = res.message;          
+          }       
+
+      },
+        error => {
+          this.errorMessage = error.error.message;
+        }
+      );
     } else alert("login not oke");
   }
-  RedirectToRegister()
-  {
+  RedirectToRegister() {
     this.modalService.dismissAll();
     this.router.navigate(['/pages/sign-up']);
   }
