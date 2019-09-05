@@ -146,6 +146,31 @@
     "RegisterBtnLabel": "Đăng ký",
     "SigninBtnLabel": "Đăng nhập",
     "Send": "Gửi",
-    "Login_Register": "Đăng nhập"
+    "Login_Register": "Đăng nhập",
+    "CommunicationMessage":{
+      "1000":"Thành công",
+      "1001":"Dữ liệu đã tồn tại",
+      "1003":"Thiếu token",
+      "1004":"Token không hợp lệ",
+      "1005":"Token hết hạn",
+      "1006":"Thiếu Id",
+      "1007":"Email hoặc password không đúng",
+      "1008":"Liên hệ admin",
+      "1009":"Group name thiếu",
+      "1010":"Group name hoặc Id thiếu",
+      "1011":"Group Id hoặc Permission Id thiếu",
+      "1012":"Permission Name thiếu",
+      "1013":"Permission Id hoặc Name thiếu",
+      "1014":"Resource name thiếu",
+      "1015":"Resource Id hoặc Name thiếu",
+      "1016":"Dữ liệu User thiếu",
+      "1017":"Password không đúng",
+      "1018":"Id or Status thiếu",
+      "1019":"Trường không đúng định dạng",
+      "1020":"Trường bắt buộc",
+      "1021":"Độ dài của trường không hợp lệ",
+      "1022":"Trường không hợp lệ",
+      "1023":"Trường không giống nhau"
+    }
   }
 }

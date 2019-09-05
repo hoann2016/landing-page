@@ -5,6 +5,8 @@ import {TranslateService} from '@ngx-translate/core';
 import {LandingPageService} from 'src/app/shared/services/landing-page.service';
 
 import {MustMatch} from './must-match.validator';
+import { AppService } from 'src/app/app.service';
+import { UserRegister } from 'src/app/shared/models/user-models/user-register.model';
 
 @Component({
   selector: 'app-sign-up',
@@ -35,7 +37,8 @@ export class SignUpComponent implements OnInit {
   constructor(
       public fb: FormBuilder, private translate: TranslateService,
       private modalService: NgbModal,
-      private landingPageService: LandingPageService) {}
+      private landingPageService: LandingPageService,
+      private appService:AppService) {}
 
 
   public buildForm() {
@@ -111,9 +114,22 @@ export class SignUpComponent implements OnInit {
   onSubmit() {
     this.isSubmitted = true;
     if (this.signUpForm.valid) {
-      alert('form oke');
+      var formImport:UserRegister={
+        group_id:1,
+        industry_id:1,
+        country_id:1,
+        name:this.signUpForm.controls.CustomerName.value,
+        store_name:this.signUpForm.controls.ShopName.value,
+        password:this.signUpForm.controls.Password.value,
+        confirm_password:this.signUpForm.controls.RetypePassword.value,
+        email:this.signUpForm.controls.Email.value,
+        phone:this.signUpForm.controls.Phone.value,
+        status:''
+      }
+     this.appService.register(formImport).subscribe();
+      
     } else {
-      alert('form invalid');
+      
     }
     console.log(this.signUpForm);
   }

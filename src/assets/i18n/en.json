@@ -76,11 +76,11 @@
         "TechnicianSchedulingBooking": "Technician Scheduling & Booking",
         "CustomerMembership": "Customer Membership",
         "ProductCommerce": "Product Commerce",
-        "Dashboards": "Dashboards",
+        "Dashboards": "Dashboard",
         "CalendarView": "Calendar View",
         "ContentTable":{
           "Unlimited":"Unlimited",
-          "10BookingPerMonth":"10 booking / Month",
+          "10BookingPerMonth":"10 bookings / Month",
           "PayAtStore":"Pay At Store",
           "PayNow":"Pay Now"
         }
@@ -144,6 +144,31 @@
     "RegisterBtnLabel": "Register",
     "SigninBtnLabel": "Sign In",
     "Login_Register": "Login",
-    "Send": "Send"
+    "Send": "Send",
+    "CommunicationMessage":{
+      "1000":"Sussces",
+      "1001":"Data is exist",
+      "1003":"Token is missing",
+      "1004":"Invalid token",
+      "1005":"Token expired",
+      "1006":"Id is missing",
+      "1007":"Incorect email or password",
+      "1008":"Contact admin",
+      "1009":"Group name is missing",
+      "1010":"Group name or Id is missing",
+      "1011":"Group Id or Permission Id is missing",
+      "1012":"Permission Name is missing",
+      "1013":"Permission Id or Name is missing",
+      "1014":"Resource name is missing",
+      "1015":"Resource Id or Name is missing",
+      "1016":"User data is missing",
+      "1017":"Incorrect password",
+      "1018":"Id or Status is missing",
+      "1019":"Field is invalid type",
+      "1020":"Field is required",
+      "1021":"Field is invalid length",
+      "1022":"Field is invalid",
+      "1023":"Field is not match"
+    }
   }
 }
