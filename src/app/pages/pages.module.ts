@@ -3,7 +3,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
+import {TranslateLoader, TranslateModule, TranslateService, MissingTranslationHandler} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import {LandingPageService} from '../shared/services/landing-page.service';
@@ -20,6 +20,8 @@ import {PagesRoutingModule} from './pages-routing.module';
 import {ReviewComponent} from './review/review.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
 import {ThankYouComponent} from './thank-you/thank-you.component';
+import { MyMissingTranslationHandler } from '../shared/services/translation-handler/translation-handler';
+import { NotTranslatedService } from '../shared/services/translation-handler/not-translated-service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -33,7 +35,12 @@ export function HttpLoaderFactory(http: HttpClient) {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
-      }
+      },
+      missingTranslationHandler: {
+        provide: MissingTranslationHandler,
+        useClass: MyMissingTranslationHandler,
+        deps: [NotTranslatedService]
+    }
     })
   ],
   declarations: [

@@ -3,7 +3,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
+import {TranslateLoader, TranslateModule, TranslateService, MissingTranslationHandler} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {OwlModule} from 'ngx-owl-carousel';
 
@@ -25,6 +25,8 @@ import {ScreenshotComponent} from './screenshot/screenshot.component';
 import {TeamComponent} from './team/team.component';
 import {TestimonialComponent} from './testimonial/testimonial.component';
 import {HomeTwoComponent} from './versions/home-two/home-two.component';
+import { MyMissingTranslationHandler } from '../shared/services/translation-handler/translation-handler';
+import { NotTranslatedService } from '../shared/services/translation-handler/not-translated-service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -39,7 +41,11 @@ export function HttpLoaderFactory(http: HttpClient) {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
-      }
+      }, missingTranslationHandler: {
+        provide: MissingTranslationHandler,
+        useClass: MyMissingTranslationHandler,
+        deps: [NotTranslatedService]
+    }
     })
   ],
   declarations: [

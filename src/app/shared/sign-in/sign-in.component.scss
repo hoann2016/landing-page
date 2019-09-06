@@ -1,4 +1,7 @@
+.two-item {
+    margin-top: 10px;
 
+}
 
 .one-line {
     display: inline-block;
@@ -19,7 +22,6 @@
     margin-bottom: 10px;
 }
 
-.descrition-page {}
 
 .header-page {
     margin-bottom: 32px;
@@ -60,19 +62,23 @@
 
 // CC's Phuong
 
-.section_signin{
+.section_signin {
     padding: 0;
 }
-.no_acc{
+
+.no_acc {
     text-transform: none;
 }
-.no_acc a{
+
+.no_acc a {
     color: #009bdf;
 }
-.no_acc a:hover{
+
+.no_acc a:hover {
     color: #f49c1e;
 }
-.left_signin_wrap{
+
+.left_signin_wrap {
     position: relative;
     background-image: url(/assets/images/sign-up/bg_left.jpg);
     background-size: cover;
@@ -80,27 +86,32 @@
     padding: 40px 30px;
     color: #fff;
 }
-.modal_body_signin{
+
+.modal_body_signin {
     padding: 0;
 }
+
 .login_content {
     padding: 40px 50px;
     margin: 0 auto;
 }
-.btn_login_form{
+
+.btn_login_form {
     margin: 0 15px 0 15px;
     background-color: #f49c1e;
     color: #fff;
     padding: 7px 20px;
     border-radius: 6px;
     outline: none;
-    border:none;
+    border: none;
     cursor: pointer;
 }
-.btn_login_form:hover{
+
+.btn_login_form:hover {
     background-color: #e59017;
 }
-.wrap_form_field input{
+
+.wrap_form_field input {
     border-radius: 6px;
     border-style: none;
     border: 1px solid #e1e1e1;
@@ -111,7 +122,8 @@
     margin-top: 5px;
     font-size: 14px;
 }
-.wrap_form_field  select{
+
+.wrap_form_field select {
     border-radius: 6px;
     border-style: none;
     border: 1px solid #e1e1e1;
@@ -122,34 +134,40 @@
     margin-top: 5px;
     font-size: 14px;
 }
-.poli_form p{
+
+.poli_form p {
     text-transform: none;
     font-size: 14px;
     margin-top: 0;
     letter-spacing: normal;
     margin-bottom: 0;
 }
-.poli_form a:hover{
+
+.poli_form a:hover {
     color: #f49c1e;
 }
-.poli_form input{
+
+.poli_form input {
     height: 14px !important;
     margin-top: 15px;
 }
-.forgot_text p{
+
+.forgot_text p {
     color: #009bdf;
     font-size: 14px;
     margin-bottom: 0;
     margin-top: 5px;
 }
-.modal_body_signin .close{
+
+.modal_body_signin .close {
     outline: none;
     position: absolute;
     top: 15px;
     right: 15px;
     z-index: 2;
 }
-.modal_body_signin .close span{
+
+.modal_body_signin .close span {
     font-size: 17px;
     opacity: 0.5;
 }

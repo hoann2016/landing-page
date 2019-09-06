@@ -126,7 +126,14 @@ export class SignUpComponent implements OnInit {
         phone:this.signUpForm.controls.Phone.value,
         status:''
       }
-     this.appService.register(formImport).subscribe();
+     this.appService.register(formImport).subscribe(
+       response=>{
+        console.log("response ",response);
+     },
+     error=>{
+       console.log("execption: ", error);
+     }
+     );
       
     } else {
       

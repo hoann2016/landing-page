@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
+import {TranslateLoader, TranslateModule, TranslateService, MissingTranslationHandler} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {NgxPageScrollModule} from 'ngx-page-scroll';
 
@@ -16,6 +16,8 @@ import {LandingPageService} from './services/landing-page.service';
 // Services
 import {WINDOW_PROVIDERS} from './services/windows.service';
 import {SignInComponent} from './sign-in/sign-in.component';
+import { MyMissingTranslationHandler } from './services/translation-handler/translation-handler';
+import { NotTranslatedService } from './services/translation-handler/not-translated-service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -32,7 +34,12 @@ export function HttpLoaderFactory(http: HttpClient) {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
-      }
+      },      
+        missingTranslationHandler: {
+            provide: MissingTranslationHandler,
+            useClass: MyMissingTranslationHandler,
+            deps: [NotTranslatedService]
+        }
     })
 
   ],

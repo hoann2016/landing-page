@@ -94,6 +94,8 @@ export class SignInComponent implements OnInit {
   onSubmit() {
     this.isSubmitted = true;
     this.errorMessage = "";
+    var test=   this.translate.instant('Register.Email');
+         console.log('test: ',test);
     if (this.signInForm.valid) {
       this.appService.logIn({ email: this.signInForm.controls.Email.value, password: this.signInForm.controls.Password.value }).subscribe((res: any) => {
               
@@ -102,13 +104,15 @@ export class SignInComponent implements OnInit {
             var userLogedIn: UserLogedInModel = jwt_decode(res.data.token) as UserLogedInModel;
             sessionStorage.setItem('landingPageToken', res.data.token)
             console.log("stating redirect....");
+         
           } else {
-            this.errorMessage = res.message;          
+            this.errorMessage =   this.translate.instant('Shared.CommunicationMessage.'+res.message);          
           }       
 
       },
-        error => {
-          this.errorMessage = error.error.message;
+        error => {          
+          console.log(error);
+          this.errorMessage =   this.translate.instant('Shared.CommunicationMessage.'+ error.error.message);   
         }
       );
     } else alert("login not oke");
