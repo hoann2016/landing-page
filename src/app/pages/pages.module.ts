@@ -22,6 +22,7 @@ import {SignUpComponent} from './sign-up/sign-up.component';
 import {ThankYouComponent} from './thank-you/thank-you.component';
 import { MyMissingTranslationHandler } from '../shared/services/translation-handler/translation-handler';
 import { NotTranslatedService } from '../shared/services/translation-handler/not-translated-service';
+import { PaymentComponent } from './payment/payment.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -46,7 +47,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     SignUpComponent, ForgetPasswordComponent, ThankYouComponent,
     ReviewComponent, ErrorPageComponent, FaqComponent, DownloadComponent,
-    ComingsoonComponent, EmailTemplateComponent
+    ComingsoonComponent, EmailTemplateComponent, PaymentComponent
   ],
   providers: [TranslateService, LandingPageService]
 })

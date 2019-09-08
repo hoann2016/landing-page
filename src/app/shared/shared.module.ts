@@ -19,33 +19,19 @@ import {SignInComponent} from './sign-in/sign-in.component';
 import { MyMissingTranslationHandler } from './services/translation-handler/translation-handler';
 import { NotTranslatedService } from './services/translation-handler/not-translated-service';
 
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
-}
 @NgModule({
   exports: [
-    CommonModule, HeaderComponent, FooterComponent, SignInComponent
+    CommonModule, HeaderComponent, FooterComponent, SignInComponent,TranslateModule
 
   ],
   imports: [
     CommonModule, RouterModule, NgxPageScrollModule, NgbModule, FormsModule,
-    ReactiveFormsModule, HttpClientModule, TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      },      
-        missingTranslationHandler: {
-            provide: MissingTranslationHandler,
-            useClass: MyMissingTranslationHandler,
-            deps: [NotTranslatedService]
-        }
-    })
+    ReactiveFormsModule, HttpClientModule, TranslateModule
 
   ],
   declarations: [HeaderComponent, FooterComponent, SignInComponent],
   providers: [
-    WINDOW_PROVIDERS, LandingFixService, TranslateService, LandingPageService
+    WINDOW_PROVIDERS, LandingFixService , LandingPageService
   ]
 })
 export class SharedModule {

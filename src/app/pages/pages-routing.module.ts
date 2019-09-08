@@ -9,6 +9,7 @@ import { FaqComponent } from './faq/faq.component';
 import { DownloadComponent } from './download/download.component';
 import { ComingsoonComponent } from './comingsoon/comingsoon.component';
 import { EmailTemplateComponent } from './email-template/email-template.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [
   {
@@ -50,6 +51,10 @@ const routes: Routes = [
       {
         path: 'email-template',
         component: EmailTemplateComponent,
+      },
+      {
+        path:'payment',
+        component:PaymentComponent
       }         
     ]
   }

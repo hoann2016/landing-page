@@ -1,0 +1,44 @@
+.one-line {
+  display: inline-block;
+  overflow: hidden;
+  padding-left: 0px;
+}
+.clear-fix {
+  margin: 15px 15px 15px 0;
+  overflow: hidden;
+  .clear-fix-content {
+      position: absolute;
+      border-bottom: 1px solid #eeede8;
+      width:95%;
+      margin-right: 15px;
+  }
+}
+.right-content {
+  background-color: rgb(32, 32, 58);
+  color: white;
+  padding-top: 10px;
+  .header-form {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: white;
+  }
+}
+.left-content {
+  padding: 0 10px;
+  .header-form {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: black;
+  }
+}
+.focus-yellow {
+  padding: 4px;
+  background-color: rgb(205, 182, 50);
+  border: 1px solid #cdb632;
+  border-radius: 13px;
+}
+.medal-image img {
+  max-width: 29px;
+}
