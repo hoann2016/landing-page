@@ -12,7 +12,7 @@ declare var $: any;
 })
 export class IntroTwoComponent implements AfterViewInit,OnInit {
 
-  @ViewChild('video') videoElement: ElementRef;	
+  @ViewChild('video',{static:true}) videoElement: ElementRef;	
 
   public langSelected:string;
   

@@ -37,7 +37,7 @@
       "MessageContent_6": "Dễ dàng tạo các chiến dịch marketing trực tuyến gửi voucher khuyến mãi điện tử đến các tập khách hàng tiềm năng để tìm thêm khách hàng mới và khuyến khích khách hàng cũ trở lại. Các báo cáo tự động phân tích chiến dịch marketing cung cấp dữ liệu giúp doanh nghiệp điều chỉnh chiến lược nhằm tối ưu hiệu quả  "
     },
     "Feature": {
-      "Header": "Giải pháp đặt dịch vụ trực tuyến phù hợp với nhiều ngành dịch vụ",
+      "Header": "Ludiino là giải pháp đặt hẹn trực tuyến phù hợp với nhiều ngành dịch vụ",
       "Description": "Dù bạn sở hữu Tiệm Cắt Tóc, Spa, Phòng Khám, Trung Tâm Thể Thao hay Cửa Hàng Sửa Xe, bạn chắc chắn sẽ cần một hệ thống đặt hẹn trực tuyến để khách hàng của bạn có thể tiện lợi đặt dịch vụ và thanh toán không tiền mặt;",
       "Description2": " Ludiino",
       "Description3":" là giải pháp cho tất cả yêu cầu của bạn  ",
@@ -47,7 +47,13 @@
         "SpaMassage": "Spa & Massage",
         "GymSportCenter": "Gym & Trung Tâm Thể Thao",
         "Health": "Phòng Khám & Bệnh Viện",
-        "RepairServices": "Dịch vụ sửa chữa"
+        "RepairServices": "Dịch vụ sửa chữa",
+        "1":"Tiệm Cắt Tóc",
+        "2":"Tiệm Làm Đẹp",
+        "3":"Spa & Massage",
+        "4":"Gym & Trung Tâm Thể Thao",
+        "5":"Phòng Khám & Bệnh Viện",
+        "6":"Dịch vụ sửa chữa"
       }
     },
     "ScreenShot": {
@@ -91,8 +97,11 @@
     "SignIn": {
       "KeepLogedIn": "Giữ tôi luôn đăng nhập",
       "IfDontHaveAcc": "Nếu bạn chưa có tài khoản",
-      "RegisterNow": "Đăng Ký Ngay",
-      "ForgotPassword": "Quên mật khẩu"
+      "RegisterNow": "Đăng Ký Ngay",      
+      "ResetYourPassword": "Điền địa chỉ email để nhận mật khẩu mới",
+      "ForgotPassword": "Quên mật khẩu",
+      "SignInEmail.Email":"Email",
+      "DontWantToChangePassword":"Không muốn đổi mật khẩu mới? đến trang"
     },
     "Footer": {
       "Title": "Để lại thông tin",
@@ -115,7 +124,7 @@
     "re-password": "Xác nhận mật khẩu",
     "re-password-2": "Nhập lại mật khẩu",
     "Register": "Đăng ký",
-    "subtitle": "Trải nghiệm dịch vụ đầy đủ của sản phẩm",
+    "subtitle": "Sử Dụng Trọn Vẹn Giải Pháp",
     "name": "Họ tên",
     "package": "Gói dịch vụ",
     "shopname": "Tên cửa hàng / tiệm của bạn",
@@ -145,7 +154,7 @@
   "Shared": {
     "RegisterBtnLabel": "Đăng ký",
     "SigninBtnLabel": "Đăng nhập",
-    "Send": "Gửi",
+    "Send": "Gửi Mật Khẩu Mới",
     "Login_Register": "Đăng nhập",
     "CommunicationMessage":{
       "1000":"Thành công",

@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewEncapsulation } from "@angular/core";
+import { Component, OnInit, ViewEncapsulation, ElementRef, ViewChild, Output, EventEmitter } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { TranslateService } from "@ngx-translate/core";
-import { NgbModal, ModalDismissReasons } from "@ng-bootstrap/ng-bootstrap";
+import { NgbModal, ModalDismissReasons, NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
 import { BehaviorSubject, throwError } from "rxjs";
 import { LandingPageService } from "src/app/shared/services/landing-page.service";
 import { Router } from "@angular/router";
@@ -24,6 +24,10 @@ export class SignInComponent implements OnInit {
   validFormRecovery = new BehaviorSubject(false);
   IsHidden = false;
   errorMessage: string;
+  @Output('closeChildModal') closeEvt = new EventEmitter<string>();
+
+
+
   get f() {
     return this.signInForm.controls;
   }
@@ -38,7 +42,8 @@ export class SignInComponent implements OnInit {
     private modalService: NgbModal,
     private landingPageService: LandingPageService,
     private router: Router,
-    private appService: AppService
+    private appService: AppService,
+    public activeModal: NgbActiveModal
   ) {
     this.show = false;
   }
@@ -77,9 +82,7 @@ export class SignInComponent implements OnInit {
     this.modalService
       .open(content, { ariaLabelledBy: "modal-basic-title" })
       .result.then(
-        result => {
-          console.log(this.sendPasswordForm);
-          console.log(this.sendPasswordForm.value);
+        result => {         
           if (!this.sendPasswordForm.valid) {
             alert("form not ok");
             return;
@@ -93,9 +96,7 @@ export class SignInComponent implements OnInit {
   }
   onSubmit() {
     this.isSubmitted = true;
-    this.errorMessage = "";
-    var test=   this.translate.instant('Register.Email');
-         console.log('test: ',test);
+    this.errorMessage = "";   
     if (this.signInForm.valid) {
       this.appService.logIn({ email: this.signInForm.controls.Email.value, password: this.signInForm.controls.Password.value }).subscribe((res: any) => {
 
@@ -104,6 +105,7 @@ export class SignInComponent implements OnInit {
             var userLogedIn: UserLogedInModel = jwt_decode(res.data.token) as UserLogedInModel;
             sessionStorage.setItem('landingPageToken', res.data.token)
             console.log("stating redirect....");
+            window.location.href= this.appService.merchangePath;
 
           } else {
             this.errorMessage =   this.translate.instant('Shared.CommunicationMessage.'+res.message);
@@ -120,5 +122,14 @@ export class SignInComponent implements OnInit {
   RedirectToRegister() {
     this.modalService.dismissAll();
     this.router.navigate(['/pages/sign-up']);
+  }
+  showBackLogin(){
+    this.closeEvt.emit("from chield")    
+    this.modalService.dismissAll();
+    this.IsHidden = false;
+    
+      
+    
+   
   }
 }

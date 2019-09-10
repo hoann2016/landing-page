@@ -35,7 +35,7 @@
       "MessageContent_6": "Flexible to create Online Marketing and Promotional Campaigns that send discount codes to targeted client groups to attract new clients and keep old clients coming back for more"
       },
     "Feature": {
-      "Header": "An Online Solution that works for multiple industries",
+      "Header": "Ludiino is an Online Booking Solution that works for multiple industries",
       "Description": "Whether you own a Beauty Salon, a Sport Center, an Automobile Dealership or a Medical Clinic. You will certainly need an online booking software for your clients to book & pay for the provided services, and",
       "Description2":" Ludiino",
       "Description3":" is the only solution for all your needs",
@@ -45,7 +45,13 @@
         "SpaMassage": "Spa & Massage",
         "GymSportCenter": "Gym & Sport Center",
         "Health": "Medical Clinic",
-        "RepairServices": "Repair Service"
+        "RepairServices": "Repair Service",
+        "1":"Hair Salon",
+        "2":"Beauty Salon",
+        "3":"Spa & Massage",
+        "4":"Gym & Sport Center",
+        "5":"Medical Clinic",
+        "6":"Repair Service"       
       }
     },
     "ScreenShot": {
@@ -88,9 +94,12 @@
     },
     "SignIn": {
       "KeepLogedIn": "Keep me loged in",
-      "IfDontHaveAcc": "If you dont have an Account",
+      "IfDontHaveAcc": "If you don't have an Account",
       "RegisterNow": "Register now",
-      "ForgotPassword": "Forgot password"
+      "ResetYourPassword": "Reset Your Password",
+      "ForgotPassword": "Forgot Password",
+      "SignInEmail.Email":"Email Address",
+      "DontWantToChangePassword":"Don't want to reset password? Back to "
     },
     "Footer": {
       "Title": "Get in touch",
@@ -142,9 +151,9 @@
   },
   "Shared": {
     "RegisterBtnLabel": "Register",
-    "SigninBtnLabel": "Sign In",
+    "SigninBtnLabel": "Login",
     "Login_Register": "Login",
-    "Send": "Send",
+    "Send": "Send New Password",
     "CommunicationMessage":{
       "1000":"Sussces",
       "1001":"Data is exist",

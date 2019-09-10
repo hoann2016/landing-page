@@ -2,7 +2,7 @@ import {CommonModule} from '@angular/common';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbModule, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 import {TranslateLoader, TranslateModule, TranslateService, MissingTranslationHandler} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {OwlModule} from 'ngx-owl-carousel';
@@ -55,7 +55,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     NewsletterComponent
 
   ],
-  providers: [TranslateService, LandingPageService]
+  providers: [TranslateService, LandingPageService, NgbActiveModal,]
 })
 export class HomeModule {
 }

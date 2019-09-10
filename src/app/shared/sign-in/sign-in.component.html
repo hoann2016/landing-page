@@ -3,38 +3,44 @@
     <!-- modal forgot password -->
     <ng-template #forgot_password_content let-modal style="max-width:80%;">
       <div class="modal-header ">
-        <h4 class="header-form" style="margin-bottom:0px;">
-          {{'Home.SignIn.ForgotPassword'|translate}}
-        </h4>
+       <h4 class="header-form"> {{'Home.SignIn.ForgotPassword'|translate}}</h4>
         <button type="button " class="close " aria-label="Close " (click)="modal.dismiss( 'Cross click') ">
           <span aria-hidden="true ">&times;</span>
         </button>
       </div>
-      <div class="modal-body ">
+      <div class="modal-body " >
+          <label  style="margin-bottom:0px;">
+              {{'Home.SignIn.ResetYourPassword'|translate}}
+            </label>
         <form [formGroup]="sendPasswordForm">
           <div class="form-group ">
-            <label for="email ">{{'Register.Email'|translate}}</label>
+           
             <div class="input-group ">
-              <input name="email" type="email" formControlName="Email" placeholder="{{'Register.Email'|translate}}"
+              <input name="email" type="email" formControlName="Email" 
                 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 form-control" style="width: 100%;">
               <small *ngIf="f_recover.Email.touched && f_recover.Email.errors?.required"
-                class="form-text text-muted text-danger">
+                class="form-text  text-danger">
                 {{'Register.message-require'|translate}}
               </small>
-              <small *ngIf="f_recover.Email.errors?.email" class="form-text text-muted text-danger">
+              <small *ngIf="f_recover.Email.errors?.email" class="form-text text-danger">
                 {{'Register.message-format-3'|translate}}
               </small>
             </div>
           </div>
+          <div class="form-input-2">
+              <button id="resend-password-btn" class="btn_login_form" (click)="onSubmit()" [disabled]="!(validFormRecovery|async)"
+                (click)="modal.close( 'Save click') ">
+                {{'Shared.Send'|translate}}
+              </button>
+            </div>
         </form>
       </div>
-      <div class="modal-footer ">
-        <div class="form-input-2">
-          <button class="btn_login_form" (click)="onSubmit()" [disabled]="!(validFormRecovery|async)"
-            (click)="modal.close( 'Save click') ">
-            {{'Shared.Send'|translate}}
-          </button>
-        </div>
+      <div class="modal-footer " >       
+        <p class="one-line forgot_text" style="cursor:pointer;" id="reset-password-footer">
+          {{'Home.SignIn.DontWantToChangePassword'|translate}} 
+          <a href="javascript:void(0)" (click)="showBackLogin(forgot_password_content)"> {{'Shared.SigninBtnLabel'|translate}}</a>
+           
+        </p>
       </div>
     </ng-template>
     <!-- end modal -->
@@ -62,13 +68,14 @@
                   <span class="title-input">{{'Register.Email'|translate}}</span>
                   <div class="form-input-1">
                     <input type="email" class="fix-boder" formControlName="Email"
-                      placeholder="{{'Register.Email'|translate}}" required="required"
+                      
+                      required="required"
                       [ngClass]="{ 'is-invalid': f.Email.touched && f.Email.errors }">
                     <div *ngIf="isSubmitted && f.Email.errors" class="text-danger">
                       <span *ngIf="f.Email.errors?.required">
                         {{'Register.message-require'|translate}}
                       </span>
-                      <span *ngIf="f.Email.errors?.email">
+                      <span *ngIf="f.Email.errors?.email" class="text-danger">
                         {{'Register.message-format-3'|translate}}
                       </span>
                     </div>
@@ -80,10 +87,11 @@
                   <span class="title-input">{{'Register.Password'|translate}}</span>
                   <div class="form-input-2">
                     <input type="password" class=" fix-boder" formControlName="Password"
-                      placeholder="{{'Register.Password'|translate}}" required="required"
+                     
+                      required="required"
                       [ngClass]="{ 'is-invalid': f.Password.touched && f.Password.errors }">
                     <div *ngIf="isSubmitted &&f.Password.errors" class="text-danger">
-                      <div *ngIf="f.Password.errors.required">
+                      <div *ngIf="f.Password.errors.required" class="text-danger">
                         {{'Register.message-require'|translate}}
                       </div>
                     </div>

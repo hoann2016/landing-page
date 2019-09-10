@@ -1,5 +1,5 @@
-import {Component, HostListener, Inject, OnInit} from '@angular/core';
-import {DOCUMENT} from '@angular/platform-browser';
+import {Component, HostListener, Inject, OnInit, ViewChild, ElementRef} from '@angular/core';
+import {DOCUMENT} from '@angular/common';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {TranslateService} from '@ngx-translate/core';
 import {BehaviorSubject, Observable} from 'rxjs';
@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
   public darkHeader: boolean = false;
   public menuItems: any[];
   public langSelected = new BehaviorSubject('');
+  @ViewChild('content',{static:true}) signinModalRef: ElementRef;
 
   // Inject Document object
   constructor(
@@ -49,6 +50,14 @@ export class HeaderComponent implements OnInit {
             (reason) => {
               console.log('result from modal,reason: ', reason);
             });
+  }
+  ShowBackModalLogin(evt){
+    console.log("event from signin   ",evt);
+    setTimeout(() => {
+      this.showLoginModal(this.signinModalRef) ;
+    }, 200);
+   
+    
   }
 
   // @HostListener Decorator

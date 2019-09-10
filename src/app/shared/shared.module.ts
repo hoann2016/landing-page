@@ -16,12 +16,10 @@ import {LandingPageService} from './services/landing-page.service';
 // Services
 import {WINDOW_PROVIDERS} from './services/windows.service';
 import {SignInComponent} from './sign-in/sign-in.component';
-import { MyMissingTranslationHandler } from './services/translation-handler/translation-handler';
-import { NotTranslatedService } from './services/translation-handler/not-translated-service';
 
 @NgModule({
   exports: [
-    CommonModule, HeaderComponent, FooterComponent, SignInComponent,TranslateModule
+    CommonModule, HeaderComponent, FooterComponent, SignInComponent,TranslateModule,
 
   ],
   imports: [
@@ -29,7 +27,7 @@ import { NotTranslatedService } from './services/translation-handler/not-transla
     ReactiveFormsModule, HttpClientModule, TranslateModule
 
   ],
-  declarations: [HeaderComponent, FooterComponent, SignInComponent],
+  declarations: [HeaderComponent, FooterComponent, SignInComponent ],
   providers: [
     WINDOW_PROVIDERS, LandingFixService , LandingPageService
   ]

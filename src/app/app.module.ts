@@ -9,22 +9,25 @@ import { AppComponent } from './app.component';
 import * as $ from 'jquery';
 import { AppService } from './app.service';
 import { TranslateModule, TranslateLoader, MissingTranslationHandler } from '@ngx-translate/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient} from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MyMissingTranslationHandler } from './shared/services/translation-handler/translation-handler';
 import { NotTranslatedService } from './shared/services/translation-handler/not-translated-service';
-
+import { ToastrModule } from 'ngx-toastr';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 @NgModule({
   declarations: [
-    AppComponent,
-  ],
+    AppComponent
+  ],  
+  exports:[],
   imports: [
+    
     BrowserModule,
     HttpModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule,    
     SharedModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: false, anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }),
     TranslateModule.forRoot({
@@ -38,7 +41,14 @@ export function HttpLoaderFactory(http: HttpClient) {
             useClass: MyMissingTranslationHandler,
             deps: [NotTranslatedService]
         }
-    })
+    }),
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+      enableHtml:true
+    }),
+    NgbModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

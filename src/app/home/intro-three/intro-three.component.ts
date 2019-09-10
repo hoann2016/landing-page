@@ -11,7 +11,7 @@ declare var $: any;
 })
 export class IntroThreeComponent implements AfterViewInit,OnInit {
 
-  @ViewChild('video') videoElement: ElementRef;	
+  @ViewChild('video',{static:true}) videoElement: ElementRef;	
   
   constructor(private translate: TranslateService,
   private landingPageService: LandingPageService) {

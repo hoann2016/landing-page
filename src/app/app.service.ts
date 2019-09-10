@@ -7,6 +7,7 @@ import { tap, catchError, map } from 'rxjs/operators'
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UserRegister } from './shared/models/user-models/user-register.model';
 import { NewLetter } from './shared/models/new-letter.model';
+import { ObserveOnMessage } from 'rxjs/internal/operators/observeOn';
 
 
 const httpOptions = {
@@ -20,7 +21,12 @@ export class AppService {
   private userLoginPath= "api/v1/authenticate/login";
   private userRegisterPath= "api/v1/users/register";
   private newLetterPath= "api/v1/leads";
+  private getPackagePath= "api/v1/merchants/package/active";
+  private getBusinessPath= "api/v1/merchants/business";
 
+get merchangePath(){
+  return environment.merchantpath;
+}
 
   constructor(private http: HttpClient) {
     this.rooturl =environment.rootproto+ environment.rootip + ":" + environment.port+ environment.rootpath ;
@@ -35,5 +41,11 @@ export class AppService {
 
   sendNewLetter(newLetter:NewLetter):Observable<any>{
     return this.http.post(this.rooturl+this.newLetterPath,newLetter,httpOptions);
+  }
+  getAllPackage():Observable<any>{
+    return this.http.get(this.rooturl+this.getPackagePath);
+  }
+  getAllBusiness():Observable<any>{
+    return this.http.get(this.rooturl+this.getBusinessPath);
   }
 }

@@ -7,7 +7,8 @@ export const environment = {
   rootproto:"http://",
   rootip:"localhost",
   rootpath:"/",
-  port:"8080"
+  port:"8080",
+  merchantpath:"http://45.77.250.47:84"
 };
 
 /*
