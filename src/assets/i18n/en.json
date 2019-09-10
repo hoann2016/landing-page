@@ -15,30 +15,24 @@
       "HeaderDescription1": "Get ",
       "HeaderDescription2": "Ludiino Online Booking & Scheduling",
       "HeaderDescription3": "System to never miss a booking & book more clients",
-
       "MessageHeader_1": "A Professional Online Booking website that does business for you 24/7 non-stop",
       "MessageContent_1": "A free website for your business that not only displays information but also accepts online booking in real time 3 easy steps to create open time slots & services, publish them online for booking, and receive booking notification",
-      
       "MessageHeader_4": "Integrate with your available social channels",
       "MessageContent_4": "Clients can conveniently book services from your website but also from your social channels to trully get what they want when they want it",
-      
       "MessageHeader_2": "Accept Online and/or Offline Payment",
       "MessageContent_2": "Online payments go directy to your bank account via secured payment portals to guarantee bookings and instantly receive booking confirmation You can just focus on providing the best services without having to worry about managing bookings, payments, and cash",
-      
       "MessageHeader_5": "Auto Notifications & Reminders",
       "MessageContent_5": "The system automatically sends to clients reminders about upcoming apppointments and notifications when a booking is made/changed so you don't have to",
-      
       "MessageHeader_3": "Staff Scheduling Management",
       "MessageContent_3": "Quick & easy to schedule staff working time and assign them to booking appointments per clients' requests.Readily available online reports about provided services and client satisfaction per staff",
-     
       "MessageHeader_6": "Online Marketing and Promotional Campaigns ",
       "MessageContent_6": "Flexible to create Online Marketing and Promotional Campaigns that send discount codes to targeted client groups to attract new clients and keep old clients coming back for more"
-      },
+    },
     "Feature": {
       "Header": "Ludiino is an Online Booking Solution that works for multiple industries",
       "Description": "Whether you own a Beauty Salon, a Sport Center, an Automobile Dealership or a Medical Clinic. You will certainly need an online booking software for your clients to book & pay for the provided services, and",
-      "Description2":" Ludiino",
-      "Description3":" is the only solution for all your needs",
+      "Description2": " Ludiino",
+      "Description3": " is the only solution for all your needs",
       "ServicesName": {
         "HairSalon": "Hair Salon",
         "BeautySalon": "Beauty Salon",
@@ -46,12 +40,12 @@
         "GymSportCenter": "Gym & Sport Center",
         "Health": "Medical Clinic",
         "RepairServices": "Repair Service",
-        "1":"Hair Salon",
-        "2":"Beauty Salon",
-        "3":"Spa & Massage",
-        "4":"Gym & Sport Center",
-        "5":"Medical Clinic",
-        "6":"Repair Service"       
+        "1": "Hair Salon",
+        "2": "Beauty Salon",
+        "3": "Spa & Massage",
+        "4": "Gym & Sport Center",
+        "5": "Medical Clinic",
+        "6": "Repair Service"
       }
     },
     "ScreenShot": {
@@ -84,11 +78,11 @@
         "ProductCommerce": "Product Commerce",
         "Dashboards": "Dashboard",
         "CalendarView": "Calendar View",
-        "ContentTable":{
-          "Unlimited":"Unlimited",
-          "10BookingPerMonth":"10 bookings / Month",
-          "PayAtStore":"Pay At Store",
-          "PayNow":"Pay Now"
+        "ContentTable": {
+          "Unlimited": "Unlimited",
+          "10BookingPerMonth": "10 bookings / Month",
+          "PayAtStore": "Pay At Store",
+          "PayNow": "Pay Now"
         }
       }
     },
@@ -98,8 +92,8 @@
       "RegisterNow": "Register now",
       "ResetYourPassword": "Reset Your Password",
       "ForgotPassword": "Forgot Password",
-      "SignInEmail.Email":"Email Address",
-      "DontWantToChangePassword":"Don't want to reset password? Back to "
+      "SignInEmail.Email": "Email Address",
+      "DontWantToChangePassword": "Don't want to reset password? Back to "
     },
     "Footer": {
       "Title": "Get in touch",
@@ -149,35 +143,56 @@
     "shop-type2": "Spa / Massage",
     "shop-type3": "Medical Clinic"
   },
+  "Payment": {
+    "Header":"Your package",
+    "Sub":"Please check information bellow",
+    "SelectedPackage":"Package selected",
+    "TimeRegistered":"Time register",
+    "Months":"months",
+    "Account":"Account",
+    "Contact":"Contact",
+    "StartDate":"Start Date",
+    "EndDate":"End Date",
+    "Payment":"Payment",
+    "PaymentMethod":"Payment methods",
+    "PaymentDirect":"Direct",
+    "PaymentTransfer":"Transfer",
+    "PaymentOnline":"Online",
+    "PaymentAtm":"Atm",
+    "TempCount":"Temprature calulate",
+    "TotalCount":"Total",
+    "CompletePayment":"Complete Payment"
+  },
   "Shared": {
     "RegisterBtnLabel": "Register",
     "SigninBtnLabel": "Login",
     "Login_Register": "Login",
     "Send": "Send New Password",
-    "CommunicationMessage":{
-      "1000":"Sussces",
-      "1001":"Data is exist",
-      "1003":"Token is missing",
-      "1004":"Invalid token",
-      "1005":"Token expired",
-      "1006":"Id is missing",
-      "1007":"Incorect email or password",
-      "1008":"Contact admin",
-      "1009":"Group name is missing",
-      "1010":"Group name or Id is missing",
-      "1011":"Group Id or Permission Id is missing",
-      "1012":"Permission Name is missing",
-      "1013":"Permission Id or Name is missing",
-      "1014":"Resource name is missing",
-      "1015":"Resource Id or Name is missing",
-      "1016":"User data is missing",
-      "1017":"Incorrect password",
-      "1018":"Id or Status is missing",
-      "1019":"Field is invalid type",
-      "1020":"Field is required",
-      "1021":"Field is invalid length",
-      "1022":"Field is invalid",
-      "1023":"Field is not match"
+    "CommunicationMessage": {
+      "1000": "Sussces",
+      "1001": "Data is exist",
+      "1002":"Data not found",
+      "1003": "Token is missing",
+      "1004": "Invalid token",
+      "1005": "Token expired",
+      "1006": "Id is missing",
+      "1007": "Incorect email or password",
+      "1008": "Contact admin",
+      "1009": "Group name is missing",
+      "1010": "Group name or Id is missing",
+      "1011": "Group Id or Permission Id is missing",
+      "1012": "Permission Name is missing",
+      "1013": "Permission Id or Name is missing",
+      "1014": "Resource name is missing",
+      "1015": "Resource Id or Name is missing",
+      "1016": "User data is missing",
+      "1017": "Incorrect password",
+      "1018": "Id or Status is missing",
+      "1019": "Field is invalid type",
+      "1020": "Field is required",
+      "1021": "Field is invalid length",
+      "1022": "Field is invalid",
+      "1023": "Field is not match"
     }
   }
 }

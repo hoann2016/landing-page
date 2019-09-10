@@ -38,7 +38,7 @@
       <div class="modal-footer " >       
         <p class="one-line forgot_text" style="cursor:pointer;" id="reset-password-footer">
           {{'Home.SignIn.DontWantToChangePassword'|translate}} 
-          <a href="javascript:void(0)" (click)="showBackLogin(forgot_password_content)"> {{'Shared.SigninBtnLabel'|translate}}</a>
+          <a href="javascript:void(0)" (click)="showBackLogin()"> {{'Shared.SigninBtnLabel'|translate}}</a>
            
         </p>
       </div>
@@ -58,8 +58,8 @@
               </p>
             </div>
             <div class="text-danger">
-              <span *ngIf="errorMessage">
-                {{errorMessage}}
+              <span *ngIf="errorMessage" [innerHTML]="errorMessage">
+               
               </span>
             </div>
             <form class="register-form" [formGroup]="signInForm">

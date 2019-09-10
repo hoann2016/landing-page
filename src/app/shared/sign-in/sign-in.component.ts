@@ -107,14 +107,19 @@ export class SignInComponent implements OnInit {
             console.log("stating redirect....");
             window.location.href= this.appService.merchangePath;
 
-          } else {
-            this.errorMessage =   this.translate.instant('Shared.CommunicationMessage.'+res.message);
+          } else {          
+            if(res.message.length>0){
+              this.errorMessage =   this.appService.renderError(res.message,this.translate);
+            }
           }
 
       },
         error => {
           console.log(error);
           this.errorMessage =   this.translate.instant('Shared.CommunicationMessage.'+ error.error.message);
+          if(error.error.message.length>0){
+            this.errorMessage =   this.appService.renderError(error.error.message,this.translate);
+          }
         }
       );
     } else alert("login not oke");
@@ -127,9 +132,5 @@ export class SignInComponent implements OnInit {
     this.closeEvt.emit("from chield")    
     this.modalService.dismissAll();
     this.IsHidden = false;
-    
-      
-    
-   
   }
 }

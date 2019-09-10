@@ -1,62 +1,62 @@
-<section class="section_payment col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-  <div class="container_full_width">
+
+<section>
+  <div class="container">
     <div class="wrap">
       <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <!-- left content -->
         <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 left-content">
           <div class="wrap_form_field">
             <div class="header-page">
-              <h2 class="header-form col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" > Gói dịch vụ đăng ký</h2>
-              <span class="descrition-page col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">Bạn đang tiến hành gói đăng ký dịch vụ, vui lòng kiểm tra thông tin bên
-                dưới:</span>
+              <h2 class="header-form col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" >    {{'Payment.Header'|translate}}</h2>
+              <span class="descrition-page col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">{{'Payment.Sub'|translate}}</span>
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 clear-fix">
+            <div class="clear-fix">
               <div class="clear-fix-content"></div>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <span class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">Gói dịch vụ đã chọn</span>
+              <span class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.SelectedPackage'|translate}}</span>
               <span class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  one-line ">
                 <div class="medal-image one-line">
                   <img src="../../../assets/images/app/payment/images.jpeg" alt="">
                 </div>
-                <span class="focus-yellow one-line">Enterprise package</span>
+                <span class="focus-yellow one-line">{{userPayment.PackageName}}</span>
               </span>
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 clear-fix">
+            <div class="clear-fix">
                 <div class="clear-fix-content"></div>
               </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">Thời gian đăng ký</div>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.TimeRegistered'|translate}}</div>
               <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  one-line">
-                <select>
-                  <option value="3">3 tháng</option>
-                  <option value="6" selected>6 tháng</option>
-                  <option value="12">12 tháng</option>
+                <select (change)="SelectDate($event)">
+                  <option value="3">3 {{'Payment.Months'|translate}}</option>
+                  <option value="6" selected>6 {{'Payment.Months'|translate}}</option>
+                  <option value="12">12 {{'Payment.Months'|translate}}</option>
                 </select>
               </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 clear-fix">
+            <div class="clear-fix">
                 <div class="clear-fix-content"></div>
               </div>
             <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">
-                Tài khoản:
+                {{'Payment.Account'|translate}}:
               </div>
               <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  one-line">
-                Phương Nguyễn
+                {{userPayment.CustomerName}}
               </div>
             </div>
             <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">Liên hệ:</div>
-              <div class=" col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">0922222222</div>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.Contact'|translate}}:</div>
+              <div class=" col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">{{userPayment.ContactPhone}}</div>
             </div>
             <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">Ngày bắt đầu:</div>
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  one-line">01/04/2019</div>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.StartDate'|translate}}:</div>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  one-line">{{userPayment.StartDate}}</div>
             </div>
             <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">Ngày kết thúc:</div>
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  one-line">30/09/2019</div>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.EndDate'|translate}}:</div>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  one-line">{{userPayment.EndDate}}</div>
             </div>
           </div>
         </div>
@@ -65,44 +65,53 @@
         <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 right-content">
           <div class="wrap_form_field">
             <div class="header-page">
-              <h2 class="header-form"> Thanh toán</h2>
-              <span class="descrition-page">Phương thức thanh toán</span>
+              <h2 class="header-form"> {{'Payment.Payment'|translate}}</h2>
+              <span class="descrition-page">{{'Payment.PaymentMethod'|translate}}</span>
             </div>
             <ul>
               <li class="row">
                 <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="payment-method">Thanh toán trực tiếp
+                  <input type="radio" class="form-check-input" name="payment-method" value="tt" (change)="ChangePayment($event)">
+                  {{'Payment.PaymentDirect'|translate}}
                 </label>
               </li>
               <li class="row">
                 <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="payment-method">Chuyển khoản ngân hàng
+                  <input type="radio" class="form-check-input" name="payment-method" value="ck" (change)="ChangePayment($event)">
+                  {{'Payment.PaymentTransfer'|translate}}
                 </label>
               </li>
               <li class="row">
                 <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="payment-method" disabled>thanh toán online bằng thẻ
-                  Visa/Mastercard
+                  <input type="radio" class="form-check-input" name="payment-method" disabled>
+                  {{'Payment.PaymentOnline'|translate}}
                 </label>
               </li>
               <li class="row">
                 <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="payment-method" disabled>Thanh toán bằng thẻ nội
-                  địa
+                  <input type="radio" class="form-check-input" name="payment-method" disabled>
+                  {{'Payment.PaymentAtm'|translate}}
                 </label>
               </li>
             </ul>
             <hr />
-            <div class=" form-check-inline col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">Tạm tính</div>
-              <div style="float:right;">999,000 đ</div>
+            <div class="row">
+              <div class="col-md">{{'Payment.TempCount'|translate}}</div>
+              <div class="col-md">999,000 đ</div>
             </div>
             <hr />
-            <div class="form-check-inline col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">Tổng cộng</div>
-              <div>999,000 đ</div>
+            <div class="row">
+              <div class="col-md">{{'Payment.TotalCount'|translate}}</div>
+              <div class="col-md">999,000 đ</div>
             </div>
+            
+
           </div>
+
+           <p class="complete-payment-btn" (click)="RedirectPaymentGate()">                
+              {{'Payment.CompletePayment'|translate}}
+            </p>
+          
 
         </div>
         <!-- end right content -->
@@ -110,3 +119,4 @@
     </div>
   </div>
 </section>
+  

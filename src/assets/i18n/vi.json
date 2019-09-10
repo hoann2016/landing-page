@@ -150,6 +150,25 @@
     "shop-type1": "Salon Tóc",
     "shop-type2": "Spa / Massage",
     "shop-type3": "Phòng khám"
+  },"Payment": {
+    "Header":"Gói dịch vụ đăng ký",
+    "Sub":"Bạn đang tiến hành gói đăng ký dịch vụ, vui lòng kiểm tra thông tin bên dưới",
+    "SelectedPackage":"Gói dịch vụ đã chọn",
+    "TimeRegistered":"Thời gian đăng ký",
+    "Months":"tháng",
+    "Account":"Tài khoản",
+    "Contact":"Liên hệ:",
+    "StartDate":"Ngày bắt đầu",
+    "EndDate":"Ngày kết thúc",
+    "Payment":"Thanh toán",
+    "PaymentMethod":"Phương thức thanh toán",
+    "PaymentDirect":"Thanh toán trực tiếp",
+    "PaymentTransfer":"Chuyển khoản ngân hàng",
+    "PaymentOnline":"thanh toán online bằng thẻ Visa/Mastercard",
+    "PaymentAtm":"Thanh toán bằng thẻ nội địa",
+    "TempCount":"Tạm tính",
+    "TotalCount":"Tổng cộng",
+    "CompletePayment":"Hoàn tất đơn hàng"
   },
   "Shared": {
     "RegisterBtnLabel": "Đăng ký",
@@ -159,6 +178,7 @@
     "CommunicationMessage":{
       "1000":"Thành công",
       "1001":"Dữ liệu đã tồn tại",
+      "1002":"Không tìm thấy dữ liệu",
       "1003":"Thiếu token",
       "1004":"Token không hợp lệ",
       "1005":"Token hết hạn",

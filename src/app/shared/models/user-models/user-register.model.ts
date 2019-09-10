@@ -1,5 +1,5 @@
 export interface UserRegister{
-    group_id:number;
+    package_id:number;
     industry_id:number;
     country_id:number;
     name:string;

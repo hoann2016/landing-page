@@ -101,8 +101,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
   }
   ngOnInit() {
     this.buildForm();
-    this.appService.getAllPackage().subscribe(pk => {
-      console.log("package : ", pk);
+    this.appService.getAllPackage().subscribe(pk => {     
       if (pk.success == true) {
         this.allPackage = pk.data.packages;
         console.log(this.allPackage.packages);
@@ -111,8 +110,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
       err => {
         console.log("business", err);
       });
-    this.appService.getAllBusiness().subscribe(bs => {
-      console.log("business ", bs);
+    this.appService.getAllBusiness().subscribe(bs => {    
       this.allBusinessType = [];
       if (bs.success == true) {
         this.allBusinessType = bs.data.businessTypes;
@@ -154,7 +152,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
     this.isSubmitted = true;
     if (this.signUpForm.valid) {
       var formImport: UserRegister = {
-        group_id: +this.signUpForm.controls.PackageSelectedName.value,
+        package_id: +this.signUpForm.controls.PackageSelectedName.value,
         industry_id: +this.signUpForm.controls.ServiceName.value,
         country_id: 1,
         name: this.signUpForm.controls.CustomerName.value,
@@ -164,52 +162,39 @@ export class SignUpComponent implements OnInit, AfterViewInit {
         email: this.signUpForm.controls.Email.value,
         phone: this.signUpForm.controls.Phone.value,
         status: 'disabled'
-      }
-      console.log(" data befor to pass : ",this.signUpForm.value);
-      this.router.navigate(['/pages/payment'], 
-      this.signUpForm.value
-      )
-      var navigate:NavigationExtras={
-       queryParams:this.signUpForm.value
-      }
-     this.router.navigateByUrl('/pages/payment',navigate);
+      }     
+     
+      this.appService.register(formImport).subscribe(
+        response => {
+          console.log("response ", response);
+          if (response.success == true) {
+            if (this.signUpForm.controls.PackageSelectedName.value == '1') {
+              this.toastr.success("Redirect to dashboard ...")
+              window.location.href = this.appService.merchangePath;
+            } else {
+              this.toastr.success("Redirect to payment page");
+              this.router.navigateByUrl('/pages/payment',
+                { state: this.signUpForm.value }
+              );
+            }
+          } else {
+            return;
+          }
+        },
+        err => {
 
-
-    //   this.appService.register(formImport).subscribe(
-    //     response => {
-    //       console.log("response ", response);
-    //       if (response.success == true) {
-    //         if (this.signUpForm.controls.PackageSelectedName.value == '1') {
-    //           this.toastr.success("Redirect to dashboard ...")
-    //           window.location.href= this.appService.merchangePath;
-    //         } else {
-    //           this.toastr.success("Redirect to payment page");           
-    //           this.router.navigate(['/pages/payment'], 
-    //           this.signUpForm.value
-    //           )
-    //         }
-    //       } else {
-    //         return;
-    //       }
-    //     },
-    //     err => {
-
-    //       var strError: string = '<ul class=\"err-list\">';
-    //       if (err.error.success == false && err.error.message.length > 0) {
-    //         for (let errItem of err.error.message) {
-    //           strError += '<li>' + this.translate.instant('Shared.CommunicationMessage.' + errItem.code) + ((errItem.field != null && errItem.field != undefined) ? (': ' + errItem.field) : '') + '<li>';
-    //         }
-    //         strError += '</ul>'
-    //         this.toastr.error(strError, 'Error', {
-    //           enableHtml: true, easeTime: 1000
-    //         });
-    //         console.log("All Error: ", strError);
-    //       }
-    //     }
-    //   );
+          var strError: string = '<ul class=\"err-list\">';
+          if (err.error.success == false && err.error.message.length > 0) {          
+            this.toastr.error(this.appService.renderError(err.error.message,this.translate), 'Error', {
+              enableHtml: true, easeTime: 1000
+            });
+            console.log("All Error: ", strError);
+          }
+        }
+      );
 
     } else {
-return;
+      return;
     }
   }
 
