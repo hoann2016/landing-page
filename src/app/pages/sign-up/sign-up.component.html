@@ -88,6 +88,7 @@
 
                                         <div *ngIf="isSubmitted && f.ShopName.errors" class="text-danger">
                                             <span *ngIf="f.ShopName.errors?.required">{{'Register.message-require'|translate}}</span>
+                                            <span *ngIf="f.ShopName.errors?.pattern">{{'Register.message-format-6'|translate}}</span>
                                             <span *ngIf="f.ShopName.errors?.minlength||f.ShopName.errors?.maxlength">{{'Register.message-format-6'|translate}}</span>
                                         </div>
                                     </div>

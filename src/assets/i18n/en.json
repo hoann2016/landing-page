@@ -102,7 +102,10 @@
         "Email": "Email Address",
         "Content": "Message",
         "Send": "Send",
-        "maximumMessage": "Invalid Message, maximum 255 charactors"
+        "maximumMessage": "Invalid Message, maximum 255 charactors",
+        "MessageSendSuccess":"Message send success !",
+        "MessageSendFailed":"Message send failed !"
+
       },
       "Contact": {
         "Header": "Contact",

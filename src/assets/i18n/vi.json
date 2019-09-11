@@ -110,7 +110,9 @@
         "Email": "Email",
         "Content": "Nội dung",
         "Send": "Gửi",
-        "maximumMessage": "Thông không hợp lệ, tối đa 255 ký tự"
+        "maximumMessage": "Thông không hợp lệ, tối đa 255 ký tự",
+        "MessageSendSuccess":"Message gửi thành công !",
+        "MessageSendFailed":"Message thất bại !"
       },
       "Contact": {
         "Header": "Liên hệ",

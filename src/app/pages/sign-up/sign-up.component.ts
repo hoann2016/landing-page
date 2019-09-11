@@ -8,8 +8,7 @@ import { MustMatch } from './must-match.validator';
 import { AppService } from 'src/app/app.service';
 import { UserRegister } from 'src/app/shared/models/user-models/user-register.model';
 import { ToastrService } from 'ngx-toastr';
-import { Route, Router, NavigationExtras } from '@angular/router';
-import { WINDOW_PROVIDERS } from 'src/app/shared/services/windows.service';
+import { Router } from '@angular/router';
 
 
 
@@ -43,10 +42,12 @@ export class SignUpComponent implements OnInit, AfterViewInit {
     return this.signUpForm.controls;
   }
   constructor(
-    public fb: FormBuilder, private translate: TranslateService,
+    public fb: FormBuilder,
+    private translate: TranslateService,
     private modalService: NgbModal,
     private landingPageService: LandingPageService,
-    private appService: AppService, private toastr: ToastrService,
+    private appService: AppService,
+    private toastr: ToastrService,
     private router: Router
   ) { }
   public allPackage;
@@ -69,7 +70,9 @@ export class SignUpComponent implements OnInit, AfterViewInit {
           '',
           [
             Validators.required, Validators.minLength(3),
-            Validators.maxLength(100)
+            Validators.maxLength(100),
+            Validators.pattern(
+              /[a-zA-Z|à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ|è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ|ì|í|ị|ỉ|ĩ|ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ|ỳ|ý|ỵ|ỷ|ỹ|đ|À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ|È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ|Ì|Í|Ị|Ỉ|Ĩ|Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ|Ỳ|Ý|Ỵ|Ỷ|Ỹ|Đ\d\s]+$/)
           ]
         ],
         ServiceName: ['', Validators.required],
@@ -101,7 +104,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
   }
   ngOnInit() {
     this.buildForm();
-    this.appService.getAllPackage().subscribe(pk => {     
+    this.appService.getAllPackage().subscribe(pk => {
       if (pk.success == true) {
         this.allPackage = pk.data.packages;
         console.log(this.allPackage.packages);
@@ -110,7 +113,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
       err => {
         console.log("business", err);
       });
-    this.appService.getAllBusiness().subscribe(bs => {    
+    this.appService.getAllBusiness().subscribe(bs => {
       this.allBusinessType = [];
       if (bs.success == true) {
         this.allBusinessType = bs.data.businessTypes;
@@ -162,8 +165,8 @@ export class SignUpComponent implements OnInit, AfterViewInit {
         email: this.signUpForm.controls.Email.value,
         phone: this.signUpForm.controls.Phone.value,
         status: 'disabled'
-      }     
-     
+      }
+
       this.appService.register(formImport).subscribe(
         response => {
           console.log("response ", response);
@@ -184,8 +187,8 @@ export class SignUpComponent implements OnInit, AfterViewInit {
         err => {
 
           var strError: string = '<ul class=\"err-list\">';
-          if (err.error.success == false && err.error.message.length > 0) {          
-            this.toastr.error(this.appService.renderError(err.error.message,this.translate), 'Error', {
+          if (err.error.success == false && err.error.message.length > 0) {
+            this.toastr.error(this.appService.renderError(err.error.message, this.translate), 'Error', {
               enableHtml: true, easeTime: 1000
             });
             console.log("All Error: ", strError);

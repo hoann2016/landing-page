@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { LandingPageService } from '../services/landing-page.service';
 import { AppService } from 'src/app/app.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-footer',
@@ -14,7 +15,10 @@ export class FooterComponent implements OnInit {
   guessMessageForm :FormGroup;
   isSubmitted:boolean=false;
   today: number = Date.now();
-  constructor(public fb: FormBuilder,private translate: TranslateService,private appService:AppService,
+  constructor(public fb: FormBuilder,
+    private translate: TranslateService,
+    private appService:AppService,
+    private toastr: ToastrService,
     private landingPageService: LandingPageService){
 
   }
@@ -55,12 +59,18 @@ export class FooterComponent implements OnInit {
       subscribe(response=>{
         console.log(response);
         this.guessMessageForm.reset();
+        this.toastr.success(this.translate.instant('Home.Footer.Form.MessageSendSuccess'));        
       },
       error=>{
-        console.log(error);
+        if(error.message&&error.message.length>0)
+        {
+           this.toastr.error(this.appService.renderError(error.error.message,this.translate));
+        }
+       
       })
     }else{
-      alert("Not oke");
+      
+      this.toastr.error(this.translate.instant('Home.Footer.Form.MessageSendFailed'));
     }
     console.log(this.guessMessageForm.value);
   }

@@ -1,0 +1,44 @@
+{
+    "success": true,
+    "message": 1000,
+    "data": {
+        "businessTypes": [
+            {
+                "id": 1,
+                "industry_id": 1,
+                "name": "Hair Salon",
+                "created_at": 1568182833826
+            },
+            {
+                "id": 2,
+                "industry_id": 1,
+                "name": "Beauty Salon",
+                "created_at": 1568182833826
+            },
+            {
+                "id": 3,
+                "industry_id": 1,
+                "name": "Spa & Massage",
+                "created_at": 1568182833826
+            },
+            {
+                "id": 4,
+                "industry_id": 1,
+                "name": "Gym & Sport Center",
+                "created_at": 1568182833826
+            },
+            {
+                "id": 5,
+                "industry_id": 1,
+                "name": "Medical Clinic",
+                "created_at": 1568182833826
+            },
+            {
+                "id": 6,
+                "industry_id": 1,
+                "name": "Repair Service",
+                "created_at": 1568182833826
+            }
+        ]
+    }
+}

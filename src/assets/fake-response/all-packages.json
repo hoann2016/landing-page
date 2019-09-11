@@ -1,0 +1,44 @@
+{
+    "success": true,
+    "message": 1000,
+    "data": {
+        "packages": [
+            {
+                "id": 1,
+                "name": "Free",
+                "months": 3,
+                "booking_limit": 10,
+                "limit_renew": 0,
+                "status": "activated",
+                "created_at": 1568183092271
+            },
+            {
+                "id": 2,
+                "name": "Newbie",
+                "months": 3,
+                "booking_limit": 10,
+                "limit_renew": 0,
+                "status": "activated",
+                "created_at": 1568183092271
+            },
+            {
+                "id": 3,
+                "name": "Biggie",
+                "months": 3,
+                "booking_limit": 10,
+                "limit_renew": 0,
+                "status": "activated",
+                "created_at": 1568183092271
+            },
+            {
+                "id": 4,
+                "name": "Hulk",
+                "months": 3,
+                "booking_limit": 10,
+                "limit_renew": 0,
+                "status": "activated",
+                "created_at": 1568183092271
+            }
+        ]
+    }
+}

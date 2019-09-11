@@ -25,17 +25,12 @@ export class SignInComponent implements OnInit {
   IsHidden = false;
   errorMessage: string;
   @Output('closeChildModal') closeEvt = new EventEmitter<string>();
-
-
-
   get f() {
     return this.signInForm.controls;
   }
-
   get f_recover() {
     return this.sendPasswordForm.controls;
   }
-
   constructor(
     public fb: FormBuilder,
     private translate: TranslateService,
@@ -64,7 +59,6 @@ export class SignInComponent implements OnInit {
           Validators.maxLength(100)
         ]
       ]
-
     });
   }
   ngOnInit() {
@@ -99,20 +93,17 @@ export class SignInComponent implements OnInit {
     this.errorMessage = "";   
     if (this.signInForm.valid) {
       this.appService.logIn({ email: this.signInForm.controls.Email.value, password: this.signInForm.controls.Password.value }).subscribe((res: any) => {
-
           if (res.success) {
             console.log("res.data.token", jwt_decode(res.data.token));
             var userLogedIn: UserLogedInModel = jwt_decode(res.data.token) as UserLogedInModel;
             sessionStorage.setItem('landingPageToken', res.data.token)
             console.log("stating redirect....");
             window.location.href= this.appService.merchangePath;
-
           } else {          
             if(res.message.length>0){
               this.errorMessage =   this.appService.renderError(res.message,this.translate);
             }
           }
-
       },
         error => {
           console.log(error);

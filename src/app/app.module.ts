@@ -43,7 +43,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         }
     }),
     ToastrModule.forRoot({
-      timeOut: 10000,
+      timeOut: 1000,
       positionClass: 'toast-top-right',
       preventDuplicates: true,
       enableHtml:true
