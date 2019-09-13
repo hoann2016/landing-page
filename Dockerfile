@@ -8,4 +8,6 @@ ADD devOps/start-ENV.sh /usr/src/app/
 
 EXPOSE 4200
 
-CMD ["./start-ENV.sh"]
+RUN ["chmod", "+x", "./start-ENV.sh"]
+
+CMD ["sh", "./start-ENV.sh"]
