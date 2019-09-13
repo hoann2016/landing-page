@@ -103,6 +103,9 @@ export class SignUpComponent implements OnInit, AfterViewInit {
     });
   }
   ngOnInit() {
+var x="hoann";
+console.log(typeof x);
+    console.log();
     this.buildForm();
     this.appService.getAllPackage().subscribe(pk => {
       if (pk.success == true) {
@@ -187,7 +190,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
         err => {
 
           var strError: string = '<ul class=\"err-list\">';
-          if (err.error.success == false && err.error.message.length > 0) {
+          if (err.error&&err.error.success == false && err.error.message.length > 0) {
             this.toastr.error(this.appService.renderError(err.error.message, this.translate), 'Error', {
               enableHtml: true, easeTime: 1000
             });
