@@ -4,9 +4,8 @@ RUN mkdir -p /usr/src/app/
 WORKDIR /usr/src/app
 
 ADD . /usr/src/app
-
-RUN npm install
+ADD devOps/start-ENV.sh /usr/src/app/
 
 EXPOSE 4200
 
-CMD [ "npm", "start:ENV"]
+CMD ["./start-ENV.sh"]
