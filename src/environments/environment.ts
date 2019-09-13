@@ -5,9 +5,9 @@
 export const environment = {
   production: false,
   rootproto:"http://",
-  rootip:"localhost",
+  rootip:"dev.ludiino.com",
   rootpath:"/",
-  port:"8080",
+  port:null,
   merchantpath:"http://45.77.250.47:84"
 };
 
