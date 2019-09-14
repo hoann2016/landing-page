@@ -24,7 +24,7 @@ export class AppService {
     return environment.merchantpath;
   }
   constructor(private http: HttpClient) {
-    this.rooturl = environment.rootproto + environment.rootip + environment.port ? `${environment.port}:`: "" + environment.port + environment.rootpath;
+    this.rooturl = environment.rootproto + environment.rootip + (environment.port ? `${environment.port}:`: "" ) + environment.rootpath;
   }
   logIn(userLogin: UserLogin): Observable<any | string> {
     return this.http.post(this.rooturl + this.userLoginPath, userLogin, httpOptions)
