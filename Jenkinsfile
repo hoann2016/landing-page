@@ -52,7 +52,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'DEPLOY'
-                sshagent (credentials: ['ssh-obdev']) {
+                sshagent (credentials: ['ssh-lobdev']) {
                     sh 'ssh "$LOBDEV_USER@$LOBDEV_HOST" -T "/usr/bin/deploy $DOCKER_HUB_ID $DOCKER_HUB_PASSWORD $DOCKER_NAME $DOCKER_TAG"'
                 }
                 echo 'DONE'
