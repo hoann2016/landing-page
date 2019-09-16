@@ -78,9 +78,11 @@ export class SignInComponent implements OnInit {
       .result.then(
         result => {         
           if (!this.sendPasswordForm.valid) {
-            alert("form not ok");
+           
             return;
-          } else alert("form ok");
+          } else {
+
+          }
         },
         reason => {
           console.log("result from modal,reason: ", reason);
@@ -113,7 +115,9 @@ export class SignInComponent implements OnInit {
           }
         }
       );
-    } else alert("login not oke");
+    } else {
+      //do nothing
+    }
   }
   RedirectToRegister() {
     this.modalService.dismissAll();
