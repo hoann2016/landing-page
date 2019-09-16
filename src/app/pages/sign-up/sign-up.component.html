@@ -1,22 +1,14 @@
 <section class="section_signup">
     <div class="container_full_width">
         <div class="wrap">
-             <ng-template
-            #content
-            let-modal
-        >
-            <div class="modal-body modal_body_signin">
-                <button
-                    type="button "
-                    class="close"
-                    aria-label="Close "
-                    (click)="modal.dismiss( 'Cross click') "
-                >
-                    <span aria-hidden="true ">&times;</span>
-                </button>
-                <app-sign-in></app-sign-in>
-            </div>
-        </ng-template>
+            <ng-template #content let-modal>
+                <div class="modal-body modal_body_signin">
+                    <button type="button " class="close" aria-label="Close " (click)="modal.dismiss( 'Cross click') ">
+                        <span aria-hidden="true ">&times;</span>
+                    </button>
+                    <app-sign-in></app-sign-in>
+                </div>
+            </ng-template>
 
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
@@ -27,7 +19,8 @@
                             </div>
                             <h3 class="subtitle">Welcome to Ludiino Booking System</h3>
                             <hr>
-                            <p>Get Ludiino Online Booking & Scheduling System to never miss a booking & book more clients</p>
+                            <p>Get Ludiino Online Booking & Scheduling System to never miss a booking & book more
+                                clients</p>
                         </div>
                         <div class="device_mac">
                             <img src="assets/images/sign-up/device.png" class="macbook_img">
@@ -47,19 +40,22 @@
                         <form class="register-form" [formGroup]="signUpForm">
                             <div class="row two-item">
                                 <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 one-line">
-                                    <span class="title-input">{{'Register.name'|translate}}</span><span class="blue-text">*</span>
+                                    <span class="title-input">{{'Register.name'|translate}}</span><span
+                                        class="blue-text">*</span>
                                     <div class="form-input-2">
 
-                                        <input type="text" name="CustomerName" maxlength="100" class=" fix-boder" 
-                                       
-                                        formControlName="CustomerName" [ngClass]="{ 'is-invalid': f.CustomerName.touched && (f.CustomerName.errors?.required||formErrors?.CustomerName) }
+                                        <input type="text" name="CustomerName" maxlength="100" class=" fix-boder"
+                                            formControlName="CustomerName" [ngClass]="{ 'is-invalid': f.CustomerName.touched && (f.CustomerName.errors?.required||formErrors?.CustomerName) }
                                                 ">
 
-                                        <div *ngIf="isSubmitted && (formErrors?.CustomerName||f.CustomerName.errors)" class="text-danger">
+                                        <div *ngIf="isSubmitted && (formErrors?.CustomerName||f.CustomerName.errors)"
+                                            class="text-danger">
                                             <span *ngIf="f.CustomerName.errors?.required" class="text-danger">
                                                 {{'Register.message-require'|translate}}
                                             </span>
-                                            <span *ngIf="f.CustomerName.errors?.minlength||f.CustomerName.errors?.maxlengh||f.CustomerName.errors?.pattern" class="text-danger">
+                                            <span
+                                                *ngIf="f.CustomerName.errors?.minlength||f.CustomerName.errors?.maxlengh||f.CustomerName.errors?.pattern"
+                                                class="text-danger">
                                                 {{'Register.message-format'|translate}}
                                             </span>
                                         </div>
@@ -67,13 +63,19 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 one-line">
-                                    <span class="title-input">{{'Register.package'|translate}}</span><span class="blue-text">*</span>
+                                    <span class="title-input">{{'Register.package'|translate}}</span><span
+                                        class="blue-text">*</span>
                                     <div class="form-input-2">
-                                        <select  formControlName="PackageSelectedName" [ngClass]="{ 'is-invalid': f.PackageSelectedName.touched && f.PackageSelectedName.errors?.required }">
-                                            <option [value]="item.id" *ngFor="let item of allPackage" >{{item.name}}</option>                                           
-                                            </select>
-                                        <div *ngIf="isSubmitted&& f.PackageSelectedName.errors?.required" class="text-danger">
-                                            <div *ngIf="f.PackageSelectedName.errors?.required">{{'Register.message-require'|translate}}</div>
+                                        <select formControlName="PackageSelectedName"
+                                            [ngClass]="{ 'is-invalid': f.PackageSelectedName.touched && f.PackageSelectedName.errors?.required }">
+                                            <option selected disabled hidden></option>
+                                            <option [value]="item.id" *ngFor="let item of allPackage">{{item.name}}
+                                            </option>
+                                        </select>
+                                        <div *ngIf="isSubmitted&& f.PackageSelectedName.errors?.required"
+                                            class="text-danger">
+                                            <div *ngIf="f.PackageSelectedName.errors?.required">
+                                                {{'Register.message-require'|translate}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -81,43 +83,55 @@
                             </div>
                             <div class="row one-item">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                    <span class="title-input">{{'Register.shopname'|translate}}</span><span class="blue-text">*</span>
+                                    <span class="title-input">{{'Register.shopname'|translate}}</span><span
+                                        class="blue-text">*</span>
                                     <div class="form-input-1">
-                                        <input type="text" class="fix-boder" formControlName="ShopName" 
-                                        maxlength="100"  required="required" [ngClass]="{ 'is-invalid': f.ShopName.touched && f.ShopName.errors?.required }">
+                                        <input type="text" class="fix-boder" formControlName="ShopName" maxlength="100"
+                                            required="required"
+                                            [ngClass]="{ 'is-invalid': f.ShopName.touched && f.ShopName.errors?.required }">
 
                                         <div *ngIf="isSubmitted && f.ShopName.errors" class="text-danger">
-                                            <span *ngIf="f.ShopName.errors?.required">{{'Register.message-require'|translate}}</span>
-                                            <span *ngIf="f.ShopName.errors?.pattern">{{'Register.message-format-6'|translate}}</span>
-                                            <span *ngIf="f.ShopName.errors?.minlength||f.ShopName.errors?.maxlength">{{'Register.message-format-6'|translate}}</span>
+                                            <span
+                                                *ngIf="f.ShopName.errors?.required">{{'Register.message-require'|translate}}</span>
+                                            <span
+                                                *ngIf="f.ShopName.errors?.pattern">{{'Register.message-format-6'|translate}}</span>
+                                            <span
+                                                *ngIf="f.ShopName.errors?.minlength||f.ShopName.errors?.maxlength">{{'Register.message-format-6'|translate}}</span>
                                         </div>
                                     </div>
                                     <div class="sugest-name" *ngIf="shopDomain">
-                                        <div class="one-line" style="padding-top:10px;min-width: 50px;max-width: 50px; float:left;">
+                                        <div class="one-line"
+                                            style="padding-top:10px;min-width: 50px;max-width: 50px; float:left;">
                                             <img src="../../../assets/images/sign-up/iconmonstr-light-bulb-16.svg">
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-xs-8 col-lg-10 one-line">
-                                            <p>{{'Register.message-tips'|translate}}: <span>{{shopDomain}}</span> {{'Register.message-tips2'|translate}}
+                                            <p>{{'Register.message-tips'|translate}}: <span>{{shopDomain}}</span>
+                                                {{'Register.message-tips2'|translate}}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                           
+
                             <div class="row one-item">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                    <span class="title-input">{{'Register.shop-type'|translate}}</span><span class="blue-text">*</span>
+                                    <span class="title-input">{{'Register.shop-type'|translate}}</span><span
+                                        class="blue-text">*</span>
                                     <div class="form-input-1">
-                                        <select formControlName="ServiceName" [ngClass]="{ 'is-invalid': f.ServiceName.touched && f.ServiceName.errors?.required }">
+                                        <select formControlName="ServiceName"
+                                            [ngClass]="{ 'is-invalid': f.ServiceName.touched && f.ServiceName.errors?.required }">
                                             <!-- <option value="" disabled selected>{{'Register.shop-type0'|translate}}</option> -->
-                                            <option [value]="item.id" *ngFor="let item of allBusinessType">{{'Home.Feature.ServicesName.'+item.id|translate}}</option>
+                                            <option selected disabled hidden></option>
+                                            <option [value]="item.id" *ngFor="let item of allBusinessType">
+                                                {{'Home.Feature.ServicesName.'+item.id|translate}}</option>
                                             <!-- <option value="salon">{{'Register.shop-type1'|translate}}</option>
                                             <option value="spa">{{'Register.shop-type2'|translate}}</option>
                                             <option value="phongkham" selected>{{'Register.shop-type3'|translate}}</option> -->
-                                            
-                                            </select>
+
+                                        </select>
                                         <div *ngIf="isSubmitted && f.ServiceName.errors" class="text-danger">
-                                            <div *ngIf="f.ServiceName.errors?.required">{{'Register.message-require'|translate}}</div>
+                                            <div *ngIf="f.ServiceName.errors?.required">
+                                                {{'Register.message-require'|translate}}</div>
 
                                         </div>
                                     </div>
@@ -125,54 +139,67 @@
                             </div>
                             <div class="row one-item">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                    <span class="title-input">{{'Register.phone-1'|translate}}</span><span class="blue-text">*</span>
+                                    <span class="title-input">{{'Register.phone-1'|translate}}</span><span
+                                        class="blue-text">*</span>
                                     <div class="form-input-1">
-                                        <input type="text" class="fix-boder" formControlName="Phone" 
-                                        required="required" [ngClass]="{ 'is-invalid': f.Phone.touched && f.Phone.errors?.required }">
+                                        <input type="text" class="fix-boder" formControlName="Phone" required="required"
+                                            [ngClass]="{ 'is-invalid': f.Phone.touched && f.Phone.errors?.required }">
                                         <div *ngIf="isSubmitted && f.Phone.errors" class="text-danger">
-                                            <div *ngIf="f.Phone.errors?.required">{{'Register.message-require'|translate}}</div>
-                                            <div *ngIf="f.Phone.errors?.pattern">{{'Register.message-format-2'|translate}}</div>
+                                            <div *ngIf="f.Phone.errors?.required">
+                                                {{'Register.message-require'|translate}}</div>
+                                            <div *ngIf="f.Phone.errors?.pattern">
+                                                {{'Register.message-format-2'|translate}}</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row one-item">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                    <span class="title-input">{{'Register.Email'|translate}}</span><span class="blue-text">*</span>
+                                    <span class="title-input">{{'Register.Email'|translate}}</span><span
+                                        class="blue-text">*</span>
                                     <div class="form-input-1">
-                                        <input type="email" class="fix-boder" formControlName="Email" 
-                                         required="required" [ngClass]="{ 'is-invalid': f.Email.touched && f.Email.errors?.required }">
+                                        <input type="email" class="fix-boder" formControlName="Email"
+                                            required="required"
+                                            [ngClass]="{ 'is-invalid': f.Email.touched && f.Email.errors?.required }">
                                     </div>
                                     <div *ngIf="isSubmitted && f.Email.errors" class="text-danger">
-                                        <div *ngIf="f.Email.errors?.required">{{'Register.message-require'|translate}}</div>
-                                        <div *ngIf="f.Email.errors?.email">{{'Register.message-format-3'|translate}}</div>
+                                        <div *ngIf="f.Email.errors?.required">{{'Register.message-require'|translate}}
+                                        </div>
+                                        <div *ngIf="f.Email.errors?.email">{{'Register.message-format-3'|translate}}
+                                        </div>
 
                                     </div>
                                 </div>
                             </div>
                             <div class="row two-item">
                                 <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 one-line">
-                                    <span class="title-input">{{'Register.Password'|translate}}</span><span class="blue-text">*</span>
+                                    <span class="title-input">{{'Register.Password'|translate}}</span><span
+                                        class="blue-text">*</span>
                                     <div class="form-input-2">
-                                        <input type="password" class=" fix-boder"
-                                         formControlName="Password" maxlength="20"
-                                          
-                                           required="required" [ngClass]="{ 'is-invalid': f.Password.touched && f.Password.errors }">
+                                        <input type="password" class=" fix-boder" formControlName="Password"
+                                            maxlength="20" required="required"
+                                            [ngClass]="{ 'is-invalid': f.Password.touched && f.Password.errors }">
                                         <div *ngIf=" isSubmitted &&f.Password.errors" class="text-danger">
-                                            <div *ngIf="f.Password.errors.required">{{'Register.message-require'|translate}}</div>
-                                            <div *ngIf="f.Password.errors.minlength||f.Password.errors.maxlength">{{'Register.message-format-4'|translate}}</div>
+                                            <div *ngIf="f.Password.errors.required">
+                                                {{'Register.message-require'|translate}}</div>
+                                            <div *ngIf="f.Password.errors.minlength||f.Password.errors.maxlength">
+                                                {{'Register.message-format-4'|translate}}</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 one-line">
-                                    <span class="title-input">{{'Register.re-password'|translate}}</span><span class="blue-text">*</span>
+                                    <span class="title-input">{{'Register.re-password'|translate}}</span><span
+                                        class="blue-text">*</span>
                                     <div class="form-input-2">
-                                        <input type="password" class=" fix-boder" 
-                                        
-                                        maxlength="20" formControlName="RetypePassword" required="required" [ngClass]="{ 'is-invalid': f.RetypePassword.touched &&f.RetypePassword.errors }">
-                                        <div *ngIf="isSubmitted &&(f.RetypePassword.errors?.mustMatch ||f.RetypePassword.errors?.required)" class="text-danger">
-                                            <div *ngIf="f.RetypePassword.errors.required">{{'Register.message-require'|translate}}</div>
-                                            <div *ngIf="f.RetypePassword.errors.mustMatch">{{'Register.message-format-5'|translate}}</div>
+                                        <input type="password" class=" fix-boder" maxlength="20"
+                                            formControlName="RetypePassword" required="required"
+                                            [ngClass]="{ 'is-invalid': f.RetypePassword.touched &&f.RetypePassword.errors }">
+                                        <div *ngIf="isSubmitted &&(f.RetypePassword.errors?.mustMatch ||f.RetypePassword.errors?.required)"
+                                            class="text-danger">
+                                            <div *ngIf="f.RetypePassword.errors.required">
+                                                {{'Register.message-require'|translate}}</div>
+                                            <div *ngIf="f.RetypePassword.errors.mustMatch">
+                                                {{'Register.message-format-5'|translate}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -181,13 +208,14 @@
                             <div class="row one-item poli_form">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
                                     <p [ngClass]="{ 'is-invalid': isSubmitted && f.IsComfirmed.value==false }">
-                                        <input class="ip_checkbox" type="checkbox" formControlName="IsComfirmed"> {{'Register.policy'|translate}}
+                                        <input class="ip_checkbox" type="checkbox" formControlName="IsComfirmed">
+                                        {{'Register.policy'|translate}}
                                         <a href="javascript:void(0)"> {{'Register.policy-2'|translate}}</a>
                                     </p>
                                     <div *ngIf="isSubmitted">
-                                        <span *ngIf="f.IsComfirmed.errors?.required">                                                   
-                                                    {{'Register.message-require'|translate}}
-                                            </span>
+                                        <span *ngIf="f.IsComfirmed.errors?.required">
+                                            {{'Register.message-require'|translate}}
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -198,7 +226,9 @@
                                     </div>
                                 </div>
                                 <div class="one-line have_acc1">
-                                    <p>{{'Register.have-account'|translate}} -<a href="javascript:void(0)" (click)="showLoginModal(content)"> {{'Shared.SigninBtnLabel'|translate}}</a></p>
+                                    <p>{{'Register.have-account'|translate}} -<a href="javascript:void(0)"
+                                            (click)="showLoginModal(content)"> {{'Shared.SigninBtnLabel'|translate}}</a>
+                                    </p>
                                 </div>
 
                             </div>
