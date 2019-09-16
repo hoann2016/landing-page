@@ -16,7 +16,7 @@ const httpOptions = {
 export class AppService {
   private rooturl: string = "";
   private userLoginPath = "api/v1/authenticate/login";
-  private userRegisterPath = "api/v1/users/register1";
+  private userRegisterPath = "api/v1/users/register";
   private newLetterPath = "api/v1/leads";
   private getPackagePath = "api/v1/merchants/package/active";
   private getBusinessPath = "api/v1/merchants/business";
