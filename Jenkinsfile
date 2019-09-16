@@ -4,6 +4,8 @@ pipeline {
         HOME="."
         REGISTRY = "ludiinohub/lob"
         REGISTRY_CREDENTIAL = "dockerhub"
+        DOCKER_NAME= "lb-landing-page"
+        DOCKER_TAG = "lb-landing-page-$DEV_ENVIRONMENT-$BUILD_NUMBER"
     }
     stages {
         // stage('Prepare') { 
@@ -29,7 +31,7 @@ pipeline {
                 script {
                     sh 'sed -i -e "s/ENV/$DEV_ENVIRONMENT/g" ./Dockerfile'
                     sh 'rm -f ./Dockerfile-e'
-                    dockerImage = docker.build REGISTRY + ":lb-landing-page-$DEV_ENVIRONMENT-$BUILD_NUMBER"
+                    dockerImage = docker.build REGISTRY + ":$DOCKER_TAG"
                 }
             }
 
@@ -44,12 +46,16 @@ pipeline {
                         dockerImage.push()
                     }
                 }
-                sh "docker rmi $REGISTRY:lb-landing-page-$DEV_ENVIRONMENT-$BUILD_NUMBER"
+                sh "docker rmi $REGISTRY:$DOCKER_TAG"
             }
         }
         stage('Deploy') {
             steps {
                 echo 'DEPLOY'
+                sshagent (credentials: ['ssh-lobdev']) {
+                    sh "ssh -o StrictHostKeyChecking=no $LOBDEV_USER@$LOBDEV_HOST '/usr/bin/deploy $DOCKER_HUB_ID $DOCKER_HUB_PASSWORD $DOCKER_NAME $DOCKER_TAG'"
+                }
+                echo 'DONE'
             }
         }
     }
