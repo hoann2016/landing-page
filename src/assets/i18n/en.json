@@ -96,14 +96,14 @@
       "DontWantToChangePassword": "Don't want to reset password? Back to "
     },
     "Footer": {
-      "Title": "Get in touch",
+      "Title": "Input email to receive more info about booking statistics & new product features",
       "Form": {
         "Name": "Your name",
         "Email": "Email Address",
         "Content": "Message",
         "Send": "Send",
         "maximumMessage": "Invalid Message, maximum 255 charactors",
-        "MessageSendSuccess":"Message send success !",
+        "MessageSendSuccess":"Message send successful !",
         "MessageSendFailed":"Message send failed !"
 
       },
@@ -172,7 +172,7 @@
     "Login_Register": "Login",
     "Send": "Send New Password",
     "CommunicationMessage": {
-      "1000": "Sussces",
+      "1000": "successful",
       "1001": "Data is exist",
       "1002":"Data not found",
       "1003": "Token is missing",

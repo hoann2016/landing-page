@@ -5,7 +5,7 @@
     "Header1": "Giải Pháp & Chi Phí",
     "Intro": {
       "Message": "Khách Hàng 4.0 tìm và đặt dịch vụ trực tuyến ngay khi cần bằng thiết bị thông minh",
-      "ButtonLabel": "DÙNG THỬ MIỄN PHÍ",
+      "ButtonLabel": "ĐĂNG KÝ NGAY MIỄN PHÍ",
       "BookingOutside": "Dịch vụ được đặt ngoài giờ làm việc",
       "BookingOnline": "Khách Hàng chỉ đặt dịch vụ qua kênh trực tuyến",
       "ReminderSystem": "Khách Hàng không đến với hệ thống nhắc hẹn thông minh"
@@ -13,9 +13,9 @@
 
     "About": {
       "HeaderMessage": "Bắt kịp xu hướng để thay đổi với Khách Hàng 4.0",
-      "HeaderDescription1": "Sử dụng ",
-      "HeaderDescription2": "Hệ thống Ludiino đặt & Quản lý lịch hẹn trực tuyến qua web và ứng dụng di động",
-      "HeaderDescription3": "để không bao giờ mất \"bookings\" và thêm Khách Hàng mới mỗi ngày",
+      "HeaderDescription1": "",
+      "HeaderDescription2": "Hệ Thống Đặt và Quản Lý Lịch Hẹn Trực Tuyến Ludiino",
+      "HeaderDescription3": " giúp doanh nghiệp tìm thêm khách hàng mới, tăng hiệu quả kinh doanh, không bao giờ mất \"bookings\"",
       
       
       "MessageHeader_1": "Hệ thống Đặt Hẹn Trực Tuyến hoạt động kinh doanh liên tục 24/7",
@@ -104,7 +104,7 @@
       "DontWantToChangePassword":"Không muốn đổi mật khẩu mới? đến trang"
     },
     "Footer": {
-      "Title": "Để lại thông tin",
+      "Title": "Điền Email để nhận các nghiên cứu mới nhất về Quản Lý Đặt Hẹn & Tính Năng Mới của Ludiino",
       "Form": {
         "Name": "Họ tên",
         "Email": "Email",
