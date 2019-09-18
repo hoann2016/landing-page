@@ -6,7 +6,7 @@ pipeline {
         REGISTRY_CREDENTIAL = "treescalehub"
         MAIN_VERSION = "v0.1."
         DOCKER_TAG = "$MAIN_VERSION$BUILD_NUMBER"
-        CONTAINER_NAME = 'lb-landing-page-dev'
+        CONTAINER_NAME = 'lb-landing-page'
     }
     stages {
         // stage('Prepare') { 
