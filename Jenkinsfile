@@ -62,6 +62,17 @@ pipeline {
             }
         }
     }
+    post {
+        success {
+            notifySuccess()
+        }
+        unstable {
+            notifyUnstable()
+        }
+        failure {
+            notifyFailed()
+        }
+    }
 }
 
 def notifyBuild(String buildStatus = 'STARTED', String colorCode = '#5492f7', String notify = '') {
