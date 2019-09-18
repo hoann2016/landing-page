@@ -2,10 +2,11 @@ pipeline {
     agent any
     environment {
         HOME="."
-        REGISTRY = "ludiinohub/lob"
-        REGISTRY_CREDENTIAL = "dockerhub"
-        DOCKER_NAME= "lb-landing-page"
-        DOCKER_TAG = "lb-landing-page-$DEV_ENVIRONMENT-$BUILD_NUMBER"
+        REGISTRY = "repo.treescale.com/ludiinohub/lb-landing-page-dev"
+        REGISTRY_CREDENTIAL = "treescalehub"
+        MAIN_VERSION = "v0.1."
+        DOCKER_TAG = "$MAIN_VERSION$BUILD_NUMBER"
+        CONTAINER_NAME = 'lb-landing-page-dev'
     }
     stages {
         // stage('Prepare') { 
@@ -42,8 +43,8 @@ pipeline {
             }
             steps {
                 script {
-                    docker.withRegistry( '', REGISTRY_CREDENTIAL ) {
-                        dockerImage.push()
+                    docker.withRegistry( "https://repo.treescale.com" , REGISTRY_CREDENTIAL ) {
+                        dockerImage.push('latest')
                     }
                 }
                 sh "docker rmi $REGISTRY:$DOCKER_TAG"
@@ -53,7 +54,9 @@ pipeline {
             steps {
                 echo 'DEPLOY'
                 sshagent (credentials: ['ssh-lobdev']) {
-                    sh "ssh -o StrictHostKeyChecking=no $LOBDEV_USER@$LOBDEV_HOST '/usr/bin/deploy $DOCKER_HUB_ID $DOCKER_HUB_PASSWORD $DOCKER_NAME $DOCKER_TAG'"
+                    withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: REGISTRY_CREDENTIAL, usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
+                        sh "ssh -o StrictHostKeyChecking=no $LOBDEV_USER@$LOBDEV_HOST '/usr/bin/deployv2 $USERNAME $PASSWORD $CONTAINER_NAME'"
+                    }
                 }
                 echo 'DONE'
             }
