@@ -1,4 +1,5 @@
 <section class="section_signin">
+    <p-loading [content-header]="contentLoading" [is-display]="showLoading" ></p-loading>   
   <div class="con_wrap_signin">
     <!-- modal forgot password -->
     <ng-template #forgot_password_content let-modal style="max-width:80%;">
@@ -71,7 +72,7 @@
                       <span *ngIf="f.Email.errors?.required">
                         {{'Register.message-require'|translate}}
                       </span>
-                      <span *ngIf="f.Email.errors?.email" class="text-danger">
+                      <span *ngIf="f.Email.errors?.pattern" class="text-danger">
                         {{'Register.message-format-3'|translate}}
                       </span>
                     </div>

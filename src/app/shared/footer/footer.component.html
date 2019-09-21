@@ -1,5 +1,6 @@
 <!-- Footer Section start -->
 <div class="copyright-section index-footer footer_lud">
+        <p-loading [content-header]="contentLoading" [is-display]="showLoading" ></p-loading>     
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
@@ -35,6 +36,7 @@
                                         <input type="email" name="email" class="form-control" autocomplete="off" id="exampleFormControlInput1" formControlName="Email" placeholder="{{'Home.Footer.Form.Email'|translate}}" required="required">
                                         <small *ngIf="isSubmitted && f.Email.errors?.required" class="form-text text-muted text-danger">{{'Register.message-require'|translate}}</small>
                                         <small *ngIf="isSubmitted && f.Email.errors?.email" class="form-text text-muted text-danger">{{'Register.message-format-3'|translate}}</small>
+                                        <small *ngIf="isSubmitted && f.Email.errors?.pattern" class="form-text text-muted text-danger">{{'Register.message-format-3'|translate}}</small>
                                     </div>
                                 </div>
                             </div>
@@ -42,6 +44,7 @@
                                 <textarea class="form-control" name="message" maxlength="255" id="exampleFormControlTextarea1" autocomplete="off" rows="4" formControlName="Content"  required="required"></textarea>
                                 <small *ngIf="isSubmitted && f.Content.errors?.required" class="form-text text-muted text-danger">{{'Register.message-require'|translate}}</small>
                                 <small *ngIf="isSubmitted && f.Content.errors?.maxlength" class="form-text text-muted text-danger"> {{'Home.Footer.Form.maximumMessage'|translate}}</small>
+                                <small *ngIf="isSubmitted && f.Content.errors?.minlegth" class="form-text text-muted text-danger"> {{'Home.Footer.Form.minimumMessage'|translate}}</small>
                             </div>
                             <div class="form-button">
                                 <button type="submit" class="btn btn-custom theme-color" (click)="onSubmit()">{{'Home.Footer.Form.Send'|translate}}</button>

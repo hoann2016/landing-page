@@ -1,6 +1,6 @@
 import {CommonModule} from '@angular/common';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {NgModule} from '@angular/core';
+import {NgModule, ErrorHandler} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -16,20 +16,25 @@ import {LandingPageService} from './services/landing-page.service';
 // Services
 import {WINDOW_PROVIDERS} from './services/windows.service';
 import {SignInComponent} from './sign-in/sign-in.component';
+import {GlobalErrorHandlerService } from './error-handler/global-error-handler.service';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   exports: [
-    CommonModule, HeaderComponent, FooterComponent, SignInComponent,TranslateModule,
-
+    CommonModule, HeaderComponent, FooterComponent, SignInComponent,TranslateModule,LoadingComponent
   ],
   imports: [
     CommonModule, RouterModule, NgxPageScrollModule, NgbModule, FormsModule,
     ReactiveFormsModule, HttpClientModule, TranslateModule
 
   ],
-  declarations: [HeaderComponent, FooterComponent, SignInComponent ],
-  providers: [
-    WINDOW_PROVIDERS, LandingFixService , LandingPageService
+  declarations: [HeaderComponent, FooterComponent, SignInComponent, LoadingComponent ],
+  providers: [ 
+    WINDOW_PROVIDERS, LandingFixService , LandingPageService,
+    GlobalErrorHandlerService,
+    // { provide: ErrorHandler, useClass: GlobalErrorHandlerService }, 
+   
+  
   ]
 })
 export class SharedModule {

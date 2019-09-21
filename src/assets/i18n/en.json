@@ -87,6 +87,7 @@
       }
     },
     "SignIn": {
+      "SendingStatus":"Signin...",
       "KeepLogedIn": "Keep me loged in",
       "IfDontHaveAcc": "If you don't have an Account",
       "RegisterNow": "Register now",
@@ -103,9 +104,10 @@
         "Content": "Message",
         "Send": "Send",
         "maximumMessage": "Invalid Message, maximum 255 charactors",
-        "MessageSendSuccess":"Message send successful !",
-        "MessageSendFailed":"Message send failed !"
-
+        "minimumMessage":"Invalid Message, minimum 3 charactors",
+        "MessageSendSuccess": "Message send successful !",
+        "MessageSendFailed": "Message send failed !",
+        "SendingStatus": "Sendding..."
       },
       "Contact": {
         "Header": "Contact",
@@ -141,40 +143,75 @@
     "message-format-6": "Invalid shop name",
     "message-tips": "Your website domain will be",
     "message-tips2": "You can change it later.",
+    "name-lenght":"Your name must be between 3 and 100 characters",
+    "name-shop-length":"Your shop name must be between 3 and 100 characters",
+    "pasword-length": "Your pasword  must be between 5 and 20 characters",
     "shop-type0": "Select",
     "shop-type1": "Salon",
     "shop-type2": "Spa / Massage",
-    "shop-type3": "Medical Clinic"
+    "shop-type3": "Medical Clinic",
+    "SendingStatus":"Sending request, please wait .."
   },
   "Payment": {
-    "Header":"Your package",
-    "Sub":"Please check information bellow",
-    "SelectedPackage":"Package selected",
-    "TimeRegistered":"Time register",
-    "Months":"months",
-    "Account":"Account",
-    "Contact":"Contact",
-    "StartDate":"Start Date",
-    "EndDate":"End Date",
-    "Payment":"Payment",
-    "PaymentMethod":"Payment methods",
-    "PaymentDirect":"Direct",
-    "PaymentTransfer":"Transfer",
-    "PaymentOnline":"Online",
-    "PaymentAtm":"Atm",
-    "TempCount":"Temprature calulate",
-    "TotalCount":"Total",
-    "CompletePayment":"Complete Payment"
+    "Header": "Your package",
+    "Sub": "Please check information bellow",
+    "SelectedPackage": "Package selected",
+    "TimeRegistered": "Time register",
+    "Months": "months",
+    "Account": "Account",
+    "Contact": "Contact",
+    "StartDate": "Start Date",
+    "EndDate": "End Date",
+    "Payment": "Payment",
+    "PaymentMethod": "Payment methods",
+    "PaymentDirect": "Direct",
+    "PaymentTransfer": "Transfer",
+    "PaymentOnline": "Online",
+    "PaymentAtm": "Atm",
+    "TempCount": "Temprature calulate",
+    "TotalCount": "Total",
+    "CompletePayment": "Complete Payment"
   },
   "Shared": {
     "RegisterBtnLabel": "Register",
     "SigninBtnLabel": "Login",
     "Login_Register": "Login",
     "Send": "Send New Password",
+    "FormCommon": {
+      "required": "required",
+      "minlength": "min length",
+      "maxlength": "max length",
+      "pattern": "is not valid",
+      "email": "is not valid",
+      "undefined": "Error undefined"
+    },
+    "AppError": {
+      "0": "Unknow error",
+      "1": "Form is not valid",
+      "2": "Error detail",
+      "400": "Invalid Request",
+      "401": "Unauthorized Request",
+      "402": "Invalid Request",
+      "403": "Forbidden Request",
+      "404": "Resource not found",
+      "405": "Method not allowed",
+      "406": "Not Acceptable Request",
+      "407": "Firewall, Proxy Authentication Required",
+      "408": "Request Timeout",
+      "409": "Conflict",
+      "500": "Internal Server Error",
+      "501": "Not Implemented",
+      "502": "Bad Gateway",
+      "503": "Service Unavailable",
+      "504": "Gateway Timeout",
+      "505": "HTTP Version Not Supported"
+    },
     "CommunicationMessage": {
+      "465": "Email is not valid",
+      "467": "Content is not valid",
       "1000": "successful",
       "1001": "Data is exist",
-      "1002":"Data not found",
+      "1002": "Data not found",
       "1003": "Token is missing",
       "1004": "Invalid token",
       "1005": "Token expired",
@@ -196,6 +233,28 @@
       "1021": "Field is invalid length",
       "1022": "Field is invalid",
       "1023": "Field is not match"
+    },
+    "FieldNameBaseCompnent": {
+      "Footer": {
+        "CustomerName": "Customer Name",
+        "Email": "Email",
+        "Content": "Content"
+      },
+      "SignIn": {
+        "Email": "Email",
+        "Password": "Password"
+      },
+      "SignUp":{
+        "CustomerName":"Customer Name",
+        "PackageSelectedName":"Package Selected Name",
+        "ShopName":"Shop Name",
+        "ServiceName":"Service Name",
+        "Phone":"Phone",
+        "Email":"Email",
+        "Password":"Password",
+        "RetypePassword":"Retype Password",
+        "IsComfirmed":"Comfirmed"
+      }
     }
   }
 }

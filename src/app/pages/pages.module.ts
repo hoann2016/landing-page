@@ -23,6 +23,8 @@ import {ThankYouComponent} from './thank-you/thank-you.component';
 import { MyMissingTranslationHandler } from '../shared/services/translation-handler/translation-handler';
 import { NotTranslatedService } from '../shared/services/translation-handler/not-translated-service';
 import { PaymentComponent } from './payment/payment.component';
+import { LoadingComponent } from '../shared/loading/loading.component';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -31,7 +33,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   imports: [
     CommonModule, PagesRoutingModule, SharedModule, FormsModule,
-    ReactiveFormsModule, HttpClientModule, NgbModule, TranslateModule.forRoot({
+    ReactiveFormsModule, HttpClientModule, NgbModule, 
+    TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
@@ -49,6 +52,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReviewComponent, ErrorPageComponent, FaqComponent, DownloadComponent,
     ComingsoonComponent, EmailTemplateComponent, PaymentComponent
   ],
+  entryComponents:[LoadingComponent],
   providers: [TranslateService, LandingPageService]
 })
 export class PagesModule {

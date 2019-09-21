@@ -95,6 +95,7 @@
       }
     },
     "SignIn": {
+      "SendingStatus":"Đăng nhập..",
       "KeepLogedIn": "Giữ tôi luôn đăng nhập",
       "IfDontHaveAcc": "Nếu bạn chưa có tài khoản",
       "RegisterNow": "Đăng Ký Ngay",      
@@ -110,9 +111,11 @@
         "Email": "Email",
         "Content": "Nội dung",
         "Send": "Gửi",
-        "maximumMessage": "Thông không hợp lệ, tối đa 255 ký tự",
+        "maximumMessage": "Thông tin không hợp lệ, tối đa 255 ký tự",
+        "minimumMessage":"Thông tin không hợp lệ, tối thiểu 3 ký tự",
         "MessageSendSuccess":"Message gửi thành công !",
-        "MessageSendFailed":"Message thất bại !"
+        "MessageSendFailed":"Message thất bại !",
+        "SendingStatus":"Đang gửi"
       },
       "Contact": {
         "Header": "Liên hệ",
@@ -148,10 +151,19 @@
     "message-format-6": "Thông tin tên shop không hợp lệ",
     "message-tips": "Tên Website Của Bạn Sẽ Là",
     "message-tips2": "Bạn Có Thể Thay Đổi Trong Cài Đặt Sau Này",
+
+
+    "name-lenght":"Tên của bạn phải tử 3-100 ký tự",
+    "name-shop-length":"Thông tin tên shop phải từ 3 đến 5 ký tự",
+    "pasword-length": "Thông tin mật khẩu phải từ 5 đến 20 ký tự",
+
+
+
     "shop-type0": "Vui lòng chọn",
     "shop-type1": "Salon Tóc",
     "shop-type2": "Spa / Massage",
-    "shop-type3": "Phòng khám"
+    "shop-type3": "Phòng khám",
+    "SendingStatus":"Đang gửi yêu cầu đăng ký, vui lòng đợi"
   },"Payment": {
     "Header":"Gói dịch vụ đăng ký",
     "Sub":"Bạn đang tiến hành gói đăng ký dịch vụ, vui lòng kiểm tra thông tin bên dưới",
@@ -177,7 +189,38 @@
     "SigninBtnLabel": "Đăng nhập",
     "Send": "Gửi Mật Khẩu Mới",
     "Login_Register": "Đăng nhập",
+    "FormCommon":{
+      "required":"bắt buộc",
+      "minlength":"quá ngắn",
+      "maxlength":"quá dài",
+      "pattern":"không hợp lệ",
+      "email":"không hợp lệ",
+      "undefined":"Lỗi không xác định"
+    },
+    "AppError":{
+      "0":"Lỗi không xác định",
+      "1":"Form chưa đúng yêu cầu",
+      "2":"Có lỗi xảy ra",
+      "400":"Request không có hiệu lực",
+      "401":"Request không được phép",
+      "402":"Request không có hiệu lực",
+      "403":"Request bị cấm truy cập",
+      "404":"Url không tìm thấy",
+      "405":"Phương thức không được phép",
+      "406":"Request không thể được dùng",
+      "407":"Firewall hoặc Proxy yêu cầu đăng nhập",
+      "408":"Request hết thời gian chờ",
+      "409":"Xung đột", 
+      "500":"Lỗi server",
+      "501":"Chức năng chưa được xây dựng",
+      "502":"Bad Gateway",
+      "503":"Dịch vụ không tồn tại",
+      "504":"Gateway Timeout",
+      "505":"Version HTTP không support"
+    },
     "CommunicationMessage":{
+      "465":"Email không hợp lệ",
+      "467":"Nội dung không hợp lệ", 
       "1000":"Thành công",
       "1001":"Dữ liệu đã tồn tại",
       "1002":"Không tìm thấy dữ liệu",
@@ -202,6 +245,28 @@
       "1021":"Độ dài của trường không hợp lệ",
       "1022":"Trường không hợp lệ",
       "1023":"Trường không giống nhau"
+    },
+    "FieldNameBaseCompnent": {
+      "Footer": {
+        "CustomerName": "Tên",
+        "Email": "Email",
+        "Content": "Nội dung"
+      },
+      "SignIn": {
+        "Email": "Email",
+        "Password": "Mật khẩu"
+      },
+      "SignUp":{
+        "CustomerName":"Tên khách hàng",
+        "PackageSelectedName":"Gói dịch vụ",
+        "ShopName":"Tên shop/store",
+        "ServiceName":"Tên dịch vụ",
+        "Phone":"Số điện thoại",
+        "Email":"Email",
+        "Password":"Mật khẩu",
+        "RetypePassword":"Mật khẩu nhập lại",
+        "IsComfirmed":"Xác nhận"
+      }
     }
   }
 }

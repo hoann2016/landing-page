@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { Http, HttpModule } from '@angular/http';
@@ -15,6 +15,8 @@ import { MyMissingTranslationHandler } from './shared/services/translation-handl
 import { NotTranslatedService } from './shared/services/translation-handler/not-translated-service';
 import { ToastrModule } from 'ngx-toastr';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GlobalErrorHandlerService } from './shared/error-handler/global-error-handler.service';
+import { HandlingFormValidatorService } from './shared/services/handling-form-validator.service';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -43,14 +45,17 @@ export function HttpLoaderFactory(http: HttpClient) {
         }
     }),
     ToastrModule.forRoot({
-      timeOut: 1000,
+      timeOut: 3000,
       positionClass: 'toast-top-right',
       preventDuplicates: true,
       enableHtml:true
     }),
     NgbModule
   ],
-  providers: [AppService],
+  providers: [AppService, GlobalErrorHandlerService,
+    HandlingFormValidatorService,
+    { provide: ErrorHandler, useClass: GlobalErrorHandlerService }, 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

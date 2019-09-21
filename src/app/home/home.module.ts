@@ -27,6 +27,7 @@ import {TestimonialComponent} from './testimonial/testimonial.component';
 import {HomeTwoComponent} from './versions/home-two/home-two.component';
 import { MyMissingTranslationHandler } from '../shared/services/translation-handler/translation-handler';
 import { NotTranslatedService } from '../shared/services/translation-handler/not-translated-service';
+import { LoadingComponent } from '../shared/loading/loading.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -55,6 +56,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     NewsletterComponent
 
   ],
+  entryComponents:[LoadingComponent],
   providers: [TranslateService, LandingPageService, NgbActiveModal,]
 })
 export class HomeModule {

@@ -4,6 +4,9 @@ import { TranslateService } from '@ngx-translate/core';
 import { LandingPageService } from '../services/landing-page.service';
 import { AppService } from 'src/app/app.service';
 import { ToastrService } from 'ngx-toastr';
+import { GlobalErrorHandlerService } from '../error-handler/global-error-handler.service';
+import { throwError, of } from 'rxjs';
+import { HandlingFormValidatorService } from '../services/handling-form-validator.service';
 
 @Component({
   selector: 'app-footer',
@@ -11,16 +14,18 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
- 
   guessMessageForm :FormGroup;
   isSubmitted:boolean=false;
   today: number = Date.now();
+  contentLoading:string="";
+  showLoading:boolean=false;
   constructor(public fb: FormBuilder,
     private translate: TranslateService,
     private appService:AppService,
     private toastr: ToastrService,
-    private landingPageService: LandingPageService){
-
+    private landingPageService: LandingPageService,
+    private handlingFormValidatorService:HandlingFormValidatorService
+    ){
   }
   get f() {
     return this.guessMessageForm.controls;
@@ -28,7 +33,6 @@ export class FooterComponent implements OnInit {
   public buildForm() {
   }
   ngOnInit(): void {
-
     this.guessMessageForm=this.fb.group(
       {
         CustomerName:["",
@@ -38,41 +42,47 @@ export class FooterComponent implements OnInit {
           Validators.maxLength(100),
         ]
       ],
-      Email: ["", [Validators.required, Validators.email]],      
-      Content:["",[Validators.required,Validators.maxLength(255)]]
-
+      Email: ["", [Validators.required, Validators.pattern(/^[a-z0-9]+(?:\.[a-z0-9]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i)]],      
+      Content:["",[Validators.required,Validators.minLength(3),Validators.required,Validators.maxLength(255)]]
       }
     );
     this.landingPageService.getLangSelected().subscribe(lang=>
       {        
         this.translate.use(lang);
       })
-      
-        
-   
   }
   onSubmit(){
     this.isSubmitted=true;
     if(this.guessMessageForm.valid)
     {
+      this.showLoading=true;
+      this.contentLoading=this.translate.instant('Home.Footer.Form.SendingStatus')
       this.appService.sendNewLetter({email:this.guessMessageForm.controls.Email.value,content:this.guessMessageForm.controls.Content.value,name:this.guessMessageForm.controls.CustomerName.value}).
       subscribe(response=>{
-        console.log(response);
+        
+
+        setTimeout(()=>{
+          this.showLoading=false;
+        },1000);
+        
         this.guessMessageForm.reset();
         this.toastr.success(this.translate.instant('Home.Footer.Form.MessageSendSuccess'));        
       },
-      error=>{
-        if(error.message&&error.message.length>0)
-        {
-           this.toastr.error(this.appService.renderError(error.error.message,this.translate));
-        }
-       
+      (error:Error)=>{
+        
+        setTimeout(() => {
+          this.showLoading=false;
+        }, 2000);
+     
+        throw error;    
+           
       })
     }else{
+       setTimeout(() => {
+        this.showLoading=false;
+      }, 2000);
       
-      this.toastr.error(this.translate.instant('Home.Footer.Form.MessageSendFailed'));
+     this.handlingFormValidatorService.showErrorForm(this.guessMessageForm,'Footer');
     }
-    console.log(this.guessMessageForm.value);
   }
-
 }

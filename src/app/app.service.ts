@@ -6,10 +6,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UserRegister } from './shared/models/user-models/user-register.model';
 import { NewLetter } from './shared/models/new-letter.model';
 import { TranslateService } from '@ngx-translate/core';
-import { tap } from 'rxjs/operators';
+import { tap, catchError, map } from 'rxjs/operators';
 const httpOptions = {
   headers: new HttpHeaders({ "Content-Type": "application/json" })
 };
+const reqHeader = new HttpHeaders({ 'Content-Type': 'application/json','No-Auth':'True' });
 @Injectable({
   providedIn: 'root'
 })
@@ -24,10 +25,11 @@ export class AppService {
     return environment.merchantpath;
   }
   constructor(private http: HttpClient) {
-    this.rooturl = environment.rootproto + environment.rootip + (environment.port ? `${environment.port}:`: "" ) + environment.rootpath;
+    this.rooturl = environment.rootproto + environment.rootip + (environment.port ? `${environment.port}`: "" ) + environment.rootpath;
   }
   logIn(userLogin: UserLogin): Observable<any | string> {
-    return this.http.post(this.rooturl + this.userLoginPath, userLogin, httpOptions)
+    return this.http.post(this.rooturl + this.userLoginPath, userLogin).pipe(map(res=>res),catchError(error=>{throw error}
+    ))
   }
   register(userRegister: UserRegister): Observable<any> {
     return this.http.post(this.rooturl + this.userRegisterPath, userRegister, httpOptions).pipe(tap(x=>{
@@ -45,27 +47,24 @@ export class AppService {
     //return this.http.get(this.rooturl + this.getBusinessPath);
     return this.http.get("./assets/fake-response/all-industries.json");
   }
-  renderError(Err,translate:TranslateService): string {
-    var strError: string = '<ul class=\"err-list\">';
-    if(Err.message!=null &&Err.message!=undefined)
-    {
-      if(typeof Err.message=='string')
-      {
-        strError += '<li>' + Err.message+'<li>';
-     
-      }else{
-        console.log("type of Err.message", typeof Err.message);
-        if (Err.message.length > 0) {
-          for (let errItem of Err.message) {
-            strError += '<li>' + translate.instant('Shared.CommunicationMessage.' + errItem.code) + ((errItem.field != null && errItem.field != undefined) ? (': ' + errItem.field) : '') + '<li>';
-          }
-          
-        }
-      }
-
-    }
-    strError += '</ul>'
-    
-    return strError;
-  }
+  // renderError(Err,translate:TranslateService): string {
+  //   console.log("error in service ",Err);
+  //   var strError: string = '<ul class=\"err-list\">';
+  //   if(Err.message!=null &&Err.message!=undefined)
+  //   {
+  //     if(typeof Err.message=='string')
+  //     {
+  //       strError += '<li>' + Err.message+'<li>';
+  //     }else{
+  //       console.log("type of Err.message", typeof Err.message);
+  //       if (Err.message.length > 0) {
+  //         for (let errItem of Err.message) {
+  //           strError += '<li>' + translate.instant('Shared.CommunicationMessage.' + errItem.code) + ((errItem.field != null && errItem.field != undefined) ? (': ' + errItem.field) : '') + '<li>';
+  //         }
+  //       }
+  //     }
+  //   }
+  //   strError += '</ul>'
+  //   return strError;
+  // }
 }

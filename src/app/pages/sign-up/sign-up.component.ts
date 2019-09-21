@@ -3,15 +3,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
 import { LandingPageService } from 'src/app/shared/services/landing-page.service';
-
 import { MustMatch } from './must-match.validator';
 import { AppService } from 'src/app/app.service';
 import { UserRegister } from 'src/app/shared/models/user-models/user-register.model';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
-
-
-
+import { HandlingFormValidatorService } from 'src/app/shared/services/handling-form-validator.service';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -19,7 +16,6 @@ import { Router } from '@angular/router';
 })
 export class SignUpComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
-
   }
   shopDomain: string;
   isSubmitted: boolean = false;
@@ -36,8 +32,6 @@ export class SignUpComponent implements OnInit, AfterViewInit {
   signUpForm: FormGroup;
   // variable
   selectedPackage: string;
-
-
   get f() {
     return this.signUpForm.controls;
   }
@@ -48,11 +42,13 @@ export class SignUpComponent implements OnInit, AfterViewInit {
     private landingPageService: LandingPageService,
     private appService: AppService,
     private toastr: ToastrService,
-    private router: Router
+    private router: Router,
+    private handlingFormValidatorService: HandlingFormValidatorService
   ) { }
   public allPackage;
   public allBusinessType;
-
+  contentLoading: string;
+  showLoading: boolean = false;
   public buildForm() {
     this.signUpForm = this.fb.group(
       {
@@ -76,8 +72,8 @@ export class SignUpComponent implements OnInit, AfterViewInit {
           ]
         ],
         ServiceName: ['', Validators.required],
-        Phone: ['', [Validators.required, Validators.pattern(/((09|03|07|08|05)+([0-9]{8})\b)/i)]],
-        Email: ['', [Validators.required, Validators.email]],
+        Phone: ['', [Validators.required, Validators.pattern(/(([+(84)]{3})+(9|3|7|8|5)+([0-9]{8})\b|(09|03|07|08|05)+([0-9]{8})\b)/i)]],
+        Email: ['', [Validators.required, Validators.pattern(/^[a-z0-9]+(?:\.[a-z0-9]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i)]],
         Password: [
           '',
           [
@@ -97,15 +93,11 @@ export class SignUpComponent implements OnInit, AfterViewInit {
       { validator: MustMatch('Password', 'RetypePassword') });
     this.signUpForm.controls.ShopName.valueChanges.subscribe((val: string) => {
       this.shopDomain = this.convertViToEn(val.toLowerCase().replace(/ /g, ''));
-
       this.shopDomain = this.shopDomain + '.ludiino.com';
       this.shopDomain = this.shopDomain.toLowerCase();
     });
   }
   ngOnInit() {
-var x="hoann";
-console.log(typeof x);
-    console.log();
     this.buildForm();
     this.appService.getAllPackage().subscribe(pk => {
       if (pk.success == true) {
@@ -132,7 +124,6 @@ console.log(typeof x);
           console.log("All Error: ", strError);
         }
       });
-
     this.landingPageService.getLangSelected().subscribe(lang => {
       this.translate.use(lang);
     });
@@ -156,6 +147,7 @@ console.log(typeof x);
   }
   onSubmit() {
     this.isSubmitted = true;
+    
     if (this.signUpForm.valid) {
       var formImport: UserRegister = {
         package_id: +this.signUpForm.controls.PackageSelectedName.value,
@@ -168,11 +160,15 @@ console.log(typeof x);
         email: this.signUpForm.controls.Email.value,
         phone: this.signUpForm.controls.Phone.value,
         status: 'disabled'
-      }
-
+      };
+      this.showLoading = true;
+      this.contentLoading = this.translate.instant('Register.SendingStatus')
       this.appService.register(formImport).subscribe(
         response => {
-          console.log("response ", response);
+          setTimeout(() => {
+            this.showLoading = false;
+          }, 3000);
+       
           if (response.success == true) {
             if (this.signUpForm.controls.PackageSelectedName.value == '1') {
               this.toastr.success("Redirect to dashboard ...")
@@ -188,22 +184,16 @@ console.log(typeof x);
           }
         },
         err => {
-
-          var strError: string = '<ul class=\"err-list\">';
-          if (err.error&&err.error.success == false && err.error.message.length > 0) {
-            this.toastr.error(this.appService.renderError(err.error.message, this.translate), 'Error', {
-              enableHtml: true, easeTime: 1000
-            });
-            console.log("All Error: ", strError);
-          }
+          setTimeout(() => {
+            this.showLoading = false;
+          }, 1000);
+          throw err;
         }
       );
-
     } else {
-      return;
+      this.handlingFormValidatorService.showErrorForm(this.signUpForm, 'SignUp');
     }
   }
-
   convertViToEn(str: string): string {
     str = str.replace(
       /à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, 'a');
@@ -228,7 +218,6 @@ console.log(typeof x);
       /\u0300|\u0301|\u0303|\u0309|\u0323/g,
       '');  // huyền, sắc, hỏi, ngã, nặng
     str = str.replace(/\u02C6|\u0306|\u031B/g, '');  // mũ â (ê), mũ ă, mũ ơ (ư)
-
     return str;
   }
 }

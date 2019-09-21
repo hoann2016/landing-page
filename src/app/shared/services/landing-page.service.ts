@@ -25,15 +25,15 @@ export class LandingPageService {
 
   selectPackage(packagename: string) {
     if (packagename) {
-      localStorage.setItem('packageSelected', packagename);
+      sessionStorage.setItem('packageSelected', packagename);
       this.packageSelected.next(packagename)
     } else {
       this.packageSelected.next('')
     }
   }
   getSelectedPackage(): Observable<string> {
-    if (localStorage.getItem('packageSelected')) {
-      this.packageSelected.next(localStorage.getItem('packageSelected'));
+    if (sessionStorage.getItem('packageSelected')) {
+      this.packageSelected.next(sessionStorage.getItem('packageSelected'));
     } else {
       this.packageSelected.next('');
     }

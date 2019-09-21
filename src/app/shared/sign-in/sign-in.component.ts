@@ -9,6 +9,9 @@ import { AppService } from "src/app/app.service";
 import { tap, catchError } from "rxjs/operators";
 import { UserLogedInModel } from "../models/user-models/user-logedin.model";
 import * as jwt_decode from "jwt-decode";
+import { ToastrService } from 'ngx-toastr';
+import { HandlingFormValidatorService } from '../services/handling-form-validator.service';
+import { setTimeout } from 'timers';
 @Component({
   selector: "app-sign-in",
   templateUrl: "./sign-in.component.html",
@@ -24,6 +27,8 @@ export class SignInComponent implements OnInit {
   validFormRecovery = new BehaviorSubject(false);
   IsHidden = false;
   errorMessage: string;
+  contentLoading:string;
+  showLoading:boolean=false;
   @Output('closeChildModal') closeEvt = new EventEmitter<string>();
   get f() {
     return this.signInForm.controls;
@@ -38,7 +43,9 @@ export class SignInComponent implements OnInit {
     private landingPageService: LandingPageService,
     private router: Router,
     private appService: AppService,
-    public activeModal: NgbActiveModal
+    public activeModal: NgbActiveModal,
+    private toastr: ToastrService,
+    private handlingFormValidatorService: HandlingFormValidatorService
   ) {
     this.show = false;
   }
@@ -50,7 +57,11 @@ export class SignInComponent implements OnInit {
       Email: ["", [Validators.required, Validators.email]]
     });
     this.signInForm = this.fb.group({
-      Email: ["", [Validators.required, Validators.email]],
+      Email: ["", [
+        Validators.required,
+        Validators.pattern(/^[a-z0-9]+(?:\.[a-z0-9]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i)
+      ]
+      ],
       Password: [
         "",
         [
@@ -76,12 +87,10 @@ export class SignInComponent implements OnInit {
     this.modalService
       .open(content, { ariaLabelledBy: "modal-basic-title" })
       .result.then(
-        result => {         
+        result => {
           if (!this.sendPasswordForm.valid) {
-           
             return;
           } else {
-
           }
         },
         reason => {
@@ -92,39 +101,43 @@ export class SignInComponent implements OnInit {
   }
   onSubmit() {
     this.isSubmitted = true;
-    this.errorMessage = "";   
+    this.errorMessage = "";
     if (this.signInForm.valid) {
-      this.appService.logIn({ email: this.signInForm.controls.Email.value, password: this.signInForm.controls.Password.value }).subscribe((res: any) => {
+      this.showLoading=true;
+      this.contentLoading=this.translate.instant('Home.SignIn.SendingStatus')
+      this.appService.logIn({ email: this.signInForm.controls.Email.value, password: this.signInForm.controls.Password.value }).subscribe(
+        (res: any) => {
+
+          setTimeout(()=>{
+            this.showLoading=false;
+          },1000);
+
+          console.log("in success ", res);
           if (res.success) {
             console.log("res.data.token", jwt_decode(res.data.token));
             var userLogedIn: UserLogedInModel = jwt_decode(res.data.token) as UserLogedInModel;
             sessionStorage.setItem('landingPageToken', res.data.token)
             console.log("stating redirect....");
-            window.location.href= this.appService.merchangePath;
-          } else {          
-            if(res.message.length>0){
-              this.errorMessage =   this.appService.renderError(res.message,this.translate);
-            }
+            window.location.href = this.appService.merchangePath;
           }
-      },
+        },
         error => {
-          console.log(error);
-          this.errorMessage =   this.translate.instant('Shared.CommunicationMessage.'+ error.error.message);
-          if(error.error.message.length>0){
-            this.errorMessage =   this.appService.renderError(error.error.message,this.translate);
-          }
+          setTimeout(()=>{
+            this.showLoading=false;
+          },1000);
+          throw error;
         }
       );
     } else {
-      //do nothing
+      this.handlingFormValidatorService.showErrorForm(this.signInForm, 'SignIn');
     }
   }
   RedirectToRegister() {
     this.modalService.dismissAll();
     this.router.navigate(['/pages/sign-up']);
   }
-  showBackLogin(){
-    this.closeEvt.emit("from chield")    
+  showBackLogin() {
+    this.closeEvt.emit("from chield")
     this.modalService.dismissAll();
     this.IsHidden = false;
   }
