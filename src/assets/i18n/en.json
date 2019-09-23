@@ -104,7 +104,7 @@
         "Content": "Message",
         "Send": "Send",
         "maximumMessage": "Invalid Message, maximum 255 charactors",
-        "minimumMessage":"Invalid Message, minimum 3 charactors",
+        "minimumMessage":"Invalid Message, minimum 10 charactors",
         "MessageSendSuccess": "Message send successful !",
         "MessageSendFailed": "Message send failed !",
         "SendingStatus": "Sendding..."
@@ -183,7 +183,8 @@
       "maxlength": "max length",
       "pattern": "is not valid",
       "email": "is not valid",
-      "undefined": "Error undefined"
+      "undefined": "Error undefined",
+      "mustMatch":"Re-type password does not match"
     },
     "AppError": {
       "0": "Unknow error",

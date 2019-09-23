@@ -11,7 +11,7 @@ import { UserLogedInModel } from "../models/user-models/user-logedin.model";
 import * as jwt_decode from "jwt-decode";
 import { ToastrService } from 'ngx-toastr';
 import { HandlingFormValidatorService } from '../services/handling-form-validator.service';
-import { setTimeout } from 'timers';
+
 @Component({
   selector: "app-sign-in",
   templateUrl: "./sign-in.component.html",

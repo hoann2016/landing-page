@@ -1,5 +1,5 @@
 <section class="section_signup">
-        <p-loading [content-header]="contentLoading" [is-display]="showLoading" ></p-loading>  
+    <p-loading [content-header]="contentLoading" [is-display]="showLoading"></p-loading>
     <div class="container_full_width">
         <div class="wrap">
             <ng-template #content let-modal>
@@ -54,12 +54,12 @@
                                             <span *ngIf="f.CustomerName.errors?.required" class="text-danger">
                                                 {{'Register.message-require'|translate}}
                                             </span>
-                                            <span *ngIf="f.CustomerName.errors?.minlength||f.CustomerName.errors?.maxlengh" class="text-danger">
-                                                    {{'Register.name-lenght'|translate}}
-                                            </span>
                                             <span
-                                                *ngIf="f.CustomerName.errors?.pattern"
+                                                *ngIf="f.CustomerName.errors?.minlength||f.CustomerName.errors?.maxlengh"
                                                 class="text-danger">
+                                                {{'Register.name-lenght'|translate}}
+                                            </span>
+                                            <span *ngIf="f.CustomerName.errors?.pattern" class="text-danger">
                                                 {{'Register.message-format'|translate}}
                                             </span>
                                         </div>
@@ -187,7 +187,8 @@
                                             <div *ngIf="f.Password.errors.required">
                                                 {{'Register.message-require'|translate}}</div>
                                             <div *ngIf="f.Password.errors.minlength||f.Password.errors.maxlength">
-                                                {{'Register.pasword-length'|translate}}</div>
+                                                {{'Register.pasword-length'|translate}}
+                                            </div>                                           
                                         </div>
                                     </div>
                                 </div>
@@ -198,12 +199,13 @@
                                         <input type="password" class=" fix-boder" maxlength="20"
                                             formControlName="RetypePassword" required="required"
                                             [ngClass]="{ 'is-invalid': f.RetypePassword.touched &&f.RetypePassword.errors }">
-                                        <div *ngIf="isSubmitted &&(f.RetypePassword.errors?.mustMatch ||f.RetypePassword.errors?.required)"
-                                            class="text-danger">
+                                        <div *ngIf="isSubmitted && f.RetypePassword.errors" class="text-danger">
                                             <div *ngIf="f.RetypePassword.errors.required">
                                                 {{'Register.message-require'|translate}}</div>
                                             <div *ngIf="f.RetypePassword.errors.mustMatch">
-                                                {{'Register.message-format-5'|translate}}</div>
+                                                {{'Shared.FormCommon.mustMatch'|translate}}</div>
+                                            <div *ngIf="f.RetypePassword.errors.minlength||f.RetypePassword.errors.maxlength">
+                                                {{'Register.pasword-length'|translate}}</div>
                                         </div>
                                     </div>
                                 </div>

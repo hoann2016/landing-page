@@ -7,7 +7,6 @@ import { ToastrService } from 'ngx-toastr';
 import { GlobalErrorHandlerService } from '../error-handler/global-error-handler.service';
 import { throwError, of } from 'rxjs';
 import { HandlingFormValidatorService } from '../services/handling-form-validator.service';
-
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -39,11 +38,11 @@ export class FooterComponent implements OnInit {
         [
           Validators.required,         
           Validators.minLength(3),
-          Validators.maxLength(100),
+          Validators.maxLength(100),         
         ]
       ],
       Email: ["", [Validators.required, Validators.pattern(/^[a-z0-9]+(?:\.[a-z0-9]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i)]],      
-      Content:["",[Validators.required,Validators.minLength(3),Validators.required,Validators.maxLength(255)]]
+      Content:["",[Validators.required,Validators.minLength(10),Validators.required,Validators.maxLength(255)]]
       }
     );
     this.landingPageService.getLangSelected().subscribe(lang=>
@@ -59,29 +58,23 @@ export class FooterComponent implements OnInit {
       this.contentLoading=this.translate.instant('Home.Footer.Form.SendingStatus')
       this.appService.sendNewLetter({email:this.guessMessageForm.controls.Email.value,content:this.guessMessageForm.controls.Content.value,name:this.guessMessageForm.controls.CustomerName.value}).
       subscribe(response=>{
-        
-
         setTimeout(()=>{
           this.showLoading=false;
-        },1000);
-        
+        },1000);        
         this.guessMessageForm.reset();
+        this.isSubmitted=false;
         this.toastr.success(this.translate.instant('Home.Footer.Form.MessageSendSuccess'));        
       },
       (error:Error)=>{
-        
         setTimeout(() => {
           this.showLoading=false;
         }, 2000);
-     
         throw error;    
-           
       })
     }else{
        setTimeout(() => {
         this.showLoading=false;
       }, 2000);
-      
      this.handlingFormValidatorService.showErrorForm(this.guessMessageForm,'Footer');
     }
   }

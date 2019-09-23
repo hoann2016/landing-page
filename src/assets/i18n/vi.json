@@ -112,7 +112,7 @@
         "Content": "Nội dung",
         "Send": "Gửi",
         "maximumMessage": "Thông tin không hợp lệ, tối đa 255 ký tự",
-        "minimumMessage":"Thông tin không hợp lệ, tối thiểu 3 ký tự",
+        "minimumMessage":"Thông tin không hợp lệ, tối thiểu 10 ký tự",
         "MessageSendSuccess":"Message gửi thành công !",
         "MessageSendFailed":"Message thất bại !",
         "SendingStatus":"Đang gửi"
@@ -154,7 +154,7 @@
 
 
     "name-lenght":"Tên của bạn phải tử 3-100 ký tự",
-    "name-shop-length":"Thông tin tên shop phải từ 3 đến 5 ký tự",
+    "name-shop-length":"Thông tin tên shop phải từ 3 đến 100 ký tự",
     "pasword-length": "Thông tin mật khẩu phải từ 5 đến 20 ký tự",
 
 
@@ -195,7 +195,8 @@
       "maxlength":"quá dài",
       "pattern":"không hợp lệ",
       "email":"không hợp lệ",
-      "undefined":"Lỗi không xác định"
+      "undefined":"Lỗi không xác định",
+      "mustMatch":"Không giống mật khẩu đã nhập"
     },
     "AppError":{
       "0":"Lỗi không xác định",

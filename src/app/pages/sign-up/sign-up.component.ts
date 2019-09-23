@@ -84,7 +84,8 @@ export class SignUpComponent implements OnInit, AfterViewInit {
         RetypePassword: [
           '',
           [
-            Validators.required, Validators.minLength(5),
+            Validators.required, 
+            Validators.minLength(5),
             Validators.maxLength(20)
           ]
         ],
