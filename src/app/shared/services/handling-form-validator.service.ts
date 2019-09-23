@@ -3,7 +3,7 @@ import { LandingPageService } from './landing-page.service';
 import { TranslateService } from '@ngx-translate/core';
 import { ToastrService } from 'ngx-toastr';
 import { Observable, combineLatest, pipe } from 'rxjs';
-import { mergeMap, map } from 'rxjs/operators';
+import { mergeMap, map, tap } from 'rxjs/operators';
 import { FormGroup, ValidationErrors } from '@angular/forms';
 
 @Injectable({
@@ -13,12 +13,13 @@ export class HandlingFormValidatorService {
 
   constructor(private landingPageService: LandingPageService, private translateService: TranslateService, private toastrService: ToastrService) { }
 
-  private translateWraper(str): Observable<string> {
+  private translateWraper(str,stDict:string): Observable<string> {
     const langObservable = this.landingPageService.getLangSelected();
     return langObservable.pipe(
       mergeMap(lang => {
         this.translateService.use(lang);
-        return this.translateService.get(str);
+        return this.translateService.get(str,
+          {valueLength:stDict});
       })
     )
   }
@@ -32,11 +33,14 @@ export class HandlingFormValidatorService {
       const controlErrors: ValidationErrors = myForm.get(key).errors;
       if (controlErrors != null) {
         Object.keys(controlErrors).forEach(keyError => {
-          // console.log('Key control: ' + key + ', keyError: ' + keyError + ', err value: ', controlErrors[keyError]);
+          console.log('Key control: ' + key + ', keyError: ' + keyError + ', err value: ', controlErrors[keyError]);
           listError.push(
-            this.translateWraper('Shared.FormCommon.' + keyError).pipe(
+            this.translateWraper('Shared.FormCommon.' + keyError,controlErrors[keyError].requiredLength).pipe(
               mergeMap(result => {
-                return this.translateService.get('Shared.FieldNameBaseCompnent.'+cpName+'.'+key).pipe(map(
+                return this.translateService.get('Shared.FieldNameBaseCompnent.'+cpName+'.'+key
+                ).pipe(
+                   tap(res=>console.log(res)),
+                   map(
                   res=>res+ ': ' + result
                 ))
               })
@@ -48,7 +52,7 @@ export class HandlingFormValidatorService {
       }
     });
     //push header:
-    const header = this.translateWraper('Shared.AppError.2');
+    const header = this.translateWraper('Shared.AppError.2','');
     listError.push(header);
     var tempUSub =
       combineLatest(listError).subscribe((arrTranslated: string[]) => {

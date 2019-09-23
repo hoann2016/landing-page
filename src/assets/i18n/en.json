@@ -179,8 +179,8 @@
     "Send": "Send New Password",
     "FormCommon": {
       "required": "required",
-      "minlength": "min length",
-      "maxlength": "max length",
+      "minlength": "require minimum at {{valueLength}} charactors",
+      "maxlength": "require maximum at {{valueLength}} charactors",
       "pattern": "is not valid",
       "email": "is not valid",
       "undefined": "Error undefined",

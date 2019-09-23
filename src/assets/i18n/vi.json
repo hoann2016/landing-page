@@ -191,8 +191,8 @@
     "Login_Register": "Đăng nhập",
     "FormCommon":{
       "required":"bắt buộc",
-      "minlength":"quá ngắn",
-      "maxlength":"quá dài",
+      "minlength":"ít nhất {{valueLength}} ký tự",
+      "maxlength":"Tối đa {{valueLength}} ký tự",
       "pattern":"không hợp lệ",
       "email":"không hợp lệ",
       "undefined":"Lỗi không xác định",
