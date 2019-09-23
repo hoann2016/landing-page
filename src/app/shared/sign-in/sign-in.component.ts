@@ -129,7 +129,7 @@ export class SignInComponent implements OnInit {
         }
       );
     } else {
-      this.handlingFormValidatorService.showErrorForm(this.signInForm, 'SignIn');
+     // this.handlingFormValidatorService.showErrorForm(this.signInForm, 'SignIn');
     }
   }
   RedirectToRegister() {

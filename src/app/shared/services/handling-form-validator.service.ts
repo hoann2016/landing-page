@@ -33,8 +33,8 @@ export class HandlingFormValidatorService {
       const controlErrors: ValidationErrors = myForm.get(key).errors;
       if (controlErrors != null) {
         Object.keys(controlErrors).forEach(keyError => {
-          console.log('Key control: ' + key + ', keyError: ' + keyError + ', err value: ', controlErrors[keyError]);
-          listError.push(
+          // console.log('Key control: ' + key + ', keyError: ' + keyError + ', err value: ', controlErrors[keyError]);
+           listError.push(
             this.translateWraper('Shared.FormCommon.' + keyError,controlErrors[keyError].requiredLength).pipe(
               mergeMap(result => {
                 return this.translateService.get('Shared.FieldNameBaseCompnent.'+cpName+'.'+key

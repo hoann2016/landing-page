@@ -103,7 +103,7 @@
                                                 *ngIf="f.ShopName.errors?.minlength||f.ShopName.errors?.maxlength">{{'Register.name-shop-length'|translate}}</span>
                                         </div>
                                     </div>
-                                    <div class="sugest-name" *ngIf="shopDomain">
+                                    <div class="sugest-name" *ngIf="shopDomain && !f.ShopName.errors">
                                         <div class="one-line"
                                             style="padding-top:10px;min-width: 50px;max-width: 50px; float:left;">
                                             <img src="../../../assets/images/sign-up/iconmonstr-light-bulb-16.svg">

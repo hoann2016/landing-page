@@ -1,10 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, Route } from '@angular/router';
 import { Subscription, Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { UserPayment } from 'src/app/shared/models/user-models/user-payment.model';
 import { LandingPageService } from 'src/app/shared/services/landing-page.service';
 import { TranslateService } from '@ngx-translate/core';
+import { ToastrService } from 'ngx-toastr';
+import { AppService } from 'src/app/app.service';
 
 @Component({
   selector: 'app-payment',
@@ -18,8 +20,11 @@ export class PaymentComponent implements OnInit {
     private translate: TranslateService,
     private route: ActivatedRoute,
     private router: Router,
-    private landingPageService: LandingPageService
-  ) { }
+    private landingPageService: LandingPageService,
+    private toastrService: ToastrService,
+    private appService:AppService
+   
+      ) { }
 
   state$: Observable<object>;
   public userPayment: UserPayment;
@@ -48,15 +53,12 @@ export class PaymentComponent implements OnInit {
     });
 
     this.state$ = this.route.paramMap
-      .pipe(
-        tap(() => console.log(window.history.state)),
-
+      .pipe(     
         map(() =>
           window.history.state
         )
       )
-    this.state$.subscribe((p: any) => {
-      console.log("data in payment gate", p);
+    this.state$.subscribe((p: any) => {    
       if (p != null && p != undefined && p.CustomerName) {
         this.userPayment = {
           CustomerName: p.CustomerName,
@@ -70,8 +72,7 @@ export class PaymentComponent implements OnInit {
         sessionStorage.setItem('userPayment', JSON.stringify(this.userPayment));
       } else {
         if (sessionStorage.getItem('userPayment')) {
-          p = JSON.parse(sessionStorage.getItem('userPayment'));
-          console.log("run in P", p);
+          p = JSON.parse(sessionStorage.getItem('userPayment'));       
           if (p != null && p != undefined) {
             this.userPayment = {
               CustomerName: p.CustomerName,
@@ -98,7 +99,15 @@ export class PaymentComponent implements OnInit {
     this.userPayment.PaymentMethod = evt.target.value;
   }
   RedirectPaymentGate() {
-    console.log("All value payment gate", this.userPayment);
+    if(this.userPayment.PaymentMethod){
+      sessionStorage.removeItem('userPayment');
+      window.location.href = this.appService.merchangePath;
+    }else{
+      var content:string= this.translate.instant('Payment.RequireSelectPayment');
+      var error:string= this.translate.instant('Shared.AppError.2');
+      this.toastrService.error(content, error)
+    }
+    
   }
 
 }

@@ -164,7 +164,8 @@
     "shop-type2": "Spa / Massage",
     "shop-type3": "Phòng khám",
     "SendingStatus":"Đang gửi yêu cầu đăng ký, vui lòng đợi"
-  },"Payment": {
+  },
+  "Payment": {
     "Header":"Gói dịch vụ đăng ký",
     "Sub":"Bạn đang tiến hành gói đăng ký dịch vụ, vui lòng kiểm tra thông tin bên dưới",
     "SelectedPackage":"Gói dịch vụ đã chọn",
@@ -177,12 +178,13 @@
     "Payment":"Thanh toán",
     "PaymentMethod":"Phương thức thanh toán",
     "PaymentDirect":"Thanh toán trực tiếp",
-    "PaymentTransfer":"Chuyển khoản ngân hàng",
-    "PaymentOnline":"thanh toán online bằng thẻ Visa/Mastercard",
+    "PaymentTransfer":"Thanh toán qua ATM/Internet Banking",
+    "PaymentOnline":"Thanh toán qua thẻ Visa/Master/JCB",
     "PaymentAtm":"Thanh toán bằng thẻ nội địa",
     "TempCount":"Tạm tính",
     "TotalCount":"Tổng cộng",
-    "CompletePayment":"Hoàn tất đơn hàng"
+    "CompletePayment":"Hoàn tất đơn hàng",
+    "RequireSelectPayment":"Bắt buộc chọn 1 phương thức thanh toán"
   },
   "Shared": {
     "RegisterBtnLabel": "Đăng ký",

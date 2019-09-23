@@ -75,7 +75,7 @@ export class FooterComponent implements OnInit {
        setTimeout(() => {
         this.showLoading=false;
       }, 2000);
-     this.handlingFormValidatorService.showErrorForm(this.guessMessageForm,'Footer');
+     //this.handlingFormValidatorService.showErrorForm(this.guessMessageForm,'Footer');
     }
   }
 }

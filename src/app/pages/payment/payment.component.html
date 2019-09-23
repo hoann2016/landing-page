@@ -1,122 +1,117 @@
-
 <section>
-  <div class="container">
-    <div class="wrap">
-      <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-        <!-- left content -->
-        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 left-content">
-          <div class="wrap_form_field">
-            <div class="header-page">
-              <h2 class="header-form col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" >    {{'Payment.Header'|translate}}</h2>
-              <span class="descrition-page col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">{{'Payment.Sub'|translate}}</span>
-            </div>
-            <div class="clear-fix">
-              <div class="clear-fix-content"></div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <span class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.SelectedPackage'|translate}}</span>
-              <span class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  one-line ">
-                <div class="medal-image one-line">
-                  <img src="../../../assets/images/app/payment/images.jpeg" alt="">
+  <div class="container card">
+    <div class="col card-body">
+      <div class="wrap">
+        <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <!-- left content -->
+          <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 left-content">
+            <div class="wrap_form_field">
+              <div class="header-page">
+                <h2 class="header-form col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"> {{'Payment.Header'|translate}}
+                </h2>
+                <span
+                  class="descrition-page col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">{{'Payment.Sub'|translate}}</span>
+              </div>
+              <div class="clear-fix">
+                <div class="clear-fix-content"></div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <span
+                  class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.SelectedPackage'|translate}}</span>
+                <span class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  one-line ">
+                  <div class="medal-image one-line">
+                    <img src="../../../assets/images/app/payment/images.jpeg" alt="">
+                  </div>
+                  <span class="focus-yellow one-line">{{userPayment.PackageName}}</span>
+                </span>
+              </div>
+              <div class="clear-fix">
+                <div class="clear-fix-content"></div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.TimeRegistered'|translate}}
                 </div>
-                <span class="focus-yellow one-line">{{userPayment.PackageName}}</span>
-              </span>
-            </div>
-            <div class="clear-fix">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  one-line">
+                  <select (change)="SelectDate($event)">
+                    <option value="3">3 {{'Payment.Months'|translate}}</option>
+                    <option value="6" selected>6 {{'Payment.Months'|translate}}</option>
+                    <option value="12">12 {{'Payment.Months'|translate}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="clear-fix">
                 <div class="clear-fix-content"></div>
               </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.TimeRegistered'|translate}}</div>
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  one-line">
-                <select (change)="SelectDate($event)">
-                  <option value="3">3 {{'Payment.Months'|translate}}</option>
-                  <option value="6" selected>6 {{'Payment.Months'|translate}}</option>
-                  <option value="12">12 {{'Payment.Months'|translate}}</option>
-                </select>
+              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">
+                  {{'Payment.Account'|translate}}:
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  one-line">
+                  {{userPayment.CustomerName}}
+                </div>
               </div>
-            </div>
-            <div class="clear-fix">
-                <div class="clear-fix-content"></div>
+              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.Contact'|translate}}:</div>
+                <div class=" col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">{{userPayment.ContactPhone}}</div>
               </div>
-            <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">
-                {{'Payment.Account'|translate}}:
+              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.StartDate'|translate}}:
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  one-line">{{userPayment.StartDate}}</div>
               </div>
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  one-line">
-                {{userPayment.CustomerName}}
+              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.EndDate'|translate}}:</div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  one-line">{{userPayment.EndDate}}</div>
               </div>
-            </div>
-            <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.Contact'|translate}}:</div>
-              <div class=" col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">{{userPayment.ContactPhone}}</div>
-            </div>
-            <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.StartDate'|translate}}:</div>
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  one-line">{{userPayment.StartDate}}</div>
-            </div>
-            <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.EndDate'|translate}}:</div>
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  one-line">{{userPayment.EndDate}}</div>
             </div>
           </div>
-        </div>
-        <!-- end left content -->
-        <!-- right content -->
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 right-content">
-          <div class="wrap_form_field">
-            <div class="header-page">
-              <h2 class="header-form"> {{'Payment.Payment'|translate}}</h2>
-              <span class="descrition-page">{{'Payment.PaymentMethod'|translate}}</span>
+          <!-- end left content -->
+          <!-- right content -->
+          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 right-content d-flex flex-column">
+            <div class="wrap_form_field d-flex flex-column mb-auto">
+              <div class="header-page">
+                <h2 class="header-form" style="margin-left:30px;"> {{'Payment.Payment'|translate}}</h2>
+                <span class="descrition-page" style="margin-left:30px;">{{'Payment.PaymentMethod'|translate}}</span>
+              </div>
+              <ul class="d-flex flex-column">
+                <li class="row">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="payment-method" value="tt"
+                      (change)="ChangePayment($event)">
+                    {{'Payment.PaymentDirect'|translate}}
+                  </label>
+                </li>
+                <li class="row">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="payment-method" value="ck" disabled>
+                    {{'Payment.PaymentTransfer'|translate}}
+                  </label>
+                </li>
+                <li class="row">
+                  <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="payment-method" disabled>
+                    {{'Payment.PaymentOnline'|translate}}
+                  </label>
+                </li>
+              </ul>
+           
+              <div class="row temp-price">
+                <div class="col-md">{{'Payment.TempCount'|translate}}</div>
+                <div class="col-md">999,000 đ</div>
+              </div>
+         
+              <div class="row total-payment">
+                <div class="col-md">{{'Payment.TotalCount'|translate}}</div>
+                <div class="col-md price-value">999,000 đ</div>
+              </div>
             </div>
-            <ul>
-              <li class="row">
-                <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="payment-method" value="tt" (change)="ChangePayment($event)">
-                  {{'Payment.PaymentDirect'|translate}}
-                </label>
-              </li>
-              <li class="row">
-                <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="payment-method" value="ck" (change)="ChangePayment($event)">
-                  {{'Payment.PaymentTransfer'|translate}}
-                </label>
-              </li>
-              <li class="row">
-                <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="payment-method" disabled>
-                  {{'Payment.PaymentOnline'|translate}}
-                </label>
-              </li>
-              <li class="row">
-                <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="payment-method" disabled>
-                  {{'Payment.PaymentAtm'|translate}}
-                </label>
-              </li>
-            </ul>
-            <hr />
-            <div class="row">
-              <div class="col-md">{{'Payment.TempCount'|translate}}</div>
-              <div class="col-md">999,000 đ</div>
-            </div>
-            <hr />
-            <div class="row">
-              <div class="col-md">{{'Payment.TotalCount'|translate}}</div>
-              <div class="col-md">999,000 đ</div>
-            </div>
-            
-
-          </div>
-
-           <p class="complete-payment-btn" (click)="RedirectPaymentGate()">                
+            <p class="complete-payment-btn" (click)="RedirectPaymentGate()">
               {{'Payment.CompletePayment'|translate}}
             </p>
-          
-
+          </div>
+          <!-- end right content -->
         </div>
-        <!-- end right content -->
       </div>
     </div>
   </div>
 </section>
-  
