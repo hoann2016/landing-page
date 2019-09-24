@@ -16,9 +16,10 @@
                 <div class="clear-fix-content"></div>
               </div> 
               <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <span
-                  class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.SelectedPackage'|translate}}</span>
-                <span class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6  one-line ">
+                <span class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line list-feature">
+                  {{'Payment.SelectedPackage'|translate}}
+                </span>
+                <span class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6  one-line list-feature">
                   <div class="medal-image one-line">
                     <img src="../../../assets/images/app/payment/images.jpeg" alt="">
                   </div>
@@ -29,9 +30,9 @@
                 <div class="clear-fix-content"></div>
               </div>
               <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.TimeRegistered'|translate}}
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line list-feature">{{'Payment.TimeRegistered'|translate}}
                 </div>
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6  one-line">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6  one-line list-feature">
                   <select (change)="SelectDate($event)">
                     <option value="3">3 {{'Payment.Months'|translate}}</option>
                     <option value="6" selected>6 {{'Payment.Months'|translate}}</option>
@@ -43,25 +44,25 @@
                 <div class="clear-fix-content"></div>
               </div>
               <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line list-feature" >
                   {{'Payment.Account'|translate}}:
                 </div>
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6  one-line">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6  one-line list-feature">
                   {{userPayment.CustomerName}}
                 </div>
               </div>
               <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.Contact'|translate}}:</div>
-                <div class=" col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line">{{userPayment.ContactPhone}}</div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line list-feature">{{'Payment.Contact'|translate}}:</div>
+                <div class=" col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line list-feature">{{userPayment.ContactPhone}}</div>
               </div>
               <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.StartDate'|translate}}:
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line list-feature">{{'Payment.StartDate'|translate}}:
                 </div>
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6  one-line">{{userPayment.StartDate}}</div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6  one-line list-feature">{{userPayment.StartDate}}</div>
               </div>
               <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.EndDate'|translate}}:</div>
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6  one-line">{{userPayment.EndDate}}</div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line list-feature">{{'Payment.EndDate'|translate}}:</div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6  one-line list-feature">{{userPayment.EndDate}}</div>
               </div>
             </div>
           </div>
