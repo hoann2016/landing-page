@@ -67,7 +67,7 @@ export class PaymentComponent implements OnInit {
           ContactPhone: p.Phone,
           StartDate: this.getDate(0),
           EndDate: this.getDate(6),
-          PaymentMethod: '',
+          PaymentMethod: 'tt',//set default payment
         }
         sessionStorage.setItem('userPayment', JSON.stringify(this.userPayment));
       } else {

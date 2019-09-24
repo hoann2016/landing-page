@@ -213,13 +213,13 @@
                             </div>
                             <div class="row one-item poli_form">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                    <p [ngClass]="{ 'is-invalid': isSubmitted && f.IsComfirmed.value==false }">
-                                        <input class="ip_checkbox" type="checkbox" formControlName="IsComfirmed">
-                                        {{'Register.policy'|translate}}
+                                    <p >
+                                       {{'Register.policy'|translate}}
                                         <a href="javascript:void(0)"> {{'Register.policy-2'|translate}}</a>
+                                        {{'Register.policy-3'|translate}}
                                     </p>
                                     <div *ngIf="isSubmitted">
-                                        <span *ngIf="f.IsComfirmed.errors?.required">
+                                        <span >
                                             {{'Register.message-require'|translate}}
                                         </span>
                                     </div>
@@ -233,7 +233,7 @@
                                 </div>
                                 <div class="one-line have_acc1">
                                     <p>{{'Register.have-account'|translate}} -<a href="javascript:void(0)"
-                                            (click)="showLoginModal(content)"> {{'Shared.SigninBtnLabel'|translate}}</a>
+                                            > {{'Shared.SigninBtnLabel'|translate}}</a>
                                     </p>
                                 </div>
 

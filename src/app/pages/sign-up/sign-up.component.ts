@@ -19,16 +19,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
   }
   shopDomain: string;
   isSubmitted: boolean = false;
-  public formErrors = {
-    CustomerName: '',
-    PackageSelectedName: '',
-    ShopName: '',
-    ServiceName: '',
-    Phone: '',
-    Password: '',
-    RetypePassword: '',
-    IsComfirmed: ''
-  };
+
   signUpForm: FormGroup;
   // variable
   selectedPackage: string;
@@ -88,8 +79,8 @@ export class SignUpComponent implements OnInit, AfterViewInit {
             Validators.minLength(5),
             Validators.maxLength(20)
           ]
-        ],
-        IsComfirmed: [false, Validators.required]
+        ]
+    
       },
       { validator: MustMatch('Password', 'RetypePassword') });
     this.signUpForm.controls.ShopName.valueChanges.subscribe((val: string) => {
@@ -103,11 +94,11 @@ export class SignUpComponent implements OnInit, AfterViewInit {
     this.appService.getAllPackage().subscribe(pk => {
       if (pk.success == true) {
         this.allPackage = pk.data.packages;
-        console.log(this.allPackage.packages);
+       
       }
     },
       err => {
-        console.log("business", err);
+       throw err;
       });
     this.appService.getAllBusiness().subscribe(bs => {
       this.allBusinessType = [];
@@ -116,14 +107,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
       }
     },
       err => {
-        console.log("business", err);
-        var strError: string = "";
-        if (err.success == false && err.message.length > 0) {
-          for (let errItem of err.message) {
-            strError += this.translate.instant('Shared.CommunicationMessage.' + errItem.code);
-          }
-          console.log("All Error: ", strError);
-        }
+       throw err;
       });
     this.landingPageService.getLangSelected().subscribe(lang => {
       this.translate.use(lang);
