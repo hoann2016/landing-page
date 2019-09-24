@@ -103,12 +103,12 @@
                                                 *ngIf="f.ShopName.errors?.minlength||f.ShopName.errors?.maxlength">{{'Register.name-shop-length'|translate}}</span>
                                         </div>
                                     </div>
-                                    <div class="sugest-name" *ngIf="shopDomain && !f.ShopName.errors">
+                                <div class="sugest-name" *ngIf="shopDomain && !f.ShopName.errors">
                                         <div class="one-line"
-                                            style="padding-top:10px;min-width: 50px;max-width: 50px; float:left;">
+                                            style="padding-top:10px;min-width: 15px;max-width: 50px; float:left;">
                                             <img src="../../../assets/images/sign-up/iconmonstr-light-bulb-16.svg">
                                         </div>
-                                        <div class="col-md-8 col-sm-8 col-xs-8 col-lg-10 one-line">
+                                        <div class="col-md-8 col-sm-8 col-xs-8 col-lg-10 one-line shop-domain">
                                             <p>{{'Register.message-tips'|translate}}: <span>{{shopDomain}}</span>
                                                 {{'Register.message-tips2'|translate}}
                                             </p>
@@ -218,11 +218,11 @@
                                         <a href="javascript:void(0)"> {{'Register.policy-2'|translate}}</a>
                                         {{'Register.policy-3'|translate}}
                                     </p>
-                                    <div *ngIf="isSubmitted">
+                                    <!-- <div *ngIf="isSubmitted">
                                         <span >
                                             {{'Register.message-require'|translate}}
                                         </span>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="row two-item poli_form">
@@ -233,7 +233,8 @@
                                 </div>
                                 <div class="one-line have_acc1">
                                     <p>{{'Register.have-account'|translate}} -<a href="javascript:void(0)"
-                                            > {{'Shared.SigninBtnLabel'|translate}}</a>
+                                        (click)="showModalLogin(content)"   
+                                        > {{'Shared.SigninBtnLabel'|translate}}</a>
                                     </p>
                                 </div>
 

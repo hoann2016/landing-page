@@ -1,184 +1,220 @@
-
-
 .one-line {
-    display: inline-block;
-    overflow: hidden;
+  display: inline-block;
+  overflow: hidden;
 }
 
 .wrap_form_field .blue-text {
-    color:#009bdf;
-    font-size: 0.7em;
-    margin-left: 3px;
+  color: #009bdf;
+  font-size: 0.7em;
+  margin-left: 3px;
 }
 
 .title-input {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .header-form {
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
-.have_acc1 p{
-    margin-top: 5px !important;
+.have_acc1 p {
+  margin-top: 5px !important;
 }
 
 .header-page {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .one-item {
-    margin-top: 15px;
+  margin-top: 15px;
 }
+
 .two-item {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .fix-boder {
-    width: 100%;
+  width: 100%;
 }
 
 .form-input-2 select {
-    width: 100%;
+  width: 100%;
 }
 
 .form-input-1 select {
-    width: 100%;
+  width: 100%;
 }
 
-.sugest-name p {
-    font-size: 0.8rem;
+.sugest-name {
+    p{
+        font-size: 0.8rem;
+    } 
+  .shop-domain {
+    margin-top: 5px;
+
+    padding-left: 5px;
+    p{
+        span{
+            color: #e59017;
+        }
+    }
+  }
 }
 
 .invalid-feedback {
-    font-size: 80%;
-    color: #dc3545;
+  font-size: 80%;
+  color: #dc3545;
 }
 
 .is-invalid {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 
 // ================================
 // CSS's Phuong
 // ================================
 
-.section_signup{
-    background-color: #f9f9f9;
-    height: 100vh;
-    padding: 0; 
+.section_signup {
+  background-color: #f9f9f9;
+  height: 100vh;
+  padding: 0;
 }
-.wrap_left_signin{
-    position: relative;
-    background-image: url(/assets/images/sign-up/bg_left.jpg);
-    background-size: cover;
-    height: 100vh;
-    padding: 40px 30px;
-    color: #fff;
+
+.wrap_left_signin {
+  position: relative;
+  background-image: url(/assets/images/sign-up/bg_left.jpg);
+  background-size: cover;
+  height: 100vh;
+  padding: 40px 30px;
+  color: #fff;
 }
-.welcome-container .wel_img img{
-width: 180px;
+
+.welcome-container .wel_img img {
+  width: 180px;
 }
-.welcome-container h3{
-    color: #fff;
-    margin: 10px 0 0 0;
+
+.welcome-container h3 {
+  color: #fff;
+  margin: 10px 0 0 0;
 }
-.welcome-container hr{
-    border-top: 1px solid #ffffff5c;
+
+.welcome-container hr {
+  border-top: 1px solid #ffffff5c;
 }
-.welcome-container p{
-    color: #fff;
-    opacity: 0.7;
+
+.welcome-container p {
+  color: #fff;
+  opacity: 0.7;
 }
+
 .device_mac {
-    text-align: center;
-    position: relative;
-    margin-top: 60px;
+  text-align: center;
+  position: relative;
+  margin-top: 60px;
 }
-.wrap_left_signin .macbook_img{
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
+
+.wrap_left_signin .macbook_img {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
 }
-.ft_authen span{
-    position: absolute;
-    bottom: 30px;
-    text-align: center;
-    width: 90%;
-    font-size: 14px;
-    opacity: 0.7;
+
+.ft_authen span {
+  position: absolute;
+  bottom: 30px;
+  text-align: center;
+  width: 90%;
+  font-size: 14px;
+  opacity: 0.7;
 }
-.wrap_over_signin{
-    overflow: auto;
-    height: 100vh;
+
+.wrap_over_signin {
+  overflow: auto;
+  height: 100vh;
 }
-.wrap_form_field{
-    padding: 15px;
-    width: 70%;
-    margin: 0 auto;
+
+.wrap_form_field {
+  padding: 15px;
+  width: 70%;
+  margin: 0 auto;
 }
-.wrap_form_field .header-page{
-    margin-top: 50px;
+
+.wrap_form_field .header-page {
+  margin-top: 50px;
 }
-.wrap_form_field input{
-    border-radius: 6px;
-    border-style: none;
-    border: 1px solid #e1e1e1;
-    padding: 5px;
-    outline: none;
-    height: 36px;
-    background-color: #fff;
-    margin-top: 5px;
-    font-size: 14px;
+
+.wrap_form_field input {
+  border-radius: 6px;
+  border-style: none;
+  border: 1px solid #e1e1e1;
+  padding: 5px;
+  outline: none;
+  height: 36px;
+  background-color: #fff;
+  margin-top: 5px;
+  font-size: 14px;
 }
-.wrap_form_field  select{
-    border-radius: 6px;
-    border-style: none;
-    border: 1px solid #e1e1e1;
-    padding: 5px;
-    outline: none;
-    height: 36px;
-    background-color: #fff;
-    margin-top: 5px;
-    font-size: 14px;
+
+.wrap_form_field select {
+  border-radius: 6px;
+  border-style: none;
+  border: 1px solid #e1e1e1;
+  padding: 5px;
+  outline: none;
+  height: 36px;
+  background-color: #fff;
+  margin-top: 5px;
+  font-size: 14px;
 }
-.poli_form p{
-    text-transform: none;
-    font-size: 14px;
-    margin-top: 0;
-    letter-spacing: normal;
-    margin-bottom: 0;
+
+.poli_form p {
+  text-transform: none;
+  font-size: 14px;
+  margin-top: 0;
+  letter-spacing: normal;
+  margin-bottom: 0;
 }
-.poli_form a:hover{
-    color: #f49c1e;
+
+.poli_form a:hover {
+  color: #f49c1e;
 }
-.poli_form input{
-    height: 14px !important;
-    margin-top: 15px;
+
+.poli_form input {
+  height: 14px !important;
+  margin-top: 15px;
 }
-.wrap_form_field button{
-    background-color: #f49c1e;
-    color: #fff;
-    padding: 7px 20px;
-    border-radius: 6px;
-    outline: none;
-    border:none;
-    cursor: pointer;
+
+.wrap_form_field button {
+  background-color: #f49c1e;
+  color: #fff;
+  padding: 7px 20px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
-.wrap_form_field button:hover{
-    background-color: #e59017;
+
+.wrap_form_field button:hover {
+  background-color: #e59017;
 }
-.btn_submit_signup button{
-    margin: 0 10px 0 15px;
+
+.btn_submit_signup button {
+  margin: 0 10px 0 15px;
 
 }
 
 .section_signup a:focus {
-    color: blue!important;
-   
+  color: blue !important;
+
 }
-.section_signup .ip_checkbox{
-    margin-top:0px;
+
+.section_signup .ip_checkbox {
+  margin-top: 0px;
+}
+
+
+.text-danger{
+    font-size: 13px!important;
 }

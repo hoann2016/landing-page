@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, ElementRef, ViewChild, Output, EventEmitter } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { TranslateService } from "@ngx-translate/core";
-import { NgbModal, ModalDismissReasons, NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
+import { NgbModal  } from "@ng-bootstrap/ng-bootstrap";
 import { BehaviorSubject, throwError } from "rxjs";
 import { LandingPageService } from "src/app/shared/services/landing-page.service";
 import { Router } from "@angular/router";
@@ -43,7 +43,7 @@ export class SignInComponent implements OnInit {
     private landingPageService: LandingPageService,
     private router: Router,
     private appService: AppService,
-    public activeModal: NgbActiveModal,
+  
     private toastr: ToastrService,
     private handlingFormValidatorService: HandlingFormValidatorService
   ) {

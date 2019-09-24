@@ -120,7 +120,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
       }
     })
   }
-  showLoginModal(content) {
+  showModalLogin(content) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' })
       .result.then(
         (result) => {

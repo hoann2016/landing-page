@@ -213,7 +213,7 @@
       "465": "Email is not valid",
       "467": "Content is not valid",
       "1000": "successful",
-      "1001": "Data is exist",
+      "1001": "Your email already exists",
       "1002": "Data not found",
       "1003": "Token is missing",
       "1004": "Invalid token",
