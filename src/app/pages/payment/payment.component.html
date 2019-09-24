@@ -75,23 +75,23 @@
               </div>
               <ul class="d-flex flex-column">
                 <li class="row">
-                  <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="payment-method" value="tt" checked
+                  <label class="form-check-label" for="tt">{{'Payment.PaymentDirect'|translate}}
+                  </label>
+                    <input type="radio" class="form-check-input" id ="tt" name="payment-method" value="tt" checked
                       (change)="ChangePayment($event)">
-                    {{'Payment.PaymentDirect'|translate}}
-                  </label>
+                    
                 </li>
                 <li class="row">
-                  <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="payment-method" value="ck" disabled>
-                    {{'Payment.PaymentTransfer'|translate}}
-                  </label>
+                  <label class="form-check-label" for="ck"> {{'Payment.PaymentTransfer'|translate}} </label>
+                    <input type="radio" class="form-check-input" id="ck" name="payment-method" value="ck" disabled>
+                   
+                 
                 </li>
                 <li class="row">
-                  <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="payment-method" disabled>
-                    {{'Payment.PaymentOnline'|translate}}
-                  </label>
+                  <label class="form-check-label" for="online"> {{'Payment.PaymentOnline'|translate}}</label>
+                    <input type="radio" class="form-check-input"  id="online" name="payment-method" disabled>
+                   
+                  
                 </li>
               </ul>
            
