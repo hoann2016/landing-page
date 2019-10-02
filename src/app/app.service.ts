@@ -19,7 +19,7 @@ export class AppService {
   private userLoginPath = "api/v1/authenticate/login";
   private userRegisterPath = "api/v1/users/register";
   private newLetterPath = "api/v1/leads";
-  private getPackagePath = "api/v1/merchants/package/active";
+  private getActivePackagePath = "api/v1/packages/activated";
   private getBusinessPath = "api/v1/merchants/business";
   get merchangePath() {
     return environment.merchantpath;
@@ -39,9 +39,14 @@ export class AppService {
   sendNewLetter(newLetter: NewLetter): Observable<any> {
     return this.http.post(this.rooturl + this.newLetterPath, newLetter, httpOptions);
   }
-  getAllPackage(): Observable<any> {
-    //return this.http.get(this.rooturl + this.getPackagePath);
-    return this.http.get("./assets/fake-response/all-packages.json");
+  getActiveConfigPackage(): Observable<any> {
+    return this.http.get(this.rooturl + this.getActivePackagePath);
+    //return this.http.get("./assets/fake-response/all-packages.json");
+  }
+  getActiveSimplePackageById( packageId: string): Observable<any> {
+      const getActiveSimplePackagePath = `api/v1/packages/${packageId}/simple`;
+      return this.http.get(this.rooturl + getActiveSimplePackagePath);
+    //return this.http.get("./assets/fake-response/all-packages.json");
   }
   getAllBusiness(): Observable<any> {
     //return this.http.get(this.rooturl + this.getBusinessPath);

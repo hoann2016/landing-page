@@ -91,14 +91,13 @@ export class SignUpComponent implements OnInit, AfterViewInit {
   }
   ngOnInit() {
     this.buildForm();
-    this.appService.getAllPackage().subscribe(pk => {
+    this.appService.getActiveConfigPackage().subscribe(pk => {
       if (pk.success == true) {
         this.allPackage = pk.data.packages;
-       
       }
     },
       err => {
-       throw err;
+        throw err;
       });
     this.appService.getAllBusiness().subscribe(bs => {
       this.allBusinessType = [];
@@ -107,7 +106,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
       }
     },
       err => {
-       throw err;
+        throw err;
       });
     this.landingPageService.getLangSelected().subscribe(lang => {
       this.translate.use(lang);
@@ -132,7 +131,6 @@ export class SignUpComponent implements OnInit, AfterViewInit {
   }
   onSubmit() {
     this.isSubmitted = true;
-    
     if (this.signUpForm.valid) {
       var formImport: UserRegister = {
         package_id: +this.signUpForm.controls.PackageSelectedName.value,
@@ -153,7 +151,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
           setTimeout(() => {
             this.showLoading = false;
           }, 3000);
-       
+          
           if (response.success == true) {
             if (this.signUpForm.controls.PackageSelectedName.value == '1') {
               this.toastr.success("Redirect to dashboard ...")
