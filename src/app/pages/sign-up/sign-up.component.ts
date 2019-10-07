@@ -84,9 +84,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
       },
       { validator: MustMatch('Password', 'RetypePassword') });
     this.signUpForm.controls.ShopName.valueChanges.subscribe((val: string) => {
-      this.shopDomain = this.convertViToEn(val.toLowerCase().replace(/ /g, ''));
-      this.shopDomain = this.shopDomain + '.ludiino.com';
-      this.shopDomain = this.shopDomain.toLowerCase();
+      this.shopDomain = `${this.convertViToEn(val.toLowerCase().replace(/ /g, '')).toLowerCase()}.ludiino.com`;
     });
   }
   ngOnInit() {
@@ -112,6 +110,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
       this.translate.use(lang);
     });
     this.landingPageService.getSelectedPackage().subscribe(packageName => {
+      console.log(packageName);
       if (packageName) {
         this.signUpForm.patchValue({ PackageSelectedName: packageName })
       } else {
@@ -132,7 +131,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
   onSubmit() {
     this.isSubmitted = true;
     if (this.signUpForm.valid) {
-      var formImport: UserRegister = {
+      const formImport: UserRegister = {
         package_id: +this.signUpForm.controls.PackageSelectedName.value,
         industry_id: +this.signUpForm.controls.ServiceName.value,
         country_id: 1,
@@ -153,13 +152,16 @@ export class SignUpComponent implements OnInit, AfterViewInit {
           }, 3000);
           
           if (response.success == true) {
-            if (this.signUpForm.controls.PackageSelectedName.value == '1') {
+            const packageId = Number(this.signUpForm.controls.PackageSelectedName.value);
+            if (packageId === 2) {
               this.toastr.success("Redirect to dashboard ...")
               window.location.href = this.appService.merchangePath;
             } else {
+              const redirectValues = {...response.data};
+              redirectValues.selectedConfigPackage = packageId;
               this.toastr.success("Redirect to payment page");
               this.router.navigateByUrl('/pages/payment',
-                { state: this.signUpForm.value }
+                { state: redirectValues }
               );
             }
           } else {

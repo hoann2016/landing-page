@@ -1,9 +1,8 @@
 export interface UserPayment{
-    CustomerName:string;
-    PackageName:string;
-    RegisterRange:number;
-    ContactPhone:string;
-    StartDate:string;
-    EndDate:string;
-    PaymentMethod:string;
+    customer:any;
+    selectedPackage: any;
+    phone:string;
+    startDate:string;
+    endDate:string;
+    paymentMethod:string;
 }

@@ -16,27 +16,26 @@
                 <div class="clear-fix-content"></div>
               </div> 
               <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <span class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line list-feature">
+                <span class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature">
                   {{'Payment.SelectedPackage'|translate}}
                 </span>
-                <span class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6  one-line list-feature">
+                <span class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line list-feature">
                   <div class="medal-image one-line">
                     <img src="../../../assets/images/app/payment/images.jpeg" alt="">
                   </div>
-                  <span class="focus-yellow one-line">{{userPayment.PackageName}}</span>
+                  <span class="focus-yellow one-line">{{userPayment.selectedPackage.name}}</span>
                 </span>
               </div>
               <div class="clear-fix">
                 <div class="clear-fix-content"></div>
               </div>
               <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line list-feature">{{'Payment.TimeRegistered'|translate}}
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature">{{'Payment.TimeRegistered'|translate}}
                 </div>
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6  one-line list-feature">
-                  <select (change)="SelectDate($event)">
-                    <option value="3">3 {{'Payment.Months'|translate}}</option>
-                    <option value="6" selected>6 {{'Payment.Months'|translate}}</option>
-                    <option value="12">12 {{'Payment.Months'|translate}}</option>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line list-feature">
+                  <select (change)="changePackage($event)">
+                      <option selected disabled hidden></option>
+                      <option *ngFor="let package of packages; let i = index" [value]="i">{{package.duration}} {{'Payment.Months'|translate}}
                   </select>
                 </div>
               </div>
@@ -44,25 +43,25 @@
                 <div class="clear-fix-content"></div>
               </div>
               <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line list-feature" >
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature" >
                   {{'Payment.Account'|translate}}:
                 </div>
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6  one-line list-feature">
-                  {{userPayment.CustomerName}}
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line list-feature">
+                  {{userPayment.customer}}
                 </div>
               </div>
               <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line list-feature">{{'Payment.Contact'|translate}}:</div>
-                <div class=" col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line list-feature">{{userPayment.ContactPhone}}</div>
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature">{{'Payment.Contact'|translate}}:</div>
+                <div class=" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line list-feature">{{userPayment.phone}}</div>
               </div>
               <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line list-feature">{{'Payment.StartDate'|translate}}:
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature">{{'Payment.StartDate'|translate}}:
                 </div>
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6  one-line list-feature">{{userPayment.StartDate}}</div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line list-feature">{{userPayment.startDate}}</div>
               </div>
               <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 one-line list-feature">{{'Payment.EndDate'|translate}}:</div>
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6  one-line list-feature">{{userPayment.EndDate}}</div>
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature">{{'Payment.EndDate'|translate}}:</div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line list-feature">{{userPayment.endDate}}</div>
               </div>
             </div>
           </div>
@@ -85,28 +84,24 @@
                 <li class="row">
                   <label class="form-check-label" for="ck"> {{'Payment.PaymentTransfer'|translate}} </label>
                     <input type="radio" class="form-check-input" id="ck" name="payment-method" value="ck" disabled>
-                   
-                 
                 </li>
+
                 <li class="row">
                   <label class="form-check-label" for="online"> {{'Payment.PaymentOnline'|translate}}</label>
                     <input type="radio" class="form-check-input"  id="online" name="payment-method" disabled>
-                   
-                  
                 </li>
               </ul>
-           
+
               <div class="row temp-price">
                 <div class="col-md">{{'Payment.TempCount'|translate}}</div>
-                <div class="col-md price-value">999,000 đ</div>
+                <div class="col-md price-value">{{userOrder.sub_totals | currency: "VND"}}</div>
               </div>
-         
               <div class="row total-payment">
                 <div class="col-md">{{'Payment.TotalCount'|translate}}</div>
-                <div class="col-md price-value">999,000 đ</div>
+                <div class="col-md price-value">{{userOrder.grand_totals | currency: "VND"}}</div>
               </div>
             </div>
-            <p class="complete-payment-btn" (click)="RedirectPaymentGate()">
+            <p class="complete-payment-btn" (click)="submitOrder()">
               {{'Payment.CompletePayment'|translate}}
             </p>
           </div>
