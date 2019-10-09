@@ -137,6 +137,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
         country_id: 1,
         name: this.signUpForm.controls.CustomerName.value,
         store_name: this.signUpForm.controls.ShopName.value,
+        shop_domain: this.shopDomain,
         password: this.signUpForm.controls.Password.value,
         confirm_password: this.signUpForm.controls.RetypePassword.value,
         email: this.signUpForm.controls.Email.value,

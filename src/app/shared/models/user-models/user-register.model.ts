@@ -4,6 +4,7 @@ export interface UserRegister{
     country_id:number;
     name:string;
     store_name:string;
+    shop_domain: string;
     password:string;
     confirm_password:string;
     email:string;

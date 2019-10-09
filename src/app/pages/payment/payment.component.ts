@@ -68,7 +68,6 @@ export class PaymentComponent implements OnInit {
         )
       )
     this.state$.subscribe( async(p: any) => {
-      console.log('p:', p);
       if (p != null && p != undefined && p.id) {
         this.packages = await this.getSimplePackage(p.selectedConfigPackage);
         sessionStorage.setItem('packages', JSON.stringify(this.packages));

@@ -151,8 +151,8 @@
     "message-format-4": "Thông tin mật khẩu không hợp lệ",
     "message-format-5": "Thông tin gõ lại mật khẩu không hợp lệ",
     "message-format-6": "Thông tin tên shop không hợp lệ",
-    "message-tips": "Tên Website Của Bạn Sẽ Là",
-    "message-tips2": "Bạn Có Thể Thay Đổi Trong Cài Đặt Sau Này",
+    "message-tips": "Tên miền website của bạn sẽ là",
+    "message-tips2": "Bạn có thể thay đổi trong cài đặt sau này",
 
 
     "name-lenght":"Tên của bạn phải tử 3-100 ký tự",
@@ -249,7 +249,14 @@
       "1020":"Trường bắt buộc",
       "1021":"Độ dài của trường không hợp lệ",
       "1022":"Trường không hợp lệ",
-      "1023":"Trường không giống nhau"
+      "1023":"Trường không giống nhau",
+      "1024":"Thiếu trường thông tin họ tên, email hoặc nội dung",
+      "1025":"Thiếu trường Email",
+      "1026":"Thông tin người dùng chưa được kích hoạt",
+      "1027":"Tên miền đã tồn tại. Vui lòng chọn tên miền khác",
+      "1028":"Thiếu thông tin đơn hàng",
+      "1029":"Không tìm thấy đơn hàng",
+      "1030":"Kích hoạt người dùng thất bại. Vui lòng liên hệ nhân viên quản trị để kiểm tra"
     },
     "FieldNameBaseCompnent": {
       "Footer": {

@@ -235,7 +235,14 @@
       "1020": "Field is required",
       "1021": "Field is invalid length",
       "1022": "Field is invalid",
-      "1023": "Field is not match"
+      "1023": "Field is not match",
+      "1024": "Field name, email or content of lead information is missing",
+      "1025": "Field email is missing",
+      "1026": "User status has not been activated",
+      "1027": "Domain already exists",
+      "1028": "Order information is missing",
+      "1029": "Order not found",
+      "1030": "User activation failed"
     },
     "FieldNameBaseCompnent": {
       "Footer": {
