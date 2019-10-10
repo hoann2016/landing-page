@@ -80,7 +80,6 @@ export class SignUpComponent implements OnInit, AfterViewInit {
             Validators.maxLength(20)
           ]
         ]
-    
       },
       { validator: MustMatch('Password', 'RetypePassword') });
     this.signUpForm.controls.ShopName.valueChanges.subscribe((val: string) => {
@@ -110,7 +109,6 @@ export class SignUpComponent implements OnInit, AfterViewInit {
       this.translate.use(lang);
     });
     this.landingPageService.getSelectedPackage().subscribe(packageName => {
-      console.log(packageName);
       if (packageName) {
         this.signUpForm.patchValue({ PackageSelectedName: packageName })
       } else {
