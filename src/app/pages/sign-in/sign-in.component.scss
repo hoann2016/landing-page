@@ -1,0 +1,86 @@
+p{
+  text-transform: none;
+}
+.one-line {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.wrap_form_field .blue-text {
+  color: #009bdf;
+  font-size: 0.7em;
+  margin-left: 3px;
+}
+
+.title-input {
+  font-size: 0.8rem;
+}
+
+.header-form {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.have_acc1 p {
+  margin-top: 5px !important;
+}
+
+.header-page {
+  margin-bottom: 32px;
+}
+
+.one-item {
+  margin-top: 15px;
+}
+
+.two-item {
+  margin-top: 15px;
+}
+
+.fix-boder {
+  width: 100%;
+}
+
+.form-input-2 select {
+  width: 100%;
+}
+
+.form-input-1 select {
+  width: 100%;
+}
+
+.sugest-name {
+    p{
+        font-size: 0.8rem;
+    } 
+  .shop-domain {
+    margin-top: 5px;
+
+    padding-left: 5px;
+    p{
+        span{
+            color: #e59017;
+        }
+    }
+  }
+}
+
+.invalid-feedback {
+  font-size: 80%;
+  color: #dc3545;
+}
+
+.is-invalid {
+  border: 1px solid red;
+}
+
+// ================================
+// CSS's Phuong
+// ================================
+
+.section_signin {
+  background-color: #f9f9f9;
+  height: 100vh;
+  padding: 0;
+}

@@ -51,14 +51,14 @@ export class HeaderComponent implements OnInit {
               console.log('result from modal,reason: ', reason);
             });
   }
-  ShowBackModalLogin(evt){
-    console.log("event from signin   ",evt);
-    setTimeout(() => {
-      this.showLoginModal(this.signinModalRef) ;
-    }, 200);
+  // ShowBackModalLogin(evt){
+  //   console.log("event from signin   ",evt);
+  //   setTimeout(() => {
+  //     this.showLoginModal(this.signinModalRef) ;
+  //   }, 200);
    
     
-  }
+  // }
 
   // @HostListener Decorator
   @HostListener('window:scroll', [])

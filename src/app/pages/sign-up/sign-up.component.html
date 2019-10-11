@@ -12,25 +12,6 @@
             </ng-template>
 
             <div class="row">
-                <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                    <div class="wrap_left_signin">
-                        <div class="welcome-container">
-                            <div class="wel_img">
-                                <a href="#"><img src="assets/images/logo_ft.png"></a>
-                            </div>
-                            <h3 class="subtitle">Welcome to Ludiino Booking System</h3>
-                            <hr>
-                            <p>Get Ludiino Online Booking & Scheduling System to never miss a booking & book more
-                                clients</p>
-                        </div>
-                        <div class="device_mac">
-                            <img src="assets/images/sign-up/device.png" class="macbook_img">
-                        </div>
-                        <div class="ft_authen">
-                            <span>Powered by Ludiino ©2019</span>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 wrap_over_signin">
                     <div class="wrap_form_field">
                         <div class="header-page">
@@ -47,7 +28,7 @@
 
                                         <input type="text" name="CustomerName" maxlength="100" class=" fix-boder"
                                             formControlName="CustomerName" [ngClass]="{ 'is-invalid': f.CustomerName.touched && (f.CustomerName.errors?.required||formErrors?.CustomerName) }
-                                                ">
+                                                        ">
 
                                         <div *ngIf="isSubmitted && (formErrors?.CustomerName||f.CustomerName.errors)"
                                             class="text-danger">
@@ -103,13 +84,14 @@
                                                 *ngIf="f.ShopName.errors?.minlength||f.ShopName.errors?.maxlength">{{'Register.name-shop-length'|translate}}</span>
                                         </div>
                                     </div>
-                                <div class="sugest-name" *ngIf="shopDomain && !f.ShopName.errors">
+                                    <div class="sugest-name" *ngIf="shopDomain && !f.ShopName.errors">
                                         <div class="one-line"
                                             style="padding-top:10px;min-width: 15px;max-width: 50px; float:left;">
                                             <img src="../../../assets/images/sign-up/iconmonstr-light-bulb-16.svg">
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-xs-8 col-lg-10 one-line shop-domain">
-                                            <p>{{'Register.message-tips'|translate}}: <span>{{shopDomain}}</span>. {{'Register.message-tips2'|translate}}</p>
+                                            <p>{{'Register.message-tips'|translate}}: <span>{{shopDomain}}</span>.
+                                                {{'Register.message-tips2'|translate}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -127,8 +109,8 @@
                                             <option [value]="item.id" *ngFor="let item of allBusinessType">
                                                 {{'Home.Feature.ServicesName.'+item.id|translate}}</option>
                                             <!-- <option value="salon">{{'Register.shop-type1'|translate}}</option>
-                                            <option value="spa">{{'Register.shop-type2'|translate}}</option>
-                                            <option value="phongkham" selected>{{'Register.shop-type3'|translate}}</option> -->
+                                                    <option value="spa">{{'Register.shop-type2'|translate}}</option>
+                                                    <option value="phongkham" selected>{{'Register.shop-type3'|translate}}</option> -->
 
                                         </select>
                                         <div *ngIf="isSubmitted && f.ServiceName.errors" class="text-danger">
@@ -186,7 +168,7 @@
                                                 {{'Register.message-require'|translate}}</div>
                                             <div *ngIf="f.Password.errors.minlength||f.Password.errors.maxlength">
                                                 {{'Register.pasword-length'|translate}}
-                                            </div>                                           
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -202,7 +184,8 @@
                                                 {{'Register.message-require'|translate}}</div>
                                             <div *ngIf="f.RetypePassword.errors.mustMatch">
                                                 {{'Shared.FormCommon.mustMatch'|translate}}</div>
-                                            <div *ngIf="f.RetypePassword.errors.minlength||f.RetypePassword.errors.maxlength">
+                                            <div
+                                                *ngIf="f.RetypePassword.errors.minlength||f.RetypePassword.errors.maxlength">
                                                 {{'Register.pasword-length'|translate}}</div>
                                         </div>
                                     </div>
@@ -211,16 +194,16 @@
                             </div>
                             <div class="row one-item poli_form">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                    <p >
-                                       {{'Register.policy'|translate}}
+                                    <p>
+                                        {{'Register.policy'|translate}}
                                         <a href="javascript:void(0)"> {{'Register.policy-2'|translate}}</a>
                                         {{'Register.policy-3'|translate}}
                                     </p>
                                     <!-- <div *ngIf="isSubmitted">
-                                        <span >
-                                            {{'Register.message-require'|translate}}
-                                        </span>
-                                    </div> -->
+                                                <span >
+                                                    {{'Register.message-require'|translate}}
+                                                </span>
+                                            </div> -->
                                 </div>
                             </div>
                             <div class="row two-item poli_form">
@@ -231,8 +214,7 @@
                                 </div>
                                 <div class="one-line have_acc1">
                                     <p>{{'Register.have-account'|translate}} -<a href="javascript:void(0)"
-                                        (click)="showModalLogin(content)"   
-                                        > {{'Shared.SigninBtnLabel'|translate}}</a>
+                                            (click)="showModalLogin(content)"> {{'Shared.SigninBtnLabel'|translate}}</a>
                                     </p>
                                 </div>
 
@@ -243,6 +225,26 @@
 
 
                 </div>
+                <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                    <div class="wrap_left_signin">
+                        <div class="welcome-container">
+                            <div class="wel_img">
+                                <a href="#"><img src="assets/images/sign-up/logo-new.png"></a>
+                            </div>
+                            <!-- <h3 class="subtitle">Welcome to Ludiino Booking System</h3>
+                            <hr> -->
+                            <p>Get Ludiino Online Booking & Scheduling System to never miss a booking & book more
+                                clients</p>
+                        </div>
+                        <div class="device_mac">
+                            <img src="assets/images/sign-up/device-new.png" class="macbook_img">
+                        </div>
+                        <div class="ft_authen">
+                            <span>Powered by Ludiino ©2019</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
