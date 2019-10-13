@@ -61,13 +61,7 @@ export class SignInComponent implements OnInit, AfterViewInit {
     this.landingPageService.getLangSelected().subscribe(lang => {
       this.translate.use(lang);
     });
-    this.landingPageService.getSelectedPackage().subscribe(packageName => {
-      if (packageName) {
-        this.SignInForm.patchValue({ PackageSelectedName: packageName })
-      } else {
-        this.SignInForm.patchValue({ PackageSelectedName: '' })
-      }
-    })
+ 
   }
   onSubmit() {
     this.isSubmitted = true;

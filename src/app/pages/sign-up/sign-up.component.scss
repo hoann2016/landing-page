@@ -7,13 +7,14 @@ p{
 }
 
 .wrap_form_field .blue-text {
-  color: #009bdf;
+  color: #ff8d8d;
   font-size: 0.7em;
   margin-left: 3px;
 }
 
 .title-input {
-  font-size: 0.8rem;
+  font-size: 14px;
+  color: #8d8d8d;
 }
 
 .header-form {
@@ -27,7 +28,7 @@ p{
 }
 
 .header-page {
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 .one-item {
@@ -80,9 +81,25 @@ p{
 // ================================
 
 .section_signup {
-  background-color: #f9f9f9;
+  background-color: #f5f9f9;
   height: 100vh;
   padding: 0;
+}
+.section_signup a{
+  color: #00aeef;
+}
+.section_signup .register-form{
+  background-color: #ffffff;
+  padding: 40px 50px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px;
+}
+.section_signup .wel_img{
+margin-top: 60px;
+}
+.section_signup .title-sub-right{
+font-size: 19px;
+color: #ffffff;
+
 }
 
 .wrap_left_signin {
@@ -115,11 +132,12 @@ p{
 .device_mac {
   text-align: center;
   position: relative;
-  margin-top: 60px;
+  width: 750px;
+  left: -112px;
 }
 
 .wrap_left_signin .macbook_img {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
 }
@@ -136,40 +154,43 @@ p{
 .wrap_over_signin {
   overflow: auto;
   height: 100vh;
+  
 }
 
 .wrap_form_field {
   padding: 15px;
   width: 70%;
   margin: 0 auto;
+ 
 }
 
 .wrap_form_field .header-page {
   margin-top: 50px;
+  text-align: center;
 }
 
 .wrap_form_field input {
-  border-radius: 6px;
+  border-radius: 2px;
   border-style: none;
   border: 1px solid #e1e1e1;
   padding: 5px;
   outline: none;
-  height: 36px;
-  background-color: #fff;
+  height: 50px;
+  background-color: #ecf1f7;
   margin-top: 5px;
   font-size: 14px;
 }
 
 .wrap_form_field select {
-  border-radius: 6px;
-  border-style: none;
-  border: 1px solid #e1e1e1;
-  padding: 5px;
-  outline: none;
-  height: 36px;
-  background-color: #fff;
-  margin-top: 5px;
-  font-size: 14px;
+  border-radius: 2px;
+    border-style: none;
+    border: 1px solid #e1e1e1;
+    padding: 5px;
+    outline: none;
+    height: 50px;
+    background-color: #ecf1f7;
+    margin-top: 5px;
+    font-size: 14px;
 }
 
 .poli_form p {
@@ -177,7 +198,8 @@ p{
   font-size: 14px;
   margin-top: 0;
   letter-spacing: normal;
-  margin-bottom: 0;
+  margin-bottom: 5px;
+  padding: 10px 0;
 }
 
 .poli_form a:hover {
@@ -197,6 +219,8 @@ p{
   outline: none;
   border: none;
   cursor: pointer;
+  width: 100%;
+  height: 50px;
 }
 
 .wrap_form_field button:hover {
@@ -209,7 +233,7 @@ p{
 }
 
 .section_signup a:focus {
-  color: blue !important;
+  color: #00aeef !important;
 
 }
 
@@ -220,4 +244,12 @@ p{
 
 .text-danger{
     font-size: 13px!important;
+}
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
 }
