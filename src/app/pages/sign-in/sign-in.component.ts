@@ -43,8 +43,7 @@ export class SignInComponent implements OnInit, AfterViewInit {
   public buildForm() {
     this.SignInForm = this.fb.group(
       {
-        
-        Email: ['', [Validators.required, Validators.pattern(/^[a-z0-9]+(?:\.[a-z0-9]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i)]],
+        Email: [''],
         Password: [
           '',
           [
@@ -54,14 +53,12 @@ export class SignInComponent implements OnInit, AfterViewInit {
         ]
       }
      );
-   
   }
   ngOnInit() {
     this.buildForm();
     this.landingPageService.getLangSelected().subscribe(lang => {
       this.translate.use(lang);
     });
- 
   }
   onSubmit() {
     this.isSubmitted = true;
@@ -77,9 +74,8 @@ export class SignInComponent implements OnInit, AfterViewInit {
           setTimeout(() => {
             this.showLoading = false;
           }, 3000);
-          
+          // tslint:disable-next-line: triple-equals
           if (response.success == true) {
-       
           } else {
             return;
           }
