@@ -139,7 +139,7 @@ color: #ffffff;
   width: 100%;
   bottom: 0%;
   height: 70%;
-  background-image: url(http://127.0.0.1:4200/assets/images/sign-up/device-new.png);
+  background-image: url(/assets/images/sign-up/device-new.png);
   background-repeat: no-repeat;
   background-position: 25%;
   background-size: cover;
@@ -182,19 +182,14 @@ color: #ffffff;
   text-align: center;
 }
 .wrap_form_field input {
-  border-radius: 5px;
   border-style: none;
   padding: 5px;
   outline: none;
-  height: 40px;
-  background-color: #ecf1f7;
   margin-top: 5px;
   font-size: 14px;
   height: 40px;
-  opacity: 0.1;
   border-radius: 3px;
-  background-color: #4771af;
-  font-size: 14px;
+  background-color: #edf1f7;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -202,6 +197,7 @@ color: #ffffff;
   letter-spacing: normal;
   text-align: left;
   color: rgba(0, 0, 0, 0.9);
+  padding-left: 45px;
 }
 
 .wrap_form_field select {
@@ -214,17 +210,17 @@ color: #ffffff;
     margin-top: 5px;
     font-size: 14px;
     height: 40px;
-    opacity: 0.1;
     border-radius: 3px;
-    background-color: #4771af;
+    opacity: 0.9;
+    font-family: ProximaNova;
     font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: rgba(0, 0, 0, 0.9);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.9);
 }
 
 
@@ -299,4 +295,24 @@ color: #ffffff;
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
   background: #FF0000;
+}
+.img-email{
+  position: absolute;
+  left: 27px;
+  top: 43px;
+}
+.img-password{
+  position: absolute;
+  left: 27px;
+  top: 40px;
+}
+
+.gach{
+  position: absolute;
+  width: 1px;
+  height: 19px;
+  opacity: 0.6;
+  background-color: #9fb2c9;
+  top: 38px;
+  left: 50px;
 }
