@@ -15,33 +15,23 @@
 
                                 <form class="login-cus-form" [formGroup]="signInForm">
                                     <div class="row">
-
-
                                         <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                            <span class="title-input">{{'Register.Email'|translate}}</span>
-                                           
+                                            <span class="title-input">Email</span>
+
                                             <div class="form-input-1">
                                                 <input type="email" class="fix-boder" formControlName="Email"
                                                     required="required"
                                                     [ngClass]="{ 'is-invalid': f.Email.touched && f.Email.errors?.required }">
-                                                    <img class="img-email" src="/assets/images/sign-up/mail.png"/>
-                                                    <div class="gach"></div>
+                                                <img class="img-email" src="/assets/images/sign-up/mail.png" />
+                                                <div class="gach"></div>
                                             </div>
-                                            <div *ngIf="isSubmitted && f.Email.errors" class="text-danger">
-                                                <div *ngIf="f.Email.errors?.required">
-                                                    {{'Login.message-require'|translate}}
-                                                </div>
-
-                                                <div *ngIf="f.Email.errors?.pattern">
-                                                    {{'Login.message-format-3'|translate}}
-                                                </div>
-                                            </div>
+                                            
                                         </div>
 
                                     </div>
                                     <div class="row mt-4">
                                         <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                            <span class="title-input">{{'Register.Password'|translate}}</span>
+                                            <span class="title-input">Password</span>
                                             <div class="form-input-1">
                                                 <input type="password" class=" fix-boder" formControlName="Password"
                                                     maxlength="20" required="required"
@@ -54,26 +44,27 @@
                                                         {{'Register.pasword-length'|translate}}
                                                     </div>
                                                 </div>
-                                                <img class="img-password" src="/assets/images/sign-up/password.png"/>
+                                                <img class="img-password" src="/assets/images/sign-up/password.png" />
                                                 <div class="gach"></div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row mt-4">
-                                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                                    <div class="form-input-2">
-                                                            <button (click)="onSubmit()">LOGIN</button>
-                                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                            <div class="form-input-2">
+                                                <button (click)="onSubmit()">LOGIN</button>
                                             </div>
                                         </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>
                         <div class="col-xl-12 text-center">
-                              <div class="title-fogot-pass"> <a href="/pages/sign-in">Forgot password?</a></div> 
-                         <div class="title-register"> If you don't have an Account <a href="/pages/sign-up">Register</a> now!</div>
-                               
-                                
+                            <div class="title-fogot-pass"> <a href="/pages/sign-in">Forgot password?</a></div>
+                            <div class="title-register"> If you don't have an Account <a
+                                    href="/pages/sign-up">Register</a> now!</div>
+
+
                         </div>
                     </div>
 

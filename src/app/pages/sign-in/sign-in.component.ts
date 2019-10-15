@@ -20,11 +20,11 @@ export class SignInComponent implements OnInit, AfterViewInit {
   shopDomain: string;
   isSubmitted: boolean = false;
 
-  SignInForm: FormGroup;
+  signInForm: FormGroup;
   // variable
   selectedPackage: string;
   get f() {
-    return this.SignInForm.controls;
+    return this.signInForm.controls;
   }
   constructor(
     public fb: FormBuilder,
@@ -36,14 +36,12 @@ export class SignInComponent implements OnInit, AfterViewInit {
     private router: Router,
     private handlingFormValidatorService: HandlingFormValidatorService
   ) { }
-  public allPackage;
-  public allBusinessType;
   contentLoading: string;
   showLoading: boolean = false;
   public buildForm() {
-    this.SignInForm = this.fb.group(
+    this.signInForm = this.fb.group(
       {
-        Email: [''],
+         Email: ['', [Validators.required, Validators.pattern(/^[a-z0-9]+(?:\.[a-z0-9]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i)]],
         Password: [
           '',
           [
@@ -51,32 +49,38 @@ export class SignInComponent implements OnInit, AfterViewInit {
             Validators.maxLength(20)
           ]
         ]
-      }
-     );
+      });
+
   }
   ngOnInit() {
     this.buildForm();
+    
     this.landingPageService.getLangSelected().subscribe(lang => {
       this.translate.use(lang);
     });
+
   }
+
   onSubmit() {
     this.isSubmitted = true;
-    if (this.SignInForm.valid) {
+    if (this.signInForm.valid) {
       const formImport: UserLogin = {
-        password: this.SignInForm.controls.Password.value,
-        email: this.SignInForm.controls.Email.value
+       
+        password: this.signInForm.controls.Password.value,
+        email: this.signInForm.controls.Email.value
       };
       this.showLoading = true;
-      this.contentLoading = this.translate.instant('Login.SendingStatus')
+      this.contentLoading = this.translate.instant('Register.SendingStatus')
       this.appService.logIn(formImport).subscribe(
         response => {
           setTimeout(() => {
             this.showLoading = false;
           }, 3000);
-          // tslint:disable-next-line: triple-equals
+          
           if (response.success == true) {
+            console.log(2);
           } else {
+            console.log(31);
             return;
           }
         },
@@ -88,7 +92,8 @@ export class SignInComponent implements OnInit, AfterViewInit {
         }
       );
     } else {
-     // this.handlingFormValidatorService.showErrorForm(this.SignInForm, 'SignIn');
+      console.log(4);
+     this.handlingFormValidatorService.showErrorForm(this.signInForm, 'SignUp');
     }
   }
   convertViToEn(str: string): string {
