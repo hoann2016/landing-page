@@ -83,7 +83,7 @@ export class SignInComponent implements OnInit, AfterViewInit {
         }
       );
     } else {
-     this.handlingFormValidatorService.showErrorForm(this.signInForm, 'SignUp');
+     //this.handlingFormValidatorService.showErrorForm(this.signInForm, 'SignUp');
     }
   }
   convertViToEn(str: string): string {

@@ -6,6 +6,9 @@
 
                 <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 wrap_over_signin">
                     <div class="row">
+                            <div class="col-lg-12 d-lg-none">
+                                    <a href="#"><img class="img-top" src="assets/images/sign-up/logo-new.png"></a>
+                           </div>
                         <div class="col-xl-12">
                             <div class="wrap_form_field">
                                 <div class="header-page">
@@ -22,10 +25,19 @@
                                                 <input type="email" class="fix-boder" formControlName="Email"
                                                     required="required"
                                                     [ngClass]="{ 'is-invalid': f.Email.touched && f.Email.errors?.required }">
+                                                   
                                                 <img class="img-email" src="/assets/images/sign-up/mail.png" />
                                                 <div class="gach"></div>
                                             </div>
-                                            
+                                            <div *ngIf="isSubmitted && f.Email.errors" class="text-danger">
+                                                    <div *ngIf="f.Email.errors?.required">
+                                                        {{'Register.message-require'|translate}}
+                                                    </div>
+    
+                                                    <div *ngIf="f.Email.errors?.pattern">
+                                                        {{'Register.message-format-3'|translate}}
+                                                    </div>
+                                                </div>
                                         </div>
 
                                     </div>
@@ -71,7 +83,7 @@
 
 
                 </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 d-none d-lg-block">
                     <div class="wrap_left_signin">
                         <div class="welcome-container">
                             <div class="wel_img">

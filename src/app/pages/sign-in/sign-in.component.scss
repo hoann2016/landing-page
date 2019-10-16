@@ -203,7 +203,6 @@ color: #ffffff;
 .wrap_form_field select {
   border-radius: 2px;
     border-style: none;
-    border: 1px solid #e1e1e1;
     padding: 5px;
     outline: none;
     background-color: #ecf1f7;
@@ -212,7 +211,6 @@ color: #ffffff;
     height: 40px;
     border-radius: 3px;
     opacity: 0.9;
-    font-family: ProximaNova;
     font-size: 14px;
     font-weight: normal;
     font-style: normal;
@@ -255,7 +253,7 @@ color: #ffffff;
   border-radius: 3px;
   box-shadow: 0px 3.5px 10.5px 0 rgba(0, 0, 0, 0.05);
   background-image: linear-gradient(to bottom, #ffc066, #f39a1b);
-  font-family: ProximaNova;
+
   font-size: 16px;
   font-weight: 600;
   font-style: normal;
@@ -315,4 +313,18 @@ color: #ffffff;
   background-color: #9fb2c9;
   top: 38px;
   left: 50px;
+}
+.img-top{
+  width: 150px;
+  margin: 10% 10% 0;
+}
+
+
+@media only screen and (max-width:768px) {
+  .wrap_form_field {
+    padding: 15px;
+    width: 50%;
+    margin: 0% auto 0;
+   
+  }
 }
