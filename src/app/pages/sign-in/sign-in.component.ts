@@ -54,7 +54,6 @@ export class SignInComponent implements OnInit, AfterViewInit {
   }
   ngOnInit() {
     this.buildForm();
-    
     this.landingPageService.getLangSelected().subscribe(lang => {
       this.translate.use(lang);
     });
@@ -65,24 +64,16 @@ export class SignInComponent implements OnInit, AfterViewInit {
     this.isSubmitted = true;
     if (this.signInForm.valid) {
       const formImport: UserLogin = {
-       
         password: this.signInForm.controls.Password.value,
         email: this.signInForm.controls.Email.value
       };
       this.showLoading = true;
-      this.contentLoading = this.translate.instant('Register.SendingStatus')
+      this.contentLoading = this.translate.instant('Register.SendingStatus');
       this.appService.logIn(formImport).subscribe(
         response => {
           setTimeout(() => {
             this.showLoading = false;
           }, 3000);
-          
-          if (response.success == true) {
-            console.log(2);
-          } else {
-            console.log(31);
-            return;
-          }
         },
         err => {
           setTimeout(() => {
@@ -92,7 +83,6 @@ export class SignInComponent implements OnInit, AfterViewInit {
         }
       );
     } else {
-      console.log(4);
      this.handlingFormValidatorService.showErrorForm(this.signInForm, 'SignUp');
     }
   }
