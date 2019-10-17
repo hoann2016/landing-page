@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
+import { environment } from 'src/environments/environment';
 import { LandingPageService } from 'src/app/shared/services/landing-page.service';
 import { MustMatch } from './must-match.validator';
 import { AppService } from 'src/app/app.service';
@@ -83,7 +84,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
       },
       { validator: MustMatch('Password', 'RetypePassword') });
     this.signUpForm.controls.ShopName.valueChanges.subscribe((val: string) => {
-      this.shopDomain = `${this.convertViToEn(val.toLowerCase().replace(/ /g, '')).toLowerCase()}.ludiino.com`;
+      this.shopDomain = `${this.convertViToEn(val.toLowerCase().replace(/ /g, '')).toLowerCase()}.${environment.rootip}`;
     });
   }
   ngOnInit() {
@@ -149,8 +150,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
           setTimeout(() => {
             this.showLoading = false;
           }, 3000);
-          
-          if (response.success == true) {
+          if (response.success === true) {
             const packageId = Number(this.signUpForm.controls.PackageSelectedName.value);
             if (packageId === 2) {
               this.toastr.success("Redirect to dashboard ...")
