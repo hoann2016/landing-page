@@ -6,7 +6,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 
 import {LandingPageService} from '../services/landing-page.service';
 import {WINDOW} from '../services/windows.service';
-
+import { Router } from '@angular/router';
 declare var $: any;
 
 @Component({
@@ -25,7 +25,9 @@ export class HeaderComponent implements OnInit {
       @Inject(DOCUMENT) private document: Document,
       @Inject(WINDOW) private window, private modalService: NgbModal,
       private landingPageService: LandingPageService,
-      private translate: TranslateService) {}
+      private translate: TranslateService,
+      private router: Router
+      ) {}
 
   ngOnInit() {
     $.getScript('./assets/js/script.js');
@@ -71,5 +73,9 @@ export class HeaderComponent implements OnInit {
     } else {
       this.darkHeader = false;
     }
+  }
+  RedirectToLogin() {
+    this.modalService.dismissAll();
+    this.router.navigate(['/pages/sign-in']);
   }
 }

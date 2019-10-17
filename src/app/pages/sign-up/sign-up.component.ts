@@ -204,4 +204,8 @@ export class SignUpComponent implements OnInit, AfterViewInit {
     str = str.replace(/\u02C6|\u0306|\u031B/g, '');  // mũ â (ê), mũ ă, mũ ơ (ư)
     return str;
   }
+  RedirectToLogin() {
+    this.modalService.dismissAll();
+    this.router.navigate(['/pages/sign-in']);
+  }
 }
