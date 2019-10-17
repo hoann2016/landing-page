@@ -208,4 +208,8 @@ export class SignUpComponent implements OnInit, AfterViewInit {
     this.modalService.dismissAll();
     this.router.navigate(['/pages/sign-in']);
   }
+  RedirectToHome() {
+    this.modalService.dismissAll();
+    this.router.navigate(['/']);
+  }
 }
