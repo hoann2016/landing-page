@@ -7,6 +7,7 @@ import { LandingPageService } from 'src/app/shared/services/landing-page.service
 import { MustMatch } from './must-match.validator';
 import { AppService } from 'src/app/app.service';
 import { UserRegister } from 'src/app/shared/models/user-models/user-register.model';
+import { UserOrder } from 'src/app/shared/models/user-models/user-order.model';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { HandlingFormValidatorService } from 'src/app/shared/services/handling-form-validator.service';
@@ -24,6 +25,9 @@ export class SignUpComponent implements OnInit, AfterViewInit {
   signUpForm: FormGroup;
   // variable
   selectedPackage: string;
+  userOrder: UserOrder;
+  freePackage;
+  orderResponse;
   get f() {
     return this.signUpForm.controls;
   }
@@ -127,6 +131,28 @@ export class SignUpComponent implements OnInit, AfterViewInit {
           console.log('result from modal,reason: ', reason);
         });
   }
+  getSimplePackage(packageId: string) {
+    return new Promise((resolve, reject) => {
+      this.appService.getActiveSimplePackageById(packageId).subscribe((response) =>{
+        if (response.success === true) {
+          resolve(response.data.packages);
+        }
+      },err => {
+        reject(err); 
+      });
+    });
+  }
+  submitOrder(userOrder: UserOrder) {
+    return new Promise((resolve, reject) => {
+      this.appService.submitOrder(userOrder).subscribe((response) =>{
+        if (response.success === true) {
+          resolve(response.data);
+        }
+      },err => {
+        reject(err); 
+      });
+    })
+  }
   onSubmit() {
     this.isSubmitted = true;
     if (this.signUpForm.valid) {
@@ -146,22 +172,39 @@ export class SignUpComponent implements OnInit, AfterViewInit {
       this.showLoading = true;
       this.contentLoading = this.translate.instant('Register.SendingStatus')
       this.appService.register(formImport).subscribe(
-        response => {
-          setTimeout(() => {
-            this.showLoading = false;
-          }, 3000);
+        async response => {
           if (response.success === true) {
             const packageId = Number(this.signUpForm.controls.PackageSelectedName.value);
-            if (packageId === 2) {
-              this.toastr.success("Redirect to dashboard ...")
-              window.location.href = this.appService.merchangePath;
-            } else {
-              const redirectValues = {...response.data};
-              redirectValues.selectedConfigPackage = packageId;
-              this.toastr.success("Redirect to payment page");
-              this.router.navigateByUrl('/pages/payment',
-                { state: redirectValues }
-              );
+            try {
+              if (packageId === 2) {
+                const packages = await this.getSimplePackage(String(packageId));
+                this.freePackage = packages[0];
+                const userOrder = {
+                  merchant_id: response.data.id,
+                  currency_id: 1,
+                  package_id: this.freePackage.id,
+                  channel_id: 1,
+                  sub_totals: this.freePackage.price,
+                  tax: 0,
+                  grand_totals: this.freePackage.price - (this.freePackage.price * 0 /100)
+                }
+                this.orderResponse = await this.submitOrder(userOrder);
+                if ( this.orderResponse ) {
+                  this.showLoading = false;
+                  this.toastr.success("Redirect to dashboard ...")
+                  window.location.href = this.appService.merchangePath;
+                }
+              } else {
+                const redirectValues = {...response.data};
+                redirectValues.selectedConfigPackage = packageId;
+                this.toastr.success("Redirect to payment page");
+                this.router.navigateByUrl('/pages/payment',
+                  { state: redirectValues }
+                );
+              }
+            } catch(error) {
+              this.showLoading = false;
+              throw error;
             }
           } else {
             return;
