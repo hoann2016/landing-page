@@ -6,7 +6,7 @@ p{
   overflow: hidden;
 }
 
-.wrap_form_field .blue-text {
+.wrap-form-field .blue-text {
   color: #ff8d8d;
   font-size: 0.7em;
   margin-left: 3px;
@@ -23,7 +23,7 @@ p{
   margin-bottom: 10px;
 }
 
-.have_acc1 p {
+.have-acc1 p {
   margin-top: 5px !important;
 }
 
@@ -80,30 +80,30 @@ p{
 // CSS's Phuong
 // ================================
 
-.section_signup {
+.section-signup {
   background-color: #f5f9f9;
   height: 100vh;
   padding: 0;
 }
-.section_signup a{
+.section-signup a{
   color: #00aeef;
 }
-.section_signup .register-form{
+.section-signup .register-form{
   background-color: #ffffff;
   padding: 30px 30px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px;
   border-radius: 5px;
 }
-.section_signup .wel_img{
+.section-signup .wel-img{
 margin-top: 60px;
 }
-.section_signup .title-sub-right{
+.section-signup .title-sub-right{
 font-size: 19px;
 color: #ffffff;
 
 }
 
-.wrap_left_signin {
+.wrap-left-signin {
   position: relative;
   background-image: url(/assets/images/sign-up/bg.png);
   background-size: cover;
@@ -112,7 +112,7 @@ color: #ffffff;
   color: #fff;
 }
 
-.welcome-container .wel_img img {
+.welcome-container .wel-img img {
   width: 180px;
 }
 
@@ -133,7 +133,7 @@ color: #ffffff;
   padding: 0 30px;
 }
 
-.device_mac {
+.device-mac {
   width: 100%;
   bottom: 0%;
   height: 70%;
@@ -145,14 +145,14 @@ color: #ffffff;
 
 }
 
-.wrap_left_signin .macbook_img {
+.wrap-left-signin .macbook_img {
   width: 100%;
   position: absolute;
   left: 20px;
   bottom: 50px;
 }
 
-.ft_authen span {
+.ft-authen span {
   position: absolute;
   bottom: 30px;
   text-align: center;
@@ -161,26 +161,26 @@ color: #ffffff;
   opacity: 0.7;
 }
 
-.wrap_over_signin {
+.wrap-over-signin {
   overflow: auto;
   height: 100vh;
   background-color: #f5f6f7;
   
 }
 
-.wrap_form_field {
+.wrap-form-field {
   padding: 15px;
   width: 70%;
   margin: 0% auto 0;
  
 }
 
-.wrap_form_field .header-page {
+.wrap-form-field .header-page {
   margin-top: 50px;
   text-align: center;
 }
 
-.wrap_form_field input {
+.wrap-form-field input {
   border-style: none;
   padding: 5px;
   outline: none;
@@ -198,7 +198,7 @@ color: #ffffff;
   color: rgba(0, 0, 0, 0.9);
 }
 
-.wrap_form_field select {
+.wrap-form-field select {
     border-style: none;
     padding: 5px;
     outline: none;
@@ -217,7 +217,7 @@ color: #ffffff;
   color: rgba(0, 0, 0, 0.9);
 }
 
-.poli_form p {
+.poli-form p {
   text-transform: none;
   font-size: 14px;
   margin-top: 0;
@@ -226,16 +226,16 @@ color: #ffffff;
   padding: 10px 0;
 }
 
-.poli_form a:hover {
+.poli-form a:hover {
   color: #f49c1e;
 }
 
-.poli_form input {
+.poli-form input {
   height: 14px !important;
   margin-top: 15px;
 }
 
-.wrap_form_field button {
+.wrap-form-field button {
   background-color: #f49c1e;
   color: #fff;
   padding: 7px 20px;
@@ -259,7 +259,7 @@ color: #ffffff;
   color: var(--white);
 }
 
-.wrap_form_field button:hover {
+.wrap-form-field button:hover {
   background-color: #e59017;
 }
 
@@ -268,12 +268,12 @@ color: #ffffff;
 
 }
 
-.section_signup a:focus {
+.section-signup a:focus {
   color: #00aeef !important;
 
 }
 
-.section_signup .ip_checkbox {
+.section-signup .ip_checkbox {
   margin-top: 0px;
 }
 

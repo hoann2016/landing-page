@@ -6,7 +6,7 @@ p{
   overflow: hidden;
 }
 
-.wrap_form_field .blue-text {
+.wrap-form-field .blue-text {
   color: #ff8d8d;
   font-size: 0.7em;
   margin-left: 3px;
@@ -81,31 +81,31 @@ p{
 // CSS's Phuong
 // ================================
 
-.section_signin {
+.section-signin {
   background-color: #f5f9f9;
   height: 100vh;
   padding: 0;
 }
 
-.section_signin a{
+.section-signin a{
   color: #00aeef;
 }
-.section_signin .login-cus-form{
+.section-signin .login-cus-form{
   background-color: #ffffff;
   padding: 30px 30px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px;
   border-radius: 5px;
 }
-.section_signin .wel_img{
+.section-signin .wel-img{
 margin-top: 60px;
 }
-.section_signin .title-sub-right{
+.section-signin .title-sub-right{
 font-size: 19px;
 color: #ffffff;
 
 }
 
-.section_signin .wrap_left_signin {
+.section-signin .wrap-left-signin {
   position: relative;
   background-image: url(/assets/images/sign-up/bg.png);
   background-size: cover;
@@ -114,28 +114,28 @@ color: #ffffff;
   color: #fff;
 }
 
-.section_signin .welcome-container .wel_img img {
+.section-signin .welcome-container .wel-img img {
   width: 180px;
 }
 
-.section_signin .welcome-container h3 {
+.section-signin .welcome-container h3 {
   color: #fff;
   margin: 10px 0 0 0;
 }
 
-.section_signin .welcome-container hr {
+.section-signin .welcome-container hr {
   border-top: 1px solid #ffffff5c;
 }
 
-.section_signin .welcome-container p {
+.section-signin .welcome-container p {
   color: #fff;
   opacity: 0.7;
 }
-.section_signin .welcome-container{
+.section-signin .welcome-container{
   padding: 0 30px;
 }
 
-.section_signin .device_mac {
+.section-signin .device-mac {
   width: 100%;
   bottom: 0%;
   height: 70%;
@@ -147,14 +147,14 @@ color: #ffffff;
 
 }
 
-.section_signin .wrap_left_signin .macbook_img {
+.section-signin .wrap-left-signin .macbook_img {
   width: 100%;
   position: absolute;
   left: 20px;
   bottom: 50px;
 }
 
-.section_signin .ft_authen span {
+.section-signin .ft-authen span {
   position: absolute;
   bottom: 30px;
   text-align: center;
@@ -163,25 +163,25 @@ color: #ffffff;
   opacity: 0.7;
 }
 
-.section_signin .wrap_over_signin {
+.section-signin .wrap-over-signin {
   overflow: auto;
   height: 100vh;
   background-color: #f5f6f7;
   
 }
 
-.section_signin .wrap_form_field {
+.section-signin .wrap-form-field {
   padding: 15px;
   width: 50%;
   margin: 15% auto 0;
  
 }
 
-.section_signin .wrap_form_field .header-page {
+.section-signin .wrap-form-field .header-page {
   margin-top: 50px;
   text-align: center;
 }
-.section_signin .wrap_form_field input {
+.section-signin .wrap-form-field input {
   border-style: none;
   padding: 5px;
   outline: none;
@@ -201,7 +201,7 @@ color: #ffffff;
 }
 
 
-.section_signin .wrap_form_field button {
+.section-signin .wrap-form-field button {
   background-color: #f49c1e;
   color: #fff;
   padding: 7px 20px;
@@ -225,48 +225,48 @@ color: #ffffff;
   color: var(--white);
 }
 
-.section_signin .wrap_form_field button:hover {
+.section-signin .wrap-form-field button:hover {
   background-color: #e59017;
 }
 
-.section_signin .btn_submit_signup button {
+.section-signin .btn_submit_signup button {
   margin: 0 10px 0 15px;
 
 }
 
-.section_signin a:focus {
+.section-signin a:focus {
   color: #00aeef !important;
 
 }
 
-.section_signin .ip_checkbox {
+.section-signin .ip_checkbox {
   margin-top: 0px;
 }
 
 
-.section_signin .text-danger{
+.section-signin .text-danger{
     font-size: 13px!important;
 }
-.section_signin ::-webkit-scrollbar {
+.section-signin ::-webkit-scrollbar {
   width: 0px;  /* Remove scrollbar space */
   background: transparent;  /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
-.section_signin ::-webkit-scrollbar-thumb {
+.section-signin ::-webkit-scrollbar-thumb {
   background: #FF0000;
 }
-.section_signin .img-email{
+.section-signin .img-email{
   position: absolute;
   left: 27px;
   top: 43px;
 }
-.section_signin .img-password{
+.section-signin .img-password{
   position: absolute;
   left: 27px;
   top: 40px;
 }
 
-.section_signin .gach{
+.section-signin .gach{
   position: absolute;
   width: 1px;
   height: 19px;
@@ -275,14 +275,14 @@ color: #ffffff;
   top: 38px;
   left: 50px;
 }
-.section_signin .img-top{
+.section-signin .img-top{
   width: 150px;
   margin: 10% 10% 0;
 }
 
 
 @media only screen and (max-width:768px) {
-  .section_signin .wrap_form_field {
+  .section-signin .wrap-form-field {
     padding: 15px;
     width: 50%;
     margin: 0% auto 0;
