@@ -71,9 +71,15 @@ export class SignInComponent implements OnInit, AfterViewInit {
       this.contentLoading = this.translate.instant('Register.SendingStatus');
       this.appService.logIn(formImport).subscribe(
         response => {
+
           setTimeout(() => {
             this.showLoading = false;
           }, 3000);
+
+             
+          if (response.success == true) {
+            window.location.href = this.appService.merchangePath;
+          }
         },
         err => {
           setTimeout(() => {
@@ -120,4 +126,9 @@ export class SignInComponent implements OnInit, AfterViewInit {
     this.modalService.dismissAll();
     this.router.navigate(['/']);
   }
+  RedirectToAdmin() {
+    this.modalService.dismissAll();
+    this.router.navigate(['http://45.77.250.47:84']);
+  }
+  
 }

@@ -284,8 +284,25 @@ color: #ffffff;
 @media only screen and (max-width:768px) {
   .section-signin .wrap-form-field {
     padding: 15px;
-    width: 50%;
+    width: 100%;
     margin: 0% auto 0;
    
   }
 }
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 991px)  {  
+  .section-signin .wrap-form-field {
+  padding: 15px;
+  width: 80%;
+  margin: 0% auto 0;
+ 
+}}
+@media only screen 
+and (min-width : 992px)   {  
+  .section-signin .wrap-form-field {
+  padding: 15px;
+  width: 60%;
+  margin: 0% auto 0;
+ 
+}}
