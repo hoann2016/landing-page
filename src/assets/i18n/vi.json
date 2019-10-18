@@ -96,9 +96,11 @@
     },
     "SignIn": {
       "SendingStatus":"Đăng nhập..",
+      "Login":"Đăng nhập",
       "KeepLogedIn": "Giữ tôi luôn đăng nhập",
       "IfDontHaveAcc": "Nếu bạn chưa có tài khoản",
-      "RegisterNow": "Đăng Ký Ngay",      
+      "Register": "Đăng Ký",      
+      "Now": "ngay",  
       "ResetYourPassword": "Điền địa chỉ email để nhận mật khẩu mới",
       "ForgotPassword": "Quên mật khẩu",
       "SignInEmail.Email":"Email",

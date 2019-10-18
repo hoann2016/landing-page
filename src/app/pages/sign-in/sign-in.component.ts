@@ -68,16 +68,14 @@ export class SignInComponent implements OnInit, AfterViewInit {
         email: this.signInForm.controls.Email.value
       };
       this.showLoading = true;
-      this.contentLoading = this.translate.instant('Register.SendingStatus');
+      this.contentLoading = this.translate.instant('SignIn.SendingStatus');
       this.appService.logIn(formImport).subscribe(
         response => {
 
           setTimeout(() => {
             this.showLoading = false;
           }, 3000);
-
-             
-          if (response.success == true) {
+if (response.success == true) {
             window.location.href = this.appService.merchangePath;
           }
         },
@@ -130,5 +128,4 @@ export class SignInComponent implements OnInit, AfterViewInit {
     this.modalService.dismissAll();
     this.router.navigate(['http://45.77.250.47:84']);
   }
-  
 }
