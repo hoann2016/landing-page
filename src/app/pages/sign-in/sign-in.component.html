@@ -1,0 +1,113 @@
+<section class="section-signin">
+    <p-loading [content-header]="contentLoading" [is-display]="showLoading"></p-loading>
+    <div class="container-full-width">
+        <div class="wrap">
+            <div class="row">
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 wrap-over-signin">
+                    <div class="row">
+                            <div class="col-lg-12 d-lg-none">
+                                    <a  href="javascript:void(0)" (click)="RedirectTHome"><img class="img-top" src="assets/images/sign-up/logo-new.png"></a>
+                           </div>
+                        <div class="col-xl-12">
+                            <div class="wrap-form-field">
+                                <div class="header-page">
+                                    <h2 class="header-form"> Login</h2>
+
+                                </div>
+
+                                <form class="login-cus-form" [formGroup]="signInForm">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                            <span class="title-input">{{'Register.Email'|translate}}</span>
+
+                                            <div class="form-input-1">
+                                                <input type="email" class="fix-boder" formControlName="Email"
+                                                    required="required"
+                                                    [ngClass]="{ 'is-invalid': f.Email.touched && f.Email.errors?.required }">
+                                                   
+                                                <img class="img-email" src="/assets/images/sign-up/mail.png" />
+                                                <div class="gach"></div>
+                                            </div>
+                                            <div *ngIf="isSubmitted && f.Email.errors" class="text-danger">
+                                                    <div *ngIf="f.Email.errors?.required">
+                                                        {{'Register.message-require'|translate}}
+                                                    </div>
+    
+                                                    <div *ngIf="f.Email.errors?.pattern">
+                                                        {{'Register.message-format-3'|translate}}
+                                                    </div>
+                                                </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                            <span class="title-input">{{'Register.Password'|translate}}</span>
+                                            <div class="form-input-1">
+                                                <input type="password" class=" fix-boder" formControlName="Password"
+                                                    maxlength="20" required="required"
+                                                    [ngClass]="{ 'is-invalid': f.Password.touched && f.Password.errors }">
+                                                <div *ngIf=" isSubmitted &&f.Password.errors" class="text-danger">
+                                                    <div *ngIf="f.Password.errors.required">
+                                                        {{'Register.message-require'|translate}}</div>
+                                                    <div
+                                                        *ngIf="f.Password.errors.minlength||f.Password.errors.maxlength">
+                                                        {{'Register.pasword-length'|translate}}
+                                                    </div>
+                                                </div>
+                                                <img class="img-password" src="/assets/images/sign-up/password.png" />
+                                                <div class="gach"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                            <div class="form-input-2">
+                                                <button (click)="onSubmit()">LOGIN</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 text-center">
+                            <div class="title-fogot-pass"> <a href="/pages/sign-in">Forgot password?</a></div>
+                            <div class="title-register"> If you don't have an Account <a href="javascript:void(0)" (click)="RedirectToRegister()">Register</a> now!</div>
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 d-none d-lg-block">
+                    <div class="wrap-left-signin">
+                        <div class="welcome-container">
+                            <div class="wel-img">
+                                <a href="#"><img src="assets/images/sign-up/logo-new.png"></a>
+                            </div>
+                            <!-- <h3 class="subtitle">Welcome to Ludiino Booking System</h3>
+                            <hr> -->
+                            <div class="title-sub-right">Get Ludiino Online Booking & Scheduling System to never
+                                miss a
+                                booking & book more
+                                clients</div>
+                        </div>
+                        <div class="device-mac">
+                            <!-- <img src="assets/images/sign-up/device-new.png" class="macbook_img"> -->
+                        </div>
+                        <div class="ft-authen">
+                            <span>Powered by Ludiino ©2019</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</section>

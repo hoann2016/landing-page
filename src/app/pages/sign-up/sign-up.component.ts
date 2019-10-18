@@ -93,14 +93,14 @@ export class SignUpComponent implements OnInit, AfterViewInit {
   }
   ngOnInit() {
     this.buildForm();
-    this.appService.getActiveConfigPackage().subscribe(pk => {
-      if (pk.success == true) {
-        this.allPackage = pk.data.packages;
-      }
-    },
-      err => {
-        throw err;
-      });
+    // this.appService.getActiveConfigPackage().subscribe(pk => {
+    //   if (pk.success == true) {
+    //     this.allPackage = pk.data.packages;
+    //   }
+    // },
+    //   err => {
+    //     throw err;
+    //   });
     this.appService.getAllBusiness().subscribe(bs => {
       this.allBusinessType = [];
       if (bs.success == true) {
@@ -246,5 +246,13 @@ export class SignUpComponent implements OnInit, AfterViewInit {
       '');  // huyền, sắc, hỏi, ngã, nặng
     str = str.replace(/\u02C6|\u0306|\u031B/g, '');  // mũ â (ê), mũ ă, mũ ơ (ư)
     return str;
+  }
+  RedirectToLogin() {
+    this.modalService.dismissAll();
+    this.router.navigate(['/pages/sign-in']);
+  }
+  RedirectToHome() {
+    this.modalService.dismissAll();
+    this.router.navigate(['/']);
   }
 }

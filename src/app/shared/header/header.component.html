@@ -5,7 +5,7 @@
 >
     <div class="container">
         <!-- start modal -->
-        <ng-template
+        <!-- <ng-template
             #content
             let-modal
         >
@@ -20,10 +20,8 @@
                 </button>
                 <app-sign-in (closeChildModal)="ShowBackModalLogin($event)"></app-sign-in>
             </div>
-            <!-- <div class="modal-footer ">
-            <button [disabled]="!(validFormRecovery|async)" class="btn btn-outline-dark " (click)="modal.close( 'Save click') ">Save</button>
-        </div> -->
-        </ng-template>
+           
+        </ng-template> -->
 
         <!-- end modal -->
         <a
@@ -37,10 +35,9 @@
             >
         </a>
         <div class="btn_header_mb">
-            <a
-                href="#"
+            <a href="javascript:void(0)" (click)="RedirectToLogin()"
                 class="btn_login"
-                (click)="showLoginModal(content)"
+                
             >
                 Login
             </a>
@@ -117,10 +114,8 @@
                 </li>
             </ul>
             <div class="btn_header">
-                <a
-                    href="#"
+                <a href="javascript:void(0)" (click)="RedirectToLogin()"
                     class="btn_login"
-                    (click)="showLoginModal(content)"
                 >
                     {{'Shared.Login_Register'|translate}}
                 </a>

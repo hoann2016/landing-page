@@ -15,27 +15,20 @@ import {HeaderComponent} from './header/header.component';
 import {LandingPageService} from './services/landing-page.service';
 // Services
 import {WINDOW_PROVIDERS} from './services/windows.service';
-import {SignInComponent} from './sign-in/sign-in.component';
 import {GlobalErrorHandlerService } from './error-handler/global-error-handler.service';
 import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   exports: [
-    CommonModule, HeaderComponent, FooterComponent, SignInComponent,TranslateModule,LoadingComponent
+    CommonModule, HeaderComponent, FooterComponent, TranslateModule, LoadingComponent
   ],
   imports: [
     CommonModule, RouterModule, NgxPageScrollModule, NgbModule, FormsModule,
     ReactiveFormsModule, HttpClientModule, TranslateModule
 
   ],
-  declarations: [HeaderComponent, FooterComponent, SignInComponent, LoadingComponent ],
-  providers: [ 
-    WINDOW_PROVIDERS, LandingFixService , LandingPageService,
-    GlobalErrorHandlerService,
-    // { provide: ErrorHandler, useClass: GlobalErrorHandlerService }, 
-   
-  
-  ]
+  declarations: [HeaderComponent, FooterComponent, LoadingComponent ],
+  providers: [WINDOW_PROVIDERS, LandingFixService , LandingPageService, GlobalErrorHandlerService]
 })
 export class SharedModule {
 }

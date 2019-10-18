@@ -8,8 +8,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { LandingPageService } from '../shared/services/landing-page.service';
 import { SharedModule } from '../shared/shared.module';
-import { SignInComponent } from '../shared/sign-in/sign-in.component';
-
 import { ComingsoonComponent } from './comingsoon/comingsoon.component';
 import { DownloadComponent } from './download/download.component';
 import { EmailTemplateComponent } from './email-template/email-template.component';
@@ -19,6 +17,7 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
 import { PagesRoutingModule } from './pages-routing.module';
 import { ReviewComponent } from './review/review.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
 import { MyMissingTranslationHandler } from '../shared/services/translation-handler/translation-handler';
 import { NotTranslatedService } from '../shared/services/translation-handler/not-translated-service';
@@ -50,9 +49,10 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     SignUpComponent, ForgetPasswordComponent, ThankYouComponent,
     ReviewComponent, ErrorPageComponent, FaqComponent, DownloadComponent,
-    ComingsoonComponent, EmailTemplateComponent, PaymentComponent
+    ComingsoonComponent, EmailTemplateComponent, PaymentComponent,
+    SignInComponent
   ],
-  entryComponents: [LoadingComponent,SignInComponent],
+  entryComponents: [LoadingComponent],
   providers: [TranslateService, LandingPageService]
 })
 export class PagesModule {

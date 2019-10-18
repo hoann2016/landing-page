@@ -9,8 +9,6 @@ import {OwlModule} from 'ngx-owl-carousel';
 
 import {LandingPageService} from '../shared/services/landing-page.service';
 import {SharedModule} from '../shared/shared.module';
-import {SignInComponent} from '../shared/sign-in/sign-in.component';
-
 import {AboutComponent} from './about/about.component';
 import {BlogComponent} from './blog/blog.component';
 import {ContactUsComponent} from './contact-us/contact-us.component';
