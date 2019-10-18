@@ -68,7 +68,7 @@ export class SignInComponent implements OnInit, AfterViewInit {
         email: this.signInForm.controls.Email.value
       };
       this.showLoading = true;
-      this.contentLoading = this.translate.instant('SignIn.SendingStatus');
+      this.contentLoading = this.translate.instant('Home.SignIn.SendingStatus');
       this.appService.logIn(formImport).subscribe(
         response => {
 
@@ -77,7 +77,9 @@ export class SignInComponent implements OnInit, AfterViewInit {
           }, 3000);
 if (response.success == true) {
             window.location.href = this.appService.merchangePath;
-          }
+          }else {
+            this.handlingFormValidatorService.showErrorForm(this.signInForm, 'SignUp');
+          }  
         },
         err => {
           setTimeout(() => {
