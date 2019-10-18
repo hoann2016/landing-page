@@ -88,14 +88,14 @@ export class SignUpComponent implements OnInit, AfterViewInit {
   }
   ngOnInit() {
     this.buildForm();
-    // this.appService.getActiveConfigPackage().subscribe(pk => {
-    //   if (pk.success == true) {
-    //     this.allPackage = pk.data.packages;
-    //   }
-    // },
-    //   err => {
-    //     throw err;
-    //   });
+    this.appService.getActiveConfigPackage().subscribe(pk => {
+      if (pk.success == true) {
+        this.allPackage = pk.data.packages;
+      }
+    },
+      err => {
+        throw err;
+      });
     this.appService.getAllBusiness().subscribe(bs => {
       this.allBusinessType = [];
       if (bs.success == true) {

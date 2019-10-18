@@ -12,14 +12,14 @@
                         <div class="col-xl-12">
                             <div class="wrap-form-field">
                                 <div class="header-page">
-                                    <h2 class="header-form"> Login</h2>
+                                    <h2 class="header-form">  {{'Home.SignIn.Login'|translate}}</h2>
 
                                 </div>
 
                                 <form class="login-cus-form" [formGroup]="signInForm">
                                     <div class="row">
                                         <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                            <span class="title-input">{{'Register.Email'|translate}}</span>
+                                            <span class="title-input">{{'Home.SignIn.SignInEmail.Email'|translate}}</span>
 
                                             <div class="form-input-1">
                                                 <input type="email" class="fix-boder" formControlName="Email"
@@ -64,7 +64,7 @@
                                     <div class="row mt-4">
                                         <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
                                             <div class="form-input-2">
-                                                <button (click)="onSubmit()">LOGIN</button>
+                                                <button (click)="onSubmit()">{{'Home.SignIn.Login'|translate}}</button>
                                             </div>
                                         </div>
                                     </div>
@@ -72,8 +72,8 @@
                             </div>
                         </div>
                         <div class="col-xl-12 text-center">
-                            <div class="title-fogot-pass"> <a href="/pages/sign-in">Forgot password?</a></div>
-                            <div class="title-register"> If you don't have an Account <a href="javascript:void(0)" (click)="RedirectToRegister()">Register</a> now!</div>
+                            <div class="title-fogot-pass"> <a href="/pages/sign-in"> {{'Home.SignIn.ForgotPassword'|translate}}</a></div>
+                            <div class="title-register">{{'Home.SignIn.IfDontHaveAcc'|translate}} <a href="javascript:void(0)" (click)="RedirectToRegister()">{{'Home.SignIn.Register'|translate}}</a> {{'Home.SignIn.Now'|translate}}!</div>
 
 
                         </div>

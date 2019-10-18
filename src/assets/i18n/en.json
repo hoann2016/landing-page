@@ -88,9 +88,11 @@
     },
     "SignIn": {
       "SendingStatus":"Signin...",
+      "Login":"Login",
       "KeepLogedIn": "Keep me loged in",
       "IfDontHaveAcc": "If you don't have an Account",
-      "RegisterNow": "Register now",
+      "Register": "Register",
+      "Now": "now", 
       "ResetYourPassword": "Reset Your Password",
       "ForgotPassword": "Forgot Password",
       "SignInEmail.Email": "Email Address",
