@@ -1,3 +1,31 @@
 textarea {
   resize: none;
 }
+#lud_policy{
+  .modal-body{
+    img{
+      width: 100%;
+    }
+    .policy_content{
+      padding: 40px;
+      p{
+        font-size: 14px;
+        color: #424242;
+      }
+    }
+  }
+}
+#lud_terms{
+  .modal-body{
+    img{
+      width: 100%;
+    }
+    .policy_content{
+      padding: 40px;
+      p{
+        font-size: 14px;
+        color: #424242;
+      }
+    }
+  }
+}
