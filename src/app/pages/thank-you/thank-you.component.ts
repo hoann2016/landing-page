@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { LandingPageService } from 'src/app/shared/services/landing-page.service';
+import { FontAwesomeModule } from 'font-awesome';
 
 @Component({
   selector: 'app-thank-you',
