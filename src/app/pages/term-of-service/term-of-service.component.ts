@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { LandingPageService } from 'src/app/shared/services/landing-page.service';
-import { FontAwesomeModule } from 'font-awesome';
 
 @Component({
-  selector: 'app-thank-you',
-  templateUrl: './thank-you.component.html',
-  styleUrls: ['./thank-you.component.scss']
+  selector: 'app-term-of-service',
+  templateUrl: './term-of-service.component.html',
+  styleUrls: ['./term-of-service.component.scss']
 })
-export class ThankYouComponent implements OnInit {
+export class TermOfServiceComponent implements OnInit {
 
   constructor(private translate: TranslateService,
     private landingPageService: LandingPageService) { }
