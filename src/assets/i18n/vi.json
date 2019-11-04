@@ -282,5 +282,19 @@
         "IsComfirmed":"Xác nhận"
       }
     }
+  },
+  "Thankyou": {
+    "pending_payment": "Chờ thanh toán",
+    "disabled": "Chưa kích hoạt",
+    "name": "Tên đăng kí",
+    "email": "Email",
+    "phone": "Số điện thoại",
+    "orderNumber": "Mã đơn hàng",
+    "price": "Phí dịch vụ",
+    "status": "Trạng thái",
+    "thankNotify": "Đăng ký tài khoản thành công",
+    "thankTopLetter": "Cám ơn bạn đã đăng ký sử dụng Ludiino - Giải pháp đặt hẹn dịch vụ trực tuyến",
+    "thankBottomLetter": "Để sử dụng hệ thống Ludiino, xin vui lòng hoàn tất quá trình thanh toán",
+    "backButton": "TRỞ VỀ TRANG CHỦ"
   }
 }

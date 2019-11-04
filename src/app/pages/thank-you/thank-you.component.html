@@ -3,40 +3,39 @@
     <div class="container">
       <div class="box_thanks">
         <img class="img_check_done" src="assets/images/home2/check_done.png">
-        <h1>Đăng ký tài khoản thành công</h1>
-        <p>Cám ơn bạn đã đăng ký sử dụng Ludiino - Giải pháp đặt hẹn dịch vụ trực tuyến</p>
-
+        <h1>{{'Thankyou.thankNotify' | translate}}</h1>
+        <p>{{'Thankyou.thankTopLetter' | translate}}</p>
         <div class="wrap_confirm_info">
             <table class="table table-borderless">
                 <tbody>
                   <tr>
-                    <th scope="row"><i class="fa fa-circle"></i> Tên đăng ký</th>
-                    <td>Phuong Nguyen</td>
+                    <th scope="row"><i class="fa fa-circle"></i> {{'Thankyou.name' | translate}}</th>
+                    <td>{{orderResponse && orderResponse.name ? orderResponse.name : ''}}</td>
                   </tr>
                   <tr>
-                      <th scope="row"><i class="fa fa-circle"></i> Email</th>
-                      <td>nguyenbaophuong36@gmail.com</td>
+                      <th scope="row"><i class="fa fa-circle"></i> {{'Thankyou.email' | translate}}</th>
+                      <td>{{orderResponse && orderResponse.email ? orderResponse.email : ''}}</td>
                   </tr>
                   <tr>
-                      <th scope="row"><i class="fa fa-circle"></i> Phone</th>
-                      <td>0934547337</td>
+                      <th scope="row"><i class="fa fa-circle"></i> {{'Thankyou.phone' | translate}}</th>
+                      <td>{{orderResponse && orderResponse.phone ? orderResponse.phone : ''}}</td>
                   </tr>
                   <tr>
-                      <th scope="row"><i class="fa fa-circle"></i> Mã đơn hàng</th>
-                      <td class="oder_id">#982632</td>
+                      <th scope="row"><i class="fa fa-circle"></i> {{'Thankyou.orderNumber' | translate}}</th>
+                      <td class="oder_id">#{{orderResponse && orderResponse.orderNumber ? orderResponse.orderNumber : ''}}</td>
                   </tr>
                   <tr>
-                      <th scope="row"><i class="fa fa-circle"></i> Phí dịch vụ</th>
-                      <td>3,5000,000 đ <span class="payment_stt">Đã thanh toán</span></td>
+                      <th scope="row"><i class="fa fa-circle"></i> {{'Thankyou.price' | translate}}</th>
+                      <td>{{(orderResponse && orderResponse.price ? orderResponse.price : '' )| currency: "VND"}} - <span class="payment_stt">{{orderResponse && orderResponse.orderStatus ? orderResponse.orderStatus : ''}}</span></td>
                   </tr>
                   <tr>
-                      <th scope="row"><i class="fa fa-circle"></i> Trạng thái</th>
-                      <td class="active_stt">Đã kích hoạt</td>
+                      <th scope="row"><i class="fa fa-circle"></i> {{'Thankyou.status' | translate}}</th>
+                      <td class="active_stt">{{orderResponse && orderResponse.userStatus ? orderResponse.userStatus : ''}}</td>
                   </tr>
-                  
                 </tbody>
-              </table>
+            </table>
         </div>
+        <p>{{'Thankyou.thankBottomLetter' | translate}}</p>
       </div>
     </div>
   </div>
@@ -47,7 +46,7 @@
         <div class="col-md-12">
           <div class="copyright-section">
             <div class="mt-3 text-center">
-              <a href="#" class="btn_back_home">BACK TO HOME PAGE</a>
+              <a href="#" class="btn_back_home">{{'Thankyou.backButton' | translate}}</a>
             </div>
           </div>
         </div>
