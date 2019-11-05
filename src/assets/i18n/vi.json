@@ -281,6 +281,10 @@
         "RetypePassword":"Mật khẩu nhập lại",
         "IsComfirmed":"Xác nhận"
       }
+    },
+    "thankYou": {
+      "Main_tagline": "Đăng ký tài khoản thành công"
+      
     }
   },
   "Thankyou": {

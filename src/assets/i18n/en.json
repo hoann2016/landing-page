@@ -279,8 +279,8 @@
     "price": "Price",
     "status": "Status",
     "thankNotify": "Register succesfully",
-    "thankTopLetter": "Thank you for <need to write any caption here>",
-    "thankBottomLetter": "For using Ludiino Online Booking System, please <need to write any caption here>",
+    "thankTopLetter": "Thank you for using Ludiino Online Booking & Scheduling Solution",
+    "thankBottomLetter": "For using Ludiino System, please complete the payment process",
     "backButton": "BACK TO HOME PAGE"
   }
 }
