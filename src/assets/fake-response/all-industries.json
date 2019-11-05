@@ -23,19 +23,19 @@
             },
             {
                 "id": 4,
-                "industry_id": 1,
+                "industry_id": 3,
                 "name": "Gym & Sport Center",
                 "created_at": 1568182833826
             },
             {
                 "id": 5,
-                "industry_id": 1,
+                "industry_id": 2,
                 "name": "Medical Clinic",
                 "created_at": 1568182833826
             },
             {
                 "id": 6,
-                "industry_id": 1,
+                "industry_id": 4,
                 "name": "Repair Service",
                 "created_at": 1568182833826
             }
