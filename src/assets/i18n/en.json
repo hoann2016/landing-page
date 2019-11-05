@@ -281,6 +281,7 @@
     "thankNotify": "Register succesfully",
     "thankTopLetter": "Thank you for using Ludiino Online Booking & Scheduling Solution",
     "thankBottomLetter": "For using Ludiino System, please complete the payment process",
-    "backButton": "BACK TO HOME PAGE"
+    "backButton": "BACK TO HOME PAGE",
+    "note": "Note"
   }
 }
