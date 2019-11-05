@@ -268,5 +268,19 @@
         "IsComfirmed":"Comfirmed"
       }
     }
+  },
+  "Thankyou": {
+    "pending_payment": "Pending Payment",
+    "disabled": "Disabled",
+    "name": "Register name",
+    "email": "Email",
+    "phone": "Phone number",
+    "orderNumber": "Order number",
+    "price": "Price",
+    "status": "Status",
+    "thankNotify": "Register succesfully",
+    "thankTopLetter": "Thank you for using Ludiino Online Booking & Scheduling Solution",
+    "thankBottomLetter": "For using Ludiino System, please complete the payment process",
+    "backButton": "BACK TO HOME PAGE"
   }
 }

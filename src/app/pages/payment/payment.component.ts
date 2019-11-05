@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router, ActivatedRoute, Route } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Subscription, Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { UserPayment } from 'src/app/shared/models/user-models/user-payment.model';
@@ -130,13 +130,18 @@ export class PaymentComponent implements OnInit {
     }
     
   }
+  redirectToThankPage(redirectValues) {
+    this.router.navigateByUrl('/pages/thank-you', { state: redirectValues });
+  }
   submitOrder() {
     this.showLoading = true;
     this.appService.submitOrder(this.userOrder).subscribe((response) =>{
-      if (response.success == true) {
+      if (response.success === true) {
+        console.log(response.data);
         this.showLoading = false;
-        this.toastr.success("Redirect to dashboard ...")
-        window.location.href = this.appService.merchangePath;
+        this.toastr.success("Redirect to thank page ...")
+        const order = response.data;
+        this.redirectToThankPage(order);
       }
     },err => {
       this.showLoading = false;

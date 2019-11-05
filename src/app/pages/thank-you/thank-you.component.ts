@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { LandingPageService } from 'src/app/shared/services/landing-page.service';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { isEmpty} from 'lodash';
 
 @Component({
   selector: 'app-thank-you',
@@ -9,14 +13,41 @@ import { LandingPageService } from 'src/app/shared/services/landing-page.service
 })
 export class ThankYouComponent implements OnInit {
 
-  constructor(private translate: TranslateService,
-    private landingPageService: LandingPageService) { }
+  constructor(
+    private translate: TranslateService,
+    private landingPageService: LandingPageService,
+    private route: ActivatedRoute,
+    ) { }
+
+  state$: Observable<object>;
+  orderResponse;
 
   ngOnInit() {
     this.landingPageService.getLangSelected().subscribe(lang=>
       {        
         this.translate.use(lang);
-      })
+      });
+    this.state$ = this.route.paramMap
+      .pipe(     
+        map(() =>
+          window.history.state
+        )
+      )
+    this.state$.subscribe((p: any) => {
+      console.log(p);
+      if(!isEmpty(p) && p.name) {
+        this.orderResponse = p;
+        this.orderResponse.orderStatus = this.translate.instant(`Thankyou.${this.orderResponse.orderStatus}`);
+        this.orderResponse.userStatus = this.translate.instant(`Thankyou.${this.orderResponse.userStatus}`);
+        sessionStorage.setItem('orderResponse', JSON.stringify(this.orderResponse));
+      } else {
+        console.log('go here');
+        const orderResponse = sessionStorage.getItem('orderResponse');
+        console.log('orderResponse:', orderResponse);
+        this.orderResponse = JSON.parse(orderResponse)
+      }
+    });
+    
   }
 
 }
