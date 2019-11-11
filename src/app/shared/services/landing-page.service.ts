@@ -11,15 +11,17 @@ export class LandingPageService {
       this.langSelected.next(lang);
     else
       this.langSelected.next('en');
-    localStorage.setItem('langSelected', lang)
+    //TODO  localStorage.setItem('langSelected', lang)
   }
   getLangSelected(): Observable<string> {
-    if (localStorage.getItem('langSelected') == 'en' ||
-        localStorage.getItem('langSelected') == 'vi') {
-      this.langSelected.next(localStorage.getItem('langSelected'));
-    } else {
-      this.langSelected.next('en');
-    }
+    // TODO
+    // if (localStorage.getItem('langSelected') == 'en' ||
+    //     localStorage.getItem('langSelected') == 'vi') {
+    //   this.langSelected.next(localStorage.getItem('langSelected'));
+    // } else {
+    //   this.langSelected.next('en');
+    // }
+    this.langSelected.next('en');
     return this.langSelected.asObservable();
   }
 

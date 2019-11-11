@@ -2,13 +2,13 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
-import { LandingPageService } from 'src/app/shared/services/landing-page.service';
+import { LandingPageService } from '../../shared/services/landing-page.service';
 import { MustMatch } from './must-match.validator';
-import { AppService } from 'src/app/app.service';
-import { UserLogin } from 'src/app/shared/models/user-models/user-login.model';
+import { AppService } from '../../app.service';
+import { UserLogin } from '../../shared/models/user-models/user-login.model';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
-import { HandlingFormValidatorService } from 'src/app/shared/services/handling-form-validator.service';
+import { HandlingFormValidatorService } from '../../shared/services/handling-form-validator.service';
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',

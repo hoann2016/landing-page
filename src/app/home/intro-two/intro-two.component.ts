@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ElementRef, ViewChild, OnInit } from '@angular/core';
-import 'magnific-popup';
 import { TranslateService } from '@ngx-translate/core';
-import { LandingPageService } from 'src/app/shared/services/landing-page.service';
+import { LandingPageService } from '../../shared/services/landing-page.service';
 import { Router } from '@angular/router';
 declare var $: any;
 

@@ -8,7 +8,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { LandingPageService } from '../shared/services/landing-page.service';
 import { SharedModule } from '../shared/shared.module';
-//import { ComingsoonComponent } from './comingsoon/comingsoon.component';
+import { ComingsoonComponent } from './comingsoon/comingsoon.component';
 import { DownloadComponent } from './download/download.component';
 import { EmailTemplateComponent } from './email-template/email-template.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
@@ -56,7 +56,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ErrorPageComponent, 
     FaqComponent, 
     DownloadComponent,
-    //ComingsoonComponent, 
+    ComingsoonComponent, 
     EmailTemplateComponent, 
     PaymentComponent,
     SignInComponent,

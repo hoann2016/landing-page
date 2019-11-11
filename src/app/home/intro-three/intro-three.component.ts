@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ElementRef, ViewChild, OnInit } from '@angular/core';
-import 'magnific-popup';
 import { TranslateService } from '@ngx-translate/core';
-import { LandingPageService } from 'src/app/shared/services/landing-page.service';
+import { LandingPageService } from '../../shared/services/landing-page.service';
 declare var $: any;
 
 @Component({
@@ -25,14 +24,14 @@ export class IntroThreeComponent implements AfterViewInit,OnInit {
     }
   // Magnific Popup
   ngAfterViewInit(): void {
-  	$(this.videoElement.nativeElement).magnificPopup({ 
-		    disableOn: 700,
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false 
-    });
+  	// $(this.videoElement.nativeElement).magnificPopup({ 
+		//     disableOn: 700,
+    //     type: 'iframe',
+    //     mainClass: 'mfp-fade',
+    //     removalDelay: 160,
+    //     preloader: false,
+    //     fixedContentPos: false 
+    // });
   }
 
 }

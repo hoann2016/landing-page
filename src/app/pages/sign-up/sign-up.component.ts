@@ -2,15 +2,15 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
-import { environment } from 'src/environments/environment';
-import { LandingPageService } from 'src/app/shared/services/landing-page.service';
+import { environment } from '../../../environments/environment';
+import { LandingPageService } from '../../shared/services/landing-page.service';
 import { MustMatch } from './must-match.validator';
-import { AppService } from 'src/app/app.service';
-import { UserRegister } from 'src/app/shared/models/user-models/user-register.model';
-import { UserOrder } from 'src/app/shared/models/user-models/user-order.model';
+import { AppService } from '../../app.service';
+import { UserRegister } from '../../shared/models/user-models/user-register.model';
+import { UserOrder } from '../../shared/models/user-models/user-order.model';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
-import { HandlingFormValidatorService } from 'src/app/shared/services/handling-form-validator.service';
+import { HandlingFormValidatorService } from '../../shared/services/handling-form-validator.service';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',

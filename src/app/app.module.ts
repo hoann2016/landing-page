@@ -1,37 +1,45 @@
-import { NgModule, ErrorHandler } from '@angular/core';
+// angular
+import { APP_INITIALIZER, NgModule, ErrorHandler } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HTTP_INTERCEPTORS, HttpClientModule, HttpClient } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { Http, HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SharedModule } from "./shared/shared.module";
-import { rootRouterConfig } from './app.routes';
+// libs
+import { TransferHttpCacheModule } from '@nguniversal/common';
+// shared
+import { SharedModule } from '@shared/shared.module';
+// components
+import { AppRoutes } from './app.routing';
 import { AppComponent } from './app.component';
-import * as $ from 'jquery';
+// interceptors
 import { AppService } from './app.service';
-import { TranslateModule, TranslateLoader, MissingTranslationHandler } from '@ngx-translate/core';
-import { HttpClientModule, HttpClient} from '@angular/common/http';
+import { GlobalErrorHandlerService } from './shared/error-handler/global-error-handler.service';
+import { HandlingFormValidatorService } from './shared/services/handling-form-validator.service';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateModule, TranslateLoader, MissingTranslationHandler } from '@ngx-translate/core';
 import { MyMissingTranslationHandler } from './shared/services/translation-handler/translation-handler';
 import { NotTranslatedService } from './shared/services/translation-handler/not-translated-service';
 import { ToastrModule } from 'ngx-toastr';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { GlobalErrorHandlerService } from './shared/error-handler/global-error-handler.service';
-import { HandlingFormValidatorService } from './shared/services/handling-form-validator.service';
+/////
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
+
 @NgModule({
-  declarations: [
-    AppComponent
-  ],  
-  exports:[],
   imports: [
-    
-    BrowserModule,
-    HttpModule,
-    BrowserAnimationsModule,    
-    SharedModule,
-    RouterModule.forRoot(rootRouterConfig, { useHash: false, anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }),
+    BrowserModule.withServerTransition({ appId: 'my-app' }),
+    TransferHttpCacheModule,
+    HttpClientModule,
+    AppRoutes,
+    BrowserAnimationsModule,
+    SharedModule.forRoot(),
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+      enableHtml:true
+    }),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -44,18 +52,21 @@ export function HttpLoaderFactory(http: HttpClient) {
             deps: [NotTranslatedService]
         }
     }),
-    ToastrModule.forRoot({
-      timeOut: 3000,
-      positionClass: 'toast-top-right',
-      preventDuplicates: true,
-      enableHtml:true
-    }),
     NgbModule
   ],
-  providers: [AppService, GlobalErrorHandlerService,
+  declarations: [AppComponent],
+  providers: [
+    // Guards TODO
+    // AuthGuard,
+    // UnAuthGuard,
+    // TODO Interceptors
+    // { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+    // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    AppService, 
+    GlobalErrorHandlerService,
     HandlingFormValidatorService,
     { provide: ErrorHandler, useClass: GlobalErrorHandlerService }, 
   ],
-  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

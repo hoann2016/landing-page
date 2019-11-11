@@ -1,11 +1,10 @@
+import { ModuleWithProviders, NgModule, ErrorHandler } from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {NgModule, ErrorHandler} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {TranslateLoader, TranslateModule, TranslateService, MissingTranslationHandler} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {NgxPageScrollModule} from 'ngx-page-scroll';
 
 import {LandingFixService} from '../shared/services/landing-fix.service';
@@ -19,16 +18,22 @@ import {GlobalErrorHandlerService } from './error-handler/global-error-handler.s
 import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
-  exports: [
-    CommonModule, HeaderComponent, FooterComponent, TranslateModule, LoadingComponent
+  exports: [ 
+    CommonModule, 
+    HeaderComponent, 
+    FooterComponent, 
+    TranslateModule, 
+    LoadingComponent, 
   ],
   imports: [
     CommonModule, RouterModule, NgxPageScrollModule, NgbModule, FormsModule,
     ReactiveFormsModule, HttpClientModule, TranslateModule
-
   ],
   declarations: [HeaderComponent, FooterComponent, LoadingComponent ],
   providers: [WINDOW_PROVIDERS, LandingFixService , LandingPageService, GlobalErrorHandlerService]
 })
 export class SharedModule {
+  static forRoot(): ModuleWithProviders {
+    return { ngModule: SharedModule };
+  }
 }

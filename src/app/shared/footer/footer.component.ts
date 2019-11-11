@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { LandingPageService } from '../services/landing-page.service';
-import { AppService } from 'src/app/app.service';
+import { AppService } from '../../app.service';
 import { ToastrService } from 'ngx-toastr';
 import { GlobalErrorHandlerService } from '../error-handler/global-error-handler.service';
 import { throwError, of } from 'rxjs';
