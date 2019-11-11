@@ -5,9 +5,11 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 // libs
 import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader';
 // shared
+import { TranslatesServerModule } from '@shared/translates/translates-server';
 // components
 import { AppComponent } from './app.component';
 import { AppModule } from './app.module';
+import { CookieService, CookieBackendService, CookieModule } from '@gorniv/ngx-universal';
 
 @NgModule({
   imports: [
@@ -17,8 +19,11 @@ import { AppModule } from './app.module';
     NoopAnimationsModule,
     ServerTransferStateModule,
     ModuleMapLoaderModule,
+    TranslatesServerModule,
   ],
   bootstrap: [AppComponent],
-  providers: [],
+  providers: [
+    { provide: CookieService, useClass: CookieBackendService },
+  ],
 })
 export class AppServerModule {}

@@ -1,17 +1,17 @@
 import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { 
-    path: '', 
-    loadChildren: './home/home.module#HomeModule',
-    pathMatch: 'full'
+    path: 'home', 
+    loadChildren: 'app/home/home.module#HomeModule',
   },
   { 
     path: 'pages',
-    loadChildren: './pages/pages.module#PagesModule'  
+    loadChildren: 'app/pages/pages.module#PagesModule'  
   },
   { 
     path: '**', 
-    redirectTo: 'home/one'
+    redirectTo: 'home'
   }
 ];
 // must use {initialNavigation: 'enabled'}) - for one load page, without reload

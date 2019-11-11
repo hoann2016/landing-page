@@ -15,6 +15,7 @@ import {LandingPageService} from './services/landing-page.service';
 // Services
 import {WINDOW_PROVIDERS} from './services/windows.service';
 import {GlobalErrorHandlerService } from './error-handler/global-error-handler.service';
+import { UniversalStorage } from '@shared/storage/universal.storage';
 import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
@@ -30,7 +31,7 @@ import { LoadingComponent } from './loading/loading.component';
     ReactiveFormsModule, HttpClientModule, TranslateModule
   ],
   declarations: [HeaderComponent, FooterComponent, LoadingComponent ],
-  providers: [WINDOW_PROVIDERS, LandingFixService , LandingPageService, GlobalErrorHandlerService]
+  providers: [WINDOW_PROVIDERS, LandingFixService , LandingPageService, GlobalErrorHandlerService, UniversalStorage]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders {

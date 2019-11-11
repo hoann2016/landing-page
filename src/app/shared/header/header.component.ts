@@ -7,7 +7,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import {LandingPageService} from '../services/landing-page.service';
 import {WINDOW} from '../services/windows.service';
 import { Router } from '@angular/router';
-declare var $: any;
+// declare var $: any;
 
 @Component({
   selector: 'app-header',
@@ -30,8 +30,8 @@ export class HeaderComponent implements OnInit {
       ) {}
 
   ngOnInit() {
-    $.getScript('./assets/js/script.js');
-    $.getScript('./assets/js/tilt.jquery.js');
+    // $.getScript('./assets/js/script.js');
+    // $.getScript('./assets/js/tilt.jquery.js');
     this.landingPageService.getLangSelected().subscribe(lang => {
       this.translate.use(lang);
       this.langSelected.next(lang);

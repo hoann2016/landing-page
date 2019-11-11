@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef, ViewChild, OnInit } from '@angula
 import { TranslateService } from '@ngx-translate/core';
 import { LandingPageService } from '../../shared/services/landing-page.service';
 import { Router } from '@angular/router';
-declare var $: any;
+// declare var $: any;
 
 @Component({
   selector: 'app-intro-two',

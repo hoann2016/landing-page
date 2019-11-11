@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { LandingPageService } from '../../shared/services/landing-page.service';
-declare var $: any;
+// declare var $: any;
 
 @Component({
   selector: 'app-intro-three',

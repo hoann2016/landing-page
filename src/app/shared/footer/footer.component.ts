@@ -6,7 +6,6 @@ import { AppService } from '../../app.service';
 import { ToastrService } from 'ngx-toastr';
 import { GlobalErrorHandlerService } from '../error-handler/global-error-handler.service';
 import { throwError, of } from 'rxjs';
-import { HandlingFormValidatorService } from '../services/handling-form-validator.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 @Component({
@@ -25,7 +24,6 @@ export class FooterComponent implements OnInit {
     private appService:AppService,
     private toastr: ToastrService,
     private landingPageService: LandingPageService,
-    private handlingFormValidatorService:HandlingFormValidatorService,
     private modalService: NgbModal,
     private router: Router,
     ){

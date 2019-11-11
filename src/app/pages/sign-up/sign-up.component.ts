@@ -10,7 +10,6 @@ import { UserRegister } from '../../shared/models/user-models/user-register.mode
 import { UserOrder } from '../../shared/models/user-models/user-order.model';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
-import { HandlingFormValidatorService } from '../../shared/services/handling-form-validator.service';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -39,7 +38,6 @@ export class SignUpComponent implements OnInit, AfterViewInit {
     private appService: AppService,
     private toastr: ToastrService,
     private router: Router,
-    private handlingFormValidatorService: HandlingFormValidatorService
   ) { }
   public allPackage;
   public allBusinessType;

@@ -8,7 +8,6 @@ import { AppService } from '../../app.service';
 import { UserLogin } from '../../shared/models/user-models/user-login.model';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
-import { HandlingFormValidatorService } from '../../shared/services/handling-form-validator.service';
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -34,7 +33,6 @@ export class SignInComponent implements OnInit, AfterViewInit {
     private appService: AppService,
     private toastr: ToastrService,
     private router: Router,
-    private handlingFormValidatorService: HandlingFormValidatorService
   ) { }
   contentLoading: string;
   showLoading: boolean = false;
@@ -78,7 +76,7 @@ export class SignInComponent implements OnInit, AfterViewInit {
 if (response.success == true) {
             window.location.href = this.appService.merchangePath;
           }else {
-            this.handlingFormValidatorService.showErrorForm(this.signInForm, 'SignUp');
+            // this.handlingFormValidatorService.showErrorForm(this.signInForm, 'SignUp');
           }  
         },
         err => {

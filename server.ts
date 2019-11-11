@@ -50,11 +50,12 @@ const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require(`./dist-server/mai
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import { REQUEST, RESPONSE } from '@nguniversal/express-engine/tokens';
 // port
-const PORT = process.env.PORT || 4000;
+const PORT =  4000;
 // static path from prerenders
-// import { ROUTES } from './static.paths';
+import { ROUTES } from './static.paths';
 // for test
 import { exit } from 'process';
+import { NgxRequest, NgxResponce } from '@gorniv/ngx-universal';
 
 enableProdMode();
 
@@ -128,8 +129,7 @@ app.get(ROUTES, express.static(path.join(__dirname, '.', 'static')));
 // dynamic render
 app.get('*', (req, res) => {
   // mock navigator from req.
-  //TO DO check this variable navigator
-  //global['navigator'] = req['headers']['user-agent'];
+  global['navigator'] = req['headers']['user-agent'];
   const http =
     req.headers['x-forwarded-proto'] === undefined ? 'http' : req.headers['x-forwarded-proto'];
 
@@ -150,6 +150,15 @@ app.get('*', (req, res) => {
         },
         {
           provide: RESPONSE,
+          useValue: res,
+        },
+        /// for cookie
+        {
+          provide: NgxRequest,
+          useValue: req,
+        },
+        {
+          provide: NgxResponce,
           useValue: res,
         },
         // for absolute path
