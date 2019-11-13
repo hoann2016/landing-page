@@ -23,11 +23,6 @@ export class ContactUsComponent implements OnInit {
       email: ['', Validators.email],
       message: ['', Validators.required]
     });
-
-    this.landingPageService.getLangSelected().subscribe(lang=>
-      {        
-        this.translate.use(lang);
-      })
   }
 
 }

@@ -12,11 +12,6 @@ export class FaqComponent implements OnInit {
   constructor(private translate: TranslateService,
     private landingPageService: LandingPageService) { }
 
-  ngOnInit() {
-    this.landingPageService.getLangSelected().subscribe(lang=>
-      {        
-        this.translate.use(lang);
-      })
-  }
+  ngOnInit() {}
 
 }

@@ -21,8 +21,6 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermOfServiceComponent } from './term-of-service/term-of-service.component';
-import { MyMissingTranslationHandler } from '../shared/services/translation-handler/translation-handler';
-import { NotTranslatedService } from '../shared/services/translation-handler/not-translated-service';
 import { PaymentComponent } from './payment/payment.component';
 import { LoadingComponent } from '../shared/loading/loading.component';
 
@@ -35,18 +33,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   imports: [
     CommonModule, PagesRoutingModule, SharedModule, FormsModule,
     ReactiveFormsModule, HttpClientModule, NgbModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      },
-      missingTranslationHandler: {
-        provide: MissingTranslationHandler,
-        useClass: MyMissingTranslationHandler,
-        deps: [NotTranslatedService]
-      }
-    })
+    TranslateModule
   ],
   declarations: [
     SignUpComponent, 

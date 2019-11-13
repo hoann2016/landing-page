@@ -58,9 +58,6 @@ export class PaymentComponent implements OnInit {
     this.tax = 0;
     this.channel_id = 1;
     this.currency_id = 1;
-    this.landingPageService.getLangSelected().subscribe(lang => {
-      this.translate.use(lang);
-    });
     this.state$ = this.route.paramMap
       .pipe(     
         map(() =>

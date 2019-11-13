@@ -108,9 +108,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
       err => {
         throw err;
       });
-    this.landingPageService.getLangSelected().subscribe(lang => {
-      this.translate.use(lang);
-    });
+
     this.landingPageService.getSelectedPackage().subscribe(packageName => {
       if (packageName) {
         this.signUpForm.patchValue({ PackageSelectedName: packageName })

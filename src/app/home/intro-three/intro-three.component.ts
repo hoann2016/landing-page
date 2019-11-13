@@ -16,12 +16,7 @@ export class IntroThreeComponent implements AfterViewInit,OnInit {
   private landingPageService: LandingPageService) {
 
     }
-    ngOnInit(): void {
-    this.landingPageService.getLangSelected().subscribe(lang=>
-      {        
-        this.translate.use(lang);
-      })
-    }
+    ngOnInit(): void {}
   // Magnific Popup
   ngAfterViewInit(): void {
   	// $(this.videoElement.nativeElement).magnificPopup({ 

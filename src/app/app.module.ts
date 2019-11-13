@@ -19,9 +19,6 @@ import { AppComponent } from './app.component';
 import { AppService } from './app.service';
 import { GlobalErrorHandlerService } from './shared/error-handler/global-error-handler.service';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { TranslateModule, TranslateLoader, MissingTranslationHandler } from '@ngx-translate/core';
-import { MyMissingTranslationHandler } from './shared/services/translation-handler/translation-handler';
-import { NotTranslatedService } from './shared/services/translation-handler/not-translated-service';
 import { ToastrModule } from 'ngx-toastr';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 /////
@@ -48,18 +45,6 @@ export function HttpLoaderFactory(http: HttpClient) {
       positionClass: 'toast-top-right',
       preventDuplicates: true,
       enableHtml: true
-    }),
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      },      
-        missingTranslationHandler: {
-            provide: MissingTranslationHandler,
-            useClass: MyMissingTranslationHandler,
-            deps: [NotTranslatedService]
-        }
     }),
     SharedMetaModule,
     NgbModule

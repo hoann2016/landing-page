@@ -36,10 +36,7 @@ export class BlogComponent {
     }]
 
     ngOnInit(): void {
-      this.landingPageService.getLangSelected().subscribe(x=>
-        {        
-          this.translate.use(x);
-        })
+
     }
     // Blog Carousel Options
 	public blogCarousel: any ={

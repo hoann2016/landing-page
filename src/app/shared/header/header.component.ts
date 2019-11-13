@@ -7,7 +7,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import {LandingPageService} from '../services/landing-page.service';
 import {WINDOW} from '../services/windows.service';
 import { Router } from '@angular/router';
-// declare var $: any;
+import { TranslatesService, ILang } from '@shared/translates';
 
 @Component({
   selector: 'app-header',
@@ -17,32 +17,24 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   public darkHeader: boolean = false;
   public menuItems: any[];
-  public langSelected = new BehaviorSubject('');
-  @ViewChild('content',{static:true}) signinModalRef: ElementRef;
+  public langList$: Observable<ILang[]>;
+  public currentLang: string;
+  @ViewChild('content', {static: true}) signinModalRef: ElementRef;
 
   // Inject Document object
   constructor(
       @Inject(DOCUMENT) private document: Document,
       @Inject(WINDOW) private window, private modalService: NgbModal,
       private landingPageService: LandingPageService,
-      private translate: TranslateService,
+      private _translatesService: TranslatesService,
       private router: Router
       ) {}
 
   ngOnInit() {
-    // $.getScript('./assets/js/script.js');
-    // $.getScript('./assets/js/tilt.jquery.js');
-    this.landingPageService.getLangSelected().subscribe(lang => {
-      this.translate.use(lang);
-      this.langSelected.next(lang);
-    })
+    this.langList$ = this._translatesService.getLangList();
+    this.currentLang = this._translatesService.getCurrentLang();
   }
-  changeLang(lang) {
-    if (lang == 'vi')
-      this.landingPageService.changeLanguage('vi');
-    else
-      this.landingPageService.changeLanguage('en');
-  }
+
   showLoginModal(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'})
         .result.then(
@@ -53,14 +45,11 @@ export class HeaderComponent implements OnInit {
               console.log('result from modal,reason: ', reason);
             });
   }
-  // ShowBackModalLogin(evt){
-  //   console.log("event from signin   ",evt);
-  //   setTimeout(() => {
-  //     this.showLoginModal(this.signinModalRef) ;
-  //   }, 200);
-   
-    
-  // }
+  
+  public changeLang(code: string): void {
+    this._translatesService.changeLang(code);
+    this.currentLang = code;
+  }
 
   // @HostListener Decorator
   @HostListener('window:scroll', [])

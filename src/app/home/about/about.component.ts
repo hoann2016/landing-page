@@ -25,9 +25,5 @@ export class AboutComponent implements OnInit, AfterViewInit {
       private translate: TranslateService,
       private landingPageService: LandingPageService) {}
 
-  ngOnInit() {
-    this.landingPageService.getLangSelected().subscribe(x => {
-      this.translate.use(x);
-    })
-  }
+  ngOnInit() {}
 }

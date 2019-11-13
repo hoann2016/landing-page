@@ -4,7 +4,7 @@ import { ToastrService } from 'ngx-toastr';
 import { TranslateService } from '@ngx-translate/core';
 import { LandingPageService } from '../services/landing-page.service';
 import { mergeMap } from 'rxjs/operators';
-import { Observable, zip, combineLatest } from 'rxjs';
+import { Observable, of, zip, combineLatest } from 'rxjs';
 import { FormGroup, ValidationErrors } from '@angular/forms';
 @Injectable()
 export class GlobalErrorHandlerService implements ErrorHandler {
@@ -72,7 +72,7 @@ export class GlobalErrorHandlerService implements ErrorHandler {
         return this.injector.get(LandingPageService);
     }
      private translateWraper(str): Observable<string> {
-        const langObservable = this.landingPageService.getLangSelected();
+        const langObservable = of('en');
         return langObservable.pipe(
             mergeMap(lang => {
                 this.translateService.use(lang);

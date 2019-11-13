@@ -52,10 +52,6 @@ export class SignInComponent implements OnInit, AfterViewInit {
   }
   ngOnInit() {
     this.buildForm();
-    this.landingPageService.getLangSelected().subscribe(lang => {
-      this.translate.use(lang);
-    });
-
   }
 
   onSubmit() {

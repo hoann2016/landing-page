@@ -14,11 +14,7 @@ export class ComingsoonComponent implements OnInit {
     private landingPageService: LandingPageService) { }
 
   ngOnInit() {
-      // $.getScript('./assets/js/timer.js');
-      // this.landingPageService.getLangSelected().subscribe(lang=>
-      //   {        
-      //     this.translate.use(lang);
-      //   })
+    // $.getScript('./assets/js/timer.js');
   }
 
 }

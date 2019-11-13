@@ -51,10 +51,10 @@ export class ScreenshotComponent implements OnInit {
     {
       image: 'assets/images/app/12.jpg',
     }
-  ]
-  ngOnInit(): void{this.landingPageService.getLangSelected().subscribe(lang => {
-    this.translate.use(lang);
-  })};
+  ];
+
+  ngOnInit(): void {}
+
   RedirectToRegister(packageSelected) {
     this.landingPageService.selectPackage(packageSelected);
     this.router.navigate(['/pages/sign-up']);

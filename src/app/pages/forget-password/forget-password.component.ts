@@ -23,11 +23,6 @@ export class ForgetPasswordComponent implements OnInit {
    this.show = !this.show;
   }
   
-  ngOnInit() {
-    this.landingPageService.getLangSelected().subscribe(lang=>
-      {        
-        this.translate.use(lang);
-      })
-  }
+  ngOnInit() {}
 
 }

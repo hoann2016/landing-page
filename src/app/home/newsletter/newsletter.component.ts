@@ -17,13 +17,9 @@ export class NewsletterComponent implements OnInit {
 
   // Email Validator
   ngOnInit() {
-  	this.subscribeForm = this.sf.group({
+    this.subscribeForm = this.sf.group({
       email: ['', Validators.email],
-    })
-    this.landingPageService.getLangSelected().subscribe(lang=>
-      {        
-        this.translate.use(lang);
-      })
+    });
   }
 
   onSubmit(name) {

@@ -47,10 +47,6 @@ export class FooterComponent implements OnInit {
       Content:["",[Validators.required,Validators.minLength(10),Validators.required,Validators.maxLength(255)]]
       }
     );
-    this.landingPageService.getLangSelected().subscribe(lang=>
-      {        
-        this.translate.use(lang);
-      })
   }
   onSubmit(){
     this.isSubmitted=true;

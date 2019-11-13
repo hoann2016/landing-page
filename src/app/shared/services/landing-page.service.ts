@@ -1,32 +1,10 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
-import { UniversalStorage } from '@shared/storage/universal.storage';
 
 @Injectable({providedIn: 'root'})
 export class LandingPageService {
-  constructor(
-    private _universalStorage: UniversalStorage,
-  ) {}
-  langSelected = new BehaviorSubject('en');
+  constructor() {}
   packageSelected = new BehaviorSubject('');
-  changeLanguage(lang) {
-    if (lang === 'vi' || lang === 'en') {
-        this.langSelected.next(lang);
-      } else {
-        this.langSelected.next('en');
-      }
-
-    this._universalStorage.setItem('langSelected', lang);
-  }
-  getLangSelected(): Observable<string> {
-    if (this._universalStorage.getItem('langSelected') === 'en' ||
-        this._universalStorage.getItem('langSelected') === 'vi') {
-      this.langSelected.next(this._universalStorage.getItem('langSelected'));
-    } else {
-      this.langSelected.next('en');
-    }
-    return this.langSelected.asObservable();
-  }
 
   selectPackage(packagename: string) {
     if (packagename) {

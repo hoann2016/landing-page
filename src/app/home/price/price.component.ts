@@ -33,13 +33,9 @@ export class PriceComponent implements OnInit{
         price: '$150',
         duration: 'per year',
         feature: this._sanitizer.bypassSecurityTrustHtml('<li>1 GB of space</li><li>real time sync</li><li>unlimited attachment</li><li>customize theme</li><li>priority email support</li>'),
-    }]
-    ngOnInit(): void {
-        this.landingPageService.getLangSelected().subscribe(lang=>
-            {        
-              this.translate.use(lang);
-            })  
-    }
+    }];
+
+    ngOnInit(): void {}
 
     // Pricing Carousel Options
 	public pricingCarousel: any ={

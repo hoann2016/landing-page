@@ -15,10 +15,6 @@ export class HomeTwoComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.fix.addFixTwo();
-    this.landingPageService.getLangSelected().subscribe(lang=>
-      {        
-        this.translate.use(lang);
-      })
   }
 
   ngOnDestroy() {
