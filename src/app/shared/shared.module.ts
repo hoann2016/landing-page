@@ -11,6 +11,8 @@ import {LandingFixService} from '../shared/services/landing-fix.service';
 
 import {FooterComponent} from './footer/footer.component';
 import {HeaderComponent} from './header/header.component';
+import {HeaderCommonComponent} from './header/header-common/header-common.component';
+import {WrapperComponent} from './layouts/wrapper-common/wrapper-common.component';
 import {LandingPageService} from './services/landing-page.service';
 // Services
 import {WINDOW_PROVIDERS} from './services/windows.service';
@@ -22,7 +24,9 @@ import { LoadingComponent } from './loading/loading.component';
   exports: [ 
     CommonModule, 
     HeaderComponent, 
+    HeaderCommonComponent,
     FooterComponent, 
+    WrapperComponent,
     TranslateModule, 
     LoadingComponent, 
   ],
@@ -30,7 +34,7 @@ import { LoadingComponent } from './loading/loading.component';
     CommonModule, RouterModule, NgxPageScrollModule, NgbModule, FormsModule,
     ReactiveFormsModule, HttpClientModule, TranslateModule
   ],
-  declarations: [HeaderComponent, FooterComponent, LoadingComponent ],
+  declarations: [HeaderComponent, HeaderCommonComponent, FooterComponent, LoadingComponent, WrapperComponent],
   providers: [WINDOW_PROVIDERS, LandingFixService , LandingPageService, GlobalErrorHandlerService, UniversalStorage]
 })
 export class SharedModule {

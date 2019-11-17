@@ -3,6 +3,10 @@
     "Title": "hompage",
     "Select": "Change language",
     "Header1": "Solution & Pricing",
+    "HeaderMenu": {
+      "Feature": "Feature",
+      "Pricing": "Pricing"
+    },
     "Intro": {
       "Message": "Mordern customers will go online to book what they want when they want it",
       "ButtonLabel": "START NOW FOR FREE",

@@ -1,0 +1,9 @@
+#wrapper-content {
+    min-height: 100%;
+    padding: 70px 0 0 0;
+}
+:host ::ng-deep {
+    .fixed-top {
+        padding: 0; 
+    }
+}
