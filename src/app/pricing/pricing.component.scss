@@ -221,6 +221,31 @@ section.main-content {
         .title-green {
             color: #00a651;
         }
+        select {
+            width: 212px;
+            height: 45px;
+            border-radius: 3px;
+            box-shadow: 0px 3.5px 10.5px 0 rgba(0, 0, 0, 0.05);
+            border: solid 0.5px #e2e4e9;
+            background-color: #fff;
+            padding: 0 0 0 14px;
+            margin: 0 0 16px 0;
+        }
+        .discount {
+            font-family: 'ProximaNova';
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 0.14px;
+            text-align: left;
+            color: #000;
+            margin: 0 0 18px 0;
+            span {
+                color: #c1272d;
+            }
+        }
     }
 }
 .price-label {

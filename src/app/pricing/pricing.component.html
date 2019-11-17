@@ -90,10 +90,18 @@
                         </div>
                         <div class="col-12 col-sm-4 d-flex justify-content-end">
                             <div class="action d-flex flex-column">
-                                <p class="price-label">$<span>199</span></p>
-                                <button class="btn btn_gradient-orange"  (click)="redirectToRegister('7')">
-                                    Get NEWBIE
-                                </button>
+                                    <p class="price-label">$<span>{{selectedNewbie?.price}}</span></p>
+                                    <select [(ngModel)]="selectedNewbie">
+                                        <option *ngFor="let item of newbiePackage"  [ngValue]="item">
+                                            {{item.name}}
+                                        </option>
+                                    </select>
+                                    <div class="discount" *ngIf="selectedNewbie?.discount">
+                                        Discount: <span>{{selectedNewbie?.discount}} free months</span>
+                                    </div>
+                                    <button class="btn btn_gradient-orange"  (click)="redirectToRegister('7')">
+                                        Get NEWBIE
+                                    </button>
                             </div>
                         </div>
                     </div>
@@ -123,7 +131,15 @@
                         </div>
                         <div class="col-12 col-sm-4 d-flex justify-content-end">
                             <div class="action d-flex flex-column">
-                                <p class="price-label">$<span>429</span></p>
+                                <p class="price-label">$<span>{{selectedBiggie?.price}}</span></p>
+                                <select [(ngModel)]="selectedBiggie">
+                                    <option *ngFor="let item of biggiePackage"  [ngValue]="item">
+                                        {{item.name}}
+                                    </option>
+                                </select>
+                                <div class="discount" *ngIf="selectedBiggie?.discount">
+                                    Discount: <span>{{selectedBiggie?.discount}} free months</span>
+                                </div>
                                 <button class="btn btn_gradient-orange"  (click)="redirectToRegister('12')">
                                     Get BIGGIE
                                 </button>
@@ -156,7 +172,15 @@
                         </div>
                         <div class="col-12 col-sm-4 d-flex justify-content-end">
                             <div class="action d-flex flex-column">
-                                <p class="price-label">$<span>799</span></p>
+                                    <p class="price-label">$<span>{{selectedHulk?.price}}</span></p>
+                                    <select [(ngModel)]="selectedHulk">
+                                        <option *ngFor="let item of hulkPackage"  [ngValue]="item">
+                                            {{item.name}}
+                                        </option>
+                                    </select>
+                                    <div class="discount" *ngIf="selectedHulk?.discount">
+                                        Discount: <span>{{selectedHulk?.discount}} free months</span>
+                                    </div>
                                 <button class="btn btn_gradient-orange"  (click)="redirectToRegister('17')">
                                     Get HULK
                                 </button>
