@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { LandingPageService } from '../shared/services/landing-page.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-pricing',
   templateUrl: './pricing.component.html',
   styleUrls: ['./pricing.component.scss']
 })
-export class PricingComponent {
+export class PricingComponent implements OnInit {
   customOptions: OwlOptions = {
     loop: true,
     dots: true,
@@ -26,6 +28,14 @@ export class PricingComponent {
       }
     },
   };
-  constructor() {
+  constructor(private landingPageSrv: LandingPageService,
+              private router: Router) {
+  }
+
+  ngOnInit(): void {}
+
+  redirectToRegister(packageSelected: string): void {
+    this.landingPageSrv.selectPackage(packageSelected);
+    this.router.navigate(['/pages/sign-up']);
   }
 }
