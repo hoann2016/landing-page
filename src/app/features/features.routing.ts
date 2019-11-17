@@ -1,11 +1,10 @@
-  
-import { PricingComponent } from './pricing.component';
+import { FeaturesComponent } from './features.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
     path: '',
-    component: PricingComponent,
+    component: FeaturesComponent,
     // data: {
     //   meta: {
     //     title: 'home.title',
@@ -16,4 +15,4 @@ const routes: Routes = [
   },
 ];
 
-export const PricingRoutes = RouterModule.forChild(routes);
+export const FeaturesRoutes = RouterModule.forChild(routes);

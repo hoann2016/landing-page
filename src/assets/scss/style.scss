@@ -3919,6 +3919,23 @@ margin-top: 0;
       outline: 0;
     }
 }
+.btn_bg-white {
+  display: flex;
+  align-items: center;
+  min-width: 208px;
+  height: 53px;
+  border-radius: 3px;
+  box-shadow: 2.7px 5.3px 17.5px 0 rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  font-family: "ProximaNova";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: normal;
+  text-align: left;
+  color: #f49c1e;
+  padding: 5px 15px;
+}
 //  CSS for SS5: Footer - End
 // regular style toast
 @import '~ngx-toastr/toastr';
