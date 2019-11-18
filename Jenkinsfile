@@ -30,8 +30,9 @@ pipeline {
             }
             steps {
                 script {
-                    sh 'sed -i -e "s/ENV/$DEV_ENVIRONMENT/g" ./Dockerfile'
-                    sh 'rm -f ./Dockerfile-e'
+                    //sh 'sed -i -e "s/ENV/$DEV_ENVIRONMENT/g" ./Dockerfile'
+                    //sh 'rm -f ./Dockerfile-e'
+                    sh "cp ./devOps/$DEV_ENVIRONMENT/Dockerfile ./"
                     dockerImage = docker.build REGISTRY + ":$DOCKER_TAG"
                 }
             }
