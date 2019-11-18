@@ -431,4 +431,45 @@ section.appointment {
             }
         }
     }
+    .step3-wrapper {
+        .qr-info {
+            display: flex;
+            align-items: center;
+            margin: 0 0 20px 0;
+            .image {
+                width: 68px;
+                height: 68px;
+                object-fit: contain;
+                margin: 0 15px 0 0;
+            }
+            .label {
+                font-family: 'Source Sans Pro', sans-serif;
+                font-size: 13px;
+                font-weight: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: left;
+                color: rgba(255, 255, 255, 0.7);
+                margin: 0 0 4px 0;
+            }
+            .id {
+                font-family: 'Source Sans Pro', sans-serif;
+                font-size: 33px;
+                font-weight: 900;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: left;
+                color: #fff;
+                margin: 0;
+            }
+            
+        }
+        .billing-info {
+            min-height: 239px;
+            border-radius: 1.5px;
+            border: solid 0.5px #b7b7b7;
+            background-color: #fff;
+            padding: 6px 22px 0;
+        }
+    }
 }
