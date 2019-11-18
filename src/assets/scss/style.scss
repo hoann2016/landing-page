@@ -3942,10 +3942,12 @@ margin-top: 0;
 .radio-orange-container {
   display: block;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 14px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding-left: 26px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3962,7 +3964,7 @@ margin-top: 0;
 /* Create a custom radio button */
 .checkmark {
   position: absolute;
-  top: 0;
+  top: 8px;
   left: 0;
   height: 16px;
   width: 16px;

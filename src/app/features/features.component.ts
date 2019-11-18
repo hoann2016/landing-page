@@ -12,7 +12,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class FeaturesComponent implements OnInit {
   currentDemoStep: number;
-  constructor(private modalService: NgbModal) {
+  constructor(private modalService: NgbModal,
+              private landingPageSrv: LandingPageService,
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -21,5 +23,10 @@ export class FeaturesComponent implements OnInit {
 
   openDemoPopup(content) {
     this.modalService.open(content, { centered: true, windowClass: 'demo-booking-popup' });
+  }
+
+  redirectToRegister(packageSelected: string): void {
+    this.landingPageSrv.selectPackage(packageSelected);
+    this.router.navigate(['/pages/sign-up']);
   }
 }

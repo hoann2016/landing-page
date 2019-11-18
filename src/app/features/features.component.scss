@@ -173,7 +173,7 @@ section.main-content {
     }
 }
 
-.payment-methods {
+.payment-method {
     display: flex;
     flex-wrap: wrap;
     margin: 0 0 40px 0;
@@ -470,6 +470,103 @@ section.appointment {
             border: solid 0.5px #b7b7b7;
             background-color: #fff;
             padding: 6px 22px 0;
+            margin: 0 0 28px 0;
+            font-size: 14px;
+            .date, .time {
+                font-family: 'Source Sans Pro', sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                display: flex;
+                justify-content: space-between;
+                padding: 14px 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                .left {
+                    color: rgba(0, 0, 0, 0.6);
+                    display: flex;
+                    align-items: center;
+                    &::before {
+                        content: '';
+                        display: block;
+                        background-size: 100% 100%;
+                        background-repeat: no-repeat;
+                        margin-right: 9px;
+                    }
+                }
+                .right {
+                    font-weight: bold;
+                    text-align: left;
+                    color: #ff9907;
+                }
+            }
+            .date {
+                .left:before {
+                    width: 13px;
+                    height: 13px;
+                    background-image: url(assets/images/featuresp/ic-date.png);
+                }
+            }
+            .time {
+                .left:before {
+                    width: 15px;
+                    height: 15px;
+                    background-image: url(assets/images/featuresp/ic-time.png);
+                }
+            }
+            .service-fee {
+                padding: 17px 0 13px;
+                font-family: 'SanFranciscoText', sans-serif;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                h4 {
+                    font-weight: 600;
+                    line-height: 1.05;
+                    text-transform: uppercase;
+                    color: rgba(0, 0, 0, 0.9);
+                    margin: 0 0 22px 0;
+                }
+                .haircut, .surcharge {
+                    font-weight: normal;
+                    line-height: 1.05;
+                    text-align: left;
+                    color: rgba(0, 0, 0, 0.9);
+                }
+                .haircut {
+                    margin: 0 0 12px 0;
+                }
+            }
+            .total {
+                font-family: "SanFranciscoText", sans-serif;
+                font-weight: bold;
+                display: flex;
+                justify-content: space-between;
+                line-height: 1.05;
+                color: rgba(0, 0, 0, 0.9);
+                padding: 14px 0;
+                .right {
+                    font-family: 'Source Sans Pro', sans-serif;
+                    font-weight: bold;
+                    text-align: left;
+                    color: #ff9907;
+                }
+            }
+        }
+        .booking-payment-method {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: normal;
+            text-align: left;
+            color: rgba(255, 255, 255, 0.88);
+            display: flex;
+            flex-direction: column;
+            margin: 0 0 20px 0;
+            img {
+                margin: 0 7px 0 0;
+            }
+        }
+        .confirm-booking {
+            width: 100%;
+            height: 40px;
+            font-size: 16px;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 600;
         }
     }
 }
