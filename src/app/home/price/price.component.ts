@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
-import { LandingPageService } from 'src/app/shared/services/landing-page.service';
+import { LandingPageService } from '../../shared/services/landing-page.service';
 
 @Component({
   selector: 'app-price',
@@ -33,13 +33,9 @@ export class PriceComponent implements OnInit{
         price: '$150',
         duration: 'per year',
         feature: this._sanitizer.bypassSecurityTrustHtml('<li>1 GB of space</li><li>real time sync</li><li>unlimited attachment</li><li>customize theme</li><li>priority email support</li>'),
-    }]
-    ngOnInit(): void {
-        this.landingPageService.getLangSelected().subscribe(lang=>
-            {        
-              this.translate.use(lang);
-            })  
-    }
+    }];
+
+    ngOnInit(): void {}
 
     // Pricing Carousel Options
 	public pricingCarousel: any ={

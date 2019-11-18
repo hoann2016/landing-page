@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { LandingPageService } from 'src/app/shared/services/landing-page.service';
+import { LandingPageService } from '../../shared/services/landing-page.service';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -23,10 +23,6 @@ export class ThankYouComponent implements OnInit {
   orderResponse;
 
   ngOnInit() {
-    this.landingPageService.getLangSelected().subscribe(lang=>
-      {        
-        this.translate.use(lang);
-      });
     this.state$ = this.route.paramMap
       .pipe(     
         map(() =>
@@ -35,7 +31,7 @@ export class ThankYouComponent implements OnInit {
       )
     this.state$.subscribe((p: any) => {
       console.log(p);
-      if(!isEmpty(p) && p.name) {
+      if (!isEmpty(p) && p.name) {
         this.orderResponse = p;
         this.orderResponse.orderStatus = this.translate.instant(`Thankyou.${this.orderResponse.orderStatus}`);
         this.orderResponse.userStatus = this.translate.instant(`Thankyou.${this.orderResponse.userStatus}`);

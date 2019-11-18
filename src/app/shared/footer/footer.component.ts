@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { LandingPageService } from '../services/landing-page.service';
-import { AppService } from 'src/app/app.service';
+import { AppService } from '../../app.service';
 import { ToastrService } from 'ngx-toastr';
 import { GlobalErrorHandlerService } from '../error-handler/global-error-handler.service';
 import { throwError, of } from 'rxjs';
-import { HandlingFormValidatorService } from '../services/handling-form-validator.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 @Component({
@@ -25,7 +24,6 @@ export class FooterComponent implements OnInit {
     private appService:AppService,
     private toastr: ToastrService,
     private landingPageService: LandingPageService,
-    private handlingFormValidatorService:HandlingFormValidatorService,
     private modalService: NgbModal,
     private router: Router,
     ){
@@ -49,10 +47,6 @@ export class FooterComponent implements OnInit {
       Content:["",[Validators.required,Validators.minLength(10),Validators.required,Validators.maxLength(255)]]
       }
     );
-    this.landingPageService.getLangSelected().subscribe(lang=>
-      {        
-        this.translate.use(lang);
-      })
   }
   onSubmit(){
     this.isSubmitted=true;

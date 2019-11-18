@@ -33,10 +33,10 @@
                                             <div class="form-input-2">
 
                                                 <input type="text" name="CustomerName" maxlength="100"
-                                                    class=" fix-boder" formControlName="CustomerName" [ngClass]="{ 'is-invalid': f.CustomerName.touched && (f.CustomerName.errors?.required||formErrors?.CustomerName) }
+                                                    class=" fix-boder" formControlName="CustomerName" [ngClass]="{ 'is-invalid': f.CustomerName.touched && (f.CustomerName.errors?.required) }
                                                     ">
 
-                                                <div *ngIf="isSubmitted && (formErrors?.CustomerName||f.CustomerName.errors)"
+                                                <div *ngIf="isSubmitted && (f.CustomerName.errors)"
                                                     class="text-danger">
                                                     <span *ngIf="f.CustomerName.errors?.required" class="text-danger">
                                                         {{'Register.message-require'|translate}}

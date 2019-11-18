@@ -26,7 +26,6 @@
         <!-- end modal -->
         <a
             class="navbar-brand"
-            [routerLink]=""
         >
             <img
                 class="nav_logo"
@@ -45,7 +44,7 @@
                 href="javascript:void(0)"
                 class="flag_menu navbar-light"
                 (click)="changeLang('vi')"
-                *ngIf="(langSelected|async)=='en'"
+                *ngIf="currentLang === 'en'"
             >
                 <img src="assets/images/flag_en.png" alt> EN
             </a>
@@ -53,7 +52,7 @@
                 href="javascript:void(0)"
                 class="flag_menu navbar-light"
                 (click)="changeLang('en')"
-                *ngIf="(langSelected|async)=='vi'"
+                *ngIf="currentLang === 'vi'"
             >
                 <img src="assets/images/flag_vi.png" alt> VI
             </a>
@@ -89,7 +88,7 @@
                             class="fa fa-home"
                             aria-hidden="true"
                         ></i>
-                        {{'Home.Title'|translate}}
+                        {{ "Home.Title" | translate }}
                     </a>
                 </li>
                 <li class="nav-item">
@@ -123,7 +122,7 @@
                     href="javascript:void(0)"
                     class="flag_menu navbar-light"
                     (click)="changeLang('vi')"
-                    *ngIf="(langSelected|async)=='en'"
+                    *ngIf="currentLang === 'en'"
                 >
                     <img
                         src="assets/images/flag_en.png"
@@ -135,7 +134,7 @@
                     href="javascript:void(0)"
                     class="flag_menu navbar-light"
                     (click)="changeLang('en')"
-                    *ngIf="(langSelected|async)=='vi'"
+                    *ngIf="currentLang === 'vi'"
                 >
                     <img
                         src="assets/images/flag_vi.png"

@@ -1,9 +1,8 @@
 import { AfterViewInit, Component, ElementRef, ViewChild, OnInit } from '@angular/core';
-import 'magnific-popup';
 import { TranslateService } from '@ngx-translate/core';
-import { LandingPageService } from 'src/app/shared/services/landing-page.service';
+import { TranslatesService } from '@shared/translates';
 import { Router } from '@angular/router';
-declare var $: any;
+// declare var $: any;
 
 @Component({
   selector: 'app-intro-two',
@@ -12,21 +11,15 @@ declare var $: any;
 })
 export class IntroTwoComponent implements AfterViewInit,OnInit {
 
-  @ViewChild('video',{static:true}) videoElement: ElementRef;	
+  @ViewChild('video', {static: true}) videoElement: ElementRef;	
 
-  public langSelected:string;
+  public langSelected: string;
   
   constructor(private translate: TranslateService,
-    private landingPageService: LandingPageService,
+    private translatesService: TranslatesService,
    
     private router: Router) { }
-  ngOnInit(): void {
-    this.landingPageService.getLangSelected().subscribe(lang=>
-      {        
-        this.translate.use(lang);
-        this.langSelected=lang;
-      })
-  }
+  ngOnInit(): void {}
 
   // Magnific Popup 
   ngAfterViewInit(): void {
@@ -38,6 +31,9 @@ export class IntroTwoComponent implements AfterViewInit,OnInit {
     //     preloader: false,
     //     fixedContentPos: false 
     // });
+  }
+  getLang(): string {
+    return this.translatesService.getCurrentLang();
   }
   RedirectToRegister(){
     this.router.navigate(['/pages/sign-up']);

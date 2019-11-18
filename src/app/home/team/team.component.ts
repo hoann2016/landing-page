@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { LandingPageService } from 'src/app/shared/services/landing-page.service';
+import { LandingPageService } from '../../shared/services/landing-page.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -13,12 +13,9 @@ export class TeamComponent implements OnInit{
     // DomSanitizer for safe html content.
     constructor(private _sanitizer:DomSanitizer,private translate: TranslateService,
       private landingPageService: LandingPageService) { }
-    ngOnInit(): void {
-      this.landingPageService.getLangSelected().subscribe(lang=>
-        {        
-          this.translate.use(lang);
-        })
-    }
+
+    ngOnInit(): void {}
+    
     // Team Carousel
     public team = [{
         image: 'assets/images/avtar/1.jpg',

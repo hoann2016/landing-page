@@ -1,61 +1,69 @@
-import { NgModule, ErrorHandler } from '@angular/core';
+// angular
+import { APP_INITIALIZER, NgModule, ErrorHandler } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HTTP_INTERCEPTORS, HttpClientModule, HttpClient } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { Http, HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SharedModule } from "./shared/shared.module";
-import { rootRouterConfig } from './app.routes';
+// libs
+import { TransferHttpCacheModule } from '@nguniversal/common';
+import { CookieService, CookieModule } from '@gorniv/ngx-universal';
+// shared
+import { SharedModule } from '@shared/shared.module';
+import { TranslatesService } from '@shared/translates';
+import { SharedMetaModule } from '@shared/shared-meta';
+import { UniversalStorage } from '@shared/storage/universal.storage';
+// components
+import { AppRoutes } from './app.routing';
 import { AppComponent } from './app.component';
-import * as $ from 'jquery';
+// interceptors
 import { AppService } from './app.service';
-import { TranslateModule, TranslateLoader, MissingTranslationHandler } from '@ngx-translate/core';
-import { HttpClientModule, HttpClient} from '@angular/common/http';
+import { GlobalErrorHandlerService } from './shared/error-handler/global-error-handler.service';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { MyMissingTranslationHandler } from './shared/services/translation-handler/translation-handler';
-import { NotTranslatedService } from './shared/services/translation-handler/not-translated-service';
 import { ToastrModule } from 'ngx-toastr';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { GlobalErrorHandlerService } from './shared/error-handler/global-error-handler.service';
-import { HandlingFormValidatorService } from './shared/services/handling-form-validator.service';
+/////
+
+export function initLanguage(translateService: TranslatesService): Function {
+  return (): Promise<any> => translateService.initLanguage();
+}
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
+
 @NgModule({
-  declarations: [
-    AppComponent
-  ],  
-  exports:[],
   imports: [
-    
-    BrowserModule,
-    HttpModule,
-    BrowserAnimationsModule,    
-    SharedModule,
-    RouterModule.forRoot(rootRouterConfig, { useHash: false, anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }),
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      },      
-        missingTranslationHandler: {
-            provide: MissingTranslationHandler,
-            useClass: MyMissingTranslationHandler,
-            deps: [NotTranslatedService]
-        }
-    }),
+    BrowserModule.withServerTransition({ appId: 'my-app' }),
+    TransferHttpCacheModule,
+    HttpClientModule,
+    AppRoutes,
+    BrowserAnimationsModule,
+    CookieModule.forRoot(),
+    SharedModule.forRoot(),
     ToastrModule.forRoot({
       timeOut: 3000,
       positionClass: 'toast-top-right',
       preventDuplicates: true,
-      enableHtml:true
+      enableHtml: true
     }),
+    SharedMetaModule,
     NgbModule
   ],
-  providers: [AppService, GlobalErrorHandlerService,
-    HandlingFormValidatorService,
+  declarations: [AppComponent],
+  providers: [
+    // Guards TODO
+    // AuthGuard,
+    // UnAuthGuard,
+    // TODO Interceptors
+    // { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+    // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    { provide: APP_INITIALIZER, useFactory: initLanguage, multi: true, deps: [TranslatesService] },
+    CookieService,
+    UniversalStorage,
+    AppService, 
+    GlobalErrorHandlerService,
     { provide: ErrorHandler, useClass: GlobalErrorHandlerService }, 
   ],
-  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

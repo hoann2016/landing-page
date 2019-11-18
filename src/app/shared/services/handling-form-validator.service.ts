@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { LandingPageService } from './landing-page.service';
 import { TranslateService } from '@ngx-translate/core';
 import { ToastrService } from 'ngx-toastr';
-import { Observable, combineLatest, pipe } from 'rxjs';
+import { Observable, combineLatest, pipe, of } from 'rxjs';
 import { mergeMap, map, tap } from 'rxjs/operators';
 import { FormGroup, ValidationErrors } from '@angular/forms';
 
@@ -13,8 +13,8 @@ export class HandlingFormValidatorService {
 
   constructor(private landingPageService: LandingPageService, private translateService: TranslateService, private toastrService: ToastrService) { }
 
-  private translateWraper(str,stDict:string): Observable<string> {
-    const langObservable = this.landingPageService.getLangSelected();
+  private translateWraper(str, stDict: string): Observable<string> {
+    const langObservable = of('en');
     return langObservable.pipe(
       mergeMap(lang => {
         this.translateService.use(lang);

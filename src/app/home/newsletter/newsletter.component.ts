@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { LandingPageService } from 'src/app/shared/services/landing-page.service';
+import { LandingPageService } from '../../shared/services/landing-page.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -17,13 +17,9 @@ export class NewsletterComponent implements OnInit {
 
   // Email Validator
   ngOnInit() {
-  	this.subscribeForm = this.sf.group({
+    this.subscribeForm = this.sf.group({
       email: ['', Validators.email],
-    })
-    this.landingPageService.getLangSelected().subscribe(lang=>
-      {        
-        this.translate.use(lang);
-      })
+    });
   }
 
   onSubmit(name) {

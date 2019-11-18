@@ -2,13 +2,12 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
-import { LandingPageService } from 'src/app/shared/services/landing-page.service';
+import { LandingPageService } from '../../shared/services/landing-page.service';
 import { MustMatch } from './must-match.validator';
-import { AppService } from 'src/app/app.service';
-import { UserLogin } from 'src/app/shared/models/user-models/user-login.model';
+import { AppService } from '../../app.service';
+import { UserLogin } from '../../shared/models/user-models/user-login.model';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
-import { HandlingFormValidatorService } from 'src/app/shared/services/handling-form-validator.service';
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -34,7 +33,6 @@ export class SignInComponent implements OnInit, AfterViewInit {
     private appService: AppService,
     private toastr: ToastrService,
     private router: Router,
-    private handlingFormValidatorService: HandlingFormValidatorService
   ) { }
   contentLoading: string;
   showLoading: boolean = false;
@@ -54,10 +52,6 @@ export class SignInComponent implements OnInit, AfterViewInit {
   }
   ngOnInit() {
     this.buildForm();
-    this.landingPageService.getLangSelected().subscribe(lang => {
-      this.translate.use(lang);
-    });
-
   }
 
   onSubmit() {
@@ -78,7 +72,7 @@ export class SignInComponent implements OnInit, AfterViewInit {
 if (response.success == true) {
             window.location.href = this.appService.merchangePath;
           }else {
-            this.handlingFormValidatorService.showErrorForm(this.signInForm, 'SignUp');
+            // this.handlingFormValidatorService.showErrorForm(this.signInForm, 'SignUp');
           }  
         },
         err => {

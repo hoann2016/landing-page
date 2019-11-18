@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { LandingPageService } from 'src/app/shared/services/landing-page.service';
+import { LandingPageService } from '../../shared/services/landing-page.service';
 
 @Component({
   selector: 'app-blog',
@@ -36,10 +36,7 @@ export class BlogComponent {
     }]
 
     ngOnInit(): void {
-      this.landingPageService.getLangSelected().subscribe(x=>
-        {        
-          this.translate.use(x);
-        })
+
     }
     // Blog Carousel Options
 	public blogCarousel: any ={
