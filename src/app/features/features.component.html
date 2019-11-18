@@ -278,7 +278,52 @@
             </ngb-accordion>
         </ng-container>
         <ng-container *ngIf="currentDemoStep === 2">
-
+            <div class="step2-wrapper">
+                <div class="booking-date">
+                    <a href="javascript:void(0)" (click)="goPrevDay()" class="prev"></a>
+                   <div class="mid">
+                        <div class="date-field"  (click)="d.toggle()">
+                            {{ selectedDOW }}, {{ selectDate.day }}.{{ selectDate.month }}.{{ selectDate.year }}
+                        </div>
+                        <input class="form-control" placeholder="yyyy-mm-dd"
+                        name="dp" [(ngModel)]="selectDate" ngbDatepicker #d="ngbDatepicker">
+                   </div>
+                    <a href="javascript:void(0)" (click)="goNextDay()" class="next"></a>
+                </div>    
+                <div class="technicians">
+                    <h3 class="title title_line_through"><span>technicians</span></h3>
+                    <div class="technicians-list">
+                        <div class="staff">
+                            <img src="assets/images/featuresp/girl_salon1.jpg"/>
+                            <h4 class="name">VICKY MY</h4>
+                            <p class="position">Senior</p>
+                        </div>
+                        <div class="staff">
+                            <img src="assets/images/featuresp/girl_salon2.jpg"/>
+                            <h4 class="name">MY DIEM</h4>
+                            <p class="position">Senior</p>
+                        </div>
+                        <div class="staff">
+                            <img src="assets/images/featuresp/girl_salon3.jpg"/>
+                            <h4 class="name">THUY DIEM</h4>
+                            <p class="position">Senior</p>
+                        </div>
+                        <div class="staff">
+                            <img src="assets/images/featuresp/girl_salon4.jpg"/>
+                            <h4 class="name">VAN ANH</h4>
+                            <p class="position">Senior</p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="time-select">
+                    <h3 class="title title_line_through"><span>Time Select</span></h3>
+                    <div class="time-blocks">
+                        <div  class="time" *ngFor="let block of timeBlocks">
+                            {{block}}
+                        </div>
+                    </div>
+                </div>           
+            </div>
         </ng-container>
         <ng-container *ngIf="currentDemoStep === 3">
             <div class="step3-wrapper">

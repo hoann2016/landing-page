@@ -431,142 +431,132 @@ section.appointment {
             }
         }
     }
-    .step3-wrapper {
-        .qr-info {
+}
+.step2-wrapper {
+    .booking-date {
+        background-color: #fff;
+        position: relative;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 20px 0;
+        .date-field {
             display: flex;
-            align-items: center;
-            margin: 0 0 20px 0;
-            .image {
-                width: 68px;
-                height: 68px;
-                object-fit: contain;
-                margin: 0 15px 0 0;
+            justify-content: center;
+            cursor: pointer;
+            &:before {
+                content: '';
+                display: block;
+                height: 16px;
+                width: 16px;
+                background-size: 100% 100%;
+                background-image: url(assets/images/featuresp/calendar.png);
+                margin: 0 4px 0 0;
             }
-            .label {
-                font-family: 'Source Sans Pro', sans-serif;
-                font-size: 13px;
-                font-weight: normal;
-                line-height: normal;
-                letter-spacing: normal;
-                text-align: left;
-                color: rgba(255, 255, 255, 0.7);
-                margin: 0 0 4px 0;
-            }
-            .id {
-                font-family: 'Source Sans Pro', sans-serif;
-                font-size: 33px;
-                font-weight: 900;
-                line-height: normal;
-                letter-spacing: normal;
-                text-align: left;
-                color: #fff;
-                margin: 0;
-            }
-            
         }
-        .billing-info {
-            min-height: 239px;
-            border-radius: 1.5px;
-            border: solid 0.5px #b7b7b7;
-            background-color: #fff;
-            padding: 6px 22px 0;
-            margin: 0 0 28px 0;
-            font-size: 14px;
-            .date, .time {
-                font-family: 'Source Sans Pro', sans-serif;
-                font-size: 14px;
-                font-weight: normal;
-                display: flex;
-                justify-content: space-between;
-                padding: 14px 0;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-                .left {
-                    color: rgba(0, 0, 0, 0.6);
-                    display: flex;
-                    align-items: center;
-                    &::before {
-                        content: '';
-                        display: block;
-                        background-size: 100% 100%;
-                        background-repeat: no-repeat;
-                        margin-right: 9px;
+        input {
+            opacity: 0;
+            padding: 0;
+            height: 0;
+            width: 200px;
+        };
+        .prev, .next {
+            display: flex;
+            width: 50px;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            background-size: 7px 12px;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        .prev {
+            background-image: url(assets/images/icon/arrow_left.png);
+        }
+        .next {
+            background-image: url(assets/images/icon/arrow_right.png);
+        }
+    }
+    .technicians {
+        padding: 30px 10px 10px;
+        margin: 0 0 20px 0;
+        border-radius: 2px;
+        background-color: rgba(0, 0, 0, 0.2);
+        .title {
+            span {
+                margin: 0 30px 0;
+            }
+        }
+        .technicians-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .staff {
+                padding: 14px 20px 0;
+                img{
+                    width: 65px;
+                    height: 65px;
+                    object-fit: contain;
+                    border-radius: 50%;
+                    margin: 0 0 10px 0;
+                }
+                .name {
+                    font-family: 'SanFranciscoText', sans-serif;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 0.82;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color: #f39a00;
+                    margin: 0 0 5px 0;
+                }
+                .position {
+                    font-family: 'SanFranciscoText', sans-serif;
+                    font-size: 12px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 0.96;
+                    text-align: center;
+                    color: rgba(255, 255, 255, 0.4);
+                }
+                &:hover {
+                    background: #191e25;
+                    .name {
+                        color: #f68e56;
                     }
                 }
-                .right {
-                    font-weight: bold;
-                    text-align: left;
-                    color: #ff9907;
-                }
-            }
-            .date {
-                .left:before {
-                    width: 13px;
-                    height: 13px;
-                    background-image: url(assets/images/featuresp/ic-date.png);
-                }
-            }
-            .time {
-                .left:before {
-                    width: 15px;
-                    height: 15px;
-                    background-image: url(assets/images/featuresp/ic-time.png);
-                }
-            }
-            .service-fee {
-                padding: 17px 0 13px;
-                font-family: 'SanFranciscoText', sans-serif;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-                h4 {
-                    font-weight: 600;
-                    line-height: 1.05;
-                    text-transform: uppercase;
-                    color: rgba(0, 0, 0, 0.9);
-                    margin: 0 0 22px 0;
-                }
-                .haircut, .surcharge {
-                    font-weight: normal;
-                    line-height: 1.05;
-                    text-align: left;
-                    color: rgba(0, 0, 0, 0.9);
-                }
-                .haircut {
-                    margin: 0 0 12px 0;
-                }
-            }
-            .total {
-                font-family: "SanFranciscoText", sans-serif;
-                font-weight: bold;
-                display: flex;
-                justify-content: space-between;
-                line-height: 1.05;
-                color: rgba(0, 0, 0, 0.9);
-                padding: 14px 0;
-                .right {
-                    font-family: 'Source Sans Pro', sans-serif;
-                    font-weight: bold;
-                    text-align: left;
-                    color: #ff9907;
-                }
             }
         }
-        .booking-payment-method {
-            font-family: 'Source Sans Pro', sans-serif;
-            font-weight: normal;
-            text-align: left;
-            color: rgba(255, 255, 255, 0.88);
+    }
+    .time-select {
+        padding: 30px 10px 10px;
+        border-radius: 2px;
+        background-color: rgba(0, 0, 0, 0.2);
+        .title {
+            span {
+                margin: 0 15px 0;
+            }
+        }
+        .time-blocks {
             display: flex;
-            flex-direction: column;
-            margin: 0 0 20px 0;
-            img {
-                margin: 0 7px 0 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0 0 0 10px;
+            .time {
+                width: 85px;
+                height: 35px;
+                border-radius: 2px;
+                background: rgba(255,255,255,0.2);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 10px 10px 0;
+                font-family: 'SanFranciscoText', sans-serif;
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.6);
             }
-        }
-        .confirm-booking {
-            width: 100%;
-            height: 40px;
-            font-size: 16px;
-            font-family: 'Source Sans Pro', sans-serif;
-            font-weight: 600;
         }
     }
 }

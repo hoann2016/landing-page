@@ -29,6 +29,15 @@ export class HeaderCommonComponent extends HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.langList$ = this._translatesService.getLangList();
+    this.currentLang = this._translatesService.getCurrentLang();
   }
-
+  public changeLang(code: string): void {
+    this._translatesService.changeLang(code);
+    this.currentLang = code;
+  }
+  RedirectToLogin() {
+    this.modalService.dismissAll();
+    this.router.navigate(['/pages/sign-in']);
+  }
 }

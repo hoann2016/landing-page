@@ -1,5 +1,5 @@
 <!-- Nav Start -->
-<nav class="navbar navbar-expand-lg navbar-light theme-nav fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light header-common fixed-top">
     <div class="container">
         <a class="navbar-brand">
             <img
@@ -8,40 +8,6 @@
                 alt="logo"
             >
         </a>
-        <div class="btn_header_mb">
-            <a href="javascript:void(0)" (click)="RedirectToLogin()"
-                class="btn_login"
-            >
-                Login
-            </a>
-            <a
-                href="javascript:void(0)"
-                class="flag_menu navbar-light"
-                (click)="changeLang('vi')"
-                *ngIf="currentLang === 'en'"
-            >
-                <img src="assets/images/flag_en.png" alt> EN
-            </a>
-            <a
-                href="javascript:void(0)"
-                class="flag_menu navbar-light"
-                (click)="changeLang('en')"
-                *ngIf="currentLang === 'vi'"
-            >
-                <img src="assets/images/flag_vi.png" alt> VI
-            </a>
-        </div>
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
         <div
             class="collapse navbar-collapse default-nav"
@@ -96,15 +62,15 @@
                     </a>
                 </li>
             </ul>
-            <div class="btn_header">
+            <div class="right-menu-header">
                 <a href="javascript:void(0)" (click)="RedirectToLogin()"
-                    class="btn_login"
+                    class="btn btn_gradient-orange btn-login"
                 >
                     {{'Shared.Login_Register'|translate}}
                 </a>
                 <a
                     href="javascript:void(0)"
-                    class="flag_menu navbar-light"
+                    class="lang-menu navbar-light"
                     (click)="changeLang('vi')"
                     *ngIf="currentLang === 'en'"
                 >
@@ -112,11 +78,11 @@
                         src="assets/images/flag_en.png"
                         alt
                     >
-                    VI
+                    Vietnamese
                 </a>
                 <a
                     href="javascript:void(0)"
-                    class="flag_menu navbar-light"
+                    class="lang-menu navbar-light"
                     (click)="changeLang('en')"
                     *ngIf="currentLang === 'vi'"
                 >
@@ -124,7 +90,7 @@
                         src="assets/images/flag_vi.png"
                         alt
                     >
-                    EN
+                    English
                 </a>
             </div>
         </div>
