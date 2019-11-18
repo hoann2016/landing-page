@@ -1,4 +1,4 @@
-FROM node:10-alpine as buildContainer
+FROM node:10.16-alpine as buildContainer
 WORKDIR /app
 COPY ./package.json ./package-lock.json /app/
 RUN npm install
@@ -8,7 +8,7 @@ RUN npm run generate:prerender
 # Skip unit test
 # RUN npm run test:ssr
 
-FROM node:8-alpine
+FROM node:10.16-alpine
 
 WORKDIR /app
 # Copy dependency definitions

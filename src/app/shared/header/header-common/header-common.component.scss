@@ -1,0 +1,55 @@
+.header-common {
+    height: 70px;
+    background:#fff;
+    box-shadow: 1px 1px 12px 1px rgba(221, 221, 221, 0.4);
+}
+.nav-item {
+    .nav-link {
+        font-family: "ProximaNova";
+        font-size: 15px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.6);
+        padding: 8px 18px;
+    }
+}
+.right-menu-header {
+    position: absolute;
+    right: 45px;
+    display: flex;
+    .btn-login {
+        display: flex;
+        min-width: 90px;
+        height: 31px;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        align-items: center;
+        justify-content: center;
+        margin: 0 10px 0 0;
+    }
+}
+.lang-menu {
+    min-width: 103px;
+    height: 31px;
+    border-radius: 3px;
+    border: solid 1px #e1e1e1;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 7px 10px 7px 10px;
+    font-family: "ProximaNova";
+    font-size: 13px;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.9);
+    box-shadow: 2.3px 4.5px 15px 0 rgba(0, 0, 0,0.1);
+    img {
+        width: 20px;
+        height: 14px;    
+        margin: 0 4px 0 0;  
+    }
+}

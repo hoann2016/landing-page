@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // libs
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { CookieService, CookieModule } from '@gorniv/ngx-universal';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 // shared
 import { SharedModule } from '@shared/shared.module';
 import { TranslatesService } from '@shared/translates';
@@ -38,6 +40,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     AppRoutes,
     BrowserAnimationsModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    }),
     CookieModule.forRoot(),
     SharedModule.forRoot(),
     ToastrModule.forRoot({

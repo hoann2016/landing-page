@@ -16,6 +16,11 @@ const routes: Routes = [
     component: WrapperComponent,
     loadChildren: 'app/pricing/pricing.module#PricingModule'
   },
+  {
+    path: 'features',
+    component: WrapperComponent,
+    loadChildren: 'app/features/features.module#FeaturesModule'
+  },
   { 
     path: '**', 
     redirectTo: 'home'

@@ -8,7 +8,6 @@ import { ReviewComponent } from './review/review.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { FaqComponent } from './faq/faq.component';
 import { DownloadComponent } from './download/download.component';
-import { ComingsoonComponent } from './comingsoon/comingsoon.component';
 import { EmailTemplateComponent } from './email-template/email-template.component';
 import { PaymentComponent } from './payment/payment.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
@@ -49,10 +48,6 @@ const routes: Routes = [
       {
         path: 'download',
         component: DownloadComponent,
-      },
-      {
-        path: 'coming-soon',
-        component: ComingsoonComponent,
       },
       {
         path: 'email-template',

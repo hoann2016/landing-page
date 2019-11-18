@@ -78,10 +78,10 @@ export class FooterComponent implements OnInit {
   }
   redirectToPrivacyPolicy() {
     this.modalService.dismissAll();
-    this.router.navigate(['/pages/privacy-policy']);
+    window.open(`http://blog.ludiino.com/2019/11/18/privacy-policy/?lang=${this.translate.currentLang}`, '_blank');
   }
   redirectToTermOfService() {
     this.modalService.dismissAll();
-    this.router.navigate(['/pages/term-of-service']);
+    window.open(`http://blog.ludiino.com/2019/11/18/terms-of-use-terms-and-conditions/?lang=${this.translate.currentLang}`, '_blank');
   }
 }
