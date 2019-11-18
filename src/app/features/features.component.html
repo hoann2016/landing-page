@@ -7,7 +7,7 @@
         <h1 class="title">Online Booking & Appointment
             Scheduling Features</h1>
         <p class="intro">Great features are packaged into a powerful online solution that creates competitive advantages for your business in the digital age </p>
-        <button class="btn btn_bg-white btn-test-booking">
+        <button class="btn btn_bg-white btn-test-booking" (click)="openDemoPopup(demoPopupContent)">
             CREATE A TEST BOOKING
         </button>
     </div>
@@ -150,3 +150,182 @@
         </div>
     </div>
 </section>
+
+<ng-template #demoPopupContent let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" *ngIf="currentDemoStep === 1">Step 1: Please select a service</h4>
+        <h4 class="modal-title" *ngIf="currentDemoStep === 2">Step 2: Select date & technicians</h4>
+        <h4 class="modal-title" *ngIf="currentDemoStep === 3">Step 3: Payment method</h4>
+    </div>
+    <div class="modal-body">
+        <ng-container *ngIf="currentDemoStep === 1">
+            <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+                <ngb-panel >
+                    <ng-template ngbPanelTitle>
+                        <div class="step1-section hair-section ">Hair Service</div>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                        <div class="option">
+                            <div class="left">
+                                <div class="name">Hair Cut</div>
+                                <div class="time">45 minutes</div>
+                            </div>
+                            <div class="right">80,000</div>
+                        </div>
+                        <div class="option">
+                            <div class="left">
+                                <div class="name">Hair Cut for Women 60 minutes</div>
+                                <div class="time">60 minutes</div>
+                            </div>
+                            <div class="right">80,000</div>
+                        </div>
+                        <div class="option">
+                            <div class="left">
+                                <div class="name">Hair Dye</div>
+                                <div class="time">20 minutes</div>
+                            </div>
+                            <div class="right">80,000</div>
+                        </div>
+                    </ng-template>
+                </ngb-panel>
+    
+                <ngb-panel>
+                    <ng-template ngbPanelTitle>
+                        <div class="step1-section skin-section ">Skin Care</div>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                        <div class="option">
+                            <div class="left">
+                                <div class="name">Hair Cut</div>
+                                <div class="time">45 minutes</div>
+                            </div>
+                            <div class="right">80,000</div>
+                        </div>
+                        <div class="option">
+                            <div class="left">
+                                <div class="name">Hair Cut for Women 60 minutes</div>
+                                <div class="time">60 minutes</div>
+                            </div>
+                            <div class="right">80,000</div>
+                        </div>
+                        <div class="option">
+                            <div class="left">
+                                <div class="name">Hair Dye</div>
+                                <div class="time">20 minutes</div>
+                            </div>
+                            <div class="right">80,000</div>
+                        </div>
+                    </ng-template>
+                </ngb-panel>
+    
+                <ngb-panel>
+                    <ng-template ngbPanelTitle>
+                        <div class="step1-section nails-section ">Nails Care</div>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                        <div class="option">
+                            <div class="left">
+                                <div class="name">Hair Cut</div>
+                                <div class="time">45 minutes</div>
+                            </div>
+                            <div class="right">80,000</div>
+                        </div>
+                        <div class="option">
+                            <div class="left">
+                                <div class="name">Hair Cut for Women 60 minutes</div>
+                                <div class="time">60 minutes</div>
+                            </div>
+                            <div class="right">80,000</div>
+                        </div>
+                        <div class="option">
+                            <div class="left">
+                                <div class="name">Hair Dye</div>
+                                <div class="time">20 minutes</div>
+                            </div>
+                            <div class="right">80,000</div>
+                        </div>
+                    </ng-template>
+                </ngb-panel>
+    
+                <ngb-panel>
+                    <ng-template ngbPanelTitle>
+                        <div class="step1-section makeup-section ">Make-up</div>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                        <div class="option">
+                            <div class="left">
+                                <div class="name">Hair Cut</div>
+                                <div class="time">45 minutes</div>
+                            </div>
+                            <div class="right">80,000</div>
+                        </div>
+                        <div class="option">
+                            <div class="left">
+                                <div class="name">Hair Cut for Women 60 minutes</div>
+                                <div class="time">60 minutes</div>
+                            </div>
+                            <div class="right">80,000</div>
+                        </div>
+                        <div class="option">
+                            <div class="left">
+                                <div class="name">Hair Dye</div>
+                                <div class="time">20 minutes</div>
+                            </div>
+                            <div class="right">80,000</div>
+                        </div>
+                    </ng-template>
+                </ngb-panel>
+            </ngb-accordion>
+        </ng-container>
+        <ng-container *ngIf="currentDemoStep === 2">
+
+        </ng-container>
+        <ng-container *ngIf="currentDemoStep === 3">
+            <div class="step3-wrapper">
+                <div class="qr-info">
+                    <div class="image">
+                        <img src="assets/images/featuresp/qr.jpg" alt="qr"/>
+                    </div>
+                    <div class="info">
+                        <h4>Booking ID</h4>
+                        <h3 class="id">#730445</h3>
+                    </div>
+                </div>
+                <div class="billing-info">
+                    <div class="date">
+                        <div class="left"></div>
+                        <div class="right"></div>
+                    </div>
+                    <div class="time">
+                        <div class="left"></div>
+                        <div class="right"></div>
+                    </div>
+                    <div class="service-fee">
+                        <div class="left"></div>
+                        <div class="right"></div>
+                    </div>
+                    <div class="total">
+                        <div class="left"></div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+                <div class="payment-method">
+                    <label class="radio-orange-container">Credit card
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-orange-container">Internet Banking
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-orange-container">Zalo Pay
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <button class="btn btn_gradient-orange">CONFIRM BOOKING</button>
+            </div>
+        </ng-container>
+
+    </div>
+</ng-template>
