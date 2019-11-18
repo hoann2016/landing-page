@@ -23,11 +23,12 @@ export class HeaderComponent implements OnInit {
 
   // Inject Document object
   constructor(
-      @Inject(DOCUMENT) private document: Document,
-      @Inject(WINDOW) private window, private modalService: NgbModal,
-      private landingPageService: LandingPageService,
-      private _translatesService: TranslatesService,
-      private router: Router
+      @Inject(DOCUMENT) protected document: Document,
+      @Inject(WINDOW) protected window, 
+      protected modalService: NgbModal,
+      protected landingPageService: LandingPageService,
+      protected _translatesService: TranslatesService,
+      protected router: Router
       ) {}
 
   ngOnInit() {
@@ -54,7 +55,7 @@ export class HeaderComponent implements OnInit {
   // @HostListener Decorator
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    let number = this.window.pageYOffset ||
+    const number = this.window.pageYOffset ||
         this.document.documentElement.scrollTop ||
         this.document.body.scrollTop || 0;
     if (number >= 60) {

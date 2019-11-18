@@ -1,4 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
+import {WrapperComponent} from '.../../app/shared/layouts/wrapper-common/wrapper-common.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { 
@@ -8,6 +10,16 @@ const routes: Routes = [
   { 
     path: 'pages',
     loadChildren: 'app/pages/pages.module#PagesModule'  
+  },
+  {
+    path: 'pricing',
+    component: WrapperComponent,
+    loadChildren: 'app/pricing/pricing.module#PricingModule'
+  },
+  {
+    path: 'features',
+    component: WrapperComponent,
+    loadChildren: 'app/features/features.module#FeaturesModule'
   },
   { 
     path: '**', 

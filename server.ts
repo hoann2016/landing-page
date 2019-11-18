@@ -28,6 +28,9 @@ Object.defineProperty(win.document.body.style, 'transform', {
     };
   },
 });
+// Event 
+global['Event'] = win.Event; 
+// assign the `win.Event` to prop `Event`
 // mock documnet
 global['document'] = win.document;
 // othres mock

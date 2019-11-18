@@ -4,26 +4,6 @@
     [class.darkHeader]="darkHeader"
 >
     <div class="container">
-        <!-- start modal -->
-        <!-- <ng-template
-            #content
-            let-modal
-        >
-            <div class="modal-body modal_body_signin">
-                <button
-                    type="button "
-                    class="close"
-                    aria-label="Close "
-                    (click)="modal.dismiss( 'Cross click') "
-                >
-                    <span aria-hidden="true ">&times;</span>
-                </button>
-                <app-sign-in (closeChildModal)="ShowBackModalLogin($event)"></app-sign-in>
-            </div>
-           
-        </ng-template> -->
-
-        <!-- end modal -->
         <a
             class="navbar-brand"
         >
@@ -98,7 +78,17 @@
                         [pageScrollOffset]="80"
                         pageScroll
                     >
-                        {{'Home.Header1'|translate}}
+                        {{'Home.HeaderMenu.Feature'|translate}}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        [routerLink]="'/pricing'"
+                        [pageScrollOffset]="80"
+                        pageScroll
+                    >
+                        {{'Home.HeaderMenu.Pricing'|translate}}
                     </a>
                 </li>
                 <li class="nav-item">

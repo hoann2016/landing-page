@@ -3,6 +3,10 @@
     "Title": "Trang chủ",
     "Select": "Thay đôi ngôn ngữ",
     "Header1": "Giải Pháp & Chi Phí",
+    "HeaderMenu": {
+      "Feature": "Tính năng",
+      "Pricing": "Chi phí"
+    },
     "Intro": {
       "Message": "Khách Hàng 4.0 tìm và đặt dịch vụ trực tuyến ngay khi cần bằng thiết bị thông minh",
       "ButtonLabel": "ĐĂNG KÝ NGAY MIỄN PHÍ",
