@@ -12,7 +12,6 @@
         </button>
     </div>
 </section>
-
 <section class="main-content">
     <div class="container">
         <div class="section free-website">
@@ -165,21 +164,21 @@
                         <div class="step1-section hair-section ">Hair Service</div>
                     </ng-template>
                     <ng-template ngbPanelContent>
-                        <div class="option">
+                        <div class="option" (click)="goToStep(2)">
                             <div class="left">
                                 <div class="name">Hair Cut</div>
                                 <div class="time">45 minutes</div>
                             </div>
                             <div class="right">80,000</div>
                         </div>
-                        <div class="option">
+                        <div class="option" (click)="goToStep(2)">
                             <div class="left">
                                 <div class="name">Hair Cut for Women 60 minutes</div>
                                 <div class="time">60 minutes</div>
                             </div>
                             <div class="right">80,000</div>
                         </div>
-                        <div class="option">
+                        <div class="option" (click)="goToStep(2)">
                             <div class="left">
                                 <div class="name">Hair Dye</div>
                                 <div class="time">20 minutes</div>
@@ -194,21 +193,21 @@
                         <div class="step1-section skin-section ">Skin Care</div>
                     </ng-template>
                     <ng-template ngbPanelContent>
-                        <div class="option">
+                        <div class="option" (click)="goToStep(2)">
                             <div class="left">
                                 <div class="name">Hair Cut</div>
                                 <div class="time">45 minutes</div>
                             </div>
                             <div class="right">80,000</div>
                         </div>
-                        <div class="option">
+                        <div class="option" (click)="goToStep(2)">
                             <div class="left">
                                 <div class="name">Hair Cut for Women 60 minutes</div>
                                 <div class="time">60 minutes</div>
                             </div>
                             <div class="right">80,000</div>
                         </div>
-                        <div class="option">
+                        <div class="option" (click)="goToStep(2)">
                             <div class="left">
                                 <div class="name">Hair Dye</div>
                                 <div class="time">20 minutes</div>
@@ -223,21 +222,21 @@
                         <div class="step1-section nails-section ">Nails Care</div>
                     </ng-template>
                     <ng-template ngbPanelContent>
-                        <div class="option">
+                        <div class="option" (click)="goToStep(2)">
                             <div class="left">
                                 <div class="name">Hair Cut</div>
                                 <div class="time">45 minutes</div>
                             </div>
                             <div class="right">80,000</div>
                         </div>
-                        <div class="option">
+                        <div class="option" (click)="goToStep(2)">
                             <div class="left">
                                 <div class="name">Hair Cut for Women 60 minutes</div>
                                 <div class="time">60 minutes</div>
                             </div>
                             <div class="right">80,000</div>
                         </div>
-                        <div class="option">
+                        <div class="option" (click)="goToStep(2)">
                             <div class="left">
                                 <div class="name">Hair Dye</div>
                                 <div class="time">20 minutes</div>
@@ -252,21 +251,21 @@
                         <div class="step1-section makeup-section ">Make-up</div>
                     </ng-template>
                     <ng-template ngbPanelContent>
-                        <div class="option">
+                        <div class="option" (click)="goToStep(2)">
                             <div class="left">
                                 <div class="name">Hair Cut</div>
                                 <div class="time">45 minutes</div>
                             </div>
                             <div class="right">80,000</div>
                         </div>
-                        <div class="option">
+                        <div class="option" (click)="goToStep(2)">
                             <div class="left">
                                 <div class="name">Hair Cut for Women 60 minutes</div>
                                 <div class="time">60 minutes</div>
                             </div>
                             <div class="right">80,000</div>
                         </div>
-                        <div class="option">
+                        <div class="option" (click)="goToStep(2)">
                             <div class="left">
                                 <div class="name">Hair Dye</div>
                                 <div class="time">20 minutes</div>
@@ -318,7 +317,7 @@
                 <div class="time-select">
                     <h3 class="title title_line_through"><span>Time Select</span></h3>
                     <div class="time-blocks">
-                        <div  class="time" *ngFor="let block of timeBlocks">
+                        <div  class="time" *ngFor="let block of timeBlocks" (click)="goToStep(3)">
                             {{block}}
                         </div>
                     </div>

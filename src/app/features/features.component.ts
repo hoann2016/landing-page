@@ -51,6 +51,9 @@ export class FeaturesComponent implements OnInit {
   goNextDay() {
     this.selectDate = this.calendar.getNext(this.selectDate);
   }
+  goToStep(step: number) {
+    this.currentDemoStep = step;
+  }
   redirectToRegister(packageSelected: string): void {
     this.landingPageSrv.selectPackage(packageSelected);
     this.router.navigate(['/pages/sign-up']);
