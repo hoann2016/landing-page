@@ -21,6 +21,8 @@ Object.defineProperty(win.document.body.style, 'transform', {
 });
 
 global['Event'] = win.Event; 
+global['KeyboardEvent'] = win.Event;
+global['MouseEvent'] = win.Event;
 global['document'] = win.document;
 global['CSS'] = null;
 // global['XMLHttpRequest'] = require('xmlhttprequest').XMLHttpRequest;

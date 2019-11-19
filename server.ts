@@ -30,6 +30,8 @@ Object.defineProperty(win.document.body.style, 'transform', {
 });
 // Event 
 global['Event'] = win.Event; 
+global['KeyboardEvent'] = win.Event;
+global['MouseEvent'] = win.Event;
 // assign the `win.Event` to prop `Event`
 // mock documnet
 global['document'] = win.document;
