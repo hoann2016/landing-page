@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HTTP_INTERCEPTORS, HttpClientModule, HttpClient } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { environment } from '../environments/environment';
 // libs
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { CookieService, CookieModule } from '@gorniv/ngx-universal';
@@ -23,7 +24,8 @@ import { GlobalErrorHandlerService } from './shared/error-handler/global-error-h
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ToastrModule } from 'ngx-toastr';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-/////
+//Socket
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 
 export function initLanguage(translateService: TranslatesService): Function {
   return (): Promise<any> => translateService.initLanguage();
@@ -32,6 +34,8 @@ export function initLanguage(translateService: TranslatesService): Function {
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
+
+const config: SocketIoConfig = { url: `${environment.rootproto}${environment.rootip}${environment.socketPort ? `:${environment.socketPort}` : ''}${environment.socketPath}`, options: {} };
 
 @NgModule({
   imports: [
@@ -53,7 +57,8 @@ export function HttpLoaderFactory(http: HttpClient) {
       enableHtml: true
     }),
     SharedMetaModule,
-    NgbModule
+    NgbModule,
+    SocketIoModule.forRoot(config)
   ],
   declarations: [AppComponent],
   providers: [

@@ -37,9 +37,7 @@ export class ThankYouComponent implements OnInit {
         this.orderResponse.userStatus = this.translate.instant(`Thankyou.${this.orderResponse.userStatus}`);
         sessionStorage.setItem('orderResponse', JSON.stringify(this.orderResponse));
       } else {
-        console.log('go here');
         const orderResponse = sessionStorage.getItem('orderResponse');
-        console.log('orderResponse:', orderResponse);
         this.orderResponse = JSON.parse(orderResponse)
       }
     });

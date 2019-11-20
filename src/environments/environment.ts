@@ -9,8 +9,10 @@ export const environment = {
   // for prerender
   host: 'http://localhost:4000',
   rootproto:"http://",
-  rootip:"dev.ludiino.com",
+  rootip:"localhost",
   rootpath:"/",
-  port:null,
+  socketPath:'/socket',
+  socketPort:9992,
+  port:8080,
   merchantpath:"http://45.77.250.47:84"
 };

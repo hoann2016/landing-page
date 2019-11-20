@@ -1,0 +1,19 @@
+section{
+    padding: 0;
+    background-image: url(/assets/images/home2/bg_thanks.jpg); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    .circle {
+        padding-top: 5em;
+        max-height: 30em
+    }
+    .progress-detail {
+        font-size: 2em
+    }
+}
+
+
+
