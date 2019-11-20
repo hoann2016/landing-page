@@ -13,8 +13,13 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
   <style type="text/css">
     #preview-area {
-      height: 100vh;
+      height: 100%;
       width: 100%;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      background: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -65,13 +70,13 @@
 </head>
 
 <body>
-  <app-root>
     <div id="preview-area">
         <div class="spinner">
           <div class="double-bounce1"></div>
           <div class="double-bounce2"></div>
         </div>
     </div>
+  <app-root>
   </app-root>
   <!-- color variation -->
   <div id="color"></div>

@@ -7,6 +7,10 @@ if (environment.production) {
   enableProdMode();
 }
 // not sure needed
-document.addEventListener('DOMContentLoaded', () => {
-  platformBrowserDynamic().bootstrapModule(AppBrowserModule).catch(err => console.log(err));
-});
+platformBrowserDynamic().bootstrapModule(AppBrowserModule)
+  .then(() => {
+    console.log('LOADED');
+    document.getElementById('preview-area').remove();
+  })
+  .catch(err => console.log(err));
+
