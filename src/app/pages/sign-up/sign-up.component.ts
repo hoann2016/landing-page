@@ -187,8 +187,11 @@ export class SignUpComponent implements OnInit, AfterViewInit {
                 this.orderResponse = await this.submitOrder(userOrder);
                 if ( this.orderResponse ) {
                   this.showLoading = false;
-                  this.toastr.success("Redirect to dashboard ...")
-                  window.location.href = this.appService.merchangePath;
+                  this.toastr.success("Start to clone you website ...")
+                  //window.location.href = this.appService.merchangePath;
+                  this.router.navigateByUrl('/pages/clone-site',
+                  { state: { merchantId: response.data.id } }
+                );
                 }
               } else {
                 const redirectValues = {...response.data};

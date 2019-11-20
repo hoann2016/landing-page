@@ -12,6 +12,7 @@ import { EmailTemplateComponent } from './email-template/email-template.componen
 import { PaymentComponent } from './payment/payment.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermOfServiceComponent } from './term-of-service/term-of-service.component';
+import { CloneSiteComponent } from './clone-site/clone-site.component'
 
 const routes: Routes = [
   {
@@ -64,7 +65,11 @@ const routes: Routes = [
       {
         path:'term-of-service',
         component:TermOfServiceComponent
-      }             
+      },
+      {
+        path: 'clone-site',
+        component: CloneSiteComponent
+      }
     ]
   }
 ];

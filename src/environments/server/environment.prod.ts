@@ -3,9 +3,11 @@ export const environment = {
   isServer: true,
   // for prerender
   host: 'http://localhost:4000',
-  rootproto:"http://",
-  rootip:"45.77.250.47",
+  rootproto:"https://",
+  rootip:"ludiino.com",
   rootpath:"/",
-  port:"8080",
+  socketPath:'/socket',
+  socketPort:null,
+  port:null,
   merchantpath:"http://45.77.250.47:84"
 };
