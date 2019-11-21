@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
-import { startWith, map } from 'rxjs/operators';
-import { LandingPageService } from '../../shared/services/landing-page.service';
+import { map } from 'rxjs/operators';
 import { CloneSiteService } from '../../shared/services/clone-site.service';
 import { CloneSite } from '../../shared/models/cloneSite.models';
 import { isEmpty} from 'lodash';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'clone-site',
@@ -18,14 +18,23 @@ export class CloneSiteComponent implements OnInit {
   _progress: Subscription
   constructor(
     private translate: TranslateService,
-    private landingPageService: LandingPageService,
     private route: ActivatedRoute,
     private cloneSiteService: CloneSiteService
     ) { }
   state$: Observable<object>;
   merchantId: string;
+  countDown(redirectTime) {
+    if(redirectTime > 0){
+      const message = this.translate.instant('CloneSite.redirect-message');
+      this.cloneSiteProgress.message = message.replace(/%s/g, redirectTime);
+      redirectTime -= 1;
+      setTimeout(() => this.countDown(redirectTime), 1000);
+    } else {
+      window.location.href = `${environment.rootproto}${this.cloneSiteProgress.domain}`;
+    }
+  }
   ngOnInit() {
-    this.cloneSiteProgress = { message: 'connecting', percent: 0,  domain: null};
+    this.cloneSiteProgress = { message: this.translate.instant('CloneSite.connecting'), percent: 0,  domain: null};
     this.state$ = this.route.paramMap
     .pipe(     
       map(() =>
@@ -41,11 +50,14 @@ export class CloneSiteComponent implements OnInit {
     this._progress = this.cloneSiteService.cloneSiteProgress
     .pipe()
     .subscribe(cloneSiteProgress => {
-        this.cloneSiteProgress = cloneSiteProgress;
+        this.cloneSiteProgress = {
+          message: this.translate.instant(`CloneSite.${cloneSiteProgress.message}`),
+          percent: cloneSiteProgress.percent,
+          domain: cloneSiteProgress.domain
+        };
         if(this.cloneSiteProgress && this.cloneSiteProgress.percent === 100 && this.cloneSiteProgress.domain) {
-          setTimeout(()=> {
-            window.location.href = this.cloneSiteProgress.domain;
-          }, 5000);
+          const redirectTime = 10;
+          this.countDown(redirectTime);
         }
     });
   }
