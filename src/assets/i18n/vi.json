@@ -305,5 +305,19 @@
     "thankBottomLetter": "Để sử dụng hệ thống Ludiino, xin vui lòng hoàn tất quá trình thanh toán",
     "backButton": "TRỞ VỀ TRANG CHỦ",
     "note": "Lưu ý"
+  },
+  "CloneSite": {
+    "connecting": "Đang kết nối. Xin vui lòng chờ trong giây lát",
+    "create-schema": "Khởi tạo cơ sở dữ liệu",
+    "init-schema": "Áp dụng cấu trúc cơ sở dữ liệu mặc định",
+    "init-admin": "Khởi tạo tài khoản quản lý",
+    "init-user-license": "Xác thực giấy phép",
+    "init-site-config": "Khởi tạo cấu hình hệ thống mặc định",
+    "init-first-store": "Khỏi tạo cửa hàng mặc định",
+    "setup-store": "Cài đặt cấu hình mặc định của cửa hàng",
+    "init-store-license": "Cài đặt và xác thực giấy phép của cửa hàng",
+    "clone-merchant-site": "Khởi tạo website",
+    "clone-merchant-site-success": "Khởi tạo website thành công",
+    "redirect-message": "Tự động chuyển tới website của bạn trong vòng %s giây nữa."
   }
 }
