@@ -6,6 +6,8 @@ export const environment = {
   rootproto:"http://",
   rootip:"45.77.250.47",
   rootpath:"/",
+  socketPath:'/socket',
+  socketPort:null,
   port:"8080",
   merchantpath:"http://45.77.250.47:84"
 };
