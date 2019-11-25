@@ -287,5 +287,19 @@
     "thankBottomLetter": "For using Ludiino System, please complete the payment process",
     "backButton": "BACK TO HOME PAGE",
     "note": "Note"
+  },
+  "CloneSite": {
+    "connecting": "Connecting. Please wait for a minute",
+    "create-schema": "Initializing merchant database.",
+    "init-schema": "Applying default merchant database template.",
+    "init-admin": "Initializing admin user.",
+    "init-user-license": "Validating merchant's license.",
+    "init-site-config": "Initializing default configutation for merchant's website.",
+    "init-first-store": "Initializing first store.",
+    "setup-store": "Setting up store default configuration.",
+    "init-store-license": "Setting up store's license.",
+    "clone-merchant-site": "Initializing website.",
+    "clone-merchant-site-success": "Initializing website successfully",
+    "redirect-message": "Automatically redirect to your website in %s seconds."
   }
 }

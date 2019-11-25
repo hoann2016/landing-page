@@ -6,11 +6,23 @@
 export const environment = {
   production: false,
   isServer: false,
+  
   // for prerender
-  host: 'http://localhost:4000',
+  // host: 'http://localhost:4000',
+  // rootproto:"http://",
+  // rootip:"localhost",
+  // rootpath:"/",
+  // socketPath:'/socket',
+  // socketPort:9992,
+  // port:8080,
+  // merchantpath:"http://45.77.250.47:84"
+
+  // for prerender
   rootproto:"http://",
   rootip:"dev.ludiino.com",
   rootpath:"/",
+  socketPath:'/socket',
+  socketPort:null,
   port:null,
   merchantpath:"http://45.77.250.47:84"
 };
