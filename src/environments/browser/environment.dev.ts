@@ -6,5 +6,7 @@ export const environment = {
     rootip:"dev.ludiino.com",
     rootpath:"/",
     port:null,
+    socketPath:'/socket',
+    socketPort:null,
     merchantpath:"http://45.77.250.47:84"
   };
