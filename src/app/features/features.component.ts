@@ -59,19 +59,21 @@ export class FeaturesComponent implements OnInit {
   }
   goPrevDay() {
     this.selectDate = this.calendar.getPrev(this.selectDate);
+    this.selectedDOW = this.weekDays[this.calendar.getWeekday(this.selectDate)];
   }
   goNextDay() {
     this.selectDate = this.calendar.getNext(this.selectDate);
+    this.selectedDOW = this.weekDays[this.calendar.getWeekday(this.selectDate)];
   }
   selectStaff(staff: string) {
     this.demoUser.staffName = staff;
   }
-  goToStep(step: number, bookingData: any) {
-    if (step === 2) {
+  goToStep(step: number, bookingData?: any) {
+    if (bookingData && step === 2) {
       this.demoUser.serviceName = bookingData.name;
       this.demoUser.priceService = bookingData.price;
     }
-    if (step === 3) {
+    if (bookingData && step === 3) {
       this.demoUser.date =   `${this.selectedDOW}` + ', ' + `${this.selectDate.day}` + '/' + `${this.selectDate.month}` + '/' + `${this.selectDate.year}`;
       this.demoUser.time = bookingData;
     }

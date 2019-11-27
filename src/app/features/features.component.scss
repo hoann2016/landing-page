@@ -329,6 +329,9 @@ section.appointment {
         padding: 6px 24px;
         display: flex;
         align-items: center;
+        button {
+            color: #fff;
+        }
     }
     .modal-title {
         font-family: 'ProximaNova';
@@ -402,6 +405,17 @@ section.appointment {
             text-align: right;
             color: #f18c0e;
         }
+    }
+    .back-step {
+        width: 20px;
+        height: 10px;
+        background-size: 100% 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: inline-flex;
+        margin: 0 10px 0 0;
+        background-image: url(assets/images/icon/arrow_step_left.png);
+        cursor: pointer;
     }
     .step1-section {
         display: flex;
@@ -902,6 +916,37 @@ section.appointment {
     .appointment-list {
         & > [class^=col-] {
             margin-bottom: 30px;
+        }
+    }
+    .step2-wrapper .technicians .technicians-list {
+        justify-content: center;
+    }
+    .step3-wrapper {
+        .billing-info {
+            .service-fee {
+                h4 {
+                    margin: 0 0 10px 0;
+                }
+                .haircut, .surcharge {
+                    flex-direction: column;
+                    span {
+                        margin: 0 0 5px 0;
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .demo-booking-popup {
+            .modal-title {
+                font-size: 14px;
+            }
+            .modal-body {
+                padding: 20px 15px;
+            }
+            .collapse .card-body {
+                padding: 5px 10px 4px 15px;
+            }
         }
     }
 }

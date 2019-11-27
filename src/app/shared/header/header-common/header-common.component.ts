@@ -3,6 +3,7 @@ import {DOCUMENT} from '@angular/common';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {TranslateService} from '@ngx-translate/core';
 import {BehaviorSubject, Observable} from 'rxjs';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 import {LandingPageService} from '../../services/landing-page.service';
 import {WINDOW} from '../../services/windows.service';
@@ -14,10 +15,26 @@ import {HeaderComponent} from '../header.component';
 @Component({
   selector: 'app-header-common',
   templateUrl: './header-common.component.html',
-  styleUrls: ['./header-common.component.scss']
+  styleUrls: ['./header-common.component.scss'],
+  animations: [
+    trigger('smoothCollapse', [
+      state('initial', style({
+        height: '0',
+        overflow: 'hidden',
+        opacity: '0'
+      })),
+      state('final', style({
+        overflow: 'hidden',
+        opacity: '1'
+      })),
+      transition('initial=>final', animate('200ms')),
+      transition('final=>initial', animate('200ms'))
+    ]),
+  ]
 })
 export class HeaderCommonComponent extends HeaderComponent implements OnInit {
   pageActive: string;
+  isMenuCollapsed: boolean;
   constructor(
       @Inject(DOCUMENT) protected document: Document,
       @Inject(WINDOW) protected window, 
@@ -28,6 +45,7 @@ export class HeaderCommonComponent extends HeaderComponent implements OnInit {
       ) {
       super(document, window, modalService, landingPageService, _translatesService, router);
       this.pageActive = '';
+      this.isMenuCollapsed = true;
   }
 
   ngOnInit() {

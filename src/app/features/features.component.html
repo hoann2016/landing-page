@@ -153,8 +153,11 @@
 <ng-template #demoPopupContent let-modal>
     <div class="modal-header">
         <h4 class="modal-title" *ngIf="currentDemoStep === 1">Step 1: Please select a service</h4>
-        <h4 class="modal-title" *ngIf="currentDemoStep === 2">Step 2: Select date & technicians</h4>
-        <h4 class="modal-title" *ngIf="currentDemoStep === 3">Step 3: Payment method</h4>
+        <h4 class="modal-title" *ngIf="currentDemoStep === 2"><span class="back-step" (click)="goToStep(1)"></span>Step 2: Select date & technicians</h4>
+        <h4 class="modal-title" *ngIf="currentDemoStep === 3"><span class="back-step" (click)="goToStep(2)"></span>Step 3: Payment method</h4>
+        <button type="button" class="close d-sm-none" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
     </div>
     <div class="modal-body">
         <ng-container *ngIf="currentDemoStep === 1">
