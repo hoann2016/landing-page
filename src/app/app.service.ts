@@ -30,7 +30,13 @@ export class AppService {
     this.rooturl = environment.rootproto + environment.rootip + (environment.port ? `:${environment.port}`: "" ) + environment.rootpath;
   }
   logIn(userLogin: UserLogin): Observable<any | string> {
-    return this.http.post(this.rooturl + this.userLoginPath, userLogin).pipe(map(res=>res),catchError(error=>{throw error}
+    const headers = {
+      headers: new HttpHeaders({ "channel": "landing-page" })
+    };
+    return this.http.post(this.rooturl + this.userLoginPath, userLogin, headers)
+    .pipe(
+      map(res=>res),
+      catchError( error => { throw error }
     ))
   }
   register(userRegister: UserRegister): Observable<any> {

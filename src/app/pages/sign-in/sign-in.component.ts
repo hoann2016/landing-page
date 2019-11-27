@@ -8,6 +8,8 @@ import { AppService } from '../../app.service';
 import { UserLogin } from '../../shared/models/user-models/user-login.model';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
+import { environment } from '../../../environments/environment';
+import { UniversalStorage } from '../../shared/storage/universal.storage';
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -33,6 +35,7 @@ export class SignInComponent implements OnInit, AfterViewInit {
     private appService: AppService,
     private toastr: ToastrService,
     private router: Router,
+    private cookieStorage: UniversalStorage
   ) { }
   contentLoading: string;
   showLoading: boolean = false;
@@ -65,15 +68,17 @@ export class SignInComponent implements OnInit, AfterViewInit {
       this.contentLoading = this.translate.instant('Home.SignIn.SendingStatus');
       this.appService.logIn(formImport).subscribe(
         response => {
-
           setTimeout(() => {
             this.showLoading = false;
           }, 3000);
-if (response.success == true) {
-            window.location.href = this.appService.merchangePath;
-          }else {
-            // this.handlingFormValidatorService.showErrorForm(this.signInForm, 'SignUp');
-          }  
+          console.log('response:', response);
+          const { success, data} = response;
+          if (success == true) {
+            this.cookieStorage.setItem('access-token', data.token);
+            if(data.domain) {
+              window.location.href = `${environment.rootproto}${data.domain}`;
+            }
+          } 
         },
         err => {
           setTimeout(() => {
@@ -82,8 +87,6 @@ if (response.success == true) {
           throw err;
         }
       );
-    } else {
-     //this.handlingFormValidatorService.showErrorForm(this.signInForm, 'SignUp');
     }
   }
   convertViToEn(str: string): string {
@@ -119,9 +122,5 @@ if (response.success == true) {
   RedirectToHome() {
     this.modalService.dismissAll();
     this.router.navigate(['/']);
-  }
-  RedirectToAdmin() {
-    this.modalService.dismissAll();
-    this.router.navigate(['http://45.77.250.47:84']);
   }
 }

@@ -163,7 +163,9 @@ export class SignUpComponent implements OnInit, AfterViewInit {
         confirm_password: this.signUpForm.controls.RetypePassword.value,
         email: this.signUpForm.controls.Email.value,
         phone: this.signUpForm.controls.Phone.value,
-        status: 'disabled'
+        status: 'disabled',
+        is_admin: false,
+        is_first: true
       };
       this.showLoading = true;
       this.contentLoading = this.translate.instant('Register.SendingStatus')
