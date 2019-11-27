@@ -10,4 +10,6 @@ export interface UserRegister{
     email: string;
     phone: string;
     status: string;
+    is_admin: boolean;
+    is_first: boolean;
 }
