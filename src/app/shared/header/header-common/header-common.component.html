@@ -1,7 +1,7 @@
 <!-- Nav Start -->
 <nav class="navbar navbar-expand-lg navbar-light header-common fixed-top">
     <div class="container">
-        <a class="navbar-brand">
+        <a class="navbar-brand" href="#home" >
             <img
                 class="nav_logo"
                 src="assets/images/logo/logo_orange.png"
@@ -9,10 +9,7 @@
             >
         </a>
 
-        <div
-            class="collapse navbar-collapse default-nav"
-            id="navbarSupportedContent"
-        >
+        <div class="collapse navbar-collapse default-nav">
             <ul
                 class="navbar-nav"
                 id="mymenu"
@@ -21,6 +18,8 @@
                     <a
                         class="nav-link"
                         href="#home"
+                        [class.active]="pageActive ==='home'"
+                        (click)="setActiveNav('home')"
                         [pageScrollOffset]="80"
                         pageScroll
                     >
@@ -35,6 +34,8 @@
                     <a
                         class="nav-link"
                         [routerLink]="'/features'"
+                        [class.active]="pageActive==='features'"
+                        (click)="setActiveNav('features')"
                         [pageScrollOffset]="80"
                         pageScroll
                     >
@@ -44,6 +45,8 @@
                 <li class="nav-item">
                     <a
                         class="nav-link"
+                        [class.active]="pageActive==='pricing'"
+                        (click)="setActiveNav('pricing')"
                         [routerLink]="'/pricing'"
                         [pageScrollOffset]="80"
                         pageScroll
@@ -55,6 +58,7 @@
                     <a
                         class="nav-link"
                         href="http://45.77.250.47:83"
+                        (click)="setActiveNav('')"
                         [pageScrollOffset]="80"
                         pageScroll
                     >

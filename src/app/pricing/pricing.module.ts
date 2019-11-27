@@ -5,6 +5,7 @@ import { PricingComponent } from './pricing.component';
 import { TranslateModule } from '@ngx-translate/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [PricingComponent],
@@ -14,7 +15,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     ReactiveFormsModule,
     PricingRoutes,
     CarouselModule,
-    TranslateModule
+    TranslateModule,
+    FontAwesomeModule
   ]
 })
 export class PricingModule {}

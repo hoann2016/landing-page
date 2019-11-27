@@ -15,6 +15,9 @@
         text-align: left;
         color: rgba(0, 0, 0, 0.6);
         padding: 8px 18px;
+        &.active {
+            color: #f49c1e;
+        }
     }
 }
 .right-menu-header {
