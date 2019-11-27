@@ -11,52 +11,53 @@ export class GlobalErrorHandlerService implements ErrorHandler {
     constructor(private injector: Injector) { }
     handleError(error: any  ) {
        console.log(error);
-        if (error instanceof HttpErrorResponse) {
-            if (error.error && error.error.message && error.error.message.length > 0) {
-                var arrErrorObs = [];
-                for (let itemError of error.error.message) {
-                    arrErrorObs.push(this.translateWraper('Shared.CommunicationMessage.' + itemError.code));
-                }
-                const header = this.translateWraper('Shared.AppError.2');
-                arrErrorObs.push(header);
-                var tempUSub =
-                    combineLatest(arrErrorObs).subscribe((arrTranslated: string[]) => {
-                        var strErr: string = "<ul>"
-                        for (var i: number = 0; i < arrTranslated.length - 1; i++) {
-                            strErr += "<li>";
-                            strErr += arrTranslated[i];
-                            strErr += "</li>";
-                        }
-                        strErr += "</ul>";
-                        this.showToastError(strErr, arrTranslated[arrTranslated.length - 1]);
-                        setTimeout(() => {
-                            tempUSub.unsubscribe();
-                        }, 200)
-                    });
-            } else {
-                const content = this.translateWraper('Shared.AppError.' + error.status);
-                const header = this.translateWraper('Shared.AppError.2');
-                const totalMessage = zip(content, header);
-                var tempUSub = totalMessage.subscribe(mess => {
-                    this.showToastError(mess[0], mess[1]);
-                    console.error(error);
-                });
-                setTimeout(() => {
-                    tempUSub.unsubscribe();
-                }, 200)
-            }
-        } else {
+        // TODO handle in angular interceptor
+        // if (error instanceof HttpErrorResponse) {
+        //     if (error.error && error.error.message && error.error.message.length > 0) {
+        //         var arrErrorObs = [];
+        //         for (let itemError of error.error.message) {
+        //             arrErrorObs.push(this.translateWraper('Shared.CommunicationMessage.' + itemError.code));
+        //         }
+        //         const header = this.translateWraper('Shared.AppError.2');
+        //         arrErrorObs.push(header);
+        //         var tempUSub =
+        //             combineLatest(arrErrorObs).subscribe((arrTranslated: string[]) => {
+        //                 var strErr: string = "<ul>"
+        //                 for (var i: number = 0; i < arrTranslated.length - 1; i++) {
+        //                     strErr += "<li>";
+        //                     strErr += arrTranslated[i];
+        //                     strErr += "</li>";
+        //                 }
+        //                 strErr += "</ul>";
+        //                 this.showToastError(strErr, arrTranslated[arrTranslated.length - 1]);
+        //                 setTimeout(() => {
+        //                     tempUSub.unsubscribe();
+        //                 }, 200)
+        //             });
+        //     } else {
+        //         const content = this.translateWraper('Shared.AppError.' + error.status);
+        //         const header = this.translateWraper('Shared.AppError.2');
+        //         const totalMessage = zip(content, header);
+        //         var tempUSub = totalMessage.subscribe(mess => {
+        //             this.showToastError(mess[0], mess[1]);
+        //             console.error(error);
+        //         });
+        //         setTimeout(() => {
+        //             tempUSub.unsubscribe();
+        //         }, 200)
+        //     }
+        // } else {
             
-            const content = this.translateWraper('Shared.FormCommon.undefined');
-            const header = this.translateWraper('Shared.AppError.2');
-            const totalMessage = zip(content, header);
-            var tempUSub = totalMessage.subscribe(mess => {
-                this.showToastError(mess[0], mess[1]);
-            });
-            setTimeout(() => {
-                tempUSub.unsubscribe();
-            }, 200)
-        }
+        //     const content = this.translateWraper('Shared.FormCommon.undefined');
+        //     const header = this.translateWraper('Shared.AppError.2');
+        //     const totalMessage = zip(content, header);
+        //     var tempUSub = totalMessage.subscribe(mess => {
+        //         this.showToastError(mess[0], mess[1]);
+        //     });
+        //     setTimeout(() => {
+        //         tempUSub.unsubscribe();
+        //     }, 200)
+        // }
     }
     
     private showToastError(content: string, error: string): void {

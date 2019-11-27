@@ -17,6 +17,7 @@ import {HeaderComponent} from '../header.component';
   styleUrls: ['./header-common.component.scss']
 })
 export class HeaderCommonComponent extends HeaderComponent implements OnInit {
+  pageActive: string;
   constructor(
       @Inject(DOCUMENT) protected document: Document,
       @Inject(WINDOW) protected window, 
@@ -26,6 +27,7 @@ export class HeaderCommonComponent extends HeaderComponent implements OnInit {
       protected router: Router
       ) {
       super(document, window, modalService, landingPageService, _translatesService, router);
+      this.pageActive = '';
   }
 
   ngOnInit() {
@@ -39,5 +41,8 @@ export class HeaderCommonComponent extends HeaderComponent implements OnInit {
   RedirectToLogin() {
     this.modalService.dismissAll();
     this.router.navigate(['/pages/sign-in']);
+  }
+  setActiveNav(page: string): void {
+    // his.pageActive = page ? page : '';
   }
 }
