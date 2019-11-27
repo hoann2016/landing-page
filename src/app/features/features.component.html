@@ -158,119 +158,119 @@
     </div>
     <div class="modal-body">
         <ng-container *ngIf="currentDemoStep === 1">
-            <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-                <ngb-panel >
+            <ngb-accordion  [closeOthers]="true" activeIds="ngb-panel-0">
+                <ngb-panel id="ngb-panel-0">
                     <ng-template ngbPanelTitle>
                         <div class="step1-section hair-section ">Hair Service</div>
                     </ng-template>
                     <ng-template ngbPanelContent>
-                        <div class="option" (click)="goToStep(2)">
+                        <div class="option" (click)="goToStep(2, {name: 'Hair Cut', price: '80,000'})">
                             <div class="left">
                                 <div class="name">Hair Cut</div>
                                 <div class="time">45 minutes</div>
                             </div>
                             <div class="right">80,000</div>
                         </div>
-                        <div class="option" (click)="goToStep(2)">
+                        <div class="option"  (click)="goToStep(2, {name: 'Hair Cut for Women 60 minutes', price: '140,000'})">
                             <div class="left">
                                 <div class="name">Hair Cut for Women 60 minutes</div>
                                 <div class="time">60 minutes</div>
                             </div>
-                            <div class="right">80,000</div>
+                            <div class="right">140,000</div>
                         </div>
-                        <div class="option" (click)="goToStep(2)">
+                        <div class="option"  (click)="goToStep(2, {name: 'Hair Dye', price: '450,000'})">
                             <div class="left">
                                 <div class="name">Hair Dye</div>
                                 <div class="time">20 minutes</div>
                             </div>
-                            <div class="right">80,000</div>
+                            <div class="right">450,000</div>
                         </div>
                     </ng-template>
                 </ngb-panel>
     
-                <ngb-panel>
+                <ngb-panel id="ngb-panel-1">
                     <ng-template ngbPanelTitle>
                         <div class="step1-section skin-section ">Skin Care</div>
                     </ng-template>
                     <ng-template ngbPanelContent>
-                        <div class="option" (click)="goToStep(2)">
+                        <div class="option" (click)="goToStep(2, {name: 'Hair Cut', price: '80,000'})">
                             <div class="left">
                                 <div class="name">Hair Cut</div>
                                 <div class="time">45 minutes</div>
                             </div>
                             <div class="right">80,000</div>
                         </div>
-                        <div class="option" (click)="goToStep(2)">
+                        <div class="option"  (click)="goToStep(2, {name: 'Hair Cut for Women 60 minutes', price: '140,000'})">
                             <div class="left">
                                 <div class="name">Hair Cut for Women 60 minutes</div>
                                 <div class="time">60 minutes</div>
                             </div>
-                            <div class="right">80,000</div>
+                            <div class="right">140,000</div>
                         </div>
-                        <div class="option" (click)="goToStep(2)">
+                        <div class="option"  (click)="goToStep(2, {name: 'Hair Dye', price: '450,000'})">
                             <div class="left">
                                 <div class="name">Hair Dye</div>
                                 <div class="time">20 minutes</div>
                             </div>
-                            <div class="right">80,000</div>
+                            <div class="right">450,000</div>
                         </div>
                     </ng-template>
                 </ngb-panel>
     
-                <ngb-panel>
+                <ngb-panel id="ngb-panel-2">
                     <ng-template ngbPanelTitle>
                         <div class="step1-section nails-section ">Nails Care</div>
                     </ng-template>
                     <ng-template ngbPanelContent>
-                        <div class="option" (click)="goToStep(2)">
+                        <div class="option" (click)="goToStep(2, {name: 'Hair Cut', price: '80,000'})">
                             <div class="left">
                                 <div class="name">Hair Cut</div>
                                 <div class="time">45 minutes</div>
                             </div>
                             <div class="right">80,000</div>
                         </div>
-                        <div class="option" (click)="goToStep(2)">
+                        <div class="option"  (click)="goToStep(2, {name: 'Hair Cut for Women 60 minutes', price: '140,000'})">
                             <div class="left">
                                 <div class="name">Hair Cut for Women 60 minutes</div>
                                 <div class="time">60 minutes</div>
                             </div>
-                            <div class="right">80,000</div>
+                            <div class="right">140,000</div>
                         </div>
-                        <div class="option" (click)="goToStep(2)">
+                        <div class="option"  (click)="goToStep(2, {name: 'Hair Dye', price: '450,000'})">
                             <div class="left">
                                 <div class="name">Hair Dye</div>
                                 <div class="time">20 minutes</div>
                             </div>
-                            <div class="right">80,000</div>
+                            <div class="right">450,000</div>
                         </div>
                     </ng-template>
                 </ngb-panel>
     
-                <ngb-panel>
+                <ngb-panel id="ngb-panel-3">
                     <ng-template ngbPanelTitle>
                         <div class="step1-section makeup-section ">Make-up</div>
                     </ng-template>
                     <ng-template ngbPanelContent>
-                        <div class="option" (click)="goToStep(2)">
+                        <div class="option" (click)="goToStep(2, {name: 'Hair Cut', price: '80,000'})">
                             <div class="left">
                                 <div class="name">Hair Cut</div>
                                 <div class="time">45 minutes</div>
                             </div>
                             <div class="right">80,000</div>
                         </div>
-                        <div class="option" (click)="goToStep(2)">
+                        <div class="option"  (click)="goToStep(2, {name: 'Hair Cut for Women 60 minutes', price: '140,000'})">
                             <div class="left">
                                 <div class="name">Hair Cut for Women 60 minutes</div>
                                 <div class="time">60 minutes</div>
                             </div>
-                            <div class="right">80,000</div>
+                            <div class="right">140,000</div>
                         </div>
-                        <div class="option" (click)="goToStep(2)">
+                        <div class="option"  (click)="goToStep(2, {name: 'Hair Dye', price: '450,000'})">
                             <div class="left">
                                 <div class="name">Hair Dye</div>
                                 <div class="time">20 minutes</div>
                             </div>
-                            <div class="right">80,000</div>
+                            <div class="right">450,000</div>
                         </div>
                     </ng-template>
                 </ngb-panel>
@@ -292,22 +292,22 @@
                 <div class="technicians">
                     <h3 class="title title_line_through"><span>technicians</span></h3>
                     <div class="technicians-list">
-                        <div class="staff">
+                        <div class="staff" [class.active]="demoUser.staffName === 'VICKY MY'" (click)="selectStaff('MY DIEM')" (click)="selectStaff('VICKY MY')">
                             <img src="assets/images/featuresp/girl_salon1.jpg"/>
                             <h4 class="name">VICKY MY</h4>
                             <p class="position">Senior</p>
                         </div>
-                        <div class="staff">
+                        <div class="staff" [class.active]="demoUser.staffName === 'MY DIEM'" (click)="selectStaff('MY DIEM')">
                             <img src="assets/images/featuresp/girl_salon2.jpg"/>
                             <h4 class="name">MY DIEM</h4>
                             <p class="position">Senior</p>
                         </div>
-                        <div class="staff">
+                        <div class="staff" [class.active]="demoUser.staffName === 'THUY DIEM'" (click)="selectStaff('THUY DIEM')">
                             <img src="assets/images/featuresp/girl_salon3.jpg"/>
                             <h4 class="name">THUY DIEM</h4>
                             <p class="position">Senior</p>
                         </div>
-                        <div class="staff">
+                        <div class="staff" [class.active]="demoUser.staffName === 'VAN ANH'" (click)="selectStaff('VAN ANH')">
                             <img src="assets/images/featuresp/girl_salon4.jpg"/>
                             <h4 class="name">VAN ANH</h4>
                             <p class="position">Senior</p>
@@ -317,7 +317,7 @@
                 <div class="time-select">
                     <h3 class="title title_line_through"><span>Time Select</span></h3>
                     <div class="time-blocks">
-                        <div  class="time" *ngFor="let block of timeBlocks" (click)="goToStep(3)">
+                        <div  class="time" *ngFor="let block of timeBlocks" (click)="goToStep(3, block)">
                             {{block}}
                         </div>
                     </div>
@@ -338,16 +338,16 @@
                 <div class="billing-info">
                     <div class="date">
                         <div class="left">Date</div>
-                        <div class="right">Mon, 09/01/2019</div>
+                        <div class="right">{{demoUser.date}}</div>
                     </div>
                     <div class="time">
                         <div class="left">Time</div>
-                        <div class="right">9:00 AM</div>
+                        <div class="right">{{demoUser.time}}</div>
                     </div>
                     <div class="service-fee">
                         <h4>Service FEE</h4>
                         <div class="haircut">
-                            <span>Hair Cut	(Staff: Ngoc Oanh)</span><span>500,000 đ</span>
+                            <span> {{demoUser.serviceName}}	(Staff: {{demoUser.staffName}})</span><span>{{demoUser.priceService}} đ</span>
                         </div>
                         <div class="surcharge">
                             <span>Surcharge</span><span>0 đ</span>
@@ -355,7 +355,7 @@
                     </div>
                     <div class="total">
                         <div class="left">TOTAL</div>
-                        <div class="right">500,000 đ</div>
+                        <div class="right">{{demoUser.priceService}} đ</div>
                     </div>
                 </div>
                 <div class="booking-payment-method">
@@ -378,7 +378,7 @@
                         <span class="checkmark"></span>
                     </label>
                 </div>
-                <button class="btn btn_gradient-orange confirm-booking">CONFIRM BOOKING</button>
+                <button class="btn btn_gradient-orange confirm-booking" (click)="modal.close('Confirm booking'); confirmBooking()">CONFIRM BOOKING</button>
             </div>
         </ng-container>
 

@@ -2,6 +2,15 @@ import { Component, OnInit} from '@angular/core';
 import { LandingPageService } from '../shared/services/landing-page.service';
 import {Router} from '@angular/router';
 import {NgbDateStruct, NgbCalendar, NgbDate, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { ToastrService } from 'ngx-toastr';
+
+interface BookingUser {
+  date: string;
+  time: string;
+  staffName: string;
+  serviceName: string;
+  priceService: string;
+}
 
 @Component({
   selector: 'app-features',
@@ -19,23 +28,28 @@ export class FeaturesComponent implements OnInit {
     7: 'Sunday'
   };
   timeBlocks = ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '12:00 AM', '1:00 pM', '2:00 PM', '3:00 PM'];
+
   currentDemoStep: number;
   selectDate: NgbDate;
   selectedDOW: string;
   date: {year: number, month: number};
+  demoUser: BookingUser;
   constructor(private modalService: NgbModal,
               private calendar: NgbCalendar,
               private landingPageSrv: LandingPageService,
+              private toastrService: ToastrService,
               private router: Router) {
     this.selectedDOW = '';
+    this.demoUser = {} as BookingUser;
   }
 
   ngOnInit(): void {
-    this.currentDemoStep = 2;
+    this.currentDemoStep = 1;
     this.selectToday();
   }
 
   openDemoPopup(content) {
+    this.currentDemoStep = 1;
     this.modalService.open(content, { centered: true, windowClass: 'demo-booking-popup' });
   }
   selectToday() {
@@ -49,8 +63,22 @@ export class FeaturesComponent implements OnInit {
   goNextDay() {
     this.selectDate = this.calendar.getNext(this.selectDate);
   }
-  goToStep(step: number) {
+  selectStaff(staff: string) {
+    this.demoUser.staffName = staff;
+  }
+  goToStep(step: number, bookingData: any) {
+    if (step === 2) {
+      this.demoUser.serviceName = bookingData.name;
+      this.demoUser.priceService = bookingData.price;
+    }
+    if (step === 3) {
+      this.demoUser.date =   `${this.selectedDOW}` + ', ' + `${this.selectDate.day}` + '/' + `${this.selectDate.month}` + '/' + `${this.selectDate.year}`;
+      this.demoUser.time = bookingData;
+    }
     this.currentDemoStep = step;
+  }
+  confirmBooking(): void {
+    this.toastrService.success('Booking successfully');
   }
   redirectToRegister(packageSelected: string): void {
     this.landingPageSrv.selectPackage(packageSelected);
