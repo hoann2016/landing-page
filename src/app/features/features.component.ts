@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { LandingPageService } from '../shared/services/landing-page.service';
 import {Router} from '@angular/router';
 import {NgbDateStruct, NgbCalendar, NgbDate, NgbModal} from '@ng-bootstrap/ng-bootstrap';
@@ -7,8 +7,6 @@ import {NgbDateStruct, NgbCalendar, NgbDate, NgbModal} from '@ng-bootstrap/ng-bo
   selector: 'app-features',
   templateUrl: './features.component.html',
   styleUrls: ['./features.component.scss'],
-  encapsulation: ViewEncapsulation.None
-
 })
 export class FeaturesComponent implements OnInit {
   weekDays = {

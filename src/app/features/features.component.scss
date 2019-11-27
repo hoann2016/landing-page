@@ -1,25 +1,27 @@
 :host {
     background-color: #f6f7f9;
 }
-.seciton-banner {
+.section-banner {
     position: relative;
     height: calc(100vh - 70px);
     padding: 0;
+    overflow: hidden;
     background-image: linear-gradient(to top, #f48d1e, #f49c1e);
     .image-left {
         position: absolute;
         left: -690px;
         width: 1280px;
         height: 100%;
-        background-image: url(assets/images/featuresp/model.png);
-        background-size: cover;
-        background-position: 0 0;
+        background-image: url(assets/images/featuresp/model.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 690px 100%;
     }
     .image-right {
         position: absolute;
         top: 30px;
         left: 589px;
-        width: 694px;
+        width: calc(100% - 608px);
         height: 646px;
         background-size: cover;
         background-position: 0 0;
@@ -97,7 +99,7 @@
     }
 }
 
-section.main-content {
+.main-content {
     background-color: #f6f7f9;
     .container {
         .section {
@@ -106,6 +108,11 @@ section.main-content {
             display: flex;
             align-items: center;
             margin: 0 0 75px 0;
+            .image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
         .section:nth-of-type(2n+1) {
             justify-content: flex-start;
@@ -173,7 +180,7 @@ section.main-content {
     }
 }
 
-.payment-method {
+.payment-methods {
     display: flex;
     flex-wrap: wrap;
     margin: 0 0 40px 0;
@@ -559,4 +566,26 @@ section.appointment {
             }
         }
     }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 1198.98px) { 
+    .main-content {
+        .container {
+            .section:nth-of-type(2n+1) {
+                width: 50%;
+                padding-left: 0;
+                .info {
+                    p {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// small devices
+@media only screen and (max-width: 767.98px) { 
+ 
 }
