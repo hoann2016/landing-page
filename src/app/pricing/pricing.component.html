@@ -2,13 +2,13 @@
     <div class="container">
         <div class="head-info">
             <h3 class="sub-t">
-                Start Free With
+                {{'Pricing.Subtitle' | translate}}
             </h3>
             <h1 class="title">
-                Ludiino Online Booking & Scheduling Solution
+                {{'Pricing.Title' | translate}}
             </h1>
             <button class="btn btn_gradient-orange" (click)="redirectToRegister('2')">
-                Register Now
+                {{'Common.RegisterNow' | translate}}
             </button>
         </div>
         <div class="bg-bottom"></div>
@@ -17,8 +17,8 @@
 
 <section class="main-content">
     <div class="container">
-        <h2 class="title">Details Info & Pricing per package</h2>
-        <p class="intro">No credit card, no trial period, unlimited use for free. Here is how it works!</p>
+        <h2 class="title">{{'Pricing.MainContent.Title' | translate}}</h2>
+        <p class="intro">{{'Pricing.MainContent.Intro' | translate}}</p>
         <div class="pricing-info-block">
             <div class="step step1">
                 <img src="assets/images/home2/hiw_1.png" alt="signup" class=" ">
@@ -41,25 +41,25 @@
                 <div class="content col-12 col-sm-9">
                     <div class="inner row">
                         <div class="col-12 col-sm-7 col-md-8">
-                            <h3 class="title title-red"><span>Freebie</span> Package</h3>
+                            <h3 class="title title-red"><span>{{'Pricing.MainContent.Freebie' | translate}}</span> {{'Pricing.MainContent.Package' | translate}}</h3>
                             <p class="info">
-                                Get your business started online for free with an online booking website that does business for you 24/7
+                                {{'Pricing.MainContent.FreebieIntro' | translate}}
                             </p>
                             <ul>
-                                <li>Online Booking Website</li>
-                                <li>Integrated Google Map</li>
-                                <li>Rating & Review</li>
-                                <li>Services & Pricing </li>
-                                <li>Time Slots Booking & Confirmation</li>
-                                <li>20 Online Bookings per Month</li>
-                                <li>Payment Method: Pay At Store</li>
+                                <li>{{'Pricing.MainContent.OnlineBooking' | translate}}</li>
+                                <li>{{'Pricing.MainContent.GoogleMap' | translate}}</li>
+                                <li>{{'Pricing.MainContent.RatingReview' | translate}}</li>
+                                <li>{{'Pricing.MainContent.ServicePricing' | translate}}</li>
+                                <li>{{'Pricing.MainContent.TimeSlotConfirmation' | translate}}</li>
+                                <li class="text-red">{{'Pricing.MainContent.BookingPerMonth' | translate}}</li>
+                                <li class="text-red">{{'Pricing.MainContent.PaymentMethod_Store' | translate}}</li>
                             </ul>
                         </div>
                         <div class="col-12  col-sm-5 col-md-4 d-flex justify-content-end">
                             <div class="action d-flex flex-column">
-                                <p class="price-label free">FREE</p>
+                                <p class="price-label free">{{'Pricing.MainContent.Free' | translate}}</p>
                                 <button class="btn btn_gradient-orange"  (click)="redirectToRegister('2')">
-                                    Get FREEBIE
+                                    {{'Pricing.MainContent.Get' | translate}} FREEBIE
                                 </button>
                             </div>
                         </div>
@@ -74,18 +74,18 @@
                 <div class="content col-sm-9">
                     <div class="inner row">
                         <div class="col-12 col-sm-7 col-md-8">
-                            <h3 class="title title-blue"><span>Newbie</span> Package</h3>
+                            <h3 class="title title-blue"><span>{{'Pricing.MainContent.Newbie' | translate}}</span> {{'Pricing.MainContent.Package' | translate}}</h3>
                             <p class="info">
-                                Get your business started online for free with an online booking website that does business for you 24/7
+                                {{'Pricing.MainContent.FreebieIntro' | translate}}
                             </p>
                             <ul>
-                                <li>Online Booking Website</li>
-                                <li>Integrated Google Map</li>
-                                <li>Rating & Review</li>
-                                <li>Services & Pricing </li>
-                                <li>Time Slots Booking & Confirmation</li>
-                                <li>20 Online Bookings per Month</li>
-                                <li>Payment Method: Pay At Store</li>
+                                <li>{{'Pricing.MainContent.OnlineBooking' | translate}}</li>
+                                <li>{{'Pricing.MainContent.GoogleMap' | translate}}</li>
+                                <li>{{'Pricing.MainContent.RatingReview' | translate}}</li>
+                                <li>{{'Pricing.MainContent.ServicePricing' | translate}}</li>
+                                <li>{{'Pricing.MainContent.TimeSlotConfirmation' | translate}}</li>
+                                <li class="text-orange">{{'Pricing.MainContent.UnlimittedNumber' | translate}}</li>
+                                <li class="text-orange">{{'Pricing.MainContent.PaymentMethod_OnlineAndStore' | translate}}</li>
                             </ul>
                         </div>
                         <div class="col-12 col-sm-4 d-flex justify-content-end">
@@ -100,7 +100,7 @@
                                         Discount: <span>{{selectedNewbie?.discount}} free months</span>
                                     </div>
                                     <button class="btn btn_gradient-orange"  (click)="redirectToRegister('7')">
-                                        Get NEWBIE
+                                        {{'Pricing.MainContent.Get' | translate}} NEWBIE
                                     </button>
                             </div>
                         </div>
@@ -115,18 +115,20 @@
                 <div class="content col-sm-9">
                     <div class="inner row">
                         <div class="col-12 col-sm-7 col-md-8">
-                            <h3 class="title title-orange"><span>Biggie</span> Package</h3>
+                            <h3 class="title title-orange"><span>{{'Pricing.MainContent.Biggie' | translate}}</span> {{'Pricing.MainContent.Package' | translate}}</h3>
                             <p class="info">
-                                Get your business started online for free with an online booking website that does business for you 24/7
+                                {{'Pricing.MainContent.BiggeIntro' | translate}}
                             </p>
                             <ul>
-                                <li>Online Booking Website</li>
-                                <li>Integrated Google Map</li>
-                                <li>Rating & Review</li>
-                                <li>Services & Pricing </li>
-                                <li>Time Slots Booking & Confirmation</li>
-                                <li>20 Online Bookings per Month</li>
-                                <li>Payment Method: Pay At Store</li>
+                                <li>{{'Pricing.MainContent.OnlineBooking' | translate}}</li>
+                                <li>{{'Pricing.MainContent.GoogleMap' | translate}}</li>
+                                <li>{{'Pricing.MainContent.RatingReview' | translate}}</li>
+                                <li>{{'Pricing.MainContent.ServicePricing' | translate}}</li>
+                                <li>{{'Pricing.MainContent.TimeSlotConfirmation' | translate}}</li>
+                                <li>{{'Pricing.MainContent.UnlimittedNumber' | translate}}</li>
+                                <li>{{'Pricing.MainContent.PaymentMethod_OnlineAndStore' | translate}}</li>
+                                <li class="text-orange">{{'Pricing.MainContent.DealPromotion' | translate}}</li>
+                                <li class="text-orange">{{'Pricing.MainContent.CheckInOut' | translate}}</li>
                             </ul>
                         </div>
                         <div class="col-12 col-sm-4 d-flex justify-content-end">
@@ -141,7 +143,7 @@
                                     Discount: <span>{{selectedBiggie?.discount}} free months</span>
                                 </div>
                                 <button class="btn btn_gradient-orange"  (click)="redirectToRegister('12')">
-                                    Get BIGGIE
+                                    {{'Pricing.MainContent.Get' | translate}} BIGGIE
                                 </button>
                             </div>
                         </div>
@@ -156,18 +158,22 @@
                 <div class="content col-sm-9">
                     <div class="inner row">
                         <div class="col-12 col-sm-7 col-md-8">
-                            <h3 class="title title-green"><span>Hulk</span> Package</h3>
-                            <p class="info">
-                                Sell not only your services but also your merchandise on your website to maximize your revenues                    
-                            </p>
+                                <h3 class="title title-green"><span>{{'Pricing.MainContent.Hulk' | translate}}</span> {{'Pricing.MainContent.Package' | translate}}</h3>
+                                <p class="info">
+                                    {{'Pricing.MainContent.HulkIntro' | translate}}
+                                </p>
                             <ul>
-                                <li>Online Booking Website</li>
-                                <li>Integrated Google Map</li>
-                                <li>Rating & Review</li>
-                                <li>Services & Pricing </li>
-                                <li>Time Slots Booking & Confirmation</li>
-                                <li>20 Online Bookings per Month</li>
-                                <li>Payment Method: Pay At Store</li>
+                                <li>{{'Pricing.MainContent.OnlineBooking' | translate}}</li>
+                                <li>{{'Pricing.MainContent.GoogleMap' | translate}}</li>
+                                <li>{{'Pricing.MainContent.RatingReview' | translate}}</li>
+                                <li>{{'Pricing.MainContent.ServicePricing' | translate}}</li>
+                                <li>{{'Pricing.MainContent.TimeSlotConfirmation' | translate}}</li>
+                                <li>{{'Pricing.MainContent.UnlimittedNumber' | translate}}</li>
+                                <li>{{'Pricing.MainContent.PaymentMethod_OnlineAndStore' | translate}}</li>
+                                <li>{{'Pricing.MainContent.DealPromotion' | translate}}</li>
+                                <li>{{'Pricing.MainContent.CheckInOut' | translate}}</li>
+                                <li class="text-orange">{{'Pricing.MainContent.ProductCommerce' | translate}}</li>
+                                <li class="text-orange">{{'Pricing.MainContent.CustomerMembership' | translate}}</li>
                             </ul>
                         </div>
                         <div class="col-12 col-sm-4 d-flex justify-content-end">
@@ -182,7 +188,7 @@
                                         Discount: <span>{{selectedHulk?.discount}} free months</span>
                                     </div>
                                 <button class="btn btn_gradient-orange"  (click)="redirectToRegister('17')">
-                                    Get HULK
+                                    {{'Pricing.MainContent.Get' | translate}} HULK
                                 </button>
                             </div>
                         </div>
@@ -196,52 +202,70 @@
     <div class="container">
         <div class="fag-content row">
             <div class="left col-12 col-sm-4">
-                <h2 class="title">FAQs</h2>
-                <p class="intro">Here are some frequently asked questions related to the Ludiino Booking Online solution</p>
+                <h2 class="title">{{'Pricing.FAQs.Title' | translate}}</h2>
+                <p class="intro">{{'Pricing.FAQs.Intro' | translate}}</p>
                 <img src="assets/images/pricingp/faqs.jpg" alt="faq"/>
             </div>
             <div class="mid col-12 col-sm-4">
                 <div class="question-wrapper">
                     <div class="question d-flex" (click)="openAnswer(1)">
                         <fa-icon [icon]="selectAnswer === 1 ? faAngleDown : faAngleRight"></fa-icon>
-                        How do I sign up for Ludiino solution?</div>
-                    <div class="answer" [class.is-active]="selectAnswer === 1">
-                        Register for a Ludiino account at the top right corner of the Home page, fill in the required info to start</div>
+                        {{'Pricing.FAQs.Q_HowSignUpLudiinoSolution' | translate}}
+                    </div>
+                    <div class="answer" [class.is-active]="selectAnswer === 1"
+                        [innerHTML]="'Pricing.FAQs.A_HowSignUpLudiinoSolution' | translate">
+                    </div>
                 </div>
+
                 <div class="question-wrapper">
                     <div class="question d-flex"  (click)="openAnswer(2)">
                         <fa-icon [icon]="selectAnswer === 2 ? faAngleDown : faAngleRight"></fa-icon>
-                        When can I start using Ludiino solution for my business?
+                        {{'Pricing.FAQs.Q_WhenStartLudiinoForBusiness' | translate}}
                     </div>
-                    <div class="answer" [class.is-active]="selectAnswer === 2">Register for a Ludiino account at the top right corner of the Home page, fill in the required info to start</div>
+                    <div class="answer" [class.is-active]="selectAnswer === 2"
+                        [innerHTML]="'Pricing.FAQs.A_WhenStartLudiinoForBusiness' | translate">
+                    </div>
                 </div>
+
                 <div class="question-wrapper">
                     <div class="question d-flex"  (click)="openAnswer(3)">
                         <fa-icon [icon]="selectAnswer === 3 ? faAngleDown : faAngleRight"></fa-icon>
-                        How do I make payment?
+                        {{'Pricing.FAQs.Q_HowMakePayment' | translate}}
                     </div>
-                    <div class="answer" [class.is-active]="selectAnswer === 3">
-                        Register for a Ludiino account at the top right corner of the Home page, fill in the required info to start</div>
+                    <div class="answer" [class.is-active]="selectAnswer === 3"
+                        [innerHTML]="'Pricing.FAQs.A_HowMakePayment' | translate">
+                    </div>
                 </div>
             </div>
             <div class="right col-12 col-sm-4">
                 <div class="question-wrapper">
                     <div class="question d-flex"  (click)="openAnswer(4)">
                         <fa-icon [icon]="selectAnswer === 4 ? faAngleDown : faAngleRight"></fa-icon>
-                        When is my own website created for clients to make bookings on it?</div>
-                    <div class="answer" [class.is-active]="selectAnswer === 4">Register for a Ludiino account at the top right corner of the Home page, fill in the required info to start</div>
+                        {{'Pricing.FAQs.Q_HowMakePayment' | translate}}
+                    </div>
+                    <div class="answer" [class.is-active]="selectAnswer === 4"
+                        [innerHTML]="'Pricing.FAQs.A_HowMakePayment' | translate">
+                    </div>
                 </div>
+
                 <div class="question-wrapper">
                     <div class="question d-flex" (click)="openAnswer(5)">
                         <fa-icon [icon]="selectAnswer === 5 ? faAngleDown : faAngleRight"></fa-icon>
-                        If I already have an existing website for my business, can ludiino solution be integratedwith it?</div>       
-                    <div class="answer" [class.is-active]="selectAnswer === 5">Register for a Ludiino account at the top right corner of the Home page, fill in the required info to start</div>         
+                        {{'Pricing.FAQs.Q_WhenMySiteCreated' | translate}}
+                    </div>
+                    <div class="answer" [class.is-active]="selectAnswer === 5"
+                        [innerHTML]="'Pricing.FAQs.A_WhenMySiteCreated' | translate">
+                    </div>
                 </div>
+
                 <div class="question-wrapper">
                     <div class="question d-flex" (click)="openAnswer(6)">
                         <fa-icon [icon]="selectAnswer === 6 ? faAngleDown : faAngleRight"></fa-icon>
-                        Can I use Ludiino solution for multiple at the same time?</div>  
-                    <div class="answer" [class.is-active]="selectAnswer === 6">Register for a Ludiino account at the top right corner of the Home page, fill in the required info to start</div>  
+                        {{'Pricing.FAQs.Q_CanUseMultiple' | translate}}
+                    </div>  
+                    <div class="answer" [class.is-active]="selectAnswer === 6"
+                        [innerHTML]="'Pricing.FAQs.A_CanUseMultiple' | translate">
+                    </div>  
                 </div>
             </div>
         </div>
@@ -249,20 +273,20 @@
 </section>
 <section class="ludiino-solution">
     <div class="container">
-        <h2 class="title">Who use Ludiino Solution?</h2>
+        <h2 class="title">{{'Pricing.LudiinoSolution.Title' | translate}}</h2>
         <div class="solution-list">
-            <div class="solution">Hair Salon</div>
-            <div class="solution">Beauty Salon</div>
-            <div class="solution">Spa & Massage</div>
-            <div class="solution">Gym & Sport Center</div>
-            <div class="solution">Medical Clinic</div>
-            <div class="solution">Repair Service</div>
-            <div class="solution">Hair Salon</div>
-            <div class="solution">Beauty Salon</div>
-            <div class="solution">Spa & Massage</div>
-            <div class="solution">Gym & Sport Center</div>
-            <div class="solution">Medical Clinic</div>
-            <div class="solution">Repair Service</div>
+            <div class="solution">{{'Home.Feature.ServicesName.HairSalon' | translate}}</div>
+            <div class="solution">{{'Home.Feature.ServicesName.BeautySalon' | translate}}</div>
+            <div class="solution">{{'Home.Feature.ServicesName.SpaMassage' | translate}}</div>
+            <div class="solution">{{'Home.Feature.ServicesName.GymSportCenter' | translate}}</div>
+            <div class="solution">{{'Home.Feature.ServicesName.Health' | translate}}</div>
+            <div class="solution">{{'Home.Feature.ServicesName.RepairServices' | translate}}</div>
+            <div class="solution">{{'Home.Feature.ServicesName.HairSalon' | translate}}</div>
+            <div class="solution">{{'Home.Feature.ServicesName.BeautySalon' | translate}}</div>
+            <div class="solution">{{'Home.Feature.ServicesName.SpaMassage' | translate}}</div>
+            <div class="solution">{{'Home.Feature.ServicesName.GymSportCenter' | translate}}</div>
+            <div class="solution">{{'Home.Feature.ServicesName.Health' | translate}}</div>
+            <div class="solution">{{'Home.Feature.ServicesName.RepairServices' | translate}}</div>
         </div>
     </div>
 </section>
@@ -272,61 +296,61 @@
         <ng-template carouselSlide>
             <div class="item">
                 <img src="assets/images/pricingp/hair-salon.jpg" alt=""/>
-                <h3 class="section">Hair Salon</h3>
+                <h3 class="section">{{'Home.Feature.ServicesName.HairSalon' | translate}}</h3>
             </div>
         </ng-template>  
         <ng-template carouselSlide>
             <div class="item">
                 <img src="assets/images/pricingp/beauty-salon.jpg" alt=""/>
-                <h3 class="section">Beauty Salon</h3>
+                <h3 class="section">{{'Home.Feature.ServicesName.BeautySalon' | translate}}</h3>
             </div>
         </ng-template>  
         <ng-template carouselSlide>            
             <div class="item">
                 <img src="assets/images/pricingp/gym-sport.jpg" alt=""/>
-                <h3 class="section">Gym & Sport Center</h3>
+                <h3 class="section">{{'Home.Feature.ServicesName.GymSportCenter' | translate}}</h3>
             </div>
         </ng-template>  
         <ng-template carouselSlide>            
             <div class="item">
                 <img src="assets/images/pricingp/spa-massage.jpg" alt=""/>
-                <h3 class="section">Gym & Sport Center</h3>
+                <h3 class="section">{{'Home.Feature.ServicesName.GymSportCenter' | translate}}</h3>
             </div>
         </ng-template>  
         <ng-template carouselSlide>            
             <div class="item">
                 <img src="assets/images/pricingp/medical.jpg" alt=""/>
-                <h3 class="section">Medical Clinic</h3>
+                <h3 class="section">{{'Home.Feature.ServicesName.Health' | translate}}</h3>
             </div>
         </ng-template>  
         <ng-template carouselSlide>
             <div class="item">
                 <img src="assets/images/pricingp/hair-salon.jpg" alt=""/>
-                <h3 class="section">Hair Salon</h3>
+                <h3 class="section">{{'Home.Feature.ServicesName.HairSalon' | translate}}</h3>
             </div>
         </ng-template>  
         <ng-template carouselSlide>
             <div class="item">
                 <img src="assets/images/pricingp/beauty-salon.jpg" alt=""/>
-                <h3 class="section">Beauty Salon</h3>
+                <h3 class="section">{{'Home.Feature.ServicesName.BeautySalon' | translate}}</h3>
             </div>
         </ng-template>  
         <ng-template carouselSlide>            
             <div class="item">
                 <img src="assets/images/pricingp/gym-sport.jpg" alt=""/>
-                <h3 class="section">Gym & Sport Center</h3>
+                <h3 class="section">{{'Home.Feature.ServicesName.GymSportCenter' | translate}}</h3>
             </div>
         </ng-template>  
         <ng-template carouselSlide>            
             <div class="item">
                 <img src="assets/images/pricingp/spa-massage.jpg" alt=""/>
-                <h3 class="section">Gym & Sport Center</h3>
+                <h3 class="section">{{'Home.Feature.ServicesName.GymSportCenter' | translate}}</h3>
             </div>
         </ng-template>  
         <ng-template carouselSlide>            
             <div class="item">
                 <img src="assets/images/pricingp/medical.jpg" alt=""/>
-                <h3 class="section">Medical Clinic</h3>
+                <h3 class="section">{{'Home.Feature.ServicesName.Health' | translate}}</h3>
             </div>
         </ng-template>  
     </owl-carousel-o>

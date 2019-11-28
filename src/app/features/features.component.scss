@@ -1,7 +1,7 @@
 :host {
     background-color: #f6f7f9;
 }
-.seciton-banner {
+.section-banner {
     position: relative;
     height: calc(100vh - 70px);
     padding: 0;
@@ -11,15 +11,17 @@
         left: -690px;
         width: 1280px;
         height: 100%;
-        background-image: url(assets/images/featuresp/model.png);
-        background-size: cover;
-        background-position: 0 0;
+        background-image: url(assets/images/featuresp/model.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 690px 100%;
     }
     .image-right {
         position: absolute;
-        top: 30px;
+        top: 50%;
+        transform: translate3d(0,-50%,0);
         left: 589px;
-        width: 694px;
+        width: calc(100% - 608px);
         height: 646px;
         background-size: cover;
         background-position: 0 0;
@@ -49,7 +51,6 @@
             font-family: 'ProximaNova';
             font-size: 56px;
             font-weight: 900;
-            line-height: 0.77;
             color: #fff;
             letter-spacing: 10.08px;
             text-align: left;
@@ -82,8 +83,9 @@
     }
 }
 .btn-test-booking {
-    width: 279px;
+    width: 286px;
     height: 53px;
+    text-transform: uppercase;
     &:before {
         content: '';
         display: block;
@@ -97,7 +99,7 @@
     }
 }
 
-section.main-content {
+.main-content {
     background-color: #f6f7f9;
     .container {
         .section {
@@ -106,6 +108,18 @@ section.main-content {
             display: flex;
             align-items: center;
             margin: 0 0 75px 0;
+            .image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: initial;
+                position: absolute;
+                top: 0;
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
         }
         .section:nth-of-type(2n+1) {
             justify-content: flex-start;
@@ -113,10 +127,7 @@ section.main-content {
                 padding-left: 60px;
             }
             .image {
-                padding: initial;
-                position: absolute;
                 right: -85px;
-                top: 0;
             }
         }
         .section:nth-of-type(2n) {
@@ -125,10 +136,31 @@ section.main-content {
                 padding-right: 50px;
             }
             .image {
-                padding: initial;
-                position: absolute;
                 left: -85px;
-                top: 0;
+            }
+        }
+        .section:nth-of-type(1) {
+            .image {
+                width: 698px;
+                height: 395px;
+            }
+        }
+        .section:nth-of-type(2) {
+            .image {
+                width: 606px;
+                height: 406px;
+            }
+        }
+        .section:nth-of-type(3) {
+            .image {
+                width: 612px;
+                height: 481px;
+            }
+        }
+        .section:nth-of-type(4) {
+            .image {
+                width: 633px;
+                height: 450px;
             }
         }
     }
@@ -173,7 +205,7 @@ section.main-content {
     }
 }
 
-.payment-method {
+.payment-methods {
     display: flex;
     flex-wrap: wrap;
     margin: 0 0 40px 0;
@@ -222,7 +254,7 @@ section.appointment {
             font-family: 'ProximaNova';
             font-size: 36px;
             font-weight: bold;
-            line-height: 0.94;
+            line-height: 1;
             letter-spacing: normal;
             text-align: center;
             color: #fff;
@@ -249,6 +281,9 @@ section.appointment {
         }
         .action-bottom {
             text-align: center;
+            button {
+                width: 218px;
+            }
         }
     }
 }
@@ -294,14 +329,14 @@ section.appointment {
             text-align: left;
             color: #fff;
             padding: 0 20px 0 0;
-            .more {
+            ::ng-deep .more {
                 color: #f68e56;
             }
         }
     }
 }
 
-.demo-booking-popup {
+::ng-deep .demo-booking-popup {
     .modal-dialog  {
         max-width: 630px;
     }
@@ -318,6 +353,9 @@ section.appointment {
         padding: 6px 24px;
         display: flex;
         align-items: center;
+        button {
+            color: #fff;
+        }
     }
     .modal-title {
         font-family: 'ProximaNova';
@@ -379,6 +417,7 @@ section.appointment {
         letter-spacing: normal;
         text-align: left;
         color: #707070;
+        cursor: pointer;
         &:not(:nth-last-of-type(1)) {
             border-bottom: 1px solid rgba(0, 0, 0, 0.15);
         }
@@ -390,6 +429,17 @@ section.appointment {
             text-align: right;
             color: #f18c0e;
         }
+    }
+    .back-step {
+        width: 20px;
+        height: 10px;
+        background-size: 100% 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: inline-flex;
+        margin: 0 10px 0 0;
+        background-image: url(assets/images/icon/arrow_step_left.png);
+        cursor: pointer;
     }
     .step1-section {
         display: flex;
@@ -432,6 +482,7 @@ section.appointment {
         }
     }
 }
+
 .step2-wrapper {
     .booking-date {
         background-color: #fff;
@@ -494,6 +545,7 @@ section.appointment {
             flex-wrap: wrap;
             .staff {
                 padding: 14px 20px 0;
+                cursor: pointer;
                 img{
                     width: 65px;
                     height: 65px;
@@ -505,7 +557,7 @@ section.appointment {
                     font-family: 'SanFranciscoText', sans-serif;
                     font-size: 14px;
                     font-weight: 500;
-                    line-height: 0.82;
+                    line-height: 1;
                     letter-spacing: normal;
                     text-align: center;
                     color: #f39a00;
@@ -517,11 +569,11 @@ section.appointment {
                     font-weight: normal;
                     font-stretch: normal;
                     font-style: normal;
-                    line-height: 0.96;
+                    line-height: 1;
                     text-align: center;
                     color: rgba(255, 255, 255, 0.4);
                 }
-                &:hover {
+                &:hover, &.active {
                     background: #191e25;
                     .name {
                         color: #f68e56;
@@ -556,6 +608,381 @@ section.appointment {
                 font-family: 'SanFranciscoText', sans-serif;
                 font-size: 14px;
                 color: rgba(255, 255, 255, 0.6);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.step3-wrapper {
+    .qr-info {
+        display: flex;
+        align-items: center;
+        margin: 0 0 20px 0;
+        .image {
+            width: 68px;
+            height: 68px;
+            object-fit: contain;
+            margin: 0 15px 0 0;
+        }
+        .label {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 13px;
+            font-weight: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0 0 4px 0;
+        }
+        .id {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 33px;
+            font-weight: 900;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #fff;
+            margin: 0;
+        }
+        
+    }
+    .billing-info {
+        min-height: 239px;
+        border-radius: 1.5px;
+        border: solid 0.5px #b7b7b7;
+        background-color: #fff;
+        padding: 6px 22px 0;
+        margin: 0 0 28px 0;
+        font-size: 14px;
+        .date, .time {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            .left {
+                color: rgba(0, 0, 0, 0.6);
+                display: flex;
+                align-items: center;
+                &::before {
+                    content: '';
+                    display: block;
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    margin-right: 9px;
+                }
+            }
+            .right {
+                font-weight: bold;
+                text-align: left;
+                color: #ff9907;
+            }
+        }
+        .date {
+            .left:before {
+                width: 13px;
+                height: 13px;
+                background-image: url(assets/images/featuresp/ic-date.png);
+            }
+        }
+        .time {
+            .left:before {
+                width: 15px;
+                height: 15px;
+                background-image: url(assets/images/featuresp/ic-time.png);
+            }
+        }
+        .service-fee {
+            padding: 17px 0 13px;
+            font-family: 'SanFranciscoText', sans-serif;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            h4 {
+                font-weight: 600;
+                line-height: 1.05;
+                text-transform: uppercase;
+                color: rgba(0, 0, 0, 0.9);
+                margin: 0 0 22px 0;
+            }
+            .haircut, .surcharge {
+                font-weight: normal;
+                line-height: 1.05;
+                text-align: left;
+                color: rgba(0, 0, 0, 0.9);
+                display: flex;
+                justify-content: space-between;
+            }
+            .haircut {
+                margin: 0 0 12px 0;
+            }
+        }
+        .total {
+            font-family: "SanFranciscoText", sans-serif;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            line-height: 1.05;
+            color: rgba(0, 0, 0, 0.9);
+            padding: 14px 0;
+            .right {
+                font-family: 'Source Sans Pro', sans-serif;
+                font-weight: bold;
+                text-align: left;
+                color: #ff9907;
+            }
+        }
+    }
+    .booking-payment-method {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: normal;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.88);
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 20px 0;
+        img {
+            margin: 0 7px 0 0;
+        }
+    }
+    .confirm-booking {
+        width: 100%;
+        height: 40px;
+        font-size: 16px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 600;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 1199.98px) { 
+    .section-banner {
+        .head-info {
+            .sub {
+                font-size: 52px;
+            }
+            .title {
+                width: 300px;
+                font-size: 18px;
+                margin: 0 0 15px 0;
+            }
+            .intro {               
+                width: 300px;
+                font-size: 13px;
+            }
+        }
+        .image-right {
+            left: 382px;
+            right: 20px;
+            width: 600px;
+        }
+    }
+    .main-content {
+        .container {
+            .section:nth-of-type(2n+1) {
+                .info {
+                    padding-left: 0;
+                }
+                .image {
+                    right: -20px;
+                }
+            }
+            .section:nth-of-type(2n) {
+                .info {
+                    padding-right: 0;
+                }
+                .image {
+                    left: -20px;
+                }
+            }
+        }
+        .info {
+            width: 50%;
+            padding-left: 0;
+            .header h3, p {
+                width: 100%;
+            }
+        }
+        .image{
+            width: 50%;
+            height: 100%;
+        }
+    }
+    .payment-methods  {
+        .method {
+            align-items: center;
+            img {
+                width: 20px;
+            }
+            h4 {
+                width: 70px;
+            }
+        }
+        .method:not(:nth-last-of-type(1)) {
+            margin-right: 15px;
+        }
+    }
+}
+
+// small devices
+@media only screen and (max-width: 767.98px) { 
+    .section-banner {
+        min-height: 580px;
+        height: auto;
+        .head-info {
+            padding: 40px 20px 20px;
+            justify-content: flex-start;
+            .sub {
+                font-size: 30px;
+                margin: 0 0 5px 0;
+            }
+            .title {
+                width: 100%;
+                font-size: 18px;
+                margin: 0 0 5px 0;
+            }
+            .intro {               
+                width: 100%;
+                font-size: 13px;
+                margin: 0 0 10px 0;
+            }
+        }
+        .image-right {
+            top: 307px;
+            right: 0;
+            left: 50%;
+            transform: translate3d(-50%, 0,0);
+
+            z-index: 85;
+            width: 300px;
+            height: 302px;
+        }
+        .image-bottom {
+            bottom: -1px;
+        }
+    }
+    .main-content {
+        button {
+            margin: 5px auto 20px;
+            display: block;
+        }
+        .container {
+            .section {
+                height: auto;
+                flex-direction: column;
+                margin: 0 0 30px 0;
+                &:nth-of-type(1),
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:nth-of-type(4)
+                {
+                    .image {
+                        position: static;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+            .section:nth-of-type(2n+1) {
+                .info {
+                    padding-left: 0;
+                }
+            }
+            .section:nth-of-type(2n) {
+                .info {
+                    padding-right: 0;
+                }
+            }
+        }
+        .info {
+            width: 100%;
+            padding-left: 0;
+            .header h3, p {
+                width: 100%;
+            }
+            .header {
+                margin: 0 0 5px 0;
+                h3 {
+                    font-size: 20px;
+                }
+            }
+        }
+        .image{
+            width: 100%;
+        }
+    }
+    .btn-test-booking {
+        align-self: center;
+        font-size: 14px;
+        width: 236px;
+    }
+    .payment-methods  {
+        justify-content: center;
+        .method {
+            align-items: center;
+            img {
+                width: 20px;
+                margin-right: 5px;
+            }
+            h4 {
+                width: 60px;
+                font-size: 13px;
+            }
+        }
+        .method:not(:nth-last-of-type(1)) {
+            margin-right: 10px;
+        }
+    }
+    section.appointment {
+        padding: 50px 0;
+        .container {
+            .title {
+                font-size: 20px;
+                max-width: 100%;
+                max-height: 48px;
+                height: auto;
+                margin: 0 0 5px 0;
+            }
+            .intro {
+                font-size: 13px;
+            }
+        }
+
+    }
+    .appointment-list {
+        & > [class^=col-] {
+            margin-bottom: 30px;
+        }
+    }
+    .step2-wrapper .technicians .technicians-list {
+        justify-content: center;
+    }
+    .step3-wrapper {
+        .billing-info {
+            .service-fee {
+                h4 {
+                    margin: 0 0 10px 0;
+                }
+                .haircut, .surcharge {
+                    flex-direction: column;
+                    span {
+                        margin: 0 0 5px 0;
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .demo-booking-popup {
+            .modal-title {
+                font-size: 14px;
+            }
+            .modal-body {
+                padding: 20px 15px;
+            }
+            .collapse .card-body {
+                padding: 5px 10px 4px 15px;
             }
         }
     }

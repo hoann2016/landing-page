@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { LandingPageService } from '../shared/services/landing-page.service';
-import {Router} from '@angular/router';
 import {ToastrService} from 'ngx-toastr';
 import { faAngleDown, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import {filter} from 'rxjs/operators';
+import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'app-pricing',
@@ -52,6 +53,7 @@ export class PricingComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.landingPageSrv.setActivePage('pricing');
     this.newbiePackage = [
       {id: 1, name: '6 Months', price: '2,208,000', discount: null},
       {id: 2, name: '12 Months', price: '4,416,000', discount: 1},
