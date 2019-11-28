@@ -121,6 +121,62 @@
       }
     }
   },
+  "Pricing": {
+    "Subtitle": "Start Free With",
+    "Title": "Ludiino Online Booking & Scheduling Solution ",
+    "RegisterNow": "Register Now",
+    "MainContent": {
+      "Title": "Details Info & Pricing per package",
+      "Intro": "No credit card, no trial period, unlimited use for free. Here is how it works!",
+      "Package": "Package",
+      "Free": "FREE",
+      "Get": "Get",
+      "Freebie": "Freebie",
+      "FreebieIntro": "Get your business started online for free with an online booking website that does business for you 24/7",
+      "Newbie": "Newbie",
+      "NewbieIntro": "Take advantage of Online Payment feature to receive payment online and not having to worry about cash managment",
+      "Biggie": "Biggie",
+      "BiggeIntro": "Manage Staff Scheduling with ease & create Online Promotional Campaigns that send out discount codes to attract new customers",
+      "Hulk": "Hulk",
+      "HulkIntro": "Sell not only your services but also your merchandise on your website to maximize your revenues",
+      "OnlineBooking": "Online Booking Website",
+      "GoogleMap": "Integrated Google Map",
+      "RatingReview": "Rating & Review",
+      "ServicePricing": "Service & Pricing",
+      "TimeSlotConfirmation": "Time Slots Booking & Confirmation",
+      "BookingPerMonth": "20 Online Bookings per Month",
+      "PaymentMethod_Store": "Payment Method: Pay At Store",
+      "PaymentMethod_OnlineAndStore": "Payment Method: Pay Online and Pay At Store",
+      "UnlimittedNumber": "Unlimitted Number of Bookings",
+      "DealPromotion": "Deal & Promotion",
+      "CheckInOut": "Checkin & Checkout",
+      "ProductCommerce": "Product Commerce",
+      "CustomerMembership": "Customer Membership"
+    },
+    "FAQs": {
+      "Title": "FAQs",
+      "Intro": "Here are some frequently asked questions related to the Ludiino Booking Online solution",
+      "Q_HowSignUpLudiinoSolution": "How do I sign up for Ludiino solution?",
+      "A_HowSignUpLudiinoSolution": "Register for a Ludiino account at the top right corner of the Home page, fill in the required info to start",
+      "Q_WhenStartLudiinoForBusiness": "When can I start using Ludiino solution for my business?",
+      "A_WhenStartLudiinoForBusiness": "Depends on the package you select! If it's the Freebie pacakge, you can use it as soon as your account is created '\n'For more advanced packages, you can use it once payment is done",
+      "Q_HowMakePayment": "How do I make payment?",
+      "A_HowMakePayment": "2 ways: via credit cards (prefered method) or bank transfer. We accept all major credit cards",
+      "Q_WhenMySiteCreated": " When is my own website created for clients to make bookings on it?",
+      "A_WhenMySiteCreated": "Your own website will be automatically created once payment is completed. You will then proceed to add services + price for your clients to book",
+      "Q_IntegrateExistingSite": "If I already have an existing website for my business, can ludiino solution be integratedwith it?",
+      "A_IntegrateExistingSite": "Absolutely and we can provide technical support for the intergation",
+      "Q_CanUseMultiple": "Can I use Ludiino solution for multiple at the same time?",
+      "A_CanUseMultiple": "Absolutely! You can just click 'Add More Store' button in your merchant portal to add more and follow a simple process to set it up"
+    },
+    "LudiinoSolution": {
+      "Title": "Who use Ludiino Solution?"
+    }
+  },
+  "Features": {
+    "Subtitle": "Start Free With",
+    "Title": " Ludiino Online Booking & Scheduling Solution "
+  },
   "Register": {
     "Email": "Email",
     "Password": "Password",

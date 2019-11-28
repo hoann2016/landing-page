@@ -76,7 +76,7 @@
         transform: rotate(45deg) translate(-8px, -8px);
     }
 }
-@media (max-width: 991.98px) {
+@media only screen and (max-width: 991.98px) {
     .header-common {
         padding: 0 15px;
     }
@@ -98,5 +98,13 @@
             width: 50%;
             justify-content: center;
         }
+    }
+}
+
+@media (min-width: 992px) {
+    #mymenu {
+        height: initial !important;
+        overflow: initial !important;
+        opacity: 1 !important
     }
 }

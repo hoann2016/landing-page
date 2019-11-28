@@ -14,6 +14,7 @@ export class HomeTwoComponent implements OnInit, OnDestroy {
     private landingPageService: LandingPageService) { }
 
   ngOnInit() {
+    this.landingPageService.setActivePage('home');
     this.fix.addFixTwo();
   }
 

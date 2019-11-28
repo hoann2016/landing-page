@@ -44,6 +44,7 @@ export class FeaturesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.landingPageSrv.setActivePage('features');
     this.currentDemoStep = 1;
     this.selectToday();
   }

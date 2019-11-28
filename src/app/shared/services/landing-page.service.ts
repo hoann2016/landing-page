@@ -5,6 +5,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 export class LandingPageService {
   constructor() {}
   packageSelected = new BehaviorSubject('');
+  activePage = new BehaviorSubject('string');
 
   selectPackage(packagename: string) {
     if (packagename) {
@@ -21,5 +22,9 @@ export class LandingPageService {
       this.packageSelected.next('');
     }
     return this.packageSelected.asObservable();
+  }
+
+  setActivePage(pageName: string): void {
+    this.activePage.next(pageName);
   }
 }

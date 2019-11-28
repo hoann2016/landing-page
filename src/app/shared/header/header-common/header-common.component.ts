@@ -33,7 +33,7 @@ import {HeaderComponent} from '../header.component';
   ]
 })
 export class HeaderCommonComponent extends HeaderComponent implements OnInit {
-  pageActive: string;
+  $pageActive: Observable<string>;
   isMenuCollapsed: boolean;
   constructor(
       @Inject(DOCUMENT) protected document: Document,
@@ -44,7 +44,7 @@ export class HeaderCommonComponent extends HeaderComponent implements OnInit {
       protected router: Router
       ) {
       super(document, window, modalService, landingPageService, _translatesService, router);
-      this.pageActive = '';
+      this.$pageActive = this.landingPageService.activePage;
       this.isMenuCollapsed = true;
   }
 
@@ -61,6 +61,6 @@ export class HeaderCommonComponent extends HeaderComponent implements OnInit {
     this.router.navigate(['/pages/sign-in']);
   }
   setActiveNav(page: string): void {
-    // his.pageActive = page ? page : '';
+    this.landingPageService.setActivePage(page);
   }
 }
