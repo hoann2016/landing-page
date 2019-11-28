@@ -85,6 +85,7 @@
 .btn-test-booking {
     width: 279px;
     height: 53px;
+    text-transform: uppercase;
     &:before {
         content: '';
         display: block;
@@ -304,7 +305,7 @@ section.appointment {
             text-align: left;
             color: #fff;
             padding: 0 20px 0 0;
-            .more {
+            ::ng-deep .more {
                 color: #f68e56;
             }
         }
@@ -803,7 +804,7 @@ section.appointment {
 // small devices
 @media only screen and (max-width: 767.98px) { 
     .section-banner {
-        min-height: 520px;
+        min-height: 580px;
         height: auto;
         .head-info {
             padding: 40px 20px 20px;
@@ -824,7 +825,7 @@ section.appointment {
             }
         }
         .image-right {
-            top: 260px;
+            top: 307px;
             right: 0;
             left: 50%;
             transform: translate3d(-50%, 0,0);
@@ -881,6 +882,8 @@ section.appointment {
     }
     .btn-test-booking {
         align-self: center;
+        font-size: 14px;
+        width: 236px;
     }
     .payment-methods  {
         justify-content: center;

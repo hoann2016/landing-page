@@ -3,7 +3,7 @@ import { LandingPageService } from '../shared/services/landing-page.service';
 import {Router} from '@angular/router';
 import {NgbDateStruct, NgbCalendar, NgbDate, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
-
+import {TranslateService } from '@ngx-translate/core';
 interface BookingUser {
   date: string;
   time: string;
@@ -38,6 +38,7 @@ export class FeaturesComponent implements OnInit {
               private calendar: NgbCalendar,
               private landingPageSrv: LandingPageService,
               private toastrService: ToastrService,
+              private translateService: TranslateService,
               private router: Router) {
     this.selectedDOW = '';
     this.demoUser = {} as BookingUser;
@@ -56,15 +57,15 @@ export class FeaturesComponent implements OnInit {
   selectToday() {
     this.selectDate = this.calendar.getToday();
     console.log(this.selectDate);
-    this.selectedDOW = this.weekDays[this.calendar.getWeekday(this.selectDate)];
+    this.selectedDOW = 'Common.' + this.weekDays[this.calendar.getWeekday(this.selectDate)];
   }
   goPrevDay() {
     this.selectDate = this.calendar.getPrev(this.selectDate);
-    this.selectedDOW = this.weekDays[this.calendar.getWeekday(this.selectDate)];
+    this.selectedDOW = 'Common.' + this.weekDays[this.calendar.getWeekday(this.selectDate)];
   }
   goNextDay() {
     this.selectDate = this.calendar.getNext(this.selectDate);
-    this.selectedDOW = this.weekDays[this.calendar.getWeekday(this.selectDate)];
+    this.selectedDOW = 'Common.' + this.weekDays[this.calendar.getWeekday(this.selectDate)];
   }
   selectStaff(staff: string) {
     this.demoUser.staffName = staff;
@@ -75,13 +76,19 @@ export class FeaturesComponent implements OnInit {
       this.demoUser.priceService = bookingData.price;
     }
     if (bookingData && step === 3) {
-      this.demoUser.date =   `${this.selectedDOW}` + ', ' + `${this.selectDate.day}` + '/' + `${this.selectDate.month}` + '/' + `${this.selectDate.year}`;
+      if (!this.demoUser.staffName) {
+        return;
+      }
+      this.demoUser.date = ', ' + `${this.selectDate.day}` + '/' + `${this.selectDate.month}` + '/' + `${this.selectDate.year}`;
       this.demoUser.time = bookingData;
     }
     this.currentDemoStep = step;
   }
   confirmBooking(): void {
-    this.toastrService.success('Booking successfully');
+    this.translateService.get('Common.BookingSuccess').subscribe((res: string) => {
+      this.toastrService.success(res);
+      this.demoUser = {} as BookingUser;
+    });
   }
   redirectToRegister(packageSelected: string): void {
     this.landingPageSrv.selectPackage(packageSelected);
