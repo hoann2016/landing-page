@@ -83,7 +83,7 @@
     }
 }
 .btn-test-booking {
-    width: 279px;
+    width: 286px;
     height: 53px;
     text-transform: uppercase;
     &:before {
@@ -137,6 +137,30 @@
             }
             .image {
                 left: -85px;
+            }
+        }
+        .section:nth-of-type(1) {
+            .image {
+                width: 698px;
+                height: 395px;
+            }
+        }
+        .section:nth-of-type(2) {
+            .image {
+                width: 606px;
+                height: 406px;
+            }
+        }
+        .section:nth-of-type(3) {
+            .image {
+                width: 612px;
+                height: 481px;
+            }
+        }
+        .section:nth-of-type(4) {
+            .image {
+                width: 633px;
+                height: 450px;
             }
         }
     }
@@ -848,8 +872,16 @@ section.appointment {
                 height: auto;
                 flex-direction: column;
                 margin: 0 0 30px 0;
-                .image {
-                    position: static;
+                &:nth-of-type(1),
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:nth-of-type(4)
+                {
+                    .image {
+                        position: static;
+                        width: 100%;
+                        height: auto;
+                    }
                 }
             }
             .section:nth-of-type(2n+1) {
