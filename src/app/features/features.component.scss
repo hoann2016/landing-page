@@ -19,12 +19,13 @@
     .image-right {
         position: absolute;
         top: 50%;
-        transform: translate3d(0,-50%,0);
+        transform: translate3d(0, -50%, 0);
         left: 589px;
         width: calc(100% - 608px);
-        height: 646px;
-        background-size: cover;
+        height: calc(100% - 20px);
+        background-size: contain;
         background-position: 0 0;
+        background-repeat: no-repeat;
         background-image: url(assets/images/featuresp/calendar-bg.png);
     }
     .image-bottom {
@@ -776,6 +777,8 @@ section.appointment {
             left: 382px;
             right: 20px;
             width: 600px;
+            height: 100%;
+            background-position: center center;
         }
     }
     .main-content {
@@ -785,6 +788,7 @@ section.appointment {
                     padding-left: 0;
                 }
                 .image {
+                    width: 50%;
                     right: -20px;
                 }
             }
@@ -793,6 +797,7 @@ section.appointment {
                     padding-right: 0;
                 }
                 .image {
+                    width: 50%;
                     left: -20px;
                 }
             }
@@ -833,6 +838,9 @@ section.appointment {
         .head-info {
             padding: 40px 20px 20px;
             justify-content: flex-start;
+            max-width: 500px;
+            left: 50%;
+            transform: translate3d(-50%, 0, 0);
             .sub {
                 font-size: 30px;
                 margin: 0 0 5px 0;
