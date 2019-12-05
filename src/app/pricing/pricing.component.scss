@@ -48,14 +48,14 @@ section#banner {
 }
 
 .bg-bottom {
-    width: 495px;
-    height: 259px;
+    width: 669px;
+    height: 350px;
     background-image: url(assets/images/pricingp/device.png); 
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;
     bottom: -64px;
-    right: -130px;
+    right: -190px;
 }
 
 section.main-content {
@@ -64,16 +64,19 @@ section.main-content {
 }
 
 .package-list {
+    .hulk-pt-6{
+        padding-top: 60px;
+    }
     .package {
         &:not(:nth-last-of-type(1)) {
-            padding: 65px 0;
+            padding: 60px 0 0 0;
             .content {
                 border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
                 padding-bottom: 45px;
             }
         }
         &:nth-of-type(1) {
-            padding: 106px 0 65px 0;
+            padding: 60px 0 0 0;
         }
         .image {
             justify-content: center;
@@ -114,7 +117,7 @@ section.main-content {
             font-family: "ProximaNova";
             padding: 0;
             li {
-                font-size: 14px;
+                font-size: 16px;
                 font-weight: 300;
                 font-stretch: normal;
                 font-style: normal;
