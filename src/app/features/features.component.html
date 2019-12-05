@@ -106,8 +106,8 @@
                 <div class="image">
                     <img src="assets/images/featuresp/img2.jpg" alt="CheckIn Checkout feature"/>
                 </div>
-                <h3 class="title">{{'Features.Appointment.CheckInOut.Title' | translate}}</h3>
-                <p [innerHTML]="'Features.Appointment.CheckInOut.Info' | translate"></p>
+                <h3 class="title">{{'Features.Appointment.CheckInManagement.Title' | translate}}</h3>
+                <p [innerHTML]="'Features.Appointment.CheckInManagement.Info' | translate"></p>
             </div>
             <div class="col-sm-12 col-md-4 article">
                 <div class="image">
@@ -288,7 +288,7 @@
                             {{ selectedDOW| translate }}, {{ selectDate.day }}.{{ selectDate.month }}.{{ selectDate.year }}
                         </div>
                         <input class="form-control" placeholder="yyyy-mm-dd"
-                        name="dp" [(ngModel)]="selectDate" ngbDatepicker #d="ngbDatepicker">
+                        name="dp" [(ngModel)]="selectDate" (ngModelChange)="onSelectDate()" ngbDatepicker #d="ngbDatepicker">
                    </div>
                     <a href="javascript:void(0)" (click)="goNextDay()" class="next"></a>
                 </div>    
@@ -348,7 +348,7 @@
                         <div class="right">{{demoUser.time}}</div>
                     </div>
                     <div class="service-fee">
-                        <h4>Service FEE</h4>
+                        <h4>{{'Features.DemoSteps.Step3.ServiceFee' | translate}}</h4>
                         <div class="haircut">
                             <span> {{demoUser.serviceName | translate}}	(Staff: {{demoUser.staffName | translate}})</span><span>{{demoUser.priceService}} đ</span>
                         </div>
@@ -381,7 +381,7 @@
                         <span class="checkmark"></span>
                     </label>
                 </div>
-                <button class="btn btn_gradient-orange confirm-booking" (click)="modal.close('Confirm booking'); confirmBooking()">CONFIRM BOOKING</button>
+                <button class="btn btn_gradient-orange confirm-booking" (click)="modal.close('Confirm booking'); confirmBooking()">{{'Common.ConfirmBooking' | translate}}</button>
             </div>
         </ng-container>
 

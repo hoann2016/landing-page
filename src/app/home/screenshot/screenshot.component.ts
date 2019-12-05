@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {TranslateService} from '@ngx-translate/core';
-import { LandingPageService } from '../../shared/services/landing-page.service';
+import { LandingPageService } from '@shared/services/landing-page.service';
+import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-screenshot',
@@ -9,6 +10,8 @@ import { LandingPageService } from '../../shared/services/landing-page.service';
   styleUrls: ['./screenshot.component.scss']
 })
 export class ScreenshotComponent implements OnInit {
+  faCheck = faCheck;
+  faTimes = faTimes;
   constructor(
       private translate: TranslateService,
       private landingPageService: LandingPageService, private router: Router) {}

@@ -125,18 +125,15 @@
     "Subtitle": "Start Free With",
     "Title": "Ludiino Online Booking & Scheduling Solution ",
     "MainContent": {
-      "Title": "Details Info & Pricing per package",
-      "Intro": "No credit card, no trial period, unlimited use for free. Here is how it works!",
-      "Package": "Package",
       "Free": "FREE",
       "Get": "Get",
-      "Freebie": "Freebie",
+      "Freebie": "Freebie package",
       "FreebieIntro": "Get your business started online for free with an online booking website that does business for you 24/7",
-      "Newbie": "Newbie",
+      "Newbie": "Newbie package",
       "NewbieIntro": "Take advantage of Online Payment feature to receive payment online and not having to worry about cash managment",
-      "Biggie": "Biggie",
+      "Biggie": "Biggie package",
       "BiggeIntro": "Manage Staff Scheduling with ease & create Online Promotional Campaigns that send out discount codes to attract new customers",
-      "Hulk": "Hulk",
+      "Hulk": "Hulk package",
       "HulkIntro": "Sell not only your services but also your merchandise on your website to maximize your revenues",
       "OnlineBooking": "Online Booking Website",
       "GoogleMap": "Integrated Google Map",
@@ -148,9 +145,14 @@
       "PaymentMethod_OnlineAndStore": "Payment Method: Pay Online and Pay At Store",
       "UnlimittedNumber": "Unlimitted Number of Bookings",
       "DealPromotion": "Deal & Promotion",
-      "CheckInOut": "Checkin & Checkout",
+      "CheckInManagement": "CheckIn Management",
       "ProductCommerce": "Product Commerce",
-      "CustomerMembership": "Customer Membership"
+      "CustomerMembership": "Customer Membership",
+      "6Months": "6 months",
+      "12Months": "12 months",
+      "18Months": "18 months",
+      "24Months": "24 months",
+       "freemonths": "free months"
     },
     "FAQs": {
       "Title": "FAQs",
@@ -168,8 +170,22 @@
       "Q_CanUseMultiple": "Can I use Ludiino solution for multiple at the same time?",
       "A_CanUseMultiple": "Absolutely! You can just click 'Add More Store' button in your merchant portal to add more and follow a simple process to set it up"
     },
+    "ServicesName": {
+      "HairSalon": "HairSalon",
+      "NailSalon": "NailSalon",
+      "Spa": "Spa",
+      "MassageTherapy": "Massage Therapy",
+      "Doctors": "Doctors",
+      "MedicalClinic": "Medical Clinic",
+      "Gym": "Gym",
+      "SportCenter": "Sport Cente",
+      "WeddingService": "Wedding Service",
+      "Photography": "Photography",
+      "RepairService": "Repair Service",
+      "PetService": "Pet Service"
+    },
     "LudiinoSolution": {
-      "Title": "Who use Ludiino Solution?"
+      "Title": "Who can use Ludiino Online Booking & Appointment Scheduling System?"
     }
   },
   "Features": {
@@ -204,24 +220,24 @@
         "Title": "Integrate Booking with Social Network",
         "Info": "Booking feature is integrated into your social networks like facebook and\/or instagram for clients to conveniently  book via multiple online channels to help your business leverage on all digital channels to get new clients & ultmately more bookings"
       },
-      "CheckInOut": {
-        "Title": "CheckIn\/Checkout Features",
+      "CheckInManagement": {
+        "Title": "Check In Management",
         "Info": "Quickly checkin and\/or checkout pre-booking customers by scaning booking code to signnificantly reduce unnessesary wait time and to spend more time taking care of your clients"
       },
       "Marketing": {
         "Title": "Online Marketing & Promotional Campaigns",
-        "Info": "Multiple ways to create various Promotional Marketing Campaigns with discount codes sent via email\/sms directly to your targeted clients to attract new clients and keep old clients coming back for more.  <a class='more' href='#'>More...</a>"
+        "Info": "Multiple ways to create various Promotional Marketing Campaigns with discount codes sent via email\/sms directly to your targeted clients to attract new clients and keep old clients coming back for more."
       },
       "Dashboard": {
-        "Title": "Dashboard & Reports Features",
-        "Info": "Real time online reporting about booking transactions, payments, and client satisfaction. Available KPIs dashboard with visualized charts & graphs that help owners quickly gauge business performances and what need  <a class='more' href='#'>More...</a>."
+        "Title": "Dashboard & Reports",
+        "Info": "Real time online reporting about booking transactions, payments, and client satisfaction. Available KPIs dashboard with visualized charts & graphs that help owners quickly gauge business performances and what need."
       },
       "Notifications": {
         "Title": "Auto Notification & Reminder",
         "Info": "The system automatically sends reminders to client about an upcoming appointments and\/or notifications when a booking is made, changed, or canceled so you're always in control of your business without having to attend the phone all the times"
       },
       "Cancellation": {
-        "Title": "Booking Cancellation Features",
+        "Title": "Booking Cancellation",
         "Info": "Completely replace the hassles of making multiple phone calles with a few clicks to cancel\/edit a booking online. A cancellation confirmation is automatically sent to both buyers & seller to finalize the transaction"
       }
     },
@@ -246,6 +262,7 @@
       "Step3": {
         "Title": "Step 3: Payment method",
         "Surcharge": "Surcharge",
+        "ServiceFee": "Service FEE",
         "Total": "TOTAL"
       }
     }
@@ -432,6 +449,7 @@
     "redirect-message": "Automatically redirect to your website in %s seconds."
   },
   "Common": {
+    "Discount": "Discount",
     "RegisterNow": "Register Now",
     "ConfirmBooking": "Confirm Booking",
     "Minutes": "minutes",

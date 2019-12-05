@@ -24,6 +24,7 @@ import {TeamComponent} from './team/team.component';
 import {TestimonialComponent} from './testimonial/testimonial.component';
 import {HomeTwoComponent} from './versions/home-two/home-two.component';
 import { LoadingComponent } from '../shared/loading/loading.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -33,16 +34,16 @@ export function HttpLoaderFactory(http: HttpClient) {
   imports: [
     CommonModule, HomeRoutingModule, SharedModule, ReactiveFormsModule,
     FormsModule, OwlModule, NgbModule, HttpClientModule,
-    TranslateModule
+    TranslateModule,
+    FontAwesomeModule
   ],
   declarations: [
     HomeTwoComponent, IntroOneComponent, IntroTwoComponent, IntroThreeComponent,
     AboutComponent, FeatureComponent, ScreenshotComponent, TeamComponent,
     BlogComponent, PriceComponent, TestimonialComponent, ContactUsComponent,
     NewsletterComponent
-
   ],
-  entryComponents:[LoadingComponent],
+  entryComponents: [LoadingComponent],
   providers: [TranslateService, LandingPageService,]
 })
 export class HomeModule {

@@ -59,6 +59,9 @@ export class FeaturesComponent implements OnInit {
     console.log(this.selectDate);
     this.selectedDOW = 'Common.' + this.weekDays[this.calendar.getWeekday(this.selectDate)];
   }
+  onSelectDate() {
+    this.selectedDOW = 'Common.' + this.weekDays[this.calendar.getWeekday(this.selectDate)];
+  }
   goPrevDay() {
     this.selectDate = this.calendar.getPrev(this.selectDate);
     this.selectedDOW = 'Common.' + this.weekDays[this.calendar.getWeekday(this.selectDate)];

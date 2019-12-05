@@ -59,88 +59,10 @@ section#banner {
 }
 
 section.main-content {
-    padding: 155px 0 50px 0;
+    padding: 50px 0;
     background-color: #f6f7f9;
-    .title {
-        font-family: 'ProximaNova';
-        font-size: 36px;
-        font-weight: 800;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1;
-        letter-spacing: 0.36px;
-        text-align: center;
-        color: #000000;
-        margin: 0 0 12px 0;
-    }
-    .intro {
-        opacity: 0.7;
-        font-family: 'ProximaNova';
-        font-size: 20px;
-        font-weight: 300;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.15;
-        letter-spacing: normal;
-        text-align: center;
-        color: rgba(0, 0, 0, 0.7);
-    }
 }
-.pricing-info-block {
-    width: 610px;
-    height: 65px;
-    display: flex;
-    padding: 6px 0;
-    border-radius: 3px;
-    border: solid 0.5px rgba(255, 255, 255, 0.5);
-    background-color: #2f3b4d;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    img {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
-    }
-    .step {
-        display: flex;
-        align-items: center;
-        p {
-            font-family: 'ProximaNova';
-            font-size: 14px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.14;
-            letter-spacing: normal;
-            text-align: left;
-            color: #fff;
-            text-transform: none;
-            margin: 0;
-        }
-        &:not(.step3) {
-            border-right: 1px solid rgba(255, 255, 255, 0.6);
-        }
-        &.step1 {
-            padding: 0 21px 0 20px;            
-            p{
-                width: 86px;
-            }
-        }
-        &.step2 {
-            padding: 0 21px 0 12px;
-            p{
-                width: 121px;
-            }
-        }
-        &.step3 {
-            padding: 0 23px 0 23px;
-            p{
-                width: 158px;
-            }
-        }
-    }
-}
+
 .package-list {
     .package {
         &:not(:nth-last-of-type(1)) {
@@ -380,7 +302,7 @@ section.faq {
 
 section.ludiino-solution {
     padding: 78px 0 0 0;
-    height: 505px;
+    height: 575px;
     background-image: linear-gradient(to top, #f7941d, #ffb534);
     .title {
         position: relative;
@@ -404,7 +326,7 @@ section.ludiino-solution {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            top: 86px;
+            top: 108px;
         }
     }
     .solution-list {
@@ -524,6 +446,14 @@ section.carousel-salon-section {
             }
         }
     }
+    section.ludiino-solution {
+        height: 615px;
+        .title {
+            &:before {
+                top: 150px;         
+            }
+        }
+    }
     .price-label {
         font-size: 18px;
     }
@@ -558,48 +488,8 @@ section.carousel-salon-section {
         bottom: -64px;
     }
     section.main-content {
-        padding: 80px 0 30px;
-        .title {
-            font-size: 18px;
-        }
-        .intro {
-            font-size: 13px;
-        }
+        padding: 30px 0;
     }
-    .pricing-info-block {
-        width: 100%;
-        min-height: 65px;
-        img {
-            width: 20px;
-            height: 20px;
-            flex: 0 0 20px;
-            margin-right: 5px;
-        }
-        .step {
-            p {
-                font-size: 12px;
-            }
-            &.step1 {
-                padding: 0 6px 0 5px;            
-                p{
-                    width: auto;
-                }
-            }
-            &.step2 {
-                padding: 0 6px 0 5px;            
-                p{
-                    width: auto;
-                }
-            }
-            &.step3 {
-                padding: 0 6px 0 5px;            
-                p{
-                    width: auto;
-                }
-            }
-        }
-    }
-
     .package-list  {
         .package {
             &:not(:nth-last-of-type(1)) {
@@ -644,11 +534,12 @@ section.carousel-salon-section {
     }
     section.ludiino-solution {
         padding: 30px 0 0 0;
+        height: 615px;
         .title {
             font-size: 18px;
             margin: 0 0 46px 0px;
             &:before {
-                top: 38px;         
+                top: 75px;         
             }
         }
         .solution-list .solution {

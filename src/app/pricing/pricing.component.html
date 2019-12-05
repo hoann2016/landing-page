@@ -17,22 +17,6 @@
 
 <section class="main-content">
     <div class="container">
-        <h2 class="title">{{'Pricing.MainContent.Title' | translate}}</h2>
-        <p class="intro">{{'Pricing.MainContent.Intro' | translate}}</p>
-        <div class="pricing-info-block">
-            <div class="step step1">
-                <img src="assets/images/home2/hiw_1.png" alt="signup" class=" ">
-                <p>{{'Home.ScreenShot.SignupAccount'|translate}}</p>
-            </div>
-            <div class="step step2">
-                <img src="assets/images/home2/hiw_2.png" alt="setup service" class=" ">
-                <p>{{'Home.ScreenShot.SetupService'|translate}}</p>
-            </div>
-            <div class="step step3">
-                <img src="assets/images/home2/hiw_3.png" alt="create open time" class=" ">
-                <p>{{'Home.ScreenShot.CreateOpenTime'|translate}}</p>
-            </div>
-        </div>
         <div class="package-list">
             <div class="package row">
                 <div class="image col-12 col-sm-3">
@@ -41,7 +25,7 @@
                 <div class="content col-12 col-sm-9">
                     <div class="inner row">
                         <div class="col-12 col-sm-7 col-md-8">
-                            <h3 class="title title-red"><span>{{'Pricing.MainContent.Freebie' | translate}}</span> {{'Pricing.MainContent.Package' | translate}}</h3>
+                            <h3 class="title title-red"><span>{{'Pricing.MainContent.Freebie' | translate}}</span></h3>
                             <p class="info">
                                 {{'Pricing.MainContent.FreebieIntro' | translate}}
                             </p>
@@ -74,9 +58,9 @@
                 <div class="content col-sm-9">
                     <div class="inner row">
                         <div class="col-12 col-sm-7 col-md-8">
-                            <h3 class="title title-blue"><span>{{'Pricing.MainContent.Newbie' | translate}}</span> {{'Pricing.MainContent.Package' | translate}}</h3>
+                            <h3 class="title title-blue"><span>{{'Pricing.MainContent.Newbie' | translate}}</span></h3>
                             <p class="info">
-                                {{'Pricing.MainContent.FreebieIntro' | translate}}
+                                {{'Pricing.MainContent.NewbieIntro' | translate}}
                             </p>
                             <ul>
                                 <li>{{'Pricing.MainContent.OnlineBooking' | translate}}</li>
@@ -93,11 +77,11 @@
                                     <p class="price-label"><span>{{selectedNewbie?.price}}</span> vnđ</p>
                                     <select [(ngModel)]="selectedNewbie">
                                         <option *ngFor="let item of newbiePackage"  [ngValue]="item">
-                                            {{item.name}}
+                                            {{item.name | translate}}
                                         </option>
                                     </select>
                                     <div class="discount" *ngIf="selectedNewbie?.discount">
-                                        Discount: <span>{{selectedNewbie?.discount}} free months</span>
+                                       {{'Common.Discount' | translate}}: <span>{{selectedNewbie?.discount}} {{'Pricing.MainContent.freemonths' | translate }}</span>
                                     </div>
                                     <button class="btn btn_gradient-orange"  (click)="redirectToRegister('7')">
                                         {{'Pricing.MainContent.Get' | translate}} NEWBIE
@@ -115,7 +99,7 @@
                 <div class="content col-sm-9">
                     <div class="inner row">
                         <div class="col-12 col-sm-7 col-md-8">
-                            <h3 class="title title-orange"><span>{{'Pricing.MainContent.Biggie' | translate}}</span> {{'Pricing.MainContent.Package' | translate}}</h3>
+                            <h3 class="title title-orange"><span>{{'Pricing.MainContent.Biggie' | translate}}</span></h3>
                             <p class="info">
                                 {{'Pricing.MainContent.BiggeIntro' | translate}}
                             </p>
@@ -128,7 +112,7 @@
                                 <li>{{'Pricing.MainContent.UnlimittedNumber' | translate}}</li>
                                 <li>{{'Pricing.MainContent.PaymentMethod_OnlineAndStore' | translate}}</li>
                                 <li class="text-orange">{{'Pricing.MainContent.DealPromotion' | translate}}</li>
-                                <li class="text-orange">{{'Pricing.MainContent.CheckInOut' | translate}}</li>
+                                <li class="text-orange">{{'Pricing.MainContent.CheckInManagement' | translate}}</li>
                             </ul>
                         </div>
                         <div class="col-12 col-sm-4 d-flex justify-content-end">
@@ -136,11 +120,11 @@
                                 <p class="price-label"><span>{{selectedBiggie?.price}}</span> vnđ</p>
                                 <select [(ngModel)]="selectedBiggie">
                                     <option *ngFor="let item of biggiePackage"  [ngValue]="item">
-                                        {{item.name}}
+                                        {{item.name | translate}}
                                     </option>
                                 </select>
                                 <div class="discount" *ngIf="selectedBiggie?.discount">
-                                    Discount: <span>{{selectedBiggie?.discount}} free months</span>
+                                   {{'Common.Discount' | translate}}: <span>{{selectedBiggie?.discount}} {{'Pricing.MainContent.freemonths' | translate }}</span>
                                 </div>
                                 <button class="btn btn_gradient-orange"  (click)="redirectToRegister('12')">
                                     {{'Pricing.MainContent.Get' | translate}} BIGGIE
@@ -158,7 +142,7 @@
                 <div class="content col-sm-9">
                     <div class="inner row">
                         <div class="col-12 col-sm-7 col-md-8">
-                                <h3 class="title title-green"><span>{{'Pricing.MainContent.Hulk' | translate}}</span> {{'Pricing.MainContent.Package' | translate}}</h3>
+                                <h3 class="title title-green"><span>{{'Pricing.MainContent.Hulk' | translate}}</span></h3>
                                 <p class="info">
                                     {{'Pricing.MainContent.HulkIntro' | translate}}
                                 </p>
@@ -171,7 +155,7 @@
                                 <li>{{'Pricing.MainContent.UnlimittedNumber' | translate}}</li>
                                 <li>{{'Pricing.MainContent.PaymentMethod_OnlineAndStore' | translate}}</li>
                                 <li>{{'Pricing.MainContent.DealPromotion' | translate}}</li>
-                                <li>{{'Pricing.MainContent.CheckInOut' | translate}}</li>
+                                <li>{{'Pricing.MainContent.CheckInManagement' | translate}}</li>
                                 <li class="text-orange">{{'Pricing.MainContent.ProductCommerce' | translate}}</li>
                                 <li class="text-orange">{{'Pricing.MainContent.CustomerMembership' | translate}}</li>
                             </ul>
@@ -181,11 +165,11 @@
                                     <p class="price-label"><span>{{selectedHulk?.price}}</span> vnđ</p>
                                     <select [(ngModel)]="selectedHulk">
                                         <option *ngFor="let item of hulkPackage"  [ngValue]="item">
-                                            {{item.name}}
+                                            {{item.name | translate}}
                                         </option>
                                     </select>
                                     <div class="discount" *ngIf="selectedHulk?.discount">
-                                        Discount: <span>{{selectedHulk?.discount}} free months</span>
+                                       {{'Common.Discount' | translate}}: <span>{{selectedHulk?.discount}} {{'Pricing.MainContent.freemonths' | translate }}</span>
                                     </div>
                                 <button class="btn btn_gradient-orange"  (click)="redirectToRegister('17')">
                                     {{'Pricing.MainContent.Get' | translate}} HULK
@@ -241,20 +225,20 @@
                 <div class="question-wrapper">
                     <div class="question d-flex"  (click)="openAnswer(4)">
                         <fa-icon [icon]="selectAnswer === 4 ? faAngleDown : faAngleRight"></fa-icon>
-                        {{'Pricing.FAQs.Q_HowMakePayment' | translate}}
+                        {{'Pricing.FAQs.Q_WhenMySiteCreated' | translate}}
                     </div>
                     <div class="answer" [class.is-active]="selectAnswer === 4"
-                        [innerHTML]="'Pricing.FAQs.A_HowMakePayment' | translate">
+                        [innerHTML]="'Pricing.FAQs.A_WhenMySiteCreated' | translate">
                     </div>
                 </div>
 
                 <div class="question-wrapper">
                     <div class="question d-flex" (click)="openAnswer(5)">
                         <fa-icon [icon]="selectAnswer === 5 ? faAngleDown : faAngleRight"></fa-icon>
-                        {{'Pricing.FAQs.Q_WhenMySiteCreated' | translate}}
+                        {{'Pricing.FAQs.Q_IntegrateExistingSite' | translate}}
                     </div>
                     <div class="answer" [class.is-active]="selectAnswer === 5"
-                        [innerHTML]="'Pricing.FAQs.A_WhenMySiteCreated' | translate">
+                        [innerHTML]="'Pricing.FAQs.A_IntegrateExistingSite' | translate">
                     </div>
                 </div>
 
@@ -275,18 +259,18 @@
     <div class="container">
         <h2 class="title">{{'Pricing.LudiinoSolution.Title' | translate}}</h2>
         <div class="solution-list">
-            <div class="solution">{{'Home.Feature.ServicesName.HairSalon' | translate}}</div>
-            <div class="solution">{{'Home.Feature.ServicesName.BeautySalon' | translate}}</div>
-            <div class="solution">{{'Home.Feature.ServicesName.SpaMassage' | translate}}</div>
-            <div class="solution">{{'Home.Feature.ServicesName.GymSportCenter' | translate}}</div>
-            <div class="solution">{{'Home.Feature.ServicesName.Health' | translate}}</div>
-            <div class="solution">{{'Home.Feature.ServicesName.RepairServices' | translate}}</div>
-            <div class="solution">{{'Home.Feature.ServicesName.HairSalon' | translate}}</div>
-            <div class="solution">{{'Home.Feature.ServicesName.BeautySalon' | translate}}</div>
-            <div class="solution">{{'Home.Feature.ServicesName.SpaMassage' | translate}}</div>
-            <div class="solution">{{'Home.Feature.ServicesName.GymSportCenter' | translate}}</div>
-            <div class="solution">{{'Home.Feature.ServicesName.Health' | translate}}</div>
-            <div class="solution">{{'Home.Feature.ServicesName.RepairServices' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.HairSalon' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.NailSalon' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.MassageTherapy' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.Spa' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.Doctors' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.MedicalClinic' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.Gym' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.SportCenter' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.WeddingService' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.Photography' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.RepairService' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.PetService' | translate}}</div>
         </div>
     </div>
 </section>
