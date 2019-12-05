@@ -55,29 +55,26 @@ export class PricingComponent implements OnInit {
   ngOnInit(): void {
     this.landingPageSrv.setActivePage('pricing');
     this.newbiePackage = [
-      {id: 1, name: '6 Months', price: '2,208,000', discount: null},
-      {id: 2, name: '12 Months', price: '4,416,000', discount: 1},
-      {id: 3, name: '18 Months', price: '6,624,000', discount: 2},
-      {id: 4, name: '24 Months', price: '8,832,000', discount: 3},
+      {id: 1, name: 'Pricing.MainContent.6Months', price: '2,208,000', discount: null},
+      {id: 2, name: 'Pricing.MainContent.12Months', price: '4,416,000', discount: 1},
+      {id: 3, name: 'Pricing.MainContent.18Months', price: '6,624,000', discount: 2},
+      {id: 4, name: 'Pricing.MainContent.24Months', price: '8,832,000', discount: 3},
     ];
     this.biggiePackage = [
-      {id: 1, name: '6 Months', price: '4,496,000', discount: null},
-      {id: 2, name: '12 Months', price: '9,936,000', discount: 1},
-      {id: 3, name: '18 Months', price: '14,904,000', discount: 2},
-      {id: 4, name: '24 Months', price: '19,872,000', discount: 3},
+      {id: 1, name: 'Pricing.MainContent.6Months', price: '4,496,000', discount: null},
+      {id: 2, name: 'Pricing.MainContent.12Months', price: '9,936,000', discount: 1},
+      {id: 3, name: 'Pricing.MainContent.18Months', price: '14,904,000', discount: 2},
+      {id: 4, name: 'Pricing.MainContent.24Months', price: '19,872,000', discount: 3},
     ];
     this.hulkPackage = [
-      {id: 1, name: '6 Months', price: '8,856,000', discount: null},
-      {id: 2, name: '12 Months', price: '17,112,000', discount: 1},
-      {id: 3, name: '18 Months', price: '25,668,000', discount: 2},
-      {id: 4, name: '24 Months', price: '34,224,000', discount: 3},
+      {id: 1, name: 'Pricing.MainContent.6Months', price: '8,856,000', discount: null},
+      {id: 2, name: 'Pricing.MainContent.12Months', price: '17,112,000', discount: 1},
+      {id: 3, name: 'Pricing.MainContent.18Months', price: '25,668,000', discount: 2},
+      {id: 4, name: 'Pricing.MainContent.24Months', price: '34,224,000', discount: 3},
     ];
     this.selectedNewbie = this.newbiePackage[0];
     this.selectedBiggie = this.biggiePackage[0];
     this.selectedHulk = this.hulkPackage[0];
-  }
-  changeNewbiePackage(item: any) {
-    console.log(item);
   }
 
   redirectToRegister(packageSelected: string): void {

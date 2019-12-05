@@ -9,7 +9,6 @@ if (environment.production) {
 // not sure needed
 platformBrowserDynamic().bootstrapModule(AppBrowserModule)
   .then(() => {
-    console.log('LOADED');
     document.getElementById('preview-area').remove();
   })
   .catch(err => console.log(err));
