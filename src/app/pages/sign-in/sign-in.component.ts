@@ -71,7 +71,6 @@ export class SignInComponent implements OnInit, AfterViewInit {
           setTimeout(() => {
             this.showLoading = false;
           }, 3000);
-          console.log('response:', response);
           const { success, data} = response;
           if (success == true) {
             this.cookieStorage.setItem('access-token', data.token);
