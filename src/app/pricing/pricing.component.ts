@@ -76,9 +76,6 @@ export class PricingComponent implements OnInit {
     this.selectedBiggie = this.biggiePackage[0];
     this.selectedHulk = this.hulkPackage[0];
   }
-  changeNewbiePackage(item: any) {
-    console.log(item);
-  }
 
   redirectToRegister(packageSelected: string): void {
     this.landingPageSrv.selectPackage(packageSelected);

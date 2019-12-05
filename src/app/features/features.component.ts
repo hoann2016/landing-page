@@ -56,7 +56,6 @@ export class FeaturesComponent implements OnInit {
   }
   selectToday() {
     this.selectDate = this.calendar.getToday();
-    console.log(this.selectDate);
     this.selectedDOW = 'Common.' + this.weekDays[this.calendar.getWeekday(this.selectDate)];
   }
   onSelectDate() {
