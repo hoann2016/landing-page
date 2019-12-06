@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
+    "nghm": "node --max_old_space_size=1024 ./node_modules/@angular/cli/bin/ng",
     "start": "ng serve",
     "ssr": "npm run build:universal && npm run generate:prerender && npm run server",
     "ssr:staging": "ng build --aot=true --output-hashing=all --named-chunks=false --build-optimizer=true  && ng run ludiino-landing-page:server:staging && webpack && node server.js",
@@ -22,8 +23,8 @@
     "build:server": "ng run ludiino-landing-page:server:production",
     "build:prod": "ng build --prod",
     "build:universal": "ng run ludiino-landing-page:build:production && ng run ludiino-landing-page:server:production && webpack --progress --colors",
-    "build:universal:dev": "ng build --aot=true --output-hashing=all --named-chunks=false --build-optimizer=true  && ng run ludiino-landing-page:server:dev && webpack",
-    "build:universal:staging": "ng build --aot=true --output-hashing=all --named-chunks=false --build-optimizer=true  && ng run ludiino-landing-page:server:staging && webpack",
+    "build:universal:dev": "npm run nghm -- build --aot=true --output-hashing=all --named-chunks=false --build-optimizer=true  && ng run ludiino-landing-page:server:dev && webpack",
+    "build:universal:staging": "npm run nghm --aot=true --output-hashing=all --named-chunks=false --build-optimizer=true  && ng run ludiino-landing-page:server:staging && webpack",
     "server": "node server.js",
     "test": "ng test",
     "test:ci": "cross-env CI=true ng test",
