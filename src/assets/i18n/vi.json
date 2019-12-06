@@ -91,10 +91,10 @@
         "Dashboards": "Báo Cáo",
         "CalendarView": "Calendar View",
         "ContentTable":{
-          "Unlimited":"Không giới hạn",
+          "Unlimited":"Không Giới Hạn",
           "10BookingPerMonth":"10 Lượt/Tháng",
-          "PayAtStore":"Thanh toán tại cửa hàng",
-          "PayNow":"Thanh toán ngay"
+          "PayAtStore":"Thanh toán Tại Cửa Hàng",
+          "PayNow":"Thanh Toán Ngay"
         }
       }
     },
@@ -149,8 +149,8 @@
       "ServicePricing": "Thiết lập Dịch Vụ & Giá",
       "TimeSlotConfirmation": "Quản Lý & Xác Nhận Đặt Hẹn",
       "BookingPerMonth": "Số Lượng 20 Booking Tháng",
-      "PaymentMethod_Store": "Phương Thức Thanh Toán: Tại cửa hàng",
-      "PaymentMethod_OnlineAndStore": "Phương Thức Thanh Toán: Thanh toán ngay và tại cửa hàng",
+      "PaymentMethod_Store": "Phương Thức Thanh Toán: Tại Cửa Hàng",
+      "PaymentMethod_OnlineAndStore": "Phương Thức Thanh Toán: Thanh Toán Ngay Và Tại Cửa Hàng",
       "UnlimittedNumber": "Không giới hạn số lượng booking",
       "DealPromotion": "Khởi tạo & Quản lý Chương Trình Khuyến Mãi",
       "CheckInManagement": "Quản lý Checkin",
@@ -180,7 +180,7 @@
     },
     "ServicesName": {
       "HairSalon": "Dịch Vụ Tóc",
-      "NailSalon": "Dịch Vụ Làm Đẹp (Trang Điểm, Móng..)",
+      "NailSalon": "Dịch Vụ Làm Đẹp",
       "Spa": "Spa",
       "MassageTherapy": "Matxa",
       "Doctors": "Bệnh Viện",
