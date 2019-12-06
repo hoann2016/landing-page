@@ -90,7 +90,7 @@ section.main-content {
         .title {
             font-family: "ProximaNova";
             font-size: 28px;
-            font-weight: 300;
+            font-weight: 500;
             font-stretch: normal;
             font-style: normal;
             line-height: normal;
@@ -116,9 +116,13 @@ section.main-content {
         ul {
             font-family: "ProximaNova";
             padding: 0;
+            .txt_bold_light{
+                color: #c1272d;
+                font-weight: bold;
+            }
             li {
                 font-size: 16px;
-                font-weight: 300;
+                font-weight: 500;
                 font-stretch: normal;
                 font-style: normal;
                 line-height: 2;
@@ -127,6 +131,7 @@ section.main-content {
                 color: #4d4e4f;
                 display: flex;
                 align-items: center;
+                text-transform: capitalize;
                 &:before {
                     content: '';
                     display: block;
@@ -252,7 +257,7 @@ section.faq {
             width: 278px;
             font-family: 'ProximaNova';
             font-size: 14px;
-            font-weight: 300;
+            font-weight: 500;
             line-height: 1.21;
             letter-spacing: normal;
             text-align: left;
@@ -275,7 +280,8 @@ section.faq {
     }
     .question {
         cursor: pointer;
-        font-weight: 600;
+        font-weight: bold;
+        line-height: 19px;
         fa-icon {
             display: block;
             width: 22px;
@@ -299,6 +305,8 @@ section.faq {
             opacity: 1;
             visibility: visible;
             transition: visibility 0.3s, opacity 0.3s;
+            color: #424242;
+            line-height: 20px;
         }
     }
 }
