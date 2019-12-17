@@ -453,7 +453,7 @@
     "note": "Lưu ý"
   },
   "CloneSite": {
-    "connecting": "Đang kết nối. Xin vui lòng chờ trong giây lát",
+    "connecting": "Đang khởi tạo dữ liệu. Xin vui lòng chờ trong giây lát",
     "create-schema": "Khởi tạo cơ sở dữ liệu",
     "init-schema": "Áp dụng cấu trúc cơ sở dữ liệu mặc định",
     "init-admin": "Khởi tạo tài khoản quản lý",

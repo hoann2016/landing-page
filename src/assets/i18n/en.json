@@ -435,7 +435,7 @@
     "note": "Note"
   },
   "CloneSite": {
-    "connecting": "Connecting. Please wait for a minute",
+    "connecting": "Initializing. Please wait for a minute",
     "create-schema": "Initializing merchant database.",
     "init-schema": "Applying default merchant database template.",
     "init-admin": "Initializing admin user.",

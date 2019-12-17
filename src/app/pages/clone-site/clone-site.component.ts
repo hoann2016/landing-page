@@ -34,7 +34,7 @@ export class CloneSiteComponent implements OnInit {
     }
   }
   ngOnInit() {
-    this.cloneSiteProgress = { message: this.translate.instant('CloneSite.connecting'), percent: 0,  domain: null};
+    this.cloneSiteProgress = { message: this.translate.instant('CloneSite.connecting'), percent: 100,  domain: null};
     this.state$ = this.route.paramMap
     .pipe(     
       map(() =>
