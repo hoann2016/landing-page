@@ -7,10 +7,7 @@
           <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 left-content flex-fill mr-auto">
             <div class="wrap_form_field">
               <div class="header-page">
-                <h2 class="header-form col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"> {{'Payment.Header'|translate}}
-                </h2>
-                <span
-                  class="descrition-page col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">{{'Payment.Sub'|translate}}</span>
+                <h3 class="descrition-page mt-0 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">{{'Payment.Sub'|translate}}</h3>
               </div>
               <div class="clear-fix">
                 <div class="clear-fix-content"></div>
@@ -20,9 +17,6 @@
                   {{'Payment.SelectedPackage'|translate}}
                 </span>
                 <span class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line list-feature">
-                  <div class="medal-image one-line">
-                    <img src="../../../assets/images/app/payment/images.jpeg" alt="">
-                  </div>
                   <span class="focus-yellow one-line">{{(userPayment && userPayment.selectedPackage) ? userPayment.selectedPackage.name : 'Free'}}</span>
                 </span>
               </div>
@@ -70,10 +64,17 @@
           <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 right-content d-flex flex-column flex-fill">
             <div class="wrap_form_field d-flex flex-column mb-auto">
               <div class="header-page">
-                <h2 class="header-form" > {{'Payment.Payment'|translate}}</h2>
-                <span class="descrition-page" >{{'Payment.PaymentMethod'|translate}}</span>
+                <h3 class="header-form mt-0" > {{'Payment.Payment'|translate}}</h3>
               </div>
               <ul class="d-flex flex-column">
+                <li class="row">
+                  <label class="form-check-label" for="online"> {{'Payment.PaymentOnline'|translate}}</label>
+                    <input type="radio" class="form-check-input"  id="online" name="payment-method" disabled>
+                </li>
+                <li class="row">
+                  <label class="form-check-label" for="ck"> {{'Payment.PaymentTransfer'|translate}} </label>
+                    <input type="radio" class="form-check-input" id="ck" name="payment-method" value="ck" disabled>
+                </li>
                 <li class="row">
                   <label class="form-check-label" for="tt">{{'Payment.PaymentDirect'|translate}}
                   </label>
@@ -81,15 +82,9 @@
                       (change)="ChangePayment($event)">
                     
                 </li>
-                <li class="row">
-                  <label class="form-check-label" for="ck"> {{'Payment.PaymentTransfer'|translate}} </label>
-                    <input type="radio" class="form-check-input" id="ck" name="payment-method" value="ck" disabled>
-                </li>
+                
 
-                <li class="row">
-                  <label class="form-check-label" for="online"> {{'Payment.PaymentOnline'|translate}}</label>
-                    <input type="radio" class="form-check-input"  id="online" name="payment-method" disabled>
-                </li>
+                
               </ul>
 
               <div class="row temp-price">
