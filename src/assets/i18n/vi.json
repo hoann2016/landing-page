@@ -223,14 +223,14 @@
     },
     "Appointment": {
       "Title": "Các tính năng khác về lịch hẹn trực tuyến của chúng tôi",
-      "Intro": "Với các tính năng gọn nhẹ được tải, nền tảng mạnh mẽ Ludiino, cung cấp cho bạn tất cả các công cụ cần thiết để phát triển doanh nghiệp của bạn.",
+      "Intro": "Các Tính Năng Khác Giúp Nâng Cao Hiệu Quả Quản Lý & Phát Triển Doanh Nghiệp Của Bạn.",
       "Integrate": {
         "Title": "Tích Hợp Với Mạng Xã Hội",
         "Info": "Tích hợp tích năng đặt hẹn trên các Mạng Xã Hội như Facebook hay Instagram giúp tăng hiệu quả marketing đa kênh và số lượt đặt hẹn trực tuyến. Khách Hàng có thể đặt hẹn trực tuyến ngay trên MXH với vài thao tác đơn giản"
       },
       "CheckInManagement": {
-        "Title": "Tính năng CheckIn",
-        "Info": "Dùng thiết bị quét mã QR để nhanh chóng check-in & check-out Khách Hàng đã đặt hẹn trước trên hệ thống giúp giảm tối đa thời gian chờ đồng thời tăng hiệu quả hoạt động cho cửa hàng của bạn."
+        "Title": "Quản Lý CheckIn",
+        "Info": "Dùng thiết bị quét mã QR để nhanh chóng check-in Khách Hàng đã đặt hẹn trước trên hệ thống giúp giảm tối đa thời gian chờ đồng thời tăng hiệu quả hoạt động cho cửa hàng của bạn."
       },
       "Marketing": {
         "Title": "Quảng cáo trực tuyến & Chương trình khuyến mãi",
@@ -320,16 +320,15 @@
     "SendingStatus":"Đang gửi yêu cầu đăng ký, vui lòng đợi"
   },
   "Payment": {
-    "Header":"Gói dịch vụ đăng ký",
-    "Sub":"Bạn đang tiến hành gói đăng ký dịch vụ, vui lòng kiểm tra thông tin bên dưới",
+    "Sub":"Vui lòng điền thông tin để đăng ký gói dịch vụ",
     "SelectedPackage":"Gói dịch vụ đã chọn",
     "TimeRegistered":"Thời gian đăng ký",
     "Months":"tháng",
-    "Account":"Tài khoản",
-    "Contact":"Liên hệ",
+    "Account":"Tên đăng ký",
+    "Contact":"Số điện thoại",
     "StartDate":"Ngày bắt đầu",
-    "EndDate":"Ngày kết thúc",
-    "Payment":"Thanh toán",
+    "EndDate":"Ngày hết hạn thúc",
+    "Payment":"Chọn phương thức thanh toán",
     "PaymentMethod":"Phương thức thanh toán",
     "PaymentDirect":"Thanh toán trực tiếp",
     "PaymentTransfer":"Thanh toán qua ATM/Internet Banking",
@@ -337,7 +336,7 @@
     "PaymentAtm":"Thanh toán bằng thẻ nội địa",
     "TempCount":"Tạm tính",
     "TotalCount":"Tổng cộng",
-    "CompletePayment":"Hoàn tất đơn hàng",
+    "CompletePayment":"Tiến hành thanh toán",
     "RequireSelectPayment":"Bắt buộc chọn 1 phương thức thanh toán"
   },
   "Shared": {
@@ -438,17 +437,17 @@
     }
   },
   "Thankyou": {
-    "pending_payment": "Chờ thanh toán",
+    "pending_payment": "Chưa thanh toán",
     "disabled": "Chưa kích hoạt",
     "name": "Tên đăng kí",
     "email": "Email",
     "phone": "Số điện thoại",
     "orderNumber": "Mã đơn hàng",
     "price": "Phí dịch vụ",
-    "status": "Trạng thái",
+    "status": "Trạng thái tài khoản",
     "thankNotify": "Đăng ký tài khoản thành công",
     "thankTopLetter": "Cám ơn bạn đã đăng ký sử dụng Ludiino - Giải pháp đặt hẹn dịch vụ trực tuyến",
-    "thankBottomLetter": "Để sử dụng hệ thống Ludiino, xin vui lòng hoàn tất quá trình thanh toán",
+    "thankBottomLetter": "Xin vui lòng tiến hành thanh toán để bắt đầu sử dụng hệ thống Ludiino",
     "backButton": "TRỞ VỀ TRANG CHỦ",
     "note": "Lưu ý"
   },
