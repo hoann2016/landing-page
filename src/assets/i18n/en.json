@@ -4,7 +4,7 @@
     "Select": "Change language",
     "Header1": "Solution & Pricing",
     "HeaderMenu": {
-      "Feature": "Feature",
+      "Feature": "Features",
       "Pricing": "Pricing"
     },
     "Intro": {
@@ -210,19 +210,19 @@
       },
       "ShedulingManagement": {
         "Title": "Staff Scheduling Management",
-        "Info": "Quick & easy to schedule working date\/hour per staff as to well as assign them to pre-booking appointments. <br><br> Customers can now book a preferred staff to provide their requested serivces. Readily available online report on staff working schedule, the number of services provided as well as client satifisfaction"
+        "Info": "Quick & easy to schedule working date/hour per staff as well as to assign them to pre-booking appointments. <br><br> Customers can now book a preferred staff to provide their requested serivces. Readily available online report on staff working schedule, the number of services provided as well as client satifisfaction"
       }
     },
     "Appointment": {
       "Title": "Our Online Appointment Scheduling Other Features",
-      "Intro": "Lightweight yet loaded with features, Ludiino’s powerful platform gives you all the essential tools to grow your business.",
+      "Intro": "And Other Cool Features that help you to properly manage and grow your businesses.",
       "Integrate": {
         "Title": "Integrate Booking with Social Network",
-        "Info": "Booking feature is integrated into your social networks like facebook and\/or instagram for clients to conveniently  book via multiple online channels to help your business leverage on all digital channels to get new clients & ultmately more bookings"
+        "Info": "Booking feature is integrated into your social networks like facebook and\/or instagram for clients to conveniently  book via multiple online channels to help your business leverage on all digital channels to get new clients & ultimately more bookings"
       },
       "CheckInManagement": {
         "Title": "Check In Management",
-        "Info": "Quickly checkin and\/or checkout pre-booking customers by scaning booking code to signnificantly reduce unnessesary wait time and to spend more time taking care of your clients"
+        "Info": "Quickly checkin pre-booking customers by scaning booking code to signnificantly reduce unnessesary wait time and to spend more time taking care of your clients"
       },
       "Marketing": {
         "Title": "Online Marketing & Promotional Campaigns",
