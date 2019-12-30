@@ -110,8 +110,6 @@ export class PaymentComponent implements OnInit {
     this.userOrder.package_id =  this.userPayment.selectedPackage.id;
     this.userOrder.sub_totals = this.userPayment.selectedPackage.price;
     this.userOrder.grand_totals = this.userPayment.selectedPackage.price - (this.userPayment.selectedPackage.price * this.tax /100);
-
-    console.log(this.userOrder);
   }
   ChangePayment(evt) {
     this.userPayment.paymentMethod = evt.target.value;
@@ -134,7 +132,6 @@ export class PaymentComponent implements OnInit {
     this.showLoading = true;
     this.appService.submitOrder(this.userOrder).subscribe((response) =>{
       if (response.success === true) {
-        console.log(response.data);
         this.showLoading = false;
         this.toastr.success("Redirect to thank page ...")
         const order = response.data;

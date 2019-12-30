@@ -30,7 +30,7 @@ export class CloneSiteComponent implements OnInit {
       redirectTime -= 1;
       setTimeout(() => this.countDown(redirectTime), 1000);
     } else {
-      window.location.href = `${environment.rootproto}${this.cloneSiteProgress.domain}`;
+      window.location.href = `${environment.rootproto}${this.cloneSiteProgress.domain}/pages/sign-in`;
     }
   }
   ngOnInit() {
@@ -56,8 +56,7 @@ export class CloneSiteComponent implements OnInit {
           domain: cloneSiteProgress.domain
         };
         if(this.cloneSiteProgress && this.cloneSiteProgress.percent === 100 && this.cloneSiteProgress.domain) {
-          const redirectTime = 10;
-          this.countDown(redirectTime);
+          this.countDown(environment.redirectTime);
         }
     });
   }

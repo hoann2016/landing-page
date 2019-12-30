@@ -8,5 +8,6 @@ export const environment = {
     port:null,
     socketPath:'/socket',
     socketPort:null,
-    merchantpath:"http://45.77.250.47:84"
+    merchantpath:"http://45.77.250.47:84",
+    redirectTime:15
   };

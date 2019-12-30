@@ -14,5 +14,6 @@ export const environment = {
   socketPath:'/socket',
   socketPort:null,
   port:null,
-  merchantpath:"http://45.77.250.47:84"
+  merchantpath:"http://45.77.250.47:84",
+  redirectTime:15
 };
