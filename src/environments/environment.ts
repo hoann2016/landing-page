@@ -8,6 +8,7 @@ export const environment = {
   isServer: false,
   
   // for prerender
+
   // host: 'http://localhost:4000',
   // rootproto:"http://",
   // rootip:"localhost",
@@ -16,13 +17,12 @@ export const environment = {
   // socketPort:9992,
   // port:8080,
   // merchantpath:"http://45.77.250.47:84"
-
-  // for prerender
   rootproto:"http://",
   rootip:"dev.ludiino.com",
   rootpath:"/",
   socketPath:'/socket',
   socketPort:null,
   port:null,
-  merchantpath:"http://45.77.250.47:84"
+  merchantpath:"http://45.77.250.47:84",
+  redirectTime:15
 };

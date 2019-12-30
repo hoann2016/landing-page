@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
 import { LandingPageService } from '../../shared/services/landing-page.service';
-import { MustMatch } from './must-match.validator';
 import { AppService } from '../../app.service';
 import { UserLogin } from '../../shared/models/user-models/user-login.model';
 import { ToastrService } from 'ngx-toastr';
@@ -42,7 +41,7 @@ export class SignInComponent implements OnInit, AfterViewInit {
   public buildForm() {
     this.signInForm = this.fb.group(
       {
-         Email: ['', [Validators.required, Validators.pattern(/^[a-z0-9]+(?:\.[a-z0-9]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i)]],
+        Email: ['', [Validators.required, Validators.pattern(/^[a-z0-9]+(?:\.[a-z0-9]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i)]],
         Password: [
           '',
           [
@@ -66,23 +65,20 @@ export class SignInComponent implements OnInit, AfterViewInit {
       };
       this.showLoading = true;
       this.contentLoading = this.translate.instant('Home.SignIn.SendingStatus');
-      this.appService.logIn(formImport).subscribe(
-        response => {
-          setTimeout(() => {
-            this.showLoading = false;
-          }, 3000);
-          const { success, data} = response;
-          if (success == true) {
-            this.cookieStorage.setItem('access-token', data.token);
-            if(data.domain) {
-              window.location.href = `${environment.rootproto}${data.domain}`;
+      this.appService.logIn(formImport).subscribe( response => {
+          this.showLoading = false;
+          const { success, data } = response;
+          if (success === true) {
+            if(data.sessionId && data.domain) {
+              window.location.href = `${environment.rootproto}${data.domain}/pages/sign-in?session=${data.sessionId}`;
+            } else {
+              this.cookieStorage.setItem('access-token', data.token);
+              this.RedirectToHome();
             }
           } 
         },
         err => {
-          setTimeout(() => {
-            this.showLoading = false;
-          }, 1000);
+          this.showLoading = false;
           throw err;
         }
       );
