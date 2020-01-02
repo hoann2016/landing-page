@@ -10,6 +10,9 @@ import { UserRegister } from '../../shared/models/user-models/user-register.mode
 import { UserOrder } from '../../shared/models/user-models/user-order.model';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
+import { of } from 'rxjs';
+import { catchError} from 'rxjs/operators';
+
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -168,8 +171,16 @@ export class SignUpComponent implements OnInit, AfterViewInit {
         is_first: true
       };
       this.showLoading = true;
-      this.contentLoading = this.translate.instant('Register.SendingStatus')
-      this.appService.register(formImport).subscribe(
+      this.contentLoading = this.translate.instant('Register.SendingStatus');
+      this.appService.register(formImport).pipe(
+        catchError(error => {
+          const errCode = error.error.message[0].code;
+          this.translate.get('Shared.CommunicationMessage.' + `${errCode}`).subscribe((res: string) => {
+            this.toastr.error(res);
+          });          
+          return of(error);
+        })
+      ).subscribe(
         async response => {
           if (response.success === true) {
             const packageId = Number(this.signUpForm.controls.PackageSelectedName.value);
@@ -203,19 +214,13 @@ export class SignUpComponent implements OnInit, AfterViewInit {
                   { state: redirectValues }
                 );
               }
-            } catch(error) {
+            } catch (error) {
               this.showLoading = false;
               throw error;
             }
           } else {
             return;
           }
-        },
-        err => {
-          setTimeout(() => {
-            this.showLoading = false;
-          }, 1000);
-          throw err;
         }
       );
     } else {
