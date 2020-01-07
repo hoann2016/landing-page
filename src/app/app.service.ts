@@ -6,7 +6,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UserRegister } from './shared/models/user-models/user-register.model';
 import { NewLetter } from './shared/models/new-letter.model';
 import { UserOrder } from './shared/models/user-models/user-order.model'
-import { TranslateService } from '@ngx-translate/core';
 import { tap, catchError, map } from 'rxjs/operators';
 const httpOptions = {
   headers: new HttpHeaders({ "Content-Type": "application/json" })
@@ -21,7 +20,7 @@ export class AppService {
   private userRegisterPath = "api/v1/users/register";
   private newLetterPath = "api/v1/leads";
   private getActivePackagePath = "api/v1/packages/activated";
-  private getBusinessPath = "api/v1/merchants/business";
+  private getBusinessPath = "api/v1/merchants/business-types";
   private orderPath = "api/v1/orders";
   get merchangePath() {
     return environment.merchantpath;
@@ -57,8 +56,8 @@ export class AppService {
     //return this.http.get("./assets/fake-response/all-packages.json");
   }
   getAllBusiness(): Observable<any> {
-    //return this.http.get(this.rooturl + this.getBusinessPath);
-    return this.http.get("./assets/fake-response/all-industries.json");
+    return this.http.get(this.rooturl + this.getBusinessPath);
+    //return this.http.get("./assets/fake-response/all-industries.json");
   }
   getCurrentTax(id: number): Observable<any> {
     return this.http.get(`api/v1/tax/${id}`);
