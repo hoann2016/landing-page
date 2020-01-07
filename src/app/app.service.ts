@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UserRegister } from './shared/models/user-models/user-register.model';
 import { NewLetter } from './shared/models/new-letter.model';
 import { UserOrder } from './shared/models/user-models/user-order.model'
-import { tap, catchError, map } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 const httpOptions = {
   headers: new HttpHeaders({ "Content-Type": "application/json" })
 };
@@ -36,12 +36,10 @@ export class AppService {
     .pipe(
       map(res=>res),
       catchError( error => { throw error }
-    ))
+    ));
   }
   register(userRegister: UserRegister): Observable<any> {
-    return this.http.post(this.rooturl + this.userRegisterPath, userRegister, httpOptions).pipe(tap(x=>{
-      console.log(x);
-    }));
+    return this.http.post(this.rooturl + this.userRegisterPath, userRegister, httpOptions);
   }
   sendNewLetter(newLetter: NewLetter): Observable<any> {
     return this.http.post(this.rooturl + this.newLetterPath, newLetter, httpOptions);
