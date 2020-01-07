@@ -178,6 +178,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
       this.appService.register(formImport).pipe(
         catchError(error => {
           const errCode = error.error.message[0].code;
+          this.showLoading = false;
           this.translate.get('Shared.CommunicationMessage.' + `${errCode}`).subscribe((res: string) => {
             this.toastr.error(res);
           });          
