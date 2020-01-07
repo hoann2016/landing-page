@@ -115,7 +115,7 @@
                                                     [ngClass]="{ 'is-invalid': f.ServiceName.touched && f.ServiceName.errors?.required }">
                                                     <!-- <option value="" disabled selected>{{'Register.shop-type0'|translate}}</option> -->
                                                     <option selected disabled hidden></option>
-                                                    <option [value]="item.industry_id" *ngFor="let item of allBusinessType">
+                                                    <option [value]="item.id" *ngFor="let item of allBusinessType">
                                                         {{'Home.Feature.ServicesName.'+item.id|translate}}</option>
                                                     <!-- <option value="salon">{{'Register.shop-type1'|translate}}</option>
                                                 <option value="spa">{{'Register.shop-type2'|translate}}</option>

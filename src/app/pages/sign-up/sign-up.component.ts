@@ -105,7 +105,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
     this.appService.getAllBusiness().subscribe(bs => {
       this.allBusinessType = [];
       if (bs.success == true) {
-        this.allBusinessType = bs.data.businessTypes;
+        this.allBusinessType = bs.data.business_types;
       }
     },
       err => {
@@ -155,17 +155,20 @@ export class SignUpComponent implements OnInit, AfterViewInit {
   onSubmit() {
     this.isSubmitted = true;
     if (this.signUpForm.valid) {
+      const formValues = this.signUpForm.controls;
+      const industryId = this.allBusinessType.find(item => item.id === +formValues.ServiceName.value).industry_id;
       const formImport: UserRegister = {
-        package_id: +this.signUpForm.controls.PackageSelectedName.value,
-        industry_id: +this.signUpForm.controls.ServiceName.value,
+        package_id: +formValues.PackageSelectedName.value,
+        business_type_id: +formValues.ServiceName.value,
+        industry_id: industryId,
         country_id: 1,
-        name: this.signUpForm.controls.CustomerName.value,
-        store_name: this.signUpForm.controls.ShopName.value,
+        name: formValues.CustomerName.value,
+        store_name: formValues.ShopName.value,
         shop_domain: this.shopDomain,
-        password: this.signUpForm.controls.Password.value,
-        confirm_password: this.signUpForm.controls.RetypePassword.value,
-        email: this.signUpForm.controls.Email.value,
-        phone: this.signUpForm.controls.Phone.value,
+        password: formValues.Password.value,
+        confirm_password: formValues.RetypePassword.value,
+        email: formValues.Email.value,
+        phone: formValues.Phone.value,
         status: 'disabled',
         is_admin: false,
         is_first: true
@@ -201,10 +204,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
                 if ( this.orderResponse ) {
                   this.showLoading = false;
                   this.toastr.success("Start to clone you website ...")
-                  //window.location.href = this.appService.merchangePath;
-                  this.router.navigateByUrl('/pages/clone-site',
-                  { state: { merchantId: response.data.id } }
-                );
+                  this.router.navigateByUrl('/pages/clone-site', { state: { merchantId: response.data.id } });
                 }
               } else {
                 const redirectValues = {...response.data};

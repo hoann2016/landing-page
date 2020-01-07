@@ -1,5 +1,6 @@
 export interface UserRegister{
     package_id: number;
+    business_type_id: number;
     industry_id: number;
     country_id: number;
     name: string;
