@@ -279,6 +279,33 @@ color: #ffffff;
   width: 150px;
   margin: 10% 10% 0;
 }
+.modal-user-not-active {
+    padding: 40px 20px;
+    position: relative;
+    .current-logo {
+        display: block;
+        text-align: center;
+        width: 100%;
+        img {
+            max-width: 150px;
+        }
+    }
+    .content-notification {
+        width: 100%;
+        margin-top: 20px;
+        .text-message {
+            text-align: center;
+            font-size: 16px;
+        }
+    }
+    .close {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        z-index: 99;
+        cursor: pointer;
+    }
+}
 
 
 @media only screen and (max-width:768px) {

@@ -108,7 +108,10 @@
       "ResetYourPassword": "Điền địa chỉ email để nhận mật khẩu mới",
       "ForgotPassword": "Quên mật khẩu",
       "SignInEmail.Email":"Email",
-      "DontWantToChangePassword":"Không muốn đổi mật khẩu mới? đến trang"
+      "DontWantToChangePassword":"Không muốn đổi mật khẩu mới? đến trang",
+      "UserIsNotActive": "Tài khoản chưa được kích hoạt",
+      "UserIsNotActive1": "Xin vui lòng tiến hành thanh toán để bắt đầu sử dụng",
+      "UserIsNotActive2": "hệ thống Ludiino"
     },
     "Footer": {
       "Title": "Điền Email để nhận các nghiên cứu mới nhất về Quản Lý Đặt Hẹn & Tính Năng Mới của Ludiino",
@@ -290,7 +293,7 @@
     "select": "Vui lòng chọn",
     "phone-1": "Điện thoại liên hệ",
     "phone": "Điện thoại",
-    "policy": " Bằng cách nhấn “đăng ký” bạn đã đồng ý với các Điều khoản - điều kiện ",
+    "policy": " Bằng cách nhấn “đăng ký” bạn đã đồng ý với các ",
     "policy-2": "Điều khoản - điều kiện",
     "policy-3": " của chúng tôi",
 
@@ -409,7 +412,7 @@
       "1029":"Không tìm thấy đơn hàng",
       "1030":"Kích hoạt người dùng thất bại. Vui lòng liên hệ nhân viên quản trị để kiểm tra"
     },
-    "FieldNameBaseCompnent": {
+    "": {
       "Footer": {
         "CustomerName": "Tên",
         "Email": "Email",
@@ -419,7 +422,7 @@
         "Email": "Email",
         "Password": "Mật khẩu"
       },
-      "SignUp":{
+      "SignUpFieldNameBaseCompnent":{
         "CustomerName":"Tên khách hàng",
         "PackageSelectedName":"Gói dịch vụ",
         "ShopName":"Tên shop/store",
@@ -481,5 +484,9 @@
     "Sunday": "Thứ 8",
     "Date": "Ngày tháng",
     "Time": "Giờ"
+  },
+  "SignUp": {
+    "SignUpSuccess": "Đã đăng ký tài khoản thành công",
+    "RedirectToPayment": "Chuyển tới trang thanh toán "
   }
 }
