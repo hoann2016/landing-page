@@ -99,9 +99,6 @@ export class SignUpComponent implements OnInit, AfterViewInit {
         this.appService.getActiveConfigPackage().subscribe(pk => {
             if (pk.success == true) {
                 this.allPackage = pk.data.packages;
-                if (this.allPackage && this.allPackage.length > 0) {
-                    this.signUpForm.get('PackageSelectedName').setValue(this.allPackage[0].id)
-                }
             }
         },
             err => {
@@ -124,7 +121,9 @@ export class SignUpComponent implements OnInit, AfterViewInit {
             if (packageName) {
                 this.signUpForm.patchValue({ PackageSelectedName: packageName })
             } else {
-                this.signUpForm.patchValue({ PackageSelectedName: '' })
+                if (this.allPackage && this.allPackage.length > 0) {
+                    this.signUpForm.get('PackageSelectedName').setValue(this.allPackage[0].id)
+                }
             }
         })
     }
