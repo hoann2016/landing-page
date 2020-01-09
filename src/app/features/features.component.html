@@ -1,6 +1,8 @@
 <section class="section-banner">
     <div class="image-left"></div>
-    <div class="image-right"></div>
+    <div class="image-right">
+        <app-demo-booking #appDemoBooking></app-demo-booking>
+    </div>
     <div class="image-bottom"></div>
     <div class="head-info">
         <h2 class="sub">Ludiino</h2>
@@ -381,7 +383,7 @@
                         <span class="checkmark"></span>
                     </label>
                 </div>
-                <button class="btn btn_gradient-orange confirm-booking" (click)="modal.close('Confirm booking'); confirmBooking()">{{'Common.ConfirmBooking' | translate}}</button>
+                <button class="btn btn_gradient-orange confirm-booking" (click)="modal.close('Confirm booking'); appDemoBooking.addTicket(demoUser, selectedDOW)">{{'Common.ConfirmBooking' | translate}}</button>
             </div>
         </ng-container>
 
