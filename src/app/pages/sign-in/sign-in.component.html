@@ -3,43 +3,41 @@
     <div class="container-full-width">
         <div class="wrap">
             <div class="row">
-
                 <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 wrap-over-signin">
                     <div class="row">
-                            <div class="col-lg-12 d-lg-none">
-                                    <a href="javascript:void(0)" (click)="RedirectToHome()"><img class="img-top" src="assets/images/sign-up/logo-new.png"></a>
-                           </div>
+                        <div class="col-lg-12 d-lg-none">
+                            <a href="javascript:void(0)" (click)="RedirectToHome()"><img class="img-top"
+                                    src="assets/images/sign-up/logo-new.png"></a>
+                        </div>
                         <div class="col-xl-12">
                             <div class="wrap-form-field">
                                 <div class="header-page">
-                                    <h2 class="header-form">  {{'Home.SignIn.Login'|translate}}</h2>
-
+                                    <h2 class="header-form"> {{'Home.SignIn.Login'|translate}}</h2>
                                 </div>
-
                                 <form class="login-cus-form" [formGroup]="signInForm">
                                     <div class="row">
                                         <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                            <span class="title-input">{{'Home.SignIn.SignInEmail.Email'|translate}}</span>
+                                            <span
+                                                class="title-input">{{'Home.SignIn.SignInEmail.Email'|translate}}</span>
 
                                             <div class="form-input-1">
                                                 <input type="email" class="fix-boder" formControlName="Email"
                                                     required="required"
                                                     [ngClass]="{ 'is-invalid': f.Email.touched && f.Email.errors?.required }">
-                                                   
+
                                                 <img class="img-email" src="/assets/images/sign-up/mail.png" />
                                                 <div class="gach"></div>
                                             </div>
                                             <div *ngIf="isSubmitted && f.Email.errors" class="text-danger">
-                                                    <div *ngIf="f.Email.errors?.required">
-                                                        {{'Register.message-require'|translate}}
-                                                    </div>
-    
-                                                    <div *ngIf="f.Email.errors?.pattern">
-                                                        {{'Register.message-format-3'|translate}}
-                                                    </div>
+                                                <div *ngIf="f.Email.errors?.required">
+                                                    {{'Register.message-require'|translate}}
                                                 </div>
-                                        </div>
 
+                                                <div *ngIf="f.Email.errors?.pattern">
+                                                    {{'Register.message-format-3'|translate}}
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="row mt-4">
                                         <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
@@ -72,15 +70,16 @@
                             </div>
                         </div>
                         <div class="col-xl-12 text-center">
-                            <div class="title-fogot-pass"> <a href="/pages/sign-in"> {{'Home.SignIn.ForgotPassword'|translate}}</a></div>
-                            <div class="title-register">{{'Home.SignIn.IfDontHaveAcc'|translate}} <a href="javascript:void(0)" (click)="RedirectToRegister()">{{'Home.SignIn.Register'|translate}}</a> {{'Home.SignIn.Now'|translate}}!</div>
+                            <div class="title-fogot-pass"> <a href="/pages/sign-in">
+                                    {{'Home.SignIn.ForgotPassword'|translate}}</a></div>
+                            <div class="title-register">{{'Home.SignIn.IfDontHaveAcc'|translate}} <a
+                                    href="javascript:void(0)"
+                                    (click)="RedirectToRegister()">{{'Home.SignIn.Register'|translate}}</a>
+                                {{'Home.SignIn.Now'|translate}}!</div>
 
 
                         </div>
                     </div>
-
-
-
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 d-none d-lg-block">
                     <div class="wrap-left-signin">
@@ -103,11 +102,27 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
-
     </div>
-
 </section>
+
+<ng-template #notActive>
+    <div class="modal-user-not-active">
+        <div class="row m-0">
+            <div class="current-logo">
+                <img src="assets/images/sign-up/logo-new.png" alt="Logo">
+            </div>
+        </div>
+        <div class="row m-0">
+            <div class="content-notification">
+                <div class="text-message">{{ 'Home.SignIn.UserIsNotActive' | translate }}</div>
+                <div class="text-message">{{ 'Home.SignIn.UserIsNotActive1' | translate }}</div>
+                <div class="text-message">{{ 'Home.SignIn.UserIsNotActive2' | translate }}</div>
+            </div>
+        </div>
+        <span class="close" (click)="closeModal()">
+            <fa-icon [icon]="iconTimes" class="available"></fa-icon>
+        </span>
+    </div>
+</ng-template>

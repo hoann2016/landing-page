@@ -24,7 +24,7 @@ import { TermOfServiceComponent } from './term-of-service/term-of-service.compon
 import { PaymentComponent } from './payment/payment.component';
 import { LoadingComponent } from '../shared/loading/loading.component';
 import { CloneSiteComponent } from './clone-site/clone-site.component';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -54,7 +54,8 @@ export function HttpLoaderFactory(http: HttpClient) {
       "showSubtitle": false,
       "showBackground": false,
       "responsive": true
-    })
+    }),
+    FontAwesomeModule
   ],
   declarations: [
     SignUpComponent, 

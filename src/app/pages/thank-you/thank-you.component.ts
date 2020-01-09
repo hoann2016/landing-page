@@ -30,7 +30,6 @@ export class ThankYouComponent implements OnInit {
         )
       )
     this.state$.subscribe((p: any) => {
-      console.log(p);
       if (!isEmpty(p) && p.name) {
         this.orderResponse = p;
         this.orderResponse.orderStatus = this.translate.instant(`Thankyou.${this.orderResponse.orderStatus}`);
