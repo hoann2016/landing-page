@@ -370,7 +370,7 @@
       "1004": "Invalid token",
       "1005": "Token expired",
       "1006": "Id is missing",
-      "1007": "Incorect email or password",
+      "1007": "The email or password you entered is incorrect",
       "1008": "Contact admin",
       "1009": "Group name is missing",
       "1010": "Group name or Id is missing",

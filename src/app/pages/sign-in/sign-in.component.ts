@@ -84,11 +84,15 @@ export class SignInComponent implements OnInit, AfterViewInit {
                     }
                 },
                 (err: HttpErrorResponse) => {
-                    if (err && err.error && err.error.message && err.error.message[0] && err.error.message[0].code == 1026) {
-                        this.modalService.open(this.notActive);
+                    if (err && err.error && err.error.message && err.error.message[0]) {
+                        if (err.error.message[0].code == 1026) {
+                            this.modalService.open(this.notActive);
+                        } else {
+                            this.toastr.error(this.translate.instant(`Shared.CommunicationMessage.${ err.error.message[0].code }`));
+                        }
                     }
                     this.showLoading = false;
-                    throw err;
+                    
                 }
             );
         }
