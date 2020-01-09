@@ -19,6 +19,7 @@ import {WINDOW_PROVIDERS} from './services/windows.service';
 import {GlobalErrorHandlerService } from './error-handler/global-error-handler.service';
 import { UniversalStorage } from '@shared/storage/universal.storage';
 import { LoadingComponent } from './loading/loading.component';
+import { PriceExchangeRatePipe } from './pipes/priceExchangeRate.pipe';
 
 @NgModule({
   exports: [ 
@@ -28,13 +29,14 @@ import { LoadingComponent } from './loading/loading.component';
     FooterComponent, 
     WrapperComponent,
     TranslateModule, 
-    LoadingComponent, 
+    LoadingComponent,
+    PriceExchangeRatePipe
   ],
   imports: [
     CommonModule, RouterModule, NgxPageScrollModule, NgbModule, FormsModule,
     ReactiveFormsModule, HttpClientModule, TranslateModule
   ],
-  declarations: [HeaderComponent, HeaderCommonComponent, FooterComponent, LoadingComponent, WrapperComponent],
+  declarations: [HeaderComponent, HeaderCommonComponent, FooterComponent, LoadingComponent, WrapperComponent, PriceExchangeRatePipe],
   providers: [WINDOW_PROVIDERS, LandingFixService , LandingPageService, GlobalErrorHandlerService, UniversalStorage]
 })
 export class SharedModule {

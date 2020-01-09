@@ -1,467 +1,469 @@
 {
-  "Home": {
-    "Title": "hompage",
-    "Select": "Change language",
-    "Header1": "Solution & Pricing",
-    "HeaderMenu": {
-      "Feature": "Features",
-      "Pricing": "Pricing"
-    },
-    "Intro": {
-      "Message": "Mordern customers will go online to book what they want when they want it",
-      "ButtonLabel": "START NOW FOR FREE",
-      "BookingOutside": "Of Bookings done outside of business hours",
-      "BookingOnline": "Clients only book online",
-      "ReminderSystem": "No-shows due to reminder system"
-    },
-    "About": {
-      "HeaderMessage": "Change with Your Customer",
-      "HeaderDescription1": "Get ",
-      "HeaderDescription2": "Ludiino Online Booking & Scheduling",
-      "HeaderDescription3": "System to never miss a booking & book more clients",
-      "MessageHeader_1": "A Professional Online Booking website that does business for you 24/7 non-stop",
-      "MessageContent_1": "A free website for your business that not only displays information but also accepts online booking in real time 3 easy steps to create open time slots & services, publish them online for booking, and receive booking notification",
-      "MessageHeader_4": "Integrate with your available social channels",
-      "MessageContent_4": "Clients can conveniently book services from your website but also from your social channels to trully get what they want when they want it",
-      "MessageHeader_2": "Accept Online and/or Offline Payment",
-      "MessageContent_2": "Online payments go directy to your bank account via secured payment portals to guarantee bookings and instantly receive booking confirmation You can just focus on providing the best services without having to worry about managing bookings, payments, and cash",
-      "MessageHeader_5": "Auto Notifications & Reminders",
-      "MessageContent_5": "The system automatically sends to clients reminders about upcoming apppointments and notifications when a booking is made/changed so you don't have to",
-      "MessageHeader_3": "Staff Scheduling Management",
-      "MessageContent_3": "Quick & easy to schedule staff working time and assign them to booking appointments per clients' requests.Readily available online reports about provided services and client satisfaction per staff",
-      "MessageHeader_6": "Online Marketing and Promotional Campaigns ",
-      "MessageContent_6": "Flexible to create Online Marketing and Promotional Campaigns that send discount codes to targeted client groups to attract new clients and keep old clients coming back for more"
-    },
-    "Feature": {
-      "Header": "Ludiino is an Online Booking Solution that works for multiple industries",
-      "Description": "Whether you own a Beauty Salon, a Sport Center, an Automobile Dealership or a Medical Clinic. You will certainly need an online booking software for your clients to book & pay for the provided services, and",
-      "Description2": " Ludiino",
-      "Description3": " is the only solution for all your needs",
-      "ServicesName": {
-        "HairSalon": "Hair Salon",
-        "BeautySalon": "Beauty Salon",
-        "SpaMassage": "Spa & Massage",
-        "GymSportCenter": "Gym & Sport Center",
-        "Health": "Medical Clinic",
-        "RepairServices": "Repair Service",
-        "1": "Hair Salon",
-        "2": "Beauty Salon",
-        "3": "Spa & Massage",
-        "4": "Gym & Sport Center",
-        "5": "Medical Clinic",
-        "6": "Repair Service"
-      }
-    },
-    "ScreenShot": {
-      "Header": "Start Free with Ludiino Online Booking & Scheduling Solution",
-      "SmallDescription": "No credit card, no trial period, unlimited use for free. Here is how it works!",
-      "SignupAccount": "Sign up for an Account",
-      "SetupService": "Setup your services & pricing",
-      "CreateOpenTime": "Create & Publish time slot online for booking"
-    },
-    "SelectPackage": {
-      "SelectPlant": "Select the Plan that works for you!",
-      "AddTooltip": "add tool tip",
-      "RegisterNow_Freebie": "Get Freebie",
-      "RegisterNow_Newbie": "Get Newbie",
-      "RegisterNow_Biggie": "Get Biggie",
-      "RegisterNow_Hulk": "Get Hulk",
-      "TableFeature": {
-        "Website": "Web Site",
-        "RatingReview": "Rating & Review",
-        "ServicePricing": "Services & Pricing",
-        "TimeSlotBookingConfirmation": "Time Slots Booking & Confirmation",
-        "NoOfBooking": "No. Of Bookings Month",
-        "PaymentMethod": "Payment Method",
-        "DealPromotion": "Deal & Promotion",
-        "CheckInCheckOut": "Checkin & Checkout",
-        "Cancellation": "Cancellation",
-        "ChatWidget": "Chat Widget",
-        "TechnicianSchedulingBooking": "Technician Scheduling & Booking",
-        "CustomerMembership": "Customer Membership",
-        "ProductCommerce": "Product Commerce",
-        "Dashboards": "Dashboard",
-        "CalendarView": "Calendar View",
-        "ContentTable": {
-          "Unlimited": "Unlimited",
-          "10BookingPerMonth": "10 bookings / Month",
-          "PayAtStore": "Pay At Store",
-          "PayNow": "Pay Now"
-        }
-      }
-    },
-    "SignIn": {
-      "SendingStatus":"Signin...",
-      "Login":"Login",
-      "KeepLogedIn": "Keep me loged in",
-      "IfDontHaveAcc": "If you don't have an Account",
-      "Register": "Register",
-      "Now": "now", 
-      "ResetYourPassword": "Reset Your Password",
-      "ForgotPassword": "Forgot Password",
-      "SignInEmail.Email": "Email Address",
-      "DontWantToChangePassword": "Don't want to reset password? Back to "
-    },
-    "Footer": {
-      "Title": "Input email to receive more info about booking statistics & new product features",
-      "Form": {
-        "Name": "Your name",
-        "Email": "Email Address",
-        "Content": "Message",
-        "Send": "Send",
-        "maximumMessage": "Invalid Message, maximum 255 charactors",
-        "minimumMessage":"Invalid Message, minimum 10 charactors",
-        "MessageSendSuccess": "Message send successful !",
-        "MessageSendFailed": "Message send failed !",
-        "SendingStatus": "Sendding..."
-      },
-      "Contact": {
-        "Header": "Contact",
-        "Detail": "If there are any questions please contact us"
-      }
-    }
-  },
-  "Pricing": {
-    "Subtitle": "Start Free With",
-    "Title": "Ludiino Online Booking & Scheduling Solution ",
-    "MainContent": {
-      "Free": "FREE",
-      "Get": "Get",
-      "Freebie": "Freebie package",
-      "FreebieIntro": "Get your business started online for free with an online booking website that does business for you 24/7",
-      "Newbie": "Newbie package",
-      "NewbieIntro": "Take advantage of Online Payment feature to receive payment online and not having to worry about cash managment",
-      "Biggie": "Biggie package",
-      "BiggeIntro": "Manage Staff Scheduling with ease & create Online Promotional Campaigns that send out discount codes to attract new customers",
-      "Hulk": "Hulk package",
-      "HulkIntro": "Sell not only your services but also your merchandise on your website to maximize your revenues",
-      "OnlineBooking": "Online Booking Website",
-      "GoogleMap": "Integrated Google Map",
-      "RatingReview": "Rating & Review",
-      "ServicePricing": "Service & Pricing",
-      "TimeSlotConfirmation": "Time Slots Booking & Confirmation",
-      "BookingPerMonth": "20 Online Bookings per Month",
-      "PaymentMethod_Store": "Payment Method: Pay At Store",
-      "PaymentMethod_OnlineAndStore": "Payment Method: Pay Online and Pay At Store",
-      "UnlimittedNumber": "Unlimitted Number of Bookings",
-      "DealPromotion": "Deal & Promotion",
-      "CheckInManagement": "CheckIn Management",
-      "ProductCommerce": "Product Commerce",
-      "CustomerMembership": "Customer Membership",
-      "6Months": "6 months",
-      "12Months": "12 months",
-      "18Months": "18 months",
-      "24Months": "24 months",
-       "freemonths": "free months"
-    },
-    "FAQs": {
-      "Title": "FAQs",
-      "Intro": "Here are some frequently asked questions related to the Ludiino Booking Online solution",
-      "Q_HowSignUpLudiinoSolution": "How do I sign up for Ludiino solution?",
-      "A_HowSignUpLudiinoSolution": "Register for a Ludiino account at the top right corner of the Home page, fill in the required info to start",
-      "Q_WhenStartLudiinoForBusiness": "When can I start using Ludiino solution for my business?",
-      "A_WhenStartLudiinoForBusiness": "Depends on the package you select! If it's the Freebie pacakge, you can use it as soon as your account is created <br>For more advanced packages, you can use it once payment is done",
-      "Q_HowMakePayment": "How do I make payment?",
-      "A_HowMakePayment": "2 ways: via credit cards (prefered method) or bank transfer. We accept all major credit cards",
-      "Q_WhenMySiteCreated": " When is my own website created for clients to make bookings on it?",
-      "A_WhenMySiteCreated": "Your own website will be automatically created once payment is completed. You will then proceed to add services + price for your clients to book",
-      "Q_IntegrateExistingSite": "If I already have an existing website for my business, can ludiino solution be integrated with it?",
-      "A_IntegrateExistingSite": "Absolutely and we can provide technical support for the intergation",
-      "Q_CanUseMultiple": "Can I use Ludiino solution for multiple at the same time?",
-      "A_CanUseMultiple": "Absolutely! You can just click 'Add More Store' button in your merchant portal to add more and follow a simple process to set it up"
-    },
-    "ServicesName": {
-      "HairSalon": "Hair Salon",
-      "NailSalon": "Nail Salon",
-      "Spa": "Spa",
-      "MassageTherapy": "Massage Therapy",
-      "Doctors": "Doctors",
-      "MedicalClinic": "Medical Clinic",
-      "Gym": "Gym",
-      "SportCenter": "Sport Center",
-      "WeddingService": "Wedding Service",
-      "Photography": "Photography",
-      "RepairService": "Repair Service",
-      "PetService": "Pet Service"
-    },
-    "LudiinoSolution": {
-      "Title": "Who can use Ludiino Online Booking & Appointment Scheduling System?"
-    }
-  },
-  "Features": {
-    "Title": "Online Booking & Appointment Scheduling Features",
-    "Intro": "Great features are packaged into a powerful online solution that creates competitive advantages for your business in the digital age",
-    "CreateDemoBooking": "CREATE A TEST BOOKING",
-    "MainContent": {
-      "FreeWebsite": {
-        "Title": "A Free Professional Website",
-        "Info": "A free professionally design with SEO enabled website that makes your business stand out on the internet. <br><br>Google Map & Client Evaluation features are integrated to provide all the needed information for your client to pick out your services online"
-      },
-      "OnlineBooking": {
-        "Title": "An Online Booking site that does business 24/7",
-        "Info": "Your website not only displays information but also does business for you by accepting online booking & payment in real time 24/7. <br><br> Client can go online whenever they want inside or outside of the regular business hours to select a suitable date & time, make payment, and instantly receive booking confirmation "
-      },
-      "Payment": {
-        "Title": "Online and\/or Offline Payment",
-        "Info": "Easily set up flexible payment methods as online and\/or offline. With online payment, clients can make payment via secured third party payment portals directly to your bank account thus let you focus on providing the best services without having to worry about managing bookings, payments, and cash",
-        "OnlinePayment": "Online Payment",
-        "CashPayment": "Cash Payment",
-        "POSMachineSupport": "POS Machine Support"
-      },
-      "ShedulingManagement": {
-        "Title": "Staff Scheduling Management",
-        "Info": "Quick & easy to schedule working date/hour per staff as well as to assign them to pre-booking appointments. <br><br> Customers can now book a preferred staff to provide their requested serivces. Readily available online report on staff working schedule, the number of services provided as well as client satifisfaction"
-      }
-    },
-    "Appointment": {
-      "Title": "Our Online Appointment Scheduling Other Features",
-      "Intro": "And Other Cool Features that help you to properly manage and grow your businesses.",
-      "Integrate": {
-        "Title": "Integrate Booking with Social Network",
-        "Info": "Booking feature is integrated into your social networks like facebook and\/or instagram for clients to conveniently  book via multiple online channels to help your business leverage on all digital channels to get new clients & ultimately more bookings"
-      },
-      "CheckInManagement": {
-        "Title": "Check In Management",
-        "Info": "Quickly checkin pre-booking customers by scaning booking code to signnificantly reduce unnessesary wait time and to spend more time taking care of your clients"
-      },
-      "Marketing": {
-        "Title": "Online Marketing & Promotional Campaigns",
-        "Info": "Multiple ways to create various Promotional Marketing Campaigns with discount codes sent via email\/sms directly to your targeted clients to attract new clients and keep old clients coming back for more."
-      },
-      "Dashboard": {
-        "Title": "Dashboard & Reports",
-        "Info": "Real time online reporting about booking transactions, payments, and client satisfaction. Available KPIs dashboard with visualized charts & graphs that help owners quickly gauge business performances and what need."
-      },
-      "Notifications": {
-        "Title": "Auto Notification & Reminder",
-        "Info": "The system automatically sends reminders to client about an upcoming appointments and\/or notifications when a booking is made, changed, or canceled so you're always in control of your business without having to attend the phone all the times"
-      },
-      "Cancellation": {
-        "Title": "Booking Cancellation",
-        "Info": "Completely replace the hassles of making multiple phone calles with a few clicks to cancel\/edit a booking online. A cancellation confirmation is automatically sent to both buyers & seller to finalize the transaction"
-      }
-    },
-    "DemoSteps": {
-      "Step1": {
-        "Title": "Step 1: Please select a service",
-        "HairService": {
-          "Title": "Hair Service",
-          "HairCut": "Hair Cut",
-          "HairCutWomen": "Hair Cut for Women 60 minutes",
-          "HairDye": "Hair Dye"
+    "Home": {
+        "Title": "hompage",
+        "Select": "Change language",
+        "Header1": "Solution & Pricing",
+        "HeaderMenu": {
+            "Feature": "Features",
+            "Pricing": "Pricing"
         },
-        "SkinCare": {
-          "Title": "Skin Care"
+        "Intro": {
+            "Message": "Mordern customers will go online to book what they want when they want it",
+            "ButtonLabel": "START NOW FOR FREE",
+            "BookingOutside": "Of Bookings done outside of business hours",
+            "BookingOnline": "Clients only book online",
+            "ReminderSystem": "No-shows due to reminder system"
+        },
+        "About": {
+            "HeaderMessage": "Change with Your Customer",
+            "HeaderDescription1": "Get ",
+            "HeaderDescription2": "Ludiino Online Booking & Scheduling",
+            "HeaderDescription3": "System to never miss a booking & book more clients",
+            "MessageHeader_1": "A Professional Online Booking website that does business for you 24/7 non-stop",
+            "MessageContent_1": "A free website for your business that not only displays information but also accepts online booking in real time 3 easy steps to create open time slots & services, publish them online for booking, and receive booking notification",
+            "MessageHeader_4": "Integrate with your available social channels",
+            "MessageContent_4": "Clients can conveniently book services from your website but also from your social channels to trully get what they want when they want it",
+            "MessageHeader_2": "Accept Online and/or Offline Payment",
+            "MessageContent_2": "Online payments go directy to your bank account via secured payment portals to guarantee bookings and instantly receive booking confirmation You can just focus on providing the best services without having to worry about managing bookings, payments, and cash",
+            "MessageHeader_5": "Auto Notifications & Reminders",
+            "MessageContent_5": "The system automatically sends to clients reminders about upcoming apppointments and notifications when a booking is made/changed so you don't have to",
+            "MessageHeader_3": "Staff Scheduling Management",
+            "MessageContent_3": "Quick & easy to schedule staff working time and assign them to booking appointments per clients' requests.Readily available online reports about provided services and client satisfaction per staff",
+            "MessageHeader_6": "Online Marketing and Promotional Campaigns ",
+            "MessageContent_6": "Flexible to create Online Marketing and Promotional Campaigns that send discount codes to targeted client groups to attract new clients and keep old clients coming back for more"
+        },
+        "Feature": {
+            "Header": "Ludiino is an Online Booking Solution that works for multiple industries",
+            "Description": "Whether you own a Beauty Salon, a Sport Center, an Automobile Dealership or a Medical Clinic. You will certainly need an online booking software for your clients to book & pay for the provided services, and",
+            "Description2": " Ludiino",
+            "Description3": " is the only solution for all your needs",
+            "ServicesName": {
+                "HairSalon": "Hair Salon",
+                "BeautySalon": "Beauty Salon",
+                "SpaMassage": "Spa & Massage",
+                "GymSportCenter": "Gym & Sport Center",
+                "Health": "Medical Clinic",
+                "RepairServices": "Repair Service",
+                "1": "Hair Salon",
+                "2": "Beauty Salon",
+                "3": "Spa & Massage",
+                "4": "Gym & Sport Center",
+                "5": "Medical Clinic",
+                "6": "Repair Service"
+            }
+        },
+        "ScreenShot": {
+            "Header": "Start Free with Ludiino Online Booking & Scheduling Solution",
+            "SmallDescription": "No credit card, no trial period, unlimited use for free. Here is how it works!",
+            "SignupAccount": "Sign up for an Account",
+            "SetupService": "Setup your services & pricing",
+            "CreateOpenTime": "Create & Publish time slot online for booking"
+        },
+        "SelectPackage": {
+            "SelectPlant": "Select the Plan that works for you!",
+            "AddTooltip": "add tool tip",
+            "RegisterNow_Freebie": "Get Freebie",
+            "RegisterNow_Newbie": "Get Newbie",
+            "RegisterNow_Biggie": "Get Biggie",
+            "RegisterNow_Hulk": "Get Hulk",
+            "TableFeature": {
+                "Website": "Web Site",
+                "RatingReview": "Rating & Review",
+                "ServicePricing": "Services & Pricing",
+                "TimeSlotBookingConfirmation": "Time Slots Booking & Confirmation",
+                "NoOfBooking": "No. Of Bookings Month",
+                "PaymentMethod": "Payment Method",
+                "DealPromotion": "Deal & Promotion",
+                "CheckInCheckOut": "Checkin & Checkout",
+                "Cancellation": "Cancellation",
+                "ChatWidget": "Chat Widget",
+                "TechnicianSchedulingBooking": "Technician Scheduling & Booking",
+                "CustomerMembership": "Customer Membership",
+                "ProductCommerce": "Product Commerce",
+                "Dashboards": "Dashboard",
+                "CalendarView": "Calendar View",
+                "ContentTable": {
+                    "Unlimited": "Unlimited",
+                    "10BookingPerMonth": "10 bookings / Month",
+                    "PayAtStore": "Pay At Store",
+                    "PayNow": "Pay Now"
+                }
+            }
+        },
+        "SignIn": {
+            "SendingStatus": "Signin...",
+            "Login": "Login",
+            "KeepLogedIn": "Keep me loged in",
+            "IfDontHaveAcc": "If you don't have an Account",
+            "Register": "Register",
+            "Now": "now",
+            "ResetYourPassword": "Reset Your Password",
+            "ForgotPassword": "Forgot Password",
+            "SignInEmail.Email": "Email Address",
+            "DontWantToChangePassword": "Don't want to reset password? Back to "
+        },
+        "Footer": {
+            "Title": "Input email to receive more info about booking statistics & new product features",
+            "Form": {
+                "Name": "Your name",
+                "Email": "Email Address",
+                "Content": "Message",
+                "Send": "Send",
+                "maximumMessage": "Invalid Message, maximum 255 charactors",
+                "minimumMessage": "Invalid Message, minimum 10 charactors",
+                "MessageSendSuccess": "Message send successful !",
+                "MessageSendFailed": "Message send failed !",
+                "SendingStatus": "Sendding..."
+            },
+            "Contact": {
+                "Header": "Contact",
+                "Detail": "If there are any questions please contact us"
+            }
         }
-      },
-      "Step2": {
-        "Title": "Step 2: Select date & technicians",
-        "Technicians": "technicians",
-        "TimeSelect": "Time Select"
-      },
-      "Step3": {
-        "Title": "Step 3: Payment method",
-        "Surcharge": "Surcharge",
-        "ServiceFee": "Service FEE",
-        "Total": "TOTAL"
-      }
-    }
-  },
-  "Register": {
-    "Email": "Email",
-    "Password": "Password",
-    "re-password": "Confirm Password",
-    "re-password-2": "Retype Password",
-    "Register": "Register",
-    "subtitle": "Let's create your account!",
-    "name": "Full Name",
-    "package": "Select Package",
-    "shopname": " Company / Store Name",
-    "shopname-2": "Brand Name",
-    "shop-type": "Type of Business",
-    "select": "Select",
-    "phone-1": "Phone",
-    "phone": "Phone",
-    "policy": "By clicking Register, you have agreed to our",
-    "policy-2": "Terms of Service and Privacy Policy.",
-    "policy-3":"",
-    "have-account": "Already have an account?",
-    "sign-in": "Sign In",
-    "message-require": "Do not leave blank; this information is required.",
-    "message-format": "Invalid full name",
-    "message-format-2": "Invalid phone number",
-    "message-format-3": "Invalid email",
-    "message-format-4": "Invalid password",
-    "message-format-5": "Invalid confirm password",
-    "message-format-6": "Invalid shop name",
-    "message-tips": "Your website domain will be",
-    "message-tips2": "You can change it later.",
-    "name-lenght":"Your name must be between 3 and 100 characters",
-    "name-shop-length":"Your shop name must be between 3 and 100 characters",
-    "pasword-length": "Your pasword  must be between 5 and 20 characters",
-    "shop-type0": "Select",
-    "shop-type1": "Salon",
-    "shop-type2": "Spa / Massage",
-    "shop-type3": "Medical Clinic",
-    "SendingStatus":"Sending request, please wait .."
-  },
-  "Payment": {
-    "Sub": "Please fill in the software package information",
-    "SelectedPackage": "Selected Package",
-    "TimeRegistered": "No. of Months Subscribed",
-    "Months": "months",
-    "Account": "Regiter Name",
-    "Contact": "Phone number",
-    "StartDate": "Start Date",
-    "EndDate": "End Date",
-    "Payment": "Please select a Payment method",
-    "PaymentMethod": "Payment methods",
-    "PaymentDirect": "Direct payment",
-    "PaymentTransfer": "Local ATM/Internet Banking",
-    "PaymentOnline": "Pay online via Visa/Master/JCB",
-    "PaymentAtm": "Atm",
-    "TempCount": "Amount",
-    "TotalCount": "Total",
-    "CompletePayment": "Proceed To Payment",
-    "RequireSelectPayment":"You must select an payment"
-  },
-  "Shared": {
-    "RegisterBtnLabel": "Register",
-    "SigninBtnLabel": "Login",
-    "Login_Register": "Login",
-    "Send": "Send New Password",
-    "FormCommon": {
-      "required": "required",
-      "minlength": "require minimum at {{valueLength}} charactors",
-      "maxlength": "require maximum at {{valueLength}} charactors",
-      "pattern": "is not valid",
-      "email": "is not valid",
-      "undefined": "Error undefined",
-      "mustMatch":"Re-type password does not match"
     },
-    "AppError": {
-      "0": "Unknow error",
-      "1": "Form is not valid",
-      "2": "Error detail",
-      "400": "Invalid Request",
-      "401": "Unauthorized Request",
-      "402": "Invalid Request",
-      "403": "Forbidden Request",
-      "404": "Resource not found",
-      "405": "Method not allowed",
-      "406": "Not Acceptable Request",
-      "407": "Firewall, Proxy Authentication Required",
-      "408": "Request Timeout",
-      "409": "Conflict",
-      "500": "Internal Server Error",
-      "501": "Not Implemented",
-      "502": "Bad Gateway",
-      "503": "Service Unavailable",
-      "504": "Gateway Timeout",
-      "505": "HTTP Version Not Supported"
+    "Pricing": {
+        "Subtitle": "Start Free With",
+        "Title": "Ludiino Online Booking & Scheduling Solution ",
+        "MainContent": {
+            "Free": "FREE",
+            "Get": "Get",
+            "Freebie": "Freebie package",
+            "FreebieIntro": "Get your business started online for free with an online booking website that does business for you 24/7",
+            "Newbie": "Newbie package",
+            "NewbieIntro": "Take advantage of Online Payment feature to receive payment online and not having to worry about cash managment",
+            "Biggie": "Biggie package",
+            "BiggeIntro": "Manage Staff Scheduling with ease & create Online Promotional Campaigns that send out discount codes to attract new customers",
+            "Hulk": "Hulk package",
+            "HulkIntro": "Sell not only your services but also your merchandise on your website to maximize your revenues",
+            "OnlineBooking": "Online Booking Website",
+            "GoogleMap": "Integrated Google Map",
+            "RatingReview": "Rating & Review",
+            "ServicePricing": "Service & Pricing",
+            "TimeSlotConfirmation": "Time Slots Booking & Confirmation",
+            "BookingPerMonth": "20 Online Bookings per Month",
+            "PaymentMethod_Store": "Payment Method: Pay At Store",
+            "PaymentMethod_OnlineAndStore": "Payment Method: Pay Online and Pay At Store",
+            "UnlimittedNumber": "Unlimitted Number of Bookings",
+            "DealPromotion": "Deal & Promotion",
+            "CheckInManagement": "CheckIn Management",
+            "ProductCommerce": "Product Commerce",
+            "CustomerMembership": "Customer Membership",
+            "6Months": "6 months",
+            "12Months": "12 months",
+            "18Months": "18 months",
+            "24Months": "24 months",
+            "freemonths": "free months"
+        },
+        "FAQs": {
+            "Title": "FAQs",
+            "Intro": "Here are some frequently asked questions related to the Ludiino Booking Online solution",
+            "Q_HowSignUpLudiinoSolution": "How do I sign up for Ludiino solution?",
+            "A_HowSignUpLudiinoSolution": "Register for a Ludiino account at the top right corner of the Home page, fill in the required info to start",
+            "Q_WhenStartLudiinoForBusiness": "When can I start using Ludiino solution for my business?",
+            "A_WhenStartLudiinoForBusiness": "Depends on the package you select! If it's the Freebie pacakge, you can use it as soon as your account is created <br>For more advanced packages, you can use it once payment is done",
+            "Q_HowMakePayment": "How do I make payment?",
+            "A_HowMakePayment": "2 ways: via credit cards (prefered method) or bank transfer. We accept all major credit cards",
+            "Q_WhenMySiteCreated": " When is my own website created for clients to make bookings on it?",
+            "A_WhenMySiteCreated": "Your own website will be automatically created once payment is completed. You will then proceed to add services + price for your clients to book",
+            "Q_IntegrateExistingSite": "If I already have an existing website for my business, can ludiino solution be integrated with it?",
+            "A_IntegrateExistingSite": "Absolutely and we can provide technical support for the intergation",
+            "Q_CanUseMultiple": "Can I use Ludiino solution for multiple at the same time?",
+            "A_CanUseMultiple": "Absolutely! You can just click 'Add More Store' button in your merchant portal to add more and follow a simple process to set it up"
+        },
+        "ServicesName": {
+            "HairSalon": "Hair Salon",
+            "NailSalon": "Nail Salon",
+            "Spa": "Spa",
+            "MassageTherapy": "Massage Therapy",
+            "Doctors": "Doctors",
+            "MedicalClinic": "Medical Clinic",
+            "Gym": "Gym",
+            "SportCenter": "Sport Center",
+            "WeddingService": "Wedding Service",
+            "Photography": "Photography",
+            "RepairService": "Repair Service",
+            "PetService": "Pet Service"
+        },
+        "LudiinoSolution": {
+            "Title": "Who can use Ludiino Online Booking & Appointment Scheduling System?"
+        },
+        "Transform": "$ {{price}}",
+        "Unit": "$"
     },
-    "CommunicationMessage": {
-      "465": "Email is not valid",
-      "467": "Content is not valid",
-      "1000": "successful",
-      "1001": "Your email already exists",
-      "1002": "Data not found",
-      "1003": "Token is missing",
-      "1004": "Invalid token",
-      "1005": "Token expired",
-      "1006": "Id is missing",
-      "1007": "The email or password you entered is incorrect",
-      "1008": "Contact admin",
-      "1009": "Group name is missing",
-      "1010": "Group name or Id is missing",
-      "1011": "Group Id or Permission Id is missing",
-      "1012": "Permission Name is missing",
-      "1013": "Permission Id or Name is missing",
-      "1014": "Resource name is missing",
-      "1015": "Resource Id or Name is missing",
-      "1016": "User data is missing",
-      "1017": "Incorrect password",
-      "1018": "Id or Status is missing",
-      "1019": "Field is invalid type",
-      "1020": "Field is required",
-      "1021": "Field is invalid length",
-      "1022": "Field is invalid",
-      "1023": "Field is not match",
-      "1024": "Field name, email or content of lead information is missing",
-      "1025": "Field email is missing",
-      "1026": "User status has not been activated",
-      "1027": "Domain already exists",
-      "1028": "Order information is missing",
-      "1029": "Order not found",
-      "1030": "User activation failed"
+    "Features": {
+        "Title": "Online Booking & Appointment Scheduling Features",
+        "Intro": "Great features are packaged into a powerful online solution that creates competitive advantages for your business in the digital age",
+        "CreateDemoBooking": "CREATE A TEST BOOKING",
+        "MainContent": {
+            "FreeWebsite": {
+                "Title": "A Free Professional Website",
+                "Info": "A free professionally design with SEO enabled website that makes your business stand out on the internet. <br><br>Google Map & Client Evaluation features are integrated to provide all the needed information for your client to pick out your services online"
+            },
+            "OnlineBooking": {
+                "Title": "An Online Booking site that does business 24/7",
+                "Info": "Your website not only displays information but also does business for you by accepting online booking & payment in real time 24/7. <br><br> Client can go online whenever they want inside or outside of the regular business hours to select a suitable date & time, make payment, and instantly receive booking confirmation "
+            },
+            "Payment": {
+                "Title": "Online and\/or Offline Payment",
+                "Info": "Easily set up flexible payment methods as online and\/or offline. With online payment, clients can make payment via secured third party payment portals directly to your bank account thus let you focus on providing the best services without having to worry about managing bookings, payments, and cash",
+                "OnlinePayment": "Online Payment",
+                "CashPayment": "Cash Payment",
+                "POSMachineSupport": "POS Machine Support"
+            },
+            "ShedulingManagement": {
+                "Title": "Staff Scheduling Management",
+                "Info": "Quick & easy to schedule working date/hour per staff as well as to assign them to pre-booking appointments. <br><br> Customers can now book a preferred staff to provide their requested serivces. Readily available online report on staff working schedule, the number of services provided as well as client satifisfaction"
+            }
+        },
+        "Appointment": {
+            "Title": "Our Online Appointment Scheduling Other Features",
+            "Intro": "And Other Cool Features that help you to properly manage and grow your businesses.",
+            "Integrate": {
+                "Title": "Integrate Booking with Social Network",
+                "Info": "Booking feature is integrated into your social networks like facebook and\/or instagram for clients to conveniently  book via multiple online channels to help your business leverage on all digital channels to get new clients & ultimately more bookings"
+            },
+            "CheckInManagement": {
+                "Title": "Check In Management",
+                "Info": "Quickly checkin pre-booking customers by scaning booking code to signnificantly reduce unnessesary wait time and to spend more time taking care of your clients"
+            },
+            "Marketing": {
+                "Title": "Online Marketing & Promotional Campaigns",
+                "Info": "Multiple ways to create various Promotional Marketing Campaigns with discount codes sent via email\/sms directly to your targeted clients to attract new clients and keep old clients coming back for more."
+            },
+            "Dashboard": {
+                "Title": "Dashboard & Reports",
+                "Info": "Real time online reporting about booking transactions, payments, and client satisfaction. Available KPIs dashboard with visualized charts & graphs that help owners quickly gauge business performances and what need."
+            },
+            "Notifications": {
+                "Title": "Auto Notification & Reminder",
+                "Info": "The system automatically sends reminders to client about an upcoming appointments and\/or notifications when a booking is made, changed, or canceled so you're always in control of your business without having to attend the phone all the times"
+            },
+            "Cancellation": {
+                "Title": "Booking Cancellation",
+                "Info": "Completely replace the hassles of making multiple phone calles with a few clicks to cancel\/edit a booking online. A cancellation confirmation is automatically sent to both buyers & seller to finalize the transaction"
+            }
+        },
+        "DemoSteps": {
+            "Step1": {
+                "Title": "Step 1: Please select a service",
+                "HairService": {
+                    "Title": "Hair Service",
+                    "HairCut": "Hair Cut",
+                    "HairCutWomen": "Hair Cut for Women 60 minutes",
+                    "HairDye": "Hair Dye"
+                },
+                "SkinCare": {
+                    "Title": "Skin Care"
+                }
+            },
+            "Step2": {
+                "Title": "Step 2: Select date & technicians",
+                "Technicians": "technicians",
+                "TimeSelect": "Time Select"
+            },
+            "Step3": {
+                "Title": "Step 3: Payment method",
+                "Surcharge": "Surcharge",
+                "ServiceFee": "Service FEE",
+                "Total": "TOTAL"
+            }
+        }
     },
-    "FieldNameBaseCompnent": {
-      "Footer": {
-        "CustomerName": "Customer Name",
+    "Register": {
         "Email": "Email",
-        "Content": "Content"
-      },
-      "SignIn": {
-        "Email": "Email",
-        "Password": "Password"
-      },
-      "SignUp":{
-        "CustomerName":"Customer Name",
-        "PackageSelectedName":"Package Selected Name",
-        "ShopName":"Shop Name",
-        "ServiceName":"Service Name",
-        "Phone":"Phone",
-        "Email":"Email",
-        "Password":"Password",
-        "RetypePassword":"Retype Password",
-        "IsComfirmed":"Comfirmed"
-      }
+        "Password": "Password",
+        "re-password": "Confirm Password",
+        "re-password-2": "Retype Password",
+        "Register": "Register",
+        "subtitle": "Let's create your account!",
+        "name": "Full Name",
+        "package": "Select Package",
+        "shopname": " Company / Store Name",
+        "shopname-2": "Brand Name",
+        "shop-type": "Type of Business",
+        "select": "Select",
+        "phone-1": "Phone",
+        "phone": "Phone",
+        "policy": "By clicking Register, you have agreed to our",
+        "policy-2": "Terms of Service and Privacy Policy.",
+        "policy-3": "",
+        "have-account": "Already have an account?",
+        "sign-in": "Sign In",
+        "message-require": "Do not leave blank; this information is required.",
+        "message-format": "Invalid full name",
+        "message-format-2": "Invalid phone number",
+        "message-format-3": "Invalid email",
+        "message-format-4": "Invalid password",
+        "message-format-5": "Invalid confirm password",
+        "message-format-6": "Invalid shop name",
+        "message-tips": "Your website domain will be",
+        "message-tips2": "You can change it later.",
+        "name-lenght": "Your name must be between 3 and 100 characters",
+        "name-shop-length": "Your shop name must be between 3 and 100 characters",
+        "pasword-length": "Your pasword  must be between 5 and 20 characters",
+        "shop-type0": "Select",
+        "shop-type1": "Salon",
+        "shop-type2": "Spa / Massage",
+        "shop-type3": "Medical Clinic",
+        "SendingStatus": "Sending request, please wait .."
+    },
+    "Payment": {
+        "Sub": "Please fill in the software package information",
+        "SelectedPackage": "Selected Package",
+        "TimeRegistered": "No. of Months Subscribed",
+        "Months": "months",
+        "Account": "Regiter Name",
+        "Contact": "Phone number",
+        "StartDate": "Start Date",
+        "EndDate": "End Date",
+        "Payment": "Please select a Payment method",
+        "PaymentMethod": "Payment methods",
+        "PaymentDirect": "Direct payment",
+        "PaymentTransfer": "Local ATM/Internet Banking",
+        "PaymentOnline": "Pay online via Visa/Master/JCB",
+        "PaymentAtm": "Atm",
+        "TempCount": "Amount",
+        "TotalCount": "Total",
+        "CompletePayment": "Proceed To Payment",
+        "RequireSelectPayment": "You must select an payment"
+    },
+    "Shared": {
+        "RegisterBtnLabel": "Register",
+        "SigninBtnLabel": "Login",
+        "Login_Register": "Login",
+        "Send": "Send New Password",
+        "FormCommon": {
+            "required": "required",
+            "minlength": "require minimum at {{valueLength}} charactors",
+            "maxlength": "require maximum at {{valueLength}} charactors",
+            "pattern": "is not valid",
+            "email": "is not valid",
+            "undefined": "Error undefined",
+            "mustMatch": "Re-type password does not match"
+        },
+        "AppError": {
+            "0": "Unknow error",
+            "1": "Form is not valid",
+            "2": "Error detail",
+            "400": "Invalid Request",
+            "401": "Unauthorized Request",
+            "402": "Invalid Request",
+            "403": "Forbidden Request",
+            "404": "Resource not found",
+            "405": "Method not allowed",
+            "406": "Not Acceptable Request",
+            "407": "Firewall, Proxy Authentication Required",
+            "408": "Request Timeout",
+            "409": "Conflict",
+            "500": "Internal Server Error",
+            "501": "Not Implemented",
+            "502": "Bad Gateway",
+            "503": "Service Unavailable",
+            "504": "Gateway Timeout",
+            "505": "HTTP Version Not Supported"
+        },
+        "CommunicationMessage": {
+            "465": "Email is not valid",
+            "467": "Content is not valid",
+            "1000": "successful",
+            "1001": "Your email already exists",
+            "1002": "Data not found",
+            "1003": "Token is missing",
+            "1004": "Invalid token",
+            "1005": "Token expired",
+            "1006": "Id is missing",
+            "1007": "The email or password you entered is incorrect",
+            "1008": "Contact admin",
+            "1009": "Group name is missing",
+            "1010": "Group name or Id is missing",
+            "1011": "Group Id or Permission Id is missing",
+            "1012": "Permission Name is missing",
+            "1013": "Permission Id or Name is missing",
+            "1014": "Resource name is missing",
+            "1015": "Resource Id or Name is missing",
+            "1016": "User data is missing",
+            "1017": "Incorrect password",
+            "1018": "Id or Status is missing",
+            "1019": "Field is invalid type",
+            "1020": "Field is required",
+            "1021": "Field is invalid length",
+            "1022": "Field is invalid",
+            "1023": "Field is not match",
+            "1024": "Field name, email or content of lead information is missing",
+            "1025": "Field email is missing",
+            "1026": "User status has not been activated",
+            "1027": "Domain already exists",
+            "1028": "Order information is missing",
+            "1029": "Order not found",
+            "1030": "User activation failed"
+        },
+        "FieldNameBaseCompnent": {
+            "Footer": {
+                "CustomerName": "Customer Name",
+                "Email": "Email",
+                "Content": "Content"
+            },
+            "SignIn": {
+                "Email": "Email",
+                "Password": "Password"
+            },
+            "SignUp": {
+                "CustomerName": "Customer Name",
+                "PackageSelectedName": "Package Selected Name",
+                "ShopName": "Shop Name",
+                "ServiceName": "Service Name",
+                "Phone": "Phone",
+                "Email": "Email",
+                "Password": "Password",
+                "RetypePassword": "Retype Password",
+                "IsComfirmed": "Comfirmed"
+            }
+        }
+    },
+    "Thankyou": {
+        "pending_payment": "Pending Payment",
+        "disabled": "Disabled",
+        "name": "Register name",
+        "email": "Email",
+        "phone": "Phone number",
+        "orderNumber": "Order number",
+        "price": "Price",
+        "status": "Account Status",
+        "thankNotify": "You Have Successfully Registered! Thank You",
+        "thankTopLetter": "Thank you for using Ludiino Online Booking & Scheduling Solution",
+        "thankBottomLetter": "Please complete the payment process to start using Ludiino System",
+        "backButton": "BACK TO HOME PAGE",
+        "note": "Note"
+    },
+    "CloneSite": {
+        "connecting": "Initializing. Please wait for a minute",
+        "create-schema": "Initializing merchant database.",
+        "init-schema": "Applying default merchant database template.",
+        "init-admin": "Initializing admin user.",
+        "init-user-license": "Validating merchant's license.",
+        "init-site-config": "Initializing default configutation for merchant's website.",
+        "init-first-store": "Initializing first store.",
+        "setup-store": "Setting up store default configuration.",
+        "init-store-license": "Setting up store's license.",
+        "clone-merchant-site": "Initializing website.",
+        "clone-merchant-site-success": "Initializing website successfully",
+        "redirect-message": "Automatically redirect to your website in %s seconds."
+    },
+    "Common": {
+        "Discount": "Discount",
+        "RegisterNow": "Register Now",
+        "ConfirmBooking": "Confirm Booking",
+        "Minutes": "minutes",
+        "DemoBookingSuccess": "Booking successfully",
+        "DemoBookingFailed": "Booking failed. Please check missing information",
+        "Monday": "Monday",
+        "Tuesday": "Tuesday",
+        "Wednesday": "Wednesday",
+        "Thursday": "Thursday",
+        "Friday": "Friday",
+        "Saturday": "Saturday",
+        "Sunday": "Sunday",
+        "Date": "Date",
+        "Time": "Time"
     }
-  },
-  "Thankyou": {
-    "pending_payment": "Pending Payment",
-    "disabled": "Disabled",
-    "name": "Register name",
-    "email": "Email",
-    "phone": "Phone number",
-    "orderNumber": "Order number",
-    "price": "Price",
-    "status": "Account Status",
-    "thankNotify": "You Have Successfully Registered! Thank You",
-    "thankTopLetter": "Thank you for using Ludiino Online Booking & Scheduling Solution",
-    "thankBottomLetter": "Please complete the payment process to start using Ludiino System",
-    "backButton": "BACK TO HOME PAGE",
-    "note": "Note"
-  },
-  "CloneSite": {
-    "connecting": "Initializing. Please wait for a minute",
-    "create-schema": "Initializing merchant database.",
-    "init-schema": "Applying default merchant database template.",
-    "init-admin": "Initializing admin user.",
-    "init-user-license": "Validating merchant's license.",
-    "init-site-config": "Initializing default configutation for merchant's website.",
-    "init-first-store": "Initializing first store.",
-    "setup-store": "Setting up store default configuration.",
-    "init-store-license": "Setting up store's license.",
-    "clone-merchant-site": "Initializing website.",
-    "clone-merchant-site-success": "Initializing website successfully",
-    "redirect-message": "Automatically redirect to your website in %s seconds."
-  },
-  "Common": {
-    "Discount": "Discount",
-    "RegisterNow": "Register Now",
-    "ConfirmBooking": "Confirm Booking",
-    "Minutes": "minutes",
-    "DemoBookingSuccess": "Booking successfully",
-    "DemoBookingFailed": "Booking failed. Please check missing information",
-    "Monday": "Monday",
-    "Tuesday": "Tuesday",
-    "Wednesday": "Wednesday",
-    "Thursday": "Thursday",
-    "Friday": "Friday",
-    "Saturday": "Saturday",
-    "Sunday": "Sunday",
-    "Date": "Date",
-    "Time": "Time"
-  }
 }
