@@ -29,7 +29,7 @@ export class DemoBookingComponent implements OnInit {
     7: 'Sunday'
   };
   dowArray = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-  timeBlocks = ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '12:00 AM', '1:00 pM', '2:00 PM', '3:00 PM'];
+  timeBlocks = ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '12:00 AM', '1:00 PM', '2:00 PM', '3:00 PM'];
 
   selectDate: string;
   ticketData: Array<any>;
@@ -144,8 +144,8 @@ export class DemoBookingComponent implements OnInit {
     space = space + 1;
     let timeIndex = this.timeBlocks.findIndex(x => x === data.time);
     timeIndex = timeIndex + 1;
-    const newLeft = '' + (timeIndex * 14.29) + '%';
-    const newTop = '' + (space * 10) + '%';
+    const newLeft = '' + (space * 14.29) + '%';
+    const newTop = '' + (timeIndex * 10) + '%';
     return {
       timePeriod: data.time,
       serviceName: data.serviceName,
