@@ -189,7 +189,9 @@
         },
         "LudiinoSolution": {
             "Title": "Mô Hình Kinh Doanh nào có thể sử dụng hệ thống Đặt & Quản Lý Lịch Hẹn Trực Tuyến Ludiino?"
-        }
+        },
+        "Transform": "{{price}}  vnđ",
+        "Unit": "đ"
     },
     "Features": {
         "Title": "Tính Năng Chính trên Hệ Thống Đặt & Quản lý Lịch Hẹn Trực Tuyến của Ludiino",
@@ -473,5 +475,8 @@
     "SignUp": {
         "SignUpSuccess": "Đã đăng ký tài khoản thành công",
         "RedirectToPayment": "Chuyển tới trang thanh toán "
+    },
+    "ExchangeRate": {
+        "ErrorLoad": "Không thể tải tỉ giá hiện tại"
     }
 }

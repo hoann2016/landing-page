@@ -190,10 +190,11 @@
                             <div class="pricing-header title_package">
                                 <h5 class="lud_color_red">Newbie</h5>
                                 <div class="price-box">
-                                    <div class="price">16
-                                        <div class="currency">$</div>
-                                        <div class="plan">/ Mo</div>
+                                    <div class="price">
+                                        {{ '368000' | priceExchangeRate | async | number }}
+                                        <div class="currency" translate>Pricing.Unit</div>
                                     </div>
+                                    <div class="plan-unit">Month</div>
                                 </div>
                             </div>
                             <div class="pricing-feature">
@@ -290,10 +291,11 @@
                       <span>Feature</span>
                     </a> -->
                                 <div class="price-box">
-                                    <div class="price">36
-                                        <div class="currency">$</div>
-                                        <div class="plan">/ Mo</div>
+                                    <div class="price">
+                                        {{ '828000' | priceExchangeRate | async | number }}
+                                        <div class="currency" translate>Pricing.Unit</div>
                                     </div>
+                                    <div class="plan-unit">Month</div>
                                 </div>
                             </div>
                             <div class="pricing-feature">
@@ -390,10 +392,11 @@
                                     <span>Popular</span>
                                 </a>
                                 <div class="price-box">
-                                    <div class="price">62
-                                        <div class="currency">$</div>
-                                        <div class="plan">/ Mo</div>
+                                    <div class="price">
+                                        {{ '1426000' | priceExchangeRate | async | number }}
+                                        <div class="currency" translate>Pricing.Unit</div>
                                     </div>
+                                    <div class="plan-unit">Month</div>
                                 </div>
                             </div>
                             <div class="pricing-feature">

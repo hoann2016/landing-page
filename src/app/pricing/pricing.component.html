@@ -74,7 +74,7 @@
                         </div>
                         <div class="col-12 col-sm-4 d-flex justify-content-end">
                             <div class="action d-flex flex-column">
-                                    <p class="price-label"><span>{{selectedNewbie?.price}}</span> vnđ</p>
+                                    <p class="price-label"><span translate [translateParams]="{price: selectedNewbie?.price | priceExchangeRate | async | number}">Pricing.Transform</span></p>
                                     <select [(ngModel)]="selectedNewbie">
                                         <option *ngFor="let item of newbiePackage"  [ngValue]="item">
                                             {{item.name | translate}}
@@ -117,7 +117,7 @@
                         </div>
                         <div class="col-12 col-sm-4 d-flex justify-content-end">
                             <div class="action d-flex flex-column">
-                                <p class="price-label"><span>{{selectedBiggie?.price}}</span> vnđ</p>
+                                <p class="price-label"><span translate [translateParams]="{price: selectedBiggie?.price | priceExchangeRate | async | number}">Pricing.Transform</span></p>
                                 <select [(ngModel)]="selectedBiggie">
                                     <option *ngFor="let item of biggiePackage"  [ngValue]="item">
                                         {{item.name | translate}}
@@ -162,7 +162,7 @@
                         </div>
                         <div class="col-12 col-sm-4 d-flex justify-content-end">
                             <div class="action d-flex flex-column">
-                                    <p class="price-label"><span>{{selectedHulk?.price}}</span> vnđ</p>
+                                    <p class="price-label"><span translate [translateParams]="{price: selectedHulk?.price | priceExchangeRate | async | number}">Pricing.Transform</span></p>
                                     <select [(ngModel)]="selectedHulk">
                                         <option *ngFor="let item of hulkPackage"  [ngValue]="item">
                                             {{item.name | translate}}
