@@ -1,482 +1,482 @@
 {
-  "Home": {
-      "Title": "Trang chủ",
-      "Select": "Thay đôi ngôn ngữ",
-      "Header1": "Giải Pháp & Chi Phí",
-      "HeaderMenu": {
-          "Feature": "Tính năng",
-          "Pricing": "Chi phí"
-      },
-      "Intro": {
-          "Message": "Khách Hàng 4.0 tìm và đặt dịch vụ trực tuyến ngay khi cần bằng thiết bị thông minh",
-          "ButtonLabel": "ĐĂNG KÝ NGAY MIỄN PHÍ",
-          "BookingOutside": "Dịch vụ được đặt ngoài giờ làm việc",
-          "BookingOnline": "Khách Hàng chỉ đặt dịch vụ qua kênh trực tuyến",
-          "ReminderSystem": "Khách Hàng không đến với hệ thống nhắc hẹn thông minh"
-      },
-      "About": {
-          "HeaderMessage": "Bắt kịp xu hướng để thay đổi với Khách Hàng 4.0",
-          "HeaderDescription1": "",
-          "HeaderDescription2": "Hệ Thống Đặt và Quản Lý Lịch Hẹn Trực Tuyến Ludiino",
-          "HeaderDescription3": " giúp doanh nghiệp tìm thêm khách hàng mới, tăng hiệu quả kinh doanh, không bao giờ mất \"bookings\"",
-          "MessageHeader_1": "Hệ thống Đặt Hẹn Trực Tuyến hoạt động kinh doanh liên tục 24/7",
-          "MessageContent_1": "1 trang web chuyên nghiệp miễn phí không chỉ trình bày thông tin về cửa hàng mà còn nhận đặt hẹn trực tuyến theo thời gian thực ",
-          "MessageHeader_4": "Đặt Hẹn Trực Tuyến Trên Các Mạng Xã Hội",
-          "MessageContent_4": "Khách Hàng có thể tiện lợi đặt dịch vụ trực tuyến trên website hay từ các mạng xã hội của bạn; mọi kênh trực tuyến giờ đây đều dẫn Khách Hàng đến cửa hàng của bạn bất cứ khi nào họ muốn ",
-          "MessageHeader_2": "Thanh toán trực tuyến hoặc thanh toán tại cửa hàng ",
-          "MessageContent_2": "Khách Hàng thanh toán trực tuyến qua cổng thanh toán bảo mật khi đặt hẹn đến tài khoản ngân hàng của bạn và nhận xác nhận đặt hẹn ngay tức thời.Giải pháp đặt hẹn trực tuyến giúp bạn không phải mất thời gian gọi điện thoại cho Khách Hàng, quản lý lịch hẹn, và tiền mặt tại cửa hàng mà chỉ tập trung cung cấp dịch vụ tốt nhất",
-          "MessageHeader_5": "Gửi Thông Báo & Nhắc Hẹn Tự Động",
-          "MessageContent_5": "Hệ thống tự động gửi thông báo nhắc nhở về cuộc hẹn sắp tới hay khi có cập nhật về trạng thái cuộc hẹn giúp giảm tối đa tình trạng 'hẹn không đến', chi phí điện thoại, và thời gian quản lý hoạt động cửa hàng đồng thời tăng chất lượng dịch vụ chăm sóc khách hàng ",
-          "MessageHeader_3": "Quản lý Nhân Viên và Lịch Làm Việc",
-          "MessageContent_3": "Quản lý & phân công lịch làm việc của từng nhân viên đến từng chi nhánh. Khách Hàng có thể đánh giá nhân viên trực tuyến và hệ thống tự động tạo báo cáo về thời gian làm việc cũng như đánh giá của khách hàng đến từng nhân viên",
-          "MessageHeader_6": "Marketing & Khuyến Mãi Trực Tuyến",
-          "MessageContent_6": "Dễ dàng tạo các chiến dịch marketing trực tuyến gửi voucher khuyến mãi điện tử đến các tập khách hàng tiềm năng để tìm thêm khách hàng mới và khuyến khích khách hàng cũ trở lại. Các báo cáo tự động phân tích chiến dịch marketing cung cấp dữ liệu giúp doanh nghiệp điều chỉnh chiến lược nhằm tối ưu hiệu quả  "
-      },
-      "Feature": {
-          "Header": "Ludiino là giải pháp đặt hẹn trực tuyến phù hợp với nhiều ngành dịch vụ",
-          "Description": "Dù bạn sở hữu Tiệm Cắt Tóc, Spa, Phòng Khám, Trung Tâm Thể Thao hay Cửa Hàng Sửa Xe, bạn chắc chắn sẽ cần một hệ thống đặt hẹn trực tuyến để khách hàng của bạn có thể tiện lợi đặt dịch vụ và thanh toán không tiền mặt;",
-          "Description2": " Ludiino",
-          "Description3": " là giải pháp cho tất cả yêu cầu của bạn  ",
-          "ServicesName": {
-              "HairSalon": "Tiệm Cắt Tóc",
-              "BeautySalon": "Tiệm Làm Đẹp",
-              "SpaMassage": "Spa & Massage",
-              "GymSportCenter": "Gym & Trung Tâm Thể Thao",
-              "Health": "Phòng Khám & Bệnh Viện",
-              "RepairServices": "Dịch vụ sửa chữa",
-              "1": "Tiệm Cắt Tóc",
-              "2": "Tiệm Làm Đẹp",
-              "3": "Spa & Massage",
-              "4": "Gym & Trung Tâm Thể Thao",
-              "5": "Phòng Khám & Bệnh Viện",
-              "6": "Dịch vụ sửa chữa"
-          }
-      },
-      "ScreenShot": {
-          "Header": "Sử Dụng Miễn Phí Giải Pháp Đặt và Quản Lý Lịch Hẹn Ludiino",
-          "SmallDescription": "Trải nghiệm sản phẩm hoàn toàn miễn phí không giới hạn thời gian",
-          "SignupAccount": "Đăng ký tài khoản để bắt đầu sử dụng",
-          "SetupService": "Tạo dịch vụ cung cấp & chính sách giá",
-          "CreateOpenTime": "Tạo thời gian trống cho đặt hẹn trực tuyến"
-      },
-      "SelectPackage": {
-          "SelectPlant": "Chọn Gói Dịch Vụ Phù Hợp Nhất",
-          "AddTooltip": "add tool tip",
-          "RegisterNow_Freebie": "Đăng Ký Freebie",
-          "RegisterNow_Newbie": "Đăng Ký Newbie",
-          "RegisterNow_Biggie": "Đăng Ký Biggie",
-          "RegisterNow_Hulk": "Đăng Ký Hulk",
-          "TableFeature": {
-              "Website": "Trang Web Riêng",
-              "RatingReview": "Đánh Giá Dịch Vụ",
-              "ServicePricing": "Quản Lý Dịch Vụ & Giá",
-              "TimeSlotBookingConfirmation": "Quản Lý & Xác Nhận Đặt Hẹn",
-              "NoOfBooking": "Số Lượng Booking Tháng",
-              "PaymentMethod": "Phương Thức Thanh Toán",
-              "DealPromotion": "Chương Trình Khuyến Mãi",
-              "CheckInCheckOut": "CheckIn & CheckOut",
-              "Cancellation": "Quản Lý Hủy Lịch Hẹn",
-              "ChatWidget": "Chat",
-              "TechnicianSchedulingBooking": "Quản Lý Lịch Làm Việc & Booking Của Nhân Viên",
-              "CustomerMembership": "Quản Lý Khách Hàng Thân Thiết",
-              "ProductCommerce": "Quản Lý Sản Phẩm Hàng Bán",
-              "Dashboards": "Báo Cáo",
-              "CalendarView": "Calendar View",
-              "ContentTable": {
-                  "Unlimited": "Không Giới Hạn",
-                  "10BookingPerMonth": "10 Lượt/Tháng",
-                  "PayAtStore": "Thanh toán Tại Cửa Hàng",
-                  "PayNow": "Thanh Toán Ngay"
-              }
-          }
-      },
-      "SignIn": {
-          "SendingStatus": "Đăng nhập..",
-          "Login": "Đăng nhập",
-          "KeepLogedIn": "Giữ tôi luôn đăng nhập",
-          "IfDontHaveAcc": "Nếu bạn chưa có tài khoản",
-          "Register": "Đăng Ký",
-          "Now": "ngay",
-          "ResetYourPassword": "Điền địa chỉ email để nhận mật khẩu mới",
-          "ForgotPassword": "Quên mật khẩu",
-          "SignInEmail.Email": "Email",
-          "DontWantToChangePassword": "Không muốn đổi mật khẩu mới? đến trang",
-          "UserIsNotActive": "Tài khoản chưa được kích hoạt",
-          "UserIsNotActive1": "Xin vui lòng tiến hành thanh toán để bắt đầu sử dụng",
-          "UserIsNotActive2": "hệ thống Ludiino"
-      },
-      "Footer": {
-          "Title": "Điền Email để nhận các nghiên cứu mới nhất về Quản Lý Đặt Hẹn & Tính Năng Mới của Ludiino",
-          "Form": {
-              "Name": "Họ tên",
-              "Email": "Email",
-              "Content": "Nội dung",
-              "Send": "Gửi",
-              "maximumMessage": "Thông tin không hợp lệ, tối đa 255 ký tự",
-              "minimumMessage": "Thông tin không hợp lệ, tối thiểu 10 ký tự",
-              "MessageSendSuccess": "Message gửi thành công !",
-              "MessageSendFailed": "Message thất bại !",
-              "SendingStatus": "Đang gửi"
-          },
-          "Contact": {
-              "Header": "Liên hệ",
-              "Detail": "Nếu có bất kỳ câu hỏi liên hệ ngay với chúng tôi"
-          }
-      }
-  },
-  "Pricing": {
-      "Subtitle": "Đăng Ký Sử Dụng Miễn Phí",
-      "Title": "Hệ Thống Đặt & Quản Lý Lịch Hẹn Trực Tuyến Ludiino",
-      "MainContent": {
-          "Free": "Miễn phí",
-          "Get": "Chọn",
-          "Freebie": "Gói Freebie",
-          "FreebieIntro": "Khởi đầu kinh doanh trực tuyến với trang web đặt hẹn trực tuyến riêng hoạt động liên tục 24/7",
-          "Newbie": "Gói Newbie",
-          "NewbieIntro": "Sử dụng tính năng Thanh Toán Trực Tuyến để nhận ngay thanh toán khi đặt hẹn và không phải lo nghĩ về quản lý tiền mặt",
-          "Biggie": "Gói Biggie",
-          "BiggeIntro": "Dễ dàng phân công quản lý lịch làm việc của nhân viên và tạo các Chiến Dịch Khuyến Mãi Trực Tuyến để thu hút Khách Hàng mới",
-          "Hulk": "Gói Hulk",
-          "HulkIntro": "Kinh Doanh Trực Tuyến cả Dịch Vụ & Sản Phẩm ngay trên trang web riêng của cửa tiệm để tăng tiện ích cho Khách Hàng & tối ưu hóa doanh thu",
-          "OnlineBooking": "Trang Web Đặt Hẹn Trực Tuyến Riêng",
-          "GoogleMap": "Tích hợp với Google Map",
-          "RatingReview": "Đánh Giá Dịch Vụ",
-          "ServicePricing": "Thiết lập Dịch Vụ & Giá",
-          "TimeSlotConfirmation": "Quản Lý & Xác Nhận Đặt Hẹn",
-          "BookingPerMonth": "Số Lượng 20 Booking Tháng",
-          "PaymentMethod_Store": "Phương Thức Thanh Toán: Tại Cửa Hàng",
-          "PaymentMethod_OnlineAndStore": "Phương Thức Thanh Toán: Thanh Toán Ngay Và Tại Cửa Hàng",
-          "UnlimittedNumber": "Không giới hạn số lượng booking",
-          "DealPromotion": "Khởi tạo & Quản lý Chương Trình Khuyến Mãi",
-          "CheckInManagement": "Quản lý Checkin",
-          "ProductCommerce": "Bán Sản Phẩm Trực Tuyến",
-          "CustomerMembership": "Quản Lý Khách Hàng Thành Viên",
-          "6Months": "6 tháng",
-          "12Months": "12 tháng",
-          "18Months": "18 tháng",
-          "24Months": "24 tháng",
-          "freemonths": "tháng miễn phí"
-      },
-      "FAQs": {
-          "Title": "FAQs",
-          "Intro": "Các Câu Hỏi Thường Gặp Vể Giải Pháp Đặt và Quản Lý Lịch Hẹn Trực Tuyến Ludiino",
-          "Q_HowSignUpLudiinoSolution": "Cần phải làm gì để đăng ký sử dụng giải pháp Ludiino Booking?",
-          "A_HowSignUpLudiinoSolution": "Đăng Ký tạo tài khoản Ludiino bằng cách bấm vào nút đăng ký trên góc phải trang chủ",
-          "Q_WhenStartLudiinoForBusiness": "Khi nào tôi có thể bắt đầu sử dụng?",
-          "A_WhenStartLudiinoForBusiness": "Tùy theo gói đăng ký; đối với gói Freebie bạn có thể bắt đầu sử dụng ngay khi hoàn tất đăng ký. Cho các gói còn lại, bạn có thể bắt đầu sử dụng ngay sau khi hoàn tất thanh toán",
-          "Q_HowMakePayment": "Quy trình thanh toán được thực hiện như thế nào?",
-          "A_HowMakePayment": "Có 2 hình thức thanh toán: thẻ tín dụng hoặc chuyển khoản. Chúng tôi chấp nhận hầu hết tất cả các loại thẻ tín dụng",
-          "Q_WhenMySiteCreated": "Trang web riêng cho tiệm của tôi sẽ được tạo ra khi nào? Và Khách Hàng có thể đặt hẹn trực tuyến trên trang web đó không?",
-          "A_WhenMySiteCreated": "Trang web của cửa tiệm sẽ được tự động tạo ra ngay khi thanh toán hoàn tất. Và Khách Hàng có thể đặt lịch hẹn và thanh toán trực tuyến ngay trên trang web được tạo.",
-          "Q_IntegrateExistingSite": "Nếu tiệm của tôi đã có trang web thì có thể tích hợp giải pháp Đặt Hẹn Trực Tuyến của Ludiino vào trang web hiện hữu không?",
-          "A_IntegrateExistingSite": "Bạn hoàn toàn có thể tích hợp giải pháp Đặt Hẹn Trực Tuyến Ludiino vào trang web hiện hữu và chúng tôi sẵn sàng hỗ trợ",
-          "Q_CanUseMultiple": "Tôi có thể sử dụng giải pháp Ludiino cho nhiều tiệm cùng lúc không?",
-          "A_CanUseMultiple": "Chắc chắn được! Bạn chỉ cần bấm váo nút 'Thêm Chi Nhánh' để đăng ký cửa tiệm mới. Bạn có thể tạo dịch vụ , giá, thời gian trống…hoàn toàn độc lập với các cửa hàng khác nhưng lại có được hệ thống báo cáo quản trị tập trung "
-      },
-      "ServicesName": {
-          "HairSalon": "Dịch Vụ Tóc",
-          "NailSalon": "Dịch Vụ Làm Đẹp",
-          "Spa": "Spa",
-          "MassageTherapy": "Matxa",
-          "Doctors": "Bệnh Viện",
-          "MedicalClinic": "Phòng Khám",
-          "Gym": "Gym",
-          "SportCenter": "Trung Tâm Thể Thao",
-          "WeddingService": "Dịch Vụ Cưới Hỏi",
-          "Photography": "Dịch Vụ Ảnh",
-          "RepairService": "Dịch Vụ Sửa Xe",
-          "PetService": "Dịch Vụ Chăm Sóc Thú Cưng"
-      },
-      "LudiinoSolution": {
-          "Title": "Mô Hình Kinh Doanh nào có thể sử dụng hệ thống Đặt & Quản Lý Lịch Hẹn Trực Tuyến Ludiino?"
-      },
-      "Transform": "{{price}}  vnđ",
-      "Unit": "đ"
-  },
-  "Features": {
-      "Title": "Tính Năng Chính trên Hệ Thống Đặt & Quản lý Lịch Hẹn Trực Tuyến của Ludiino",
-      "Intro": "Các tính năng của giải pháp Ludiino giúp quảng bá hiệu quả đến khách hàng mới, tăng số lượng booking, quản lý hiệu quả lịch làm việc của nhân viên, và nâng cao chất lượng dịch vụ chăm sóc khách hàng.",
-      "CreateDemoBooking": "Thử tính năng booking",
-      "MainContent": {
-          "FreeWebsite": {
-              "Title": "Trang Web Miễn Phí",
-              "Info": "Trang web miễn phí được thiết kế chuyên nghiệp theo chuẩn SEO để khách hàng nhanh chóng tìm ra cửa hàng của bạn trên thế giới phẳng. <br><br> Google Map và Đánh Giá Dịch Vụ được tích hợp trên trang web nhằm cung cấp tất cả những thông tin cần thiết cho Khách Hàng để chọn lựa dịch vụ của bạn trên kênh trực tuyến"
-          },
-          "OnlineBooking": {
-              "Title": "Đặt Hẹn Trực Tuyến 24/7",
-              "Info": "Không chỉ dừng lại ở xem thông tin  trên trang web, khách hàng 4.0 còn dễ dàng đặt lịch hẹn cho dịch vụ họ cần, tiến hành thanh toán trực tuyến & nhận xác nhận đặt hẹn thành công qua sms, email, hay ứng dụng di động chỉ trong vài giây. Mô hình kinh doanh mới, thuận tiện, và hiệu quả nhất."
-          },
-          "Payment": {
-              "Title": "Thanh Toán Trực Tuyến hoặc Trả Sau",
-              "Info": "Tùy chỉnh khi thiết lập chính sách thanh toán trực tuyến ngay khi đặt hẹn hoặc trả sau tại cửa hàng. <br><br>Khách Hàng thanh toán trực tuyến qua cổng thanh toán bảo mật khi đặt hẹn đến tài khoản ngân hàng của bạn và nhận ngay xác nhận đặt hẹn thành công.",
-              "OnlinePayment": "Thanh toán trực tuyến",
-              "CashPayment": "Thanh toán tiền mặt",
-              "POSMachineSupport": "Hỗ trợ máy POS"
-          },
-          "ShedulingManagement": {
-              "Title": "Lịch làm việc",
-              "Info": "Các nhà quản lý có thể sắp xếp và quản lý lịch làm việc cho nhân viên một cách nhanh chóng và đơn giản. <br><br>Từ đó, các vị khách hàng khó tính giờ đây có thể đặt luôn KTV yêu thích của mình theo lịch làm việc được thiết lập trước. Thêm vào đó, các nhà quản lý còn dễ dàng xem được lượng bookings trong tương lai để nhanh chóng điều chỉnh lịch làm việc của nhân viên nhằm đáp ứng yêu cầu của khách hàng"
-          }
-      },
-      "Appointment": {
-          "Title": "Các tính năng khác về lịch hẹn trực tuyến của chúng tôi",
-          "Intro": "Các Tính Năng Khác Giúp Nâng Cao Hiệu Quả Quản Lý & Phát Triển Doanh Nghiệp Của Bạn.",
-          "Integrate": {
-              "Title": "Tích Hợp Với Mạng Xã Hội",
-              "Info": "Tích hợp tích năng đặt hẹn trên các Mạng Xã Hội như Facebook hay Instagram giúp tăng hiệu quả marketing đa kênh và số lượt đặt hẹn trực tuyến. Khách Hàng có thể đặt hẹn trực tuyến ngay trên MXH với vài thao tác đơn giản"
-          },
-          "CheckInManagement": {
-              "Title": "Quản Lý CheckIn",
-              "Info": "Dùng thiết bị quét mã QR để nhanh chóng check-in Khách Hàng đã đặt hẹn trước trên hệ thống giúp giảm tối đa thời gian chờ đồng thời tăng hiệu quả hoạt động cho cửa hàng của bạn."
-          },
-          "Marketing": {
-              "Title": "Quảng cáo trực tuyến & Chương trình khuyến mãi",
-              "Info": "Có nhiều cách để tạo các chiến dịch tiếp thị quảng cáo khác nhau với mã giảm giá được gửi qua email \/ sms trực tiếp đến khách hàng mục tiêu của bạn để thu hút khách hàng mới và giữ khách hàng cũ quay lại."
-          },
-          "Dashboard": {
-              "Title": "Báo Cáo",
-              "Info": "Các báo cáo tự động về tình hình kinh doanh theo tuần, tháng, quý hay các báo cáo so sánh về số lượt đặt hẹn hiện tại và quá khứ giúp các nhà quản lý dễ dàng phân tích hiệu quả kinh doanh theo từng thời điểm từ đó xây dựng chiến lược kinh doanh phù hợp."
-          },
-          "Notifications": {
-              "Title": "Thông Báo Nhắc Hẹn Tự Động",
-              "Info": "Giảm tối đa tình trạng 'hẹn không đến' với hệ thống tự động gửi thông báo về cuộc hẹn sắp tới qua email, sms, và ứng dụng di động giúp doanh nghiệp tiết kiệm thời gian & chi phí cho công việc quản lý lịch hẹn và tăng chất lượng dịch vụ chăm sóc khách hàng"
-          },
-          "Cancellation": {
-              "Title": "Hủy\/Đổi Lịch Hẹn",
-              "Info": "Thay đổi hay hủy lịch hẹn vì một lý do đột xuất không còn quá khó khăn với nhiều cuộc gọi điện thoại nữa mà đơn giản chỉ với vài thao tác kéo thả, cuộc hẹn đã được thay đổi theo yêu cầu với các điều kiện điều khoản rõ ràng cho cả người mua & người cung cấp dịch vụ"
-          }
-      },
-      "DemoSteps": {
-          "Step1": {
-              "Title": "Bước 1: Xin vui lòng chọn 1 dịch vụ",
-              "HairService": {
-                  "Title": "Dịch vụ tóc",
-                  "HairCut": "Cắt tóc",
-                  "HairCutWomen": "Cắt tóc nữ trong 60 phút",
-                  "HairDye": "Sấy tóc"
-              },
-              "SkinCare": {
-                  "Title": "Chăm sóc da"
-              }
-          },
-          "Step2": {
-              "Title": "Bước 2: Chọn ngày và kỹ thuật viên",
-              "Technicians": "Kỹ thuật viên",
-              "TimeSelect": "Chọn Giờ"
-          },
-          "Step3": {
-              "Title": "Bước 3: Phương thức thanh toán",
-              "Surcharge": "Phụ phí",
-              "ServiceFee": "Phí Dịch vụ",
-              "Total": "Tổng cộng"
-          }
-      }
-  },
-  "Register": {
-      "Email": "Email",
-      "Password": "Mật khẩu",
-      "re-password": "Xác nhận mật khẩu",
-      "re-password-2": "Nhập lại mật khẩu",
-      "Register": "Đăng ký",
-      "subtitle": "Sử Dụng Trọn Vẹn Giải Pháp",
-      "name": "Họ tên",
-      "package": "Gói dịch vụ",
-      "shopname": "Tên cửa hàng / tiệm của bạn",
-      "shopname-2": "Tên cửa hàng",
-      "shop-type": "Loại hình dịch vụ",
-      "select": "Vui lòng chọn",
-      "phone-1": "Điện thoại liên hệ",
-      "phone": "Điện thoại",
-      "policy": " Bằng cách nhấn “đăng ký” bạn đã đồng ý với các ",
-      "policy-2": "Điều khoản - điều kiện",
-      "policy-3": " của chúng tôi",
-      "have-account": "Tôi đã có tài khoản",
-      "sign-in": "Đăng nhập",
-      "message-require": "Thông tin bắt buộc, vui lòng không để trống",
-      "message-format": "Thông tin họ tên không hợp lệ",
-      "message-format-2": "Thông tin số điện thoại không hợp lệ",
-      "message-format-3": "Thông tin email không hợp lệ",
-      "message-format-4": "Thông tin mật khẩu không hợp lệ",
-      "message-format-5": "Thông tin gõ lại mật khẩu không hợp lệ",
-      "message-format-6": "Thông tin tên shop không hợp lệ",
-      "message-tips": "Tên miền website của bạn sẽ là",
-      "message-tips2": "Bạn có thể thay đổi trong cài đặt sau này",
-      "name-lenght": "Tên của bạn phải tử 3-100 ký tự",
-      "name-shop-length": "Thông tin tên shop phải từ 3 đến 100 ký tự",
-      "pasword-length": "Thông tin mật khẩu phải từ 5 đến 20 ký tự",
-      "shop-type0": "Vui lòng chọn",
-      "shop-type1": "Salon Tóc",
-      "shop-type2": "Spa / Massage",
-      "shop-type3": "Phòng khám",
-      "SendingStatus": "Đang gửi yêu cầu đăng ký, vui lòng đợi"
-  },
-  "Payment": {
-      "Sub": "Vui lòng điền thông tin để đăng ký gói dịch vụ",
-      "SelectedPackage": "Gói dịch vụ đã chọn",
-      "TimeRegistered": "Thời gian đăng ký",
-      "Months": "tháng",
-      "Account": "Tên đăng ký",
-      "Contact": "Số điện thoại",
-      "StartDate": "Ngày bắt đầu",
-      "EndDate": "Ngày hết hạn thúc",
-      "Payment": "Chọn phương thức thanh toán",
-      "PaymentMethod": "Phương thức thanh toán",
-      "PaymentDirect": "Thanh toán trực tiếp",
-      "PaymentTransfer": "Thanh toán qua ATM/Internet Banking",
-      "PaymentOnline": "Thanh toán qua thẻ Visa/Master/JCB",
-      "PaymentAtm": "Thanh toán bằng thẻ nội địa",
-      "TempCount": "Tạm tính",
-      "TotalCount": "Tổng cộng",
-      "CompletePayment": "Tiến hành thanh toán",
-      "RequireSelectPayment": "Bắt buộc chọn 1 phương thức thanh toán"
-  },
-  "Shared": {
-      "RegisterBtnLabel": "Đăng ký",
-      "SigninBtnLabel": "Đăng nhập",
-      "Send": "Gửi Mật Khẩu Mới",
-      "Login_Register": "Đăng nhập",
-      "FormCommon": {
-          "required": "bắt buộc",
-          "minlength": "ít nhất {{valueLength}} ký tự",
-          "maxlength": "Tối đa {{valueLength}} ký tự",
-          "pattern": "không hợp lệ",
-          "email": "không hợp lệ",
-          "undefined": "Lỗi không xác định",
-          "mustMatch": "Không giống mật khẩu đã nhập"
-      },
-      "AppError": {
-          "0": "Lỗi không xác định",
-          "1": "Form chưa đúng yêu cầu",
-          "2": "Có lỗi xảy ra",
-          "400": "Request không có hiệu lực",
-          "401": "Request không được phép",
-          "402": "Request không có hiệu lực",
-          "403": "Request bị cấm truy cập",
-          "404": "Url không tìm thấy",
-          "405": "Phương thức không được phép",
-          "406": "Request không thể được dùng",
-          "407": "Firewall hoặc Proxy yêu cầu đăng nhập",
-          "408": "Request hết thời gian chờ",
-          "409": "Xung đột",
-          "500": "Lỗi server",
-          "501": "Chức năng chưa được xây dựng",
-          "502": "Bad Gateway",
-          "503": "Dịch vụ không tồn tại",
-          "504": "Gateway Timeout",
-          "505": "Version HTTP không support"
-      },
-      "CommunicationMessage": {
-          "465": "Email không hợp lệ",
-          "467": "Nội dung không hợp lệ",
-          "1000": "Thành công",
-          "1001": "Email đã tồn tại",
-          "1002": "Không tìm thấy dữ liệu",
-          "1003": "Thiếu token",
-          "1004": "Token không hợp lệ",
-          "1005": "Token hết hạn",
-          "1006": "Thiếu Id",
-          "1007": "Email hoặc mật khẩu không chính xác",
-          "1008": "Liên hệ admin",
-          "1009": "Group name thiếu",
-          "1010": "Group name hoặc Id thiếu",
-          "1011": "Group Id hoặc Permission Id thiếu",
-          "1012": "Permission Name thiếu",
-          "1013": "Permission Id hoặc Name thiếu",
-          "1014": "Resource name thiếu",
-          "1015": "Resource Id hoặc Name thiếu",
-          "1016": "Dữ liệu User thiếu",
-          "1017": "Password không đúng",
-          "1018": "Id or Status thiếu",
-          "1019": "Trường không đúng định dạng",
-          "1020": "Trường bắt buộc",
-          "1021": "Độ dài của trường không hợp lệ",
-          "1022": "Trường không hợp lệ",
-          "1023": "Trường không giống nhau",
-          "1024": "Thiếu trường thông tin họ tên, email hoặc nội dung",
-          "1025": "Thiếu trường Email",
-          "1026": "Thông tin người dùng chưa được kích hoạt",
-          "1027": "Tên miền đã tồn tại. Vui lòng chọn tên miền khác",
-          "1028": "Thiếu thông tin đơn hàng",
-          "1029": "Không tìm thấy đơn hàng",
-          "1030": "Kích hoạt người dùng thất bại. Vui lòng liên hệ nhân viên quản trị để kiểm tra"
-      },
-      "": {
-          "Footer": {
-              "CustomerName": "Tên",
-              "Email": "Email",
-              "Content": "Nội dung"
-          },
-          "SignIn": {
-              "Email": "Email",
-              "Password": "Mật khẩu"
-          },
-          "SignUpFieldNameBaseCompnent": {
-              "CustomerName": "Tên khách hàng",
-              "PackageSelectedName": "Gói dịch vụ",
-              "ShopName": "Tên shop/store",
-              "ServiceName": "Tên dịch vụ",
-              "Phone": "Số điện thoại",
-              "Email": "Email",
-              "Password": "Mật khẩu",
-              "RetypePassword": "Mật khẩu nhập lại",
-              "IsComfirmed": "Xác nhận"
-          }
-      },
-      "thankYou": {
-          "Main_tagline": "Đăng ký tài khoản thành công"
-      }
-  },
-  "Thankyou": {
-      "pending_payment": "Chưa thanh toán",
-      "disabled": "Chưa kích hoạt",
-      "name": "Tên đăng kí",
-      "email": "Email",
-      "phone": "Số điện thoại",
-      "orderNumber": "Mã đơn hàng",
-      "price": "Phí dịch vụ",
-      "status": "Trạng thái tài khoản",
-      "thankNotify": "Đăng ký tài khoản thành công",
-      "thankTopLetter": "Cám ơn bạn đã đăng ký sử dụng Ludiino - Giải pháp đặt hẹn dịch vụ trực tuyến",
-      "thankBottomLetter": "Xin vui lòng tiến hành thanh toán để bắt đầu sử dụng hệ thống Ludiino",
-      "backButton": "TRỞ VỀ TRANG CHỦ",
-      "note": "Lưu ý"
-  },
-  "CloneSite": {
-      "connecting": "Đang khởi tạo dữ liệu. Xin vui lòng chờ trong giây lát",
-      "create-schema": "Khởi tạo cơ sở dữ liệu",
-      "init-schema": "Áp dụng cấu trúc cơ sở dữ liệu mặc định",
-      "init-admin": "Khởi tạo tài khoản quản lý",
-      "init-user-license": "Xác thực giấy phép",
-      "init-site-config": "Khởi tạo cấu hình hệ thống mặc định",
-      "init-first-store": "Khỏi tạo cửa hàng mặc định",
-      "setup-store": "Cài đặt cấu hình mặc định của cửa hàng",
-      "init-store-license": "Cài đặt và xác thực giấy phép của cửa hàng",
-      "clone-merchant-site": "Khởi tạo website",
-      "clone-merchant-site-success": "Khởi tạo website thành công",
-      "redirect-message": "Tự động chuyển tới website của bạn trong vòng %s giây nữa."
-  },
-  "Common": {
-      "Discount": "Khuyến mãi",
-      "RegisterNow": "Đăng ký ngay",
-      "ConfirmBooking": "Xác nhận đặt hàng",
-      "Minutes": "phút",
-      "DemoBookingSuccess": "Booking thành công",
-      "DemoBookingFailed": "Booking thất bại. Kiểm tra lại thông tin",
-      "Monday": "Thứ 2",
-      "Tuesday": "Thứ 3",
-      "Wednesday": "Thứ 4",
-      "Thursday": "Thứ 5",
-      "Friday": "Thứ 6",
-      "Saturday": "Thứ 7",
-      "Sunday": "Chủ nhật",
-      "Date": "Ngày tháng",
-      "Time": "Giờ"
-  },
-  "SignUp": {
-      "SignUpSuccess": "Đã đăng ký tài khoản thành công",
-      "RedirectToPayment": "Chuyển tới trang thanh toán "
-  },
-  "ExchangeRate": {
-      "ErrorLoad": "Không thể tải tỉ giá hiện tại"
-  }
+    "Home": {
+        "Title": "Trang chủ",
+        "Select": "Thay đôi ngôn ngữ",
+        "Header1": "Giải Pháp & Chi Phí",
+        "HeaderMenu": {
+            "Feature": "Tính năng",
+            "Pricing": "Chi phí"
+        },
+        "Intro": {
+            "Message": "Khách Hàng 4.0 tìm và đặt dịch vụ trực tuyến ngay khi cần bằng thiết bị thông minh",
+            "ButtonLabel": "ĐĂNG KÝ NGAY MIỄN PHÍ",
+            "BookingOutside": "Dịch vụ được đặt ngoài giờ làm việc",
+            "BookingOnline": "Khách Hàng chỉ đặt dịch vụ qua kênh trực tuyến",
+            "ReminderSystem": "Khách Hàng không đến với hệ thống nhắc hẹn thông minh"
+        },
+        "About": {
+            "HeaderMessage": "Bắt kịp xu hướng để thay đổi với Khách Hàng 4.0",
+            "HeaderDescription1": "",
+            "HeaderDescription2": "Hệ Thống Đặt và Quản Lý Lịch Hẹn Trực Tuyến Ludiino",
+            "HeaderDescription3": " giúp doanh nghiệp tìm thêm khách hàng mới, tăng hiệu quả kinh doanh, không bao giờ mất \"bookings\"",
+            "MessageHeader_1": "Hệ thống Đặt Hẹn Trực Tuyến hoạt động kinh doanh liên tục 24/7",
+            "MessageContent_1": "1 trang web chuyên nghiệp miễn phí không chỉ trình bày thông tin về cửa hàng mà còn nhận đặt hẹn trực tuyến theo thời gian thực ",
+            "MessageHeader_4": "Đặt Hẹn Trực Tuyến Trên Các Mạng Xã Hội",
+            "MessageContent_4": "Khách Hàng có thể tiện lợi đặt dịch vụ trực tuyến trên website hay từ các mạng xã hội của bạn; mọi kênh trực tuyến giờ đây đều dẫn Khách Hàng đến cửa hàng của bạn bất cứ khi nào họ muốn ",
+            "MessageHeader_2": "Thanh toán trực tuyến hoặc thanh toán tại cửa hàng ",
+            "MessageContent_2": "Khách Hàng thanh toán trực tuyến qua cổng thanh toán bảo mật khi đặt hẹn đến tài khoản ngân hàng của bạn và nhận xác nhận đặt hẹn ngay tức thời.Giải pháp đặt hẹn trực tuyến giúp bạn không phải mất thời gian gọi điện thoại cho Khách Hàng, quản lý lịch hẹn, và tiền mặt tại cửa hàng mà chỉ tập trung cung cấp dịch vụ tốt nhất",
+            "MessageHeader_5": "Gửi Thông Báo & Nhắc Hẹn Tự Động",
+            "MessageContent_5": "Hệ thống tự động gửi thông báo nhắc nhở về cuộc hẹn sắp tới hay khi có cập nhật về trạng thái cuộc hẹn giúp giảm tối đa tình trạng 'hẹn không đến', chi phí điện thoại, và thời gian quản lý hoạt động cửa hàng đồng thời tăng chất lượng dịch vụ chăm sóc khách hàng ",
+            "MessageHeader_3": "Quản lý Nhân Viên và Lịch Làm Việc",
+            "MessageContent_3": "Quản lý & phân công lịch làm việc của từng nhân viên đến từng chi nhánh. Khách Hàng có thể đánh giá nhân viên trực tuyến và hệ thống tự động tạo báo cáo về thời gian làm việc cũng như đánh giá của khách hàng đến từng nhân viên",
+            "MessageHeader_6": "Marketing & Khuyến Mãi Trực Tuyến",
+            "MessageContent_6": "Dễ dàng tạo các chiến dịch marketing trực tuyến gửi voucher khuyến mãi điện tử đến các tập khách hàng tiềm năng để tìm thêm khách hàng mới và khuyến khích khách hàng cũ trở lại. Các báo cáo tự động phân tích chiến dịch marketing cung cấp dữ liệu giúp doanh nghiệp điều chỉnh chiến lược nhằm tối ưu hiệu quả  "
+        },
+        "Feature": {
+            "Header": "Ludiino là giải pháp đặt hẹn trực tuyến phù hợp với nhiều ngành dịch vụ",
+            "Description": "Dù bạn sở hữu Tiệm Cắt Tóc, Spa, Phòng Khám, Trung Tâm Thể Thao hay Cửa Hàng Sửa Xe, bạn chắc chắn sẽ cần một hệ thống đặt hẹn trực tuyến để khách hàng của bạn có thể tiện lợi đặt dịch vụ và thanh toán không tiền mặt;",
+            "Description2": " Ludiino",
+            "Description3": " là giải pháp cho tất cả yêu cầu của bạn  ",
+            "ServicesName": {
+                "HairSalon": "Tiệm Cắt Tóc",
+                "BeautySalon": "Tiệm Làm Đẹp",
+                "SpaMassage": "Spa & Massage",
+                "GymSportCenter": "Gym & Trung Tâm Thể Thao",
+                "Health": "Phòng Khám & Bệnh Viện",
+                "RepairServices": "Dịch vụ sửa chữa",
+                "1": "Tiệm Cắt Tóc",
+                "2": "Tiệm Làm Đẹp",
+                "3": "Spa & Massage",
+                "4": "Gym & Trung Tâm Thể Thao",
+                "5": "Phòng Khám & Bệnh Viện",
+                "6": "Dịch vụ sửa chữa"
+            }
+        },
+        "ScreenShot": {
+            "Header": "Sử Dụng Miễn Phí Giải Pháp Đặt và Quản Lý Lịch Hẹn Ludiino",
+            "SmallDescription": "Trải nghiệm sản phẩm hoàn toàn miễn phí không giới hạn thời gian",
+            "SignupAccount": "Đăng ký tài khoản để bắt đầu sử dụng",
+            "SetupService": "Tạo dịch vụ cung cấp & chính sách giá",
+            "CreateOpenTime": "Tạo thời gian trống cho đặt hẹn trực tuyến"
+        },
+        "SelectPackage": {
+            "SelectPlant": "Chọn Gói Dịch Vụ Phù Hợp Nhất",
+            "AddTooltip": "add tool tip",
+            "RegisterNow_Freebie": "Đăng Ký Freebie",
+            "RegisterNow_Newbie": "Đăng Ký Newbie",
+            "RegisterNow_Biggie": "Đăng Ký Biggie",
+            "RegisterNow_Hulk": "Đăng Ký Hulk",
+            "TableFeature": {
+                "Website": "Trang Web Riêng",
+                "RatingReview": "Đánh Giá Dịch Vụ",
+                "ServicePricing": "Quản Lý Dịch Vụ & Giá",
+                "TimeSlotBookingConfirmation": "Quản Lý & Xác Nhận Đặt Hẹn",
+                "NoOfBooking": "Số Lượng Booking Tháng",
+                "PaymentMethod": "Phương Thức Thanh Toán",
+                "DealPromotion": "Chương Trình Khuyến Mãi",
+                "CheckInCheckOut": "CheckIn & CheckOut",
+                "Cancellation": "Quản Lý Hủy Lịch Hẹn",
+                "ChatWidget": "Chat",
+                "TechnicianSchedulingBooking": "Quản Lý Lịch Làm Việc & Booking Của Nhân Viên",
+                "CustomerMembership": "Quản Lý Khách Hàng Thân Thiết",
+                "ProductCommerce": "Quản Lý Sản Phẩm Hàng Bán",
+                "Dashboards": "Báo Cáo",
+                "CalendarView": "Calendar View",
+                "ContentTable": {
+                    "Unlimited": "Không Giới Hạn",
+                    "10BookingPerMonth": "10 Lượt/Tháng",
+                    "PayAtStore": "Thanh toán Tại Cửa Hàng",
+                    "PayNow": "Thanh Toán Ngay"
+                }
+            }
+        },
+        "SignIn": {
+            "SendingStatus": "Đăng nhập..",
+            "Login": "Đăng nhập",
+            "KeepLogedIn": "Giữ tôi luôn đăng nhập",
+            "IfDontHaveAcc": "Nếu bạn chưa có tài khoản",
+            "Register": "Đăng Ký",
+            "Now": "ngay",
+            "ResetYourPassword": "Điền địa chỉ email để nhận mật khẩu mới",
+            "ForgotPassword": "Quên mật khẩu",
+            "SignInEmail.Email": "Email",
+            "DontWantToChangePassword": "Không muốn đổi mật khẩu mới? đến trang",
+            "UserIsNotActive": "Tài khoản chưa được kích hoạt",
+            "UserIsNotActive1": "Xin vui lòng tiến hành thanh toán để bắt đầu sử dụng",
+            "UserIsNotActive2": "hệ thống Ludiino"
+        },
+        "Footer": {
+            "Title": "Điền Email để nhận các nghiên cứu mới nhất về Quản Lý Đặt Hẹn & Tính Năng Mới của Ludiino",
+            "Form": {
+                "Name": "Họ tên",
+                "Email": "Email",
+                "Content": "Nội dung",
+                "Send": "Gửi",
+                "maximumMessage": "Thông tin không hợp lệ, tối đa 255 ký tự",
+                "minimumMessage": "Thông tin không hợp lệ, tối thiểu 10 ký tự",
+                "MessageSendSuccess": "Message gửi thành công !",
+                "MessageSendFailed": "Message thất bại !",
+                "SendingStatus": "Đang gửi"
+            },
+            "Contact": {
+                "Header": "Liên hệ",
+                "Detail": "Nếu có bất kỳ câu hỏi liên hệ ngay với chúng tôi"
+            }
+        }
+    },
+    "Pricing": {
+        "Subtitle": "Đăng Ký Sử Dụng Miễn Phí",
+        "Title": "Hệ Thống Đặt & Quản Lý Lịch Hẹn Trực Tuyến Ludiino",
+        "MainContent": {
+            "Free": "Miễn phí",
+            "Get": "Chọn",
+            "Freebie": "Gói Freebie",
+            "FreebieIntro": "Khởi đầu kinh doanh trực tuyến với trang web đặt hẹn trực tuyến riêng hoạt động liên tục 24/7",
+            "Newbie": "Gói Newbie",
+            "NewbieIntro": "Sử dụng tính năng Thanh Toán Trực Tuyến để nhận ngay thanh toán khi đặt hẹn và không phải lo nghĩ về quản lý tiền mặt",
+            "Biggie": "Gói Biggie",
+            "BiggeIntro": "Dễ dàng phân công quản lý lịch làm việc của nhân viên và tạo các Chiến Dịch Khuyến Mãi Trực Tuyến để thu hút Khách Hàng mới",
+            "Hulk": "Gói Hulk",
+            "HulkIntro": "Kinh Doanh Trực Tuyến cả Dịch Vụ & Sản Phẩm ngay trên trang web riêng của cửa tiệm để tăng tiện ích cho Khách Hàng & tối ưu hóa doanh thu",
+            "OnlineBooking": "Trang Web Đặt Hẹn Trực Tuyến Riêng",
+            "GoogleMap": "Tích hợp với Google Map",
+            "RatingReview": "Đánh Giá Dịch Vụ",
+            "ServicePricing": "Thiết lập Dịch Vụ & Giá",
+            "TimeSlotConfirmation": "Quản Lý & Xác Nhận Đặt Hẹn",
+            "BookingPerMonth": "Số Lượng 20 Booking Tháng",
+            "PaymentMethod_Store": "Phương Thức Thanh Toán: Tại Cửa Hàng",
+            "PaymentMethod_OnlineAndStore": "Phương Thức Thanh Toán: Thanh Toán Ngay Và Tại Cửa Hàng",
+            "UnlimittedNumber": "Không giới hạn số lượng booking",
+            "DealPromotion": "Khởi tạo & Quản lý Chương Trình Khuyến Mãi",
+            "CheckInManagement": "Quản lý Checkin",
+            "ProductCommerce": "Bán Sản Phẩm Trực Tuyến",
+            "CustomerMembership": "Quản Lý Khách Hàng Thành Viên",
+            "6Months": "6 tháng",
+            "12Months": "12 tháng",
+            "18Months": "18 tháng",
+            "24Months": "24 tháng",
+            "freemonths": "tháng miễn phí"
+        },
+        "FAQs": {
+            "Title": "FAQs",
+            "Intro": "Các Câu Hỏi Thường Gặp Vể Giải Pháp Đặt và Quản Lý Lịch Hẹn Trực Tuyến Ludiino",
+            "Q_HowSignUpLudiinoSolution": "Cần phải làm gì để đăng ký sử dụng giải pháp Ludiino Booking?",
+            "A_HowSignUpLudiinoSolution": "Đăng Ký tạo tài khoản Ludiino bằng cách bấm vào nút đăng ký trên góc phải trang chủ",
+            "Q_WhenStartLudiinoForBusiness": "Khi nào tôi có thể bắt đầu sử dụng?",
+            "A_WhenStartLudiinoForBusiness": "Tùy theo gói đăng ký; đối với gói Freebie bạn có thể bắt đầu sử dụng ngay khi hoàn tất đăng ký. Cho các gói còn lại, bạn có thể bắt đầu sử dụng ngay sau khi hoàn tất thanh toán",
+            "Q_HowMakePayment": "Quy trình thanh toán được thực hiện như thế nào?",
+            "A_HowMakePayment": "Có 2 hình thức thanh toán: thẻ tín dụng hoặc chuyển khoản. Chúng tôi chấp nhận hầu hết tất cả các loại thẻ tín dụng",
+            "Q_WhenMySiteCreated": "Trang web riêng cho tiệm của tôi sẽ được tạo ra khi nào? Và Khách Hàng có thể đặt hẹn trực tuyến trên trang web đó không?",
+            "A_WhenMySiteCreated": "Trang web của cửa tiệm sẽ được tự động tạo ra ngay khi thanh toán hoàn tất. Và Khách Hàng có thể đặt lịch hẹn và thanh toán trực tuyến ngay trên trang web được tạo.",
+            "Q_IntegrateExistingSite": "Nếu tiệm của tôi đã có trang web thì có thể tích hợp giải pháp Đặt Hẹn Trực Tuyến của Ludiino vào trang web hiện hữu không?",
+            "A_IntegrateExistingSite": "Bạn hoàn toàn có thể tích hợp giải pháp Đặt Hẹn Trực Tuyến Ludiino vào trang web hiện hữu và chúng tôi sẵn sàng hỗ trợ",
+            "Q_CanUseMultiple": "Tôi có thể sử dụng giải pháp Ludiino cho nhiều tiệm cùng lúc không?",
+            "A_CanUseMultiple": "Chắc chắn được! Bạn chỉ cần bấm váo nút 'Thêm Chi Nhánh' để đăng ký cửa tiệm mới. Bạn có thể tạo dịch vụ , giá, thời gian trống…hoàn toàn độc lập với các cửa hàng khác nhưng lại có được hệ thống báo cáo quản trị tập trung "
+        },
+        "ServicesName": {
+            "HairSalon": "Dịch Vụ Tóc",
+            "NailSalon": "Dịch Vụ Làm Đẹp",
+            "Spa": "Spa",
+            "MassageTherapy": "Matxa",
+            "Doctors": "Bệnh Viện",
+            "MedicalClinic": "Phòng Khám",
+            "Gym": "Gym",
+            "SportCenter": "Trung Tâm Thể Thao",
+            "WeddingService": "Dịch Vụ Cưới Hỏi",
+            "Photography": "Dịch Vụ Ảnh",
+            "RepairService": "Dịch Vụ Sửa Xe",
+            "PetService": "Dịch Vụ Chăm Sóc Thú Cưng"
+        },
+        "LudiinoSolution": {
+            "Title": "Mô Hình Kinh Doanh nào có thể sử dụng hệ thống Đặt & Quản Lý Lịch Hẹn Trực Tuyến Ludiino?"
+        },
+        "Transform": "{{price}}  vnđ",
+        "Unit": "đ"
+    },
+    "Features": {
+        "Title": "Tính Năng Chính trên Hệ Thống Đặt & Quản lý Lịch Hẹn Trực Tuyến của Ludiino",
+        "Intro": "Các tính năng của giải pháp Ludiino giúp quảng bá hiệu quả đến khách hàng mới, tăng số lượng booking, quản lý hiệu quả lịch làm việc của nhân viên, và nâng cao chất lượng dịch vụ chăm sóc khách hàng.",
+        "CreateDemoBooking": "Thử tính năng booking",
+        "MainContent": {
+            "FreeWebsite": {
+                "Title": "Trang Web Miễn Phí",
+                "Info": "Trang web miễn phí được thiết kế chuyên nghiệp theo chuẩn SEO để khách hàng nhanh chóng tìm ra cửa hàng của bạn trên thế giới phẳng. <br><br> Google Map và Đánh Giá Dịch Vụ được tích hợp trên trang web nhằm cung cấp tất cả những thông tin cần thiết cho Khách Hàng để chọn lựa dịch vụ của bạn trên kênh trực tuyến"
+            },
+            "OnlineBooking": {
+                "Title": "Đặt Hẹn Trực Tuyến 24/7",
+                "Info": "Không chỉ dừng lại ở xem thông tin  trên trang web, khách hàng 4.0 còn dễ dàng đặt lịch hẹn cho dịch vụ họ cần, tiến hành thanh toán trực tuyến & nhận xác nhận đặt hẹn thành công qua sms, email, hay ứng dụng di động chỉ trong vài giây. Mô hình kinh doanh mới, thuận tiện, và hiệu quả nhất."
+            },
+            "Payment": {
+                "Title": "Thanh Toán Trực Tuyến hoặc Trả Sau",
+                "Info": "Tùy chỉnh khi thiết lập chính sách thanh toán trực tuyến ngay khi đặt hẹn hoặc trả sau tại cửa hàng. <br><br>Khách Hàng thanh toán trực tuyến qua cổng thanh toán bảo mật khi đặt hẹn đến tài khoản ngân hàng của bạn và nhận ngay xác nhận đặt hẹn thành công.",
+                "OnlinePayment": "Thanh toán trực tuyến",
+                "CashPayment": "Thanh toán tiền mặt",
+                "POSMachineSupport": "Hỗ trợ máy POS"
+            },
+            "ShedulingManagement": {
+                "Title": "Lịch làm việc",
+                "Info": "Các nhà quản lý có thể sắp xếp và quản lý lịch làm việc cho nhân viên một cách nhanh chóng và đơn giản. <br><br>Từ đó, các vị khách hàng khó tính giờ đây có thể đặt luôn KTV yêu thích của mình theo lịch làm việc được thiết lập trước. Thêm vào đó, các nhà quản lý còn dễ dàng xem được lượng bookings trong tương lai để nhanh chóng điều chỉnh lịch làm việc của nhân viên nhằm đáp ứng yêu cầu của khách hàng"
+            }
+        },
+        "Appointment": {
+            "Title": "Các tính năng khác về lịch hẹn trực tuyến của chúng tôi",
+            "Intro": "Các Tính Năng Khác Giúp Nâng Cao Hiệu Quả Quản Lý & Phát Triển Doanh Nghiệp Của Bạn.",
+            "Integrate": {
+                "Title": "Tích Hợp Với Mạng Xã Hội",
+                "Info": "Tích hợp tích năng đặt hẹn trên các Mạng Xã Hội như Facebook hay Instagram giúp tăng hiệu quả marketing đa kênh và số lượt đặt hẹn trực tuyến. Khách Hàng có thể đặt hẹn trực tuyến ngay trên MXH với vài thao tác đơn giản"
+            },
+            "CheckInManagement": {
+                "Title": "Quản Lý CheckIn",
+                "Info": "Dùng thiết bị quét mã QR để nhanh chóng check-in Khách Hàng đã đặt hẹn trước trên hệ thống giúp giảm tối đa thời gian chờ đồng thời tăng hiệu quả hoạt động cho cửa hàng của bạn."
+            },
+            "Marketing": {
+                "Title": "Quảng cáo trực tuyến & Chương trình khuyến mãi",
+                "Info": "Có nhiều cách để tạo các chiến dịch tiếp thị quảng cáo khác nhau với mã giảm giá được gửi qua email \/ sms trực tiếp đến khách hàng mục tiêu của bạn để thu hút khách hàng mới và giữ khách hàng cũ quay lại."
+            },
+            "Dashboard": {
+                "Title": "Báo Cáo",
+                "Info": "Các báo cáo tự động về tình hình kinh doanh theo tuần, tháng, quý hay các báo cáo so sánh về số lượt đặt hẹn hiện tại và quá khứ giúp các nhà quản lý dễ dàng phân tích hiệu quả kinh doanh theo từng thời điểm từ đó xây dựng chiến lược kinh doanh phù hợp."
+            },
+            "Notifications": {
+                "Title": "Thông Báo Nhắc Hẹn Tự Động",
+                "Info": "Giảm tối đa tình trạng 'hẹn không đến' với hệ thống tự động gửi thông báo về cuộc hẹn sắp tới qua email, sms, và ứng dụng di động giúp doanh nghiệp tiết kiệm thời gian & chi phí cho công việc quản lý lịch hẹn và tăng chất lượng dịch vụ chăm sóc khách hàng"
+            },
+            "Cancellation": {
+                "Title": "Hủy\/Đổi Lịch Hẹn",
+                "Info": "Thay đổi hay hủy lịch hẹn vì một lý do đột xuất không còn quá khó khăn với nhiều cuộc gọi điện thoại nữa mà đơn giản chỉ với vài thao tác kéo thả, cuộc hẹn đã được thay đổi theo yêu cầu với các điều kiện điều khoản rõ ràng cho cả người mua & người cung cấp dịch vụ"
+            }
+        },
+        "DemoSteps": {
+            "Step1": {
+                "Title": "Bước 1: Xin vui lòng chọn 1 dịch vụ",
+                "HairService": {
+                    "Title": "Dịch vụ tóc",
+                    "HairCut": "Cắt tóc",
+                    "HairCutWomen": "Cắt tóc nữ trong 60 phút",
+                    "HairDye": "Sấy tóc"
+                },
+                "SkinCare": {
+                    "Title": "Chăm sóc da"
+                }
+            },
+            "Step2": {
+                "Title": "Bước 2: Chọn ngày và kỹ thuật viên",
+                "Technicians": "Kỹ thuật viên",
+                "TimeSelect": "Chọn Giờ"
+            },
+            "Step3": {
+                "Title": "Bước 3: Phương thức thanh toán",
+                "Surcharge": "Phụ phí",
+                "ServiceFee": "Phí Dịch vụ",
+                "Total": "Tổng cộng"
+            }
+        }
+    },
+    "Register": {
+        "Email": "Email",
+        "Password": "Mật khẩu",
+        "re-password": "Xác nhận mật khẩu",
+        "re-password-2": "Nhập lại mật khẩu",
+        "Register": "Đăng ký",
+        "subtitle": "Sử Dụng Trọn Vẹn Giải Pháp",
+        "name": "Họ tên",
+        "package": "Gói dịch vụ",
+        "shopname": "Tên cửa hàng / tiệm của bạn",
+        "shopname-2": "Tên cửa hàng",
+        "shop-type": "Loại hình dịch vụ",
+        "select": "Vui lòng chọn",
+        "phone-1": "Điện thoại liên hệ",
+        "phone": "Điện thoại",
+        "policy": " Bằng cách nhấn “đăng ký” bạn đã đồng ý với các ",
+        "policy-2": "Điều khoản - điều kiện",
+        "policy-3": " của chúng tôi",
+        "have-account": "Tôi đã có tài khoản",
+        "sign-in": "Đăng nhập",
+        "message-require": "Thông tin bắt buộc, vui lòng không để trống",
+        "message-format": "Thông tin họ tên không hợp lệ",
+        "message-format-2": "Thông tin số điện thoại không hợp lệ",
+        "message-format-3": "Thông tin email không hợp lệ",
+        "message-format-4": "Thông tin mật khẩu không hợp lệ",
+        "message-format-5": "Thông tin gõ lại mật khẩu không hợp lệ",
+        "message-format-6": "Thông tin tên shop không hợp lệ",
+        "message-tips": "Tên miền website của bạn sẽ là",
+        "message-tips2": "Bạn có thể thay đổi trong cài đặt sau này",
+        "name-lenght": "Tên của bạn phải tử 3-100 ký tự",
+        "name-shop-length": "Thông tin tên shop phải từ 3 đến 100 ký tự",
+        "pasword-length": "Thông tin mật khẩu phải từ 5 đến 20 ký tự",
+        "shop-type0": "Vui lòng chọn",
+        "shop-type1": "Salon Tóc",
+        "shop-type2": "Spa / Massage",
+        "shop-type3": "Phòng khám",
+        "SendingStatus": "Đang gửi yêu cầu đăng ký, vui lòng đợi"
+    },
+    "Payment": {
+        "Sub": "Vui lòng điền thông tin để đăng ký gói dịch vụ",
+        "SelectedPackage": "Gói dịch vụ đã chọn",
+        "TimeRegistered": "Thời gian đăng ký",
+        "Months": "tháng",
+        "Account": "Tên đăng ký",
+        "Contact": "Số điện thoại",
+        "StartDate": "Ngày bắt đầu",
+        "EndDate": "Ngày hết hạn thúc",
+        "Payment": "Chọn phương thức thanh toán",
+        "PaymentMethod": "Phương thức thanh toán",
+        "PaymentDirect": "Thanh toán trực tiếp",
+        "PaymentTransfer": "Thanh toán qua ATM/Internet Banking",
+        "PaymentOnline": "Thanh toán qua thẻ Visa/Master/JCB",
+        "PaymentAtm": "Thanh toán bằng thẻ nội địa",
+        "TempCount": "Tạm tính",
+        "TotalCount": "Tổng cộng",
+        "CompletePayment": "Tiến hành thanh toán",
+        "RequireSelectPayment": "Bắt buộc chọn 1 phương thức thanh toán"
+    },
+    "Shared": {
+        "RegisterBtnLabel": "Đăng ký",
+        "SigninBtnLabel": "Đăng nhập",
+        "Send": "Gửi Mật Khẩu Mới",
+        "Login_Register": "Đăng nhập",
+        "FormCommon": {
+            "required": "bắt buộc",
+            "minlength": "ít nhất {{valueLength}} ký tự",
+            "maxlength": "Tối đa {{valueLength}} ký tự",
+            "pattern": "không hợp lệ",
+            "email": "không hợp lệ",
+            "undefined": "Lỗi không xác định",
+            "mustMatch": "Không giống mật khẩu đã nhập"
+        },
+        "AppError": {
+            "0": "Lỗi không xác định",
+            "1": "Form chưa đúng yêu cầu",
+            "2": "Có lỗi xảy ra",
+            "400": "Request không có hiệu lực",
+            "401": "Request không được phép",
+            "402": "Request không có hiệu lực",
+            "403": "Request bị cấm truy cập",
+            "404": "Url không tìm thấy",
+            "405": "Phương thức không được phép",
+            "406": "Request không thể được dùng",
+            "407": "Firewall hoặc Proxy yêu cầu đăng nhập",
+            "408": "Request hết thời gian chờ",
+            "409": "Xung đột",
+            "500": "Lỗi server",
+            "501": "Chức năng chưa được xây dựng",
+            "502": "Bad Gateway",
+            "503": "Dịch vụ không tồn tại",
+            "504": "Gateway Timeout",
+            "505": "Version HTTP không support"
+        },
+        "CommunicationMessage": {
+            "465": "Email không hợp lệ",
+            "467": "Nội dung không hợp lệ",
+            "1000": "Thành công",
+            "1001": "Email đã tồn tại",
+            "1002": "Không tìm thấy dữ liệu",
+            "1003": "Thiếu token",
+            "1004": "Token không hợp lệ",
+            "1005": "Token hết hạn",
+            "1006": "Thiếu Id",
+            "1007": "Email hoặc mật khẩu không chính xác",
+            "1008": "Liên hệ admin",
+            "1009": "Group name thiếu",
+            "1010": "Group name hoặc Id thiếu",
+            "1011": "Group Id hoặc Permission Id thiếu",
+            "1012": "Permission Name thiếu",
+            "1013": "Permission Id hoặc Name thiếu",
+            "1014": "Resource name thiếu",
+            "1015": "Resource Id hoặc Name thiếu",
+            "1016": "Dữ liệu User thiếu",
+            "1017": "Password không đúng",
+            "1018": "Id or Status thiếu",
+            "1019": "Trường không đúng định dạng",
+            "1020": "Trường bắt buộc",
+            "1021": "Độ dài của trường không hợp lệ",
+            "1022": "Trường không hợp lệ",
+            "1023": "Trường không giống nhau",
+            "1024": "Thiếu trường thông tin họ tên, email hoặc nội dung",
+            "1025": "Thiếu trường Email",
+            "1026": "Thông tin người dùng chưa được kích hoạt",
+            "1027": "Tên miền đã tồn tại. Vui lòng chọn tên miền khác",
+            "1028": "Thiếu thông tin đơn hàng",
+            "1029": "Không tìm thấy đơn hàng",
+            "1030": "Kích hoạt người dùng thất bại. Vui lòng liên hệ nhân viên quản trị để kiểm tra"
+        },
+        "": {
+            "Footer": {
+                "CustomerName": "Tên",
+                "Email": "Email",
+                "Content": "Nội dung"
+            },
+            "SignIn": {
+                "Email": "Email",
+                "Password": "Mật khẩu"
+            },
+            "SignUpFieldNameBaseCompnent": {
+                "CustomerName": "Tên khách hàng",
+                "PackageSelectedName": "Gói dịch vụ",
+                "ShopName": "Tên shop/store",
+                "ServiceName": "Tên dịch vụ",
+                "Phone": "Số điện thoại",
+                "Email": "Email",
+                "Password": "Mật khẩu",
+                "RetypePassword": "Mật khẩu nhập lại",
+                "IsComfirmed": "Xác nhận"
+            }
+        },
+        "thankYou": {
+            "Main_tagline": "Đăng ký tài khoản thành công"
+        }
+    },
+    "Thankyou": {
+        "pending_payment": "Chưa thanh toán",
+        "disabled": "Chưa kích hoạt",
+        "name": "Tên đăng kí",
+        "email": "Email",
+        "phone": "Số điện thoại",
+        "orderNumber": "Mã đơn hàng",
+        "price": "Phí dịch vụ",
+        "status": "Trạng thái tài khoản",
+        "thankNotify": "Đăng ký tài khoản thành công",
+        "thankTopLetter": "Cám ơn bạn đã đăng ký sử dụng Ludiino - Giải pháp đặt hẹn dịch vụ trực tuyến",
+        "thankBottomLetter": "Xin vui lòng tiến hành thanh toán để bắt đầu sử dụng hệ thống Ludiino",
+        "backButton": "TRỞ VỀ TRANG CHỦ",
+        "note": "Lưu ý"
+    },
+    "CloneSite": {
+        "connecting": "Đang khởi tạo dữ liệu. Xin vui lòng chờ trong giây lát",
+        "create-schema": "Khởi tạo cơ sở dữ liệu",
+        "init-schema": "Áp dụng cấu trúc cơ sở dữ liệu mặc định",
+        "init-admin": "Khởi tạo tài khoản quản lý",
+        "init-user-license": "Xác thực giấy phép",
+        "init-site-config": "Khởi tạo cấu hình hệ thống mặc định",
+        "init-first-store": "Khỏi tạo cửa hàng mặc định",
+        "setup-store": "Cài đặt cấu hình mặc định của cửa hàng",
+        "init-store-license": "Cài đặt và xác thực giấy phép của cửa hàng",
+        "clone-merchant-site": "Khởi tạo website",
+        "clone-merchant-site-success": "Khởi tạo website thành công",
+        "redirect-message": "Tự động chuyển tới website của bạn trong vòng %s giây nữa."
+    },
+    "Common": {
+        "Discount": "Khuyến mãi",
+        "RegisterNow": "Đăng ký ngay",
+        "ConfirmBooking": "Xác nhận đặt hàng",
+        "Minutes": "phút",
+        "DemoBookingSuccess": "Booking thành công",
+        "DemoBookingFailed": "Booking thất bại. Kiểm tra lại thông tin",
+        "Monday": "Thứ 2",
+        "Tuesday": "Thứ 3",
+        "Wednesday": "Thứ 4",
+        "Thursday": "Thứ 5",
+        "Friday": "Thứ 6",
+        "Saturday": "Thứ 7",
+        "Sunday": "Chủ nhật",
+        "Date": "Ngày tháng",
+        "Time": "Giờ"
+    },
+    "SignUp": {
+        "SignUpSuccess": "Đã đăng ký tài khoản thành công",
+        "RedirectToPayment": "Chuyển tới trang thanh toán "
+    },
+    "ExchangeRate": {
+        "ErrorLoad": "Không thể tải tỉ giá hiện tại"
+    }
 }

@@ -57,7 +57,8 @@
             "SmallDescription": "No credit card, no trial period, unlimited use for free. Here is how it works!",
             "SignupAccount": "Sign up for an Account",
             "SetupService": "Setup your services & pricing",
-            "CreateOpenTime": "Create & Publish time slot online for booking"
+            "CreateOpenTime": "Create & Publish time slot online for booking",
+            "Month": "Month"
         },
         "SelectPackage": {
             "SelectPlant": "Select the Plan that works for you!",
@@ -100,7 +101,10 @@
             "ResetYourPassword": "Reset Your Password",
             "ForgotPassword": "Forgot Password",
             "SignInEmail.Email": "Email Address",
-            "DontWantToChangePassword": "Don't want to reset password? Back to "
+            "DontWantToChangePassword": "Don't want to reset password? Back to ",
+            "UserIsNotActive": "Your account has not been activated yet",
+            "UserIsNotActive1": "Please complete the payment process to start using",
+            "UserIsNotActive2": "Ludiino System"
         },
         "Footer": {
             "Title": "Input email to receive more info about booking statistics & new product features",
@@ -465,5 +469,12 @@
         "Sunday": "Sunday",
         "Date": "Date",
         "Time": "Time"
+    },
+    "SignUp": {
+        "SignUpSuccess": "Register account successfully",
+        "RedirectToPayment": "Redirect to payment page"
+    },
+    "ExchangeRate": {
+        "ErrorLoad": "Can not load current exchange rate"
     }
 }
