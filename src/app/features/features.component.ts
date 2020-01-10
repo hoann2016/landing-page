@@ -27,7 +27,7 @@ export class FeaturesComponent implements OnInit {
     6: 'Saturday',
     7: 'Sunday'
   };
-  timeBlocks = ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '12:00 AM', '1:00 pM', '2:00 PM', '3:00 PM'];
+  timeBlocks = ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '12:00 AM', '1:00 PM', '2:00 PM', '3:00 PM'];
 
   currentDemoStep: number;
   selectDate: NgbDate;

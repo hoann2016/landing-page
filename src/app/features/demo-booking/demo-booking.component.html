@@ -1,0 +1,83 @@
+<div class="demo-booking-wrapper">
+    <div class="header">
+        <div class="branch-name">BABBER SHOP BAO BAO</div>
+        <div class="right-actions">
+            <div class="notication"></div>
+            <div class="credential">
+                <div class="avatar"><img src="assets/images/featuresp/default_ava.png"></div>
+                <div class="user-info">
+                    <h4 class="name">Phuong Nguyen</h4>
+                    <h4 class="title">Admin <fa-icon [icon]="faCaretDown"></fa-icon>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-area">
+        <ul class="left-menu">
+            <li class="item"><fa-icon [icon]="faCalendarAlt"></fa-icon></li>
+            <li class="item"><fa-icon [icon]="faList"></fa-icon></li>
+            <li class="item"><fa-icon [icon]="faFileAlt"></fa-icon></li>
+            <li class="item active"><fa-icon [icon]="faUser"></fa-icon></li>
+            <li class="item"><fa-icon [icon]="faClock"></fa-icon></li>
+            <li class="item"><fa-icon [icon]="faChartPie"></fa-icon></li>
+            <li class="item"><fa-icon [icon]="faChartBar"></fa-icon></li>
+            <li class="item"><fa-icon [icon]="faCog"></fa-icon></li>
+            <li class="item"><fa-icon [icon]="faAward"></fa-icon></li>
+        </ul>
+        <div class="right-content">
+            <div class="time-select"> {{selectDate}} </div>
+            <div class="technicians-list">
+                <div class="staff active">
+                    <img src="assets/images/featuresp/girl_salon1.jpg"/>
+                    <h4 class="name">Harry Le</h4>
+                </div>
+                <div class="staff">
+                    <img src="assets/images/featuresp/girl_salon2.jpg"/>
+                    <h4 class="name">Dean Luong</h4>
+                </div>
+                <div class="staff">
+                    <img src="assets/images/featuresp/girl_salon3.jpg"/>
+                    <h4 class="name">Hau Cao</h4>
+                </div>
+                <div class="staff">
+                    <img src="assets/images/featuresp/girl_salon4.jpg"/>
+                    <h4 class="name">Bao Phuong</h4>
+                </div>
+            </div>
+            <div class="date-period">
+                <div class="date time-label">Time</div>
+                <div class="date">Sun</div>
+                <div class="date">Mon</div>
+                <div class="date">Tue</div>
+                <div class="date">Wed</div>
+                <div class="date">Thu</div>
+                <div class="date">Fri</div>
+                <div class="date">Sat</div>
+            </div>
+            <div class="calendar-wrapper">
+                <div class="time-period">
+                    <div class="time">7:00</div>
+                    <div class="time">8:00</div>
+                    <div class="time">9:00</div>
+                    <div class="time">10:00</div>
+                    <div class="time">11:00</div>
+                    <div class="time">12:00</div>
+                    <div class="time">13:00</div>
+                    <div class="time">14:00</div>
+                    <div class="time">15:00</div>
+                    <div class="time">16:00</div>
+                </div>
+                <div class="tickets">
+                    <div *ngFor="let obj of ticketNumbers; let i = index" class="ticket-default" [class.locked]="i % 7 === 0"></div>
+                    <div *ngFor="let ticket of ticketData" class="ticket"  
+                        [class.new]="ticket.isNew"
+                        [ngStyle]="ticket.styles">
+                        <h4 class="">{{ticket.timePeriod}}| {{ticket.serviceName | translate}}</h4>
+                        <h3>{{ticket.staffName}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

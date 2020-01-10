@@ -26,7 +26,6 @@
         background-size: contain;
         background-position: 0 0;
         background-repeat: no-repeat;
-        background-image: url(assets/images/featuresp/calendar-bg.png);
     }
     .image-bottom {
         position: absolute;
@@ -865,7 +864,7 @@ section.appointment {
             right: 0;
             left: 50%;
             transform: translate3d(-50%, 0,0);
-
+            background-image: url(assets/images/featuresp/calendar-bg.png);
             z-index: 85;
             width: 300px;
             height: 302px;
