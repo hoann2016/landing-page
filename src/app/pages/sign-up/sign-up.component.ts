@@ -99,6 +99,9 @@ export class SignUpComponent implements OnInit, AfterViewInit {
         this.appService.getActiveConfigPackage().subscribe(pk => {
             if (pk.success == true) {
                 this.allPackage = pk.data.packages;
+                if (!this.signUpForm.get('PackageSelectedName').value && this.allPackage && this.allPackage.length > 0) {
+                    this.signUpForm.get('PackageSelectedName').setValue(this.allPackage[0].id)
+                }
             }
         },
             err => {
