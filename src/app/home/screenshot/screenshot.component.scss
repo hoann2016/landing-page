@@ -4,6 +4,7 @@
 .price-box {
     .price {
         position: relative;
+        font-size: 30px;
         .currency {
             left: unset;
             top: 3px;
@@ -13,9 +14,9 @@
     }
 }
 .pricing-header {
-    height: 115px;
+    height: 105px;
     .price-box {
-        height: 81px;
+        height: 72px;
         .plan-unit {
             font-size: 19px;
             letter-spacing: 0px;
