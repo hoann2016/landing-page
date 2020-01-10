@@ -469,5 +469,12 @@
         "Sunday": "Sunday",
         "Date": "Date",
         "Time": "Time"
+    },
+    "SignUp": {
+        "SignUpSuccess": "Register account successfully",
+        "RedirectToPayment": "Redirect to payment page"
+    },
+    "ExchangeRate": {
+        "ErrorLoad": "Can not load current exchange rate"
     }
 }
