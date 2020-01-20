@@ -52,7 +52,6 @@
         <div
             [ngbCollapse]="!stateMenuInMobile.openMenu"  
             id="navbarSupportedContent"  class="navbar-collapse default-nav"
-            [@smoothCollapse]="!stateMenuInMobile.openMenu?'initial':'final'"
             [ngClass]="{ 'show': stateMenuInMobile.openMenu }"
         >
             <ul
