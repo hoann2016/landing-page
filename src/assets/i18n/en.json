@@ -34,7 +34,7 @@
         },
         "Feature": {
             "Header": "Ludiino is an Online Booking Solution that works for multiple industries",
-            "Description": "Whether you own a Beauty Salon, a Sport Center, an Automobile Dealership or a Medical Clinic. You will certainly need an online booking software for your clients to book & pay for the provided services, and",
+            "Description": "Whether you own a Beauty Salon, a Sport Center, an Automobile Dealership or a Medical Clinic, you will certainly need an online booking software for your clients to book & pay for the provided services, and",
             "Description2": " Ludiino",
             "Description3": " is the only solution for all your needs",
             "ServicesName": {
@@ -451,7 +451,7 @@
         "init-store-license": "Setting up store's license.",
         "clone-merchant-site": "Initializing website.",
         "clone-merchant-site-success": "Initializing website successfully",
-        "redirect-message": "Automatically redirect to your website in %s seconds."
+        "redirect-message": "Your website is being created. Please wait %s seconds."
     },
     "Common": {
         "Discount": "Discount",
