@@ -38,24 +38,24 @@
             </a>
         </div>
         <button
-            class="navbar-toggler"
+            class="mobile-menu navbar-toggler"
+            [class.active]="stateMenuInMobile.openMenu"
             type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
             aria-label="Toggle navigation"
+            (click)="toggleMobileMenu()"
         >
-            <span class="navbar-toggler-icon"></span>
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
         </button>
 
         <div
-            class="collapse navbar-collapse default-nav"
-            id="navbarSupportedContent"
+            [ngbCollapse]="!stateMenuInMobile.openMenu"  
+            id="navbarSupportedContent"  class="navbar-collapse default-nav"
+            [ngClass]="{ 'show': stateMenuInMobile.openMenu }"
         >
             <ul
                 class="navbar-nav"
-                id="mymenu"
             >
                 <li class="nav-item">
                     <a
@@ -64,11 +64,7 @@
                         [pageScrollOffset]="80"
                         pageScroll
                     >
-                        <i
-                            class="fa fa-home"
-                            aria-hidden="true"
-                        ></i>
-                        {{ "Home.Title" | translate }}
+                        <fa-icon [icon]="homeIcon"></fa-icon>
                     </a>
                 </li>
                 <li class="nav-item">

@@ -9,7 +9,7 @@ import { WINDOW } from '../services/windows.service';
 import { Router } from '@angular/router';
 import { TranslatesService, ILang } from '@shared/translates';
 import { ExchangeRateService } from '@shared/services/exchange-rate.service';
-
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
@@ -20,6 +20,10 @@ export class HeaderComponent implements OnInit {
     public menuItems: any[];
     public langList$: Observable<ILang[]>;
     public currentLang: string;
+    public homeIcon: any = faHome;
+    public stateMenuInMobile: { [key: string]: boolean } = {
+        openMenu: false
+    }
     @ViewChild('content', { static: true }) signinModalRef: ElementRef;
 
     // Inject Document object
@@ -70,5 +74,9 @@ export class HeaderComponent implements OnInit {
     RedirectToLogin() {
         this.modalService.dismissAll();
         this.router.navigate(['/pages/sign-in']);
+    }
+
+    public toggleMobileMenu(): void {
+        this.stateMenuInMobile.openMenu = !this.stateMenuInMobile.openMenu;
     }
 }

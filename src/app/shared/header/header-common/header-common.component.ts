@@ -12,7 +12,7 @@ import { TranslatesService, ILang } from '@shared/translates';
 // component
 import { HeaderComponent } from '../header.component';
 import { ExchangeRateService } from '@shared/services/exchange-rate.service';
-
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 @Component({
     selector: 'app-header-common',
     templateUrl: './header-common.component.html',
@@ -36,6 +36,7 @@ import { ExchangeRateService } from '@shared/services/exchange-rate.service';
 export class HeaderCommonComponent extends HeaderComponent implements OnInit {
     $pageActive: Observable<string>;
     isMenuCollapsed: boolean;
+    public homeIcon = faHome;
     constructor(
         @Inject(DOCUMENT) protected document: Document,
         @Inject(WINDOW) protected window,

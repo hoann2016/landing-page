@@ -22,11 +22,7 @@
                         [pageScrollOffset]="80"
                         pageScroll
                     >
-                        <i
-                            class="fa fa-home"
-                            aria-hidden="true"
-                        ></i>
-                        {{ "Home.Title" | translate }}
+                        <fa-icon [icon]="homeIcon"></fa-icon>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -78,10 +74,10 @@
                     *ngIf="currentLang === 'en'"
                 >
                     <img
-                        src="assets/images/flag_en.png"
+                        src="assets/images/flag_vi.png"
                         alt
                     >
-                    EN
+                    VI
                 </a>
                 <a
                     href="javascript:void(0)"
@@ -90,10 +86,10 @@
                     *ngIf="currentLang === 'vi'"
                 >
                     <img
-                        src="assets/images/flag_vi.png"
+                        src="assets/images/flag_en.png"
                         alt
                     >
-                    VI
+                    EN
                 </a>
             </div>
         </div>
