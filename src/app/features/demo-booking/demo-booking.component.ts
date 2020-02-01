@@ -144,7 +144,7 @@ export class DemoBookingComponent implements OnInit {
     space = space + 1;
     let timeIndex = this.timeBlocks.findIndex(x => x === data.time);
     timeIndex = timeIndex + 1;
-    const newLeft = '' + (space * 14.29) + '%';
+    const newLeft = (space === 7) ? '0px' : '' + (space * 14.29) + '%';
     const newTop = '' + (timeIndex * 10) + '%';
     return {
       timePeriod: data.time,
