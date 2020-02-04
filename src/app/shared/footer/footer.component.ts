@@ -44,7 +44,6 @@ export class FooterComponent implements OnInit {
         ]
       ],
       Email: ["", [Validators.required, Validators.pattern(/^[a-z0-9]+(?:\.[a-z0-9]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i)]],      
-      Content:["",[Validators.required,Validators.minLength(10),Validators.required,Validators.maxLength(255)]]
       }
     );
   }
@@ -54,7 +53,7 @@ export class FooterComponent implements OnInit {
     {
       this.showLoading=true;
       this.contentLoading=this.translate.instant('Home.Footer.Form.SendingStatus')
-      this.appService.sendNewLetter({email:this.guessMessageForm.controls.Email.value,content:this.guessMessageForm.controls.Content.value,name:this.guessMessageForm.controls.CustomerName.value}).
+      this.appService.sendNewLetter({email:this.guessMessageForm.controls.Email.value,name:this.guessMessageForm.controls.CustomerName.value}).
       subscribe(response=>{
         setTimeout(()=>{
           this.showLoading=false;

@@ -2834,7 +2834,7 @@
     .report_wrap ul{
       border: 1px solid #2e2c2d;
       border-radius: 3px;
-      width: 60%;
+      width: 75%;
       padding: 0;
     }
     .ss1_report{
@@ -2847,9 +2847,9 @@
       padding: 0px 10px;
     }
     .report_wrap ul li label{
-      font-size: 14px;
+      font-size: 15px;
       opacity: 0.7;
-      line-height: 1.1em !important;
+      line-height: 1.4em !important;
     }
     .report_wrap h2{
       font-size: 26px;
@@ -2884,9 +2884,10 @@
   color: #364551;
   font-weight: 600;
   margin: 0 0 6px 0;
+  line-height: 50px;
 }
 .title_lud span{
-  font-size: 14px;
+  font-size: 16px;
   color: #424242;
 }
 .focus_text{
@@ -2902,7 +2903,8 @@
   // background-color: red;
   text-align: center;
   line-height: 300px;
-  padding: 65px 0;
+  margin: 65px 0;
+  position: relative;
 }
 .fe_wrap_video img{
   vertical-align: middle;
@@ -2915,16 +2917,22 @@
   padding: 0;
 }
 .fe_wrap_left ul li{
-  padding: 15px;
+  padding: 20px;
   margin-bottom: 15px;
   text-align: right;
   position: relative;
 }
+.fe_wrap_left ul li:last-child {
+  margin-top: 50px;
+}
 .fe_wrap_right ul li{
-  padding: 15px;
+  padding: 20px;
   margin-bottom: 15px;
   text-align: left;
   position: relative;
+}
+.fe_wrap_right ul li:last-child {
+  margin-top: 50px;
 }
 .fe_box_left_center {
   margin-right: 20px;
@@ -2938,26 +2946,32 @@
   background-color: $white;
 }
 .fe_box h3{
-  font-size: 14px;
   line-height: 16px;
-  margin: 0 0 7px 0;
-  color: #f49c1e;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: left;
+  color: #000;
+  font-size: 16px;
 }
 .fe_box p{
-  font-size: 14px;
-  color: #424242;
   line-height: 1.4 !important;
   margin-bottom: 0;
   text-transform: none;
+  letter-spacing: normal;
+  text-align: justify;
+  color: rgba(54, 69, 81, 0.8);
+  font-size: 15px;
 }
 .no_pad{
   padding: 0;
 }
 .line_box_left1{
   position: absolute;
-  top: 75px;
+  top: 93px;
   right: -75px;
   width: 75px;
+  z-index: 15;
 }
 .line_box_left2{
   position: absolute;
@@ -2967,14 +2981,16 @@
 }
 .line_box_left3{
   position: absolute;
-  top: -20px;
+  top: unset;
   right: -75px;
   width: 75px;
+  bottom: 101px;
+  z-index: 15;
 }
 
 .line_box_right1{
   position: absolute;
-  top: 75px;
+  top: 93px;
   left: -75px;
   width: 75px;
 }
@@ -2986,9 +3002,37 @@
 }
 .line_box_right3{
   position: absolute;
-  top: 0;
+  top: unset;
   left: -75px;
   width: 75px;
+  bottom: 101px;
+  z-index: 15;
+}
+.fe_wrap_video  {
+  .inner-line_box_left1 {
+    position: absolute;
+    width: 96px;
+    top: 0;
+    left: -15px;
+  }
+  .inner-line_box_left3 {
+    position: absolute;
+    width: 96px;
+    bottom: 0;
+    left: -15px;
+  }
+  .inner-line_box_right1 {
+    position: absolute;
+    width: 96px;
+    top: 0;
+    right: -15px;
+  }
+  .inner-line_box_right3 {
+    position: absolute;
+    width: 96px;
+    bottom: 0;
+    right: -15px;
+  }
 }
 .mar_left{
   margin-left: 20px;
@@ -3076,7 +3120,7 @@
   padding-right: 15px;
 }
 .hiw_text p{
-  font-size: 14px;
+  font-size: 15px;
   color: #fff;
   line-height: 1.2em;
   margin-bottom: 0;
