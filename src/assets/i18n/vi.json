@@ -111,6 +111,8 @@
             "UserIsNotActive2": "hệ thống Ludiino"
         },
         "Footer": {
+            "PrivacyPolicy": "Chính Sách Bảo Mật Thông Tin",
+            "TermsUseTerms": "Điều Khoản Điều Kiện Sử Dụng",
             "Title": "Điền Email để nhận các nghiên cứu mới nhất về Quản Lý Đặt Hẹn & Tính Năng Mới của Ludiino",
             "Form": {
                 "Name": "Họ tên",
@@ -160,7 +162,8 @@
             "12Months": "12 tháng",
             "18Months": "18 tháng",
             "24Months": "24 tháng",
-            "freemonths": "tháng miễn phí"
+            "freemonths": "tháng miễn phí",
+            "BookDeliveredHome": "Đặt Hẹn Cho Dịch Vụ Cung Cấp Tại Nhà"
         },
         "FAQs": {
             "Title": "FAQs",
@@ -228,15 +231,15 @@
             "Intro": "Các Tính Năng Khác Giúp Nâng Cao Hiệu Quả Quản Lý & Phát Triển Doanh Nghiệp Của Bạn.",
             "Integrate": {
                 "Title": "Tích Hợp Với Mạng Xã Hội",
-                "Info": "Tích hợp tích năng đặt hẹn trên các Mạng Xã Hội như Facebook hay Instagram giúp tăng hiệu quả marketing đa kênh và số lượt đặt hẹn trực tuyến. Khách Hàng có thể đặt hẹn trực tuyến ngay trên MXH với vài thao tác đơn giản"
+                "Info": "Tích hợp tích năng đặt hẹn trên các Mạng Xã Hội như Facebook hay Instagram giúp tăng hiệu quả marketing đa kênh và số lượt đặt hẹn trực tuyến. Khách Hàng có thể đặt hẹn trực tuyến ngay trên Mạng xã hội với vài thao tác đơn giản"
             },
             "CheckInManagement": {
                 "Title": "Quản Lý CheckIn",
                 "Info": "Dùng thiết bị quét mã QR để nhanh chóng check-in Khách Hàng đã đặt hẹn trước trên hệ thống giúp giảm tối đa thời gian chờ đồng thời tăng hiệu quả hoạt động cho cửa hàng của bạn."
             },
             "Marketing": {
-                "Title": "Quảng cáo trực tuyến & Chương trình khuyến mãi",
-                "Info": "Có nhiều cách để tạo các chiến dịch tiếp thị quảng cáo khác nhau với mã giảm giá được gửi qua email \/ sms trực tiếp đến khách hàng mục tiêu của bạn để thu hút khách hàng mới và giữ khách hàng cũ quay lại."
+                "Title": "Chương trình khuyến mãi",
+                "Info": "Thiết lập các chương trình khuyến mãi đa dạng quảng cáo trực tuyến đến nhiều tập khách hàng qua web và thiết bị di động để khách hàng được thông báo thường xuyên về và tức thời về những chính sách giảm giá hấp dẫn. Báo cáo thống kê đánh giá hiệu quả các chương trình khuyến mãi được cung cấp tự động theo thời gian thực."
             },
             "Dashboard": {
                 "Title": "Báo Cáo",
@@ -248,7 +251,7 @@
             },
             "Cancellation": {
                 "Title": "Hủy\/Đổi Lịch Hẹn",
-                "Info": "Thay đổi hay hủy lịch hẹn vì một lý do đột xuất không còn quá khó khăn với nhiều cuộc gọi điện thoại nữa mà đơn giản chỉ với vài thao tác kéo thả, cuộc hẹn đã được thay đổi theo yêu cầu với các điều kiện điều khoản rõ ràng cho cả người mua & người cung cấp dịch vụ"
+                "Info": "Thay đổi hay hủy lịch hẹn vì một lý do đột xuất không còn quá khó khăn với nhiều cuộc gọi nữa mà đơn giản chỉ với vài thao tác kéo thả, cuộc hẹn đã được thay đổi theo yêu cầu với các điều kiện điều khoản rõ ràng cho cả người mua & người cung cấp dịch vụ"
             }
         },
         "DemoSteps": {
