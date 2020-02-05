@@ -111,6 +111,8 @@
             "UserIsNotActive2": "Ludiino System"
         },
         "Footer": {
+            "PrivacyPolicy": "Privacy Policy",
+            "TermsUseTerms": "Terms of Service",
             "Title": "Input email to receive more info about booking statistics & new product features",
             "Form": {
                 "Name": "Your name",
@@ -119,7 +121,7 @@
                 "Send": "Send",
                 "maximumMessage": "Invalid Message, maximum 255 charactors",
                 "minimumMessage": "Invalid Message, minimum 10 charactors",
-                "MessageSendSuccess": "Message send successful !",
+                "MessageSendSuccess": "Your message has been sent successfully.",
                 "MessageSendFailed": "Message send failed !",
                 "SendingStatus": "Sendding..."
             },
@@ -160,11 +162,12 @@
             "12Months": "12 months",
             "18Months": "18 months",
             "24Months": "24 months",
-            "freemonths": "free months"
+            "freemonths": "free months",
+            "BookDeliveredHome": "Book Services Delivered At Home"
         },
         "FAQs": {
             "Title": "FAQs",
-            "Intro": "Here are some frequently asked questions related to the Ludiino Booking Online solution",
+            "Intro": "Here are some frequently asked questions related to the Ludiino Online Booking & Scheduling solution",
             "Q_HowSignUpLudiinoSolution": "How do I sign up for Ludiino solution?",
             "A_HowSignUpLudiinoSolution": "Register for a Ludiino account at the top right corner of the Home page, fill in the required info to start",
             "Q_WhenStartLudiinoForBusiness": "When can I start using Ludiino solution for my business?",
@@ -224,31 +227,31 @@
             }
         },
         "Appointment": {
-            "Title": "Our Online Appointment Scheduling Other Features",
-            "Intro": "And Other Cool Features that help you to properly manage and grow your businesses.",
+            "Title": "Other Cool Features that help you",
+            "Intro": "To properly manage and grow your businesses.",
             "Integrate": {
                 "Title": "Integrate Booking with Social Network",
-                "Info": "Booking feature is integrated into your social networks like facebook and\/or instagram for clients to conveniently  book via multiple online channels to help your business leverage on all digital channels to get new clients & ultimately more bookings"
+                "Info": "Booking feature is integrated into your social networks like facebook and/or instagram for clients to conveniently  book via multiple online channels to help your business leverage on all digital channels to get new clients & ultmately more bookings"
             },
             "CheckInManagement": {
                 "Title": "Check In Management",
-                "Info": "Quickly checkin pre-booking customers by scaning booking code to signnificantly reduce unnessesary wait time and to spend more time taking care of your clients"
+                "Info": "Quickly checkin and/or checkout pre-booking customers by scaning booking code to signnificantly reduce unnessesary wait time and to spend more time taking care of your clients to earn customer appreciation"
             },
             "Marketing": {
                 "Title": "Online Marketing & Promotional Campaigns",
-                "Info": "Multiple ways to create various Promotional Marketing Campaigns with discount codes sent via email\/sms directly to your targeted clients to attract new clients and keep old clients coming back for more."
+                "Info": "Multiple ways to create various Promotional Marketing Campaigns with discount codes sent via email/sms directly to your targeted clients to attract new clients and keep old clients coming back for more. Notifications automatically sent to remind clients the check-in dates so that no promotional events are missed. Online reports to measure effectiveness of the marketingl campaigns for you to plan even more succesful future campaigns"
             },
             "Dashboard": {
                 "Title": "Dashboard & Reports",
-                "Info": "Real time online reporting about booking transactions, payments, and client satisfaction. Available KPIs dashboard with visualized charts & graphs that help owners quickly gauge business performances and what need."
+                "Info": "Real time online reporting about booking transactions, payments, and client satisfaction. Available KPIs dashboard with visualized charts & graphs that help owners quickly gauge business performances and what need to be done to continuosly improve"
             },
             "Notifications": {
                 "Title": "Auto Notification & Reminder",
-                "Info": "The system automatically sends reminders to client about an upcoming appointments and\/or notifications when a booking is made, changed, or canceled so you're always in control of your business without having to attend the phone all the times"
+                "Info": "The system automatically sends reminders to client about an upcoming appointments and/or notifications when a booking is made, changed, or canceled so you're always in control of your business without having to attend the phone all the times"
             },
             "Cancellation": {
                 "Title": "Booking Cancellation",
-                "Info": "Completely replace the hassles of making multiple phone calles with a few clicks to cancel\/edit a booking online. A cancellation confirmation is automatically sent to both buyers & seller to finalize the transaction"
+                "Info": "Completely replace the hassles of making multiple phone calls with a few clicks to cancel/edit a booking online. A cancellation confirmation is automatically sent to both buyers & seller to finalize the transaction"
             }
         },
         "DemoSteps": {
