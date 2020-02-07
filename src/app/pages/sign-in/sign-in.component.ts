@@ -39,7 +39,7 @@ export class SignInComponent implements OnInit, AfterViewInit {
         private appService: AppService,
         private toastr: ToastrService,
         private router: Router,
-        private cookieStorage: UniversalStorage
+        private cookieStorage: UniversalStorage,
     ) { }
     contentLoading: string;
     showLoading: boolean = false;
@@ -134,5 +134,10 @@ export class SignInComponent implements OnInit, AfterViewInit {
 
     closeModal(): void {
         this.modalService.dismissAll();
+    }
+    
+    forgotPassword(content): void {
+        console.log('go here');
+        this.modalService.open(content, { centered: true });
     }
 }
