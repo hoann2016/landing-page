@@ -483,5 +483,9 @@
     },
     "ExchangeRate": {
         "ErrorLoad": "Can not load current exchange rate"
+    },
+    "ForgotPassword": {
+        "Warning": "Warning",
+        "WarningMessage": "This feature is updating. Please try again later !"
     }
 }

@@ -24,15 +24,16 @@ export class ExchangeRateService extends ApiBaseService {
     }
 
     getCurrentExchangeRate(currencyCode: string): Observable<any> {
-        const url: string = `https://api.exchangerate-api.com/v4/latest/${ currencyCode }`;
+        const pairs: string = `${ currencyCode }/VND`;
+        const url: string = `https://fcsapi.com/api/forex/converter?symbol=${ pairs }&amount=1&access_key=xbydQMc0aweAXlccFYnnit4r8rU0Id20IBX10gsInTX03GlB7`;
         return super.getOutsideLudiinoServer(url).pipe(
             map((result: any) => {
-                if (result && result.rates && result.rates['VND']) {
-                    return result.rates['VND'];
+                if (result && result.status && result.response && result.response['price_1x_VND']) {
+                    return result.response['price_1x_VND'];
                 }
                 return 1;
             })
-        )
+        );
     }
 
     applyExchangeRate(code: string): void {

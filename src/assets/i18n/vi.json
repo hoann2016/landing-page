@@ -486,5 +486,9 @@
     },
     "ExchangeRate": {
         "ErrorLoad": "Không thể tải tỉ giá hiện tại"
+    },
+    "ForgotPassword": {
+        "Warning": "Cảnh báo",
+        "WarningMessage": "Chức năng đang được cập nhật. Vuil lòng thử lại sau !"
     }
 }
