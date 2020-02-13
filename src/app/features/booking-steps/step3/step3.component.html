@@ -1,0 +1,32 @@
+<div class="step-wrapper">
+        <div class="step-header">
+            <h4 class="step-title"><span class="back-step" (click)="goToStep(2, true)"></span>
+                3. {{ "Features.DemoSteps.Step3.Title" | translate }}</h4>
+            <div class="step-current">{{ "Features.DemoSteps.Step" | translate }} 3/5</div>
+        </div>
+        <div class="step-body">
+            <div class="row">
+                <div class="col-sm-12">
+                    <label class="field-label">{{ "Features.DemoSteps.Step3.Quantity" | translate }}</label>
+                    <div class="field-input">
+                        <input type="text" class="step-input step-input-number" [(ngModel)]="numberPeople">
+                        <span>{{ "Features.DemoSteps.Step3.Pax" | translate }}</span>
+                        <button class="step-input-btn dec" (click)="decrease()">-</button>
+                        <button class="step-input-btn inc" (click)="increase()">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="time-select">
+                <label class="field-label">{{ "Features.DemoSteps.Step3.AppointmentTime" | translate }}</label>
+                <div class="time-blocks">
+                    <div *ngFor="let block of timeBlocks" 
+                        class="time" [class.active]="demoUser?.timeSelect === block"  
+                        (click)="selectTime(block)">
+                        {{block}}
+                    </div>
+                </div>
+            </div>   
+
+            <button  (click)="goToStep(4)" class="btn move-step btn-bg-orange" [disabled]="!numberPeople || !demoUser.timeSelect">{{ "Features.DemoSteps.Next" | translate }}</button>
+        </div>
+    </div>

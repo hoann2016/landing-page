@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { NgbDateStruct, NgbCalendar, NgbDate, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
 import { TranslateService } from '@ngx-translate/core';
+import { Observable } from 'rxjs';
+import { StepService } from './services/step.service';
 
 interface BookingUser {
     date: string;
@@ -35,15 +37,19 @@ export class FeaturesComponent implements OnInit {
     selectedDOW: string;
     date: { year: number, month: number };
     demoUser: BookingUser;
+    currentStep$: Observable<number>;
 
     constructor(private modalService: NgbModal,
-                private calendar: NgbCalendar,
-                private landingPageSrv: LandingPageService,
-                private toastrService: ToastrService,
-                private translateService: TranslateService,
-                private router: Router) {
+        private calendar: NgbCalendar,
+        private landingPageSrv: LandingPageService,
+        private toastrService: ToastrService,
+        private translateService: TranslateService,
+        private router: Router,
+        private stepService: StepService
+    ) {
         this.selectedDOW = '';
         this.demoUser = {} as BookingUser;
+        this.currentStep$ = this.stepService.currentStep$;
     }
 
     ngOnInit(): void {
@@ -105,5 +111,12 @@ export class FeaturesComponent implements OnInit {
     redirectToRegister(packageSelected: string): void {
         this.landingPageSrv.selectPackage(packageSelected);
         this.router.navigate(['/pages/sign-up']);
+    }
+
+    createNewTicketTestBooking(event: boolean) {
+        if (event) {
+            this.modalService.dismissAll();
+            this.stepService.dispatchCreateNewTicketBooking(true);
+        }
     }
 }
