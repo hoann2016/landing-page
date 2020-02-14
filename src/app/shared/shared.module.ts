@@ -21,6 +21,7 @@ import { UniversalStorage } from '@shared/storage/universal.storage';
 import { LoadingComponent } from './loading/loading.component';
 import { PriceExchangeRatePipe } from './pipes/priceExchangeRate.pipe';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DashboardWraperComponent } from './layouts/dashboard-wraper/dashboard-wraper.component';
 
 @NgModule({
   exports: [ 
@@ -38,7 +39,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ReactiveFormsModule, HttpClientModule, TranslateModule,
     FontAwesomeModule
   ],
-  declarations: [HeaderComponent, HeaderCommonComponent, FooterComponent, LoadingComponent, WrapperComponent, PriceExchangeRatePipe],
+  declarations: [HeaderComponent, HeaderCommonComponent, FooterComponent, LoadingComponent, WrapperComponent, PriceExchangeRatePipe, DashboardWraperComponent],
   providers: [WINDOW_PROVIDERS, LandingFixService , LandingPageService, GlobalErrorHandlerService, UniversalStorage]
 })
 export class SharedModule {

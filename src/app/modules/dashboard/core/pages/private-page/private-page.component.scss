@@ -1,0 +1,42 @@
+@font-face{font-family:dripicons-v2;src:url(/assets/dashboard/fonts/dripicons-v2.eot);src:url(/assets/dashboard/fonts/dripicons-v2.eot?#iefix) format("embedded-opentype"),url(/assets/dashboard/fonts/dripicons-v2.woff) format("woff"),url(/assets/dashboard/fonts/dripicons-v2.ttf) format("truetype"),url(/assets/dashboard/fonts/dripicons-v2.svg#dripicons-v2) format("svg");font-weight:400;font-style:normal}
+@import url("//fonts.googleapis.com/css?family=Gothic+A1:400, 500, 600, 700&display=swap");
+@import url("//fonts.googleapis.com/css?family=Barlow:300, 400, 500, 600&display=swap");
+body {
+    margin: 0;
+    font-family: Barlow,sans-serif;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ced4da;
+    text-align: left;
+    background-color: #2a303a;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-family: Barlow,sans-serif;
+    color: #f7f7f7;
+}
+.table {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    color: #ced4da;
+}
+
+.card-box {
+    background-color: #323a46;
+    padding: 1.5rem;
+    -webkit-box-shadow: 0 0.75rem 6rem rgba(56,65,74,.03);
+    box-shadow: 0 0.75rem 6rem rgba(56,65,74,.03);
+    margin-bottom: 24px;
+    border-radius: .25rem;
+}
+.header-title {
+    font-size: 17px;
+    margin: 0 0 7px 0;
+}
+.table-hover tbody tr:hover {
+    color: #fff;
+}
+.breadcrumb {
+    background-color: transparent;
+}

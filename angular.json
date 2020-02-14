@@ -28,7 +28,8 @@
               "node_modules/angular-calendar/css/angular-calendar.css",
               "src/assets/app.scss",
               "src/styles.scss",
-              "node_modules/ngx-toastr/toastr.css"
+              "node_modules/ngx-toastr/toastr.css",
+              "src/assets/dashboard/css/app.min.scss"
             ],
             "scripts": [
             ]
