@@ -199,6 +199,8 @@
             "Title": "Mô Hình Kinh Doanh nào có thể sử dụng hệ thống Đặt & Quản Lý Lịch Hẹn Trực Tuyến Ludiino?"
         },
         "Transform": "{{price}}  vnđ",
+        "TransformUnit": "{{price}} {{unit}}",
+        "TransformUnitTail": "đ",
         "Unit": "đ"
     },
     "Features": {
@@ -256,28 +258,71 @@
         },
         "DemoSteps": {
             "Step1": {
-                "Title": "Bước 1: Xin vui lòng chọn 1 dịch vụ",
+                "Title": "1. ĐỊA ĐIỂM VÀ THỜI GIAN",
+                "Address": "Địa điểm",
+                "DayBooking": "Ngày hẹn",
                 "HairService": {
                     "Title": "Dịch vụ tóc",
                     "HairCut": "Cắt tóc",
                     "HairCutWomen": "Cắt tóc nữ trong 60 phút",
-                    "HairDye": "Sấy tóc"
+                    "HairDye": "Sấy tóc",
+                    "Detail": {
+                        "HairCut": "45 Phút - Cắt tóc tạo kiểu theo yêu cầu",
+                        "HairCutWomen": "60 Phút - Cắt tóc tạo kiểu theo yêu cầu",
+                        "HairDye": "120 Phút - Thuộc nhuôm Hàn Quốc"
+                    }
                 },
                 "SkinCare": {
                     "Title": "Chăm sóc da"
+                },
+                "Massage": {
+                    "Title": "Dịch vụ Massage"
+                },
+                "Nail": {
+                    "Title": "Nails Care"
                 }
             },
             "Step2": {
-                "Title": "Bước 2: Chọn ngày và kỹ thuật viên",
+                "Title": "CHỌN DỊCH VỤ",
                 "Technicians": "Kỹ thuật viên",
                 "TimeSelect": "Chọn Giờ"
             },
             "Step3": {
-                "Title": "Bước 3: Phương thức thanh toán",
+                "Title": "CHỌN SỐ NGƯỜI & GIỜ HẸN",
                 "Surcharge": "Phụ phí",
                 "ServiceFee": "Phí Dịch vụ",
-                "Total": "Tổng cộng"
-            }
+                "Total": "Tổng cộng",
+                "Quantity": "Số lượng",
+                "Pax": "Người",
+                "AppointmentTime": "Giờ hẹn"
+            },
+            "Step4": {
+                "Title": "THÔNG TIN KHÁCH HÀNG",
+                "Fullname": "Họ và Tên",
+                "FullNameIsRequired": "Họ tên không được để trống",
+                "PhoneNumber": "Số điện thoại",
+                "Validate": {
+                    "NameRequired": "Họ tên không được để trống",
+                    "EmailRequired": "Email không được để trống",
+                    "EmailIncorrect": "Thông tin email không hợp lệ",
+                    "PhoneRequired": "Số điện thoại không được để trống",
+                    "PhoneIncorrect": "Thông tin số điện thoại không hợp lệ"
+                }
+            },
+            "Step5": {
+                "Title": "THANH TOÁN",
+                "Date": "Ngày",
+                "AppointmentTime": "Giờ hẹn",
+                "Service": "Dịch vụ",
+                "Pax": "Người",
+                "Quantity": "Số lượng",
+                "Total": "TỔNG CỘNG",
+                "PayNow": "Thanh toán ngay",
+                "PayAtStore": "Thanh toán tại cửa tiệm",
+                "Book": "Đặt lịch"
+            },
+            "Step": "Bước",
+            "Next": "Tiếp theo"
         }
     },
     "Register": {
@@ -477,6 +522,13 @@
         "Friday": "Thứ 6",
         "Saturday": "Thứ 7",
         "Sunday": "Chủ nhật",
+        "Day.1": "Monday",
+        "Day.2": "Tuesday",
+        "Day.3": "Wednesday",
+        "Day.4": "Thursday",
+        "Day.5": "Friday",
+        "Day.6": "Saturday",
+        "Day.7": "Sunday",
         "Date": "Ngày tháng",
         "Time": "Giờ"
     },

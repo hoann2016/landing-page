@@ -198,7 +198,9 @@
         "LudiinoSolution": {
             "Title": "Who can use Ludiino Online Booking & Appointment Scheduling System?"
         },
-        "Transform": "$ {{price}}",
+        "Transform": "{{price}} USD",
+        "TransformUnit": "{{price}} {{unit}}",
+        "TransformUnitTail": "USD",
         "Unit": "$"
     },
     "Features": {
@@ -256,28 +258,71 @@
         },
         "DemoSteps": {
             "Step1": {
-                "Title": "Step 1: Please select a service",
+                "Title": "1. STORE AND DATE",
+                "Address": "Store address",
+                "DayBooking": "Appointment Date",
                 "HairService": {
                     "Title": "Hair Service",
                     "HairCut": "Hair Cut",
                     "HairCutWomen": "Hair Cut for Women 60 minutes",
-                    "HairDye": "Hair Dye"
+                    "HairDye": "Hair Dye",
+                    "Detail": {
+                        "HairCut": "45 Minute - Design hair styles as required",
+                        "HairCutWomen": "60 Minute - Hair Stylist On Demand",
+                        "HairDye": "120 Minute - Dyes from Korea"
+                    }
                 },
                 "SkinCare": {
                     "Title": "Skin Care"
+                },
+                "Massage": {
+                    "Title": "Massage Service"
+                },
+                "Nail": {
+                    "Title": "Nails Care"
                 }
             },
             "Step2": {
-                "Title": "Step 2: Select date & technicians",
+                "Title": "Select Service",
                 "Technicians": "technicians",
                 "TimeSelect": "Time Select"
             },
             "Step3": {
-                "Title": "Step 3: Payment method",
+                "Title": "SELECT QUANTITY & APPOINTMENT TIME",
                 "Surcharge": "Surcharge",
                 "ServiceFee": "Service FEE",
-                "Total": "TOTAL"
-            }
+                "Total": "TOTAL",
+                "Quantity": "No. of pax",
+                "Pax": "Pax",
+                "AppointmentTime": "Appointment Time"
+            },
+            "Step4": {
+                "Title": "CUSTOMER INFORMATION",
+                "Fullname": "Name",
+                "FullNameIsRequired": "Your name is required",
+                "PhoneNumber": "Phone",
+                "Validate": {
+                    "NameRequired": "Name is required",
+                    "EmailRequired": "Email is required",
+                    "EmailIncorrect": "Email is incorrect",
+                    "PhoneRequired": "Phone number is required",
+                    "PhoneIncorrect": "Phone number is incorrect"
+                }
+            },
+            "Step5": {
+                "Title": "PAYMENT INFORMATION",
+                "Date": "Date",
+                "AppointmentTime": "Appointment time",
+                "Service": "Service",
+                "Pax": "Pax",
+                "Quantity": "No. of pax",
+                "Total": "TOTAL",
+                "PayNow": "Pay now",
+                "PayAtStore": "Pay at store",
+                "Book": "Book"
+            },
+            "Step": "Step",
+            "Next": "Next"
         }
     },
     "Register": {
@@ -474,6 +519,13 @@
         "Friday": "Friday",
         "Saturday": "Saturday",
         "Sunday": "Sunday",
+        "Day.1": "Monday",
+        "Day.2": "Tuesday",
+        "Day.3": "Wednesday",
+        "Day.4": "Thursday",
+        "Day.5": "Friday",
+        "Day.6": "Saturday",
+        "Day.7": "Sunday",
         "Date": "Date",
         "Time": "Time"
     },

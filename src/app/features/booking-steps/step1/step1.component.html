@@ -1,0 +1,124 @@
+<div class="step-wrapper">
+    <div class="step-header"><span class="back-step" (click)="goToStep(1)"></span>
+        <h4 class="step-title">2. {{ "Features.DemoSteps.Step2.Title" | translate }}</h4>
+        <div class="step-current">{{ "Features.DemoSteps.Step" | translate }} 2/5</div>
+    </div>
+    <div class="step-body">
+        <ngb-accordion  [closeOthers]="true" activeIds="ngb-panel-0">
+            <ngb-panel id="ngb-panel-0">
+                <ng-template ngbPanelTitle>
+                    <div class="step1-section hair-section ">{{ "Features.DemoSteps.Step1.HairService.Title" | translate }}</div>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                    <div class="option" (click)="goToStep(3, {name: 'Features.DemoSteps.Step1.HairService.HairCut', price: '50000'})">
+                        <div class="left">
+                            <div class="name">{{ "Features.DemoSteps.Step1.HairService.HairCut" | translate }}</div>
+                            <div class="time">{{ "Features.DemoSteps.Step1.HairService.Detail.HairCut" | translate }}</div>
+                        </div>
+                        <div class="right">
+                            <p class="price" translate [translateParams]="{price: 50000 | priceExchangeRate | async | number, unit: 'Pricing.TransformUnitTail' | translate}">Pricing.TransformUnit</p>
+                            <!-- <p class="price">100,000đ</p> -->
+                        </div>
+                    </div>
+                    <div class="option"  (click)="goToStep(3, {name: 'Features.DemoSteps.Step1.HairService.HairCutWomen', price: '100000'})">
+                        <div class="left">
+                            <div class="name">{{ "Features.DemoSteps.Step1.HairService.HairCutWomen" |  translate }}</div>
+                            <div class="time">{{ "Features.DemoSteps.Step1.HairService.Detail.HairCutWomen" | translate }}</div>
+                        </div>
+                        <div class="right">
+                            <!-- <p class="price">50,000đ</p> -->
+                            <p class="price" translate [translateParams]="{price: 100000 | priceExchangeRate | async | number, unit: 'Pricing.TransformUnitTail' | translate}">Pricing.TransformUnit</p>
+                        </div>
+                    </div>
+                    <div class="option"  (click)="goToStep(3, {name: 'Features.DemoSteps.Step1.HairService.HairDye', price: '150000'})">
+                        <div class="left">
+                            <div class="name">{{ "Features.DemoSteps.Step1.HairService.HairDye" | translate }}</div>
+                            <div class="time">{{ "Features.DemoSteps.Step1.HairService.Detail.HairDye" | translate }}</div>
+                        </div>
+                        <div class="right">
+                            <!-- <p class="price">50,000đ</p> -->
+                            <p class="price" translate [translateParams]="{price: 150000 | priceExchangeRate | async | number, unit: 'Pricing.TransformUnitTail' | translate}">Pricing.TransformUnit</p>
+                        </div>
+                    </div>
+                </ng-template>
+            </ngb-panel>
+
+            <ngb-panel id="ngb-panel-1">
+                <ng-template ngbPanelTitle>
+                    <div class="step1-section skin-section ">{{ "Features.DemoSteps.Step1.Massage.Title" | translate }}</div>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                    <div class="option" (click)="goToStep(3, {name: 'Features.DemoSteps.Step1.HairService.HairCut', price: '50000'})">
+                        <div class="left">
+                            <div class="name">{{ "Features.DemoSteps.Step1.HairService.HairCut" | translate }}</div>
+                            <div class="time">{{ "Features.DemoSteps.Step1.HairService.Detail.HairCut" | translate }}</div>
+                        </div>
+                        <div class="right">
+                            <p class="price" translate [translateParams]="{price: 50000 | priceExchangeRate | async | number, unit: 'Pricing.TransformUnitTail' | translate}">Pricing.TransformUnit</p>
+                            <!-- <p class="price">100,000đ</p> -->
+                        </div>
+                    </div>
+                    <div class="option"  (click)="goToStep(3, {name: 'Features.DemoSteps.Step1.HairService.HairCutWomen', price: '100000'})">
+                        <div class="left">
+                            <div class="name">{{ "Features.DemoSteps.Step1.HairService.HairCutWomen" |  translate }}</div>
+                            <div class="time">{{ "Features.DemoSteps.Step1.HairService.Detail.HairCutWomen" | translate }}</div>
+                        </div>
+                        <div class="right">
+                            <!-- <p class="price">50,000đ</p> -->
+                            <p class="price" translate [translateParams]="{price: 100000 | priceExchangeRate | async | number, unit: 'Pricing.TransformUnitTail' | translate}">Pricing.TransformUnit</p>
+                        </div>
+                    </div>
+                    <div class="option"  (click)="goToStep(3, {name: 'Features.DemoSteps.Step1.HairService.HairDye', price: '150000'})">
+                        <div class="left">
+                            <div class="name">{{ "Features.DemoSteps.Step1.HairService.HairDye" | translate }}</div>
+                            <div class="time">{{ "Features.DemoSteps.Step1.HairService.Detail.HairDye" | translate }}</div>
+                        </div>
+                        <div class="right">
+                            <!-- <p class="price">50,000đ</p> -->
+                            <p class="price" translate [translateParams]="{price: 150000 | priceExchangeRate | async | number, unit: 'Pricing.TransformUnitTail' | translate}">Pricing.TransformUnit</p>
+                        </div>
+                    </div>
+                </ng-template>
+            </ngb-panel>
+
+            <ngb-panel id="ngb-panel-2">
+                <ng-template ngbPanelTitle>
+                    <div class="step1-section nails-section ">{{ "Features.DemoSteps.Step1.Nail.Title" | translate }}</div>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                    <div class="option" (click)="goToStep(3, {name: 'Features.DemoSteps.Step1.HairService.HairCut', price: '50000'})">
+                        <div class="left">
+                            <div class="name">{{ "Features.DemoSteps.Step1.HairService.HairCut" | translate }}</div>
+                            <div class="time">{{ "Features.DemoSteps.Step1.HairService.Detail.HairCut" | translate }}</div>
+                        </div>
+                        <div class="right">
+                            <p class="price" translate [translateParams]="{price: 50000 | priceExchangeRate | async | number, unit: 'Pricing.TransformUnitTail' | translate}">Pricing.TransformUnit</p>
+                            <!-- <p class="price">100,000đ</p> -->
+                        </div>
+                    </div>
+                    <div class="option"  (click)="goToStep(3, {name: 'Features.DemoSteps.Step1.HairService.HairCutWomen', price: '100000'})">
+                        <div class="left">
+                            <div class="name">{{ "Features.DemoSteps.Step1.HairService.HairCutWomen" |  translate }}</div>
+                            <div class="time">{{ "Features.DemoSteps.Step1.HairService.Detail.HairCutWomen" | translate }}</div>
+                        </div>
+                        <div class="right">
+                            <!-- <p class="price">50,000đ</p> -->
+                            <p class="price" translate [translateParams]="{price: 100000 | priceExchangeRate | async | number, unit: 'Pricing.TransformUnitTail' | translate}">Pricing.TransformUnit</p>
+                        </div>
+                    </div>
+                    <div class="option"  (click)="goToStep(3, {name: 'Features.DemoSteps.Step1.HairService.HairDye', price: '150000'})">
+                        <div class="left">
+                            <div class="name">{{ "Features.DemoSteps.Step1.HairService.HairDye" | translate }}</div>
+                            <div class="time">{{ "Features.DemoSteps.Step1.HairService.Detail.HairDye" | translate }}</div>
+                        </div>
+                        <div class="right">
+                            <!-- <p class="price">50,000đ</p> -->
+                            <p class="price" translate [translateParams]="{price: 150000 | priceExchangeRate | async | number, unit: 'Pricing.TransformUnitTail' | translate}">Pricing.TransformUnit</p>
+                        </div>
+                    </div>
+                </ng-template>
+            </ngb-panel>
+
+        </ngb-accordion>
+    </div>
+</div>

@@ -341,14 +341,55 @@ section.appointment {
 
 ::ng-deep .demo-booking-popup {
     .modal-dialog  {
-        max-width: 630px;
+        max-width: 700px;
+    }
+    .main-steps {
+        animation: MainSteps .4s ease-in-out;
+        -webkit-animation: MainSteps .4s ease-in-out;
+        -moz-animation: MainSteps .4s ease-in-out;
+        -o-animation: MainSteps .4s ease-in-out;
+        .step-wrapper {
+            padding: 20px 0;
+        }
+    }
+    @keyframes MainSteps {
+        0% {
+            transform: rotate3d(-20, -50, 0, 60deg);
+        }
+        100% {
+            transform: rotate3d(0, 0, 0, 0);
+        }
+    }
+    @-webkit-keyframes MainSteps {
+        0% {
+            transform: rotate3d(-20, -50, 0, 60deg);
+        }
+        100% {
+            transform: rotate3d(0, 0, 0, 0);
+        }
+    }
+    @-moz-keyframes MainSteps {
+        0% {
+            transform: rotate3d(-15, -50, 0, 60deg);
+        }
+        100% {
+            transform: rotate3d(0, 0, 0, 0);
+        }
+    }
+    @-o-keyframes MainSteps {
+        0% {
+            transform: rotate3d(-15, -50, 0, 60deg);
+        }
+        100% {
+            transform: rotate3d(0, 0, 0, 0);
+        }
     }
     .modal-content {
-        min-height: 607px;
+        min-height: auto;
         border-radius: 3px;
-        box-shadow: 0px -5px 8px 0 rgba(0, 0, 0, 0.05);
-        border: solid 1px rgba(255, 255, 255, 0.3);
-        background-color: #272d36;
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
     }
     .modal-header {
         height: 50px;
@@ -369,7 +410,7 @@ section.appointment {
         color: rgba(255, 255, 255, 0.7);
     }
     .modal-body {
-        padding: 46px 84px 30px 84px;
+        padding: 0;
     }
     .accordion > .card {
         margin-bottom: 5px;
@@ -383,23 +424,23 @@ section.appointment {
             box-shadow: 0px 4px 7px 0 rgba(0, 0, 0, 0.04);
             position: relative;
             z-index: 2;
-            button {
-                font-family: 'ProximaNova';
-                width: 100%;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                padding: 6px 40px 6px 18px;
-                text-decoration: none;
-                font-weight: 600;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: 2.69;
-                letter-spacing: normal;
-                text-align: left;
-                background: none;
-                color: #f18c0e;
-            }
+            // button {
+            //     font-family: 'ProximaNova';
+            //     width: 100%;
+            //     height: 100%;
+            //     display: flex;
+            //     align-items: center;
+            //     padding: 6px 40px 6px 18px;
+            //     text-decoration: none;
+            //     font-weight: 600;
+            //     font-stretch: normal;
+            //     font-style: normal;
+            //     line-height: 2.69;
+            //     letter-spacing: normal;
+            //     text-align: left;
+            //     background: none;
+            //     color: #f18c0e;
+            // }
         }
     }
     .collapse {
@@ -444,46 +485,46 @@ section.appointment {
         background-image: url(assets/images/icon/arrow_step_left.png);
         cursor: pointer;
     }
-    .step1-section {
-        display: flex;
-        align-items: center;
-        &:before {
-            content: '';
-            display: block;
-            margin: 0 10px 0 0;
-            background-position: 0 0;
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-        }
-        &.hair-section {
-            &:before {
-                width: 25px;
-                height: 25px;
-                background-image: url(assets/images/featuresp/hair.png);
-            }
-        }
-        &.skin-section {
-            &:before {
-                width: 25px;
-                height: 25px;
-                background-image: url(assets/images/featuresp/skin.png);
-            }
-        }
-        &.nails-section {
-            &:before {
-                width: 25px;
-                height: 14px;
-                background-image: url(assets/images/featuresp/nails.png);
-            }
-        }
-        &.makeup-section {
-            &:before {
-                width: 25px;
-                height: 25px;
-                background-image: url(assets/images/featuresp/make.png);
-            }
-        }
-    }
+    // .step1-section {
+    //     display: flex;
+    //     align-items: center;
+    //     &:before {
+    //         content: '';
+    //         display: block;
+    //         margin: 0 10px 0 0;
+    //         background-position: 0 0;
+    //         background-repeat: no-repeat;
+    //         background-size: 100% 100%;
+    //     }
+    //     &.hair-section {
+    //         &:before {
+    //             width: 25px;
+    //             height: 25px;
+    //             background-image: url(assets/images/featuresp/hair.png);
+    //         }
+    //     }
+    //     &.skin-section {
+    //         &:before {
+    //             width: 25px;
+    //             height: 25px;
+    //             background-image: url(assets/images/featuresp/skin.png);
+    //         }
+    //     }
+    //     &.nails-section {
+    //         &:before {
+    //             width: 25px;
+    //             height: 14px;
+    //             background-image: url(assets/images/featuresp/nails.png);
+    //         }
+    //     }
+    //     &.makeup-section {
+    //         &:before {
+    //             width: 25px;
+    //             height: 25px;
+    //             background-image: url(assets/images/featuresp/make.png);
+    //         }
+    //     }
+    // }
 }
 
 .step2-wrapper {

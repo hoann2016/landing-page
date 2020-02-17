@@ -1,0 +1,236 @@
+.step-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    overflow-y: hidden;
+    margin: 0;
+    display: block;
+}
+.step-header {
+    height: 50px;
+    border-bottom: 1px solid rgba(215, 215, 215, 0.5);
+    padding: 6px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.step-title {
+    font-family: 'ProximaNova';
+    font-size: 16px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 0.32px;
+    text-align: left;
+    color: #111111;
+    text-transform: uppercase;
+    margin: 0;
+}
+.step-current {
+    font-family: 'ProximaNova';
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    letter-spacing: 0.26px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+}
+.step-body {
+    padding: 5px 24px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    height: calc(100% - 50px);
+}
+
+.ic-calendar {
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin: auto;
+    background-size: 16px 16px;
+    background-position: center 1px;
+    background-repeat: no-repeat;
+    background-image: url(assets/images/homep/calendar_black.png);
+}
+
+.calendar {
+    border: 0;
+    fa-icon {
+        color: #fff;
+    }
+}
+
+.field-input {
+    position: relative;
+    font-family: "ProximaNova";
+    font-size: 14px;
+    font-weight: normal;
+    color: #000;
+    .step-input-btn {
+        position: absolute;
+        top: 8px;
+        border: 0;
+        outline: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        &.dec {
+            left: 5px;
+        }
+        &.inc {
+            right: 5px;
+        }
+    }
+    span {
+        position: absolute;
+        top: 11px;
+        left: 45%;
+    }
+}
+.step-input {
+    width: 100%;
+    height: 45px;
+    border-radius: 3px;
+    box-shadow: 0px 3.5px 10.5px 0 rgba(0, 0, 0, 0.05);
+    border: 0;
+    background-color: #fff;
+    padding: 0 10px;
+    margin: 0 0 16px 0;
+    text-align: left;
+    &-number {
+        padding: 0 102px 0 30px;
+        padding-right: 58%;
+        text-align: right;
+    }
+}
+.field-label {
+    font-family: "ProximaNova";
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    letter-spacing: 0.26px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0 0 4px 0;
+}
+
+.booking-date {
+    ::ng-deep {
+        .mat-form-field-wrapper, .mat-form-field-flex {
+            height: 100%;
+            align-items: center;
+            padding: 0;
+        }
+        .mat-form-field-flex {
+            width: 100%;
+            height: 45px;
+            align-items: center;
+            border-radius: 3px;
+            box-shadow: 0px 3.5px 10.5px 0 rgba(0, 0, 0, 0.05);
+            border: 0;
+            background-color: #fff;
+            padding: 0 0 0 10px;
+            margin: 0 0 16px 0;
+        }
+        .mat-form-field-infix {
+            font-family: "ProximaNova";
+            border-top: 0;
+            font-size: 14px;
+            input {
+                text-align: left;
+                text-transform: capitalize;
+            }
+        }
+        .mat-icon-button {
+            width: 30px !important;
+            height: 30px !important;
+        }
+    }
+}
+
+.field-select  {
+    font-family: "ProximaNova";
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0px 3.5px 10.5px 0 rgba(0, 0, 0, 0.05);
+    border: 0;
+    background-color: #fff;
+    margin: 0 0 16px 0;
+    padding: 0 10px;
+    ::ng-deep {
+        .mat-form-field-infix {
+            border-top: 0;
+        }
+        .mat-form-field-wrapper, .mat-form-field-flex {
+            height: 100%;
+            align-items: center;
+            padding: 0;
+        }
+    }
+}
+.field-text-area {
+    font-family: "ProximaNova";
+    font-size: 14px;
+    width: 100%;
+    min-height: 80px;
+    border-radius: 3px;
+    box-shadow: 0px 3.5px 10.5px 0 rgba(0, 0, 0, 0.05);
+    border: 0;
+    background-color: #fff;
+    margin: 0 0 16px 0;
+    padding: 0 10px;
+    ::ng-deep {
+        .mat-form-field-infix {
+            border-top: 0;
+        }
+    }
+}
+.branch-name {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0 0 4px 0;
+}
+.branch-address {
+    font-size: 13px;
+    line-height: 1;
+    margin: 0;
+    text-overflow: ellipsis;
+}
+.move-step {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+.form-control {
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    height: 50px;
+}
+
+.btn-bg-orange {
+    background-color: #ff7623;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+@media only screen and (max-width: 991.98px) { 
+    .step-wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .step-title {
+        font-size: 13px;
+    }
+    .step-input-number {
+        padding: 0 167px 0 30px;
+    }
+}

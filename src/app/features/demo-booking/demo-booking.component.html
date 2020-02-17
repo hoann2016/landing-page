@@ -72,6 +72,7 @@
                     <div *ngFor="let obj of ticketNumbers; let i = index" class="ticket-default" [class.locked]="i % 7 === 0"></div>
                     <div *ngFor="let ticket of ticketData" class="ticket"  
                         [class.new]="ticket.isNew"
+                         [ngClass]="{ 'new': ticket.isNew, 'is-opacity': ticket.opacityWhenNew }"
                         [ngStyle]="ticket.styles">
                         <h4 class="">{{ticket.timePeriod}}| {{ticket.serviceName | translate}}</h4>
                         <h3>{{ticket.staffName}}</h3>
