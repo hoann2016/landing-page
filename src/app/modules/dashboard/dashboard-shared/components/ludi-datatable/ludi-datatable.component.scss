@@ -1,0 +1,47 @@
+.column-item {
+    position: relative;
+    cursor: pointer;
+    span {
+        position: absolute;
+    }
+}
+.card-box-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 40px;
+    justify-content: space-between;
+    .card-box-header-left {
+        display: flex;
+        align-items: center;
+        .content-projection {
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            position: relative;
+            .trash-col {
+                position: absolute;
+                height: 46px;
+                width: 1px;
+                background: #fff;
+                left: 10px;
+            }
+        }
+        .header-title {
+            text-transform: uppercase;
+        }
+    }
+    .card-box-header-right {
+        .search-box {
+            position: relative;
+            .search-button {
+                position: absolute;
+                right: 9px;
+                top: 6px;
+                i {
+                    font-size: 19px;
+                    color: #504f4f;
+                }
+            }
+        }
+    }
+}

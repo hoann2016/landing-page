@@ -1,1 +1,19 @@
-<p>merchant-page works!</p>
+<app-ludi-datatable [grid]="gridControl" (eventSorting)="eventSortingMerchant($event)" (eventSearching)="eventSearchingMerchant($event)">
+    <div class="list-package">
+        <div class="package-item">
+            <span class="package-count">360</span>
+            <span class="package-name">Enterprise</span>
+        </div>
+        <div class="package-item">
+            <span class="trash-col"></span>
+            <span class="package-count">43</span>
+            <span class="package-name">Professional</span>
+        </div>
+        <div class="package-item">
+            <span class="trash-col"></span>
+            <span class="package-count">15</span>
+            <span class="package-name">Basic Package</span>
+        </div>
+    </div>
+</app-ludi-datatable>
+<ludi-pagination [total]="totalPage" (currentPageIsChanged)="eventPaging($event)"></ludi-pagination>
