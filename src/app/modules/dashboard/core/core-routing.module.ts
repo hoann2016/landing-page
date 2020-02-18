@@ -27,6 +27,16 @@ const routes: Routes = [
                 loadChildren: './../modules/merchant/merchant.module#MerchantModule'
             }
         ]
+    },
+    {
+        path: 'package',
+        component: PrivatePageComponent,
+        children: [
+            {
+                path: '',
+                loadChildren: './../modules/package/package.module#PackageModule'
+            }
+        ]
     }
 ];
 

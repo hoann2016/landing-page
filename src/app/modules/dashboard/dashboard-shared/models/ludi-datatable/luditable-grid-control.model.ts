@@ -18,6 +18,8 @@ export class LudiTableGridColumnModel {
     public visible: boolean = true;
     public sortingStatus: string | null = null;
     public columnQuery: string;
+    public css: any;
+    public class: string;
 
     constructor(init?: Partial<LudiTableGridColumnModel>) {
         Object.assign(this, init);

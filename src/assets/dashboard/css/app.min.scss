@@ -1,7 +1,7 @@
 @import url("./icons.min.css");
 
 .wraper-dashboard-ludiino {
-  @import url("./bootstrap.min.css");
+//   @import url("./bootstrap.min.css");
     #sidebar-menu>ul>li>a.active {
         color: #188ae2;
         background-color: #f1f5f7;
@@ -829,6 +829,8 @@
     position: relative;
     right: 0;
     color: #ced4da;
+    z-index: -1;
+    width: 100%;
     background-color: #333a46;
   }
 

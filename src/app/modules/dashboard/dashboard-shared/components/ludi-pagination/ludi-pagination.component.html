@@ -7,7 +7,7 @@
 			<ul class="pagination">
                 <li
                     class="paginate_button page-item previous"
-                    (click)="goPage(false, false)"
+                    (click)="goPage(true, false)"
                 >
                     <a tabindex="0" class="page-link">Previous</a>
                 </li>
@@ -15,13 +15,13 @@
                     class="paginate_button page-item"
                     *ngFor="let item of listPagePaginations; let i = index;"
                     [ngClass]="{'active': item + 1 == currentPageActive}"
-                    (click)="goPage(true, item + 2)"
+                    (click)="goPage(false, false, item + 1)"
                 >
                     <a tabindex="0" class="page-link">{{ item + 1 }}</a>
                 </li>
                 <li
                     class="paginate_button page-item next"
-                    (click)="goPage(false, true)"
+                    (click)="goPage(true, true)"
                 >
                     <a tabindex="0" class="page-link">Next</a>
                 </li>

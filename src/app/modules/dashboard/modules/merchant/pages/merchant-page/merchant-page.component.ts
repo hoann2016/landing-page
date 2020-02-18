@@ -352,7 +352,8 @@ export class MerchantPageComponent implements OnInit {
                     displayName: 'Gói dịch vụ',
                     visible: true,
                     sortable: true,
-                    columnQuery: 'package'
+                    columnQuery: 'package',
+                    css: { color: '#F4BE0F', fontWeight: '700' }
                 }),
                 new LudiTableGridColumnModel({
                     name: 'username',
@@ -383,7 +384,8 @@ export class MerchantPageComponent implements OnInit {
                     name: 'status',
                     displayName: 'Trạng thái',
                     visible: true,
-                    sortable: false
+                    sortable: false,
+                    css: { color: 'green' }
                 }),
             ]
         });

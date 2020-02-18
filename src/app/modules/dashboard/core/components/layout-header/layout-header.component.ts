@@ -12,4 +12,7 @@ export class LayoutHeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggleSidebar(): void {
+      
+  }
 }
