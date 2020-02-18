@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LudiTableGridControlModel, LudiTableGridColumnModel } from './../../../../dashboard-shared/models/ludi-datatable/luditable-grid-control.model';
-import { QUERY_CONSTANT } from 'app/modules/dashboard/core/constants/query.constant';
+import { QUERY_CONSTANT } from './../../../../core/constants/query.constant';
 import { orderBy } from 'lodash';
 
 const DATA = [
