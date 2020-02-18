@@ -1,0 +1,16 @@
+.list-package {
+    display: flex;
+    align-items: center;
+    .package-item {
+        padding: 0 15px;
+        position: relative;
+        .package-count {
+            display: block;
+            font-weight: bold;
+            font-size: 19px;
+        }
+        .trash-col {
+            left: 0;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<div class="row" *ngIf="totalPage && totalPage > 1">
+	<div class="col-sm-12 col-md-5">
+		<div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div>
+	</div>
+	<div class="col-sm-12 col-md-7">
+		<div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate">
+			<ul class="pagination">
+                <li
+                    class="paginate_button page-item previous"
+                    (click)="goPage(false, false)"
+                >
+                    <a tabindex="0" class="page-link">Previous</a>
+                </li>
+                <li
+                    class="paginate_button page-item"
+                    *ngFor="let item of listPagePaginations; let i = index;"
+                    [ngClass]="{'active': item + 1 == currentPageActive}"
+                    (click)="goPage(true, item + 2)"
+                >
+                    <a tabindex="0" class="page-link">{{ item + 1 }}</a>
+                </li>
+                <li
+                    class="paginate_button page-item next"
+                    (click)="goPage(false, true)"
+                >
+                    <a tabindex="0" class="page-link">Next</a>
+                </li>
+			</ul>
+		</div>
+	</div>
+</div>
