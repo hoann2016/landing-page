@@ -40,7 +40,7 @@ export class LudiPaginationComponent implements OnInit, OnChanges {
                     this.currentPageActive = this.currentPageActive + 1;
                 }
             } else {
-                if (this.currentPageActive === 0) {
+                if (this.currentPageActive > 1) {
                     this.currentPageActive = this.currentPageActive - 1;
                 }
             }
