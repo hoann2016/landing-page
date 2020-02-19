@@ -1,6 +1,8 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PackageListComponent } from './pages/package-list/package-list.component';
+import { PackageItemComponent } from './components/package-item/package-item.component';
+import { CommonModule } from '@angular/common';
 
 
 const routes: Routes = [
@@ -11,9 +13,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forChild(routes)],
+    imports: [RouterModule.forChild(routes), CommonModule],
     exports: [RouterModule],
-    declarations: [PackageListComponent]
+    declarations: [PackageListComponent, PackageItemComponent]
 })
 export class PackageRoutingModule {
     static forRoot(): ModuleWithProviders {

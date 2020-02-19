@@ -1,6 +1,6 @@
 <div class="row" *ngIf="totalPage && totalPage > 1">
 	<div class="col-sm-12 col-md-5">
-		<div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div>
+		<!-- <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div> -->
 	</div>
 	<div class="col-sm-12 col-md-7">
 		<div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate">
@@ -9,7 +9,7 @@
                     class="paginate_button page-item previous"
                     (click)="goPage(true, false)"
                 >
-                    <a tabindex="0" class="page-link">Previous</a>
+                    <a tabindex="0" class="page-link">Trước</a>
                 </li>
                 <li
                     class="paginate_button page-item"
@@ -23,7 +23,7 @@
                     class="paginate_button page-item next"
                     (click)="goPage(true, true)"
                 >
-                    <a tabindex="0" class="page-link">Next</a>
+                    <a tabindex="0" class="page-link">Tiếp</a>
                 </li>
 			</ul>
 		</div>
