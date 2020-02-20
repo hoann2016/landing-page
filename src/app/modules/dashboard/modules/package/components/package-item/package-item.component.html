@@ -1,0 +1,48 @@
+<div class="package-item">
+    <div class="package-title">{{ packageData?.title }}</div>
+    <div class="package-description">
+        {{ packageData?.description }}
+    </div>
+    <div class="package-detail">
+        <div class="package-detail-item">
+            <label class="package-detail-item-label">
+                Phí dịch vụ
+            </label>
+            <span class="package-detail-item-content free">
+                {{ packageData?.fee }}
+            </span>
+        </div>
+        <div class="package-detail-item">
+            <label class="package-detail-item-label">
+                Số lượng booking
+            </label>
+            <span class="package-detail-item-content">
+                {{ packageData?.bookingNum }}
+            </span>
+        </div>
+        <div class="package-detail-item">
+            <label class="package-detail-item-label">
+                Thời hạn sử dụng
+            </label>
+            <span class="package-detail-item-content">
+                {{ packageData?.expiredIn }}
+            </span>
+        </div>
+        <div class="package-detail-item">
+            <label class="package-detail-item-label">
+                Số lượt gia hạn
+            </label>
+            <span class="package-detail-item-content">
+                {{ packageData?.purchase }}
+            </span>
+        </div>
+    </div>
+    <div class="package-link-detail">
+        <a><span>Chi tiết</span><span><i class="dripicons-arrow-thin-right"></i></span></a>
+    </div>
+    <div class="package-option">
+        <div class="option-dot">
+            <i class="dripicons-dots-3"></i>
+        </div>
+    </div>
+</div>

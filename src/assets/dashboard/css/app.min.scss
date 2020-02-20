@@ -7,6 +7,19 @@
         background-color: #f1f5f7;
         border-right-color: #188ae2;
     }
+    .table {
+        td {
+            border-top: 1px solid #3b4452;
+            padding: .85rem;
+            vertical-align: top;
+        }
+        thead {
+            th {
+                border-bottom: 2px solid #3b4452;
+                border-top: 1px solid #3b4452;
+            }
+        }
+    }
   .metismenu {
     padding: 0;
   }

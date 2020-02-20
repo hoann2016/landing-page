@@ -79,7 +79,7 @@ export class SignInComponent implements OnInit, AfterViewInit {
                             window.location.href = `${environment.rootproto}${data.domain}/pages/sign-in?session=${data.sessionId}`;
                         } else {
                             this.cookieStorage.setItem('access-token', data.token);
-                            this.RedirectToHome();
+                            this.redirectToDashboard();
                         }
                     }
                 },
@@ -130,6 +130,10 @@ export class SignInComponent implements OnInit, AfterViewInit {
     RedirectToHome() {
         this.modalService.dismissAll();
         this.router.navigate(['/']);
+    }
+
+    private redirectToDashboard(): void {
+        this.router.navigateByUrl('/dashboard');
     }
 
     closeModal(): void {
