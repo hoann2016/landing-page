@@ -385,7 +385,7 @@ export class MerchantPageComponent implements OnInit {
                     displayName: 'Trạng thái',
                     visible: true,
                     sortable: false,
-                    css: { color: 'green' }
+                    css: { color: '#5efc82' }
                 }),
             ]
         });

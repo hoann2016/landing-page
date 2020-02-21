@@ -19,7 +19,7 @@ export class PackageListComponent implements OnInit {
             title: 'Newbie',
             description: 'Sử dụng tính năng Thanh Toán Trực Tuyến để nhận ngay thanh toán khi đặt hẹn và không phải lo nghĩ về quản lý tiền mặt',
             fee: '368,000 đ',
-            bookingNum: 'Theo gói đăng ký',
+            bookingNum: 'Không giới hạn',
             expiredIn: 'Theo gói đăng ký',
             purchase: 'Không giới hạn'
         },
@@ -27,7 +27,7 @@ export class PackageListComponent implements OnInit {
             title: 'Biggie',
             description: 'Dễ dàng phân công quản lý lịch làm việc của nhân viên và tạo các Chiến Dịch Khuyến Mãi Trực Tuyến để thu hút Khách Hàng mới',
             fee: '828,000 đ',
-            bookingNum: 'Theo gói đăng ký',
+            bookingNum: 'Không giới hạn',
             expiredIn: 'Theo gói đăng ký',
             purchase: 'Không giới hạn'
         },
@@ -35,7 +35,7 @@ export class PackageListComponent implements OnInit {
             title: 'Hulk',
             description: 'Kinh Doanh Trực Tuyến cả Dịch Vụ & Sản Phẩm ngay trên trang web riêng của cửa tiệm để tăng tiện ích cho Khách Hàng & tối ưu hóa doanh thu',
             fee: '1,426,000 đ',
-            bookingNum: 'Theo gói đăng ký',
+            bookingNum: 'Không giới hạn',
             expiredIn: 'Theo gói đăng ký',
             purchase: 'Không giới hạn'
         }
