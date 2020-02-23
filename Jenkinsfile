@@ -2,28 +2,14 @@ pipeline {
     agent any
     environment {
         HOME="."
-        REGISTRY = "repo.treescale.com/ludiinohub/lb-landing-page-dev"
+        GIT_LOCAL_BRANCH = getGitBranchName()
+        REGISTRY = "repo.treescale.com/ludiinohub/lb-landing-page-$GIT_LOCAL_BRANCH"
         REGISTRY_CREDENTIAL = "treescalehub"
         MAIN_VERSION = "v0.1."
         DOCKER_TAG = "$MAIN_VERSION$BUILD_NUMBER"
         CONTAINER_NAME = 'lb-landing-page'
     }
     stages {
-        // stage('Prepare') { 
-        //     agent {
-        //         docker {
-        //             image 'node:10.16-alpine' 
-        //             args '-p 3000:3000' 
-        //         }
-        //     }
-        //     options {
-        //         timeout(time: 1, unit: 'HOURS') 
-        //     }
-        //     steps {
-        //         sh 'npm install'
-        //         sh 'npm run lint'
-        //     }
-        // }
         stage('Build') {
             options {
                 timeout(time: 1, unit: 'HOURS') 
@@ -32,7 +18,7 @@ pipeline {
                 script {
                     //sh 'sed -i -e "s/ENV/$DEV_ENVIRONMENT/g" ./Dockerfile'
                     //sh 'rm -f ./Dockerfile-e'
-                    sh "cp ./devOps/$DEV_ENVIRONMENT/Dockerfile ./"
+                    sh "cp ./devOps/$GIT_LOCAL_BRANCH/Dockerfile ./"
                     dockerImage = docker.build REGISTRY + ":$DOCKER_TAG"
                 }
             }
@@ -56,7 +42,7 @@ pipeline {
                 echo 'DEPLOY'
                 sshagent (credentials: ['ssh-lobdev']) {
                     withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: REGISTRY_CREDENTIAL, usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
-                        sh "ssh -o StrictHostKeyChecking=no $LOBDEV_USER@$LOBDEV_HOST '/usr/bin/deployv2 $USERNAME $PASSWORD $CONTAINER_NAME'"
+                        sh "ssh -o StrictHostKeyChecking=no $LOBDEV_USER@$LOBDEV_HOST '/usr/bin/deploy $USERNAME $PASSWORD $CONTAINER_NAME'"
                     }
                 }
                 echo 'DONE'
@@ -74,6 +60,11 @@ pipeline {
             notifyFailed()
         }
     }
+}
+
+def getGitBranchName() {
+    def fullName = scm.branches[0].name.trim()
+    return fullName.substring(fullName.lastIndexOf('/') + 1, fullName.length())
 }
 
 def notifyBuild(String buildStatus = 'STARTED', String colorCode = '#5492f7', String notify = '') {
