@@ -37,12 +37,29 @@ pipeline {
                 sh "docker rmi $REGISTRY:$DOCKER_TAG"
             }
         }
-        stage('Deploy') {
+                stage('Deploy-Develop') {
+            when {
+                environment name: 'GIT_LOCAL_BRANCH', value: 'develop'
+            }
             steps {
-                echo 'DEPLOY'
+                echo 'DEPLOY DEVELOP'
                 sshagent (credentials: ['ssh-lobdev']) {
                     withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: REGISTRY_CREDENTIAL, usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
                         sh "ssh -o StrictHostKeyChecking=no $LOBDEV_USER@$LOBDEV_HOST '/usr/bin/deploy $USERNAME $PASSWORD $CONTAINER_NAME'"
+                    }
+                }
+                echo 'DONE'
+            }
+        }
+        stage('Deploy-Staging') {
+            when {
+                environment name: 'GIT_LOCAL_BRANCH', value: 'staging'
+            }
+            steps {
+                echo 'DEPLOY STAGING'
+                sshagent (credentials: ['ssh-lobstaging']) {
+                    withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: REGISTRY_CREDENTIAL, usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
+                        sh "ssh -o StrictHostKeyChecking=no $LOBSTAGING_USER@$LOBSTAGING_HOST '/usr/bin/deploy $USERNAME $PASSWORD $CONTAINER_NAME'"
                     }
                 }
                 echo 'DONE'
