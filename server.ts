@@ -55,7 +55,7 @@ const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require(`./dist-server/mai
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import { REQUEST, RESPONSE } from '@nguniversal/express-engine/tokens';
 // port
-const PORT =  4200;
+const PORT =  4350;
 // static path from prerenders
 import { ROUTES } from './static.paths';
 // for test

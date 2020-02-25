@@ -24,7 +24,7 @@
     "build:prod": "ng build --prod",
     "build:universal": "ng run ludiino-landing-page:build:production && ng run ludiino-landing-page:server:production && webpack --progress --colors",
     "build:universal:dev": "npm run nghm -- build --aot=true --output-hashing=all --named-chunks=false --build-optimizer=true  && ng run ludiino-landing-page:server:dev && webpack",
-    "build:universal:staging": "npm run nghm build --aot=true --output-hashing=all --named-chunks=false --build-optimizer=true  && ng run ludiino-landing-page:server:staging && webpack",
+    "build:universal:staging": "ng build --prod --configuration=staging --aot=true --output-hashing=all --named-chunks=false --build-optimizer=true  && ng run ludiino-landing-page:server:staging && webpack --progress --colors",
     "server": "node server.js",
     "test": "ng test",
     "test:ci": "cross-env CI=true ng test",

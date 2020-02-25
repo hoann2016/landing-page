@@ -4,11 +4,9 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false,
+  production: true,
   isServer: true,
-  // for prerender
-  host: 'http://localhost:4000',
-  rootproto:"http://",
+  rootproto:"https://",
   rootip:"staging.ludiino.com",
   rootpath:"/",
   socketPath:'/socket',

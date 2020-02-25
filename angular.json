@@ -74,7 +74,7 @@
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "src/environments/staging/environment.prod.ts"
+                  "with": "src/environments/server/environment.staging.ts"
                 }
               ],
               "serviceWorker": true
@@ -174,7 +174,7 @@
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "src/environments/staging/environment.prod.ts"
+                  "with": "src/environments/server/environment.staging.ts"
                 }
               ]
             }
