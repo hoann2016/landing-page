@@ -72,7 +72,7 @@
             "RegisterNow_Biggie": "Get Biggie",
             "RegisterNow_Hulk": "Get Hulk",
             "TableFeature": {
-                "Website": "Web Site",
+                "Website": "A Website",
                 "RatingReview": "Rating & Review",
                 "ServicePricing": "Services & Pricing",
                 "TimeSlotBookingConfirmation": "Time Slots Booking & Confirmation",
@@ -85,11 +85,12 @@
                 "TechnicianSchedulingBooking": "Technician Scheduling & Booking",
                 "CustomerMembership": "Customer Membership",
                 "ProductCommerce": "Product Commerce",
-                "Dashboards": "Dashboard",
+                "Dashboards": "Reports & Dashboard",
                 "CalendarView": "Calendar View",
+                "SocialBookingLink": "Social Booking Link",
                 "ContentTable": {
                     "Unlimited": "Unlimited",
-                    "10BookingPerMonth": "10 bookings / Month",
+                    "10BookingPerMonth": "20 bookings / Month",
                     "PayAtStore": "Pay At Store",
                     "PayNow": "Pay Now"
                 }
