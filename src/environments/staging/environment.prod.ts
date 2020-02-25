@@ -1,7 +1,7 @@
 export const environment = {
     production: true,
     isServer: true,
-    rootproto:"http://",
+    rootproto:"https://",
     rootip:"staging.ludiino.com",
     rootpath:"/",
     port:null,
