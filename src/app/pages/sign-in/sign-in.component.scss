@@ -1,0 +1,335 @@
+p{
+  text-transform: none;
+}
+.one-line {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.wrap-form-field .blue-text {
+  color: #ff8d8d;
+  font-size: 0.7em;
+  margin-left: 3px;
+}
+
+.title-input {
+  font-size: 14px;
+  color: #8d8d8d;
+}
+
+.header-form {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #313232;
+}
+
+.have_acc1 p {
+  margin-top: 5px !important;
+}
+
+.header-page {
+  margin-bottom: 40px;
+}
+
+.one-item {
+  margin-top: 15px;
+}
+
+.two-item {
+  margin-top: 15px;
+}
+
+.fix-boder {
+  width: 100%;
+}
+
+.form-input-2 select {
+  width: 100%;
+}
+
+.form-input-1 select {
+  width: 100%;
+}
+
+.sugest-name {
+    p{
+        font-size: 0.8rem;
+    } 
+  .shop-domain {
+    margin-top: 5px;
+
+    padding-left: 5px;
+    p{
+        span{
+            color: #e59017;
+        }
+    }
+  }
+}
+
+.invalid-feedback {
+  font-size: 80%;
+  color: #dc3545;
+}
+
+.is-invalid {
+  border: 1px solid red;
+}
+
+// ================================
+// CSS's Phuong
+// ================================
+
+.section-signin {
+  background-color: #f5f9f9;
+  height: 100vh;
+  padding: 0;
+}
+
+.section-signin a{
+  color: #00aeef;
+}
+.section-signin .login-cus-form{
+  background-color: #ffffff;
+  padding: 30px 30px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px;
+  border-radius: 5px;
+}
+.section-signin .wel-img{
+margin-top: 60px;
+}
+.section-signin .title-sub-right{
+font-size: 19px;
+color: #ffffff;
+
+}
+
+.section-signin .wrap-left-signin {
+  position: relative;
+  background-image: url(/assets/images/sign-up/bg.png);
+  background-size: cover;
+  height: 100vh;
+  padding: 40px 0px;
+  color: #fff;
+}
+
+.section-signin .welcome-container .wel-img img {
+  width: 180px;
+}
+
+.section-signin .welcome-container h3 {
+  color: #fff;
+  margin: 10px 0 0 0;
+}
+
+.section-signin .welcome-container hr {
+  border-top: 1px solid #ffffff5c;
+}
+
+.section-signin .welcome-container p {
+  color: #fff;
+  opacity: 0.7;
+}
+.section-signin .welcome-container{
+  padding: 0 30px;
+}
+
+.section-signin .device-mac {
+  width: 100%;
+  bottom: 0%;
+  height: 70%;
+  background-image: url(/assets/images/sign-up/device-new.png);
+  background-repeat: no-repeat;
+  background-position: 25%;
+  background-size: cover;
+  position: absolute;
+
+}
+
+.section-signin .wrap-left-signin .macbook_img {
+  width: 100%;
+  position: absolute;
+  left: 20px;
+  bottom: 50px;
+}
+
+.section-signin .ft-authen span {
+  position: absolute;
+  bottom: 30px;
+  text-align: center;
+  width: 90%;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.section-signin .wrap-over-signin {
+  overflow: auto;
+  height: 100vh;
+  background-color: #f5f6f7;
+  
+}
+
+.section-signin .wrap-form-field {
+  padding: 15px;
+  width: 50%;
+  margin: 15% auto 0;
+ 
+}
+
+.section-signin .wrap-form-field .header-page {
+  margin-top: 50px;
+  text-align: center;
+}
+.section-signin .wrap-form-field input {
+  border-style: none;
+  padding: 5px;
+  outline: none;
+  margin-top: 5px;
+  font-size: 14px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #edf1f7;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.9);
+  padding-left: 45px;
+}
+
+
+.section-signin .wrap-form-field button {
+  background-color: #f49c1e;
+  color: #fff;
+  padding: 7px 20px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 45px;
+  border-radius: 3px;
+  box-shadow: 0px 3.5px 10.5px 0 rgba(0, 0, 0, 0.05);
+  background-image: linear-gradient(to bottom, #ffc066, #f39a1b);
+
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.28px;
+  text-align: center;
+  color: var(--white);
+}
+
+.section-signin .wrap-form-field button:hover {
+  background-color: #e59017;
+}
+
+.section-signin .btn_submit_signup button {
+  margin: 0 10px 0 15px;
+
+}
+
+.section-signin a:focus {
+  color: #00aeef !important;
+
+}
+
+.section-signin .ip_checkbox {
+  margin-top: 0px;
+}
+
+
+.section-signin .text-danger{
+    font-size: 13px!important;
+}
+.section-signin ::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+.section-signin ::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+.section-signin .img-email{
+  position: absolute;
+  left: 27px;
+  top: 43px;
+}
+.section-signin .img-password{
+  position: absolute;
+  left: 27px;
+  top: 40px;
+}
+
+.section-signin .gach{
+  position: absolute;
+  width: 1px;
+  height: 19px;
+  opacity: 0.6;
+  background-color: #9fb2c9;
+  top: 38px;
+  left: 50px;
+}
+.section-signin .img-top{
+  width: 150px;
+  margin: 10% 10% 0;
+}
+.modal-user-not-active {
+    padding: 40px 20px;
+    position: relative;
+    .current-logo {
+        display: block;
+        text-align: center;
+        width: 100%;
+        img {
+            max-width: 150px;
+        }
+    }
+    .content-notification {
+        width: 100%;
+        margin-top: 20px;
+        .text-message {
+            text-align: center;
+            font-size: 16px;
+        }
+    }
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        z-index: 99;
+        cursor: pointer;
+    }
+}
+
+
+@media only screen and (max-width:768px) {
+  .section-signin .wrap-form-field {
+    padding: 15px;
+    width: 100%;
+    margin: 0% auto 0;
+   
+  }
+}
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 991px)  {  
+  .section-signin .wrap-form-field {
+  padding: 15px;
+  width: 80%;
+  margin: 0% auto 0;
+ 
+}}
+@media only screen 
+and (min-width : 992px)   {  
+  .section-signin .wrap-form-field {
+  padding: 15px;
+  width: 60%;
+  margin: 0% auto 0;
+ 
+}}

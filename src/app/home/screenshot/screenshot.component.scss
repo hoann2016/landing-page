@@ -1,0 +1,29 @@
+#pricing_lud .btn-act {
+  padding: 9px 23px !important;
+}
+.price-box {
+    .price {
+        position: relative;
+        font-size: 30px;
+        .currency {
+            left: unset;
+            top: 3px;
+            font-size: 16px;
+            right: -11px;
+        }
+    }
+}
+.pricing-header {
+    height: 105px;
+    .price-box {
+        height: 72px;
+        .plan-unit {
+            font-size: 19px;
+            letter-spacing: 0px;
+            color: #757575;
+        }
+    }
+    .ribbon {
+        top: 64%;
+    }
+}

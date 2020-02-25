@@ -1,49 +1,64 @@
 <!-- Multipele Industrial Section start -->
-<section id="industry" class="industry">
-  <img src="assets/images/home2/bg_wave.png" alt="" class="bg_wave">
-  <div class="container">
-    <div class="title_lud">
-      <h1>Ludiino is an Online Solution that works for multiple industries</h1>
-      <span>Whether you own a Beauty Salon, a Sport Center, an Automobile Dealership, or a Medical Clinic, you will certainly need an online booking software for your clients to book & pay for the provided services, and Ludiino is the only solution for all your needs</span>
+<section
+    id="industry"
+    class="industry"
+>
+    <img
+        src="assets/images/home2/bg_wave.png"
+        alt
+        class="bg_wave"
+    >
+    <div class="container">
+        <div class="title_lud">
+            <h1>{{'Home.Feature.Header'|translate}}</h1>
+            <span>                
+                {{'Home.Feature.Description'|translate}}
+                <strong class="focus_text"> {{'Home.Feature.Description2'|translate}}</strong>
+               
+                {{'Home.Feature.Description3'|translate}}
+            </span>
+        </div>
+        <div class="row">
+            <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="box_industry">
+                    <img
+                        src="assets/images/home2/industry1.jpg"
+                        alt
+                        class="img_industry"
+                    >
+                    <h3>
+                        {{'Home.Feature.ServicesName.HairSalon'|translate}}
+                    </h3>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="box_industry">
+                    <img
+                        src="assets/images/home2/industry2.jpg"
+                        alt
+                        class="img_industry"
+                    >
+                    <h3>
+                        {{'Home.Feature.ServicesName.BeautySalon'|translate}}
+                    </h3>
+                </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="box_industry">
+                    <img
+                        src="assets/images/home2/industry3.jpg"
+                        alt
+                        class="img_industry"
+                    >
+                    <h3>
+                        {{'Home.Feature.ServicesName.SpaMassage'|translate}}
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="button-register">
+            <button type="button" class="button-handler" [routerLink]="'/features'">{{ 'Home.About.Button.RegisterNow' | translate }}</button>
+        </div>
     </div>
-    <div class="row">
-        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-            <div class="box_industry">
-              <img src="assets/images/home2/industry1.jpg" alt="" class="img_industry">
-              <h3>Hair Salon</h3>
-            </div>
-        </div>
-        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-            <div class="box_industry">
-              <img src="assets/images/home2/industry2.jpg" alt="" class="img_industry">
-              <h3>Beauty Salon</h3>
-            </div>
-        </div> 
-        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-            <div class="box_industry">
-              <img src="assets/images/home2/industry3.jpg" alt="" class="img_industry">
-              <h3>Spa & Massage</h3>
-            </div>
-        </div>
-        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-            <div class="box_industry">
-              <img src="assets/images/home2/industry4.jpg" alt="" class="img_industry">
-              <h3>Sport & Gym</h3>
-            </div>
-        </div>
-        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-            <div class="box_industry">
-              <img src="assets/images/home2/industry5.jpg" alt="" class="img_industry">
-              <h3>Medical Clinic</h3>
-            </div>
-        </div> 
-        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-            <div class="box_industry">
-              <img src="assets/images/home2/industry6.jpg" alt="" class="img_industry">
-              <h3>Repair Services</h3>
-            </div>
-        </div> 
-    </div>
-  </div>
 </section>
 <!-- Multipele Industrial Section End -->

@@ -1,0 +1,18 @@
+#datatable_paginate {
+    display: flex;
+    justify-content: flex-end;
+    .pagination {
+        li {
+            a {
+                background: #323a46;
+                border-color: #323a46;
+                color: #fff;
+            }
+            &.active {
+                a {
+                    background-color: #f49c1e;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,163 @@
+<section class="section-banner">
+    <div class="image-left"></div>
+    <div class="image-right">
+        <app-demo-booking #appDemoBooking></app-demo-booking>
+    </div>
+    <div class="image-bottom"></div>
+    <div class="head-info">
+        <h2 class="sub">Ludiino</h2>
+        <h1 class="title">{{'Features.Title' | translate}}</h1>
+        <p class="intro">{{'Features.Intro' | translate}}</p>
+        <button class="btn btn_bg-white btn-test-booking" (click)="openDemoPopup(demoPopupContent)">
+            {{'Features.CreateDemoBooking' | translate}}
+        </button>
+    </div>
+</section>
+<section class="main-content">
+    <div class="container">
+        <div class="section free-website">
+                <div class="info">
+                    <div class="header">
+                        <img src="assets/images/featuresp/fe_home.png" alt="fe home"/>
+                        <h3>{{'Features.MainContent.FreeWebsite.Title' | translate}}</h3>
+                    </div>
+                    <p [innerHTML]="'Features.MainContent.FreeWebsite.Info' | translate"></p>
+                    <button class="btn btn_gradient-orange"  (click)="redirectToRegister('2')">
+                        {{'Common.RegisterNow' | translate}}
+                    </button>
+                </div>
+                <div class="image">
+                    <img src="assets/images/featuresp/macbook.png" alt=""/>
+                </div>
+        </div>
+        <div class="section online-booking">
+            <div class="info">
+                <div class="header">
+                    <img src="assets/images/featuresp/fe_rocket.png" alt="online booking"/>
+                    <h3>{{'Features.MainContent.OnlineBooking.Title' | translate}}</h3>
+                </div>
+                <p [innerHTML]="'Features.MainContent.OnlineBooking.Info' | translate"></p>
+                <button class="btn btn_gradient-orange"  (click)="redirectToRegister('2')">
+                    {{'Common.RegisterNow' | translate}}
+                </button>
+            </div>
+            <div class="image">
+                <img src="assets/images/featuresp/run-girl.png" alt=""/>
+            </div>
+        </div>
+        <div class="section payment">
+            <div class="info">
+                <div class="header">
+                    <img src="assets/images/featuresp/fe_card.png" alt="online offline payment"/>
+                    <h3>{{'Features.MainContent.Payment.Title' | translate}}</h3>
+                </div>
+                <p [innerHTML]="'Features.MainContent.Payment.Info' | translate"></p>
+                <div class="payment-methods">
+                    <div class="method">
+                        <img src="assets/images/icon/pay_online.png" alt="online pay" />
+                        <h4>{{'Features.MainContent.Payment.OnlinePayment' | translate}}</h4>
+                    </div>
+                    <div class="method">
+                        <img src="assets/images/icon/pay_cash.png" alt="cash pay" />
+                        <h4>{{'Features.MainContent.Payment.CashPayment' | translate}}</h4>
+                    </div>
+                    <div class="method">
+                        <img src="assets/images/icon/pay_pos.png" alt="pos pay" />
+                        <h4>{{'Features.MainContent.Payment.POSMachineSupport' | translate}}</h4>
+                    </div>
+                </div>
+                <button class="btn btn_gradient-orange"  (click)="redirectToRegister('2')">
+                    {{'Common.RegisterNow' | translate}}
+                </button>
+            </div>
+            <div class="image">
+                <img src="assets/images/featuresp/call-girl.png" alt=""/>
+            </div>
+        </div>
+        <div class="section sheduling-management staff-pt-6 more_margin_top">
+            <div class="info mt-5">
+                <div class="header">
+                    <img src="assets/images/featuresp/fe_calendar.png" alt="sheduling management"/>
+                    <h3>{{'Features.MainContent.ShedulingManagement.Title' | translate}}</h3>
+                </div>
+                <p [innerHTML]="'Features.MainContent.ShedulingManagement.Info' | translate"></p>
+                <button class="btn btn_gradient-orange"  (click)="redirectToRegister('2')">
+                    {{'Common.RegisterNow' | translate}}
+                </button>
+            </div>
+            <div class="image mt-5">
+                <img src="assets/images/featuresp/schedule.png" alt=""/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="appointment">
+    <div class="container">
+        <h2 class="title">{{'Features.Appointment.Title' | translate}}</h2>
+        <p class="intro" [innerHTML]="'Features.Appointment.Intro' | translate"></p>
+        <div class="row appointment-list">
+            <div class="col-sm-12 col-md-4 article">
+                <div class="image">
+                    <img src="assets/images/featuresp/img1.jpg" alt="Integrate Booking with Social Network"/>
+                </div>
+                <h3 class="title">{{'Features.Appointment.Integrate.Title' | translate}}</h3>
+                <p [innerHTML]="'Features.Appointment.Integrate.Info' | translate"></p>
+            </div>
+            <div class="col-sm-12 col-md-4 article">
+                <div class="image">
+                    <img src="assets/images/featuresp/img2.jpg" alt="CheckIn Checkout feature"/>
+                </div>
+                <h3 class="title">{{'Features.Appointment.CheckInManagement.Title' | translate}}</h3>
+                <p [innerHTML]="'Features.Appointment.CheckInManagement.Info' | translate"></p>
+            </div>
+            <div class="col-sm-12 col-md-4 article">
+                <div class="image">
+                    <img src="assets/images/featuresp/img3.jpg" alt="Online Marketing & Promotional Campaigns"/>
+                </div>
+                <h3 class="title">{{'Features.Appointment.Marketing.Title' | translate}}</h3>
+                <p [innerHTML]="'Features.Appointment.Marketing.Info' | translate"></p>
+            </div>
+            <div class="col-sm-12 col-md-4 article">
+                <div class="image">
+                    <img src="assets/images/featuresp/img4.jpg" alt="Dashboard & Reports Features"/>
+                </div>
+                <h3 class="title">{{'Features.Appointment.Dashboard.Title' | translate}}</h3>
+                <p [innerHTML]="'Features.Appointment.Dashboard.Info' | translate"></p>
+            </div>
+            <div class="col-sm-12 col-md-4 article">
+                <div class="image">
+                    <img src="assets/images/featuresp/img5.jpg" alt="Auto Notification &Reminder"/>
+                </div>
+                <h3 class="title">{{'Features.Appointment.Notifications.Title' | translate}}</h3>
+                <p [innerHTML]="'Features.Appointment.Notifications.Info' | translate"></p>
+            </div>
+            <div class="col-sm-12 col-md-4 article">
+                <div class="image">
+                    <img src="assets/images/featuresp/img6.jpg" alt="Booking Cancellation Features"/>
+                </div>
+                <h3 class="title">{{'Features.Appointment.Cancellation.Title' | translate}}</h3>
+                <p [innerHTML]="'Features.Appointment.Cancellation.Info' | translate"></p>
+            </div>
+        </div>
+        <div class="action-bottom">
+            <button class="btn btn_gradient-orange"  (click)="redirectToRegister('2')">
+                {{'Common.RegisterNow' | translate}}
+            </button>
+        </div>
+    </div>
+</section>
+
+<ng-template #demoPopupContent let-modal>
+    <div class="modal-body">
+        <div class="main-steps">
+            <div class="home-steps" [ngSwitch]="currentStep$ | async">
+                <app-home-step2 *ngSwitchDefault></app-home-step2>
+                <app-home-step1 *ngSwitchCase="2"></app-home-step1>
+                <app-home-step3 *ngSwitchCase="3"></app-home-step3>
+                <app-home-step4 *ngSwitchCase="4"></app-home-step4>
+                <app-home-step5 *ngSwitchCase="5" (createNewTicketTestBooking)="createNewTicketTestBooking($event)"></app-home-step5>
+            </div>
+        </div>
+    </div>
+</ng-template>

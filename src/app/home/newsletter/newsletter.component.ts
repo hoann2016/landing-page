@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { LandingPageService } from '../../shared/services/landing-page.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-newsletter',
@@ -10,13 +12,14 @@ export class NewsletterComponent implements OnInit {
 
   subscribeForm: FormGroup;
   
-  constructor(private sf: FormBuilder) { }
+  constructor(private sf: FormBuilder,private translate: TranslateService,
+    private landingPageService: LandingPageService) { }
 
   // Email Validator
   ngOnInit() {
-  	this.subscribeForm = this.sf.group({
+    this.subscribeForm = this.sf.group({
       email: ['', Validators.email],
-    })
+    });
   }
 
   onSubmit(name) {

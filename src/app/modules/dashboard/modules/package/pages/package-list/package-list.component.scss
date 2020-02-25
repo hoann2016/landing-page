@@ -1,0 +1,39 @@
+.package-list {
+    display: block;
+    width: 100%;
+    .manage-title {
+        text-transform: uppercase;
+        font-size: 25px;
+    }
+    .manage-list {
+        .package-item-raw {
+            margin-bottom: 30px;
+        }
+        .block-starter {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: 1px dashed #fff;
+            justify-content: center;
+            align-content: center;
+            border-radius: 3px;
+            .icon-starter {
+                padding: 3px 3px 0px 5px;
+                border-radius: 50%;
+                border: 1px solid;
+                i {
+                    font-size: 41px;
+                    line-height: 1;
+                    margin: auto;
+                    padding: 0;
+                    overflow: hidden;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                min-height: 250px;
+            }
+        }
+    }
+}

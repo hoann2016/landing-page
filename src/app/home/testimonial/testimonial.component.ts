@@ -1,13 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { LandingPageService } from '../../shared/services/landing-page.service';
 
 @Component({
   selector: 'app-testimonial',
   templateUrl: './testimonial.component.html',
   styleUrls: ['./testimonial.component.scss']
 })
-export class TestimonialComponent {
+export class TestimonialComponent implements OnInit{
 
-    constructor() { }
+    constructor(private translate: TranslateService,
+        private landingPageService: LandingPageService) { }
+
+    ngOnInit(): void {}
     
     // Testimonial Carousel
     public testimonial = [{

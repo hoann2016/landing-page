@@ -1,0 +1,20 @@
+<div class="row m-0">
+    <div class="package-list">
+        <h3 class="manage-title col-12">Gói dịch vụ</h3>
+        <br>
+        <div class="manage-list col-12">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-xs-12 package-item-raw" *ngFor="let item of listPackages; let i = index;">
+                    <pk-package-item [package]="item"></pk-package-item>
+                </div>
+                <div class="col-lg-4 col-md-12 col-xs-12 package-item-raw">
+                    <div class="block-starter">
+                        <div class="icon-starter">
+                            <i class="dripicons-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

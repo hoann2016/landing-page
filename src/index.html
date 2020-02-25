@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Ludiino | Online Boooking System</title>
+  <title>Ludiino | Online Booking</title>
   <base href="/">
   <meta name="author" content="pixelstrap">
   <meta name="description" content="Tovo | App Landing Angular 6 Landing Page with bootstrap from pixelstrap">
@@ -13,11 +13,70 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="80">
-  <app-root>
-    <div class="loader-wrapper">
-      <div class="loader"></div>
+<body>
+    <div id="preview-area">
+        <style type="text/css">
+          #preview-area {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+      
+          .spinner {
+              width: 40px;
+              height: 40px;
+      
+              position: relative;
+              margin: auto;
+          }
+      
+          .double-bounce1, .double-bounce2 {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #59f7df;
+            opacity: 0.6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+            animation: sk-bounce 2.0s infinite ease-in-out;
+          }
+      
+        .double-bounce2 {
+          -webkit-animation-delay: -1.0s;
+          animation-delay: -1.0s;
+        }
+      
+        @-webkit-keyframes sk-bounce {
+          0%, 100% { -webkit-transform: scale(0.0) }
+          50% { -webkit-transform: scale(1.0) }
+        }
+      
+        @keyframes sk-bounce {
+          0%, 100% { 
+            transform: scale(0.0);
+            -webkit-transform: scale(0.0);
+          } 50% { 
+            transform: scale(1.0);
+            -webkit-transform: scale(1.0);
+          }
+        }
+          </style>
+        <div class="spinner">
+          <div class="double-bounce1"></div>
+          <div class="double-bounce2"></div>
+        </div>
     </div>
+  <app-root>
   </app-root>
   <!-- color variation -->
   <div id="color"></div>

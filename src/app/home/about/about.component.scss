@@ -1,0 +1,118 @@
+.title_lud{
+    max-width: 80% !important;
+}
+.list-button-action {
+	display: block;
+    margin: 0 auto;
+	.button-action {
+	    border-radius: 3px;
+	    box-shadow: 0px 3.5px 10.5px 0 rgba(0, 0, 0, 0.05);
+	    border: solid 1.5px #f49c1e;
+	    background-color: #ffffff;
+	    font-size: 17px;
+	    font-weight: 600;
+	    font-stretch: normal;
+	    font-style: normal;
+	    line-height: 0.68;
+	    letter-spacing: normal;
+	    text-align: center;
+	    color: #f49c1e;
+	    padding: 18px 0;
+	    outline: none;
+	    margin: 30px 8px 18px;
+	    &.register {
+	    	background-image: linear-gradient(to bottom, #ffc066, #f39a1b);
+		    text-align: center;
+		    color: #ffffff;
+		    border: 0;
+		    outline: none;
+		    box-shadow: none;
+		    border-top-color: #f39a1b;
+		    padding: 20px 0;
+	    }
+	}
+	.button-action span {
+		position: relative;
+		padding: 0 25px;
+	}
+}
+
+@media(min-width: 992px) {
+	.button-action span:after {
+	  	content: '\00bb';
+	  	position: absolute;
+	  	opacity: 0;
+	  	top: 2px;
+	  	right: -15px;
+	  	transition: 0.5s;
+	  	font-size: 24px;
+	}
+	.button-action.register span:after {
+		top: 1px;
+	}
+	.button-action:hover {
+		span {
+			// padding-right: 25px;
+			&:after {
+			  	opacity: 1;
+			  	right: 7px;
+			}
+		}
+	}
+}
+
+@media(max-width: 486px) {
+  .list-button-action {
+    .button-action {
+      span {
+        padding: 0 14px;
+      }
+    }
+  }
+}
+
+@media(max-width: 443px) {
+  .list-button-action {
+    .button-action {
+      font-size: 15px;
+    }
+  }
+}
+
+@media(max-width: 411px) {
+  .list-button-action {
+    .button-action {
+      font-size: 14px;
+    }
+  }
+}
+@media(max-width: 395px) {
+  .list-button-action {
+    .button-action {
+      span {
+      	padding: 0 10px;
+      }
+    }
+  }
+}
+@media(max-width: 378px) {
+  .list-button-action {
+    .button-action {
+      span {
+      	padding: 0 10px;
+      }
+    }
+  }
+}
+@media(max-width: 328px) {
+  .list-button-action {
+    .button-action {
+      &:first-child {
+      	margin: 30px 3px 18px 0;
+      }
+      &:last-child {
+      	margin: 30px 0 18px 3px;
+      }
+    }
+  }
+}

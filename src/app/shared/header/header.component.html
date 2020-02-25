@@ -1,36 +1,126 @@
 <!-- Nav Start -->
-<nav class="navbar navbar-expand-lg navbar-light theme-nav fixed-top" [class.darkHeader]="darkHeader">
-  <div class="container">
-    <a class="navbar-brand" [routerLink]="'/demo'"><img class="nav_logo" src="assets/images/logo.png" alt="logo"></a>
-    <div class="btn_header_mb">
-        <a href="#" class="btn_login">Login</a>
-        <a href="#" class="flag_menu navbar-light">
-          <img src="assets/images/flag_en.png" alt=""> EN
+<nav
+    class="navbar navbar-expand-lg navbar-light theme-nav fixed-top"
+    [class.darkHeader]="darkHeader"
+>
+    <div class="container">
+        <a
+            class="navbar-brand"
+            href="/home"
+        >
+            <img
+                class="nav_logo"
+                src="assets/images/logo.png"
+                alt="logo"
+            >
         </a>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <div class="btn_header_mb">
+            <a href="javascript:void(0)" (click)="RedirectToLogin()"
+                class="btn_login"
+                
+            >
+                Login
+            </a>
+            <a
+                href="javascript:void(0)"
+                class="flag_menu navbar-light"
+                (click)="changeLang('vi')"
+                *ngIf="currentLang === 'en'"
+            >
+                <img src="assets/images/flag_vi.png" alt> VI
+            </a>
+            <a
+                href="javascript:void(0)"
+                class="flag_menu navbar-light"
+                (click)="changeLang('en')"
+                *ngIf="currentLang === 'vi'"
+            >
+                <img src="assets/images/flag_en.png" alt> EN
+            </a>
+        </div>
+        <button
+            class="mobile-menu navbar-toggler"
+            [class.active]="stateMenuInMobile.openMenu"
+            type="button"
+            aria-label="Toggle navigation"
+            (click)="toggleMobileMenu()"
+        >
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </button>
 
-    <div class="collapse navbar-collapse default-nav" id="navbarSupportedContent">
-      <ul class="navbar-nav" id="mymenu">
-        <li class="nav-item">
-          <a class="nav-link" href="#home" [pageScrollOffset]="80" pageScroll><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#feature_lud" [pageScrollOffset]="80" pageScroll>Solution & Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#feature" [pageScrollOffset]="80" pageScroll>BLOG</a>
-        </li>
-      </ul>
-      <div class="btn_header">
-        <a href="#" class="btn_login">Login</a>
-        <a href="#" class="flag_menu navbar-light">
-          <img src="assets/images/flag_en.png" alt=""> EN
-        </a>
-      </div>
+        <div
+            [ngbCollapse]="!stateMenuInMobile.openMenu"  
+            id="navbarSupportedContent"  class="navbar-collapse default-nav"
+            [ngClass]="{ 'show': stateMenuInMobile.openMenu }"
+        >
+            <ul
+                class="navbar-nav"
+            >
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        [routerLink]="'/features'"
+                        [pageScrollOffset]="80"
+                        pageScroll
+                    >
+                        {{'Home.HeaderMenu.Feature'|translate}}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        [routerLink]="'/pricing'"
+                        [pageScrollOffset]="80"
+                        pageScroll
+                    >
+                        {{'Home.HeaderMenu.Pricing'|translate}}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="https://blog.ludiino.com/"
+                        [pageScrollOffset]="80"
+                        pageScroll
+                    >
+                        BLOG
+                    </a>
+                </li>
+            </ul>
+            <div class="btn_header">
+                <a href="javascript:void(0)" (click)="RedirectToLogin()"
+                    class="btn_login"
+                >
+                    {{'Shared.Login_Register'|translate}}
+                </a>
+                <a
+                    href="javascript:void(0)"
+                    class="flag_menu navbar-light"
+                    (click)="changeLang('vi')"
+                    *ngIf="currentLang === 'en'"
+                >
+                    <img
+                        src="assets/images/flag_vi.png"
+                        alt
+                    >
+                    VI
+                </a>
+                <a
+                    href="javascript:void(0)"
+                    class="flag_menu navbar-light"
+                    (click)="changeLang('en')"
+                    *ngIf="currentLang === 'vi'"
+                >
+                    <img
+                        src="assets/images/flag_en.png"
+                        alt
+                    >
+                    EN
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
 </nav>
-<!-- Nav end-->
+<!-- Nav end -->

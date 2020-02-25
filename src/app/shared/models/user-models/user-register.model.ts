@@ -1,0 +1,16 @@
+export interface UserRegister{
+    package_id: number;
+    business_type_id: number;
+    industry_id: number;
+    country_id: number;
+    name: string;
+    store_name: string;
+    shop_domain: string;
+    password: string;
+    confirm_password: string;
+    email: string;
+    phone: string;
+    status: string;
+    is_admin: boolean;
+    is_first: boolean;
+}

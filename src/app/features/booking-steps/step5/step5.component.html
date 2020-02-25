@@ -1,0 +1,48 @@
+<div class="step-wrapper">
+        <div class="step-header">
+            <h4 class="step-title"><span class="back-step" (click)="goToStep(4, true)"></span>
+                5. {{ "Features.DemoSteps.Step5.Title" | translate }}</h4>
+            <div class="step-current">{{ "Features.DemoSteps.Step" | translate }} 5/5</div>
+        </div>
+        <div class="step-body">
+            <div class="billing-info">
+                <div class="date">
+                    <div class="left">{{ "Features.DemoSteps.Step5.Date" | translate }}</div>
+                    <div class="right">{{ stepBookingData?.appointmentDate }}, {{ stepBookingData?.date }}</div>
+                </div>
+                <div class="time">
+                    <div class="left">{{ "Features.DemoSteps.Step5.AppointmentTime" | translate }}</div>
+                    <div class="right">{{ stepBookingData?.time }}</div>
+                </div>
+                <div class="service-fee">
+                    <h4>{{ "Features.DemoSteps.Step5.Service" | translate }}</h4>
+                    <div class="haircut">
+                        <span>{{ stepBookingData?.serviceName }}</span><span translate [translateParams]="{price: stepBookingData?.demoPrice | priceExchangeRate | async | number}">Pricing.Transform</span>
+                    </div>
+                    <div class="number-people">
+                        <span>{{ "Features.DemoSteps.Step5.Quantity" | translate }}</span><span>{{ stepBookingData?.quantity }} {{ "Features.DemoSteps.Step5.Pax" | translate }}</span>
+                    </div>
+                </div>
+                <div class="total">
+                    <div class="left">{{ "Features.DemoSteps.Step5.Total" | translate }}</div>
+                    <div class="right" translate [translateParams]="{price: (stepBookingData?.demoPrice * stepBookingData?.quantity) | priceExchangeRate | async | number}">Pricing.Transform</div>
+                </div>
+            </div>
+            <div class="booking-payment-method">
+                <label class="radio-orange-container">
+                    {{ "Features.DemoSteps.Step5.PayNow" | translate }}
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                    <span class="promotion">-10%</span>
+                </label>
+                <label class="radio-orange-container">
+                    {{ "Features.DemoSteps.Step5.PayAtStore" | translate }}
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                </div>
+            <button  (click)="goToStep(5)" class="btn move-step btn-bg-orange">{{ "Features.DemoSteps.Step5.Book" | translate }}</button>
+        </div>
+    </div>
+
+

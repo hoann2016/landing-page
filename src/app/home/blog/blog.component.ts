@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { LandingPageService } from '../../shared/services/landing-page.service';
 
 @Component({
   selector: 'app-blog',
@@ -7,7 +9,8 @@ import { Component } from '@angular/core';
 })
 export class BlogComponent {
 
-    constructor() { }
+    constructor(private translate: TranslateService,
+      private landingPageService: LandingPageService) { }
     
     // Blog Carousel
     public blog = [{
@@ -32,7 +35,9 @@ export class BlogComponent {
         postedBy: 'posted by Walo Boni, 9 hits, 4 comment',
     }]
 
+    ngOnInit(): void {
 
+    }
     // Blog Carousel Options
 	public blogCarousel: any ={
 	    loop:true,

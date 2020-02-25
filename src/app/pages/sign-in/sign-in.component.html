@@ -1,41 +1,144 @@
-<!-- sign in start -->
-<section class="authentication-form">
-  <div class="innerpage-decor">
-    <div class="innerpage-circle1"><img src="assets/images/Testimonial2.png" alt=""></div>
-    <div class="innerpage-circle2"><img src="assets/images/Testimonial1.png" alt=""></div>
-  </div>
-  <div>
-    <h2 class="title text-center"><span> Login</span></h2>
-    <p class="text-center">Welcome to tovo, Please Login with your personal account information.</p>
-    <div class="card">
-      <form class="theme-form">
-        <div class="form-group">
-          <input type="email" class="form-control" placeholder="email address" required="required">
-        </div>
-        <div class="form-group">
-          <input required="" name="password" [type]="show ? 'text' : 'password'" class="form-control" placeholder="Password">
-          <div class="show-hide" (click)="password()">
-            <span class="show"></span>
-          </div>
-        </div>
-        <div class="form-group row">
-          <div class="custom-control custom-checkbox col-6">
-            <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-            <label class="custom-control-label" for="customControlAutosizing">Remember me</label>
-          </div>
-          <a [routerLink]="'pages/forget-password'" class="text-right col-6 theme-link">lost your password</a>
-        </div>
-        <div class="form-button text-center">
-          <button type="submit" class="btn btn-custom btn-lg theme-color">Login</button>
-        </div>
-        <div class="or-saparator"><span>or</span></div>
-        <h6 class="text-center mt-0 mb-3">Sign in with:</h6>
-        <div class="form-button text-center social-btns">
-          <button type="submit" class="btn btn-custom fb">Facebook</button>
-          <button type="submit" class="btn btn-custom ggl">Google</button>
-        </div>
-      </form>
-    </div>
-  </div>
+<section class="section-signin">
+	<p-loading [content-header]="contentLoading" [is-display]="showLoading"></p-loading>
+	<div class="container-full-width">
+		<div class="wrap">
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 wrap-over-signin">
+					<div class="row">
+						<div class="col-lg-12 d-lg-none">
+							<a href="javascript:void(0)" (click)="RedirectToHome()"><img class="img-top"
+							                                                             src="assets/images/sign-up/logo-new.png"></a>
+						</div>
+						<div class="col-xl-12">
+							<div class="wrap-form-field">
+								<div class="header-page">
+									<h2 class="header-form"> {{'Home.SignIn.Login'|translate}}</h2>
+								</div>
+								<form class="login-cus-form" [formGroup]="signInForm">
+									<div class="row">
+										<div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                            <span
+	                                            class="title-input">{{'Home.SignIn.SignInEmail.Email'|translate}}</span>
+											
+											<div class="form-input-1">
+												<input type="email" class="fix-boder" formControlName="Email"
+												       required="required"
+												       [ngClass]="{ 'is-invalid': f.Email.touched && f.Email.errors?.required }">
+												
+												<img class="img-email" src="/assets/images/sign-up/mail.png"/>
+												<div class="gach"></div>
+											</div>
+											<div *ngIf="isSubmitted && f.Email.errors" class="text-danger">
+												<div *ngIf="f.Email.errors?.required">
+													{{'Register.message-require'|translate}}
+												</div>
+												
+												<div *ngIf="f.Email.errors?.pattern">
+													{{'Register.message-format-3'|translate}}
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row mt-4">
+										<div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+											<span class="title-input">{{'Register.Password'|translate}}</span>
+											<div class="form-input-1">
+												<input type="password" class=" fix-boder" formControlName="Password"
+												       maxlength="20" required="required"
+												       [ngClass]="{ 'is-invalid': f.Password.touched && f.Password.errors }">
+												<div *ngIf=" isSubmitted &&f.Password.errors" class="text-danger">
+													<div *ngIf="f.Password.errors.required">
+														{{'Register.message-require'|translate}}</div>
+													<div
+														*ngIf="f.Password.errors.minlength||f.Password.errors.maxlength">
+														{{'Register.pasword-length'|translate}}
+													</div>
+												</div>
+												<img class="img-password" src="/assets/images/sign-up/password.png"/>
+												<div class="gach"></div>
+											</div>
+										</div>
+									</div>
+									<div class="row mt-4">
+										<div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+											<div class="form-input-2">
+												<button (click)="onSubmit()">{{'Home.SignIn.Login'|translate}}</button>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="col-xl-12 text-center">
+							<div class="title-fogot-pass"><a (click)="forgotPassword(forgotPasswordRef)">
+								{{'Home.SignIn.ForgotPassword'|translate}}</a></div>
+							<div class="title-register">{{'Home.SignIn.IfDontHaveAcc'|translate}} <a
+								href="javascript:void(0)"
+								(click)="RedirectToRegister()">{{'Home.SignIn.Register'|translate}}</a>
+								{{'Home.SignIn.Now'|translate}}!
+							</div>
+						
+						
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 d-none d-lg-block">
+					<div class="wrap-left-signin">
+						<div class="welcome-container">
+							<div class="wel-img">
+								<a href="#"><img src="assets/images/sign-up/logo-new.png"></a>
+							</div>
+							<!-- <h3 class="subtitle">Welcome to Ludiino Booking System</h3>
+							<hr> -->
+							<div class="title-sub-right">Get Ludiino Online Booking & Scheduling System to never
+								miss a
+								booking & book more
+								clients
+							</div>
+						</div>
+						<div class="device-mac">
+							<!-- <img src="assets/images/sign-up/device-new.png" class="macbook_img"> -->
+						</div>
+						<div class="ft-authen">
+							<span>Powered by Ludiino ©2019</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
-<!-- sign in end-->
+
+<ng-template #notActive>
+	<div class="modal-user-not-active">
+		<div class="row m-0">
+			<div class="current-logo">
+				<img src="assets/images/sign-up/logo-new.png" alt="Logo">
+			</div>
+		</div>
+		<div class="row m-0">
+			<div class="content-notification">
+				<div class="text-message">{{ 'Home.SignIn.UserIsNotActive' | translate }}</div>
+				<div class="text-message">{{ 'Home.SignIn.UserIsNotActive1' | translate }}</div>
+				<div class="text-message">{{ 'Home.SignIn.UserIsNotActive2' | translate }}</div>
+			</div>
+		</div>
+		<span class="close" (click)="closeModal()">
+            <fa-icon [icon]="iconTimes" class="available"></fa-icon>
+        </span>
+	</div>
+</ng-template>
+
+<ng-template #forgotPasswordRef let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title">{{ 'ForgotPassword.Warning' | translate }}</h4>
+		<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<p class="text-message">
+			{{ 'ForgotPassword.WarningMessage' | translate }}
+		</p>
+	</div>
+</ng-template>

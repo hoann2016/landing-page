@@ -1,0 +1,320 @@
+<section id="banner">
+    <div class="container">
+        <div class="head-info">
+            <h3 class="sub-t">
+                {{'Pricing.Subtitle' | translate}}
+            </h3>
+            <h1 class="title">
+                {{'Pricing.Title' | translate}}
+            </h1>
+            <button class="btn btn_gradient-orange" (click)="redirectToRegister('2')">
+                {{'Common.RegisterNow' | translate}}
+            </button>
+        </div>
+        <div class="bg-bottom"></div>
+    </div>
+</section>
+
+<section class="main-content">
+    <div class="container">
+        <div class="package-list">
+            <div class="package row">
+                <div class="image col-12 col-sm-3">
+                    <img  src="assets/images/pricingp/freebie.png" alt="logo"/>
+                </div>
+                <div class="content col-12 col-sm-9">
+                    <div class="inner row">
+                        <div class="col-12 col-sm-7 col-md-8">
+                            <h3 class="title title-red"><span>{{'Pricing.MainContent.Freebie' | translate}}</span></h3>
+                            <p class="info">
+                                {{'Pricing.MainContent.FreebieIntro' | translate}}
+                            </p>
+                            <ul>
+                                <li>{{'Pricing.MainContent.OnlineBooking' | translate}}</li>
+                                <li>{{'Pricing.MainContent.GoogleMap' | translate}}</li>
+                                <li>{{'Pricing.MainContent.RatingReview' | translate}}</li>
+                                <li>{{'Pricing.MainContent.ServicePricing' | translate}}</li>
+                                <li>{{'Pricing.MainContent.TimeSlotConfirmation' | translate}}</li>
+                                <li class="txt_bold_light">{{'Pricing.MainContent.BookingPerMonth' | translate}}</li>
+                                <li class="txt_bold_light">{{'Pricing.MainContent.PaymentMethod_Store' | translate}}</li>
+                            </ul>
+                        </div>
+                        <div class="col-12  col-sm-5 col-md-4 d-flex justify-content-end">
+                            <div class="action d-flex flex-column">
+                                <p class="price-label free">{{'Pricing.MainContent.Free' | translate}}</p>
+                                <button class="btn btn_gradient-orange"  (click)="redirectToRegister('2')">
+                                    {{'Pricing.MainContent.Get' | translate}} FREEBIE
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="package row">
+                <div class="image col-12 col-sm-3">
+                    <img  src="assets/images/pricingp/newbie.png" alt="logo"/>
+                </div>
+                <div class="content col-sm-9">
+                    <div class="inner row">
+                        <div class="col-12 col-sm-7 col-md-8">
+                            <h3 class="title title-blue"><span>{{'Pricing.MainContent.Newbie' | translate}}</span></h3>
+                            <p class="info">
+                                {{'Pricing.MainContent.NewbieIntro' | translate}}
+                            </p>
+                            <ul>
+                                <li>{{'Pricing.MainContent.OnlineBooking' | translate}}</li>
+                                <li>{{'Pricing.MainContent.GoogleMap' | translate}}</li>
+                                <li>{{'Pricing.MainContent.RatingReview' | translate}}</li>
+                                <li>{{'Pricing.MainContent.ServicePricing' | translate}}</li>
+                                <li>{{'Pricing.MainContent.TimeSlotConfirmation' | translate}}</li>
+                                <li class="txt_bold_light">{{'Pricing.MainContent.UnlimittedNumber' | translate}}</li>
+                                <li class="txt_bold_light">{{'Pricing.MainContent.PaymentMethod_OnlineAndStore' | translate}}</li>
+                                <li class="txt_bold_light">{{'Pricing.MainContent.BookDeliveredHome' | translate}}</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-4 d-flex justify-content-end">
+                            <div class="action d-flex flex-column">
+                                    <p class="price-label"><span translate [translateParams]="{price: selectedNewbie?.price | priceExchangeRate | async | number}">Pricing.Transform</span></p>
+                                    <select [(ngModel)]="selectedNewbie">
+                                        <option *ngFor="let item of newbiePackage"  [ngValue]="item">
+                                            {{item.name | translate}}
+                                        </option>
+                                    </select>
+                                    <div class="discount" *ngIf="selectedNewbie?.discount">
+                                       {{'Common.Discount' | translate}}: <span>{{selectedNewbie?.discount}} {{'Pricing.MainContent.freemonths' | translate }}</span>
+                                    </div>
+                                    <button class="btn btn_gradient-orange"  (click)="redirectToRegister('7')">
+                                        {{'Pricing.MainContent.Get' | translate}} NEWBIE
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="package row">
+                <div class="image col-12 col-sm-3">
+                    <img  src="assets/images/pricingp/biggie.png" alt="logo"/>
+                </div>
+                <div class="content col-sm-9">
+                    <div class="inner row">
+                        <div class="col-12 col-sm-7 col-md-8">
+                            <h3 class="title title-orange"><span>{{'Pricing.MainContent.Biggie' | translate}}</span></h3>
+                            <p class="info">
+                                {{'Pricing.MainContent.BiggeIntro' | translate}}
+                            </p>
+                            <ul>
+                                <li>{{'Pricing.MainContent.OnlineBooking' | translate}}</li>
+                                <li>{{'Pricing.MainContent.GoogleMap' | translate}}</li>
+                                <li>{{'Pricing.MainContent.RatingReview' | translate}}</li>
+                                <li>{{'Pricing.MainContent.ServicePricing' | translate}}</li>
+                                <li>{{'Pricing.MainContent.TimeSlotConfirmation' | translate}}</li>
+                                <li>{{'Pricing.MainContent.UnlimittedNumber' | translate}}</li>
+                                <li>{{'Pricing.MainContent.PaymentMethod_OnlineAndStore' | translate}}</li>
+                                <li>{{'Pricing.MainContent.BookDeliveredHome' | translate}}</li>
+                                <li class="txt_bold_light">{{'Pricing.MainContent.DealPromotion' | translate}}</li>
+                                <li class="txt_bold_light">{{'Pricing.MainContent.CheckInManagement' | translate}}</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-4 d-flex justify-content-end">
+                            <div class="action d-flex flex-column">
+                                <p class="price-label"><span translate [translateParams]="{price: selectedBiggie?.price | priceExchangeRate | async | number}">Pricing.Transform</span></p>
+                                <select [(ngModel)]="selectedBiggie">
+                                    <option *ngFor="let item of biggiePackage"  [ngValue]="item">
+                                        {{item.name | translate}}
+                                    </option>
+                                </select>
+                                <div class="discount" *ngIf="selectedBiggie?.discount">
+                                   {{'Common.Discount' | translate}}: <span>{{selectedBiggie?.discount}} {{'Pricing.MainContent.freemonths' | translate }}</span>
+                                </div>
+                                <button class="btn btn_gradient-orange"  (click)="redirectToRegister('12')">
+                                    {{'Pricing.MainContent.Get' | translate}} BIGGIE
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="package row hulk-pt-6">
+                <div class="image col-12 col-sm-3">
+                    <img  src="assets/images/pricingp/hulk.png" alt="logo"/>
+                </div>
+                <div class="content col-sm-9">
+                    <div class="inner row">
+                        <div class="col-12 col-sm-7 col-md-8">
+                                <h3 class="title title-green"><span>{{'Pricing.MainContent.Hulk' | translate}}</span></h3>
+                                <p class="info">
+                                    {{'Pricing.MainContent.HulkIntro' | translate}}
+                                </p>
+                            <ul>
+                                <li>{{'Pricing.MainContent.OnlineBooking' | translate}}</li>
+                                <li>{{'Pricing.MainContent.GoogleMap' | translate}}</li>
+                                <li>{{'Pricing.MainContent.RatingReview' | translate}}</li>
+                                <li>{{'Pricing.MainContent.ServicePricing' | translate}}</li>
+                                <li>{{'Pricing.MainContent.TimeSlotConfirmation' | translate}}</li>
+                                <li>{{'Pricing.MainContent.UnlimittedNumber' | translate}}</li>
+                                <li>{{'Pricing.MainContent.PaymentMethod_OnlineAndStore' | translate}}</li>
+                                <li>{{'Pricing.MainContent.DealPromotion' | translate}}</li>
+                                <li>{{'Pricing.MainContent.CheckInManagement' | translate}}</li>
+                                <li>{{'Pricing.MainContent.BookDeliveredHome' | translate}}</li>
+                                <li class="txt_bold_light">{{'Pricing.MainContent.ProductCommerce' | translate}}</li>
+                                <li class="txt_bold_light">{{'Pricing.MainContent.CustomerMembership' | translate}}</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-4 d-flex justify-content-end">
+                            <div class="action d-flex flex-column">
+                                    <p class="price-label"><span translate [translateParams]="{price: selectedHulk?.price | priceExchangeRate | async | number}">Pricing.Transform</span></p>
+                                    <select [(ngModel)]="selectedHulk">
+                                        <option *ngFor="let item of hulkPackage"  [ngValue]="item">
+                                            {{item.name | translate}}
+                                        </option>
+                                    </select>
+                                    <div class="discount" *ngIf="selectedHulk?.discount">
+                                       {{'Common.Discount' | translate}}: <span>{{selectedHulk?.discount}} {{'Pricing.MainContent.freemonths' | translate }}</span>
+                                    </div>
+                                <button class="btn btn_gradient-orange"  (click)="redirectToRegister('17')">
+                                    {{'Pricing.MainContent.Get' | translate}} HULK
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="faq">
+    <div class="container">
+        <div class="fag-content row">
+            <div class="left col-12 col-sm-4">
+                <h2 class="title">{{'Pricing.FAQs.Title' | translate}}</h2>
+                <p class="intro">{{'Pricing.FAQs.Intro' | translate}}</p>
+                <img src="assets/images/pricingp/faqs.jpg" alt="faq"/>
+            </div>
+            <div class="mid col-12 col-sm-4">
+                <div class="question-wrapper">
+                    <div class="question d-flex" (click)="openAnswer(1)">
+                        <fa-icon [icon]="selectAnswer === 1 ? faAngleDown : faAngleRight"></fa-icon>
+                        {{'Pricing.FAQs.Q_HowSignUpLudiinoSolution' | translate}}
+                    </div>
+                    <div class="answer" [class.is-active]="selectAnswer === 1"
+                        [innerHTML]="'Pricing.FAQs.A_HowSignUpLudiinoSolution' | translate">
+                    </div>
+                </div>
+
+                <div class="question-wrapper">
+                    <div class="question d-flex"  (click)="openAnswer(2)">
+                        <fa-icon [icon]="selectAnswer === 2 ? faAngleDown : faAngleRight"></fa-icon>
+                        {{'Pricing.FAQs.Q_WhenStartLudiinoForBusiness' | translate}}
+                    </div>
+                    <div class="answer" [class.is-active]="selectAnswer === 2"
+                        [innerHTML]="'Pricing.FAQs.A_WhenStartLudiinoForBusiness' | translate">
+                    </div>
+                </div>
+
+                <div class="question-wrapper">
+                    <div class="question d-flex"  (click)="openAnswer(3)">
+                        <fa-icon [icon]="selectAnswer === 3 ? faAngleDown : faAngleRight"></fa-icon>
+                        {{'Pricing.FAQs.Q_HowMakePayment' | translate}}
+                    </div>
+                    <div class="answer" [class.is-active]="selectAnswer === 3"
+                        [innerHTML]="'Pricing.FAQs.A_HowMakePayment' | translate">
+                    </div>
+                </div>
+            </div>
+            <div class="right col-12 col-sm-4">
+                <div class="question-wrapper">
+                    <div class="question d-flex"  (click)="openAnswer(4)">
+                        <fa-icon [icon]="selectAnswer === 4 ? faAngleDown : faAngleRight"></fa-icon>
+                        {{'Pricing.FAQs.Q_WhenMySiteCreated' | translate}}
+                    </div>
+                    <div class="answer" [class.is-active]="selectAnswer === 4"
+                        [innerHTML]="'Pricing.FAQs.A_WhenMySiteCreated' | translate">
+                    </div>
+                </div>
+
+                <div class="question-wrapper">
+                    <div class="question d-flex" (click)="openAnswer(5)">
+                        <fa-icon [icon]="selectAnswer === 5 ? faAngleDown : faAngleRight"></fa-icon>
+                        {{'Pricing.FAQs.Q_IntegrateExistingSite' | translate}}
+                    </div>
+                    <div class="answer" [class.is-active]="selectAnswer === 5"
+                        [innerHTML]="'Pricing.FAQs.A_IntegrateExistingSite' | translate">
+                    </div>
+                </div>
+
+                <div class="question-wrapper">
+                    <div class="question d-flex" (click)="openAnswer(6)">
+                        <fa-icon [icon]="selectAnswer === 6 ? faAngleDown : faAngleRight"></fa-icon>
+                        {{'Pricing.FAQs.Q_CanUseMultiple' | translate}}
+                    </div>  
+                    <div class="answer" [class.is-active]="selectAnswer === 6"
+                        [innerHTML]="'Pricing.FAQs.A_CanUseMultiple' | translate">
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ludiino-solution">
+    <div class="container">
+        <h2 class="title">{{'Pricing.LudiinoSolution.Title' | translate}}</h2>
+        <div class="solution-list">
+            <div class="solution">{{'Pricing.ServicesName.HairSalon' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.NailSalon' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.MassageTherapy' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.Spa' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.Doctors' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.MedicalClinic' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.Gym' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.SportCenter' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.WeddingService' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.Photography' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.RepairService' | translate}}</div>
+            <div class="solution">{{'Pricing.ServicesName.PetService' | translate}}</div>
+        </div>
+    </div>
+</section>
+
+<section class="carousel-salon-section">
+    <owl-carousel-o class="carousel-salon" [options]="customOptions">
+        <ng-template carouselSlide>
+            <div class="item">
+                <img src="assets/images/pricingp/hair-salon.jpg" alt=""/>
+                <h3 class="section">{{'Home.Feature.ServicesName.HairSalon' | translate}}</h3>
+            </div>
+        </ng-template>  
+        <ng-template carouselSlide>
+            <div class="item">
+                <img src="assets/images/pricingp/beauty-salon.jpg" alt=""/>
+                <h3 class="section">{{'Home.Feature.ServicesName.BeautySalon' | translate}}</h3>
+            </div>
+        </ng-template>  
+        <ng-template carouselSlide>            
+            <div class="item">
+                <img src="assets/images/pricingp/gym-sport.jpg" alt=""/>
+                <h3 class="section">{{'Home.Feature.ServicesName.GymSportCenter' | translate}}</h3>
+            </div>
+        </ng-template>   
+        <ng-template carouselSlide>            
+            <div class="item">
+                <img src="assets/images/pricingp/medical.jpg" alt=""/>
+                <h3 class="section">{{'Home.Feature.ServicesName.Health' | translate}}</h3>
+            </div>
+        </ng-template>  
+        <ng-template carouselSlide>
+            <div class="item">
+                <img src="assets/images/pricingp/fix.jpg" alt=""/>
+                <h3 class="section">{{'Home.Feature.ServicesName.RepairServices' | translate}}</h3>
+            </div>
+        </ng-template>   
+        <ng-template carouselSlide>            
+            <div class="item">
+                <img src="assets/images/pricingp/spa-massage.jpg" alt=""/>
+                <h3 class="section">{{'Home.Feature.ServicesName.SpaMassage' | translate}}</h3>
+            </div>
+        </ng-template>   
+    </owl-carousel-o>
+</section>

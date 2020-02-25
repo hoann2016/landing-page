@@ -1,25 +1,80 @@
-import { NgModule } from '@angular/core';
+// angular
+import { APP_INITIALIZER, NgModule, ErrorHandler } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HTTP_INTERCEPTORS, HttpClientModule, HttpClient } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { Http, HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SharedModule } from "./shared/shared.module";
-import { rootRouterConfig } from './app.routes';
+import { environment } from '../environments/environment';
+// libs
+import { TransferHttpCacheModule } from '@nguniversal/common';
+import { CookieService, CookieModule } from '@gorniv/ngx-universal';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+// shared
+import { SharedModule } from '@shared/shared.module';
+import { TranslatesService } from '@shared/translates';
+import { SharedMetaModule } from '@shared/shared-meta';
+import { UniversalStorage } from '@shared/storage/universal.storage';
+// components
+import { AppRoutes } from './app.routing';
 import { AppComponent } from './app.component';
-import * as $ from 'jquery';
+// interceptors
+import { AppService } from './app.service';
+import { GlobalErrorHandlerService } from './shared/error-handler/global-error-handler.service';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ToastrModule } from 'ngx-toastr';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+//Socket
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+
+export function initLanguage(translateService: TranslatesService): Function {
+  return (): Promise<any> => translateService.initLanguage();
+}
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+
+const config: SocketIoConfig = { url: `${environment.rootproto}${environment.rootip}${environment.socketPort ? `:${environment.socketPort}` : ''}${environment.socketPath}`, options: {} };
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
   imports: [
-    BrowserModule,
-    HttpModule,
+    BrowserModule.withServerTransition({ appId: 'my-app' }),
+    TransferHttpCacheModule,
+    HttpClientModule,
+    AppRoutes,
     BrowserAnimationsModule,
-    SharedModule,
-    RouterModule.forRoot(rootRouterConfig, { useHash: false, anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' })
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    }),
+    CookieModule.forRoot(),
+    SharedModule.forRoot(),
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+      enableHtml: true
+    }),
+    SharedMetaModule,
+    NgbModule,
+    SocketIoModule.forRoot(config)
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [AppComponent],
+  providers: [
+    // Guards TODO
+    // AuthGuard,
+    // UnAuthGuard,
+    // TODO Interceptors
+    // { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+    // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    { provide: APP_INITIALIZER, useFactory: initLanguage, multi: true, deps: [TranslatesService] },
+    CookieService,
+    UniversalStorage,
+    AppService, 
+    GlobalErrorHandlerService,
+    { provide: ErrorHandler, useClass: GlobalErrorHandlerService }, 
+  ],
 })
-export class AppModule { }
+export class AppModule {
+}

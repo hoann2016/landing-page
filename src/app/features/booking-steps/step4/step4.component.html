@@ -1,0 +1,52 @@
+<div class="step-wrapper">
+    <div class="step-header">
+        <h4 class="step-title"><span class="back-step" (click)="goToStep(3)"></span>
+            4. {{ "Features.DemoSteps.Step4.Title" | translate }}</h4>
+        <div class="step-current">{{ "Features.DemoSteps.Step" | translate }} 4/5</div>
+    </div>
+    <div class="step-body">
+        <form [formGroup]="stepForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-12">
+                    <label class="field-label">{{ "Features.DemoSteps.Step4.Fullname" | translate }}</label>
+                    <div class="field-input">
+                        <input type="text" formControlName="fullName" 
+                            placeholder="Tên khách hàng"
+                            class="step-input" [ngClass]="{ 'is-invalid': submitted && f.fullName.errors }" >
+                        <div *ngIf="submitted && f.fullName.errors" class="error-msg">
+                            <div *ngIf="f.fullName.errors.required">{{ "Features.DemoSteps.Step4.Validate.NameRequired" | translate }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label class="field-label">Email *</label>
+                    <div class="field-input">
+                        <input type="text" formControlName="email" 
+                        placeholder="Email"
+                        class="step-input" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                        <div *ngIf="submitted && f.email.errors" class="error-msg">
+                            <div *ngIf="f.email.errors.required">{{ "Features.DemoSteps.Step4.Validate.EmailRequired" | translate }}</div>
+                            <div *ngIf="f.email.errors.email">{{ "Features.DemoSteps.Step4.Validate.EmailIncorrect" | translate }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label class="field-label">{{ "Features.DemoSteps.Step4.PhoneNumber" | translate }}</label>
+                    <div class="field-input">
+                        <input type="text" formControlName="phoneNumber" 
+                        placeholder="Số điện thoại"
+                        class="step-input" [ngClass]="{ 'is-invalid': submitted && f.phoneNumber.errors }">
+                        <div *ngIf="submitted && f.phoneNumber.errors" class="error-msg">
+                            <div *ngIf="f.phoneNumber.errors.required">{{ "Features.DemoSteps.Step4.Validate.PhoneRequired" | translate }}</div>
+                            <div *ngIf="f.phoneNumber.errors.pattern">{{ "Features.DemoSteps.Step4.Validate.PhoneIncorrect" | translate }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn move-step btn-bg-orange">{{ "Features.DemoSteps.Next" | translate }}</button>
+        </form>
+
+    </div>
+</div>
