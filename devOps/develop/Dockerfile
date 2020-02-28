@@ -1,6 +1,6 @@
 FROM node:10.16-alpine as buildContainer
 WORKDIR /app
-COPY ./package.json ./package-lock.json /app/
+COPY ./package.json /app/
 RUN npm install
 COPY . /app
 RUN npm run build:universal:dev
