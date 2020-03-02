@@ -16,6 +16,7 @@ import { PackageDataModel } from '@shared/models/package-models/package-data.mod
 import { BusinessType } from '@shared/models/business-types-models/business-type.model';
 import { StatusCodeConstant } from '@shared/constants/status-code.constant';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { TimeConstant } from '@shared/constants/time.constant';
 
 @Component({
     selector: 'app-sign-up',
@@ -36,6 +37,7 @@ export class SignUpComponent implements OnInit, AfterViewInit, OnDestroy {
     orderResponse;
     iconTimes: any = faTimes;
     @ViewChild('emailExist', { static: true }) emailExistTemplate: TemplateRef<any>;
+    currentYear: number = TimeConstant.Year;
     get f() {
         return this.signUpForm.controls;
     }

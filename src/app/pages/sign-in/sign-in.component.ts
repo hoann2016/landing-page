@@ -11,6 +11,7 @@ import { environment } from '../../../environments/environment';
 import { UniversalStorage } from '../../shared/storage/universal.storage';
 import { HttpErrorResponse } from '@angular/common/http';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { TimeConstant } from '@shared/constants/time.constant';
 @Component({
     selector: 'app-sign-in',
     templateUrl: './sign-in.component.html',
@@ -31,6 +32,8 @@ export class SignInComponent implements OnInit, AfterViewInit {
     get f() {
         return this.signInForm.controls;
     }
+    currentYear: number = TimeConstant.Year;
+
     constructor(
         public fb: FormBuilder,
         private translate: TranslateService,
