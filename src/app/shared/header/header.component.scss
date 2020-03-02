@@ -50,6 +50,7 @@
     display: flex;
     padding: 0px 0 10px 0;
     align-items: center;
+    display: none;
     .btn_login {
         font-family: "ProximaNova";
         border-radius: 3px;
@@ -114,5 +115,10 @@
             height: 100%;
             margin-top: 0px;
         }
+    }
+}
+@media screen and (max-width: 768px) {
+    .button-action {
+        display: block;
     }
 }
