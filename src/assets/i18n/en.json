@@ -20,14 +20,14 @@
             "HeaderDescription2": "Ludiino Online Booking & Scheduling",
             "HeaderDescription3": "System to never miss a booking & book more clients",
             "MessageHeader_1": "A Free Professional Website",
-            "MessageContent_1": "A free professionally design with SEO enabled website that make your business stand out on the internet. Google Map & Client Evaluation features are integrated to provide all the needed information for your client to pick out your services online",
+            "MessageContent_1": "An SEO friendly and professionally designed website that makes your business stand out on the internet. Google Map & Client Evaluation features are integrated to provide all the needed information for your client to pick out your services online",
             "MessageHeader_4": "Dashboard & Reports",
             "MessageContent_4": "Real time online reporting about booking transactions,payments, and client satisfaction. Available KPIs dashboard with visualized charts & graphs that help owners quickly gauge business performances and what need to be done to continuosly improve",
             "MessageHeader_2": "Accept Online and/or Offline Payment",
             "MessageContent_2": "Online payments go directy to your bank account via secured payment portals to guarantee bookings and instantly receive booking confirmation You can just focus on providing the best services without having to worry about managing bookings, payments, and cash",
             "MessageHeader_5": "Auto Notifications & Reminders",
             "MessageContent_5": "The system automatically sends to clients reminders about upcoming apppointments and notifications when a booking is made/changed so you don't have to",
-            "MessageHeader_3": "Integrate  with Social Network",
+            "MessageHeader_3": "An Online Booking Site that does business 24/7",
             "MessageContent_3": "Booking feature is integrated into your social networks like facebook and/or instagram for clients to conveniently  book via multiple online channels to help your business leverage on all digital channels to get new clients & ultmately more bookings",
             "MessageHeader_6": "Auto Notification & Reminder",
             "MessageContent_6": "The system automatically sends reminders to client about an upcoming appointments and/or notifications when a booking is made, changed, or canceled so you're always in control of your business without having to attend the phone all the times",
@@ -385,8 +385,9 @@
     },
     "Shared": {
         "RegisterBtnLabel": "Register",
-        "SigninBtnLabel": "Login",
-        "Login_Register": "Login",
+        "SigninBtnLabel": "Log In",
+        "Login_Register": "Log In",
+        "Register_Label": "Register, It's Free",
         "Send": "Send New Password",
         "FormCommon": {
             "required": "required",
@@ -531,7 +532,8 @@
     },
     "SignUp": {
         "SignUpSuccess": "Register account successfully",
-        "RedirectToPayment": "Redirect to payment page"
+        "RedirectToPayment": "Redirect to payment page",
+        "EmailExisted": "You email already exists, please log in"
     },
     "ExchangeRate": {
         "ErrorLoad": "Can not load current exchange rate"
