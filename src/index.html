@@ -28,15 +28,15 @@
             align-items: center;
             justify-content: center;
           }
-      
+
           .spinner {
               width: 40px;
               height: 40px;
-      
+
               position: relative;
               margin: auto;
           }
-      
+
           .double-bounce1, .double-bounce2 {
             width: 100%;
             height: 100%;
@@ -46,26 +46,26 @@
             position: absolute;
             top: 0;
             left: 0;
-            
+
             -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
             animation: sk-bounce 2.0s infinite ease-in-out;
           }
-      
+
         .double-bounce2 {
           -webkit-animation-delay: -1.0s;
           animation-delay: -1.0s;
         }
-      
+
         @-webkit-keyframes sk-bounce {
           0%, 100% { -webkit-transform: scale(0.0) }
           50% { -webkit-transform: scale(1.0) }
         }
-      
+
         @keyframes sk-bounce {
-          0%, 100% { 
+          0%, 100% {
             transform: scale(0.0);
             -webkit-transform: scale(0.0);
-          } 50% { 
+          } 50% {
             transform: scale(1.0);
             -webkit-transform: scale(1.0);
           }
@@ -78,30 +78,13 @@
     </div>
   <app-root>
   </app-root>
-  <!-- color variation -->
-  <div id="color"></div>
-
-   <div id="fb-root"></div>
-  <script>
-  (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
-      fjs.parentNode.insertBefore(js, fjs);
-  }
-  (document, 'script', 'facebook-jssdk'));
-  </script>
-<!-- Your customer chat code -->
-    <div class="fb-customerchat"
+  <div class="fb-customerchat"
     attribution=setup_tool
-    page_id="2123438804574660"
+    page_id="1187924831306358"
     theme_color="#19d5dc"
     logged_in_greeting="Hi! Welcome to PixelStrap Themes  How can we help you?"
     logged_out_greeting="Hi! Welcome to PixelStrap Themes  How can we help you?">
     </div>
-<!-- facebook chat section end -->
-
 </body>
 
 </html>
