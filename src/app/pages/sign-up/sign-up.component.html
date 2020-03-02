@@ -273,3 +273,22 @@
     </div>
 
 </section>
+
+<ng-template #emailExist>
+	<div class="modal-user-not-active">
+		<div class="row m-0">
+			<div class="current-logo">
+				<img src="assets/images/sign-up/logo-new.png" alt="Logo">
+			</div>
+		</div>
+		<div class="row m-0">
+			<div class="content-notification">
+				<div class="text-message">{{ 'SignUp.EmailExisted' | translate }}</div>
+			</div>
+		</div>
+		<span class="close" (click)="closeModal()">
+            <fa-icon [icon]="iconTimes" class="available"></fa-icon>
+        </span>
+        <button type="button" class="btn button-login" [routerLink]="'/pages/sign-in'">{{ 'Home.SignIn.Login' | translate }}</button>
+	</div>
+</ng-template>

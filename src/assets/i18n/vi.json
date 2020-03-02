@@ -27,7 +27,7 @@
             "MessageContent_2": "Khách Hàng thanh toán trực tuyến qua cổng thanh toán bảo mật khi đặt hẹn đến tài khoản ngân hàng của bạn và nhận xác nhận đặt hẹn ngay tức thời.Giải pháp đặt hẹn trực tuyến giúp bạn không phải mất thời gian gọi điện thoại cho Khách Hàng, quản lý lịch hẹn, và tiền mặt tại cửa hàng mà chỉ tập trung cung cấp dịch vụ tốt nhất",
             "MessageHeader_5": "Gửi Thông Báo & Nhắc Hẹn Tự Động",
             "MessageContent_5": "Hệ thống tự động gửi thông báo nhắc nhở về cuộc hẹn sắp tới hay khi có cập nhật về trạng thái cuộc hẹn giúp giảm tối đa tình trạng 'hẹn không đến', chi phí điện thoại, và thời gian quản lý hoạt động cửa hàng đồng thời tăng chất lượng dịch vụ chăm sóc khách hàng ",
-            "MessageHeader_3": "Tích Hợp Với Mạng Xã Hội",
+            "MessageHeader_3": "Trang web đặt phòng trực tuyến hoạt động 24/7",
             "MessageContent_3": "Tích hợp tích năng đặt hẹn trên các Mạng Xã Hội như Facebook hay Instagram giúp tăng hiệu quả marketing đa kênh và số lượt đặt hẹn trực tuyến. Khách Hàng có thể đặt hẹn trực tuyến ngay trên MXH với vài thao tác đơn giản",
             "MessageHeader_6": "Thông Báo Nhắc Hẹn Tự Động",
             "MessageContent_6": "Giảm tối đa tình trạng ”hẹn không đến” với hệ thống tự động gửi thông báo về cuộc hẹn sắp tới qua email, sms, và ứng dụng di động giúp doanh nghiệp tiết kiệm thời gian & chi phí cho công việc quản lý lịch hẹn và tăng chất lượng dịch vụ chăm sóc khách hàng",
@@ -388,6 +388,7 @@
         "SigninBtnLabel": "Đăng nhập",
         "Send": "Gửi Mật Khẩu Mới",
         "Login_Register": "Đăng nhập",
+        "Register_Label": "Đăng ký, Miễn phí",
         "FormCommon": {
             "required": "bắt buộc",
             "minlength": "ít nhất {{valueLength}} ký tự",
@@ -534,7 +535,8 @@
     },
     "SignUp": {
         "SignUpSuccess": "Đã đăng ký tài khoản thành công",
-        "RedirectToPayment": "Chuyển tới trang thanh toán "
+        "RedirectToPayment": "Chuyển tới trang thanh toán ",
+        "EmailExisted": "Email đã tồn tại. Vui lòng đăng nhập"
     },
     "ExchangeRate": {
         "ErrorLoad": "Không thể tải tỉ giá hiện tại"
