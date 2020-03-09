@@ -20,7 +20,7 @@ import { TimeConstant } from '@shared/constants/time.constant';
 export class SignInComponent implements OnInit, AfterViewInit {
     @ViewChild('notActive', { static: true }) notActive: TemplateRef<any>;
     iconTimes: any = faTimes;
-    
+
     ngAfterViewInit(): void {
     }
     shopDomain: string;
@@ -91,11 +91,11 @@ export class SignInComponent implements OnInit, AfterViewInit {
                         if (err.error.message[0].code == 1026) {
                             this.modalService.open(this.notActive);
                         } else {
-                            this.toastr.error(this.translate.instant(`Shared.CommunicationMessage.${ err.error.message[0].code }`));
+                            this.toastr.error(this.translate.instant(`Shared.CommunicationMessage.${err.error.message[0].code}`));
                         }
                     }
                     this.showLoading = false;
-                    
+
                 }
             );
         }
@@ -142,9 +142,12 @@ export class SignInComponent implements OnInit, AfterViewInit {
     closeModal(): void {
         this.modalService.dismissAll();
     }
-    
+
     forgotPassword(content): void {
-        console.log('go here');
         this.modalService.open(content, { centered: true });
+    }
+
+    closeDialog(event: boolean) {
+        if (event) this.closeModal();
     }
 }

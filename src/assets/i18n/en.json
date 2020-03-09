@@ -346,6 +346,7 @@
         "have-account": "Already have an account?",
         "sign-in": "Sign In",
         "message-require": "Do not leave blank; this information is required.",
+        "field-is-required": "This field is required",
         "message-format": "Invalid full name",
         "message-format-2": "Invalid phone number",
         "message-format-3": "Invalid email",

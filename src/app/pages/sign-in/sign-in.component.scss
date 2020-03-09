@@ -305,7 +305,20 @@ padding: 0 5px;
         cursor: pointer;
     }
 }
+.modal-forgot-password {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    padding: 40px 55px;
+}
 
+.close-modal {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    fa-icon {
+        color: #939393;
+    }
+}
 
 @media only screen and (max-width:768px) {
   .section-signin .wrap-form-field {
