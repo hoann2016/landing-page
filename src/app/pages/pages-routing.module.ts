@@ -13,6 +13,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermOfServiceComponent } from './term-of-service/term-of-service.component';
 import { CloneSiteComponent } from './clone-site/clone-site.component'
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 const routes: Routes = [
   {
@@ -69,6 +70,10 @@ const routes: Routes = [
       {
         path: 'clone-site',
         component: CloneSiteComponent
+      },
+      {
+          path: 'reset-password',
+          component: ResetPasswordComponent
       }
     ]
   }
