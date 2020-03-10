@@ -150,4 +150,8 @@ export class SignInComponent implements OnInit, AfterViewInit {
     closeDialog(event: boolean) {
         if (event) this.closeModal();
     }
+
+    ngOnDestroy() {
+        this.closeModal();
+    }
 }

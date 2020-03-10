@@ -345,7 +345,7 @@
         "policy-3": "",
         "have-account": "Already have an account?",
         "sign-in": "Sign In",
-        "message-require": "Do not leave blank; this information is required.",
+        "message-require": "Do not leave blank, this information is required.",
         "field-is-required": "This field is required",
         "message-format": "Invalid full name",
         "message-format-2": "Invalid phone number",
@@ -541,6 +541,25 @@
     },
     "ForgotPassword": {
         "Warning": "Warning",
-        "WarningMessage": "This feature is updating. Please try again later !"
+        "WarningMessage": "This feature is updating. Please try again later !",
+        "Title": "Forgot Password",
+        "Description": "Enter your registered login email address to receive a link to set a new password",
+        "SuccessMessage": "The password reset email has been sent, please check your inbox",
+        "MessageClose": "This box will be closed after",
+        "BackToLogin": "Back to",
+        "HaveAnAccount": "Don't have an account?",
+        "Register": "Register",
+        "YourBusiness": "your business",
+        "Send": "Send",
+        "EmailNotExist": "Unable to verify account. Please try again.",
+        "Login": "Login"
+    },
+    "ResetPassword": {
+        "SettingPassword": "Reset password",
+        "Password": "New password",
+        "ConfirmPassword": "Confirm password",
+        "ResetPassword": "Change password",
+        "ChangeSuccessful": "Your password has been changed successfully",
+        "Expired": "Oops... Your request to change your password has expired"
     }
 }

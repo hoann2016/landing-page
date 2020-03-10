@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { MustMatch } from './../sign-in/must-match.validator';
+import { MustMatch } from './../sign-up/must-match.validator';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ResetPasswordComponent implements OnInit {
     formResetPassword: FormGroup;
     submited: boolean = false;
+    success: boolean = false;
     
     constructor(
         private fb: FormBuilder,
@@ -32,5 +33,12 @@ export class ResetPasswordComponent implements OnInit {
             password: [null, Validators.compose([Validators.required, Validators.minLength(5), Validators.maxLength(20)])],
             confirmPassword: [null, Validators.compose([Validators.required, Validators.minLength(5), Validators.maxLength(20)])]
         }, { validator: MustMatch('password', 'confirmPassword') });
+    }
+
+    submitChangePassword(): void {
+        this.submited = true;
+        if (this.formResetPassword.valid) {
+            this.success = true;
+        }
     }
 }

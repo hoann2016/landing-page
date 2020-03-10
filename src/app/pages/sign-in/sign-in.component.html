@@ -131,7 +131,7 @@
 
 <ng-template #forgotPasswordRef let-modal>
 	<div class="modal-body modal-forgot-password">
-        <div class="close-modal">
+        <div class="close-modal" (click)="closeModal()">
             <fa-icon [icon]="iconTimes"></fa-icon>
         </div>
 		<app-forgot-password (dialogShouldBeClosed)="closeDialog($event)"></app-forgot-password>
