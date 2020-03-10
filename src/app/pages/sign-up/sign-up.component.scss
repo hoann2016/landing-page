@@ -1,4 +1,4 @@
-p{
+p {
   text-transform: none;
 }
 .one-line {
@@ -52,17 +52,17 @@ p{
 }
 
 .sugest-name {
-    p{
-        font-size: 0.8rem;
-    } 
+  p {
+    font-size: 0.8rem;
+  }
   .shop-domain {
     margin-top: 5px;
 
     padding-left: 5px;
-    p{
-        span{
-            color: #e59017;
-        }
+    p {
+      span {
+        color: #e59017;
+      }
     }
   }
 }
@@ -85,22 +85,19 @@ p{
   height: 100vh;
   padding: 0;
 }
-.section-signup a{
+.section-signup a {
   color: #00aeef;
 }
-.section-signup .register-form{
+.section-signup .register-form {
   background-color: #ffffff;
   padding: 30px 30px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px;
   border-radius: 5px;
 }
-.section-signup .wel-img{
-margin-top: 60px;
-}
-.section-signup .title-sub-right{
-font-size: 19px;
-color: #ffffff;
-
+.section-signup .title-sub-right {
+  font-size: 19px;
+  color: #424242;
+  padding: 0 5px;
 }
 
 .wrap-left-signin {
@@ -129,20 +126,21 @@ color: #ffffff;
   color: #fff;
   opacity: 0.7;
 }
-.welcome-container{
-  padding: 0 30px;
+.welcome-container {
+  z-index: 30;
+  position: absolute;
+  padding: 0 58px;
 }
 
 .device-mac {
   width: 100%;
   bottom: 0%;
-  height: 70%;
-  background-image: url(/assets/images/sign-up/device-new.png);
+  height: 100%;
+  background-image: url(/assets/images/sign-up/device-new.jpg);
   background-repeat: no-repeat;
   background-position: 25%;
   background-size: cover;
   position: absolute;
-
 }
 
 .wrap-left-signin .macbook_img {
@@ -165,14 +163,12 @@ color: #ffffff;
   overflow: auto;
   height: 100vh;
   background-color: #f5f6f7;
-  
 }
 
 .wrap-form-field {
   padding: 15px;
   width: 70%;
   margin: 0% auto 0;
- 
 }
 
 .wrap-form-field .header-page {
@@ -199,15 +195,15 @@ color: #ffffff;
 }
 
 .wrap-form-field select {
-    border-style: none;
-    padding: 5px;
-    outline: none;
-    background-color: #ecf1f7;
-    margin-top: 5px;
-    font-size: 14px;
-    height: 40px;
-    border-radius: 3px;
-    font-size: 14px;
+  border-style: none;
+  padding: 5px;
+  outline: none;
+  background-color: #ecf1f7;
+  margin-top: 5px;
+  font-size: 14px;
+  height: 40px;
+  border-radius: 3px;
+  font-size: 14px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -265,56 +261,95 @@ color: #ffffff;
 
 .btn_submit_signup button {
   margin: 0 10px 0 15px;
-
 }
 
 .section-signup a:focus {
   color: #00aeef !important;
-
 }
 
 .section-signup .ip_checkbox {
   margin-top: 0px;
 }
 
-
-.text-danger{
-    font-size: 13px!important;
+.text-danger {
+  font-size: 13px !important;
 }
 ::-webkit-scrollbar {
-  width: 0px;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-  background: #FF0000;
+  background: #ff0000;
 }
-.img-top{
+.img-top {
   width: 150px;
   margin: 10% 10% 0;
 }
-@media only screen and (max-width:768px) {
+.modal-user-not-active {
+  padding: 40px 20px;
+  position: relative;
+  .current-logo {
+    display: block;
+    text-align: center;
+    width: 100%;
+    img {
+      max-width: 150px;
+    }
+  }
+  .content-notification {
+    width: 100%;
+    margin-top: 20px;
+    .text-message {
+      font-size: 19px;
+      text-align: center;
+      display: block;
+      color: #9e1111;
+    }
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 99;
+    cursor: pointer;
+  }
+  .button-login {
+    border-color: #f49c1e;
+    display: block;
+    text-align: center;
+    margin: 11px auto;
+    background-color: #f49c1e;
+    color: #fff;
+    box-shadow: none;
+    outline: none;
+    &:hover {
+      background-color: #f49c1e;
+      &:focus {
+          box-shadow: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
   .section-signup .wrap-form-field {
     padding: 15px;
     width: 100%;
     margin: 0% auto 0;
-   
   }
 }
-@media only screen 
-and (min-width : 768px) 
-and (max-width : 991px)  {  
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .section-signup .wrap-form-field {
-  padding: 15px;
-  width: 80%;
-  margin: 0% auto 0;
- 
-}}
-@media only screen 
-and (min-width : 992px)   {  
+    padding: 15px;
+    width: 80%;
+    margin: 0% auto 0;
+  }
+}
+@media only screen and (min-width: 992px) {
   .section-signup .wrap-form-field {
-  padding: 15px;
-  width: 60%;
-  margin: 0% auto 0;
- 
-}}
+    padding: 15px;
+    width: 60%;
+    margin: 0% auto 0;
+  }
+}

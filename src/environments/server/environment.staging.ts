@@ -4,27 +4,14 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false,
-  isServer: false,
-  
-  // for prerender
-
-  host: 'http://localhost:4000',
-  rootproto:"http://",
-  rootip:"localhost",
+  production: true,
+  isServer: true,
+  rootproto:"https://",
+  rootip:"staging.ludiino.com",
   rootpath:"/",
   socketPath:'/socket',
-  socketPort:9992,
-  port:8080,
+  socketPort:null,
+  port:null,
   merchantpath:"http://45.77.250.47:84",
   redirectTime:15
-
-  // rootproto:"http://",
-  // rootip:"dev.ludiino.com",
-  // rootpath:"/",
-  // socketPath:'/socket',
-  // socketPort:null,
-  // port:null,
-  // merchantpath:"http://45.77.250.47:84",
-  // redirectTime:15
 };

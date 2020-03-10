@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, TemplateRef, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
@@ -14,13 +14,16 @@ import { of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { PackageDataModel } from '@shared/models/package-models/package-data.model';
 import { BusinessType } from '@shared/models/business-types-models/business-type.model';
+import { StatusCodeConstant } from '@shared/constants/status-code.constant';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { TimeConstant } from '@shared/constants/time.constant';
 
 @Component({
     selector: 'app-sign-up',
     templateUrl: './sign-up.component.html',
     styleUrls: ['./sign-up.component.scss']
 })
-export class SignUpComponent implements OnInit, AfterViewInit {
+export class SignUpComponent implements OnInit, AfterViewInit, OnDestroy {
     ngAfterViewInit(): void {
     }
     shopDomain: string;
@@ -32,6 +35,9 @@ export class SignUpComponent implements OnInit, AfterViewInit {
     userOrder: UserOrder;
     freePackage;
     orderResponse;
+    iconTimes: any = faTimes;
+    @ViewChild('emailExist', { static: true }) emailExistTemplate: TemplateRef<any>;
+    currentYear: number = TimeConstant.Year;
     get f() {
         return this.signUpForm.controls;
     }
@@ -42,7 +48,7 @@ export class SignUpComponent implements OnInit, AfterViewInit {
         private landingPageService: LandingPageService,
         private appService: AppService,
         private toastr: ToastrService,
-        private router: Router,
+        private router: Router
     ) { }
     public allPackage: Array<PackageDataModel> = [];
     public allBusinessType: Array<BusinessType> = [];
@@ -189,9 +195,13 @@ export class SignUpComponent implements OnInit, AfterViewInit {
                 catchError(error => {
                     const errCode = error.error.message[0].code;
                     this.showLoading = false;
-                    this.translate.get('Shared.CommunicationMessage.' + `${errCode}`).subscribe((res: string) => {
-                        this.toastr.error(res);
-                    });
+                    if (errCode !== StatusCodeConstant.EMAIL_PASSWORD_INCORRECT) {
+                        this.translate.get('Shared.CommunicationMessage.' + `${errCode}`).subscribe((res: string) => {
+                            this.toastr.error(res);
+                        });
+                    } else {
+                        this.modalService.open(this.emailExistTemplate, { centered: true });
+                    }
                     return of(error);
                 })
             ).subscribe(
@@ -275,5 +285,13 @@ export class SignUpComponent implements OnInit, AfterViewInit {
     redirectToPrivacyPolicy() {
         this.modalService.dismissAll();
         window.open(`http://blog.ludiino.com/2019/11/18/privacy-policy/?lang=${this.translate.currentLang}`, '_blank');
+    }
+
+    closeModal(): void {
+        this.modalService.dismissAll();
+    }
+
+    ngOnDestroy(): void {
+        this.closeModal();
     }
 }

@@ -1,11 +1,11 @@
 FROM node:10-alpine as buildContainer
 WORKDIR /app
-COPY ./package.json ./package-lock.json /app/
+COPY ./package.json /app/
 RUN npm install
 COPY . /app
 RUN npm run build:universal:staging
 RUN npm run generate:prerender
-RUN npm run test:ssr
+# RUN npm run test:ssr
 
 FROM node:8-alpine
 
