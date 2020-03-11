@@ -508,7 +508,8 @@
         "init-store-license": "Cài đặt và xác thực giấy phép của cửa hàng",
         "clone-merchant-site": "Khởi tạo website",
         "clone-merchant-site-success": "Khởi tạo website thành công",
-        "redirect-message": "Tự động chuyển tới website của bạn trong vòng %s giây nữa."
+        "preparing-merchant-site": "Đang chuẩn bị website cho bạn",
+        "redirect-message": "Webstie của bạn đã được chuẩn bị xong. Đang chuyển đến."
     },
     "Common": {
         "Discount": "Khuyến mãi",

@@ -30,14 +30,14 @@ export class CloneSiteComponent implements OnInit {
   showLoading: boolean = false;
   countDown(redirectTime) {
     if(redirectTime > 0){
-      const message = this.translate.instant('CloneSite.redirect-message');
-      this.cloneSiteProgress.message = message.replace(/%s/g, redirectTime);
+      this.cloneSiteProgress.percent += 1;
+      this.cloneSiteProgress.message = this.translate.instant('CloneSite.preparing-merchant-site');
       redirectTime -= 1;
       setTimeout(() => this.countDown(redirectTime), 1000);
     } else {
       this.showLoading = true;
+      this.cloneSiteProgress.message = this.translate.instant('CloneSite.redirect-message');
       this.userService.logIn(this.userCredentials).subscribe(response => {
-        console.log('clone-site-login', response);
         const { success, data } = response;
         this.showLoading = false;
         if (success === true && data.sessionId && data.domain) {
@@ -71,7 +71,7 @@ export class CloneSiteComponent implements OnInit {
           percent: cloneSiteProgress.percent,
           domain: cloneSiteProgress.domain
         };
-        if(this.cloneSiteProgress && this.cloneSiteProgress.percent === 100 && this.cloneSiteProgress.domain) {
+        if(this.cloneSiteProgress && this.cloneSiteProgress.percent === 80 && this.cloneSiteProgress.domain) {
           this.countDown(environment.redirectTime);
         }
     });

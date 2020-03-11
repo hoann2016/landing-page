@@ -505,8 +505,9 @@
         "setup-store": "Setting up store default configuration.",
         "init-store-license": "Setting up store's license.",
         "clone-merchant-site": "Initializing website.",
-        "clone-merchant-site-success": "Initializing website successfully",
-        "redirect-message": "Your website is being created. Please wait %s seconds."
+        "clone-merchant-site-success": "Clone website successfully",
+        "preparing-merchant-site": "Preparing your website",
+        "redirect-message": "Your website was created. Redirecting to your website."
     },
     "Common": {
         "Discount": "Discount",
