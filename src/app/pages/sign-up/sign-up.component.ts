@@ -225,7 +225,7 @@ export class SignUpComponent implements OnInit, AfterViewInit, OnDestroy {
                                 if (this.orderResponse) {
                                     this.showLoading = false;
                                     this.toastr.success("Start to clone you website ...")
-                                    this.router.navigateByUrl('/pages/clone-site', { state: { merchantId: response.data.id } });
+                                    this.router.navigateByUrl('/pages/clone-site', { state: { merchantId: response.data.id, userCredentials: { email: formImport.email, password: formImport.password } } });
                                 }
                             } else {
                                 const redirectValues = { ...response.data };

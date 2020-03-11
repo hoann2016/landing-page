@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
+import { isEmpty} from 'lodash';
 import { map } from 'rxjs/operators';
 import { CloneSiteService } from '../../shared/services/clone-site.service';
 import { CloneSite } from '../../shared/models/cloneSite.models';
-import { isEmpty} from 'lodash';
+import { AppService } from '../../app.service';
+import { UserLogin } from '../../shared/models/user-models/user-login.model';
 import { environment } from '../../../environments/environment';
 
 @Component({
@@ -19,10 +21,13 @@ export class CloneSiteComponent implements OnInit {
   constructor(
     private translate: TranslateService,
     private route: ActivatedRoute,
-    private cloneSiteService: CloneSiteService
+    private cloneSiteService: CloneSiteService,
+    private userService: AppService,
     ) { }
   state$: Observable<object>;
   merchantId: string;
+  userCredentials: UserLogin;
+  showLoading: boolean = false;
   countDown(redirectTime) {
     if(redirectTime > 0){
       const message = this.translate.instant('CloneSite.redirect-message');
@@ -30,7 +35,17 @@ export class CloneSiteComponent implements OnInit {
       redirectTime -= 1;
       setTimeout(() => this.countDown(redirectTime), 1000);
     } else {
-      window.location.href = `${environment.rootproto}${this.cloneSiteProgress.domain}/pages/sign-in`;
+      this.showLoading = true;
+      this.userService.logIn(this.userCredentials).subscribe(response => {
+        console.log('clone-site-login', response);
+        const { success, data } = response;
+        this.showLoading = false;
+        if (success === true && data.sessionId && data.domain) {
+          window.location.href = `${environment.rootproto}${data.domain}/pages/sign-in?session=${data.sessionId}`;
+        } else {
+          window.location.href = `${environment.rootproto}${this.cloneSiteProgress.domain}/pages/sign-in`;
+        }
+      });
     }
   }
   ngOnInit() {
@@ -44,6 +59,7 @@ export class CloneSiteComponent implements OnInit {
     this.state$.subscribe((p: any) => {
       if (!isEmpty(p)) {
         this.merchantId = p.merchantId;
+        this.userCredentials = p.userCredentials;
         this.cloneSiteService.ready(this.merchantId);
       }
     });
