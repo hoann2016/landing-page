@@ -17,7 +17,7 @@ export const environment = {
   socketPort:9992,
   port:8080,
   merchantpath:"http://45.77.250.47:84",
-  redirectTime:15
+  redirectTime:20
 
   // rootproto:"http://",
   // rootip:"dev.ludiino.com",
