@@ -55,7 +55,8 @@ export function HttpLoaderFactory(http: HttpClient) {
       "innerStrokeWidth": 1,
       "showSubtitle": false,
       "showBackground": false,
-      "responsive": true
+      "responsive": true,
+      "startFromZero": false
     }),
     FontAwesomeModule
   ],
