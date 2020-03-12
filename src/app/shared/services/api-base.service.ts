@@ -1,14 +1,16 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { HttpClient, HttpEvent } from "@angular/common/http";
+import { environment } from '../../../environments/environment';
 
 @Injectable({
     providedIn: 'root'
 })
 export class ApiBaseService {
+    private ROOT_API = `${ environment.rootproto }${ environment.rootip }:${ environment.port }`
     private API_URL_PATH = '/';
     private SEGEMENT = 'api/v1/';
-    private API_URL = this.API_URL_PATH + this.SEGEMENT;
+    private API_URL = this.ROOT_API + this.API_URL_PATH + this.SEGEMENT;
     
     constructor(protected http: HttpClient) { }
 

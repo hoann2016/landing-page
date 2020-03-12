@@ -564,6 +564,7 @@
         "ConfirmPassword": "Xác nhận mật khẩu",
         "ResetPassword": "Thay đổi mật khẩu",
         "ChangeSuccessful": "Thay đổi mật khẩu thành công",
-        "Expired": "Rất tiếc, yêu cầu thay đổi mật khẩu của bạn đã hết hiệu lực"
+        "Expired": "Rất tiếc, yêu cầu thay đổi mật khẩu của bạn đã hết hiệu lực",
+        "RedirectNow": "Bạn sẽ được chuyển tới trang đăng nhập sau "
     }
 }
