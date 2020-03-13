@@ -28,7 +28,7 @@
             "MessageHeader_5": "Gửi Thông Báo & Nhắc Hẹn Tự Động",
             "MessageContent_5": "Hệ thống tự động gửi thông báo nhắc nhở về cuộc hẹn sắp tới hay khi có cập nhật về trạng thái cuộc hẹn giúp giảm tối đa tình trạng 'hẹn không đến', chi phí điện thoại, và thời gian quản lý hoạt động cửa hàng đồng thời tăng chất lượng dịch vụ chăm sóc khách hàng ",
             "MessageHeader_3": "Trang web đặt phòng trực tuyến hoạt động 24/7",
-            "MessageContent_3": "Tích hợp tích năng đặt hẹn trên các Mạng Xã Hội như Facebook hay Instagram giúp tăng hiệu quả marketing đa kênh và số lượt đặt hẹn trực tuyến. Khách Hàng có thể đặt hẹn trực tuyến ngay trên MXH với vài thao tác đơn giản",
+            "MessageContent_3": "Không chỉ dừng lại ở xem thông tin trên trang web, khách hàng 4.0 còn dễ dàng đặt lịch hẹn cho dịch vụ họ cần, tiến hành thanh toán trực tuyến & nhận xác nhận đặt hẹn thành công qua sms, email, hay ứng dụng di động chỉ trong vài giây. Mô hình kinh doanh mới, thuận tiện, và hiệu quả nhất.",
             "MessageHeader_6": "Thông Báo Nhắc Hẹn Tự Động",
             "MessageContent_6": "Giảm tối đa tình trạng ”hẹn không đến” với hệ thống tự động gửi thông báo về cuộc hẹn sắp tới qua email, sms, và ứng dụng di động giúp doanh nghiệp tiết kiệm thời gian & chi phí cho công việc quản lý lịch hẹn và tăng chất lượng dịch vụ chăm sóc khách hàng",
             "Button": {
@@ -242,7 +242,7 @@
             },
             "Marketing": {
                 "Title": "Chương trình khuyến mãi",
-                "Info": "Thiết lập các chương trình khuyến mãi đa dạng quảng cáo trực tuyến đến nhiều tập khách hàng qua web và thiết bị di động để khách hàng được thông báo thường xuyên về và tức thời về những chính sách giảm giá hấp dẫn. Báo cáo thống kê đánh giá hiệu quả các chương trình khuyến mãi được cung cấp tự động theo thời gian thực."
+                "Info": "Thiết lập các chương trình khuyến mãi đa dạng quảng cáo trực tuyến đến nhiều tập khách hàng qua web và thiết bị di động để khách hàng được thông báo thường xuyên về và tức thời về những chính sách giảm giá hấp dẫn."
             },
             "Dashboard": {
                 "Title": "Báo Cáo",
