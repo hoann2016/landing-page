@@ -454,7 +454,8 @@
             "1027": "Domain already exists",
             "1028": "Order information is missing",
             "1029": "Order not found",
-            "1030": "User activation failed"
+            "1030": "User activation failed",
+            "1040": "Permission denied"
         },
         "FieldNameBaseCompnent": {
             "Footer": {
