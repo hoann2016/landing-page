@@ -1,12 +1,12 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { Observable, timer } from 'rxjs';
 import { take } from 'rxjs/operators';
 import { UserService } from '@shared/services/user.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
 import { TranslateService } from '@ngx-translate/core';
+import { AppService } from 'app/app.service';
 
 @Component({
     selector: 'app-forgot-password',
@@ -24,8 +24,7 @@ export class ForgotPasswordComponent implements OnInit {
 
     constructor(
         private fb: FormBuilder,
-        private router: Router,
-        private userService: UserService,
+        private userService: AppService,
         private messageService: ToastrService,
         private translateService: TranslateService
     ) { }
@@ -49,7 +48,8 @@ export class ForgotPasswordComponent implements OnInit {
         this.isNotFound = false;
         if (this.formForgotPassword.valid) {
             this.loadingStatus = true;
-            this.userService.forgotPassword(this.formForgotPassword.value!.email).subscribe(
+            console.log(this.formForgotPassword.value.email);
+            this.userService.forgotPassword(this.formForgotPassword.value.email).subscribe(
                 () => {
                     this.successed = true;
                     timer(5000).subscribe(_ => this.closeDialogEvent.emit(true));
