@@ -554,7 +554,8 @@
         "YourBusiness": "your business",
         "Send": "Send",
         "EmailNotExist": "Unable to verify account. Please try again.",
-        "Login": "Login"
+        "Login": "Login",
+        "Unit": "Second"
     },
     "ResetPassword": {
         "SettingPassword": "Reset password",
@@ -562,6 +563,8 @@
         "ConfirmPassword": "Confirm password",
         "ResetPassword": "Change password",
         "ChangeSuccessful": "Your password has been changed successfully",
-        "Expired": "Oops... Your request to change your password has expired"
+        "Expired": "Oops... Your request to change your password has expired",
+        "RedirectNow": "You will be redirected to login page after ",
+        "Unit": "Second"
     }
 }
