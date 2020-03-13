@@ -16,7 +16,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class ForgotPasswordComponent implements OnInit {
     formForgotPassword: FormGroup;
     submited: boolean = false;
-    errorMessage: string;
+    isNotFound: boolean = false;
     successed: boolean = false;
     timeCount$: Observable<number> = timer(0, 1000).pipe(take(5));
     loadingStatus: boolean = false;
@@ -46,6 +46,7 @@ export class ForgotPasswordComponent implements OnInit {
 
     public submitForgotPassword(): void {
         this.submited = true;
+        this.isNotFound = false;
         if (this.formForgotPassword.valid) {
             this.loadingStatus = true;
             this.userService.forgotPassword(this.formForgotPassword.value!.email).subscribe(
@@ -53,11 +54,18 @@ export class ForgotPasswordComponent implements OnInit {
                     this.successed = true;
                     timer(5000).subscribe(_ => this.closeDialogEvent.emit(true));
                     this.loadingStatus = false;
+                    this.submited = false;
+                    this.isNotFound = false;
                 },
                 (error: HttpErrorResponse) => {
                     this.loadingStatus = false;
+                    this.submited = false;
                     if (error && error.error && error.error.message && error.error.message[0] && error.error.message[0].code) {
-                        this.messageService.error(this.translateService.instant(`Shared.CommunicationMessage.${error.error.message[0].code}`), error.status.toString(), { positionClass: "toast-bottom-right" });
+                        if (error.error.message[0].code === 1002) {
+                            this.isNotFound = true;
+                        } else {
+                            this.messageService.error(this.translateService.instant(`Shared.CommunicationMessage.${error.error.message[0].code}`), error.status.toString(), { positionClass: "toast-bottom-right" });
+                        }
                     }
                 }
             );
