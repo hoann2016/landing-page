@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MustMatch } from './../sign-up/must-match.validator';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UserService } from '@shared/services/user.service';
 import { ToastrService } from 'ngx-toastr';
 import { TranslateService } from '@ngx-translate/core';
 import { timer, Subject, Observable } from 'rxjs';
 import { takeUntil, take } from 'rxjs/operators';
 import { HttpErrorResponse } from '@angular/common/http';
+import { AppService } from 'app/app.service';
 
 @Component({
     selector: 'app-reset-password',
@@ -30,7 +30,7 @@ export class ResetPasswordComponent implements OnInit {
         private fb: FormBuilder,
         private route: ActivatedRoute,
         private router: Router,
-        private userService: UserService,
+        private userService: AppService,
         private messageService: ToastrService,
         private translateService: TranslateService
     ) { }

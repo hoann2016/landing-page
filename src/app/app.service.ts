@@ -93,6 +93,6 @@ export class AppService {
 
   resetPassword(password: string, confirmPassword: string, token: string, email: string): Observable<any> {
       const url: string = 'api/v1/users/password-reset';
-      return this.http.post(this.rooturl + url, { password, confirmPassword, token, email }, httpOptions);
+      return this.http.put(this.rooturl + url, { password, confirmPassword, token, email }, httpOptions);
   }
 }
