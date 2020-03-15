@@ -557,7 +557,8 @@
         "YourBusiness": "ngay",
         "Send": "Gửi",
         "EmailNotExist": "Email không tồn tại, vui lòng thử lại",
-        "Login": "Đăng nhập"
+        "Login": "Đăng nhập",
+        "Unit": "giây"
     },
     "ResetPassword": {
         "SettingPassword": "Cài đặt mật khẩu",
@@ -566,6 +567,7 @@
         "ResetPassword": "Thay đổi mật khẩu",
         "ChangeSuccessful": "Thay đổi mật khẩu thành công",
         "Expired": "Rất tiếc, yêu cầu thay đổi mật khẩu của bạn đã hết hiệu lực",
-        "RedirectNow": "Bạn sẽ được chuyển tới trang đăng nhập sau "
+        "RedirectNow": "Bạn sẽ được chuyển tới trang đăng nhập sau ",
+        "Unit": "giây"
     }
 }
