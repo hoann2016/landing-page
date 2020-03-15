@@ -87,12 +87,12 @@ export class AppService {
   //   return strError;
   // }
   forgotPassword(email: string): Observable<any> {
-    const url: string = 'users/password/forgot';
+    const url: string = 'users/password-forgot';
     return this.http.post(this.rooturl + url, { email }, httpOptions);
   }
 
   resetPassword(password: string, confirmPassword: string, token: string, email: string): Observable<any> {
-      const url: string = 'users/password/reset';
+      const url: string = 'users/password-reset';
       return this.http.post(this.rooturl + url, { password, confirmPassword, token, email }, httpOptions);
   }
 }
