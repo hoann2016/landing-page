@@ -90,9 +90,10 @@
                 "SocialBookingLink": "Tích Hợp Mạng Xã Hội",
                 "ContentTable": {
                     "Unlimited": "Không Giới Hạn",
-                    "10BookingPerMonth": "10 Lượt/Tháng",
+                    "10BookingPerMonth": "20 Lượt/Tháng",
                     "PayAtStore": "Thanh toán Tại Cửa Hàng",
-                    "PayNow": "Thanh Toán Ngay"
+                    "PayNow": "Thanh Toán Ngay",
+                    "PayOnline": "Thanh Toán Trực Tuyến"
                 }
             }
         },

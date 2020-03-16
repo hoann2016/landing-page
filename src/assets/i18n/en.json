@@ -92,7 +92,8 @@
                     "Unlimited": "Unlimited",
                     "10BookingPerMonth": "20 bookings / Month",
                     "PayAtStore": "Pay At Store",
-                    "PayNow": "Pay Now"
+                    "PayNow": "Pay Now",
+                    "PayOnline": "Pay Online"
                 }
             }
         },
