@@ -22,6 +22,7 @@ import { LoadingComponent } from './loading/loading.component';
 import { PriceExchangeRatePipe } from './pipes/priceExchangeRate.pipe';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DashboardWraperComponent } from './layouts/dashboard-wraper/dashboard-wraper.component';
+import { LoadingDirective } from './directives/loading.directive';
 
 @NgModule({
   exports: [ 
@@ -32,14 +33,15 @@ import { DashboardWraperComponent } from './layouts/dashboard-wraper/dashboard-w
     WrapperComponent,
     TranslateModule, 
     LoadingComponent,
-    PriceExchangeRatePipe
+    PriceExchangeRatePipe,
+    LoadingDirective
   ],
   imports: [
     CommonModule, RouterModule, NgxPageScrollModule, NgbModule, FormsModule,
     ReactiveFormsModule, HttpClientModule, TranslateModule,
     FontAwesomeModule
   ],
-  declarations: [HeaderComponent, HeaderCommonComponent, FooterComponent, LoadingComponent, WrapperComponent, PriceExchangeRatePipe, DashboardWraperComponent],
+  declarations: [HeaderComponent, HeaderCommonComponent, FooterComponent, LoadingComponent, WrapperComponent, PriceExchangeRatePipe, DashboardWraperComponent, LoadingDirective],
   providers: [WINDOW_PROVIDERS, LandingFixService , LandingPageService, GlobalErrorHandlerService, UniversalStorage]
 })
 export class SharedModule {

@@ -100,7 +100,7 @@
 							<!-- <img src="assets/images/sign-up/device-new.png" class="macbook_img"> -->
 						</div>
 						<div class="ft-authen">
-							<span>Powered by Ludiino ©2019</span>
+							<span>Powered by Ludiino ©{{ currentYear }}</span>
 						</div>
 					</div>
 				</div>
@@ -130,15 +130,10 @@
 </ng-template>
 
 <ng-template #forgotPasswordRef let-modal>
-	<div class="modal-header">
-		<h4 class="modal-title">{{ 'ForgotPassword.Warning' | translate }}</h4>
-		<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-			<span aria-hidden="true">&times;</span>
-		</button>
-	</div>
-	<div class="modal-body">
-		<p class="text-message">
-			{{ 'ForgotPassword.WarningMessage' | translate }}
-		</p>
+	<div class="modal-body modal-forgot-password">
+        <div class="close-modal" (click)="closeModal()">
+            <fa-icon [icon]="iconTimes"></fa-icon>
+        </div>
+		<app-forgot-password (dialogShouldBeClosed)="closeDialog($event)"></app-forgot-password>
 	</div>
 </ng-template>

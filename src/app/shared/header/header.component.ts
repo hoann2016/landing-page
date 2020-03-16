@@ -1,8 +1,7 @@
 import { Component, HostListener, Inject, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { TranslateService } from '@ngx-translate/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
 import { LandingPageService } from '../services/landing-page.service';
 import { WINDOW } from '../services/windows.service';
@@ -78,5 +77,9 @@ export class HeaderComponent implements OnInit {
 
     public toggleMobileMenu(): void {
         this.stateMenuInMobile.openMenu = !this.stateMenuInMobile.openMenu;
+    }
+
+    public goToRegister(): void {
+        this.router.navigateByUrl('/pages/sign-up');
     }
 }

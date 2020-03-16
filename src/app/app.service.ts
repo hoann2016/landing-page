@@ -86,4 +86,13 @@ export class AppService {
   //   strError += '</ul>'
   //   return strError;
   // }
+  forgotPassword(email: string): Observable<any> {
+    const url: string = 'api/v1/users/password-forgot';
+    return this.http.post(this.rooturl + url, { email }, httpOptions);
+  }
+
+  resetPassword(password: string, confirmPassword: string, token: string, email: string): Observable<any> {
+      const url: string = 'api/v1/users/password-reset';
+      return this.http.put(this.rooturl + url, { password, confirmPassword, token, email }, httpOptions);
+  }
 }

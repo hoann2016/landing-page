@@ -15,12 +15,6 @@
             >
         </a>
         <div class="btn_header_mb">
-            <a href="javascript:void(0)" (click)="RedirectToLogin()"
-                class="btn_login"
-                
-            >
-                Login
-            </a>
             <a
                 href="javascript:void(0)"
                 class="flag_menu navbar-light"
@@ -88,8 +82,23 @@
                         BLOG
                     </a>
                 </li>
+                <li class="nav-item">
+                    <span class="button-action">
+                        <a href="javascript:void(0)" (click)="RedirectToLogin()" class="btn_login">
+                            {{'Shared.Register_Label'|translate}}
+                        </a>
+                        <a href="javascript:void(0)" (click)="RedirectToLogin()" class="btn_login">
+                            {{'Shared.Login_Register'|translate}}
+                        </a>
+                    </span>
+                </li>
             </ul>
             <div class="btn_header">
+                <a href="javascript:void(0)" (click)="goToRegister()"
+                    class="btn_login"
+                >
+                    {{'Shared.Register_Label'|translate}}
+                </a>
                 <a href="javascript:void(0)" (click)="RedirectToLogin()"
                     class="btn_login"
                 >

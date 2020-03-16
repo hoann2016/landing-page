@@ -25,6 +25,8 @@ import { PaymentComponent } from './payment/payment.component';
 import { LoadingComponent } from '../shared/loading/loading.component';
 import { CloneSiteComponent } from './clone-site/clone-site.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -53,7 +55,8 @@ export function HttpLoaderFactory(http: HttpClient) {
       "innerStrokeWidth": 1,
       "showSubtitle": false,
       "showBackground": false,
-      "responsive": true
+      "responsive": true,
+      "startFromZero": false
     }),
     FontAwesomeModule
   ],
@@ -70,7 +73,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     SignInComponent,
     PrivacyPolicyComponent,
     TermOfServiceComponent,
-    CloneSiteComponent
+    CloneSiteComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent
   ],
   entryComponents: [LoadingComponent],
   providers: [TranslateService, LandingPageService]
