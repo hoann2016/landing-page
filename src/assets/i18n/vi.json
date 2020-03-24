@@ -27,7 +27,7 @@
             "MessageContent_2": "Khách Hàng thanh toán trực tuyến qua cổng thanh toán bảo mật khi đặt hẹn đến tài khoản ngân hàng của bạn và nhận xác nhận đặt hẹn ngay tức thời.Giải pháp đặt hẹn trực tuyến giúp bạn không phải mất thời gian gọi điện thoại cho Khách Hàng, quản lý lịch hẹn, và tiền mặt tại cửa hàng mà chỉ tập trung cung cấp dịch vụ tốt nhất",
             "MessageHeader_5": "Gửi Thông Báo & Nhắc Hẹn Tự Động",
             "MessageContent_5": "Hệ thống tự động gửi thông báo nhắc nhở về cuộc hẹn sắp tới hay khi có cập nhật về trạng thái cuộc hẹn giúp giảm tối đa tình trạng 'hẹn không đến', chi phí điện thoại, và thời gian quản lý hoạt động cửa hàng đồng thời tăng chất lượng dịch vụ chăm sóc khách hàng ",
-            "MessageHeader_3": "Trang web đặt phòng trực tuyến hoạt động 24/7",
+            "MessageHeader_3": "Trang web đặt hẹn trực tuyến hoạt động 24/7",
             "MessageContent_3": "Không chỉ dừng lại ở xem thông tin trên trang web, khách hàng 4.0 còn dễ dàng đặt lịch hẹn cho dịch vụ họ cần, tiến hành thanh toán trực tuyến & nhận xác nhận đặt hẹn thành công qua sms, email, hay ứng dụng di động chỉ trong vài giây. Mô hình kinh doanh mới, thuận tiện, và hiệu quả nhất.",
             "MessageHeader_6": "Thông Báo Nhắc Hẹn Tự Động",
             "MessageContent_6": "Giảm tối đa tình trạng ”hẹn không đến” với hệ thống tự động gửi thông báo về cuộc hẹn sắp tới qua email, sms, và ứng dụng di động giúp doanh nghiệp tiết kiệm thời gian & chi phí cho công việc quản lý lịch hẹn và tăng chất lượng dịch vụ chăm sóc khách hàng",
@@ -58,8 +58,9 @@
         },
         "ScreenShot": {
             "Header": "Sử Dụng Miễn Phí Giải Pháp Đặt và Quản Lý Lịch Hẹn Ludiino",
-            "SmallDescription": "Trải nghiệm sản phẩm hoàn toàn miễn phí không giới hạn thời gian",
-            "SignupAccount": "Đăng ký tài khoản để bắt đầu sử dụng",
+            "SmallDescription": "Trải nghiệm sản phẩm hoàn toàn miễn phí không yêu cầu thẻ tín dụng",
+            "SignupAccount": "Đăng ký tài khoản sử dụng hoàn toàn miễn phí",
+            "NoCreditCard": "",
             "SetupService": "Tạo dịch vụ cung cấp & chính sách giá",
             "CreateOpenTime": "Tạo thời gian trống cho đặt hẹn trực tuyến",
             "Month": "Tháng"
@@ -88,6 +89,8 @@
                 "Dashboards": "Thống kê báo cáo",
                 "CalendarView": "Xem Lịch Hẹn Theo Lịch",
                 "SocialBookingLink": "Tích Hợp Mạng Xã Hội",
+                "PayAtStore": "Thanh toán Tại Cửa Hàng",
+                "PayOnline": "Thanh Toán Trực Tuyến",
                 "ContentTable": {
                     "Unlimited": "Không Giới Hạn",
                     "10BookingPerMonth": "20 Lượt/Tháng",
@@ -243,7 +246,7 @@
             },
             "Marketing": {
                 "Title": "Chương trình khuyến mãi",
-                "Info": "Thiết lập các chương trình khuyến mãi đa dạng quảng cáo trực tuyến đến nhiều tập khách hàng qua web và thiết bị di động để khách hàng được thông báo thường xuyên về và tức thời về những chính sách giảm giá hấp dẫn."
+                "Info": "Thiết lập các chương trình khuyến mãi đa dạng quảng cáo trực tuyến đến nhiều tập khách hàng qua web và thiết bị di động để khách hàng được thông báo thường xuyên và tức thời về những chính sách giảm giá hấp dẫn."
             },
             "Dashboard": {
                 "Title": "Báo Cáo",
@@ -366,9 +369,9 @@
         "SendingStatus": "Đang gửi yêu cầu đăng ký, vui lòng đợi"
     },
     "Payment": {
-        "Sub": "Vui lòng điền thông tin để đăng ký gói dịch vụ",
+        "Sub": "Vui lòng chọn thời hạn bạn muốn đăng ký gói dịch vụ",
         "SelectedPackage": "Gói dịch vụ đã chọn",
-        "TimeRegistered": "Thời gian đăng ký",
+        "TimeRegistered": "Thời hạn đăng ký",
         "Months": "tháng",
         "Account": "Tên đăng ký",
         "Contact": "Số điện thoại",
@@ -510,7 +513,7 @@
         "init-store-license": "Cài đặt và xác thực giấy phép của cửa hàng",
         "clone-merchant-site": "Khởi tạo website",
         "clone-merchant-site-success": "Khởi tạo website thành công",
-        "preparing-merchant-site": "Đang chuẩn bị website cho bạn",
+        "preparing-merchant-site": "Trang Web của bạn đang được tạo, vui lòng chờ ...",
         "redirect-message": "Webstie của bạn đã được chuẩn bị xong. Đang chuyển đến."
     },
     "Common": {
