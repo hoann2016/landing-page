@@ -20,17 +20,17 @@
             "HeaderDescription2": "Ludiino Online Booking & Scheduling",
             "HeaderDescription3": "System to never miss a booking & book more clients",
             "MessageHeader_1": "A Free Professional Website",
-            "MessageContent_1": "An SEO friendly and professionally designed website that makes your business stand out on the internet. Google Map & Client Evaluation features are integrated to provide all the needed information for your client to pick out your services online",
+            "MessageContent_1": "An SEO friendly and professionally designed website that makes your business stand out on the internet. Google Map & Clients Evaluation features are integrated to provide all the needed information for your clients to pick out your services online",
             "MessageHeader_4": "Dashboard & Reports",
-            "MessageContent_4": "Real time online reporting about booking transactions,payments, and client satisfaction. Available KPIs dashboard with visualized charts & graphs that help owners quickly gauge business performances and what need to be done to continuosly improve",
+            "MessageContent_4": "Real time online reporting about booking transactions, payments, and clients satisfaction. Available KPIs dashboard with visualized charts & graphs that help owners quickly gauge business performances and what need to be done to continuosly improve",
             "MessageHeader_2": "Accept Online and/or Offline Payment",
             "MessageContent_2": "Online payments go directy to your bank account via secured payment portals to guarantee bookings and instantly receive booking confirmation You can just focus on providing the best services without having to worry about managing bookings, payments, and cash",
             "MessageHeader_5": "Auto Notifications & Reminders",
             "MessageContent_5": "The system automatically sends to clients reminders about upcoming apppointments and notifications when a booking is made/changed so you don't have to",
             "MessageHeader_3": "An Online Booking Site that does business 24/7",
-            "MessageContent_3": "Your website not only displays information but also does business for you by accepting online booking & payment in real time 24/7. Client can go online whenever they want inside or outside of the regular business hours to select a suitable date & time, make the payment, and instantly receive booking confirmation",
+            "MessageContent_3": "Your website not only displays information but also does business for you by accepting online booking & payment in real time 24/7. Clients can go online whenever they want inside or outside of the regular business hours to select a suitable date & time, make the payment, and instantly receive booking confirmation",
             "MessageHeader_6": "Auto Notification & Reminder",
-            "MessageContent_6": "The system automatically sends reminders to client about an upcoming appointments and/or notifications when a booking is made, changed, or canceled so you're always in control of your business without having to attend the phone all the times",
+            "MessageContent_6": "The system automatically sends reminders to clients about an upcoming appointments and/or notifications when a booking is made, changed, or canceled so you're always in control of your business without having to attend the phone all the times",
             "Button": {
                 "ViewMoreFeature": "View More Features",
                 "RegisterNow": "Register Now"
@@ -58,14 +58,15 @@
         },
         "ScreenShot": {
             "Header": "Start Free with Ludiino Online Booking & Scheduling Solution",
-            "SmallDescription": "No credit card, no trial period, unlimited use for free. Here is how it works!",
+            "SmallDescription": "",
             "SignupAccount": "Sign up for an Account",
+            "NoCreditCard": "No Credit Card Required",
             "SetupService": "Setup your services & pricing",
-            "CreateOpenTime": "Create & Publish time slot online for booking",
+            "CreateOpenTime": "Create Time Slot online for booking",
             "Month": "Month"
         },
         "SelectPackage": {
-            "SelectPlant": "Select the Plan that works for you!",
+            "SelectPlant": "Select the Plan that works!",
             "AddTooltip": "add tool tip",
             "RegisterNow_Freebie": "Get Freebie",
             "RegisterNow_Newbie": "Get Newbie",
@@ -88,6 +89,8 @@
                 "Dashboards": "Reports & Dashboard",
                 "CalendarView": "Calendar View",
                 "SocialBookingLink": "Social Booking Link",
+                "PayAtStore": "Pay At Store",
+                "PayOnline": "Pay Online",
                 "ContentTable": {
                     "Unlimited": "Unlimited",
                     "10BookingPerMonth": "20 bookings / Month",
@@ -239,11 +242,11 @@
             },
             "CheckInManagement": {
                 "Title": "Check In Management",
-                "Info": "Quickly checkin and/or checkout pre-booking customers by scaning booking code to signnificantly reduce unnessesary wait time and to spend more time taking care of your clients to earn customer appreciation"
+                "Info": "Quickly checkin and/or checkout pre-booking customers by scaning booking code to significantly reduce unnessesary wait time and to spend more time taking care of your clients to earn customer appreciation"
             },
             "Marketing": {
                 "Title": "Online Marketing & Promotional Campaigns",
-                "Info": "Multiple ways to create various Promotional Marketing Campaigns with discount codes sent via email/sms directly to your targeted clients to attract new clients and keep old clients coming back for more. Notifications automatically sent to remind clients the check-in dates so that no promotional events are missed. Online reports to measure effectiveness of the marketingl campaigns for you to plan even more succesful future campaigns"
+                "Info": "Multiple ways to create various Promotional Marketing Campaigns with discount codes sent via email/sms directly to your targeted clients to attract new clients and keep old clients coming back for more."
             },
             "Dashboard": {
                 "Title": "Dashboard & Reports",
@@ -508,7 +511,7 @@
         "init-store-license": "Setting up store's license.",
         "clone-merchant-site": "Initializing website.",
         "clone-merchant-site-success": "Clone website successfully",
-        "preparing-merchant-site": "Preparing your website",
+        "preparing-merchant-site": "Your web site is being created, please wait ...",
         "redirect-message": "Your website was created. Redirecting to your website."
     },
     "Common": {

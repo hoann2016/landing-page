@@ -1,4 +1,4 @@
-    /*-----------------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------------
 
     Template Name:TOVO APP
     Template URI: http://themes.pixelstrap.com/tovo
@@ -1318,7 +1318,7 @@
       }
     }
 
-  
+
 
     .team-box {
       background-color: $white;
@@ -1497,7 +1497,7 @@
       align-items: center;
     }
 
- 
+
 
     .blog-box {
       padding: 5px;
@@ -1635,7 +1635,7 @@
       }
     }
 
- 
+
 
     .price-block {
       background-color: $white;
@@ -1659,7 +1659,7 @@
       }
     }
 
-   
+
 
     .mrp {
       h2 {
@@ -1706,7 +1706,7 @@
       }
     }
 
-  
+
     .testimonial-decor {
       .testi-circle1 {
         position: absolute;
@@ -1729,7 +1729,7 @@
       padding-bottom: 0;
     }
 
- 
+
 
     .testimonial-text {
       text-align: center;
@@ -2519,7 +2519,7 @@
       font-weight: 600;
     }
     /*=======================
-  21. Review Page 
+  21. Review Page
 =========================*/
 
     .innerpage-decor {
@@ -2833,8 +2833,9 @@
     .report_wrap ul{
       border: 1px solid #2e2c2d;
       border-radius: 3px;
-      width: 75%;
+      width: 78%;
       padding: 0;
+      text-align: center;
     }
     .ss1_report{
       position: absolute;
@@ -3098,7 +3099,7 @@
   color: #fff;
   border: 1px solid #989ea7;
   border-radius: 3px;
-  max-width: 70%;
+  max-width: 80%;
   margin: 0 auto;
   padding: 15px;
   position: relative;
@@ -3107,17 +3108,17 @@
 .hiw_content{
   border-right: 1px solid #989ea7;
   height: 30px;
+  display: flex;
+  align-items: center;
 }
 .no_line{
   border-right: none;
 }
 .hiw_content img{
   width: 30px;
-  position: absolute;
-
 }
 .hiw_text {
-  margin-left: 40px;
+  margin-left: 10px;
   padding-right: 15px;
 }
 .hiw_text p{
@@ -3223,7 +3224,7 @@
 }
 
 .pricing-header h5 {
-  
+
   color: #fff;
   font-size: 14px;
   line-height: normal;
@@ -3263,7 +3264,7 @@
 }
 
 .price-box .price {
- 
+
   display: inline-block;
   font-size: 34px;
   font-weight: 600;
@@ -3306,7 +3307,7 @@
 }
 .pricing-feature li {
   list-style: none;
-  padding: 9px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #ddd;
   background: #eee;
 }
@@ -3329,7 +3330,7 @@
   text-transform: capitalize;
   padding: 0 5px;
   line-height: normal;
-  
+
 }
 
 /* ============================ */
@@ -3810,7 +3811,7 @@
 }
 
 .title-page{
-  margin-bottom:60px; 
+  margin-bottom:60px;
   color: #484848;
   font-size:30px;
 }

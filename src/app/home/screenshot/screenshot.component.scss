@@ -29,9 +29,12 @@
 }
 .pricing-feature-intro {
     li {
+        padding: 9px 0;
         p {
             text-align: left;
             padding-left: 25px !important;
+            font-weight: 600;
+            font-size: 15px;
         }
     }
 }
