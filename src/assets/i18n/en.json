@@ -487,15 +487,15 @@
     "Thankyou": {
         "pending_payment": "Pending Payment",
         "disabled": "Disabled",
-        "name": "Register name",
+        "name": "Account name",
         "email": "Email",
         "phone": "Phone number",
         "orderNumber": "Order number",
-        "price": "Price",
+        "price": "Amount",
         "status": "Account Status",
         "thankNotify": "You Have Successfully Registered! Thank You",
         "thankTopLetter": "Thank you for using Ludiino Online Booking & Scheduling Solution",
-        "thankBottomLetter": "Please complete the payment process to start using Ludiino System",
+        "thankBottomLetter": "Please complete the payment process to activate your account and start using Ludiino Booking System",
         "backButton": "BACK TO HOME PAGE",
         "note": "Note"
     },
@@ -512,7 +512,7 @@
         "clone-merchant-site": "Initializing website.",
         "clone-merchant-site-success": "Clone website successfully",
         "preparing-merchant-site": "Your web site is being created, please wait ...",
-        "redirect-message": "Your website was created. Redirecting to your website."
+        "redirect-message": "Your web site is being created, please wait ..."
     },
     "Common": {
         "Discount": "Discount",

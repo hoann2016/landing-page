@@ -489,15 +489,15 @@
     "Thankyou": {
         "pending_payment": "Chưa thanh toán",
         "disabled": "Chưa kích hoạt",
-        "name": "Tên đăng kí",
+        "name": "Tên tài khoản đăng ký",
         "email": "Email",
         "phone": "Số điện thoại",
         "orderNumber": "Mã đơn hàng",
-        "price": "Phí dịch vụ",
+        "price": "Số tiền",
         "status": "Trạng thái tài khoản",
         "thankNotify": "Đăng ký tài khoản thành công",
         "thankTopLetter": "Cám ơn bạn đã đăng ký sử dụng Ludiino - Giải pháp đặt hẹn dịch vụ trực tuyến",
-        "thankBottomLetter": "Xin vui lòng tiến hành thanh toán để bắt đầu sử dụng hệ thống Ludiino",
+        "thankBottomLetter": "Xin vui lòng tiến hành thanh toán để kích hoạt tài khoản và bắt đầu sử dụng Hệ Thống Đặt và Quản Lý Lịch Hẹn Ludiino",
         "backButton": "TRỞ VỀ TRANG CHỦ",
         "note": "Lưu ý"
     },
