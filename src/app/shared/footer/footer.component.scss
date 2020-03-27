@@ -1,3 +1,207 @@
-textarea {
-  resize: none;
+.footer {
+    background: linear-gradient(to top, #30425a, #2e3a4a);
+    .footer-header {
+        display: block;
+        width: 100%;
+        border-top: 1.4px solid #3a4b61;
+        border-bottom: 1px solid #3a4b61;
+        padding: 30px 0;
+        .logo-footer {
+            -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1);
+            img {
+                max-width: 200px;
+            }
+        }
+        .section-support {
+            display: flex;
+            align-items: center;
+            &-icon {
+                img {
+                    max-width: 33px;
+                }
+            }
+            &-content {
+                padding-left: 10px;
+                &-head {
+                    font-family: ProximaNova;
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 0.82;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: rgba(255, 255, 255, 0.6);
+                }
+                &-text {
+                    text-shadow: 0px 3.5px 10.5px rgba(0, 0, 0, 0.05);
+                    background-image: linear-gradient(to top, #ffc066, #f39a1b), linear-gradient(to bottom, #ffffff, #ffffff);
+                    font-family: ProximaNova;
+                    font-size: 27px;
+                    font-weight: bold;
+                    font-stretch: normal;
+                    font-style: normal;
+                    letter-spacing: 0.44px;
+                    text-align: left;
+                    color: #ffffff;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    line-height: .8;
+                    padding-top: 7px;
+                }
+            }
+        }
+        .pl-top-mid {
+            padding-left: 60px;
+            @media screen and (min-width: 1200px) {
+                flex: 0 0 65%;
+                max-width: 65%;
+            }
+        }
+        .pl-top-right {
+            padding-left: 34px;
+            @media screen and (min-width: 1200px) {
+                flex: 0 0 35%;
+                max-width: 35%;
+                padding-right: 0;
+            }
+        }
+    }
+    .footer-main {
+        padding: 40px 0;
+        &-title {
+            font-family: ProximaNova;
+            font-size: 20px;
+            line-height: 1.28;
+            text-align: left;
+            color: rgba(255, 255, 255, 0.9);
+            text-transform: uppercase;
+            padding-bottom: 5px;
+            position: relative;
+            display: inline-block;
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 53%;
+                height: 2px;
+                background: #ffc220;
+                left: 0;
+            }
+        }
+        &-description {
+            font-family: ProximaNova;
+            font-size: 15px;
+            line-height: 1.64;
+            text-align: left;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 10px 0 15px;
+            display: block;
+        }
+        &-social {
+            display: flex;
+            align-items: center;
+            span {
+                height: 40px;
+                padding: 8px 15px 10px;
+                background: aliceblue;
+                border-radius: 50%;
+                margin-right: 7px;
+                cursor: pointer;
+                img {
+                    max-width: 15px;
+                    max-height: 20px;
+                }
+            }
+            .icon-google, .icon-youtube {
+                padding: 8px 9px 10px 9px;
+
+                img {
+                    max-width: 24px;
+                }
+            }
+        }
+        .form-contact {
+            position: relative;
+            input {
+                height: calc(1.5em + 0.75rem + 14px);
+                border: 0;
+                border-radius: 2px;
+                outline: none;
+                box-shadow: none;
+                padding: 6px 15px;
+            }
+            .button-submit {
+                border-radius: 3px;
+                box-shadow: 0px 3.5px 10.5px 0 rgba(0, 0, 0, 0.05);
+                background-image: linear-gradient(to top, #ffc066, #f39a1b);
+                border: 0;
+                outline: none;
+                padding: 8px 15px;
+                position: absolute;
+                right: 7px;
+                top: 7px;
+                font-family: ProximaNova;
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #fff;
+            }
+        }
+        &-link {
+            padding: 10px 0 15px;
+            &-item {
+                font-family: ProximaNova;
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.84;
+                letter-spacing: normal;
+                text-align: left;
+                color: rgba(255, 255, 255, 0.7);
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                &-title {
+                    padding-left: 5px;
+                }
+            }
+        }
+        .plmid {
+            padding-left: 60px;
+            border-right: 1px solid #30425a;
+            border-left: 1px solid #30425a;
+            padding-bottom: 15px;
+            padding-right: 60px;
+            @media screen and (min-width: 1200px) {
+                flex: 0 0 65%;
+                max-width: 65%;
+            }
+        }
+        .plright {
+            padding-left: 41px;
+            @media screen and (min-width: 1200px) {
+                flex: 0 0 35%;
+                max-width: 35%;
+            }
+        }
+    }
+    &-footer {
+        .text-footer {
+            padding: 20px 0;
+            font-family: ProximaNova;
+            font-size: 16px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.64;
+            letter-spacing: normal;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            width: 100%;
+            border-top: 1px solid #3a4b61;
+        }
+    }
 }
