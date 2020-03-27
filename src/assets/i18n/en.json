@@ -116,7 +116,6 @@
             "UserIsNotActive2": "Ludiino System"
         },
         "Footer": {
-            "PrivacyPolicy": "Privacy Policy",
             "TermsUseTerms": "Terms of Service",
             "Title": "Input email to receive more info about booking statistics & new product features",
             "Form": {
@@ -133,7 +132,17 @@
             "Contact": {
                 "Header": "Contact",
                 "Detail": "If there are any questions please contact us"
-            }
+            },
+            "EmailSupport": "Email support",
+            "CallCenter": "Hotline",
+            "ConnectWithUs": "Connect with us",
+            "FollowUs": "Follow us at",
+            "KeepInTouch": "Keep in touch",
+            "InputEmailToReceive": "Input Email To Receive More Info About Booking Statistics & New Product Features",
+            "PrivacyPolicy": "Privacy Policy",
+            "TermService": "Terms of Service",
+            "Blog": "Ludiino Blog",
+            "Category": "Categories"
         }
     },
     "Pricing": {

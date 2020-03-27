@@ -116,7 +116,6 @@
             "UserIsNotActive2": "hệ thống Ludiino"
         },
         "Footer": {
-            "PrivacyPolicy": "Chính Sách Bảo Mật Thông Tin",
             "TermsUseTerms": "Điều Khoản Điều Kiện Sử Dụng",
             "Title": "Điền Email để nhận các nghiên cứu mới nhất về Quản Lý Đặt Hẹn & Tính Năng Mới của Ludiino",
             "Form": {
@@ -133,7 +132,17 @@
             "Contact": {
                 "Header": "Liên hệ",
                 "Detail": "Nếu có bất kỳ câu hỏi liên hệ ngay với chúng tôi"
-            }
+            },
+            "EmailSupport": "Email hỗ trợ",
+            "CallCenter": "Hotline",
+            "ConnectWithUs": "Kết nối với chúng tôi",
+            "FollowUs": "Theo dõi trên mạng xã hội",
+            "KeepInTouch": "Liên hệ",
+            "InputEmailToReceive": "Điền Email Để Nhận Các Nghiên Cứu Mới Nhất Về Quản Lý Đặt Hẹn & Tính Năng Mới Của Ludiino",
+            "PrivacyPolicy": "Chính Sách Bảo Mật Thông Tin",
+            "TermService": "Điều Khoản Điều Kiện Sử Dụng",
+            "Blog": "Blog Tin Tức",
+            "Category": "Danh mục"
         }
     },
     "Pricing": {
