@@ -48,7 +48,6 @@ export class ForgotPasswordComponent implements OnInit {
         this.isNotFound = false;
         if (this.formForgotPassword.valid) {
             this.loadingStatus = true;
-            console.log(this.formForgotPassword.value.email);
             this.userService.forgotPassword(this.formForgotPassword.value.email).subscribe(
                 () => {
                     this.successed = true;
