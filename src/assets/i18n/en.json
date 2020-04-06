@@ -278,11 +278,11 @@
                 "HairService": {
                     "Title": "Hair Service",
                     "HairCut": "Hair Cut",
-                    "HairCutWomen": "Hair Cut for Women 60 minutes",
+                    "HairCutWomen": "Hair Cut for Women",
                     "HairDye": "Hair Dye",
                     "Detail": {
-                        "HairCut": "45 Minute - Design hair styles as required",
-                        "HairCutWomen": "60 Minute - Hair Stylist On Demand",
+                        "HairCut": "60 Minute - Design hair styles as required",
+                        "HairCutWomen": "90 Minute - Hair Stylist On Demand",
                         "HairDye": "120 Minute - Dyes from Korea"
                     }
                 },
@@ -290,10 +290,15 @@
                     "Title": "Skin Care"
                 },
                 "Massage": {
-                    "Title": "Massage Service"
+                    "Title": "Massage Service",
+                    "Massage": "Massage",
+                    "Detail": {
+                        "Massage": "60 Minute - Massage On Demand"
+                    }
                 },
                 "Nail": {
-                    "Title": "Nails Care"
+                    "Title": "Nails Care",
+                    "NailsCare": "Nails Care"
                 }
             },
             "Step2": {
@@ -337,6 +342,35 @@
             },
             "Step": "Step",
             "Next": "Next"
+        },
+        "DemoBooking": {
+            "Sidebar": {
+                "Booking": "Booking",
+                "CheckIn": "Check-in",
+                "Service": "Service",
+                "Staff": "Staff",
+                "ExtraFee": "Extra Fee",
+                "Product": "Product",
+                "Reports": "Reports",
+                "Setting": "Setting"
+            },
+            "Content": {
+                "AllService": "All service",
+                "Filter": "Filter",
+                "Report": "Report",
+                "Time": "Time",
+                "Staff": "Staff",
+                "Type": {
+                    "Barber": "Barber",
+                    "HairStylist": "Hair Stylist"
+                }
+            },
+            "Header": {
+                "Title": "Ludiino",
+                "Description": "Online Booking & Appointment Scheduling Features",
+                "Content": "Great features are packaged into a powerful online solution that creates competitive advantages for your business in the digital age",
+                "CreateTestBooking": "Create a test booking"
+            }
         }
     },
     "Register": {
@@ -545,7 +579,16 @@
         "Day.6": "Saturday",
         "Day.7": "Sunday",
         "Date": "Date",
-        "Time": "Time"
+        "Time": "Time",
+        "DayOfWeek": {
+            "0": "Sun",
+            "1": "Mon",
+            "2": "Tue",
+            "3": "Wed",
+            "4": "Thu",
+            "5": "Fri",
+            "6": "Sat"
+        }
     },
     "SignUp": {
         "SignUpSuccess": "Register account successfully",

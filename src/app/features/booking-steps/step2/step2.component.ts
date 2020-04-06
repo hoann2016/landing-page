@@ -112,4 +112,8 @@ export class Step2Component implements OnInit {
             this.isCustomBranch = true;
         }
     }
+    
+    isDisabled = (date: NgbDate, current: {month: number}) => {
+        return new Date(date.year, date.month, date.day).getDay() === 2;
+    };
 }

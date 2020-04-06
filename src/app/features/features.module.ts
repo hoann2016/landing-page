@@ -14,6 +14,8 @@ import { Step4Component } from './booking-steps/step4/step4.component';
 import { Step5Component } from './booking-steps/step5/step5.component';
 import { StepService } from './services/step.service';
 import { SharedModule } from '@shared/shared.module';
+import { FeatureHeaderComponent } from './components/feature-header/feature-header.component';
+import { CalendarViewComponent } from './components/calendar-view/calendar-view.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +25,10 @@ import { SharedModule } from '@shared/shared.module';
         Step2Component,
         Step3Component,
         Step4Component,
-        Step5Component    ],
+        Step5Component,
+        FeatureHeaderComponent,
+        CalendarViewComponent
+    ],
     imports: [
         CommonModule,
         FeaturesRoutes,

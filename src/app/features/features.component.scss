@@ -3,9 +3,7 @@
 }
 .section-banner {
     position: relative;
-    height: calc(100vh - 70px);
     padding: 0;
-    background-image: linear-gradient(to top, #f48d1e, #f49c1e);
     .image-left {
         position: absolute;
         left: -690px;
@@ -103,7 +101,7 @@
     background-color: #f6f7f9;
     .container {
         .more_margin_top{
-            
+
         }
         .section {
             height: 395px;
@@ -250,7 +248,7 @@ section.appointment {
         width: 100%;
         background-repeat: no-repeat;
         background-size: cover;
-        margin-top: -850px;    
+        margin-top: -850px;
     }
     .container {
         & > .title {
@@ -689,7 +687,7 @@ section.appointment {
             color: #fff;
             margin: 0;
         }
-        
+
     }
     .billing-info {
         min-height: 239px;
@@ -801,7 +799,7 @@ section.appointment {
 }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 1199.98px) { 
+@media (min-width: 768px) and (max-width: 1199.98px) {
     .section-banner {
         .head-info {
             .sub {
@@ -812,7 +810,7 @@ section.appointment {
                 font-size: 18px;
                 margin: 0 0 15px 0;
             }
-            .intro {               
+            .intro {
                 width: 300px;
                 font-size: 13px;
             }
@@ -875,7 +873,7 @@ section.appointment {
 }
 
 // small devices
-@media only screen and (max-width: 767.98px) { 
+@media only screen and (max-width: 767.98px) {
     .section-banner {
         min-height: 580px;
         height: auto;
@@ -894,7 +892,7 @@ section.appointment {
                 font-size: 18px;
                 margin: 0 0 5px 0;
             }
-            .intro {               
+            .intro {
                 width: 100%;
                 font-size: 13px;
                 margin: 0 0 10px 0;
