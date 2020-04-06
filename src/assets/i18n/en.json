@@ -370,6 +370,12 @@
                 "Description": "Online Booking & Appointment Scheduling Features",
                 "Content": "Great features are packaged into a powerful online solution that creates competitive advantages for your business in the digital age",
                 "CreateTestBooking": "Create a test booking"
+            },
+            "Service": {
+                "ShampooBlow": "Shampoo - Blow Dry",
+                "HairCut": "Hair Cut",
+                "ShampooStyle": "Shampoo & Style",
+                "Massage": "Massage"
             }
         }
     },

@@ -370,6 +370,12 @@
                 "Description": "Tính Năng Chính Trên Hệ Thống Đặt & Quản Lý Lịch Hẹn Trực Tuyến Của Ludiino",
                 "Content": "Các tính năng của giải pháp Ludiino giúp quảng bá hiệu quả đến khách hàng mới, tăng số lượng booking, quản lý hiệu quả lịch làm việc của nhân viên, và nâng cao chất lượng dịch vụ chăm sóc khách hàng.",
                 "CreateTestBooking": "Thử tính năng booking"
+            },
+            "Service": {
+                "ShampooBlow": "Gội Đầu",
+                "HairCut": "Cắt Tóc",
+                "ShampooStyle": "Tạo Mẫu Tóc",
+                "Massage": "Massage"
             }
         }
     },

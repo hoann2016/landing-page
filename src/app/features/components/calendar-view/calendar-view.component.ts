@@ -100,7 +100,7 @@ export class CalendarViewComponent implements OnInit {
                         top: (this.compareDiffTwoHour(bookingHelperData.bookingTime) * 45 * 2 + 3) + 'px',
                         left: `calc(${ this.listDaysInWeek.indexOf(booking.selectedDOW) }00% + 4px)`,
                         height: (((booking.duration / 30) * 45) - 8) + 'px',
-                        background: ServiceBookingsColor.haircut,
+                        background: ServiceBookingsColor[booking.type],
                         zIndex: this.tickets.length + 1
                     },
                     type: booking.type,

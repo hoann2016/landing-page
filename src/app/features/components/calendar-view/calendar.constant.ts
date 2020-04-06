@@ -47,7 +47,7 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
     {
         id: 1,
         timePeriod: '8:00 - 10:30',
-        serviceName: 'Hair Cut',
+        serviceName: 'Features.DemoBooking.Service.HairCut',
         staffName: 'Thu Trang',
         type: 'haircut',
         styles: {
@@ -63,7 +63,7 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
     {
         id: 2,
         timePeriod: '11:00 - 12:00',
-        serviceName: 'Shampoo - Blow Dry',
+        serviceName: 'Features.DemoBooking.Service.ShampooBlow',
         type: 'sampo_blow',
         staffName: 'Huyền My',
         styles: {
@@ -79,7 +79,7 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
     {
         id: 3,
         timePeriod: '12:30 - 14:00',
-        serviceName: 'Shampoo & Style',
+        serviceName: 'Features.DemoBooking.Service.ShampooStyle',
         staffName: 'Jkim Nguyen',
         type: 'shampoo_style',
         styles: {
@@ -95,7 +95,7 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
     {
         id: 4,
         timePeriod: '10:00 - 11:00',
-        serviceName: 'Shampoo - Blow Dry',
+        serviceName: 'Features.DemoBooking.Service.ShampooBlow',
         type: 'sampo_blow',
         staffName: 'Thanh Tùng',
         styles: {
@@ -111,7 +111,7 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
     {
         id: 5,
         timePeriod: '9:00 - 10:00',
-        serviceName: 'Shampoo - Blow Dry',
+        serviceName: 'Features.DemoBooking.Service.ShampooBlow',
         type: 'sampo_blow',
         staffName: 'Thanh Tùng',
         styles: {
@@ -127,7 +127,7 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
     {
         id: 6,
         timePeriod: '11:00 - 12:00',
-        serviceName: 'Massage',
+        serviceName: 'Features.DemoBooking.Service.Massage',
         staffName: 'Huyền My',
         type: 'massage',
         styles: {
@@ -143,7 +143,7 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
     {
         id: 7,
         timePeriod: '10:00 - 11:00',
-        serviceName: 'Massage',
+        serviceName: 'Features.DemoBooking.Service.Massage',
         type: 'massage',
         staffName: 'Huyền My',
         styles: {
@@ -159,7 +159,7 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
     {
         id: 8,
         timePeriod: '11:00 - 12:30',
-        serviceName: 'Shampoo & Style',
+        serviceName: 'Features.DemoBooking.Service.ShampooStyle',
         staffName: 'Jkim Nguyen',
         type: 'shampoo_style',
         styles: {
@@ -175,7 +175,7 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
     {
         id: 9,
         timePeriod: '10:00 - 11:00',
-        serviceName: 'Hair Cut',
+        serviceName: 'Features.DemoBooking.Service.HairCut',
         staffName: 'Thu Trang',
         type: 'haircut',
         styles: {
