@@ -1,0 +1,100 @@
+.feature-header {
+    background: transparent;
+    position: relative;
+    &-bg-orange {
+        position: absolute;
+        background-image: linear-gradient(to top, #f48d1e, #f49c1e);
+        width: 111%;
+        height: 100%;
+        z-index: -1;
+        top: -9%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        left: -5.55%;
+        margin: 0 auto;
+        text-align: center;
+        overflow: hidden;
+    }
+    &-bg-gray {
+        position: absolute;
+        background: #f6f7f9;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+    }
+    &-box-header {
+        padding: 70px 0 40px 0;
+        &-title {
+            font-family: ProximaNova;
+            font-size: 50px;
+            font-weight: 900;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 0.86;
+            letter-spacing: 6px;
+            text-align: center;
+            color: #ffffff;
+            margin: 0 0 10px;
+            text-transform: uppercase;
+        }
+        &-description {
+            font-family: ProximaNova;
+            font-size: 26px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.19;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        &-content {
+            font-family: ProximaNova;
+            font-size: 18px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.35;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+            width: 100%;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            max-width: 750px;
+        }
+        &-booking-button {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            &-wrap {
+                padding: 12px 23px 14px;
+                background: #fff;
+                border-radius: 35px;
+                display: inline-flex;
+                align-items: unset;
+                &-icon {
+                    img {
+                        max-width: 18px;
+                    }   
+                }
+                &-text {
+                    font-family: ProximaNova;
+                    font-size: 17px;
+                    font-weight: 600;
+                    font-stretch: normal;
+                    font-style: normal;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #f49c1e;
+                    padding-top: 4px;
+                    padding-left: 10px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

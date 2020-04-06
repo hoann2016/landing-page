@@ -8,7 +8,7 @@
         <form [formGroup]="stepForm" (ngSubmit)="onSubmit()">
             <div class="row">
                 <div class="col-12">
-                    <label class="field-label">{{ "Features.DemoSteps.Step4.Fullname" | translate }}</label>
+                    <label class="field-label">{{ "Features.DemoSteps.Step4.Fullname" | translate }} *</label>
                     <div class="field-input">
                         <input type="text" formControlName="fullName" 
                             placeholder="Tên khách hàng"
@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <label class="field-label">{{ "Features.DemoSteps.Step4.PhoneNumber" | translate }}</label>
+                    <label class="field-label">{{ "Features.DemoSteps.Step4.PhoneNumber" | translate }} *</label>
                     <div class="field-input">
                         <input type="text" formControlName="phoneNumber" 
                         placeholder="Số điện thoại"

@@ -18,7 +18,7 @@ export class Step1Component implements OnInit {
 
     goToStep(step: number, value: any) {
         if (value) {
-            this.stepService.setDataStep({ serviceName: this.translateService.instant(value.name), demoPrice: value.price });
+            this.stepService.setDataStep({ serviceName: value.name, demoPrice: value.price, duration: value.duration, type: value.type });
         }
         this.stepService.changeStep(step);
     }

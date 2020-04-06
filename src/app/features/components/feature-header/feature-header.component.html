@@ -1,0 +1,38 @@
+<div class="feature-header">
+    <div class="feature-header-bg-orange"></div>
+    <div class="feature-header-bg-gray"></div>
+    <div class="feature-header-box-header">
+        <h1 class="feature-header-box-header-title">{{ 'Features.DemoBooking.Header.Title' | translate }}</h1>
+        <h4 class="feature-header-box-header-description">{{ 'Features.DemoBooking.Header.Description' | translate }}</h4>
+        <p class="feature-header-box-header-content">
+            {{ 'Features.DemoBooking.Header.Content' | translate }}
+        </p>
+        <div class="feature-header-box-header-booking-button">
+            <div class="feature-header-box-header-booking-button-wrap" (click)="openDemoPopup(demoPopupContent)">
+                <span class="feature-header-box-header-booking-button-wrap-icon">
+                    <img src="/assets/images/features/booking-testing-buton.png" alt="">
+                </span>
+                <span class="feature-header-box-header-booking-button-wrap-text">
+                    {{ 'Features.DemoBooking.Header.CreateTestBooking' | translate }}
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="feature-header-box-content" #calendar>
+        <!-- <app-demo-booking></app-demo-booking> -->
+        <app-calendar-view (bookingIsCreated)="bookingIsCreated($event)"></app-calendar-view>
+    </div>
+</div>
+<ng-template #demoPopupContent let-modal>
+    <div class="modal-body">
+        <div class="main-steps">
+            <div class="home-steps" [ngSwitch]="currentStep$ | async">
+                <app-home-step2 *ngSwitchDefault></app-home-step2>
+                <app-home-step1 *ngSwitchCase="2"></app-home-step1>
+                <app-home-step3 *ngSwitchCase="3"></app-home-step3>
+                <app-home-step4 *ngSwitchCase="4"></app-home-step4>
+                <app-home-step5 *ngSwitchCase="5" (createNewTicketTestBooking)="createNewTicketTestBooking($event)"></app-home-step5>
+            </div>
+        </div>
+    </div>
+</ng-template>

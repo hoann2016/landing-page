@@ -278,11 +278,11 @@
                 "HairService": {
                     "Title": "Dịch vụ tóc",
                     "HairCut": "Cắt tóc",
-                    "HairCutWomen": "Cắt tóc nữ trong 60 phút",
+                    "HairCutWomen": "Cắt tóc nữ",
                     "HairDye": "Sấy tóc",
                     "Detail": {
-                        "HairCut": "45 Phút - Cắt tóc tạo kiểu theo yêu cầu",
-                        "HairCutWomen": "60 Phút - Cắt tóc tạo kiểu theo yêu cầu",
+                        "HairCut": "60 Phút - Cắt tóc tạo kiểu theo yêu cầu",
+                        "HairCutWomen": "90 Phút - Cắt tóc tạo kiểu theo yêu cầu",
                         "HairDye": "120 Phút - Thuộc nhuôm Hàn Quốc"
                     }
                 },
@@ -290,10 +290,15 @@
                     "Title": "Chăm sóc da"
                 },
                 "Massage": {
-                    "Title": "Dịch vụ Massage"
+                    "Title": "Dịch vụ Massage",
+                    "Massage": "Massage",
+                    "Detail": {
+                        "Massage": "60 Phút - Dịch vụ massage theo yêu cầu"
+                    }
                 },
                 "Nail": {
-                    "Title": "Nails Care"
+                    "Title": "Nails Care",
+                    "NailsCare": "Nails Care"
                 }
             },
             "Step2": {
@@ -337,6 +342,41 @@
             },
             "Step": "Bước",
             "Next": "Tiếp theo"
+        },
+        "DemoBooking": {
+            "Sidebar": {
+                "Booking": "Lịch hẹn",
+                "CheckIn": "Check-in",
+                "Service": "Dịch vụ",
+                "Staff": "Nhân viên",
+                "ExtraFee": "Phụ phí",
+                "Product": "Sản phẩm",
+                "Reports": "Báo cáo",
+                "Setting": "Cài đặt"
+            },
+            "Content": {
+                "AllService": "Chăm sóc tóc",
+                "Filter": "Bộ Lọc",
+                "Report": "Thống Kê",
+                "Time": "Giờ",
+                "Staff": "KTV",
+                "Type": {
+                    "Barber": "Chuyên viên",
+                    "HairStylist": "Chuyên viên"
+                }
+            },
+            "Header": {
+                "Title": "Ludiino",
+                "Description": "Tính Năng Chính Trên Hệ Thống Đặt & Quản Lý Lịch Hẹn Trực Tuyến Của Ludiino",
+                "Content": "Các tính năng của giải pháp Ludiino giúp quảng bá hiệu quả đến khách hàng mới, tăng số lượng booking, quản lý hiệu quả lịch làm việc của nhân viên, và nâng cao chất lượng dịch vụ chăm sóc khách hàng.",
+                "CreateTestBooking": "Thử tính năng booking"
+            },
+            "Service": {
+                "ShampooBlow": "Gội Đầu",
+                "HairCut": "Cắt Tóc",
+                "ShampooStyle": "Tạo Mẫu Tóc",
+                "Massage": "Massage"
+            }
         }
     },
     "Register": {
@@ -547,7 +587,16 @@
         "Day.6": "Saturday",
         "Day.7": "Sunday",
         "Date": "Ngày tháng",
-        "Time": "Giờ"
+        "Time": "Giờ",
+        "DayOfWeek": {
+            "0": "CN",
+            "1": "T2",
+            "2": "T3",
+            "3": "T4",
+            "4": "T5",
+            "5": "T6",
+            "6": "T7"
+        }
     },
     "SignUp": {
         "SignUpSuccess": "Đã đăng ký tài khoản thành công",
