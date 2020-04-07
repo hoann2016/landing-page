@@ -1,3 +1,4 @@
+$shadow-color: #88622b5e;
 .feature-header {
     background: transparent;
     position: relative;
@@ -76,6 +77,48 @@
                 border-radius: 35px;
                 display: inline-flex;
                 align-items: unset;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                animation: shadowFloat .6s linear alternate infinite;
+                @keyframes shadowFloat {
+                    0%   {
+                        box-shadow: 0 20px 40px $shadow-color;
+                        transform: translateY(-3px);
+                    }
+                    100% {
+                        box-shadow: 0 10px 10px darken($shadow-color, 5%);;
+                        transform: translateY(3px); 
+                    }
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: -105%;
+                    z-index: -1;
+                    background: rgba(244, 151, 29, .6);
+                    transform: skew(-30deg);
+                }
+                @keyframes falshAnimation {
+                    0% {
+                        left: -105%;
+                    }
+                    25% {
+                        left: 105%;
+                    }
+                    100% {
+                        left: 105%;
+                    }
+                }
+                &:hover {
+                    &::before {
+                        // left: 105%;
+                        animation: falshAnimation 1.5s infinite ease-in-out;
+                    }
+                }
                 &-icon {
                     img {
                         max-width: 18px;

@@ -272,7 +272,7 @@
         },
         "DemoSteps": {
             "Step1": {
-                "Title": "1. STORE AND DATE",
+                "Title": "1. PLACE AND DATE",
                 "Address": "Store address",
                 "DayBooking": "Appointment Date",
                 "HairService": {
@@ -299,15 +299,50 @@
                 "Nail": {
                     "Title": "Nails Care",
                     "NailsCare": "Nails Care"
+                },
+                "Services": {
+                    "Styling": {
+                        "Title": "Styling",
+                        "Services": {
+                            "ShampooStyle": "Shampoo Style",
+                            "ShampooStyleFlatIron": "Shampoo Style Flat Iron",
+                            "Braids": "Braids",
+                            "ShampooStyleDes": "Shampoo and Design hair styles as required",
+                            "ShampooStyleFlatIronDes": "Shampoo and Design hair styles as required",
+                            "BraidsDes": "Hair styles as required"
+                        }
+                    },
+                    "HairCutting": {
+                        "Title": "Hair Cutting",
+                        "Services": {
+                            "CutStyle": "Cut & Style",
+                            "CutSet":  "Cut & Set",
+                            "BarberShort": "Barber Short",
+                            "CutStyleDes": "Design hair styles as required",
+                            "CutSetDes": "Design hair styles as required",
+                            "BarberShortDes": "Design hair styles as required"
+                        }
+                    },
+                    "Manicures": {
+                        "Title": "Manicures",
+                        "Services": {
+                            "HandExfoliate": "Hand exfoliate",
+                            "HandMassage": "Hand massage",
+                            "NailShinyPolish": "Nail shiny polish",
+                            "HandExfoliateDes": "Cleaning nails",
+                            "HandMassageDes": "30-minute massage",
+                            "NailShinyPolishDes": "Cleaning nails and polishing"
+                        }
+                    }
                 }
             },
             "Step2": {
-                "Title": "Select Service",
+                "Title": "Select A Service",
                 "Technicians": "technicians",
                 "TimeSelect": "Time Select"
             },
             "Step3": {
-                "Title": "SELECT QUANTITY & APPOINTMENT TIME",
+                "Title": "Select NUMBER OF PAX & APPOINTMENT TIME",
                 "Surcharge": "Surcharge",
                 "ServiceFee": "Service FEE",
                 "Total": "TOTAL",
@@ -338,7 +373,8 @@
                 "Total": "TOTAL",
                 "PayNow": "Pay now",
                 "PayAtStore": "Pay at store",
-                "Book": "Book"
+                "Book": "Book",
+                "Discount": "Discount"
             },
             "Step": "Step",
             "Next": "Next"

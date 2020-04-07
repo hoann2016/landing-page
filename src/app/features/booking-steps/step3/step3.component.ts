@@ -44,7 +44,9 @@ export class Step3Component implements OnInit {
         this.numberPeople++;
     }
     decrease(): void {
-        this.numberPeople--;
+        if (this.numberPeople > 1) {
+            this.numberPeople--;
+        }
     }
 
 }

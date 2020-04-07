@@ -133,7 +133,7 @@
                 "Header": "Liên hệ",
                 "Detail": "Nếu có bất kỳ câu hỏi liên hệ ngay với chúng tôi"
             },
-            "EmailSupport": "Email hỗ trợ",
+            "EmailSupport": "Email",
             "CallCenter": "Hotline",
             "ConnectWithUs": "Kết nối với chúng tôi",
             "FollowUs": "Theo dõi trên mạng xã hội",
@@ -299,6 +299,41 @@
                 "Nail": {
                     "Title": "Nails Care",
                     "NailsCare": "Nails Care"
+                },
+                "Services": {
+                    "Styling": {
+                        "Title": "Tạo mẫu tóc",
+                        "Services": {
+                            "ShampooStyle": "Gội & tạo mẫu",
+                            "ShampooStyleFlatIron": "Gội, duỗi & tạo mẫu",
+                            "Braids": "Thắt tóc tạo mẫu",
+                            "ShampooStyleDes": "Gội và tạo mẫu theo yêu cầu",
+                            "ShampooStyleFlatIronDes": "Gội và tạo mẫu theo yêu cầu",
+                            "BraidsDes": "Tạo mẫu theo yêu cầu"
+                        }
+                    },
+                    "HairCutting": {
+                        "Title": "Cắt tóc",
+                        "Services": {
+                            "CutStyle": "Cắt & tạo mẫu tóc",
+                            "CutSet":  "Cắt tóc theo combo",
+                            "BarberShort": "Cắt tóc ngắn",
+                            "CutStyleDes": "Cắt tóc tạo mẫu theo yêu cầu",
+                            "CutSetDes": "Cắt tóc tạo mẫu theo yêu cầu",
+                            "BarberShortDes": "Cắt tóc tạo mẫu theo yêu cầu"
+                        }
+                    },
+                    "Manicures": {
+                        "Title": "Chăm sóc móng",
+                        "Services": {
+                            "HandExfoliate": "Tẩy tế bào chết trên tay",
+                            "HandMassage": "Massage tay thư giãn",
+                            "NailShinyPolish": "Đánh bóng móng tay",
+                            "HandExfoliateDes": "Tẩy tế bào chết và vệ sinh móng",
+                            "HandMassageDes": "Massage tay 30 phút",
+                            "NailShinyPolishDes": "Tẩy tế bào chết và đánh bóng"
+                        }
+                    }
                 }
             },
             "Step2": {
@@ -338,7 +373,8 @@
                 "Total": "TỔNG CỘNG",
                 "PayNow": "Thanh toán ngay",
                 "PayAtStore": "Thanh toán tại cửa tiệm",
-                "Book": "Đặt lịch"
+                "Book": "Đặt lịch",
+                "Discount": "Giảm giá"
             },
             "Step": "Bước",
             "Next": "Tiếp theo"
