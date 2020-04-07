@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FeaturesRoutes } from './features.routing';
 import { FeaturesComponent } from './features.component';
 import { TranslateModule } from '@ngx-translate/core';
-import { NgbAccordionModule, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAccordionModule, NgbDatepickerModule, NgbDateParserFormatter } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemoBookingComponent } from './demo-booking/demo-booking.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -16,6 +16,7 @@ import { StepService } from './services/step.service';
 import { SharedModule } from '@shared/shared.module';
 import { FeatureHeaderComponent } from './components/feature-header/feature-header.component';
 import { CalendarViewComponent } from './components/calendar-view/calendar-view.component';
+import { NgbDateCustomParserFormatter } from './formaters/ngb-datepicker.formater';
 
 @NgModule({
     declarations: [
@@ -40,7 +41,10 @@ import { CalendarViewComponent } from './components/calendar-view/calendar-view.
         FontAwesomeModule,
         SharedModule
     ],
-    providers: [StepService],
+    providers: [
+        StepService,
+        {provide: NgbDateParserFormatter, useClass: NgbDateCustomParserFormatter}
+    ],
     entryComponents: [DemoBookingComponent]
 })
 export class FeaturesModule { }

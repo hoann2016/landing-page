@@ -46,7 +46,7 @@ const ServiceBookingsColor: { [key: string]: string } = {
 const CalendarDefaultBookings: Array<CalendarBooking> = [
     {
         id: 1,
-        timePeriod: '8:00 - 10:30',
+        timePeriod: '8:30 - 10:00',
         serviceName: 'Features.DemoBooking.Service.HairCut',
         staffName: 'Thu Trang',
         type: 'haircut',
@@ -126,7 +126,7 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
     },
     {
         id: 6,
-        timePeriod: '11:00 - 12:00',
+        timePeriod: '11:30 - 13:00',
         serviceName: 'Features.DemoBooking.Service.Massage',
         staffName: 'Huyền My',
         type: 'massage',

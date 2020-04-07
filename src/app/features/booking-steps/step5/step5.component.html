@@ -17,27 +17,35 @@
                 <div class="service-fee">
                     <h4>{{ "Features.DemoSteps.Step5.Service" | translate }}</h4>
                     <div class="haircut">
-                        <span>{{ stepBookingData?.serviceName }}</span><span translate [translateParams]="{price: stepBookingData?.demoPrice | priceExchangeRate | async | number}">Pricing.Transform</span>
+                        <span>{{ stepBookingData?.serviceName | translate }}</span><span translate [translateParams]="{price: stepBookingData?.demoPrice | priceExchangeRate | async | number}">Pricing.Transform</span>
                     </div>
                     <div class="number-people">
                         <span>{{ "Features.DemoSteps.Step5.Quantity" | translate }}</span><span>{{ stepBookingData?.quantity }} {{ "Features.DemoSteps.Step5.Pax" | translate }}</span>
                     </div>
                 </div>
+                <div class="service-fee" *ngIf="payMethod === 'pay-now'">
+                    <div class="number-people">
+                        <span>{{ "Features.DemoSteps.Step5.Discount" | translate }} (-10%)</span>
+                        <span> - 
+                            <span translate [translateParams]="{price: (stepBookingData?.demoPrice * stepBookingData?.quantity * 10 / 100) | priceExchangeRate | async | number}">Pricing.Transform</span>
+                        </span>
+                    </div>
+                </div>
                 <div class="total">
                     <div class="left">{{ "Features.DemoSteps.Step5.Total" | translate }}</div>
-                    <div class="right" translate [translateParams]="{price: (stepBookingData?.demoPrice * stepBookingData?.quantity) | priceExchangeRate | async | number}">Pricing.Transform</div>
+                    <div class="right" translate [translateParams]="{price: price | priceExchangeRate | async | number}">Pricing.Transform</div>
                 </div>
             </div>
             <div class="booking-payment-method">
                 <label class="radio-orange-container">
                     {{ "Features.DemoSteps.Step5.PayNow" | translate }}
-                    <input type="radio" checked="checked" name="radio">
+                    <input type="radio" name="radio" value="pay-now" [(ngModel)]="payMethod" (ngModelChange)="onChange($event)">
                     <span class="checkmark"></span>
                     <span class="promotion">-10%</span>
                 </label>
                 <label class="radio-orange-container">
                     {{ "Features.DemoSteps.Step5.PayAtStore" | translate }}
-                    <input type="radio" name="radio">
+                    <input type="radio" name="radio" value="pay-later" [(ngModel)]="payMethod" (ngModelChange)="onChange($event)">
                     <span class="checkmark"></span>
                 </label>
                 </div>
