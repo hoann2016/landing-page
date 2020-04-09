@@ -10,7 +10,32 @@ import { StepService } from 'app/features/services/step.service';
 
 export class Step3Component implements OnInit {
 
-    timeBlocks = ['8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM', '12:00 AM', '1:00 PM'];
+    timeBlocks = [
+        {
+            title: '8:00 AM',
+            value: '8:00'
+        },
+        {
+            title: '9:00 AM',
+            value: '9:00'
+        },
+        {
+            title: '10:00 AM',
+            value: '10:00'
+        },
+        {
+            title: '11:00 AM',
+            value: '11:00'
+        },
+        {
+            title: '12:00 PM',
+            value: '12:00'
+        },
+        {
+            title: '1:00 PM',
+            value: '13:00'
+        }
+    ];
     demoUser: { staffName: string, timeSelect: string } = {
         staffName: null, timeSelect: null
     };
@@ -33,7 +58,11 @@ export class Step3Component implements OnInit {
     goToStep(step: number, prev: boolean = false): void {
         if (!prev) {
             if (this.numberPeople && this.demoUser.timeSelect) {
-                this.stepService.setDataStep({ timePeriod: this.demoUser.timeSelect, time: this.demoUser.timeSelect, quantity: this.numberPeople });
+                this.stepService.setDataStep({
+                    timePeriod: this.demoUser.timeSelect,
+                    time: this.demoUser.timeSelect,
+                    quantity: this.numberPeople
+                });
                 this.stepService.changeStep(step);
             }
         } else {

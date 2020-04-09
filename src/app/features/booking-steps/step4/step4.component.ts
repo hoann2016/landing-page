@@ -19,7 +19,7 @@ export class Step4Component implements OnInit {
     ngOnInit() {
         this.stepForm = this.formBuilder.group({
             fullName: ['Ludiino Booking', Validators.required],
-            phoneNumber: ['0987654321', Validators.pattern(/(([+(84)]{3})+([93785])+([0-9]{8})\b)|((09|03|07|08|05)+([0-9]{8})\b)/i)],
+            phoneNumber: ['0987654321'],
             email: ['ludiino@ludiino.com', [Validators.required, Validators.email]],
         });
     }

@@ -20,9 +20,9 @@
                 <label class="field-label">{{ "Features.DemoSteps.Step3.AppointmentTime" | translate }}</label>
                 <div class="time-blocks">
                     <div *ngFor="let block of timeBlocks" 
-                        class="time" [class.active]="demoUser?.timeSelect === block"  
-                        (click)="selectTime(block)">
-                        {{block}}
+                        class="time" [class.active]="demoUser?.timeSelect === block.value"  
+                        (click)="selectTime(block.value)">
+                        {{ block?.title }}
                     </div>
                 </div>
             </div>   
