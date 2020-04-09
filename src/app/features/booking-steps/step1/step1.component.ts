@@ -96,14 +96,7 @@ export class Step1Component implements OnInit {
                         price: 90000,
                         type: 'massage',
                         description: 'Features.DemoSteps.Step1.Services.Manicures.Services.HandMassageDes'
-                    },
-                    {
-                        name: 'Features.DemoSteps.Step1.Services.Manicures.Services.NailShinyPolish',
-                        duration: 120,
-                        price: 130000,
-                        type: 'massage',
-                        description: 'Features.DemoSteps.Step1.Services.Manicures.Services.NailShinyPolishDes'
-                    },
+                    }
                 ]
             }
         ];
