@@ -302,36 +302,34 @@
                 },
                 "Services": {
                     "Styling": {
-                        "Title": "Tạo mẫu tóc",
+                        "Title": "Cắt Tóc",
                         "Services": {
-                            "ShampooStyle": "Gội & tạo mẫu",
-                            "ShampooStyleFlatIron": "Gội, duỗi & tạo mẫu",
-                            "Braids": "Thắt tóc tạo mẫu",
-                            "ShampooStyleDes": "Gội và tạo mẫu theo yêu cầu",
-                            "ShampooStyleFlatIronDes": "Gội và tạo mẫu theo yêu cầu",
-                            "BraidsDes": "Tạo mẫu theo yêu cầu"
+                            "ShampooStyle": "Trai Xinh",
+                            "ShampooStyleFlatIron": "Gái Đẹp",
+                            "Braids": "Gay Nóng Bỏng",
+                            "ShampooStyleDes": "Hạnh Phúc là khi có mái tóc ngầu",
+                            "ShampooStyleFlatIronDes": "Tóc ngắn mắt bồ câu sáng ngời",
+                            "BraidsDes": "Cuộc đời không hoàn hảo nhưng tóc bạn thì có thể"
                         }
                     },
                     "HairCutting": {
-                        "Title": "Cắt tóc",
+                        "Title": "Massage",
                         "Services": {
-                            "CutStyle": "Cắt & tạo mẫu tóc",
-                            "CutSet":  "Cắt tóc theo combo",
-                            "BarberShort": "Cắt tóc ngắn",
-                            "CutStyleDes": "Cắt tóc tạo mẫu theo yêu cầu",
-                            "CutSetDes": "Cắt tóc tạo mẫu theo yêu cầu",
-                            "BarberShortDes": "Cắt tóc tạo mẫu theo yêu cầu"
+                            "CutStyle": "Dầu Dừa",
+                            "CutSet":  "Đá Nóng",
+                            "BarberShort": "Thái",
+                            "CutStyleDes": "Ngày vui nhất trong tuần là ngày đi massage",
+                            "CutSetDes": "Giải quyết tất cả các vấn đề nóng bỏng",
+                            "BarberShortDes": "Sawadee ka"
                         }
                     },
                     "Manicures": {
                         "Title": "Chăm sóc móng",
                         "Services": {
-                            "HandExfoliate": "Tẩy tế bào chết trên tay",
-                            "HandMassage": "Massage tay thư giãn",
-                            "NailShinyPolish": "Đánh bóng móng tay",
-                            "HandExfoliateDes": "Tẩy tế bào chết và vệ sinh móng",
-                            "HandMassageDes": "Massage tay 30 phút",
-                            "NailShinyPolishDes": "Tẩy tế bào chết và đánh bóng"
+                            "HandExfoliate": "Móng Tay",
+                            "HandMassage": "Móng Chân",
+                            "HandExfoliateDes": "Làm móng để dụ gấu",
+                            "HandMassageDes": "Giữ bình tĩnh và đặt hẹn làm móng trực tuyến"
                         }
                     }
                 }

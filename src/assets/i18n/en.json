@@ -302,36 +302,34 @@
                 },
                 "Services": {
                     "Styling": {
-                        "Title": "Styling",
+                        "Title": "Haircut",
                         "Services": {
-                            "ShampooStyle": "Shampoo Style",
-                            "ShampooStyleFlatIron": "Shampoo Style Flat Iron",
-                            "Braids": "Braids",
-                            "ShampooStyleDes": "Shampoo and Design hair styles as required",
-                            "ShampooStyleFlatIronDes": "Shampoo and Design hair styles as required",
-                            "BraidsDes": "Hair styles as required"
+                            "ShampooStyle": "Good Boy",
+                            "ShampooStyleFlatIron": "Hot Girl",
+                            "Braids": "Sassy Gay",
+                            "ShampooStyleDes": "Happyness is looking good with a new haircut",
+                            "ShampooStyleFlatIronDes": "Long hair don't care",
+                            "BraidsDes": "Life isn't perfect but your hair can be"
                         }
                     },
                     "HairCutting": {
-                        "Title": "Hair Cutting",
+                        "Title": "Massage",
                         "Services": {
-                            "CutStyle": "Cut & Style",
-                            "CutSet":  "Cut & Set",
-                            "BarberShort": "Barber Short",
-                            "CutStyleDes": "Design hair styles as required",
-                            "CutSetDes": "Design hair styles as required",
-                            "BarberShortDes": "Design hair styles as required"
+                            "CutStyle": "Coconut Oil",
+                            "CutSet":  "Hot Stones",
+                            "BarberShort": "Thai",
+                            "CutStyleDes": "Massage day is my favourite day of the week",
+                            "CutSetDes": "Got issues with your tissues?",
+                            "BarberShortDes": "Let's get cracking"
                         }
                     },
                     "Manicures": {
-                        "Title": "Manicures",
+                        "Title": "Nail Care",
                         "Services": {
-                            "HandExfoliate": "Hand exfoliate",
-                            "HandMassage": "Hand massage",
-                            "NailShinyPolish": "Nail shiny polish",
-                            "HandExfoliateDes": "Cleaning nails",
-                            "HandMassageDes": "30-minute massage",
-                            "NailShinyPolishDes": "Cleaning nails and polishing"
+                            "HandExfoliate": "Manicures",
+                            "HandMassage": "Pedicures",
+                            "HandExfoliateDes": "Nails before males",
+                            "HandMassageDes": "Keep calm & book yout nails appointment"
                         }
                     }
                 }
