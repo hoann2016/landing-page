@@ -1,6 +1,6 @@
-import { CalendarStaff } from "../../models/calendar-viewer/calendar-staff.model";
-import { CalendarSidebarItem } from "app/features/models/calendar-viewer/sidebar-icons.model";
-import { CalendarBooking } from "app/features/models/calendar-viewer/calendar-booking.model";
+import { CalendarStaff } from '../../models/calendar-viewer/calendar-staff.model';
+import { CalendarSidebarItem } from 'app/features/models/calendar-viewer/sidebar-icons.model';
+import { CalendarBooking } from 'app/features/models/calendar-viewer/calendar-booking.model';
 
 const CalendarStaffList: Array<CalendarStaff> = [
     {
@@ -41,7 +41,7 @@ const ServiceBookingsColor: { [key: string]: string } = {
     shampoo_style: '#F2A4BE',
     massage: '#88D5CD',
     haircutwomen: '#F2A4BE'
-}
+};
 
 const CalendarDefaultBookings: Array<CalendarBooking> = [
     {
@@ -55,7 +55,8 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
             left: 'calc(200% + 4px)',
             height: '128px',
             background: ServiceBookingsColor.haircut,
-            zIndex: 5
+            zIndex: 5,
+            animationTop: '0'
         },
         isOpacity: false,
         isNew: false
@@ -71,7 +72,8 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
             left: 'calc(100% + 4px)',
             height: '83px',
             background: ServiceBookingsColor.sampo_blow,
-            zIndex: 5
+            zIndex: 5,
+            animationTop: '0'
         },
         isOpacity: false,
         isNew: false
@@ -87,7 +89,8 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
             left: 'calc(100% + 4px)',
             height: '128px',
             background: ServiceBookingsColor.shampoo_style,
-            zIndex: 5
+            zIndex: 5,
+            animationTop: '0'
         },
         isOpacity: false,
         isNew: false
@@ -99,11 +102,12 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
         type: 'sampo_blow',
         staffName: 'Thanh Tùng',
         styles: {
-            top: (4 * 45 + 3) +'px',
+            top: (4 * 45 + 3) + 'px',
             left: 'calc(200% + 4px)',
             height: (2 * 45 - 7) + 'px',
             background: ServiceBookingsColor.sampo_blow,
-            zIndex: 5
+            zIndex: 5,
+            animationTop: '0'
         },
         isOpacity: false,
         isNew: false
@@ -115,11 +119,12 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
         type: 'sampo_blow',
         staffName: 'Thanh Tùng',
         styles: {
-            top: (2 * 45 + 3) +'px',
+            top: (2 * 45 + 3) + 'px',
             left: 'calc(300% + 4px)',
             height: (2 * 45 - 7) + 'px',
             background: ServiceBookingsColor.sampo_blow,
-            zIndex: 5
+            zIndex: 5,
+            animationTop: '0'
         },
         isOpacity: false,
         isNew: false
@@ -131,11 +136,12 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
         staffName: 'Huyền My',
         type: 'massage',
         styles: {
-            top: (7 * 45 + 3) +'px',
+            top: (7 * 45 + 3) + 'px',
             left: 'calc(300% + 4px)',
             height: (3 * 45 - 7) + 'px',
             background: ServiceBookingsColor.massage,
-            zIndex: 5
+            zIndex: 5,
+            animationTop: '0'
         },
         isOpacity: false,
         isNew: false
@@ -147,11 +153,12 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
         type: 'massage',
         staffName: 'Huyền My',
         styles: {
-            top: (4 * 45 + 3) +'px',
+            top: (4 * 45 + 3) + 'px',
             left: 'calc(400% + 4px)',
             height: (2 * 45 - 7) + 'px',
             background: ServiceBookingsColor.massage,
-            zIndex: 5
+            zIndex: 5,
+            animationTop: '0'
         },
         isOpacity: false,
         isNew: false
@@ -163,11 +170,12 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
         staffName: 'Jkim Nguyen',
         type: 'shampoo_style',
         styles: {
-            top: (6 * 45 + 3) +'px',
+            top: (6 * 45 + 3) + 'px',
             left: 'calc(400% + 4px)',
             height: (3 * 45 - 7) + 'px',
             background: ServiceBookingsColor.shampoo_style,
-            zIndex: 5
+            zIndex: 5,
+            animationTop: '0'
         },
         isOpacity: false,
         isNew: false
@@ -179,11 +187,12 @@ const CalendarDefaultBookings: Array<CalendarBooking> = [
         staffName: 'Thu Trang',
         type: 'haircut',
         styles: {
-            top: (4 * 45 + 3) +'px',
+            top: (4 * 45 + 3) + 'px',
             left: 'calc(500% + 4px)',
             height: (2 * 45 - 7) + 'px',
             background: ServiceBookingsColor.haircut,
-            zIndex: 5
+            zIndex: 5,
+            animationTop: '0'
         },
         isOpacity: false,
         isNew: false

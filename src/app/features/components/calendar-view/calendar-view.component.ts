@@ -1,23 +1,11 @@
 import {
-    Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef,
-    Output, EventEmitter
+    Component, OnInit, ChangeDetectionStrategy,
+    ChangeDetectorRef, Output, EventEmitter
 } from '@angular/core';
+import { timer } from 'rxjs';
 import { startOfWeek, endOfWeek, format, add, addMinutes } from 'date-fns';
 import {
-    faCalendarAlt,
-    faClock,
-    faFileAlt,
-    faUser,
-    faClipboardList,
-    faFileInvoice,
-    faBoxOpen,
-    faChartLine,
-    faCogs,
-    faBell,
-    faAlignCenter,
     faCaretDown,
-    faFilter,
-    faChartBar,
     faChevronLeft,
     faChevronRight
 } from '@fortawesome/free-solid-svg-icons';
@@ -27,45 +15,59 @@ import {
     CalendarStaffList, CalendarDefaultBookings, ServiceBookingsColor, CalendarSidebar
 } from './calendar.constant';
 import { SidebarIconsModel, CalendarSidebarItem } from '../../models/calendar-viewer/sidebar-icons.model';
-import { CalendarBooking } from 'app/features/models/calendar-viewer/calendar-booking.model';
-import { StepService } from 'app/features/services/step.service';
-import { timer } from 'rxjs';
+import { CalendarBooking } from '../../models/calendar-viewer/calendar-booking.model';
+import { StepService } from '../../services/step.service';
+import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 
 @Component({
     selector: 'app-calendar-view',
     templateUrl: './calendar-view.component.html',
     styleUrls: ['./calendar-view.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    animations: [
+        trigger('flyTicket', [
+            state('initial', style({
+                top: '{{top_var}}',
+                left: '{{left_var}}'
+            }), { params: { top_var: 0, left_var: '270%'} }),
+            state('go', style({
+                top: '{{top_var}}',
+                left: '{{left_var}}'
+            }), { params: { top_var: 0, left_var: 0 } }),
+            transition('* => go', [
+                animate(1600, keyframes([
+                    style({ left: '{{init_left}}', top: '{{top_first}}', offset: 0}),
+                    style({ left: '{{init_left}}', top: '{{top_first}}', offset: 0.45}),
+                    style({
+                        left: 'calc({{left_var}} + {{left_or_right}})',
+                        top: 'calc({{top_var}} + {{top_animation}})', offset: 0.62
+                    }),
+                    style({ left: '{{left_var}}', top: '{{top_var}}', offset: .85}),
+                    style({ transform: 'rotate(-5deg)', left: '{{left_var}}', top: '{{top_var}}', offset: .92}),
+                    style({ transform: 'rotate(5deg)', left: '{{left_var}}', top: '{{top_var}}', offset: .94}),
+                    style({ transform: 'rotate(-5deg)', left: '{{left_var}}', top: '{{top_var}}', offset: .96}),
+                    style({ transform: 'rotate(5deg)', left: '{{left_var}}', top: '{{top_var}}', offset: .98}),
+                    style({ left: '{{left_var}}', top: '{{top_var}}', offset: 1.0})
+                ]))
+            ], { params: { top_var: 0, left_var: 0, top_first: 0, init_left: '270%', left_or_right: 0, top_animation: 0 } })
+        ])
+    ]
 })
 export class CalendarViewComponent implements OnInit {
     listIcons: SidebarIconsModel = {
-        faCalendarAlt,
-        faClock,
-        faFileAlt,
-        faUser,
-        faClipboardList,
-        faFileInvoice,
-        faBoxOpen,
-        faChartLine,
-        faCogs,
-        faBell,
-        faAlignCenter,
         faCaretDown,
-        faChartBar,
-        faFilter,
         faChevronLeft,
         faChevronRight
     };
     currentWeekDay: CurrentWeekDay = {
         from: format(add(startOfWeek(new Date()), { days: 1 }), 'dd-MM-yyyy'),
         to: format(add(endOfWeek(new Date()), { days: 1 }), 'dd-MM-yyyy')
-    }
+    };
     staffs: Array<CalendarStaff> = CalendarStaffList;
     servicesColor: { [key: string]: string } = ServiceBookingsColor;
     tickets: Array<CalendarBooking> = CalendarDefaultBookings;
     sidebarItems: Array<CalendarSidebarItem> = CalendarSidebar;
     listDaysInWeek: Array<string> = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    
     @Output('bookingIsCreated') bookingCreated: EventEmitter<boolean> = new EventEmitter<boolean>();
 
     constructor(
@@ -76,12 +78,12 @@ export class CalendarViewComponent implements OnInit {
     ngOnInit() {
         // Cong thuc: height: 45px; -> top: so half * 45px + 3px. height: half * 45px - 8px
         this.stepService.dispatchCreateNewTicketBooking$.subscribe((status: boolean) => {
-            if (status && this.stepService.testBookingData()) {
-                const booking: any = this.stepService.testBookingData();
+            const booking = this.stepService.testBookingData();
+            if (status && booking) {
                 const bookingHelperData: any = {
                     today: new Date(),
-                    bookingTime: booking.timePeriod.split(' ')[0],
-                }
+                    bookingTime: booking.timePeriod,
+                };
                 const dateBooking: Date =  new Date(
                     bookingHelperData.today.getFullYear(),
                     bookingHelperData.today.getMonth(),
@@ -101,12 +103,14 @@ export class CalendarViewComponent implements OnInit {
                         left: `calc(${ this.listDaysInWeek.indexOf(booking.selectedDOW) }00% + 4px)`,
                         height: (((booking.duration / 30) * 45) - 8) + 'px',
                         background: ServiceBookingsColor[booking.type],
-                        zIndex: this.tickets.length + 1
+                        zIndex: this.tickets.length + 1,
+                        animationTop: `calc(${this.compareDiffTwoHour(bookingHelperData.bookingTime) * -1 * 45 * 2 + 3 - 200 }px)`
                     },
                     type: booking.type,
                     isOpacity: false,
-                    isNew: true
-                }
+                    isNew: true,
+                    at: this.listDaysInWeek.indexOf(booking.selectedDOW)
+                };
                 this.tickets.push(newBooking);
                 this.tickets.map((item: CalendarBooking, index: number) => {
                     if (item.type !== newBooking.type) {
@@ -117,7 +121,7 @@ export class CalendarViewComponent implements OnInit {
                 this.cdr.markForCheck();
                 this.handleCloseBlurAnimation();
             }
-        })
+        });
     }
 
     handleCloseBlurAnimation(): void {
@@ -127,7 +131,7 @@ export class CalendarViewComponent implements OnInit {
                 this.tickets[index].isNew = false;
             });
             this.cdr.markForCheck();
-        })
+        });
     }
 
     trackByCalendarStaff(index: number, item: CalendarStaff): any {

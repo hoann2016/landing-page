@@ -1,9 +1,10 @@
 interface CalendarBookingStyle {
     top: string;
     left: string;
-    height: string
+    height: string;
     background: string;
     zIndex: number;
+    animationTop: string;
 }
 
 interface CalendarBooking  {
@@ -15,6 +16,7 @@ interface CalendarBooking  {
     type?: string;
     isOpacity: boolean;
     isNew: boolean;
+    at?: number;
 }
 
 export { CalendarBookingStyle, CalendarBooking };

@@ -126,10 +126,17 @@
                             *ngFor="let ticket of tickets; let i = index; trackBy: trackByBookingInCalendar;"
                             [ngStyle]="ticket?.styles"
                             [ngClass]="{ 'opacity': ticket.isOpacity, 'new': ticket.isNew }"
+                            [@flyTicket]="{ value: ticket?.isNew ? 'go' : 'initial', params: {
+                                top_var: ticket?.styles?.top,
+                                left_var: ticket?.styles?.left,
+                                top_first: ticket?.styles?.animationTop,
+                                left_or_right: ticket?.at > 3 ? '50px' : '-50px',
+                                top_animation: '80px'
+                            } }"
                         >
                             <div class="calendar-viewer-content-preview-main-booking-part-ticket-content">
                                 <div class="calendar-viewer-content-preview-main-booking-part-ticket-content-time">
-                                    {{ ticket?.timePeriod }}
+                                    {{ ticket?.timePeriod }} {{ ticket?.styles?.at }} {{ ticket?.styles?.top }}
                                 </div>
                                 <div class="calendar-viewer-content-preview-main-booking-part-ticket-content-service">
                                     {{ ticket?.serviceName | translate }}

@@ -50,7 +50,7 @@
             padding: 15px 25px;
             box-shadow: 2px 4px 5px 0px #ccc;
             align-items: center;
-            z-index: 15;
+            z-index: 20;
             position: relative;
             &-logo {
                 img {
@@ -111,6 +111,8 @@
             justify-content: space-between;
             background: #edf1f4;
             padding: 20px;
+            position: relative;
+            z-index: 20;
             &-service {
                 &-select {
                     padding: 7px 20px;
@@ -168,6 +170,8 @@
         &-staff {
             background: #edf1f4;
             padding: 20px;
+            position: relative;
+            z-index: 20;
             &-list {
                 display: flex;
                 justify-content: space-between;
@@ -341,12 +345,6 @@
                             border-radius: 2px;
                             &.opacity {
                                 opacity: 0.5;
-                            }
-                            &.new {
-                                animation: bounce 2.1s infinite;
-                                -webkit-animation: bounce 2.1s infinite;
-                                -moz-animation: bounce 2.1s infinite;
-                                -o-animation: bounce 2.1s infinite;
                             }
                             &-content {
                                 position: relative;
