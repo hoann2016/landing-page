@@ -307,9 +307,9 @@
                             "ShampooStyle": "Good Boy",
                             "ShampooStyleFlatIron": "Hot Girl",
                             "Braids": "Sassy Gay",
-                            "ShampooStyleDes": "Happyness is looking good with a new haircut",
-                            "ShampooStyleFlatIronDes": "Long hair don't care",
-                            "BraidsDes": "Life isn't perfect but your hair can be"
+                            "ShampooStyleDes": "60 minutes - Happyness is looking good with a new haircut",
+                            "ShampooStyleFlatIronDes": "90 minutes - Long hair don't care",
+                            "BraidsDes": "60 minutes - Life isn't perfect but your hair can be"
                         }
                     },
                     "HairCutting": {
@@ -318,9 +318,9 @@
                             "CutStyle": "Coconut Oil",
                             "CutSet":  "Hot Stones",
                             "BarberShort": "Thai",
-                            "CutStyleDes": "Massage day is my favourite day of the week",
-                            "CutSetDes": "Got issues with your tissues?",
-                            "BarberShortDes": "Let's get cracking"
+                            "CutStyleDes": "60 minutes - Massage day is my favourite day of the week",
+                            "CutSetDes": "90 minutes - Got issues with your tissues?",
+                            "BarberShortDes": "90 minutes - Let's get cracking"
                         }
                     },
                     "Manicures": {
@@ -328,8 +328,8 @@
                         "Services": {
                             "HandExfoliate": "Manicures",
                             "HandMassage": "Pedicures",
-                            "HandExfoliateDes": "Nails before males",
-                            "HandMassageDes": "Keep calm & book yout nails appointment"
+                            "HandExfoliateDes": "60 minutes - Nails before males",
+                            "HandMassageDes": "90 minutes - Keep calm & book yout nails appointment"
                         }
                     }
                 }

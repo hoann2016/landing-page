@@ -307,9 +307,9 @@
                             "ShampooStyle": "Trai Xinh",
                             "ShampooStyleFlatIron": "Gái Đẹp",
                             "Braids": "Gay Nóng Bỏng",
-                            "ShampooStyleDes": "Hạnh Phúc là khi có mái tóc ngầu",
-                            "ShampooStyleFlatIronDes": "Tóc ngắn mắt bồ câu sáng ngời",
-                            "BraidsDes": "Cuộc đời không hoàn hảo nhưng tóc bạn thì có thể"
+                            "ShampooStyleDes": "60 phút - Hạnh Phúc là khi có mái tóc ngầu",
+                            "ShampooStyleFlatIronDes": "90 phút - Tóc ngắn mắt bồ câu sáng ngời",
+                            "BraidsDes": "60 phút - Cuộc đời không hoàn hảo nhưng tóc bạn thì có thể"
                         }
                     },
                     "HairCutting": {
@@ -318,9 +318,9 @@
                             "CutStyle": "Dầu Dừa",
                             "CutSet":  "Đá Nóng",
                             "BarberShort": "Thái",
-                            "CutStyleDes": "Ngày vui nhất trong tuần là ngày đi massage",
-                            "CutSetDes": "Giải quyết tất cả các vấn đề nóng bỏng",
-                            "BarberShortDes": "Sawadee ka"
+                            "CutStyleDes": "60 phút -Ngày vui nhất trong tuần là ngày đi massage",
+                            "CutSetDes": "90 phút -Giải quyết tất cả các vấn đề nóng bỏng",
+                            "BarberShortDes": "90 phút - Sawadee ka"
                         }
                     },
                     "Manicures": {
@@ -328,8 +328,8 @@
                         "Services": {
                             "HandExfoliate": "Móng Tay",
                             "HandMassage": "Móng Chân",
-                            "HandExfoliateDes": "Làm móng để dụ gấu",
-                            "HandMassageDes": "Giữ bình tĩnh và đặt hẹn làm móng trực tuyến"
+                            "HandExfoliateDes": "60 phút - Làm móng để dụ gấu",
+                            "HandMassageDes": "90 phút - Giữ bình tĩnh và đặt hẹn làm móng trực tuyến"
                         }
                     }
                 }
