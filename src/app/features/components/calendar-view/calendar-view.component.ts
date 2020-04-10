@@ -1,6 +1,6 @@
 import {
     Component, OnInit, ChangeDetectionStrategy,
-    ChangeDetectorRef, Output, EventEmitter
+    ChangeDetectorRef, Output, EventEmitter, ViewChild, ElementRef
 } from '@angular/core';
 import { timer } from 'rxjs';
 import { startOfWeek, endOfWeek, format, add, addMinutes } from 'date-fns';
@@ -69,6 +69,7 @@ export class CalendarViewComponent implements OnInit {
     sidebarItems: Array<CalendarSidebarItem> = CalendarSidebar;
     listDaysInWeek: Array<string> = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     @Output('bookingIsCreated') bookingCreated: EventEmitter<boolean> = new EventEmitter<boolean>();
+    @ViewChild('calendar', { static: true }) calendarEl: ElementRef<any>;
 
     constructor(
         private cdr: ChangeDetectorRef,
@@ -118,6 +119,7 @@ export class CalendarViewComponent implements OnInit {
                     }
                 });
                 this.bookingCreated.emit(true);
+                this.calendarEl.nativeElement.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
                 this.cdr.markForCheck();
                 this.handleCloseBlurAnimation();
             }

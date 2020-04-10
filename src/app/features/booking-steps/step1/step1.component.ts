@@ -40,14 +40,14 @@ export class Step1Component implements OnInit {
                     },
                     {
                         name: 'Features.DemoSteps.Step1.Services.Styling.Services.ShampooStyleFlatIron',
-                        duration: 60,
+                        duration: 90,
                         price: 90000,
                         type: 'sampo_blow',
                         description: 'Features.DemoSteps.Step1.Services.Styling.Services.ShampooStyleFlatIronDes'
                     },
                     {
                         name: 'Features.DemoSteps.Step1.Services.Styling.Services.Braids',
-                        duration: 120,
+                        duration: 60,
                         price: 130000,
                         type: 'sampo_blow',
                         description: 'Features.DemoSteps.Step1.Services.Styling.Services.BraidsDes'
@@ -66,14 +66,14 @@ export class Step1Component implements OnInit {
                     },
                     {
                         name: 'Features.DemoSteps.Step1.Services.HairCutting.Services.CutSet',
-                        duration: 60,
+                        duration: 90,
                         price: 90000,
                         type: 'haircut',
                         description: 'Features.DemoSteps.Step1.Services.HairCutting.Services.CutSetDes'
                     },
                     {
                         name: 'Features.DemoSteps.Step1.Services.HairCutting.Services.BarberShort',
-                        duration: 120,
+                        duration: 90,
                         price: 130000,
                         type: 'haircut',
                         description: 'Features.DemoSteps.Step1.Services.HairCutting.Services.BarberShortDes'
@@ -92,7 +92,7 @@ export class Step1Component implements OnInit {
                     },
                     {
                         name: 'Features.DemoSteps.Step1.Services.Manicures.Services.HandMassage',
-                        duration: 60,
+                        duration: 90,
                         price: 90000,
                         type: 'massage',
                         description: 'Features.DemoSteps.Step1.Services.Manicures.Services.HandMassageDes'

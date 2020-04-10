@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { StepService } from 'app/features/services/step.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -10,7 +10,6 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class FeatureHeaderComponent implements OnInit {
     currentStep$: Observable<number>;
-    @ViewChild('calendar', { static: true }) calendarEl: ElementRef<HTMLElement>;
 
     constructor(
         private stepService: StepService,
@@ -34,7 +33,6 @@ export class FeatureHeaderComponent implements OnInit {
 
     bookingIsCreated(event: boolean): void {
         if (event) {
-            this.calendarEl.nativeElement.scrollIntoView();
             this.stepService.changeStep(1);
             this.stepService.dispatchCreateNewTicketBooking(false);
             this.stepService.setDataStep({}, true);
