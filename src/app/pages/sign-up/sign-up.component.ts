@@ -24,20 +24,6 @@ import { TimeConstant } from '@shared/constants/time.constant';
     styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit, AfterViewInit, OnDestroy {
-    ngAfterViewInit(): void {
-    }
-    shopDomain: string;
-    isSubmitted: boolean = false;
-
-    signUpForm: FormGroup;
-    // variable
-    selectedPackage: string;
-    userOrder: UserOrder;
-    freePackage;
-    orderResponse;
-    iconTimes: any = faTimes;
-    @ViewChild('emailExist', { static: true }) emailExistTemplate: TemplateRef<any>;
-    currentYear: number = TimeConstant.Year;
     get f() {
         return this.signUpForm.controls;
     }
@@ -50,10 +36,24 @@ export class SignUpComponent implements OnInit, AfterViewInit, OnDestroy {
         private toastr: ToastrService,
         private router: Router
     ) { }
+    shopDomain: string;
+    isSubmitted: boolean = false;
+
+    signUpForm: FormGroup;
+    // variable
+    selectedPackage: string;
+    userOrder: UserOrder;
+    freePackage;
+    orderResponse;
+    iconTimes: any = faTimes;
+    @ViewChild('emailExist', { static: true }) emailExistTemplate: TemplateRef<any>;
+    currentYear: number = TimeConstant.Year;
     public allPackage: Array<PackageDataModel> = [];
     public allBusinessType: Array<BusinessType> = [];
     contentLoading: string;
     showLoading: boolean = false;
+    ngAfterViewInit(): void {
+    }
     public buildForm() {
         this.signUpForm = this.fb.group(
             {
@@ -103,10 +103,10 @@ export class SignUpComponent implements OnInit, AfterViewInit, OnDestroy {
     ngOnInit() {
         this.buildForm();
         this.appService.getActiveConfigPackage().subscribe(pk => {
-            if (pk.success == true) {
+            if (pk.success === true) {
                 this.allPackage = pk.data.packages;
                 if (!this.signUpForm.get('PackageSelectedName').value && this.allPackage && this.allPackage.length > 0) {
-                    this.signUpForm.get('PackageSelectedName').setValue(this.allPackage[0].id)
+                    this.signUpForm.get('PackageSelectedName').setValue(this.allPackage[0].id);
                 }
             }
         },
@@ -115,7 +115,7 @@ export class SignUpComponent implements OnInit, AfterViewInit, OnDestroy {
             });
         this.appService.getAllBusiness().subscribe(bs => {
             this.allBusinessType = [];
-            if (bs.success == true) {
+            if (bs.success === true) {
                 this.allBusinessType = bs.data.business_types;
                 if (this.allBusinessType && this.allBusinessType.length > 0) {
                     this.signUpForm.get('ServiceName').setValue(this.allBusinessType[0].id);
@@ -128,13 +128,13 @@ export class SignUpComponent implements OnInit, AfterViewInit, OnDestroy {
 
         this.landingPageService.getSelectedPackage().subscribe(packageName => {
             if (packageName) {
-                this.signUpForm.patchValue({ PackageSelectedName: packageName })
+                this.signUpForm.patchValue({ PackageSelectedName: packageName });
             } else {
                 if (this.allPackage && this.allPackage.length > 0) {
-                    this.signUpForm.get('PackageSelectedName').setValue(this.allPackage[0].id)
+                    this.signUpForm.get('PackageSelectedName').setValue(this.allPackage[0].id);
                 }
             }
-        })
+        });
     }
     showModalLogin(content) {
         this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' })
@@ -166,7 +166,7 @@ export class SignUpComponent implements OnInit, AfterViewInit, OnDestroy {
             }, err => {
                 reject(err);
             });
-        })
+        });
     }
     onSubmit() {
         this.isSubmitted = true;
@@ -220,19 +220,37 @@ export class SignUpComponent implements OnInit, AfterViewInit, OnDestroy {
                                     sub_totals: this.freePackage.price,
                                     tax: 0,
                                     grand_totals: this.freePackage.price - (this.freePackage.price * 0 / 100)
-                                }
+                                };
                                 this.orderResponse = await this.submitOrder(userOrder);
                                 if (this.orderResponse) {
                                     this.showLoading = false;
-                                    this.toastr.success("Start to clone you website ...")
-                                    this.router.navigateByUrl('/pages/clone-site', { state: { merchantId: response.data.id, userCredentials: { email: formImport.email, password: formImport.password } } });
+                                    this.toastr.success('Start to clone you website ...');
+                                    this.router.navigateByUrl('/pages/clone-site', { 
+                                        state: 
+                                        { 
+                                            merchantId: response.data.id, 
+                                            userCredentials: 
+                                            { 
+                                                email: formImport.email, 
+                                                password: formImport.password 
+                                            } 
+                                        } 
+                                    });
                                 }
                             } else {
                                 const redirectValues = { ...response.data };
                                 redirectValues.selectedConfigPackage = packageId;
-                                this.toastr.success(this.translate.instant("SignUp.RedirectToPayment"));
+                                this.toastr.success(this.translate.instant('SignUp.RedirectToPayment'));
                                 this.router.navigateByUrl('/pages/payment',
-                                    { state: redirectValues }
+                                    { state: {
+                                        ...redirectValues, 
+                                        userCredentials: 
+                                        { 
+                                            email: formImport.email, 
+                                            password: formImport.password 
+                                        } 
+                                    }
+                                }
                                 );
                             }
                         } catch (error) {

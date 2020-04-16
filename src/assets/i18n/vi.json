@@ -469,7 +469,9 @@
         "TempCount": "Tạm tính",
         "TotalCount": "Tổng cộng",
         "CompletePayment": "Tiến hành thanh toán",
-        "RequireSelectPayment": "Bắt buộc chọn 1 phương thức thanh toán"
+        "RequireSelectPayment": "Bắt buộc chọn 1 phương thức thanh toán",
+        "PaymentSuccessfully": "Bạn đã thanh toán thành công. Hệ thống sẽ chuẩn bị website cho bạn",
+        "AlreadyPaid": "Bạn đã thanh toán rồi. Hệ thống đang chuẩn bị website cho bạn"
     },
     "Shared": {
         "RegisterBtnLabel": "Đăng ký",

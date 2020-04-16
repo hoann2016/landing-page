@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PackageListComponent implements OnInit {
     public listPackages: Array<any> = [
         {
-            title: 'Free',
+            title: 'Freebie',
             description: 'Khởi đầu kinh doanh trực tuyến với trang web đặt hẹn trực tuyến riêng hoạt động liên tục 24/7',
             fee: 'Miễn phí',
             bookingNum: '20 Lượt/Tháng',

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
@@ -11,13 +11,13 @@ import { UserLogin } from '../../shared/models/user-models/user-login.model';
 import { environment } from '../../../environments/environment';
 
 @Component({
-  selector: 'clone-site',
+  selector: 'app-clonesite',
   templateUrl: './clone-site.component.html',
   styleUrls: ['./clone-site.component.scss']
 })
-export class CloneSiteComponent implements OnInit {
+export class CloneSiteComponent implements OnInit, OnDestroy {
   cloneSiteProgress: CloneSite;
-  _progress: Subscription
+  _progress: Subscription;
   constructor(
     private translate: TranslateService,
     private route: ActivatedRoute,
@@ -29,7 +29,7 @@ export class CloneSiteComponent implements OnInit {
   userCredentials: UserLogin;
   showLoading: boolean = false;
   countDown(redirectTime) {
-    if(redirectTime > 0){
+    if (redirectTime > 0) {
       this.cloneSiteProgress.percent += 1;
       this.cloneSiteProgress.message = this.translate.instant('CloneSite.preparing-merchant-site');
       redirectTime -= 1;
@@ -55,7 +55,7 @@ export class CloneSiteComponent implements OnInit {
       map(() =>
         window.history.state
       )
-    )
+    );
     this.state$.subscribe((p: any) => {
       if (!isEmpty(p)) {
         this.merchantId = p.merchantId;
@@ -71,7 +71,7 @@ export class CloneSiteComponent implements OnInit {
           percent: cloneSiteProgress.percent,
           domain: cloneSiteProgress.domain
         };
-        if(this.cloneSiteProgress && this.cloneSiteProgress.percent === 80 && this.cloneSiteProgress.domain) {
+        if (this.cloneSiteProgress && this.cloneSiteProgress.percent === 80 && this.cloneSiteProgress.domain) {
           this.countDown(environment.redirectTime);
         }
     });
