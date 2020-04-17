@@ -470,7 +470,9 @@
         "TempCount": "Amount",
         "TotalCount": "Total",
         "CompletePayment": "Proceed To Payment",
-        "RequireSelectPayment": "You must select an payment"
+        "RequireSelectPayment": "You must select an payment",
+        "PaymentSuccessfully": "Your payment has been proceeded successfully",
+        "AlreadyPaid": "You have already "
     },
     "Shared": {
         "RegisterBtnLabel": "Register",

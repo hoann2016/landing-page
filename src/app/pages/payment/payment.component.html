@@ -17,7 +17,7 @@
                   {{'Payment.SelectedPackage'|translate}}
                 </span>
                 <span class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line list-feature">
-                  <span class="focus-yellow one-line">{{(userPayment && userPayment.selectedPackage) ? userPayment.selectedPackage.name : 'Free'}}</span>
+                  <span class="focus-yellow one-line">{{(paymentSession && paymentSession.selectedPackage) ? paymentSession.selectedPackage.name : 'Freebie'}}</span>
                 </span>
               </div>
               <div class="clear-fix">
@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line list-feature">
                   <select (change)="changePackage($event)">
-                      <option *ngFor="let package of packages; let i = index" [value]="i">{{package.duration}} {{'Payment.Months'|translate}}
+                      <option *ngFor="let package of packages; let i = index" [value]="i">{{package?.duration}} {{'Payment.Months'|translate}}
                   </select>
                 </div>
               </div>
@@ -40,21 +40,21 @@
                   {{'Payment.Account'|translate}}:
                 </div>
                 <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line list-feature">
-                  {{userPayment ? userPayment.customer : ''}}
+                  {{paymentSession?.customer?.name}}
                 </div>
               </div>
               <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature">{{'Payment.Contact'|translate}}:</div>
-                <div class=" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line list-feature">{{userPayment ? userPayment.phone : ''}}</div>
+                <div class=" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line list-feature">{{paymentSession?.customer?.phone}}</div>
               </div>
               <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
                 <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature">{{'Payment.StartDate'|translate}}:
                 </div>
-                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line list-feature">{{userPayment ? userPayment.startDate : ''}}</div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line list-feature">{{paymentSession?.startDate}}</div>
               </div>
               <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature">{{'Payment.EndDate'|translate}}:</div>
-                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line list-feature">{{userPayment ? userPayment.endDate : ''}}</div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line list-feature">{{paymentSession?.endDate}}</div>
               </div>
             </div>
           </div>
@@ -68,34 +68,42 @@
               <ul class="d-flex flex-column">
                 <li class="row">
                   <label class="form-check-label" for="online"> {{'Payment.PaymentOnline'|translate}}</label>
-                    <input type="radio" class="form-check-input"  id="online" name="payment-method" disabled>
+                  <input type="radio" class="form-check-input"  id="online" name="payment-method" value="CC" ng-model='CC' (change)="changePayment($event)">
+                  <ul class="bank-border" *ngIf="cc && paymentSession.paymentMethod === 'CC'">
+                      <li class="bank-element" *ngFor="let cci of cc; index as i; trackBy: trackByCode" (click)="changeBankCode(cci?.code)" [class.active]="cci.code === paymentSession.bankCode">
+                          <a title="{{cci?.code}}" href="javascript:void(0)">
+                            <img src="{{cci?.logo}}" height="35" width="65" alt="{{cci?.code}}">
+                          </a>
+                        </li>
+                  </ul>
                 </li>
                 <li class="row">
                   <label class="form-check-label" for="ck"> {{'Payment.PaymentTransfer'|translate}} </label>
-                    <input type="radio" class="form-check-input" id="ck" name="payment-method" value="ck" disabled>
+                  <input type="radio" class="form-check-input" id="ck" name="payment-method" value="Bank-account" ng-model='Bank-account' (change)="changePayment($event)">
+                  <ul class="bank-border" *ngIf="banks && paymentSession.paymentMethod === 'Bank-account'">
+                      <li class="bank-element" *ngFor="let bank of banks; let i = index; trackBy: trackByCode" (click)="changeBankCode(bank?.code)" [class.active]="bank.code === paymentSession.bankCode">
+                          <a title="{{bank?.code}}" href="javascript:void(0)">
+                            <img src="{{bank?.logo}}" height="35" width="65" alt="{{bank?.code}}">
+                          </a>
+                        </li>
+                  </ul>
                 </li>
                 <li class="row">
                   <label class="form-check-label" for="tt">{{'Payment.PaymentDirect'|translate}}
                   </label>
-                    <input type="radio" class="form-check-input" id ="tt" name="payment-method" value="tt" checked
-                      (change)="ChangePayment($event)">
-                    
+                    <input type="radio" class="form-check-input" id ="tt" name="payment-method" value="Pay-later" (change)="changePayment($event)">
                 </li>
-                
-
-                
               </ul>
-
               <div class="row temp-price">
                 <div class="col-md">{{'Payment.TempCount'|translate}}</div>
-                <div class="col-md price-value">{{((userOrder && userOrder.sub_totals) ? userOrder.sub_totals : 0 )| currency: "VND"}}</div>
+                <div class="col-md price-value">{{((order && order.sub_totals) ? order.sub_totals : 0 )| currency: "VND"}}</div>
               </div>
               <div class="row total-payment">
                 <div class="col-md">{{'Payment.TotalCount'|translate}}</div>
-                <div class="col-md price-value">{{((userOrder && userOrder.grand_totals) ? userOrder.grand_totals : 0) | currency: "VND"}}</div>
+                <div class="col-md price-value">{{((order && order.grand_totals) ? order.grand_totals : 0) | currency: "VND"}}</div>
               </div>
             </div>
-            <p class="complete-payment-btn" (click)="submitOrder()">
+            <p class="complete-payment-btn" (click)="checkout()">
               {{'Payment.CompletePayment'|translate}}
             </p>
           </div>

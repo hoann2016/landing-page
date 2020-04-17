@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ViewChild, TemplateRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, TemplateRef, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
@@ -12,27 +12,30 @@ import { UniversalStorage } from '../../shared/storage/universal.storage';
 import { HttpErrorResponse } from '@angular/common/http';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { TimeConstant } from '@shared/constants/time.constant';
+
 @Component({
     selector: 'app-sign-in',
     templateUrl: './sign-in.component.html',
     styleUrls: ['./sign-in.component.scss']
 })
-export class SignInComponent implements OnInit, AfterViewInit {
+export class SignInComponent implements OnInit, AfterViewInit, OnDestroy {
     @ViewChild('notActive', { static: true }) notActive: TemplateRef<any>;
+
+    signInForm: FormGroup;
     iconTimes: any = faTimes;
+    shopDomain: string;
+    isSubmitted: boolean = false;
+    selectedPackage: string;
+    currentYear: number = TimeConstant.Year;
+    contentLoading: string;
+    showLoading: boolean = false;
 
     ngAfterViewInit(): void {
     }
-    shopDomain: string;
-    isSubmitted: boolean = false;
 
-    signInForm: FormGroup;
-    // variable
-    selectedPackage: string;
     get f() {
         return this.signInForm.controls;
     }
-    currentYear: number = TimeConstant.Year;
 
     constructor(
         public fb: FormBuilder,
@@ -44,8 +47,6 @@ export class SignInComponent implements OnInit, AfterViewInit {
         private router: Router,
         private cookieStorage: UniversalStorage,
     ) { }
-    contentLoading: string;
-    showLoading: boolean = false;
     public buildForm() {
         this.signInForm = this.fb.group(
             {
@@ -58,8 +59,8 @@ export class SignInComponent implements OnInit, AfterViewInit {
                     ]
                 ]
             });
-
     }
+
     ngOnInit() {
         this.buildForm();
     }
@@ -148,7 +149,7 @@ export class SignInComponent implements OnInit, AfterViewInit {
     }
 
     closeDialog(event: boolean) {
-        if (event) this.closeModal();
+        if (event) { this.closeModal(); }
     }
 
     ngOnDestroy() {

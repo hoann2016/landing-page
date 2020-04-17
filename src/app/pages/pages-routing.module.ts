@@ -12,7 +12,7 @@ import { EmailTemplateComponent } from './email-template/email-template.componen
 import { PaymentComponent } from './payment/payment.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermOfServiceComponent } from './term-of-service/term-of-service.component';
-import { CloneSiteComponent } from './clone-site/clone-site.component'
+import { CloneSiteComponent } from './clone-site/clone-site.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 const routes: Routes = [
@@ -56,16 +56,16 @@ const routes: Routes = [
         component: EmailTemplateComponent,
       },
       {
-        path:'payment',
-        component:PaymentComponent
+        path: 'payment',
+        component: PaymentComponent
       },
       {
-        path:'privacy-policy',
-        component:PrivacyPolicyComponent
+        path: 'privacy-policy',
+        component: PrivacyPolicyComponent
       },
       {
-        path:'term-of-service',
-        component:TermOfServiceComponent
+        path: 'term-of-service',
+        component: TermOfServiceComponent
       },
       {
         path: 'clone-site',
