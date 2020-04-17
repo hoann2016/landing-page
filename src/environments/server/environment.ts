@@ -19,12 +19,12 @@ export const environment = {
     // merchantpath:"http://45.77.250.47:84",
     // redirectTime:15
   
-    rootproto:"http://",
-    rootip:"dev.ludiino.com",
-    rootpath:"/",
-    socketPath:'/socket',
-    socketPort:null,
-    port:null,
-    merchantpath:"http://45.77.250.47:84",
-    redirectTime:20
+    rootproto: 'http://',
+    rootip: 'dev.ludiino.com',
+    rootpath: '/',
+    socketPath: '/socket',
+    socketPort: null,
+    port: null,
+    merchantPath: 'http://45.77.250.47:84',
+    redirectTime: 20
   };
