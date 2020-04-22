@@ -11,20 +11,31 @@
       .row {
         width: 100%;
         margin:0;
-
        // border:1px solid purple;
         margin:0;      
         .left-content {
          // border:1px solid red;
-         padding: 50px 30px 30px 30px;
+          padding: 30px 30px 30px 30px;
+          @media only screen and (min-width: 768px) {
+            padding: 50px 30px 30px 30px;
+          }
           .wrap_form_field {
             justify-content: flex-start;
             padding: 0 !important;
             width: 100% !important;
+            .descrition-page {
+              text-align: center;
+            }
             .list-feature{
               margin-top:10px;
+              .align-right{
+                text-align: right;
+              }
+              .bonus-line{
+                padding-left: 25px;
+                font-style: italic;
+              }
             }
-           
             .one-line {
               display: inline-block;
               overflow: hidden;
@@ -48,6 +59,47 @@
               min-width: 110px;
               max-width: 50%;
               text-align: center;
+            }
+            .custom-select {
+              width: 76px;
+              @media only screen and (min-width: 375px) {
+                width: 90px;
+              }
+              @media only screen and (min-width: 600px) {
+                width: 100px;
+              }
+              @media only screen and (min-width: 1024px) {
+                width: 140px;
+              }
+            }
+            .option-highlight {
+              font-weight: 600;
+              color: #fa913b;
+            }
+            .promotion-highlight {
+              border-radius: 3px;
+              border: dashed 0.5px #c2c2c2;
+              background-color: #fffaf1;
+              margin-top: 20px;
+              margin-bottom: 20px;
+              width: 100%;
+              @media only screen and (min-width: 375px) {
+                width: 100%;
+              }
+              @media only screen and (min-width: 414px) {
+                width: 96%;
+              }
+              @media only screen and (min-width: 1024px) {
+                width: 98%;
+              }
+              .box {
+                margin: 5px;
+              }
+              .text {
+                font-size: 13px;
+                position: relative;
+                top: 3px;
+              }
             }
             .medal-image img {
               max-width: 29px;

@@ -36,7 +36,9 @@ export interface Banks {
 
 export interface Payment {
     customer: CheckoutUser;
+    selectedConfigPackage: any;
     selectedPackage: any;
+    bonusDate: string;
     startDate: string;
     endDate: string;
     bankCode: string;
