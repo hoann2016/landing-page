@@ -108,7 +108,7 @@ export class PaymentComponent implements OnInit {
                                             ? this.configPackages.filter(configPackage => configPackage.id === p.selectedConfigPackage)[0]
                                             : {},
                     selectedPackage: this.packages[0],
-                    bonusDate: this.packages[0].bonus_duration,
+                    bonusDate: parseInt(this.packages[0].bonus_duration, 0),
                     startDate: this.getDate(0),
                     endDate: this.getDate(this.packages[0].duration + this.packages[0].bonus_duration),
                     paymentMethod: 'Pay-later', // set default payment
