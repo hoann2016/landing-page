@@ -77,6 +77,9 @@
               color: #fa913b;
             }
             .promotion-highlight {
+              display: flex;
+              align-items: center;
+              padding: 10px;
               border-radius: 3px;
               border: dashed 0.5px #c2c2c2;
               background-color: #fffaf1;
@@ -93,12 +96,12 @@
                 width: 98%;
               }
               .box {
-                margin: 5px;
+                float: left;
+                margin-right: 5px;
               }
               .text {
                 font-size: 13px;
                 position: relative;
-                top: 3px;
               }
             }
             .medal-image img {
