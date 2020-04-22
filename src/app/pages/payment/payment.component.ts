@@ -35,6 +35,7 @@ export class PaymentComponent implements OnInit {
         PAID: 'paid'
     };
     packages: any;
+    configPackages: any;
     selectedBank: string;
     endDate: string;
     tax: number;
@@ -89,8 +90,11 @@ export class PaymentComponent implements OnInit {
         );
         this.state$.subscribe(async (p: any) => {
             if (p !== null && p !== undefined && p.id) {
+                if (p.activatedConfigPackages) { p.activatedConfigPackages.splice( 0, 1); }
+                this.configPackages = p.activatedConfigPackages;
                 this.packages = await this.getSimplePackage(p.selectedConfigPackage);
-                sessionStorage.setItem('packages', JSON.stringify(this.packages));
+                sessionStorage.setItem('configPackages', this.configPackages ? JSON.stringify(this.configPackages) : '[]');
+                sessionStorage.setItem('packages', this.configPackages ? JSON.stringify(this.packages) : '[]');
                 this.paymentSession = {
                     customer: {
                         id: p.id,
@@ -100,9 +104,13 @@ export class PaymentComponent implements OnInit {
                         address: 'n/a',
                         credentials: p.userCredentials
                     },
+                    selectedConfigPackage: this.configPackages 
+                                            ? this.configPackages.filter(configPackage => configPackage.id === p.selectedConfigPackage)[0]
+                                            : {},
                     selectedPackage: this.packages[0],
+                    bonusDate: this.packages[0].bonus_duration,
                     startDate: this.getDate(0),
-                    endDate: this.getDate(this.packages[0].duration),
+                    endDate: this.getDate(this.packages[0].duration + this.packages[0].bonus_duration),
                     paymentMethod: 'Pay-later', // set default payment
                     bankCode: '',
                     status: this.paymentSessionStatus.NEW,
@@ -128,12 +136,15 @@ export class PaymentComponent implements OnInit {
                 const paymentSession = sessionStorage.getItem('paymentSession');
                 const order = sessionStorage.getItem('order');
                 const packages = sessionStorage.getItem('packages');
-                if (!paymentSession || !packages || !order) {
+                const configPackages = sessionStorage.getItem('configPackages');
+                console.log('configPackages', !configPackages);
+                if (!paymentSession || !packages || !order || !configPackages) {
                     this.router.navigate(['/pages/sign-up']);
                 }
                 this.paymentSession = JSON.parse(paymentSession);
                 this.packages = JSON.parse(packages);
                 this.order = JSON.parse(order);
+                this.configPackages = JSON.parse(configPackages);
             }
         });
     }
@@ -205,12 +216,21 @@ export class PaymentComponent implements OnInit {
         this.paymentSession.endDate = this.getDate(evt.target.value);
     }
 
-    changePackage(evt) {
-        this.paymentSession.selectedPackage = this.packages[evt.target.value];
-        this.paymentSession.endDate = this.getDate(this.paymentSession.selectedPackage.duration);
+    changePackage(value: any) {
+        this.paymentSession.selectedPackage = this.packages[value];
+        this.paymentSession.endDate = this.getDate(
+            this.paymentSession.selectedPackage.duration 
+            + this.paymentSession.selectedPackage.bonus_duration);
+        this.paymentSession.bonusDate = this.paymentSession.selectedPackage.bonus_duration;
         this.order.package_id = this.paymentSession.selectedPackage.id;
         this.order.sub_totals = this.paymentSession.selectedPackage.price;
         this.order.grand_totals = this.paymentSession.selectedPackage.price - (this.paymentSession.selectedPackage.price * this.tax / 100);
+    }
+
+    async changeConfigPackage(value: any) {
+        this.paymentSession.selectedConfigPackage = this.configPackages[value];
+        this.packages = await this.getSimplePackage(this.paymentSession.selectedConfigPackage.id);
+        this.changePackage(0);
     }
 
     changePayment(evt) {

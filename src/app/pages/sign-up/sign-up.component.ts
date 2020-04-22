@@ -248,7 +248,8 @@ export class SignUpComponent implements OnInit, AfterViewInit, OnDestroy {
                                         { 
                                             email: formImport.email, 
                                             password: formImport.password 
-                                        } 
+                                        },
+                                        activatedConfigPackages: this.allPackage 
                                     }
                                 }
                                 );

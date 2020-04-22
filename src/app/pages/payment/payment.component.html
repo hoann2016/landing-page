@@ -7,54 +7,61 @@
           <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 left-content flex-fill mr-auto">
             <div class="wrap_form_field">
               <div class="header-page">
-                <h3 class="descrition-page mt-0 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">{{'Payment.Sub'|translate}}</h3>
+                <h3 class="descrition-page mt-0 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 align-items-center justify-content-between">{{'Payment.Sub'|translate}}</h3>
               </div>
               <div class="clear-fix">
                 <div class="clear-fix-content"></div>
               </div> 
-              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <span class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature">
-                  {{'Payment.SelectedPackage'|translate}}
-                </span>
-                <span class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line list-feature">
-                  <span class="focus-yellow one-line">{{(paymentSession && paymentSession.selectedPackage) ? paymentSession.selectedPackage.name : 'Freebie'}}</span>
-                </span>
-              </div>
-              <div class="clear-fix">
-                <div class="clear-fix-content"></div>
-              </div>
-              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature">{{'Payment.TimeRegistered'|translate}}
-                </div>
-                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line list-feature">
-                  <select (change)="changePackage($event)">
-                      <option *ngFor="let package of packages; let i = index" [value]="i">{{package?.duration}} {{'Payment.Months'|translate}}
+              <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature align-items-center justify-content-between">
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line ">{{'Payment.SelectedPackage'|translate}}</div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line align-right">
+                  <select class="custom-select option-highlight" (change)="changeConfigPackage($event.target.value)" >
+                      <option *ngFor="let configPackage of configPackages; let i = index" [value]="i" [selected]="paymentSession.selectedConfigPackage.id === configPackage.id">{{configPackage?.name}}
                   </select>
                 </div>
               </div>
               <div class="clear-fix">
                 <div class="clear-fix-content"></div>
               </div>
-              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature" >
+              <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature align-items-center">
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line">{{'Payment.TimeRegistered'|translate}}
+                </div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line align-right">
+                  <select class="custom-select" (change)="changePackage($event.target.value)">
+                      <option *ngFor="let package of packages; let i = index" [value]="i">{{package?.duration}} {{'Payment.Months'|translate}}
+                  </select>
+                </div>
+              </div>
+              <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 align-items-center">
+                <div class="promotion-highlight ">
+                    <img src="assets/images/payment/box.png" srcset="assets/images/payment/box@2x.png 2x,assets/images/payment/box@3x.png 3x" class="box">
+                    <span class="text"><b>{{'Payment.Deal-tilte'|translate}} </b>{{'Payment.Deal-content'|translate}}</span>
+                </div>
+              </div>
+              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature">
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line" >
                   {{'Payment.Account'|translate}}:
                 </div>
-                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line list-feature">
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line align-right">
                   {{paymentSession?.customer?.name}}
                 </div>
               </div>
-              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature">{{'Payment.Contact'|translate}}:</div>
-                <div class=" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line list-feature">{{paymentSession?.customer?.phone}}</div>
+              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature">
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line">{{'Payment.Contact'|translate}}:</div>
+                <div class=" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line align-right">{{paymentSession?.customer?.phone}}</div>
               </div>
-              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
-                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature">{{'Payment.StartDate'|translate}}:
+              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature">
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line">{{'Payment.StartDate'|translate}}:
                 </div>
-                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line list-feature">{{paymentSession?.startDate}}</div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line align-right">{{paymentSession?.startDate}}</div>
               </div>
-              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature">{{'Payment.EndDate'|translate}}:</div>
-                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line list-feature">{{paymentSession?.endDate}}</div>
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature" *ngIf="paymentSession && paymentSession.bonusDate > 0">
+                  <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line bonus-line">{{'Payment.BonusDate'|translate}}:</div>
+                  <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line align-right">{{paymentSession?.bonusDate}} {{'Payment.Months'|translate}}</div>
+              </div>
+              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature">
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line">{{'Payment.EndDate'|translate}}:</div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line align-right">{{paymentSession?.endDate}}</div>
               </div>
             </div>
           </div>
