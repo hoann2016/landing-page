@@ -33,35 +33,31 @@
                 </div>
               </div>
               <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 align-items-center">
-                <div class="promotion-highlight ">
+                <div class="promotion-highlight">
                     <img src="assets/images/payment/box.png" srcset="assets/images/payment/box@2x.png 2x,assets/images/payment/box@3x.png 3x" class="box">
                     <span class="text"><b>{{'Payment.Deal-tilte'|translate}} </b>{{'Payment.Deal-content'|translate}}</span>
                 </div>
               </div>
-              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature">
-                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line" >
-                  {{'Payment.Account'|translate}}:
-                </div>
-                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line align-right">
-                  {{paymentSession?.customer?.name}}
-                </div>
+              <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature">
+                <div class="col-5 col-sm-5 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.Account'|translate}}:</div>
+                <div class="col-7 col-sm-7 col-md-6 col-lg-6 col-xl-6 one-line align-right">{{paymentSession?.customer?.name}}</div>
               </div>
-              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature">
+              <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature">
                 <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line">{{'Payment.Contact'|translate}}:</div>
                 <div class=" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line align-right">{{paymentSession?.customer?.phone}}</div>
               </div>
-              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature">
+              <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature">
                 <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line">{{'Payment.StartDate'|translate}}:
                 </div>
-                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line align-right">{{paymentSession?.startDate}}</div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line align-right">{{paymentSession?.startDate}}</div>
               </div>
-              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature" *ngIf="paymentSession && paymentSession.bonusDate !== 0">
-                  <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line bonus-line">{{'Payment.BonusDate'|translate}}:</div>
-                  <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line align-right">{{paymentSession?.bonusDate}} {{'Payment.Months'|translate}}</div>
+              <div class="rowcol-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature" *ngIf="paymentSession && paymentSession.bonusDate !== 0">
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line bonus-line">{{'Payment.BonusDate'|translate}}:</div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line align-right">{{paymentSession?.bonusDate}} {{'Payment.Months'|translate}}</div>
               </div>
-              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature">
+              <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature">
                 <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line">{{'Payment.EndDate'|translate}}:</div>
-                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line align-right">{{paymentSession?.endDate}}</div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line align-right">{{paymentSession?.endDate}}</div>
               </div>
             </div>
           </div>
