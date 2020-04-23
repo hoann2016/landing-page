@@ -1,0 +1,5 @@
+<div class="main-steps">
+    <div class="home-steps" [ngSwitch]="currentStep$ | async">
+        <app-yoga-step1 *ngSwitchDefault></app-yoga-step1>
+    </div>
+</div>

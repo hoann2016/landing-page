@@ -71,16 +71,22 @@ $shadow-color: #88622b5e;
             display: block;
             text-align: center;
             margin-top: 20px;
+            &-box {
+                display: inline-flex;
+                position: relative;
+            }
             &-wrap {
-                padding: 12px 23px 14px;
+                padding: 7px 7px 7px 23px;
                 background: #fff;
                 border-radius: 35px;
                 display: inline-flex;
-                align-items: unset;
+                align-items: center;
                 cursor: pointer;
                 position: relative;
                 overflow: hidden;
-                animation: shadowFloat .6s linear alternate infinite;
+                &.jumping {
+                    animation: shadowFloat .6s linear alternate infinite;
+                }
                 @keyframes shadowFloat {
                     0%   {
                         box-shadow: 0 20px 40px $shadow-color;
@@ -132,10 +138,69 @@ $shadow-color: #88622b5e;
                     font-style: normal;
                     letter-spacing: normal;
                     text-align: left;
-                    color: #f49c1e;
-                    padding-top: 4px;
+                    color: #000000;
+                    padding-top: 0;
                     padding-left: 10px;
+                    margin-right: 30px;
+                    fa-icon {
+                        padding-left: 10px;
+                    }
+                }
+                &-booking {
+                    padding: 18px 25px;
+                    background: #F4971F;
+                    border-radius: 30px;
+                    color: #fff;
                     text-transform: uppercase;
+                    font-weight: 600;
+                    line-height: 1;
+                }
+                &-option {
+                    position: absolute;
+                    width: 100%;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    margin: 12px auto 0;
+                    z-index: 250;
+                    .booking-box {
+                        position: relative;
+                        overflow: hidden;
+                        background: #fff;
+                        color: #fff;
+                        border: 1px solid #D2D2D2;
+                        border-radius: 5px;
+                    }
+                    &:after {
+                        content: "";
+                        height: 15px;
+                        width: 15px;
+                        position: absolute;
+                        background-color: #fff;
+                        top: -7px;
+                        left: 45%;
+                        border-top: #E9E9E9 solid 2px;
+                        border-left: #E9E9E9 solid 2px;
+                        transform: rotate(45deg);
+                    }
+                    &-data {
+                        color: #696969;
+                        font-size: 16px;
+                        font-weight: 500;
+                        text-align: left;
+                        padding: 13px 20px;
+                        background: #FFFFFF;
+                        cursor: pointer;
+                        overflow: hidden;
+                        position: relative;
+                        z-index: 15;
+                        &:hover {
+                            background: #F6FAFD;
+                        }
+                        &.active {
+                            background: #F6FAFD;
+                        }
+                    }
                 }
             }
         }

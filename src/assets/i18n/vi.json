@@ -331,6 +331,26 @@
                             "HandExfoliateDes": "60 phút - Làm móng để dụ gấu",
                             "HandMassageDes": "90 phút - Giữ bình tĩnh và đặt hẹn làm móng trực tuyến"
                         }
+                    },
+                    "Yoga": {
+                        "Services": {
+                            "Twisting": "Twisting",
+                            "TwistingDes": "Tư thế Yoga nhẹ nhàng và đơn giản",
+                            "Vinyasa": "Vinyasa",
+                            "VinyasaDes": "Một chuỗi những động tác liên tục",
+                            "HathaFlow": "Hatha Flow",
+                            "HathaFlowDes": "Một chuỗi những bài tập thể chất",
+                            "MorningFlow": "Morning Flow",
+                            "MorningFlowDes": "Tư thế Yoga nhẹ nhàng và đơn giản",
+                            "YogaSantulan": "Yoga Santulan",
+                            "YogaSantulanDes": "Tác dụng tốt nhất đến hệ cơ và xương",
+                            "DynamicFlow": "Dynamic Flow",
+                            "DynamicFlowDes": "Lớp học giúp bạn nhanh chóng giảm cân",
+                            "PowerVinyasa": "Power Vinyasa",
+                            "PowerVinyasaDes": "Đây là lớp Yoga giảm cân tuyệt vời",
+                            "HipOpening": "Hip Opening",
+                            "HipOpeningDes": "Tư thế Yoga nhẹ nhàng và đơn giản"
+                        }
                     }
                 }
             },
@@ -390,13 +410,15 @@
             },
             "Content": {
                 "AllService": "Chăm sóc tóc",
+                "ViewByClass": "Xem theo lớp",
                 "Filter": "Bộ Lọc",
                 "Report": "Thống Kê",
                 "Time": "Giờ",
                 "Staff": "KTV",
                 "Type": {
                     "Barber": "Chuyên viên",
-                    "HairStylist": "Chuyên viên"
+                    "HairStylist": "Chuyên viên",
+                    "Class": "Lớp"
                 }
             },
             "Header": {
@@ -410,6 +432,26 @@
                 "HairCut": "Cắt Tóc",
                 "ShampooStyle": "Tạo Mẫu Tóc",
                 "Massage": "Massage"
+            },
+            "Yoga": {
+                "Services": {
+                    "Twisting": "Twisting",
+                    "TwistingDes": "Tư thế Yoga nhẹ nhàng và đơn giản",
+                    "Vinyasa": "Vinyasa",
+                    "VinyasaDes": "Một chuỗi những động tác liên tục",
+                    "HathaFlow": "Hatha Flow",
+                    "HathaFlowDes": "Một chuỗi những bài tập thể chất",
+                    "MorningFlow": "Morning Flow",
+                    "MorningFlowDes": "Tư thế Yoga nhẹ nhàng và đơn giản",
+                    "YogaSantulan": "Yoga Santulan",
+                    "YogaSantulanDes": "Tác dụng tốt nhất đến hệ cơ và xương",
+                    "DynamicFlow": "Dynamic Flow",
+                    "DynamicFlowDes": "Lớp học giúp bạn nhanh chóng giảm cân",
+                    "PowerVinyasa": "Power Vinyasa",
+                    "PowerVinyasaDes": "Đây là lớp Yoga giảm cân tuyệt vời",
+                    "HipOpening": "Hip Opening",
+                    "HipOpeningDes": "Tư thế Yoga nhẹ nhàng và đơn giản"
+                }
             }
         }
     },

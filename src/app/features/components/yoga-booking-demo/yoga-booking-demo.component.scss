@@ -1,0 +1,9 @@
+.main-steps {
+    background: #f3f3f3;
+    border-radius: 5px;
+}
+::ng-deep {
+    .demo-booking-popup .modal-dialog {
+        max-width: 1000px;
+    }
+}
