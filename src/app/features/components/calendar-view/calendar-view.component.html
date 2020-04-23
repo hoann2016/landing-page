@@ -1,0 +1,400 @@
+<div class="calendar-viewer">
+    <div class="calendar-viewer-sidebar">
+        <div class="calendar-viewer-sidebar-menu">
+            <div class="calendar-viewer-sidebar-menu-item"
+                *ngFor="let item of sidebarItems;"
+            >
+                <img [src]="item?.icon" [alt]="item?.name | translate" loading="lazy">
+                <p class="calendar-viewer-sidebar-menu-item-text">{{ item?.name | translate }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="calendar-viewer-content">
+        <div class="calendar-viewer-content-header">
+            <div class="calendar-viewer-content-header-logo">
+                <img src="/assets/images/logo/logo_orange.png" alt="Logo" loading="lazy">
+            </div>
+            <div class="calendar-viewer-content-header-box">
+                <div class="calendar-viewer-content-header-box-left">
+                    <img src="/assets/images/features/calendar/bell.png" alt="Bell" loading="lazy">
+                </div>
+                <div class="calendar-viewer-content-header-box-right">
+                    <div class="calendar-viewer-content-header-box-right-avatar">
+                        P
+                    </div>
+                    <div class="calendar-viewer-content-header-box-right-detail">
+                        <div class="calendar-viewer-content-header-box-right-detail-name">
+                            Phuong Nguyen
+                        </div>
+                        <div class="calendar-viewer-content-header-box-right-detail-type">
+                            Admin
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="calendar-viewer-content-filter">
+            <div class="calendar-viewer-content-filter-service">
+                <div class="calendar-viewer-content-filter-service-select">
+                    <span class="calendar-viewer-content-filter-service-select-icon">
+                        <img src="/assets/images/features/calendar/sort.png" alt="Sort" loading="lazy">
+                    </span>
+                    <span class="calendar-viewer-content-filter-service-select-select">
+                        {{ 'Features.DemoBooking.Content.AllService' | translate }}
+                        <fa-icon [icon]="listIcons.faCaretDown"></fa-icon>
+                    </span>
+                </div> 
+            </div>
+            <div class="calendar-viewer-content-filter-date">
+                <div class="calendar-viewer-content-filter-date-icon-left">
+                    <fa-icon [icon]="listIcons.faChevronLeft"></fa-icon>
+                </div>
+                <div class="calendar-viewer-content-filter-date-start">
+                    {{ 'Common.DayOfWeek.1' | translate }}, {{ currentWeekDay?.from }}
+                </div>
+                <div class="calendar-viewer-content-filter-date-slash">-</div>
+                <div class="calendar-viewer-content-filter-date-end">
+                    {{ 'Common.DayOfWeek.0' | translate }}, {{ currentWeekDay?.to }}
+                </div>
+                <div class="calendar-viewer-content-filter-date-icon-right">
+                    <fa-icon [icon]="listIcons.faChevronRight"></fa-icon>
+                </div>
+            </div>
+            <div class="calendar-viewer-content-filter-button">
+                <div class="calendar-viewer-content-filter-button-item">
+                    <img src="/assets/images/features/calendar/filter.png" alt="Sort" loading="lazy">
+                    <span>{{ 'Features.DemoBooking.Content.Filter' | translate }}</span>
+                </div>
+                <div class="calendar-viewer-content-filter-button-item">
+                    <img src="/assets/images/features/calendar/report.png" alt="Sort" loading="lazy">
+                    <span>{{ 'Features.DemoBooking.Content.Report' | translate }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="calendar-viewer-content-staff">
+            <div class="calendar-viewer-content-staff-list">
+                <div
+                    class="calendar-viewer-content-staff-list-item"
+                    *ngFor="let staff of staffs; let i = index; trackBy: trackByCalendarStaff;"
+                >
+                    <div class="calendar-viewer-content-staff-list-item-avatar">
+                        <img [src]="staff?.avatar" [alt]="staff?.name">
+                    </div>
+                    <div class="calendar-viewer-content-staff-list-item-content">
+                        <div class="calendar-viewer-content-staff-list-item-content-name">
+                            {{ staff?.name }}
+                        </div>
+                        <div class="calendar-viewer-content-staff-list-item-content-title">
+                            {{ staff?.title | translate }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="calendar-viewer-content-preview" #calendar>
+            <div class="calendar-viewer-content-preview-day">
+                <div class="calendar-viewer-content-preview-day-item">{{ 'Features.DemoBooking.Content.Time' | translate }}</div>
+                <div class="calendar-viewer-content-preview-day-item" *ngFor="let item of listDaysInWeek;">
+                    {{ 'Common.' + item | translate }}
+                </div>
+            </div>
+            <div class="calendar-viewer-content-preview-main">
+                <div class="calendar-viewer-content-preview-main-timer">
+                    <div class="calendar-viewer-content-preview-main-timer-item">
+                        8:00
+                    </div>
+                    <div class="calendar-viewer-content-preview-main-timer-item">
+                        9:00
+                    </div>
+                    <div class="calendar-viewer-content-preview-main-timer-item">
+                        10:00
+                    </div>
+                    <div class="calendar-viewer-content-preview-main-timer-item">
+                        11:00
+                    </div>
+                    <div class="calendar-viewer-content-preview-main-timer-item">
+                        12:00
+                    </div>
+                    <div class="calendar-viewer-content-preview-main-timer-item">
+                        13:00
+                    </div>
+                </div>
+                <div class="calendar-viewer-content-preview-main-booking">
+                    <div class="calendar-viewer-content-preview-main-booking-part">
+                        <div
+                            class="calendar-viewer-content-preview-main-booking-part-ticket"
+                            *ngFor="let ticket of tickets; let i = index; trackBy: trackByBookingInCalendar;"
+                            [ngStyle]="ticket?.styles"
+                            [ngClass]="{ 'opacity': ticket.isOpacity, 'new': ticket.isNew }"
+                            [@flyTicket]="{ value: ticket?.isNew ? 'go' : 'initial', params: {
+                                top_var: ticket?.styles?.top,
+                                left_var: ticket?.styles?.left,
+                                top_first: ticket?.styles?.animationTop,
+                                left_or_right: ticket?.at > 3 ? '50px' : '-50px',
+                                top_animation: '80px'
+                            } }"
+                        >
+                            <div class="calendar-viewer-content-preview-main-booking-part-ticket-content">
+                                <div class="calendar-viewer-content-preview-main-booking-part-ticket-content-time">
+                                    {{ ticket?.timePeriod }}
+                                </div>
+                                <div class="calendar-viewer-content-preview-main-booking-part-ticket-content-service">
+                                    {{ ticket?.serviceName | translate }}
+                                </div>
+                                <div class="calendar-viewer-content-preview-main-booking-part-ticket-content-staff">
+                                    {{ 'Features.DemoBooking.Content.Staff' | translate }}: {{ ticket?.staffName }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item locked">
+                            <img src="/assets/images/features/calendar/lock.png" alt="Locked" loading="lazy">
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item locked">
+                            <img src="/assets/images/features/calendar/lock.png" alt="Locked" loading="lazy">
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item locked">
+                            <img src="/assets/images/features/calendar/lock.png" alt="Locked" loading="lazy">
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item locked">
+                            <img src="/assets/images/features/calendar/lock.png" alt="Locked" loading="lazy">
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item locked">
+                            <img src="/assets/images/features/calendar/lock.png" alt="Locked" loading="lazy">
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item locked">
+                            <img src="/assets/images/features/calendar/lock.png" alt="Locked" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="calendar-viewer-content-preview-main-booking-part">
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar-viewer-content-preview-main-booking-part">
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar-viewer-content-preview-main-booking-part">
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar-viewer-content-preview-main-booking-part">
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar-viewer-content-preview-main-booking-part">
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar-viewer-content-preview-main-booking-part">
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                        <div class="calendar-viewer-content-preview-main-booking-part-item">
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                            <div class="calendar-viewer-content-preview-main-booking-part-item-half">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

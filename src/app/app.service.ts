@@ -25,8 +25,8 @@ export class AppService {
     private getBusinessPath = 'api/v1/merchants/business-types';
     private orderPath = 'api/v1/orders';
 
-    get merchangePath() {
-        return environment.merchantpath;
+    get merchantPath() {
+        return environment.merchantPath;
     }
 
     constructor(private http: HttpClient) {

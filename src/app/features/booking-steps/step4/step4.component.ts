@@ -7,7 +7,6 @@ import { StepService } from 'app/features/services/step.service';
     styleUrls: ['./step4.component.scss'],
     templateUrl: './step4.component.html',
 })
-
 export class Step4Component implements OnInit {
     stepForm: FormGroup;
     submitted = false;
@@ -20,7 +19,7 @@ export class Step4Component implements OnInit {
     ngOnInit() {
         this.stepForm = this.formBuilder.group({
             fullName: ['Ludiino Booking', Validators.required],
-            phoneNumber: ['0987654321', [Validators.required, Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')]],
+            phoneNumber: ['0987654321'],
             email: ['ludiino@ludiino.com', [Validators.required, Validators.email]],
         });
     }

@@ -11,6 +11,9 @@ import { TranslateService } from '@ngx-translate/core';
 
 export class Step5Component implements OnInit {
     stepBookingData: any;
+    payMethod: string = 'pay-now';
+    total: number = 0;
+    price: number = 0;
     @Output('createNewTicketTestBooking') createNewTicketTestBooking: EventEmitter<boolean> = new EventEmitter<boolean>();
 
     constructor(
@@ -20,6 +23,8 @@ export class Step5Component implements OnInit {
 
     ngOnInit() {
         this.stepBookingData = this.stepService.testBookingData();
+        this.total = this.stepBookingData.demoPrice * this.stepBookingData.quantity;
+        this.onChange(this.payMethod);
         this.stepBookingData.appointmentDate = this.translateService.instant("Common." + this.stepBookingData.selectedDOW);
     }
     
@@ -27,6 +32,15 @@ export class Step5Component implements OnInit {
         this.stepService.changeStep(step);
         if (!prev) {
             this.createNewTicketTestBooking.emit(true);
+        }
+    }
+
+    onChange(event: any): void {
+        this.payMethod = event;
+        if (this.payMethod === 'pay-now') {
+            this.price = this.total - (this.total * 10 / 100);
+        } else {
+            this.price = this.total;
         }
     }
 }

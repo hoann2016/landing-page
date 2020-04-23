@@ -51,17 +51,16 @@ export class Step2Component implements OnInit {
     ) {
         this.currentDay.setMonth(this.currentDay.getMonth() + 1);
         this.selectedDate = {
-            year: this.currentDay.getFullYear(),
+            day: this.currentDay.getDate(),
             month: this.currentDay.getUTCMonth(),
-            day: this.currentDay.getDate()
-    
+            year: this.currentDay.getFullYear()
         }
         this.calendarStruct.today = this.calendar.getToday();
         this.branches = [
-            { id: 1, name: 'The Braizer Quận 7', address: '45 Tân Mỹ, p Phú Thuận, Quận 7' },
-            { id: 2, name: 'Chi nhánh 1', address: '111 Phan Xích Long, Phú Nhuận' },
-            { id: 3, name: 'Chi nhánh 2', address: '386 Điện Biên Phủ Quận 1' },
-            { id: 4, name: 'Chi nhánh 3', address: '999 Lê Lợi quận 1' },
+            { id: 1, name: 'The Braizer - 150 Nguyễn Thị Thập, Quận 7, TPHCM' },
+            { id: 2, name: 'The Braizer - 110 Võ Văn Tần, Quận 3, TPHCM' },
+            { id: 3, name: 'The Braizer - 256 Trần Hưng Đạo, Quận 5, TPHCM' },
+            { id: 4, name: 'The Braizer - 87 Trần Văn Đang, Quận 3, TPHCM' },
         ];
         this.districts = [
             { id: 1, name: 'Quận 7' },
@@ -101,8 +100,8 @@ export class Step2Component implements OnInit {
     }
     goToStep(step: number) {
         this.stepService.setDataStep(
-            { date: `${ this.selectedDate.day }-${ this.selectedDate.month }-${ this.selectedDate.year }`,
-            selectedDOW: this.translateService.instant("Common.Day." + this.calendar.getWeekday(this.selectedDate))
+            { date: `${ this.selectedDate.day > 9 ? this.selectedDate.day : '0' + this.selectedDate.day }/${ this.selectedDate.month > 9 ? this.selectedDate.month : '0' + this.selectedDate.month }/${ this.selectedDate.year }`,
+            selectedDOW: this.translateService.instant('Common.Day.' + this.calendar.getWeekday(this.selectedDate))
         });
         this.stepService.changeStep(step);
     }
@@ -112,4 +111,8 @@ export class Step2Component implements OnInit {
             this.isCustomBranch = true;
         }
     }
+    
+    isDisabled = (date: NgbDate, current: {month: number}) => {
+        return new Date(date.year, date.month, date.day).getDay() === 2;
+    };
 }

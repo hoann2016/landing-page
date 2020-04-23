@@ -7,54 +7,57 @@
           <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 left-content flex-fill mr-auto">
             <div class="wrap_form_field">
               <div class="header-page">
-                <h3 class="descrition-page mt-0 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">{{'Payment.Sub'|translate}}</h3>
+                <h3 class="descrition-page mt-0 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 align-items-center justify-content-between">{{'Payment.Sub'|translate}}</h3>
               </div>
               <div class="clear-fix">
                 <div class="clear-fix-content"></div>
               </div> 
-              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <span class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature">
-                  {{'Payment.SelectedPackage'|translate}}
-                </span>
-                <span class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line list-feature">
-                  <span class="focus-yellow one-line">{{(userPayment && userPayment.selectedPackage) ? userPayment.selectedPackage.name : 'Free'}}</span>
-                </span>
-              </div>
-              <div class="clear-fix">
-                <div class="clear-fix-content"></div>
-              </div>
-              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature">{{'Payment.TimeRegistered'|translate}}
-                </div>
-                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line list-feature">
-                  <select (change)="changePackage($event)">
-                      <option *ngFor="let package of packages; let i = index" [value]="i">{{package.duration}} {{'Payment.Months'|translate}}
+              <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature align-items-center justify-content-between">
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line ">{{'Payment.SelectedPackage'|translate}}</div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line align-right">
+                  <select class="custom-select option-highlight" (change)="changeConfigPackage($event.target.value)" >
+                      <option *ngFor="let configPackage of configPackages; let i = index" [value]="i" [selected]="paymentSession.selectedConfigPackage.id === configPackage.id">{{configPackage?.name}}
                   </select>
                 </div>
               </div>
               <div class="clear-fix">
                 <div class="clear-fix-content"></div>
               </div>
-              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature" >
-                  {{'Payment.Account'|translate}}:
+              <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature align-items-center">
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line">{{'Payment.TimeRegistered'|translate}}
                 </div>
-                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line list-feature">
-                  {{userPayment ? userPayment.customer : ''}}
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line align-right">
+                  <select class="custom-select" (change)="changePackage($event.target.value)">
+                      <option *ngFor="let package of packages; let i = index" [value]="i">{{package?.duration}} {{'Payment.Months'|translate}}
+                  </select>
                 </div>
               </div>
-              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature">{{'Payment.Contact'|translate}}:</div>
-                <div class=" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line list-feature">{{userPayment ? userPayment.phone : ''}}</div>
-              </div>
-              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
-                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature">{{'Payment.StartDate'|translate}}:
+              <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 align-items-center">
+                <div class="promotion-highlight">
+                    <img src="assets/images/payment/box.png" srcset="assets/images/payment/box@2x.png 2x,assets/images/payment/box@3x.png 3x" class="box">
+                    <span class="text"><b>{{'Payment.Deal-tilte'|translate}} </b>{{'Payment.Deal-content'|translate}}</span>
                 </div>
-                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line list-feature">{{userPayment ? userPayment.startDate : ''}}</div>
               </div>
-              <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line list-feature">{{'Payment.EndDate'|translate}}:</div>
-                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line list-feature">{{userPayment ? userPayment.endDate : ''}}</div>
+              <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature">
+                <div class="col-5 col-sm-5 col-md-6 col-lg-6 col-xl-6 one-line">{{'Payment.Account'|translate}}:</div>
+                <div class="col-7 col-sm-7 col-md-6 col-lg-6 col-xl-6 one-line align-right">{{paymentSession?.customer?.name}}</div>
+              </div>
+              <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature">
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line">{{'Payment.Contact'|translate}}:</div>
+                <div class=" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line align-right">{{paymentSession?.customer?.phone}}</div>
+              </div>
+              <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature">
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line">{{'Payment.StartDate'|translate}}:
+                </div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line align-right">{{paymentSession?.startDate}}</div>
+              </div>
+              <div class="rowcol-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature" *ngIf="paymentSession && paymentSession.bonusDate !== 0">
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line bonus-line">{{'Payment.BonusDate'|translate}}:</div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line align-right">{{paymentSession?.bonusDate}} {{'Payment.Months'|translate}}</div>
+              </div>
+              <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 list-feature">
+                <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line">{{'Payment.EndDate'|translate}}:</div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 one-line align-right">{{paymentSession?.endDate}}</div>
               </div>
             </div>
           </div>
@@ -68,34 +71,42 @@
               <ul class="d-flex flex-column">
                 <li class="row">
                   <label class="form-check-label" for="online"> {{'Payment.PaymentOnline'|translate}}</label>
-                    <input type="radio" class="form-check-input"  id="online" name="payment-method" disabled>
+                  <input type="radio" class="form-check-input"  id="online" name="payment-method" value="CC" ng-model='CC' (change)="changePayment($event)">
+                  <ul class="bank-border" *ngIf="cc && paymentSession.paymentMethod === 'CC'">
+                      <li class="bank-element" *ngFor="let cci of cc; index as i; trackBy: trackByCode" (click)="changeBankCode(cci?.code)" [class.active]="cci.code === paymentSession.bankCode">
+                          <a title="{{cci?.code}}" href="javascript:void(0)">
+                            <img src="{{cci?.logo}}" height="35" width="65" alt="{{cci?.code}}">
+                          </a>
+                        </li>
+                  </ul>
                 </li>
                 <li class="row">
                   <label class="form-check-label" for="ck"> {{'Payment.PaymentTransfer'|translate}} </label>
-                    <input type="radio" class="form-check-input" id="ck" name="payment-method" value="ck" disabled>
+                  <input type="radio" class="form-check-input" id="ck" name="payment-method" value="Bank-account" ng-model='Bank-account' (change)="changePayment($event)">
+                  <ul class="bank-border" *ngIf="banks && paymentSession.paymentMethod === 'Bank-account'">
+                      <li class="bank-element" *ngFor="let bank of banks; let i = index; trackBy: trackByCode" (click)="changeBankCode(bank?.code)" [class.active]="bank.code === paymentSession.bankCode">
+                          <a title="{{bank?.code}}" href="javascript:void(0)">
+                            <img src="{{bank?.logo}}" height="35" width="65" alt="{{bank?.code}}">
+                          </a>
+                        </li>
+                  </ul>
                 </li>
                 <li class="row">
                   <label class="form-check-label" for="tt">{{'Payment.PaymentDirect'|translate}}
                   </label>
-                    <input type="radio" class="form-check-input" id ="tt" name="payment-method" value="tt" checked
-                      (change)="ChangePayment($event)">
-                    
+                    <input type="radio" class="form-check-input" id ="tt" name="payment-method" value="Pay-later" (change)="changePayment($event)">
                 </li>
-                
-
-                
               </ul>
-
               <div class="row temp-price">
                 <div class="col-md">{{'Payment.TempCount'|translate}}</div>
-                <div class="col-md price-value">{{((userOrder && userOrder.sub_totals) ? userOrder.sub_totals : 0 )| currency: "VND"}}</div>
+                <div class="col-md price-value">{{((order && order.sub_totals) ? order.sub_totals : 0 )| currency: "VND"}}</div>
               </div>
               <div class="row total-payment">
                 <div class="col-md">{{'Payment.TotalCount'|translate}}</div>
-                <div class="col-md price-value">{{((userOrder && userOrder.grand_totals) ? userOrder.grand_totals : 0) | currency: "VND"}}</div>
+                <div class="col-md price-value">{{((order && order.grand_totals) ? order.grand_totals : 0) | currency: "VND"}}</div>
               </div>
             </div>
-            <p class="complete-payment-btn" (click)="submitOrder()">
+            <p class="complete-payment-btn" (click)="checkout()">
               {{'Payment.CompletePayment'|translate}}
             </p>
           </div>

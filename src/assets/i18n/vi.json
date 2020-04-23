@@ -133,7 +133,7 @@
                 "Header": "Liên hệ",
                 "Detail": "Nếu có bất kỳ câu hỏi liên hệ ngay với chúng tôi"
             },
-            "EmailSupport": "Email hỗ trợ",
+            "EmailSupport": "Email",
             "CallCenter": "Hotline",
             "ConnectWithUs": "Kết nối với chúng tôi",
             "FollowUs": "Theo dõi trên mạng xã hội",
@@ -278,11 +278,11 @@
                 "HairService": {
                     "Title": "Dịch vụ tóc",
                     "HairCut": "Cắt tóc",
-                    "HairCutWomen": "Cắt tóc nữ trong 60 phút",
+                    "HairCutWomen": "Cắt tóc nữ",
                     "HairDye": "Sấy tóc",
                     "Detail": {
-                        "HairCut": "45 Phút - Cắt tóc tạo kiểu theo yêu cầu",
-                        "HairCutWomen": "60 Phút - Cắt tóc tạo kiểu theo yêu cầu",
+                        "HairCut": "60 Phút - Cắt tóc tạo kiểu theo yêu cầu",
+                        "HairCutWomen": "90 Phút - Cắt tóc tạo kiểu theo yêu cầu",
                         "HairDye": "120 Phút - Thuộc nhuôm Hàn Quốc"
                     }
                 },
@@ -290,10 +290,48 @@
                     "Title": "Chăm sóc da"
                 },
                 "Massage": {
-                    "Title": "Dịch vụ Massage"
+                    "Title": "Dịch vụ Massage",
+                    "Massage": "Massage",
+                    "Detail": {
+                        "Massage": "60 Phút - Dịch vụ massage theo yêu cầu"
+                    }
                 },
                 "Nail": {
-                    "Title": "Nails Care"
+                    "Title": "Nails Care",
+                    "NailsCare": "Nails Care"
+                },
+                "Services": {
+                    "Styling": {
+                        "Title": "Cắt Tóc",
+                        "Services": {
+                            "ShampooStyle": "Trai Xinh",
+                            "ShampooStyleFlatIron": "Gái Đẹp",
+                            "Braids": "Gay Nóng Bỏng",
+                            "ShampooStyleDes": "60 phút - Hạnh Phúc là khi có mái tóc ngầu",
+                            "ShampooStyleFlatIronDes": "90 phút - Tóc ngắn mắt bồ câu sáng ngời",
+                            "BraidsDes": "60 phút - Cuộc đời không hoàn hảo nhưng tóc bạn thì có thể"
+                        }
+                    },
+                    "HairCutting": {
+                        "Title": "Massage",
+                        "Services": {
+                            "CutStyle": "Dầu Dừa",
+                            "CutSet":  "Đá Nóng",
+                            "BarberShort": "Thái",
+                            "CutStyleDes": "60 phút -Ngày vui nhất trong tuần là ngày đi massage",
+                            "CutSetDes": "90 phút -Giải quyết tất cả các vấn đề nóng bỏng",
+                            "BarberShortDes": "90 phút - Sawadee ka"
+                        }
+                    },
+                    "Manicures": {
+                        "Title": "Chăm sóc móng",
+                        "Services": {
+                            "HandExfoliate": "Móng Tay",
+                            "HandMassage": "Móng Chân",
+                            "HandExfoliateDes": "60 phút - Làm móng để dụ gấu",
+                            "HandMassageDes": "90 phút - Giữ bình tĩnh và đặt hẹn làm móng trực tuyến"
+                        }
+                    }
                 }
             },
             "Step2": {
@@ -333,10 +371,46 @@
                 "Total": "TỔNG CỘNG",
                 "PayNow": "Thanh toán ngay",
                 "PayAtStore": "Thanh toán tại cửa tiệm",
-                "Book": "Đặt lịch"
+                "Book": "Đặt lịch",
+                "Discount": "Giảm giá"
             },
             "Step": "Bước",
             "Next": "Tiếp theo"
+        },
+        "DemoBooking": {
+            "Sidebar": {
+                "Booking": "Lịch hẹn",
+                "CheckIn": "Check-in",
+                "Service": "Dịch vụ",
+                "Staff": "Nhân viên",
+                "ExtraFee": "Phụ phí",
+                "Product": "Sản phẩm",
+                "Reports": "Báo cáo",
+                "Setting": "Cài đặt"
+            },
+            "Content": {
+                "AllService": "Chăm sóc tóc",
+                "Filter": "Bộ Lọc",
+                "Report": "Thống Kê",
+                "Time": "Giờ",
+                "Staff": "KTV",
+                "Type": {
+                    "Barber": "Chuyên viên",
+                    "HairStylist": "Chuyên viên"
+                }
+            },
+            "Header": {
+                "Title": "Ludiino",
+                "Description": "Tính Năng Chính Trên Hệ Thống Đặt & Quản Lý Lịch Hẹn Trực Tuyến Của Ludiino",
+                "Content": "Các tính năng của giải pháp Ludiino giúp quảng bá hiệu quả đến khách hàng mới, tăng số lượng booking, quản lý hiệu quả lịch làm việc của nhân viên, và nâng cao chất lượng dịch vụ chăm sóc khách hàng.",
+                "CreateTestBooking": "Thử tính năng booking"
+            },
+            "Service": {
+                "ShampooBlow": "Gội Đầu",
+                "HairCut": "Cắt Tóc",
+                "ShampooStyle": "Tạo Mẫu Tóc",
+                "Massage": "Massage"
+            }
         }
     },
     "Register": {
@@ -384,6 +458,9 @@
         "Months": "tháng",
         "Account": "Tên đăng ký",
         "Contact": "Số điện thoại",
+        "Deal-tilte": "Khuyến mãi:",
+        "Deal-content": "Tặng thêm thời gian sử dụng khi đăng ký gói 12, 18 & 24 tháng",
+        "BonusDate": "Khuyến mãi thời gian sử dụng",
         "StartDate": "Ngày bắt đầu",
         "EndDate": "Ngày hết hạn thúc",
         "Payment": "Chọn phương thức thanh toán",
@@ -395,7 +472,9 @@
         "TempCount": "Tạm tính",
         "TotalCount": "Tổng cộng",
         "CompletePayment": "Tiến hành thanh toán",
-        "RequireSelectPayment": "Bắt buộc chọn 1 phương thức thanh toán"
+        "RequireSelectPayment": "Bắt buộc chọn 1 phương thức thanh toán",
+        "PaymentSuccessfully": "Bạn đã thanh toán thành công. Hệ thống sẽ chuẩn bị website cho bạn",
+        "AlreadyPaid": "Bạn đã thanh toán rồi. Hệ thống đang chuẩn bị website cho bạn"
     },
     "Shared": {
         "RegisterBtnLabel": "Đăng ký",
@@ -547,7 +626,16 @@
         "Day.6": "Saturday",
         "Day.7": "Sunday",
         "Date": "Ngày tháng",
-        "Time": "Giờ"
+        "Time": "Giờ",
+        "DayOfWeek": {
+            "0": "CN",
+            "1": "T2",
+            "2": "T3",
+            "3": "T4",
+            "4": "T5",
+            "5": "T6",
+            "6": "T7"
+        }
     },
     "SignUp": {
         "SignUpSuccess": "Đã đăng ký tài khoản thành công",

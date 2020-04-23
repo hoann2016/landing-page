@@ -8,7 +8,7 @@
         <form [formGroup]="stepForm" (ngSubmit)="onSubmit()">
             <div class="row">
                 <div class="col-12">
-                    <label class="field-label">{{ "Features.DemoSteps.Step4.Fullname" | translate }}</label>
+                    <label class="field-label">{{ "Features.DemoSteps.Step4.Fullname" | translate }} *</label>
                     <div class="field-input">
                         <input type="text" formControlName="fullName" 
                             placeholder="Tên khách hàng"
@@ -33,15 +33,9 @@
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <label class="field-label">{{ "Features.DemoSteps.Step4.PhoneNumber" | translate }}</label>
+                    <label class="field-label">{{ "Features.DemoSteps.Step4.PhoneNumber" | translate }} *</label>
                     <div class="field-input">
-                        <input type="text" formControlName="phoneNumber" 
-                        placeholder="Số điện thoại"
-                        class="step-input" [ngClass]="{ 'is-invalid': submitted && f.phoneNumber.errors }">
-                        <div *ngIf="submitted && f.phoneNumber.errors" class="error-msg">
-                            <div *ngIf="f.phoneNumber.errors.required">{{ "Features.DemoSteps.Step4.Validate.PhoneRequired" | translate }}</div>
-                            <div *ngIf="f.phoneNumber.errors.pattern">{{ "Features.DemoSteps.Step4.Validate.PhoneIncorrect" | translate }}</div>
-                        </div>
+                        <input type="text" formControlName="phoneNumber" placeholder="Số điện thoại" class="step-input">
                     </div>
                 </div>
             </div>

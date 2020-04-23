@@ -133,7 +133,7 @@
                 "Header": "Contact",
                 "Detail": "If there are any questions please contact us"
             },
-            "EmailSupport": "Email support",
+            "EmailSupport": "Email",
             "CallCenter": "Hotline",
             "ConnectWithUs": "Connect with us",
             "FollowUs": "Follow us at",
@@ -272,17 +272,17 @@
         },
         "DemoSteps": {
             "Step1": {
-                "Title": "1. STORE AND DATE",
+                "Title": "1. PLACE AND DATE",
                 "Address": "Store address",
                 "DayBooking": "Appointment Date",
                 "HairService": {
                     "Title": "Hair Service",
                     "HairCut": "Hair Cut",
-                    "HairCutWomen": "Hair Cut for Women 60 minutes",
+                    "HairCutWomen": "Hair Cut for Women",
                     "HairDye": "Hair Dye",
                     "Detail": {
-                        "HairCut": "45 Minute - Design hair styles as required",
-                        "HairCutWomen": "60 Minute - Hair Stylist On Demand",
+                        "HairCut": "60 Minute - Design hair styles as required",
+                        "HairCutWomen": "90 Minute - Hair Stylist On Demand",
                         "HairDye": "120 Minute - Dyes from Korea"
                     }
                 },
@@ -290,19 +290,57 @@
                     "Title": "Skin Care"
                 },
                 "Massage": {
-                    "Title": "Massage Service"
+                    "Title": "Massage Service",
+                    "Massage": "Massage",
+                    "Detail": {
+                        "Massage": "60 Minute - Massage On Demand"
+                    }
                 },
                 "Nail": {
-                    "Title": "Nails Care"
+                    "Title": "Nails Care",
+                    "NailsCare": "Nails Care"
+                },
+                "Services": {
+                    "Styling": {
+                        "Title": "Haircut",
+                        "Services": {
+                            "ShampooStyle": "Good Boy",
+                            "ShampooStyleFlatIron": "Hot Girl",
+                            "Braids": "Sassy Gay",
+                            "ShampooStyleDes": "60 minutes - Happyness is looking good with a new haircut",
+                            "ShampooStyleFlatIronDes": "90 minutes - Long hair don't care",
+                            "BraidsDes": "60 minutes - Life isn't perfect but your hair can be"
+                        }
+                    },
+                    "HairCutting": {
+                        "Title": "Massage",
+                        "Services": {
+                            "CutStyle": "Coconut Oil",
+                            "CutSet":  "Hot Stones",
+                            "BarberShort": "Thai",
+                            "CutStyleDes": "60 minutes - Massage day is my favourite day of the week",
+                            "CutSetDes": "90 minutes - Got issues with your tissues?",
+                            "BarberShortDes": "90 minutes - Let's get cracking"
+                        }
+                    },
+                    "Manicures": {
+                        "Title": "Nail Care",
+                        "Services": {
+                            "HandExfoliate": "Manicures",
+                            "HandMassage": "Pedicures",
+                            "HandExfoliateDes": "60 minutes - Nails before males",
+                            "HandMassageDes": "90 minutes - Keep calm & book yout nails appointment"
+                        }
+                    }
                 }
             },
             "Step2": {
-                "Title": "Select Service",
+                "Title": "Select A Service",
                 "Technicians": "technicians",
                 "TimeSelect": "Time Select"
             },
             "Step3": {
-                "Title": "SELECT QUANTITY & APPOINTMENT TIME",
+                "Title": "Select NUMBER OF PAX & APPOINTMENT TIME",
                 "Surcharge": "Surcharge",
                 "ServiceFee": "Service FEE",
                 "Total": "TOTAL",
@@ -333,10 +371,46 @@
                 "Total": "TOTAL",
                 "PayNow": "Pay now",
                 "PayAtStore": "Pay at store",
-                "Book": "Book"
+                "Book": "Book",
+                "Discount": "Discount"
             },
             "Step": "Step",
             "Next": "Next"
+        },
+        "DemoBooking": {
+            "Sidebar": {
+                "Booking": "Booking",
+                "CheckIn": "Check-in",
+                "Service": "Service",
+                "Staff": "Staff",
+                "ExtraFee": "Extra Fee",
+                "Product": "Product",
+                "Reports": "Reports",
+                "Setting": "Setting"
+            },
+            "Content": {
+                "AllService": "All service",
+                "Filter": "Filter",
+                "Report": "Report",
+                "Time": "Time",
+                "Staff": "Staff",
+                "Type": {
+                    "Barber": "Barber",
+                    "HairStylist": "Hair Stylist"
+                }
+            },
+            "Header": {
+                "Title": "Ludiino",
+                "Description": "Online Booking & Appointment Scheduling Features",
+                "Content": "Great features are packaged into a powerful online solution that creates competitive advantages for your business in the digital age",
+                "CreateTestBooking": "Create a test booking"
+            },
+            "Service": {
+                "ShampooBlow": "Shampoo - Blow Dry",
+                "HairCut": "Hair Cut",
+                "ShampooStyle": "Shampoo & Style",
+                "Massage": "Massage"
+            }
         }
     },
     "Register": {
@@ -385,6 +459,9 @@
         "Months": "months",
         "Account": "Regiter Name",
         "Contact": "Phone number",
+        "Deal-tilte": "Promotion:",
+        "Deal-content": "Additional free months are provided when signing up for 12, 18, and 24 months packages",
+        "BonusDate": "Additional Free Month",
         "StartDate": "Start Date",
         "EndDate": "End Date",
         "Payment": "Please select a Payment method",
@@ -396,7 +473,9 @@
         "TempCount": "Amount",
         "TotalCount": "Total",
         "CompletePayment": "Proceed To Payment",
-        "RequireSelectPayment": "You must select an payment"
+        "RequireSelectPayment": "You must select an payment",
+        "PaymentSuccessfully": "Your payment has been proceeded successfully",
+        "AlreadyPaid": "You have already "
     },
     "Shared": {
         "RegisterBtnLabel": "Register",
@@ -545,7 +624,16 @@
         "Day.6": "Saturday",
         "Day.7": "Sunday",
         "Date": "Date",
-        "Time": "Time"
+        "Time": "Time",
+        "DayOfWeek": {
+            "0": "Sun",
+            "1": "Mon",
+            "2": "Tue",
+            "3": "Wed",
+            "4": "Thu",
+            "5": "Fri",
+            "6": "Sat"
+        }
     },
     "SignUp": {
         "SignUpSuccess": "Register account successfully",
