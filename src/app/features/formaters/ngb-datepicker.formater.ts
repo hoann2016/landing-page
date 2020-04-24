@@ -28,12 +28,14 @@ export class NgbDateCustomParserFormatter extends NgbDateParserFormatter {
     }
 
     format(date: NgbDateStruct): string {
-        const day: number = getDay(new Date(date.year, date.month, date.day, 0, 0, 0, 0));
-        return date ?
-            `${ this.translate.instant('Common.DayOfWeek.' + day) } ${
-                    isNumber(date.day)
-                    ? (date.day > 9 ? date.day : '0' + date.day) : ''
-                }/${isNumber(date.month) ? (date.month > 9 ? date.month : '0' + date.month ) : ''}/${date.year}` :
-            '';
+        if (date) {
+            const day: number = getDay(new Date(date.year, date.month - 1, date.day, 0, 0, 0, 0));
+            return date ?
+                `${ this.translate.instant('Common.DayOfWeek.' + day) } ${
+                        isNumber(date.day)
+                        ? (date.day > 9 ? date.day : '0' + date.day) : ''
+                    }/${isNumber(date.month) ? (date.month > 9 ? date.month : '0' + date.month ) : ''}/${date.year}` :
+                '';
+        }
     }
 }

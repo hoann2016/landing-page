@@ -1,9 +1,27 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ElementRef } from '@angular/core';
 import { IconDefinition, faCaretDown, faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons';
-import { NgbDateStruct, NgbDateParserFormatter } from '@ng-bootstrap/ng-bootstrap';
-import { addDays, subDays } from 'date-fns';
+import { NgbDateParserFormatter, NgbDate, NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
-const currentDate: Date = new Date();
+const listStudio: Array<{name: string; address: string}> = [
+    {
+        name: 'Studio 1',
+        address: '150 Nguyễn Thị Thập, Quận 7, TP.HCM'
+    },
+    {
+        name: 'Studio 2',
+        address: '110 Võ Văn Tần, Quận 3, TP.HCM'
+    },
+    {
+        name: 'Studio 3',
+        address: '256 Trần Hưng Đạo, Quận 7, TP.HCM'
+    },
+    {
+        name: 'Studio 4',
+        address: '87 Trần Văn Đang, Quận 7, TP.HCM'
+    }
+]
+
 
 @Component({
     selector: 'app-yoga-step1',
@@ -17,30 +35,46 @@ export class YogaStep1Component implements OnInit {
         arrowLeft: faCaretLeft,
         arrowRight: faCaretRight
     };
-    
-    currentDate: NgbDateStruct = {
-        year: currentDate.getFullYear(),
-        month: currentDate.getMonth() + 1,
-        day: currentDate.getDate()
-    }
+    classes: Array<{name: string; address: string}> = listStudio;
+    today: Date = new Date();
+    minDate: NgbDate = new NgbDate(this.today.getFullYear(), this.today.getMonth() + 1, this.today.getDate());
+    currentDate: NgbDate = new NgbDate(this.today.getFullYear(), this.today.getMonth() + 1, this.today.getDate());
+    formFilterClass: FormGroup;
 
-    constructor(public formatter: NgbDateParserFormatter) {
+    constructor(
+        public formatter: NgbDateParserFormatter,
+        private ngbCalendar: NgbCalendar,
+        private fb: FormBuilder
+    ) {
     }
 
     ngOnInit() {
+        this.initFormFilterClass();
     }
 
     goDate(isNext: boolean): void {
-        let date: Date;
         if (isNext) {
-            date = addDays(new Date(this.currentDate.year, this.currentDate.month, this.currentDate.day), 1);
-        } else {
-            date = subDays(new Date(this.currentDate.year, this.currentDate.month, this.currentDate.day), 1);
+            this.currentDate = this.ngbCalendar.getNext(this.currentDate, 'd', 1);
+            return;
         }
-        this.currentDate = { year: date.getFullYear(), month: date.getMonth(), day: date.getDate() }
+        this.currentDate = this.ngbCalendar.getPrev(this.currentDate, 'd', 1);
     }
 
     changeDate(event: any): void {
-        this.currentDate = { ...event, month: event.month };
+        this.currentDate = new NgbDate(event.year, event.month, event.day);
+    }
+
+    chooseClass(index: number) {
+        this.formFilterClass.patchValue({ classIndex: index });
+    }
+
+    rangeValue(event: any, el: ElementRef): void {
+        console.log({ event });
+    }
+
+    private initFormFilterClass(): void {
+        this.formFilterClass = this.fb.group({
+            classIndex: [0]
+        });
     }
 }
