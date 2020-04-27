@@ -28,7 +28,7 @@ export class FeatureHeaderComponent implements OnInit {
             componnent: YogaBookingDemoComponent
         }
     ];
-
+    rangeValues = [4, 10];
     stateHeaders: { [key: string]: boolean } = {
         chooseSolution: false,
         isJumping: true

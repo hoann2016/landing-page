@@ -4,7 +4,7 @@
         <div class="step-current">{{ "Features.DemoSteps.Step" | translate }} 2/5</div>
     </div>
     <div class="step-body">
-        <div class="filter">
+        <form class="filter" [formGroup]="formFilterClass">
             <div class="filter-class">
                 <div class="filter-select">
                     <div class="select-box" [ngbPopover]="selectClass" placement="bottom" popoverClass="select-item">
@@ -38,8 +38,8 @@
                     <div class="input-group">
                         <input class="form-control select-date" placeholder="Chọn ngày học" name="dp" ngbDatepicker
                             #d="ngbDatepicker" (click)="d.toggle()" container="body"
-                            [value]="formatter.format(currentDate)" [ngModel]="currentDate"
-                            (ngModelChange)="changeDate($event)" [minDate]="minDate">
+                            [value]="formatter.format(formFilterClass?.get('currentDate').value)" formControlName="currentDate"
+                            (input)="changeDate($event)" [minDate]="minDate">
                         <div class="input-group-append">
                         </div>
                     </div>
@@ -49,11 +49,53 @@
                 </div>
             </div>
             <div class="filter-range">
-                <div class="price-slider">
-                    <input value="0" min="0" max="100" step="5" type="range" (input)="updatePriceLabels()">
-                    <input value="100" min="0" max="100" step="5" type="range" oninput="updatePriceLabels()">
+                <div class="filter-range-box">
+                    <div class="filter-range-box-icon">
+                        <img src="/assets/images/features/clock.png" alt="Timer">
+                    </div>
+                    <div class="filter-range-box-timer">
+                        8:00 - 19:00
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="filter-select-class">
+                <div class="filter-select-class-box">
+                    <div class="select-box" [ngbPopover]="selectOneClass" placement="bottom" popoverClass="select-item-class">
+                        <div class="select-box-content">
+                            <div class="select-box-title">Tất cả lớp</div>
+                        </div>
+                        <span class="select-box-arrow-down">
+                            <fa-icon [icon]="icons?.arrowDown"></fa-icon>
+                        </span>
+                    </div>
+                    <ng-template #selectOneClass>
+                        <div class="list-class">
+                            <div class="list-class-item">Twisting</div>
+                            <div class="list-class-item">Vinyasa</div>
+                            <div class="list-class-item">Hatha Flow</div>
+                        </div>
+                    </ng-template>
+                </div>
+            </div>
+            <div class="filter-select-class teacher">
+                <div class="filter-select-class-box">
+                    <div class="select-box" [ngbPopover]="selectTeacher" placement="bottom" popoverClass="select-item-class">
+                        <div class="select-box-content">
+                            <div class="select-box-title">Tất cả giáo viên</div>
+                        </div>
+                        <span class="select-box-arrow-down">
+                            <fa-icon [icon]="icons?.arrowDown"></fa-icon>
+                        </span>
+                    </div>
+                    <ng-template #selectTeacher>
+                        <div class="list-class">
+                            <div class="list-class-item">Twisting</div>
+                            <div class="list-class-item">Vinyasa</div>
+                            <div class="list-class-item">Hatha Flow</div>
+                        </div>
+                    </ng-template>
+                </div>
+            </div>
+        </form>
     </div>
 </div>

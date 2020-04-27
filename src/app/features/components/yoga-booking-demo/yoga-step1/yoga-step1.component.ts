@@ -38,7 +38,6 @@ export class YogaStep1Component implements OnInit {
     classes: Array<{name: string; address: string}> = listStudio;
     today: Date = new Date();
     minDate: NgbDate = new NgbDate(this.today.getFullYear(), this.today.getMonth() + 1, this.today.getDate());
-    currentDate: NgbDate = new NgbDate(this.today.getFullYear(), this.today.getMonth() + 1, this.today.getDate());
     formFilterClass: FormGroup;
 
     constructor(
@@ -54,14 +53,14 @@ export class YogaStep1Component implements OnInit {
 
     goDate(isNext: boolean): void {
         if (isNext) {
-            this.currentDate = this.ngbCalendar.getNext(this.currentDate, 'd', 1);
+            this.formFilterClass.get('currentDate').setValue(this.ngbCalendar.getNext(this.formFilterClass.get('currentDate').value, 'd', 1));
             return;
         }
-        this.currentDate = this.ngbCalendar.getPrev(this.currentDate, 'd', 1);
+        this.formFilterClass.get('currentDate').setValue(this.ngbCalendar.getPrev(this.formFilterClass.get('currentDate').value, 'd', 1));
     }
 
     changeDate(event: any): void {
-        this.currentDate = new NgbDate(event.year, event.month, event.day);
+        this.formFilterClass.get('currentDate').setValue(new NgbDate(event.year, event.month, event.day));
     }
 
     chooseClass(index: number) {
@@ -74,7 +73,9 @@ export class YogaStep1Component implements OnInit {
 
     private initFormFilterClass(): void {
         this.formFilterClass = this.fb.group({
-            classIndex: [0]
+            classIndex: [0],
+            rangeTime: [[4, 10]],
+            currentDate: [new NgbDate(this.today.getFullYear(), this.today.getMonth() + 1, this.today.getDate())]
         });
     }
 }

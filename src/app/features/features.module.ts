@@ -22,6 +22,8 @@ import { SalonBookingDemoComponent } from './components/salon-booking-demo/salon
 import { YogaBookingDemoComponent } from './components/yoga-booking-demo/yoga-booking-demo.component';
 import { YogaStep1Component } from './components/yoga-booking-demo/yoga-step1/yoga-step1.component';
 import { YogaStep2Component } from './components/yoga-booking-demo/yoga-step2/yoga-step2.component';
+import { RangeSliderModule } from '@libs/slider/range-slider.module';
+import { NzSliderModule } from 'ng-zorro-antd/slider';
 
 @NgModule({
     declarations: [
@@ -50,7 +52,9 @@ import { YogaStep2Component } from './components/yoga-booking-demo/yoga-step2/yo
         FontAwesomeModule,
         SharedModule,
         NgbDropdownModule,
-        NgbPopoverModule
+        NgbPopoverModule,
+        RangeSliderModule,
+        NzSliderModule
     ],
     providers: [
         StepService,
