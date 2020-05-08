@@ -1,6 +1,6 @@
 <div class="step-wrapper">
     <div class="step-header">
-        <h4 class="step-title"><span class="back-step-2" (click)="goToStep(1, true)"></span> 2. {{ 'Features.DemoBooking.Yoga.Step.Step2.Title' | translate }}</h4>
+        <h4 class="step-title"><span class="back-step-2" (click)="goToStep(1)"></span> 2. {{ 'Features.DemoBooking.Yoga.Step.Step2.Title' | translate }}</h4>
         <div class="step-current">{{ "Features.DemoSteps.Step" | translate }} 2/2</div>
     </div>
     <div class="step-body">
@@ -73,7 +73,7 @@
                         </div>
                         <div class="service-fee-name">
                             <span class="service-fee-type">{{ 'Features.DemoBooking.Yoga.Step.Step2.Pricing' | translate }}</span>
-                            <p class="service-fee-value">{{ formPaymentYoga?.get('price').value | number }} đ</p>
+                            <p class="service-fee-value" translate [translateParams]="{price: (formPaymentYoga?.get('price').value)?.toString() | priceExchangeRate | async | number}">Pricing.Transform</p>
                         </div>
                         <div class="service-fee-name">
                             <span class="service-fee-type">{{ "Features.DemoSteps.Step5.Quantity" | translate }}</span>
@@ -90,7 +90,7 @@
                     </div>
                     <div class="total-sub discount" *ngIf="formPaymentYoga?.get('payNow').value">
                         <div class="left">{{ 'Features.DemoBooking.Yoga.Step.Step2.DiscountOnline' | translate }}</div>
-                        <div class="right" translate [translateParams]="{price: -(formPaymentYoga?.get('discount').value) | priceExchangeRate | async | number}">Pricing.Transform</div>
+                        <div class="right">- <span translate [translateParams]="{price: (formPaymentYoga?.get('discount').value)?.toString() | priceExchangeRate | async | number}">Pricing.Transform</span></div>
                     </div>
                     <div class="total-sub">
                         <div class="left">{{ "Features.DemoSteps.Step5.Total" | translate }}</div>

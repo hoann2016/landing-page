@@ -24,6 +24,7 @@ export class ResetPasswordComponent implements OnInit {
         token: null,
         email: null
     }
+    loadingStatus: boolean = false;
     private _destroy$: Subject<boolean> = new Subject<boolean>();
     
     constructor(
@@ -56,14 +57,17 @@ export class ResetPasswordComponent implements OnInit {
     submitChangePassword(): void {
         this.submited = true;
         if (this.formResetPassword.valid) {
+            this.loadingStatus = true;
             const formValue: any = this.formResetPassword.value;
             this.userService.resetPassword(formValue.password, formValue.confirmPassword, this.queryParams.token, this.queryParams.email).subscribe(
                 () => {
                     this.success = true;
                     this.messageService.success(this.translateService.instant('ResetPassword.ChangeSuccessful'));
+                    this.loadingStatus = false;
                     timer(3000).pipe(takeUntil(this._destroy$)).subscribe(_ => this.router.navigateByUrl('/pages/sign-in'));
                 },
                 (error: HttpErrorResponse) => {
+                    this.loadingStatus = false;
                     if (error && error.error && error.error.message && error.error.message[0] && error.error.message[0].code === 1041) {
                         this.isExpired = true;
                     } else {
