@@ -1,31 +1,49 @@
-import {Component, ElementRef, OnDestroy, Input, Output, EventEmitter, forwardRef, Renderer2,NgZone,ChangeDetectorRef, ViewChild, ChangeDetectionStrategy} from '@angular/core';
-import {NG_VALUE_ACCESSOR, ControlValueAccessor} from '@angular/forms';
+import { Component, ElementRef, OnDestroy, Input, Output, EventEmitter, forwardRef, Renderer2, NgZone, ChangeDetectorRef, ViewChild, ChangeDetectionStrategy } from '@angular/core';
+import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 export const SLIDER_VALUE_ACCESSOR: any = {
-  provide: NG_VALUE_ACCESSOR,
-  useExisting: forwardRef(() => RangeSliderComponent),
-  multi: true
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: forwardRef(() => RangeSliderComponent),
+    multi: true
 };
 
 @Component({
     selector: 'range-slider',
     template: `
-        <div [ngStyle]="style" [class]="styleClass" [ngClass]="{'ui-slider ui-widget ui-widget-content ui-corner-all':true,'ui-state-disabled':disabled,
-            'ui-slider-horizontal':orientation == 'horizontal','ui-slider-vertical':orientation == 'vertical','ui-slider-animate':animate}"
-            (click)="onBarClick($event)" #rangeSlider>
-            <span *ngIf="range && orientation == 'horizontal'" class="ui-slider-range ui-widget-header ui-corner-all" [ngStyle]="{'left':handleValues[0] + '%',width: (handleValues[1] - handleValues[0] + '%')}"></span>
-            <span *ngIf="range && orientation == 'vertical'" class="ui-slider-range ui-widget-header ui-corner-all" [ngStyle]="{'bottom':handleValues[0] + '%',height: (handleValues[1] - handleValues[0] + '%')}"></span>
-            <span *ngIf="!range && orientation=='vertical'" class="ui-slider-range ui-slider-range-min ui-widget-header ui-corner-all" [ngStyle]="{'height': handleValue + '%'}"></span>
-            <span *ngIf="!range && orientation=='horizontal'" class="ui-slider-range ui-slider-range-min ui-widget-header ui-corner-all" [ngStyle]="{'width': handleValue + '%'}"></span>
-            <span #sliderHandle *ngIf="!range" [attr.tabindex]="tabindex" (keydown)="onHandleKeydown($event)" class="ui-slider-handle ui-state-default ui-corner-all ui-clickable" (mousedown)="onMouseDown($event)" (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd($event)"
-                [style.transition]="dragging ? 'none': null" [ngStyle]="{'left': orientation == 'horizontal' ? handleValue + '%' : null,'bottom': orientation == 'vertical' ? handleValue + '%' : null}"
-                [attr.aria-valuemin]="min" [attr.aria-valuenow]="value" [attr.aria-valuemax]="max" [attr.aria-labelledby]="ariaLabelledBy"></span>
-            <span #sliderHandleStart *ngIf="range" [attr.tabindex]="tabindex" (keydown)="onHandleKeydown($event,0)" (mousedown)="onMouseDown($event,0)" (touchstart)="onTouchStart($event,0)" (touchmove)="onTouchMove($event,0)" (touchend)="onTouchEnd($event)" [style.transition]="dragging ? 'none': null" class="first ui-slider-handle ui-state-default ui-corner-all ui-clickable" 
-                [ngStyle]="{'left': rangeStartLeft, 'bottom': rangeStartBottom}" [ngClass]="{'ui-slider-handle-active':handleIndex==0}"
-                [attr.aria-valuemin]="min" [attr.aria-valuenow]="value ? value[0] : null" [attr.aria-valuemax]="max" [attr.aria-labelledby]="ariaLabelledBy"></span>
-            <span #sliderHandleEnd *ngIf="range" [attr.tabindex]="tabindex" (keydown)="onHandleKeydown($event,1)" (mousedown)="onMouseDown($event,1)" (touchstart)="onTouchStart($event,1)" (touchmove)="onTouchMove($event,1)" (touchend)="onTouchEnd($event)" [style.transition]="dragging ? 'none': null" class="ui-slider-handle ui-state-default ui-corner-all ui-clickable" 
-                [ngStyle]="{'left': rangeEndLeft, 'bottom': rangeEndBottom}" [ngClass]="{'ui-slider-handle-active':handleIndex==1}"
-                [attr.aria-valuemin]="min" [attr.aria-valuenow]="value ? value[1] : null" [attr.aria-valuemax]="max" [attr.aria-labelledby]="ariaLabelledBy"></span>
+        <div class="range-slider">
+            <div [ngStyle]="style" [class]="styleClass" [ngClass]="{'ui-slider ui-widget ui-widget-content ui-corner-all':true,'ui-state-disabled':disabled,
+              'ui-slider-horizontal':orientation == 'horizontal','ui-slider-vertical':orientation == 'vertical','ui-slider-animate':animate}"
+              (click)="onBarClick($event)">
+                <span *ngIf="range && orientation == 'horizontal'" class="ui-slider-range ui-widget-header ui-corner-all" [ngStyle]="{'left':handleValues[0] + '%',width: (handleValues[1] - handleValues[0] + '%')}"></span>
+                <span *ngIf="range && orientation == 'vertical'" class="ui-slider-range ui-widget-header ui-corner-all" [ngStyle]="{'bottom':handleValues[0] + '%',height: (handleValues[1] - handleValues[0] + '%')}"></span>
+                <span *ngIf="!range && orientation=='vertical'" class="ui-slider-range ui-slider-range-min ui-widget-header ui-corner-all" [ngStyle]="{'height': handleValue + '%'}"></span>
+                <span *ngIf="!range && orientation=='horizontal'" class="ui-slider-range ui-slider-range-min ui-widget-header ui-corner-all" [ngStyle]="{'width': handleValue + '%'}"></span>
+                <span #sliderHandle *ngIf="!range" [attr.tabindex]="tabindex" (keydown)="onHandleKeydown($event)" class="ui-slider-handle ui-state-default ui-corner-all ui-clickable" (mousedown)="onMouseDown($event)" (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd($event)"
+                    [style.transition]="dragging ? 'none': null" [ngStyle]="{'left': orientation == 'horizontal' ? handleValue + '%' : null,'bottom': orientation == 'vertical' ? handleValue + '%' : null}"
+                    [attr.aria-valuemin]="min" [attr.aria-valuenow]="value" [attr.aria-valuemax]="max" [attr.aria-labelledby]="ariaLabelledBy"></span>
+                <span #sliderHandleStart *ngIf="range" [attr.tabindex]="tabindex" (keydown)="onHandleKeydown($event,0)" (mousedown)="onMouseDown($event,0)" (touchstart)="onTouchStart($event,0)" (touchmove)="onTouchMove($event,0)" (touchend)="onTouchEnd($event)" [style.transition]="dragging ? 'none': null" class="ui-slider-handle ui-state-default ui-corner-all ui-clickable" 
+                    [ngStyle]="{'left': rangeStartLeft, 'bottom': rangeStartBottom}" [ngClass]="{'ui-slider-handle-active':handleIndex==0}"
+                    [attr.aria-valuemin]="min" [attr.aria-valuenow]="value ? value[0] : null" [attr.aria-valuemax]="max" [attr.aria-labelledby]="ariaLabelledBy"></span>
+                <span #sliderHandleEnd *ngIf="range" [attr.tabindex]="tabindex" (keydown)="onHandleKeydown($event,1)" (mousedown)="onMouseDown($event,1)" (touchstart)="onTouchStart($event,1)" (touchmove)="onTouchMove($event,1)" (touchend)="onTouchEnd($event)" [style.transition]="dragging ? 'none': null" class="ui-slider-handle ui-state-default ui-corner-all ui-clickable" 
+                    [ngStyle]="{'left': rangeEndLeft, 'bottom': rangeEndBottom}" [ngClass]="{'ui-slider-handle-active':handleIndex==1}"
+                    [attr.aria-valuemin]="min" [attr.aria-valuenow]="value ? value[1] : null" [attr.aria-valuemax]="max" [attr.aria-labelledby]="ariaLabelledBy"></span>
+            </div>
+            <span
+                *ngIf="range"
+                [attr.tabindex]="tabindex"
+                class="uasdase" 
+                [ngStyle]="{'left': rangeStartLeft, 'bottom': '-30px'}"
+            >
+                {{ leftRangeLabel }}
+            </span>
+            <span
+                *ngIf="range"
+                [attr.tabindex]="tabindex"
+                class="uasdase" 
+                [ngStyle]="{'left': rangeEndLeft, 'bottom': '-30px'}"
+            >
+                {{ rightRangeLabel }}
+            </span>
         </div>
     `,
     providers: [SLIDER_VALUE_ACCESSOR],
@@ -44,7 +62,7 @@ export class RangeSliderComponent implements OnDestroy, ControlValueAccessor {
 
     @Input() orientation: string = 'horizontal';
 
-    @Input() step: number;
+    @Input() step: number = 3.33333;
 
     @Input() range: boolean;
 
@@ -55,46 +73,46 @@ export class RangeSliderComponent implements OnDestroy, ControlValueAccessor {
     @Input() ariaLabelledBy: string;
 
     @Input() tabindex: number = 0;
+    @Input() marks: Array<string> = [];
 
     @Output() onChange: EventEmitter<any> = new EventEmitter();
-    
+
     @Output() onSlideEnd: EventEmitter<any> = new EventEmitter();
-    
+
     @ViewChild("sliderHandle", { static: false }) sliderHandle: ElementRef;
-    @ViewChild("rangeSlider", { static: false }) rangeSlider: ElementRef;
 
     @ViewChild("sliderHandleStart", { static: false }) sliderHandleStart: ElementRef;
 
     @ViewChild("sliderHandleEnd", { static: false }) sliderHandleEnd: ElementRef;
 
     public value: number;
-    
+
     public values: number[];
-    
+
     public handleValue: number;
-    
+
     public handleValues: number[] = [];
-        
-    public onModelChange: Function = () => {};
-    
-    public onModelTouched: Function = () => {};
-    
+
+    public onModelChange: Function = () => { };
+
+    public onModelTouched: Function = () => { };
+
     public dragging: boolean;
-    
+
     public dragListener: any;
-    
+
     public mouseupListener: any;
-        
-    public initX: number = 20;
-    
-    public initY: number = 20;
-    
+
+    public initX: number;
+
+    public initY: number;
+
     public barWidth: number;
-    
+
     public barHeight: number;
-    
+
     public sliderHandleClick: boolean;
-    
+
     public handleIndex: number = 0;
 
     public startHandleValue: any;
@@ -102,16 +120,17 @@ export class RangeSliderComponent implements OnDestroy, ControlValueAccessor {
     public startx: number;
 
     public starty: number;
-    
-    constructor(public el: ElementRef, public renderer: Renderer2, private ngZone: NgZone, public cd: ChangeDetectorRef) {}
-    
-    onMouseDown(event, index?:number) {
-        if (event.cancelable) {
-            event.preventDefault();
-        }
+
+    public leftRangeLabel: string;
+    public rightRangeLabel: string;
+
+    constructor(public el: ElementRef, public renderer: Renderer2, private ngZone: NgZone, public cd: ChangeDetectorRef) { }
+
+    onMouseDown(event, index?: number) {
         if (this.disabled) {
             return;
         }
+
         this.dragging = true;
         this.updateDomData();
         this.sliderHandleClick = true;
@@ -121,10 +140,7 @@ export class RangeSliderComponent implements OnDestroy, ControlValueAccessor {
         event.preventDefault();
     }
 
-    onTouchStart(event, index?:number) {
-        if (event.cancelable) {
-            event.preventDefault();
-        }
+    onTouchStart(event, index?: number) {
         if (this.disabled) {
             return;
         }
@@ -146,22 +162,19 @@ export class RangeSliderComponent implements OnDestroy, ControlValueAccessor {
         event.preventDefault();
     }
 
-    onTouchMove(event, index?:number) {
-        if (event.cancelable) {
-            event.preventDefault();
-        }
+    onTouchMove(event, index?: number) {
         if (this.disabled) {
             return;
         }
-        
+
         var touchobj = event.changedTouches[0],
-        handleValue = 0;
+            handleValue = 0;
 
         if (this.orientation === 'horizontal') {
             handleValue = Math.floor(((parseInt(touchobj.clientX, 10) - this.startx) * 100) / (this.barWidth)) + this.startHandleValue;
         }
         else {
-            handleValue = Math.floor(((this.starty - parseInt(touchobj.clientY, 10)) * 100) / (this.barHeight))  + this.startHandleValue;
+            handleValue = Math.floor(((this.starty - parseInt(touchobj.clientY, 10)) * 100) / (this.barHeight)) + this.startHandleValue;
         }
 
         this.setValueFromHandle(event, handleValue);
@@ -169,54 +182,35 @@ export class RangeSliderComponent implements OnDestroy, ControlValueAccessor {
         event.preventDefault();
     }
 
-    onTouchEnd(event, index?:number) {
-        if (event.cancelable) {
-            event.preventDefault();
-        }
+    onTouchEnd(event, index?: number) {
         if (this.disabled) {
             return;
         }
 
         this.dragging = false;
-        
+
         if (this.range)
-            this.onSlideEnd.emit({originalEvent: event, values: this.values});
+            this.onSlideEnd.emit({ originalEvent: event, values: this.values });
         else
-            this.onSlideEnd.emit({originalEvent: event, value: this.value});
-        
+            this.onSlideEnd.emit({ originalEvent: event, value: this.value });
+
         event.preventDefault();
     }
-    
+
     onBarClick(event) {
-        console.log(this.values);
-        if (event.cancelable) {
-            event.preventDefault();
-        }
         if (this.disabled) {
             return;
         }
-        const offsetHandleLeft: number = parseInt(this.sliderHandleStart.nativeElement.style.left.split('%')[0]);
-        const offsetHanleRight: number = parseInt(this.sliderHandleEnd.nativeElement.style.left.split('%')[0]);
-        const barWidth = 
-            this.el && this.el.nativeElement && this.el.nativeElement.children && this.el.nativeElement.children[0] && this.el.nativeElement.children[0].offsetWidth
-            ? this.el.nativeElement.children[0].offsetWidth
-            : 0;
-        const offsetLeftHandler: number = (barWidth * offsetHandleLeft) / 100;
-        const offsetRightHandler: number = (barWidth * offsetHanleRight) / 100;
-        const absLeft: number = Math.abs(offsetLeftHandler - event.pageX);
-        const absRight: number = Math.abs(offsetRightHandler - event.pageX);
-        const min: number = Math.min(absLeft, absRight);
-        this.handleIndex = (min === absLeft) ? (absLeft === absRight ? (event.pageX > absLeft ? 1 : 0) : 0) : 1;
-        this.updateDomData();
-        this.handleChange(event);
-        
+
+        if (!this.sliderHandleClick) {
+            this.updateDomData();
+            this.handleChange(event);
+        }
+
         this.sliderHandleClick = false;
     }
 
-    onHandleKeydown(event, handleIndex?:number) {
-        if (event.cancelable) {
-            event.preventDefault();
-        }
+    onHandleKeydown(event, handleIndex?: number) {
         if (event.which == 38 || event.which == 39) {
             this.spin(event, 1, handleIndex);
         }
@@ -224,11 +218,8 @@ export class RangeSliderComponent implements OnDestroy, ControlValueAccessor {
             this.spin(event, -1, handleIndex);
         }
     }
-    
-    spin(event, dir: number, handleIndex?:number) {
-        if (event.cancelable) {
-            event.preventDefault();
-        }
+
+    spin(event, dir: number, handleIndex?: number) {
         let step = (this.step || 1) * dir;
 
         if (this.range) {
@@ -244,15 +235,15 @@ export class RangeSliderComponent implements OnDestroy, ControlValueAccessor {
         event.preventDefault();
     }
 
-    handleChange(event: MouseEvent) {
-        let handleValue = this.calculateHandleValue(event);
+    handleChange(event: Event) {
+        const handleValue = this.calculateHandleValue(event);
         this.setValueFromHandle(event, handleValue);
     }
-    
+
     bindDragListeners() {
         this.ngZone.runOutsideAngular(() => {
             if (!this.dragListener) {
-                this.dragListener = this.renderer.listen(this.rangeSlider.nativeElement, 'mousemove', (event) => {
+                this.dragListener = this.renderer.listen('document', 'mousemove', (event) => {
                     if (this.dragging) {
                         this.ngZone.run(() => {
                             this.handleChange(event);
@@ -262,14 +253,14 @@ export class RangeSliderComponent implements OnDestroy, ControlValueAccessor {
             }
 
             if (!this.mouseupListener) {
-                this.mouseupListener = this.renderer.listen(this.rangeSlider.nativeElement, 'mouseup', (event) => {
+                this.mouseupListener = this.renderer.listen('document', 'mouseup', (event) => {
                     if (this.dragging) {
                         this.dragging = false;
                         this.ngZone.run(() => {
                             if (this.range) {
-                                this.onSlideEnd.emit({originalEvent: event, values: this.values});
+                                this.onSlideEnd.emit({ originalEvent: event, values: this.values });
                             } else {
-                                this.onSlideEnd.emit({originalEvent: event, value: this.value});
+                                this.onSlideEnd.emit({ originalEvent: event, value: this.value });
                             }
                         });
                     }
@@ -277,66 +268,62 @@ export class RangeSliderComponent implements OnDestroy, ControlValueAccessor {
             }
         });
     }
-    
+
     unbindDragListeners() {
         if (this.dragListener) {
             this.dragListener();
         }
-        
+
         if (this.mouseupListener) {
             this.mouseupListener();
         }
     }
 
     setValueFromHandle(event: Event, handleValue: any) {
-        let newValue = this.getValueFromHandle(handleValue);
-
+        const newValue = this.getValueFromHandle(handleValue);
         if (this.range) {
             if (this.step) {
                 this.handleStepChange(newValue, this.values[this.handleIndex]);
             }
             else {
-                this.handleValues[this.handleIndex] = handleValue;          
+                this.handleValues[this.handleIndex] = handleValue;
                 this.updateValue(newValue, event);
             }
         }
-        else {            
+        else {
             if (this.step) {
                 this.handleStepChange(newValue, this.value);
-            } 
+            }
             else {
                 this.handleValue = handleValue;
                 this.updateValue(newValue, event);
-            }         
+            }
         }
     }
-    
+
     handleStepChange(newValue: number, oldValue: number) {
-        console.log({ newValue, oldValue })
-        let diff = (newValue - oldValue);
+        const diff = (newValue - oldValue);
         let val = oldValue;
-        
         if (diff < 0) {
             val = oldValue + Math.ceil(newValue / this.step - oldValue / this.step) * this.step;
         }
         else if (diff > 0) {
             val = oldValue + Math.floor(newValue / this.step - oldValue / this.step) * this.step;
         }
-        
         this.updateValue(val);
         this.updateHandleValue();
     }
-    
-    writeValue(value: any) : void {
-        if (this.range)
-            this.values = value||[0,0];
-        else
-            this.value = value||0;
-        
+
+    writeValue(value: any): void {
+        if (this.range) {
+            this.values = value || [0, 0];
+        } else
+            this.value = value || 0;
+
         this.updateHandleValue();
         this.cd.markForCheck();
     }
-    
+
     registerOnChange(fn: Function): void {
         this.onModelChange = fn;
     }
@@ -344,51 +331,56 @@ export class RangeSliderComponent implements OnDestroy, ControlValueAccessor {
     registerOnTouched(fn: Function): void {
         this.onModelTouched = fn;
     }
-    
+
     setDisabledState(val: boolean): void {
         this.disabled = val;
     }
-    
+
     get rangeStartLeft() {
         return this.isVertical() ? 'auto' : this.handleValues[0] + '%';
     }
-    
+
     get rangeStartBottom() {
         return this.isVertical() ? this.handleValues[0] + '%' : 'auto';
     }
-    
+
     get rangeEndLeft() {
         return this.isVertical() ? 'auto' : this.handleValues[1] + '%';
     }
-    
+
     get rangeEndBottom() {
         return this.isVertical() ? this.handleValues[1] + '%' : 'auto';
     }
-    
+
     isVertical(): boolean {
         return this.orientation === 'vertical';
     }
-    
+
     updateDomData(): void {
         let rect = this.el.nativeElement.children[0].getBoundingClientRect();
-        // this.initX = rect.left + DomHandler.getWindowScrollLeft();
-        // this.initY = rect.top + DomHandler.getWindowScrollTop();
+        this.initX = rect.left + this.getWindowScrollLeft();
+        this.initY = rect.top + this.getWindowScrollTop();
         this.barWidth = this.el.nativeElement.children[0].offsetWidth;
         this.barHeight = this.el.nativeElement.children[0].offsetHeight;
     }
-    
+
     calculateHandleValue(event): number {
-        if (this.orientation === 'horizontal') {
-            return ((event.pageX) * 100) / (this.barWidth);
-        }
+        if (this.orientation === 'horizontal')
+            return ((event.pageX - this.initX) * 100) / (this.barWidth);
         else
-            return(((this.initY + this.barHeight) - event.pageY) * 100) / (this.barHeight);
+            return (((this.initY + this.barHeight) - event.pageY) * 100) / (this.barHeight);
     }
-    
+
     updateHandleValue(): void {
         if (this.range) {
             this.handleValues[0] = (this.values[0] < this.min ? 0 : this.values[0] - this.min) * 100 / (this.max - this.min);
             this.handleValues[1] = (this.values[1] > this.max ? 100 : this.values[1] - this.min) * 100 / (this.max - this.min);
+            this.leftRangeLabel = this.marks && this.marks[Math.floor(this.values[0] / this.step)]
+                                    ? this.marks[Math.floor(this.values[0] / this.step)]
+                                    : null;
+            this.rightRangeLabel = this.marks && this.marks[Math.floor(this.values[1] / this.step)]
+                                    ? this.marks[Math.floor(this.values[1] / this.step)]
+                                    : null
         }
         else {
             if (this.value < this.min)
@@ -398,12 +390,12 @@ export class RangeSliderComponent implements OnDestroy, ControlValueAccessor {
             else
                 this.handleValue = (this.value - this.min) * 100 / (this.max - this.min);
         }
+        this.cd.markForCheck();
     }
-    
+
     updateValue(val: number, event?: Event): void {
         if (this.range) {
             let value = val;
-            
             if (this.handleIndex == 0) {
                 if (value < this.min) {
                     value = this.min;
@@ -428,11 +420,13 @@ export class RangeSliderComponent implements OnDestroy, ControlValueAccessor {
 
                 this.sliderHandleEnd.nativeElement.focus();
             }
-            
-            this.values[this.handleIndex] = this.getNormalizedValue(value);
-            this.values = this.values.slice();
-            this.onModelChange(this.values);
-            this.onChange.emit({event: event, values: this.values});
+            if (this.values[this.handleIndex] !== this.getNormalizedValue(value)) {
+                this.values[this.handleIndex] = this.getNormalizedValue(value);
+                this.values = this.values.slice();
+                this.onModelChange(this.values);
+                // TODO: this.values[this.handleIndex] / this.step
+                this.onChange.emit({ event: event, values: this.values });
+            }
         }
         else {
             if (val < this.min) {
@@ -443,37 +437,44 @@ export class RangeSliderComponent implements OnDestroy, ControlValueAccessor {
                 val = this.max;
                 this.handleValue = 100;
             }
-            
-			this.value = this.getNormalizedValue(val);
-            
+            this.value = this.getNormalizedValue(val);
             this.onModelChange(this.value);
-            this.onChange.emit({event: event, value: this.value});
+            this.onChange.emit({ event: event, value: this.value });
             this.sliderHandle.nativeElement.focus();
         }
     }
-            
+
     getValueFromHandle(handleValue: number): number {
-        const newValue: number = (this.max - this.min) * (handleValue / 100) + this.min;
-        return (newValue % this.step) >= (this.step / 2) ? Math.ceil(newValue / this.step) * this.step : Math.floor(newValue / this.step) * this.step;
+        return (this.max - this.min) * (handleValue / 100) + this.min;
     }
-	
-	getDecimalsCount(value: number): number {
-		if (value && Math.floor(value) !== value)
-			return value.toString().split(".")[1].length || 0;
-		return 0;
-	}
-	
-	getNormalizedValue(val: number): number {
-		let decimalsCount = this.getDecimalsCount(this.step);
-		if (decimalsCount > 0) {
-			return +val.toFixed(decimalsCount);
-		} 
-		else {
-			return Math.floor(val);
-		}
-	}
-    
+
+    getDecimalsCount(value: number): number {
+        if (value && Math.floor(value) !== value)
+            return value.toString().split(".")[1].length || 0;
+        return 0;
+    }
+
+    getNormalizedValue(val: number): number {
+        let decimalsCount = this.getDecimalsCount(this.step);
+        if (decimalsCount > 0) {
+            return +val.toFixed(decimalsCount);
+        }
+        else {
+            return Math.floor(val);
+        }
+    }
+
     ngOnDestroy() {
         this.unbindDragListeners();
+    }
+
+    public getWindowScrollTop(): number {
+        let doc = document.documentElement;
+        return (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+    }
+
+    public getWindowScrollLeft(): number {
+        let doc = document.documentElement;
+        return (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
     }
 }

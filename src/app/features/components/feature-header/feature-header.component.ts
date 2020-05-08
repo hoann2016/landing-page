@@ -16,16 +16,18 @@ export class FeatureHeaderComponent implements OnInit {
         caretDown: faCaretDown
     };
     activeSolution: number = 0;
-    bookingSolutions: Array<{title: string, value: string, componnent: any}> = [
+    bookingSolutions: Array<{title: string, value: string, componnent: any, class: string}> = [
         {
             title: 'Create a Test Booking For Salon',
             value: 'salon',
-            componnent: SalonBookingDemoComponent
+            componnent: SalonBookingDemoComponent,
+            class: 'salon-booking'
         },
         {
             title: 'Create a Test Booking For Yoga',
             value: 'yoga',
-            componnent: YogaBookingDemoComponent
+            componnent: YogaBookingDemoComponent,
+            class: 'yoga-booking'
         }
     ];
     rangeValues = [4, 10];
@@ -94,7 +96,7 @@ export class FeatureHeaderComponent implements OnInit {
 
     bookNow(): void {
         if (this.bookingSolutions && this.bookingSolutions[this.activeSolution] && this.bookingSolutions[this.activeSolution].componnent) {
-            const modalRef: NgbModalRef = this.modalService.open(this.bookingSolutions[this.activeSolution].componnent, { centered: true, windowClass: 'demo-booking-popup', size: 'lg' });
+            const modalRef: NgbModalRef = this.modalService.open(this.bookingSolutions[this.activeSolution].componnent, { centered: true, windowClass: this.bookingSolutions[this.activeSolution].class, size: 'lg' });
             this._subscription = modalRef.componentInstance.bookingIsCreated.subscribe((data: any) => {
                 this.createNewTicketTestBooking(data);
             });

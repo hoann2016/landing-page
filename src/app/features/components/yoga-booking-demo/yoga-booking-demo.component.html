@@ -1,5 +1,6 @@
 <div class="main-steps">
     <div class="home-steps" [ngSwitch]="currentStep$ | async">
         <app-yoga-step1 *ngSwitchDefault></app-yoga-step1>
+        <app-yoga-step2 *ngSwitchCase="2" (bookingIsCreated)="bookingIsCreatedEvent($event)"></app-yoga-step2>
     </div>
 </div>

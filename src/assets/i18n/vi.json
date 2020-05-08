@@ -212,7 +212,8 @@
         "LudiinoSolution": {
             "Title": "Mô Hình Kinh Doanh nào có thể sử dụng hệ thống Đặt & Quản Lý Lịch Hẹn Trực Tuyến Ludiino?"
         },
-        "Transform": "{{price}}  vnđ",
+        "Transform": "{{price}} vnđ",
+        "TransformDong": "{{price}} đ",
         "TransformUnit": "{{price}} {{unit}}",
         "TransformUnitTail": "đ",
         "Unit": "đ"
@@ -451,6 +452,31 @@
                     "PowerVinyasaDes": "Đây là lớp Yoga giảm cân tuyệt vời",
                     "HipOpening": "Hip Opening",
                     "HipOpeningDes": "Tư thế Yoga nhẹ nhàng và đơn giản"
+                },
+                "Step": {
+                    "Step1": {
+                        "Title": "CHỌN LỚP HỌC",
+                        "AllClass": "Tất cả lớp",
+                        "AllTeacher": "Tất cả giáo viên",
+                        "Hour": "Giờ",
+                        "ClassRoom": "Lớp học",
+                        "Fee": "Học phí",
+                        "Slot": "Thảm còn trống",
+                        "Teacher": "Giáo viên",
+                        "Room": "Phòng",
+                        "Note": "Ghi chú"
+                    },
+                    "Step2": {
+                        "Title": "Thông tin khách hàng & Thanh toán",
+                        "Customer": "Thông tin khách hàng (Người đại diện)",
+                        "Phone": "Số điện thoại",
+                        "CustomerName": "Tên khách hàng",
+                        "Pricing": "Đơn giá",
+                        "ToPricing": "Thành tiền",
+                        "TempolaryPrice": "TẠM TÍNH",
+                        "DiscountOnline": "Giảm giá thanh toán online",
+                        "Payment": "THANH TOÁN"
+                    }
                 }
             }
         }

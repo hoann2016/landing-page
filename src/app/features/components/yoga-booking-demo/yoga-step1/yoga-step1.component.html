@@ -1,101 +1,154 @@
 <div class="step-wrapper">
     <div class="step-header">
-        <h4 class="step-title">1. Chọn lớp học</h4>
-        <div class="step-current">{{ "Features.DemoSteps.Step" | translate }} 2/5</div>
+        <h4 class="step-title">1. {{ 'Features.DemoBooking.Yoga.Step.Step1.Title' | translate }}</h4>
+        <div class="step-current">{{ "Features.DemoSteps.Step" | translate }} 1/2</div>
     </div>
     <div class="step-body">
-        <form class="filter" [formGroup]="formFilterClass">
-            <div class="filter-class">
-                <div class="filter-select">
-                    <div class="select-box" [ngbPopover]="selectClass" placement="bottom" popoverClass="select-item">
-                        <div class="select-box-content">
-                            <div class="select-box-title">{{ classes[formFilterClass.get('classIndex').value]?.name }}
+        <form [formGroup]="formFilterClass">
+            <div class="filter">
+                <div class="filter-class">
+                    <div class="filter-select">
+                        <div class="select-box" [ngbPopover]="selectClass" placement="bottom"
+                            popoverClass="select-item">
+                            <div class="select-box-content">
+                                <div class="select-box-title">
+                                    {{ classes[formFilterClass.get('classIndex').value]?.name }}
+                                </div>
+                                <div class="select-box-description">
+                                    {{ classes[formFilterClass.get('classIndex').value]?.address }}</div>
                             </div>
-                            <div class="select-box-description">
-                                {{ classes[formFilterClass.get('classIndex').value]?.address }}</div>
+                            <span class="select-box-arrow-down">
+                                <fa-icon [icon]="icons?.arrowDown"></fa-icon>
+                            </span>
                         </div>
-                        <span class="select-box-arrow-down">
-                            <fa-icon [icon]="icons?.arrowDown"></fa-icon>
-                        </span>
+                        <ng-template #selectClass>
+                            <div class="list-class">
+                                <div class="class-item" *ngFor="let item of classes; let i = index;"
+                                    (click)="chooseClass(i)"
+                                    [ngClass]="{'active': formFilterClass.get('classIndex').value === i}">
+                                    <div class="class-item-title">{{ item?.name }}</div>
+                                    <div class="class-item-description">{{ item?.address }}</div>
+                                </div>
+                            </div>
+                        </ng-template>
                     </div>
-                    <ng-template #selectClass>
-                        <div class="list-class">
-                            <div class="class-item" *ngFor="let item of classes; let i = index;"
-                                (click)="chooseClass(i)"
-                                [ngClass]="{'active': formFilterClass.get('classIndex').value === i}">
-                                <div class="class-item-title">{{ item?.name }}</div>
-                                <div class="class-item-description">{{ item?.address }}</div>
+                </div>
+                <div class="filter-date">
+                    <div class="go-date" (click)="goDate(false)">
+                        <fa-icon [icon]="icons?.arrowLeft"></fa-icon>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input class="form-control select-date" placeholder="Chọn ngày học" name="dp" ngbDatepicker
+                                #d="ngbDatepicker" (click)="d.toggle()" container="body"
+                                [value]="formatter.format(formFilterClass?.get('currentDate').value)"
+                                formControlName="currentDate" (input)="changeDate($event)" [minDate]="minDate">
+                            <div class="input-group-append">
                             </div>
                         </div>
+                    </div>
+                    <div class="go-date" (click)="goDate(true)">
+                        <fa-icon [icon]="icons?.arrowRight"></fa-icon>
+                    </div>
+                </div>
+                <div class="filter-range">
+                    <div class="filter-range-box" [ngbPopover]="selectTimer" placement="bottom"
+                        popoverClass="select-range-time" [autoClose]="'outside'">
+                        <div class="filter-range-box-icon">
+                            <img src="/assets/images/features/clock.png" alt="Timer">
+                        </div>
+                        <div class="filter-range-box-timer">
+                            {{ formFilterClass?.get('timeFrom')?.value }} - {{ formFilterClass?.get('timeTo')?.value }}
+                        </div>
+                    </div>
+                    <ng-template #selectTimer>
+                        <range-slider [formControl]="formFilterClass?.get('rangeTime')" [range]="true" [step]="step"
+                            [marks]="marks"></range-slider>
                     </ng-template>
                 </div>
-            </div>
-            <div class="filter-date">
-                <div class="go-date" (click)="goDate(false)">
-                    <fa-icon [icon]="icons?.arrowLeft"></fa-icon>
-                </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <input class="form-control select-date" placeholder="Chọn ngày học" name="dp" ngbDatepicker
-                            #d="ngbDatepicker" (click)="d.toggle()" container="body"
-                            [value]="formatter.format(formFilterClass?.get('currentDate').value)" formControlName="currentDate"
-                            (input)="changeDate($event)" [minDate]="minDate">
-                        <div class="input-group-append">
+                <div class="filter-select-class">
+                    <div class="filter-select-class-box">
+                        <div class="select-box" [ngbPopover]="selectOneClass" placement="bottom"
+                            popoverClass="select-item-class">
+                            <div class="select-box-content">
+                                <div class="select-box-title">{{ listClassFilter[formFilterClass.get('roomIndex').value]?.title | translate }}</div>
+                            </div>
+                            <span class="select-box-arrow-down">
+                                <fa-icon [icon]="icons?.arrowDown"></fa-icon>
+                            </span>
                         </div>
+                        <ng-template #selectOneClass>
+                            <div class="list-class">
+                                <div class="list-class-item" *ngFor="let room of listClassFilter; let i = index;" (click)="chooseRoom(i)">{{ room?.title | translate }}</div>
+                            </div>
+                        </ng-template>
                     </div>
                 </div>
-                <div class="go-date" (click)="goDate(true)">
-                    <fa-icon [icon]="icons?.arrowRight"></fa-icon>
-                </div>
-            </div>
-            <div class="filter-range">
-                <div class="filter-range-box">
-                    <div class="filter-range-box-icon">
-                        <img src="/assets/images/features/clock.png" alt="Timer">
-                    </div>
-                    <div class="filter-range-box-timer">
-                        8:00 - 19:00
-                    </div>
-                </div>
-            </div>
-            <div class="filter-select-class">
-                <div class="filter-select-class-box">
-                    <div class="select-box" [ngbPopover]="selectOneClass" placement="bottom" popoverClass="select-item-class">
-                        <div class="select-box-content">
-                            <div class="select-box-title">Tất cả lớp</div>
+                <div class="filter-select-class teacher">
+                    <div class="filter-select-class-box">
+                        <div class="select-box" [ngbPopover]="selectTeacher" placement="bottom"
+                            popoverClass="select-item-class">
+                            <div class="select-box-content">
+                                <div class="select-box-title">{{ listTeachers[formFilterClass.get('teacherIndex').value]?.name | translate }}</div>
+                            </div>
+                            <span class="select-box-arrow-down">
+                                <fa-icon [icon]="icons?.arrowDown"></fa-icon>
+                            </span>
                         </div>
-                        <span class="select-box-arrow-down">
-                            <fa-icon [icon]="icons?.arrowDown"></fa-icon>
-                        </span>
+                        <ng-template #selectTeacher>
+                            <div class="list-class">
+                                <div class="list-class-item item-teacher" *ngFor="let teacher of listTeachers; let i = index;" (click)="chooseTeacher(i)">
+                                    <div class="teacher-avatar" *ngIf="teacher?.avatar">
+                                        <img [src]="teacher?.avatar" [alt]="teacher?.name">
+                                    </div>
+                                    <div class="teacher-name">
+                                        {{ teacher?.name | translate }}
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
                     </div>
-                    <ng-template #selectOneClass>
-                        <div class="list-class">
-                            <div class="list-class-item">Twisting</div>
-                            <div class="list-class-item">Vinyasa</div>
-                            <div class="list-class-item">Hatha Flow</div>
-                        </div>
-                    </ng-template>
-                </div>
-            </div>
-            <div class="filter-select-class teacher">
-                <div class="filter-select-class-box">
-                    <div class="select-box" [ngbPopover]="selectTeacher" placement="bottom" popoverClass="select-item-class">
-                        <div class="select-box-content">
-                            <div class="select-box-title">Tất cả giáo viên</div>
-                        </div>
-                        <span class="select-box-arrow-down">
-                            <fa-icon [icon]="icons?.arrowDown"></fa-icon>
-                        </span>
-                    </div>
-                    <ng-template #selectTeacher>
-                        <div class="list-class">
-                            <div class="list-class-item">Twisting</div>
-                            <div class="list-class-item">Vinyasa</div>
-                            <div class="list-class-item">Hatha Flow</div>
-                        </div>
-                    </ng-template>
                 </div>
             </div>
         </form>
+        <div class="list-studio">
+            <table class="table table-scroll">
+                <thead>
+                    <tr>
+                        <th scope="col" class="h-hour">{{ 'Features.DemoBooking.Yoga.Step.Step1.Hour' | translate }}</th>
+                        <th scope="col" class="h-class">{{ 'Features.DemoBooking.Yoga.Step.Step1.ClassRoom' | translate }}</th>
+                        <th scope="col" class="h-fee">{{ 'Features.DemoBooking.Yoga.Step.Step1.Fee' | translate }}</th>
+                        <th scope="col" class="h-slot">{{ 'Features.DemoBooking.Yoga.Step.Step1.Slot' | translate }}</th>
+                        <th scope="col" class="h-teacher">{{ 'Features.DemoBooking.Yoga.Step.Step1.Teacher' | translate }}</th>
+                        <th scope="col" class="h-room">{{ 'Features.DemoBooking.Yoga.Step.Step1.Room' | translate }}</th>
+                        <th scope="col" class="h-note">{{ 'Features.DemoBooking.Yoga.Step.Step1.Note' | translate }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr
+                        *ngFor="let item of listClasses; let i = index;"
+                        [ngClass]="{ 'full': item?.slot === 10 }" (click)="chooseClassAndGoToPayment(i)">
+                        <td class="h-hour">
+                            <span class="time-format">{{ item?.getTimeFormat }}</span>
+                        </td>
+                        <td class="h-class"><span class="class-name">{{ item?.name | translate }}</span></td>
+                        <td class="h-fee"><span class="price" translate [translateParams]="{price: (item?.price) | priceExchangeRate | async | number}">Pricing.TransformDong</span></td>
+                        <td class="h-slot">
+                            <span class="slot" [ngClass]="{ 'full': item?.slot === 10 }">{{ item?.slot }}/10</span>
+                        </td>
+                        <td class="h-teacher">
+                            <span class="user">
+                                <span class="user-avatar">
+                                    <img [src]="item?.getAvatar" [alt]="item?.name | translate">
+                                </span>
+                                <span class="user-name">{{ item?.user.name | translate }}</span>
+                            </span>
+                        </td>
+                        <td class="h-room"><span class="class-room">{{ item?.room | translate }}</span></td>
+                        <td class="h-note"><span class="note">{{ item?.note | translate }}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

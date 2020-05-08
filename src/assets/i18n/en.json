@@ -213,6 +213,7 @@
             "Title": "Who can use Ludiino Online Booking & Appointment Scheduling System?"
         },
         "Transform": "{{price}} USD",
+        "TransformDong": "{{price}} USD",
         "TransformUnit": "{{price}} {{unit}}",
         "TransformUnitTail": "USD",
         "Unit": "$"
@@ -431,6 +432,31 @@
                     "PowerVinyasaDes": "Đây là lớp Yoga giảm cân tuyệt vời",
                     "HipOpening": "Hip Opening",
                     "HipOpeningDes": "Tư thế Yoga nhẹ nhàng và đơn giản"
+                },
+                "Step": {
+                    "Step1": {
+                        "Title": "Select a class",
+                        "AllClass": "All class",
+                        "AllTeacher": "All Instructor",
+                        "Hour": "Time",
+                        "ClassRoom": "Class",
+                        "Fee": "Drop-in fee",
+                        "Slot": "Slot available",
+                        "Teacher": "Instructor",
+                        "Room": "Room",
+                        "Note": "Note"
+                    },
+                    "Step2": {
+                        "Title": "Thông tin khách hàng & Thanh toán",
+                        "Customer": "Full Name",
+                        "Phone": "Phone number",
+                        "CustomerName": "Name",
+                        "Pricing": "Unit Price",
+                        "ToPricing": "Total",
+                        "TempolaryPrice": "Tempolary price",
+                        "DiscountOnline": "Discount pay online",
+                        "Payment": "PAYMENT"
+                    }
                 }
             }
         }

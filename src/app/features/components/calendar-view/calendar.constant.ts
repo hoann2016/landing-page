@@ -77,7 +77,15 @@ const ServiceBookingsColor: { [key: string]: string } = {
     sampo_blow: '#F6C177',
     shampoo_style: '#F2A4BE',
     massage: '#88D5CD',
-    haircutwomen: '#F2A4BE'
+    haircutwomen: '#F2A4BE',
+    twisting: '#A7DFF8',
+    vinyasa: '#F6C177',
+    hatha_flow: '#F2A4BE',
+    morning_flow: '#88D5CD',
+    yoga_santulan: '#F2A4BE',
+    dynamic_flow: '#d65c5c',
+    power_vinyasa: '#e079d9',
+    hip_opening: '#50edda'
 };
 
 const CalendarDefaultBookings: Array<CalendarBooking> = [
