@@ -1,9 +1,18 @@
 import { NgbDateParserFormatter, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { Injectable } from '@angular/core';
 import { isNumber } from 'lodash';
+import { getDay } from 'date-fns';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable()
 export class NgbDateCustomParserFormatter extends NgbDateParserFormatter {
+
+    constructor(
+        private translate: TranslateService
+    ) {
+        super();
+    }
+
     parse(value: string): NgbDateStruct {
         if (value) {
             const dateParts = value.trim().split('/');
@@ -19,8 +28,14 @@ export class NgbDateCustomParserFormatter extends NgbDateParserFormatter {
     }
 
     format(date: NgbDateStruct): string {
-        return date ?
-            `${isNumber(date.day) ? (date.day > 9 ? date.day : '0' + date.day) : ''}/${isNumber(date.month) ? (date.month > 9 ? date.month : '0' + date.month ) : ''}/${date.year}` :
-            '';
+        if (date) {
+            const day: number = getDay(new Date(date.year, date.month - 1, date.day, 0, 0, 0, 0));
+            return date ?
+                `${ this.translate.instant('Common.DayOfWeek.' + day) } ${
+                        isNumber(date.day)
+                        ? (date.day > 9 ? date.day : '0' + date.day) : ''
+                    }/${isNumber(date.month) ? (date.month > 9 ? date.month : '0' + date.month ) : ''}/${date.year}` :
+                '';
+        }
     }
 }

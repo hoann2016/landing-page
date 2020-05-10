@@ -213,6 +213,7 @@
             "Title": "Who can use Ludiino Online Booking & Appointment Scheduling System?"
         },
         "Transform": "{{price}} USD",
+        "TransformDong": "{{price}} USD",
         "TransformUnit": "{{price}} {{unit}}",
         "TransformUnitTail": "USD",
         "Unit": "$"
@@ -390,13 +391,15 @@
             },
             "Content": {
                 "AllService": "All service",
+                "ViewByClass": "View by class",
                 "Filter": "Filter",
                 "Report": "Report",
                 "Time": "Time",
                 "Staff": "Staff",
                 "Type": {
                     "Barber": "Barber",
-                    "HairStylist": "Hair Stylist"
+                    "HairStylist": "Hair Stylist",
+                    "Class": "Class"
                 }
             },
             "Header": {
@@ -410,6 +413,51 @@
                 "HairCut": "Hair Cut",
                 "ShampooStyle": "Shampoo & Style",
                 "Massage": "Massage"
+            },
+            "Yoga": {
+                "Services": {
+                    "Twisting": "Twisting",
+                    "TwistingDes": "Tư thế Yoga nhẹ nhàng và đơn giản",
+                    "Vinyasa": "Vinyasa",
+                    "VinyasaDes": "Một chuỗi những động tác liên tục",
+                    "HathaFlow": "Hatha Flow",
+                    "HathaFlowDes": "Một chuỗi những bài tập thể chất",
+                    "MorningFlow": "Morning Flow",
+                    "MorningFlowDes": "Tư thế Yoga nhẹ nhàng và đơn giản",
+                    "YogaSantulan": "Yoga Santulan",
+                    "YogaSantulanDes": "Tác dụng tốt nhất đến hệ cơ và xương",
+                    "DynamicFlow": "Dynamic Flow",
+                    "DynamicFlowDes": "Lớp học giúp bạn nhanh chóng giảm cân",
+                    "PowerVinyasa": "Power Vinyasa",
+                    "PowerVinyasaDes": "Đây là lớp Yoga giảm cân tuyệt vời",
+                    "HipOpening": "Hip Opening",
+                    "HipOpeningDes": "Tư thế Yoga nhẹ nhàng và đơn giản"
+                },
+                "Step": {
+                    "Step1": {
+                        "Title": "Select a class",
+                        "AllClass": "All class",
+                        "AllTeacher": "All Instructor",
+                        "Hour": "Time",
+                        "ClassRoom": "Class",
+                        "Fee": "Drop-in fee",
+                        "Slot": "Slot available",
+                        "Teacher": "Instructor",
+                        "Room": "Room",
+                        "Note": "Note"
+                    },
+                    "Step2": {
+                        "Title": "Thông tin khách hàng & Thanh toán",
+                        "Customer": "Full Name",
+                        "Phone": "Phone number",
+                        "CustomerName": "Name",
+                        "Pricing": "Unit Price",
+                        "ToPricing": "Total",
+                        "TempolaryPrice": "Tempolary price",
+                        "DiscountOnline": "Discount pay online",
+                        "Payment": "PAYMENT"
+                    }
+                }
             }
         }
     },

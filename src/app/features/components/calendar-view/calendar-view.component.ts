@@ -1,6 +1,6 @@
 import {
     Component, OnInit, ChangeDetectionStrategy,
-    ChangeDetectorRef, Output, EventEmitter, ViewChild, ElementRef
+    ChangeDetectorRef, Output, EventEmitter, ViewChild, ElementRef, Input, OnChanges, SimpleChanges
 } from '@angular/core';
 import { timer } from 'rxjs';
 import { startOfWeek, endOfWeek, format, add, addMinutes } from 'date-fns';
@@ -12,12 +12,14 @@ import {
 import { CurrentWeekDay } from '../../models/calendar-viewer/current-week-day.model';
 import { CalendarStaff } from '../../models/calendar-viewer/calendar-staff.model';
 import {
-    CalendarStaffList, CalendarDefaultBookings, ServiceBookingsColor, CalendarSidebar
+    ServiceBookingsColor, CalendarSidebar, CalendarDefaultBookingsType,
+    CalendarStaffListType
 } from './calendar.constant';
 import { SidebarIconsModel, CalendarSidebarItem } from '../../models/calendar-viewer/sidebar-icons.model';
 import { CalendarBooking } from '../../models/calendar-viewer/calendar-booking.model';
 import { StepService } from '../../services/step.service';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
+import { BookingStepConstant } from '../../constants/booking-step.constant';
 
 @Component({
     selector: 'app-calendar-view',
@@ -53,7 +55,8 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
         ])
     ]
 })
-export class CalendarViewComponent implements OnInit {
+export class CalendarViewComponent implements OnInit, OnChanges {
+    @Input('type') solutionType: string = BookingStepConstant.defaultType;
     listIcons: SidebarIconsModel = {
         faCaretDown,
         faChevronLeft,
@@ -63,9 +66,9 @@ export class CalendarViewComponent implements OnInit {
         from: format(add(startOfWeek(new Date()), { days: 1 }), 'dd-MM-yyyy'),
         to: format(add(endOfWeek(new Date()), { days: 1 }), 'dd-MM-yyyy')
     };
-    staffs: Array<CalendarStaff> = CalendarStaffList;
+    staffs: Array<CalendarStaff> = CalendarStaffListType[this.solutionType];
     servicesColor: { [key: string]: string } = ServiceBookingsColor;
-    tickets: Array<CalendarBooking> = CalendarDefaultBookings;
+    tickets: Array<CalendarBooking> = CalendarDefaultBookingsType[this.solutionType];
     sidebarItems: Array<CalendarSidebarItem> = CalendarSidebar;
     listDaysInWeek: Array<string> = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     @Output('bookingIsCreated') bookingCreated: EventEmitter<boolean> = new EventEmitter<boolean>();
@@ -80,6 +83,7 @@ export class CalendarViewComponent implements OnInit {
         // Cong thuc: height: 45px; -> top: so half * 45px + 3px. height: half * 45px - 8px
         this.stepService.dispatchCreateNewTicketBooking$.subscribe((status: boolean) => {
             const booking = this.stepService.testBookingData();
+            console.log({ booking });
             if (status && booking) {
                 const bookingHelperData: any = {
                     today: new Date(),
@@ -124,6 +128,13 @@ export class CalendarViewComponent implements OnInit {
                 this.handleCloseBlurAnimation();
             }
         });
+    }
+
+    ngOnChanges(changes: SimpleChanges) {
+        if (changes && changes.solutionType && !changes.solutionType.firstChange) {
+            this.tickets = CalendarDefaultBookingsType[this.solutionType];
+            this.staffs = CalendarStaffListType[this.solutionType];
+        }
     }
 
     handleCloseBlurAnimation(): void {
