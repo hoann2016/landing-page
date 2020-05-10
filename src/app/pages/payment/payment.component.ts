@@ -137,7 +137,6 @@ export class PaymentComponent implements OnInit {
                 const order = sessionStorage.getItem('order');
                 const packages = sessionStorage.getItem('packages');
                 const configPackages = sessionStorage.getItem('configPackages');
-                console.log('configPackages', !configPackages);
                 if (!paymentSession || !packages || !order || !configPackages) {
                     this.router.navigate(['/pages/sign-up']);
                 }
@@ -169,7 +168,6 @@ export class PaymentComponent implements OnInit {
                         if (updateResponse.success) {
                             this.toastr.success(this.translate.instant('Payment.PaymentSuccessfully'));
                             sessionStorage.removeItem('paymentSession');
-                            this.showLoading = false;
                             this.router.navigateByUrl('/pages/clone-site', { 
                                 state: 
                                 { 
@@ -195,14 +193,17 @@ export class PaymentComponent implements OnInit {
             if (response.success === true) {
                 this.banks = response.data.bank;
                 this.cc = response.data.cc;
+                this.showLoading = false;
             }
         },
         err => {
+            this.showLoading = false;
             throw err;
         });
     }
 
     ngOnInit() {
+        this.showLoading = true;
         this.tax = 0;
         this.channel_id = 1;
         this.currency_id = 1;
