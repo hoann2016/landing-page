@@ -18,13 +18,13 @@ export class FeatureHeaderComponent implements OnInit {
     activeSolution: number = 0;
     bookingSolutions: Array<{title: string, value: string, componnent: any, class: string}> = [
         {
-            title: 'Create a Test Booking For Salon',
+            title: 'Features.DemoBooking.Header.TestBookingForSalon',
             value: 'salon',
             componnent: SalonBookingDemoComponent,
             class: 'salon-booking'
         },
         {
-            title: 'Create a Test Booking For Yoga',
+            title: 'Features.DemoBooking.Header.TestBookingForYoga',
             value: 'yoga',
             componnent: YogaBookingDemoComponent,
             class: 'yoga-booking'

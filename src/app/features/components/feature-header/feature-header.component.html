@@ -12,7 +12,7 @@
             <div class="feature-header-box-header-booking-button-box">
                 <div class="feature-header-box-header-booking-button-wrap" #bookingOption [ngClass]="{ 'jumping': stateHeaders?.isJumping }">
                     <span class="feature-header-box-header-booking-button-wrap-text noselect" (click)="openChooseSolution()">
-                        {{ bookingSolutions[activeSolution]?.title }} <fa-icon [icon]="icons?.caretDown"></fa-icon>
+                        {{ bookingSolutions[activeSolution]?.title | translate }} <fa-icon [icon]="icons?.caretDown"></fa-icon>
                     </span>
                     <span class="feature-header-box-header-booking-button-wrap-booking" (click)="bookNow()">
                         Book now
@@ -27,7 +27,7 @@
                             (click)="chooseTypeSolution(i)"
                             [ngClass]="{ 'active': activeSolution === i }"
                         >
-                            {{ solution?.title }}
+                            {{ solution?.title | translate }}
                         </div>
                     </div>
                 </div>

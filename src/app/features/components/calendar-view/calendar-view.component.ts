@@ -13,7 +13,7 @@ import { CurrentWeekDay } from '../../models/calendar-viewer/current-week-day.mo
 import { CalendarStaff } from '../../models/calendar-viewer/calendar-staff.model';
 import {
     ServiceBookingsColor, CalendarSidebar, CalendarDefaultBookingsType,
-    CalendarStaffListType
+    CalendarStaffListType, CalendarStaffForFeature
 } from './calendar.constant';
 import { SidebarIconsModel, CalendarSidebarItem } from '../../models/calendar-viewer/sidebar-icons.model';
 import { CalendarBooking } from '../../models/calendar-viewer/calendar-booking.model';
@@ -66,6 +66,7 @@ export class CalendarViewComponent implements OnInit, OnChanges {
         from: format(add(startOfWeek(new Date()), { days: 1 }), 'dd-MM-yyyy'),
         to: format(add(endOfWeek(new Date()), { days: 1 }), 'dd-MM-yyyy')
     };
+    listStaffs: Array<CalendarStaff> = CalendarStaffForFeature[this.solutionType];
     staffs: Array<CalendarStaff> = CalendarStaffListType[this.solutionType];
     servicesColor: { [key: string]: string } = ServiceBookingsColor;
     tickets: Array<CalendarBooking> = CalendarDefaultBookingsType[this.solutionType];
@@ -102,7 +103,7 @@ export class CalendarViewComponent implements OnInit, OnChanges {
                         format(addMinutes(dateBooking, booking.duration), 'HH:mm' )
                     }`,
                     serviceName: booking.serviceName,
-                    staffName: this.staffs[Math.floor(Math.random() * this.staffs.length)].name,
+                    staffName: booking.staffName ? booking.staffName : this.staffs[Math.floor(Math.random() * this.staffs.length)].name,
                     styles: {
                         top: (this.compareDiffTwoHour(bookingHelperData.bookingTime) * 45 * 2 + 3) + 'px',
                         left: `calc(${ this.listDaysInWeek.indexOf(booking.selectedDOW) }00% + 4px)`,
@@ -133,6 +134,7 @@ export class CalendarViewComponent implements OnInit, OnChanges {
     ngOnChanges(changes: SimpleChanges) {
         if (changes && changes.solutionType && !changes.solutionType.firstChange) {
             this.tickets = CalendarDefaultBookingsType[this.solutionType];
+            this.listStaffs = CalendarStaffForFeature[this.solutionType];
             this.staffs = CalendarStaffListType[this.solutionType];
         }
     }

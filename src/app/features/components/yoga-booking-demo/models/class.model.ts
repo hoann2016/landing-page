@@ -9,6 +9,7 @@ export class ClassModel {
     public user: {
         name: string;
         avatar: string;
+        id: number;
     }
     public room: string;
     public note: string;

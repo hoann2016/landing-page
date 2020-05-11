@@ -5,6 +5,7 @@ import { Subject } from 'rxjs';
 import { distinctUntilChanged, takeUntil, pluck, map } from 'rxjs/operators';
 import { getDay, format } from 'date-fns';
 import { StepService } from 'app/features/services/step.service';
+import { StaffList } from '../constants/staff.constant';
 
 @Component({
     selector: 'app-yoga-step2',
@@ -62,7 +63,8 @@ export class YogaStep2Component implements OnInit, OnDestroy {
             discount: [0],
             subTotal: [0],
             serviceName: [null],
-            type: [null]
+            type: [null],
+            user: [1]
         });
     }
 
@@ -71,21 +73,24 @@ export class YogaStep2Component implements OnInit, OnDestroy {
             distinctUntilChanged(),
             takeUntil(this._onDestroy$)
         ).subscribe((data: any) => {
-            const value: any = data.value;
-            const filter: any = data.filter;
-            const total: number = value.price * parseFloat(this.formPaymentYoga.get('quantity').value);
-            const discount: number = this.formPaymentYoga.get('payNow').value ? total * 10 / 100 : 0;
-            this.formPaymentYoga.patchValue({
-                dayTime: getDay(new Date(filter.currentDate.year, filter.currentDate.month - 1, filter.currentDate.day)),
-                day: format(new Date(filter.currentDate.year, filter.currentDate.month - 1, filter.currentDate.day), 'dd/MM/yyyy'),
-                price: value.price,
-                time: format(value.timeFrom, 'HH:mm a'),
-                subTotal: total,
-                discount: discount,
-                total: total - discount,
-                serviceName: value.name,
-                type: value.type
-            });
+            if (data && data.value && data.filter) {
+                const value: any = data.value;
+                const filter: any = data.filter;
+                const total: number = value.price * parseFloat(this.formPaymentYoga.get('quantity').value);
+                const discount: number = this.formPaymentYoga.get('payNow').value ? total * 10 / 100 : 0;
+                this.formPaymentYoga.patchValue({
+                    dayTime: getDay(new Date(filter.currentDate.year, filter.currentDate.month - 1, filter.currentDate.day)),
+                    day: format(new Date(filter.currentDate.year, filter.currentDate.month - 1, filter.currentDate.day), 'dd/MM/yyyy'),
+                    price: value.price,
+                    time: format(value.timeFrom, 'HH:mm a'),
+                    subTotal: total,
+                    discount: discount,
+                    total: total - discount,
+                    serviceName: value.name,
+                    type: value.type,
+                    user: value.user.id
+                });
+            }
         });
 
         this.formPaymentYoga.valueChanges.pipe(
@@ -113,7 +118,7 @@ export class YogaStep2Component implements OnInit, OnDestroy {
                 quantity: formValue.quantity,
                 selectedDOW: this.listDaysInWeek[formValue.dayTime],
                 serviceName: formValue.serviceName,
-                staffName: "Ludiino Booking",
+                staffName: StaffList[formValue.user - 1].name || null,
                 time: formValue.time.split(" ")[0],
                 timePeriod: formValue.time.split(" ")[0],
                 type: formValue.type
