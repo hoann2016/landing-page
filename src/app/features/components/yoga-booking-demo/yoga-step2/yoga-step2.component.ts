@@ -64,7 +64,7 @@ export class YogaStep2Component implements OnInit, OnDestroy {
             subTotal: [0],
             serviceName: [null],
             type: [null],
-            user: [0]
+            user: [1]
         });
     }
 
