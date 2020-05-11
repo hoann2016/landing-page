@@ -5,11 +5,11 @@
     </div>
     <div class="step-body">
         <form [formGroup]="formFilterClass">
-            <div class="filter">
-                <div class="filter-class">
+            <div class="filter master-filter">
+                <div class="filter-class filter-cursor">
                     <div class="filter-select">
                         <div class="select-box" [ngbPopover]="selectClass" placement="bottom"
-                            popoverClass="select-item">
+                            popoverClass="select-item" [container]="'.master-filter'" placement="bottom-left">
                             <div class="select-box-content">
                                 <div class="select-box-title">
                                     {{ classes[formFilterClass.get('classIndex').value]?.name }}
@@ -33,7 +33,7 @@
                         </ng-template>
                     </div>
                 </div>
-                <div class="filter-date">
+                <div class="filter-date filter-cursor">
                     <div class="go-date" (click)="goDate(false)">
                         <fa-icon [icon]="icons?.arrowLeft"></fa-icon>
                     </div>
@@ -51,7 +51,7 @@
                         <fa-icon [icon]="icons?.arrowRight"></fa-icon>
                     </div>
                 </div>
-                <div class="filter-range">
+                <div class="filter-range filter-cursor">
                     <div class="filter-range-box" [ngbPopover]="selectTimer" placement="bottom"
                         popoverClass="select-range-time" [autoClose]="'outside'">
                         <div class="filter-range-box-icon">
@@ -66,7 +66,7 @@
                             [marks]="marks"></range-slider>
                     </ng-template>
                 </div>
-                <div class="filter-select-class">
+                <div class="filter-select-class filter-cursor">
                     <div class="filter-select-class-box">
                         <div class="select-box" [ngbPopover]="selectOneClass" placement="bottom"
                             popoverClass="select-item-class">
@@ -84,7 +84,7 @@
                         </ng-template>
                     </div>
                 </div>
-                <div class="filter-select-class teacher">
+                <div class="filter-select-class teacher filter-cursor">
                     <div class="filter-select-class-box">
                         <div class="select-box" [ngbPopover]="selectTeacher" placement="bottom"
                             popoverClass="select-item-class">

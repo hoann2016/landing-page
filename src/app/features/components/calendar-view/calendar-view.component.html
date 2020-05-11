@@ -79,7 +79,7 @@
             <div class="calendar-viewer-content-staff-list">
                 <div
                     class="calendar-viewer-content-staff-list-item"
-                    *ngFor="let staff of staffs; let i = index; trackBy: trackByCalendarStaff;"
+                    *ngFor="let staff of listStaffs; let i = index; trackBy: trackByCalendarStaff;"
                 >
                     <div class="calendar-viewer-content-staff-list-item-avatar">
                         <img [src]="staff?.avatar" [alt]="staff?.name" width="45" height="45">

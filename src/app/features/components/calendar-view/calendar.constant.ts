@@ -67,9 +67,47 @@ const YogaStaffList: Array<CalendarStaff> = [
     }
 ];
 
+const YogaStaffListFeature: Array<CalendarStaff> = [
+    {
+        id: 1,
+        avatar: '/assets/images/features/classes/hatha-flow.jpg',
+        name: 'Hatha Flow',
+        title: 'Features.DemoBooking.Content.Type.Class'
+    },
+    {
+        id: 2,
+        avatar: '/assets/images/features/classes/morning-flow.jpg',
+        name: 'Morning Flow',
+        title: 'Features.DemoBooking.Content.Type.Class'
+    },
+    {
+        id: 3,
+        avatar: '/assets/images/features/classes/yoga-santulan.jpg',
+        name: 'Yoga Santulan',
+        title: 'Features.DemoBooking.Content.Type.Class'
+    },
+    {
+        id: 4,
+        avatar: '/assets/images/features/classes/hip-opening.jpg',
+        name: 'Hip Opening',
+        title: 'Features.DemoBooking.Content.Type.Class'
+    },
+    {
+        id: 5,
+        avatar: '/assets/images/features/classes/vinyasa.jpg',
+        name: 'Vinyasa',
+        title: 'Features.DemoBooking.Content.Type.Class'
+    }
+];
+
 const CalendarStaffListType: { [key: string]: Array<CalendarStaff> } = {
     salon: CalendarStaffList,
     yoga: YogaStaffList
+};
+
+const CalendarStaffForFeature: { [key: string]: Array<CalendarStaff> } = {
+    salon: CalendarStaffList,
+    yoga: YogaStaffListFeature
 };
 
 const ServiceBookingsColor: { [key: string]: string } = {
@@ -442,5 +480,5 @@ const CalendarSidebar: CalendarSidebarItem[] = [
 
 export {
     CalendarStaffList, CalendarSidebar, CalendarDefaultBookings, ServiceBookingsColor, CalendarDefaultBookingsType,
-    CalendarStaffListType
+    CalendarStaffListType, CalendarStaffForFeature
 };

@@ -7,6 +7,7 @@ import { distinctUntilChanged, debounceTime, takeUntil, map, tap } from 'rxjs/op
 import { ClassModel } from '../models/class.model';
 import { isAfter, isBefore, isEqual } from 'date-fns';
 import { YogaBookingService } from '../services/yoga-booking.service';
+import { StaffList } from '../constants/staff.constant';
 
 const listStudio: Array<{name: string; address: string}> = [
     {
@@ -36,11 +37,12 @@ const CLASSES: Array<ClassModel> = [
         slot: 3,
         user: {
             name: 'Linh Đỗ',
-            avatar: '/assets/images/features/staff/yoga/linh-do.png'
+            avatar: '/assets/images/features/staff/yoga/linh-do.png',
+            id: 1
         },
         room: 'Natural View',
         note: 'Tư thế Yoga nhẹ nhàng và đơn giản',
-        type: 'twisting'
+        type: 'twisting',
     }),
     new ClassModel({
         timeFrom: new Date(2020, 5, 5, 10, 0, 0, 0),
@@ -49,6 +51,7 @@ const CLASSES: Array<ClassModel> = [
         price: 50000,
         slot: 5,
         user: {
+            id: 2,
             name: 'Trung Kiên',
             avatar: '/assets/images/features/staff/yoga/trung-kien.png'
         },
@@ -63,6 +66,7 @@ const CLASSES: Array<ClassModel> = [
         price: 50000,
         slot: 7,
         user: {
+            id: 3,
             name: 'Hồng Hạnh',
             avatar: '/assets/images/features/staff/yoga/hong-hanh.png'
         },
@@ -77,6 +81,7 @@ const CLASSES: Array<ClassModel> = [
         price: 50000,
         slot: 7,
         user: {
+            id: 4,
             name: 'Minh Hằng',
             avatar: '/assets/images/features/staff/yoga/minh-hang.png'
         },
@@ -91,6 +96,7 @@ const CLASSES: Array<ClassModel> = [
         price: 75000,
         slot: 4,
         user: {
+            id: 5,
             name: 'Uyên Linh',
             avatar: '/assets/images/features/staff/yoga/uyen-linh.png'
         },
@@ -105,6 +111,7 @@ const CLASSES: Array<ClassModel> = [
         price: 50000,
         slot: 10,
         user: {
+            id: 3,
             name: 'Hồng Hạnh',
             avatar: '/assets/images/features/staff/yoga/hong-hanh.png'
         },
@@ -119,6 +126,7 @@ const CLASSES: Array<ClassModel> = [
         price: 50000,
         slot: 10,
         user: {
+            id: 4,
             name: 'Minh Hằng',
             avatar: '/assets/images/features/staff/yoga/minh-hang.png'
         },
@@ -133,6 +141,7 @@ const CLASSES: Array<ClassModel> = [
         price: 50000,
         slot: 6,
         user: {
+            id: 5,
             name: 'Uyên Linh',
             avatar: '/assets/images/features/staff/yoga/uyen-linh.png'
         },
@@ -147,6 +156,7 @@ const CLASSES: Array<ClassModel> = [
         price: 50000,
         slot: 2,
         user: {
+            id: 2,
             name: 'Trung Kiên',
             avatar: '/assets/images/features/staff/yoga/trung-kien.png'
         },
@@ -161,6 +171,7 @@ const CLASSES: Array<ClassModel> = [
         price: 50000,
         slot: 10,
         user: {
+            id: 4,
             name: 'Minh Hằng',
             avatar: '/assets/images/features/staff/yoga/minh-hang.png'
         },
@@ -175,6 +186,7 @@ const CLASSES: Array<ClassModel> = [
         price: 50000,
         slot: 6,
         user: {
+            id: 5,
             name: 'Uyên Linh',
             avatar: '/assets/images/features/staff/yoga/uyen-linh.png'
         },
@@ -189,6 +201,7 @@ const CLASSES: Array<ClassModel> = [
         price: 50000,
         slot: 2,
         user: {
+            id: 2,
             name: 'Trung Kiên',
             avatar: '/assets/images/features/staff/yoga/trung-kien.png'
         },
@@ -203,6 +216,7 @@ const CLASSES: Array<ClassModel> = [
         price: 50000,
         slot: 10,
         user: {
+            id: 4,
             name: 'Minh Hằng',
             avatar: '/assets/images/features/staff/yoga/minh-hang.png'
         },
@@ -217,6 +231,7 @@ const CLASSES: Array<ClassModel> = [
         price: 50000,
         slot: 6,
         user: {
+            id: 5,
             name: 'Uyên Linh',
             avatar: '/assets/images/features/staff/yoga/uyen-linh.png'
         },
@@ -231,6 +246,7 @@ const CLASSES: Array<ClassModel> = [
         price: 50000,
         slot: 2,
         user: {
+            id: 2,
             name: 'Trung Kiên',
             avatar: '/assets/images/features/staff/yoga/trung-kien.png'
         },
@@ -245,6 +261,7 @@ const CLASSES: Array<ClassModel> = [
         price: 50000,
         slot: 10,
         user: {
+            id: 4,
             name: 'Minh Hằng',
             avatar: '/assets/images/features/staff/yoga/minh-hang.png'
         },
@@ -259,6 +276,7 @@ const CLASSES: Array<ClassModel> = [
         price: 50000,
         slot: 6,
         user: {
+            id: 5,
             name: 'Uyên Linh',
             avatar: '/assets/images/features/staff/yoga/uyen-linh.png'
         },
@@ -273,6 +291,7 @@ const CLASSES: Array<ClassModel> = [
         price: 50000,
         slot: 2,
         user: {
+            id: 2,
             name: 'Trung Kiên',
             avatar: '/assets/images/features/staff/yoga/trung-kien.png'
         },
@@ -348,33 +367,8 @@ export class YogaStep1Component implements OnInit, OnDestroy {
             name: 'Features.DemoBooking.Yoga.Step.Step1.AllTeacher',
             value: null,
             avatar: null
-        },
-        {
-            name: 'Linh Đỗ',
-            avatar: '/assets/images/features/staff/yoga/linh-do.png',
-            value: 'Linh Đỗ'
-        },
-        {
-            name: 'Trung Kiên',
-            avatar: '/assets/images/features/staff/yoga/trung-kien.png',
-            value: 'Trung Kiên'
-        },
-        {
-            name: 'Hồng Hạnh',
-            avatar: '/assets/images/features/staff/yoga/hong-hanh.png',
-            value: 'Hồng Hạnh'
-        },
-        {
-            name: 'Minh Hằng',
-            avatar: '/assets/images/features/staff/yoga/minh-hang.png',
-            value: 'Minh Hằng'
-        },
-        {
-            name: 'Uyên Linh',
-            avatar: '/assets/images/features/staff/yoga/uyen-linh.png',
-            value: 'Uyên Linh'
         }
-    ];
+    ].concat(StaffList);
 
     private _onDestroy$: Subject<boolean> = new Subject<boolean>();
 

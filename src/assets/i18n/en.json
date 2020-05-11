@@ -406,7 +406,9 @@
                 "Title": "Ludiino",
                 "Description": "Online Booking & Appointment Scheduling Features",
                 "Content": "Great features are packaged into a powerful online solution that creates competitive advantages for your business in the digital age",
-                "CreateTestBooking": "Create a test booking"
+                "CreateTestBooking": "Create a test booking",
+                "TestBookingForYoga": "Create a Test Booking For Yoga",
+                "TestBookingForSalon": "Create a Test Booking For Salon"
             },
             "Service": {
                 "ShampooBlow": "Shampoo - Blow Dry",
@@ -447,7 +449,7 @@
                         "Note": "Note"
                     },
                     "Step2": {
-                        "Title": "Thông tin khách hàng & Thanh toán",
+                        "Title": "Customer Information & Payment",
                         "Customer": "Full Name",
                         "Phone": "Phone number",
                         "CustomerName": "Name",
