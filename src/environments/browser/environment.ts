@@ -8,7 +8,7 @@ export const environment = {
   isServer: false,
   // for prerender
   host: 'http://localhost:4000',
-  rootproto: 'http://',
+  rootproto: 'https://',
   rootip: 'dev.ludiino.com',
   rootpath: '/',
   socketPath: '/socket',
