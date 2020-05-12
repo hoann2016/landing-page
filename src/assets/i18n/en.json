@@ -438,8 +438,8 @@
                 "Step": {
                     "Step1": {
                         "Title": "Select a class",
-                        "AllClass": "All class",
-                        "AllTeacher": "All Instructor",
+                        "AllClass": "All classes",
+                        "AllTeacher": "All Instructors",
                         "Hour": "Time",
                         "ClassRoom": "Class",
                         "Fee": "Drop-in fee",

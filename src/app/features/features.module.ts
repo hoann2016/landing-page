@@ -23,6 +23,7 @@ import { YogaBookingDemoComponent } from './components/yoga-booking-demo/yoga-bo
 import { YogaStep1Component } from './components/yoga-booking-demo/yoga-step1/yoga-step1.component';
 import { YogaStep2Component } from './components/yoga-booking-demo/yoga-step2/yoga-step2.component';
 import { RangeSliderModule } from '@libs/slider/range-slider.module';
+import { YogaTimeFormatPipe } from './components/yoga-booking-demo/pipes/time-yoga-format.pipe';
 
 @NgModule({
     declarations: [
@@ -38,7 +39,8 @@ import { RangeSliderModule } from '@libs/slider/range-slider.module';
         SalonBookingDemoComponent,
         YogaBookingDemoComponent,
         YogaStep1Component,
-        YogaStep2Component
+        YogaStep2Component,
+        YogaTimeFormatPipe
     ],
     imports: [
         CommonModule,

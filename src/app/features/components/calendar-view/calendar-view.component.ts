@@ -84,7 +84,6 @@ export class CalendarViewComponent implements OnInit, OnChanges {
         // Cong thuc: height: 45px; -> top: so half * 45px + 3px. height: half * 45px - 8px
         this.stepService.dispatchCreateNewTicketBooking$.subscribe((status: boolean) => {
             const booking = this.stepService.testBookingData();
-            console.log({ booking });
             if (status && booking) {
                 const bookingHelperData: any = {
                     today: new Date(),

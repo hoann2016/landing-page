@@ -5,9 +5,10 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { distinctUntilChanged, debounceTime, takeUntil, map, tap } from 'rxjs/operators';
 import { ClassModel } from '../models/class.model';
-import { isAfter, isBefore, isEqual } from 'date-fns';
+import { isAfter, isBefore, isEqual, getDay } from 'date-fns';
 import { YogaBookingService } from '../services/yoga-booking.service';
 import { StaffList } from '../constants/staff.constant';
+import { Classes } from '../constants/class.constant';
 
 const listStudio: Array<{name: string; address: string}> = [
     {
@@ -28,279 +29,6 @@ const listStudio: Array<{name: string; address: string}> = [
     }
 ];
 
-const CLASSES: Array<ClassModel> = [
-    new ClassModel({
-        timeFrom: new Date(2020, 5, 5, 8, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 9, 0, 0, 0),
-        name: 'Twisting',
-        price: 50000,
-        slot: 3,
-        user: {
-            name: 'Linh Đỗ',
-            avatar: '/assets/images/features/staff/yoga/linh-do.png',
-            id: 1
-        },
-        room: 'Natural View',
-        note: 'Tư thế Yoga nhẹ nhàng và đơn giản',
-        type: 'twisting',
-    }),
-    new ClassModel({
-        timeFrom: new Date(2020, 5, 5, 10, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 11, 0, 0, 0),
-        name: 'Vinyasa',
-        price: 50000,
-        slot: 5,
-        user: {
-            id: 2,
-            name: 'Trung Kiên',
-            avatar: '/assets/images/features/staff/yoga/trung-kien.png'
-        },
-        room: 'Ocean View',
-        note: 'Một chuỗi những động tác liên tục',
-        type: 'vinyasa'
-    }),
-    new ClassModel({
-        timeFrom: new Date(2020, 5, 5, 9, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 10, 0, 0, 0),
-        name: 'Hatha Flow',
-        price: 50000,
-        slot: 7,
-        user: {
-            id: 3,
-            name: 'Hồng Hạnh',
-            avatar: '/assets/images/features/staff/yoga/hong-hanh.png'
-        },
-        room: 'Natural View',
-        note: 'Tư thế Yoga nhẹ nhàng và đơn giản',
-        type: 'hatha_flow'
-    }),
-    new ClassModel({
-        timeFrom: new Date(2020, 5, 5, 8, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 9, 0, 0, 0),
-        name: 'Morning Flow',
-        price: 50000,
-        slot: 7,
-        user: {
-            id: 4,
-            name: 'Minh Hằng',
-            avatar: '/assets/images/features/staff/yoga/minh-hang.png'
-        },
-        room: 'Natural View',
-        note: 'Tác dụng tốt nhất đến hệ cơ và xương',
-        type: 'morning_flow'
-    }),
-    new ClassModel({
-        timeFrom: new Date(2020, 5, 5, 8, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 9, 0, 0, 0),
-        name: 'Yoga Santulan',
-        price: 75000,
-        slot: 4,
-        user: {
-            id: 5,
-            name: 'Uyên Linh',
-            avatar: '/assets/images/features/staff/yoga/uyen-linh.png'
-        },
-        room: 'Natural View',
-        note: 'Lớp học giúp bạn nhanh chóng giảm cân',
-        type: 'yoga_santulan'
-    }),
-    new ClassModel({
-        timeFrom: new Date(2020, 5, 5, 8, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 9, 0, 0, 0),
-        name: 'Dynamic Flow',
-        price: 50000,
-        slot: 10,
-        user: {
-            id: 3,
-            name: 'Hồng Hạnh',
-            avatar: '/assets/images/features/staff/yoga/hong-hanh.png'
-        },
-        room: 'Natural View',
-        note: 'Đây là lớp Yoga giảm cân tuyệt vời',
-        type: 'dynamic_flow'
-    }),
-    new ClassModel({
-        timeFrom: new Date(2020, 5, 5, 8, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 9, 0, 0, 0),
-        name: 'Power Vinyasa',
-        price: 50000,
-        slot: 10,
-        user: {
-            id: 4,
-            name: 'Minh Hằng',
-            avatar: '/assets/images/features/staff/yoga/minh-hang.png'
-        },
-        room: 'Natural View',
-        note: 'Tư thế Yoga nhẹ nhàng và đơn giản',
-        type: 'power_vinyasa'
-    }),
-    new ClassModel({
-        timeFrom: new Date(2020, 5, 5, 8, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 9, 0, 0, 0),
-        name: 'Hip Opening',
-        price: 50000,
-        slot: 6,
-        user: {
-            id: 5,
-            name: 'Uyên Linh',
-            avatar: '/assets/images/features/staff/yoga/uyen-linh.png'
-        },
-        room: 'Natural View',
-        note: 'Tư thế Yoga nhẹ nhàng và đơn giản',
-        type: 'hip_opening'
-    }),
-    new ClassModel({
-        timeFrom: new Date(2020, 5, 5, 10, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 11, 0, 0, 0),
-        name: 'Vinyasa',
-        price: 50000,
-        slot: 2,
-        user: {
-            id: 2,
-            name: 'Trung Kiên',
-            avatar: '/assets/images/features/staff/yoga/trung-kien.png'
-        },
-        room: 'Ocean View',
-        note: 'Một chuỗi những động tác liên tục',
-        type: 'twisting'
-    }),
-    new ClassModel({
-        timeFrom: new Date(2020, 5, 5, 8, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 9, 0, 0, 0),
-        name: 'Power Vinyasa',
-        price: 50000,
-        slot: 10,
-        user: {
-            id: 4,
-            name: 'Minh Hằng',
-            avatar: '/assets/images/features/staff/yoga/minh-hang.png'
-        },
-        room: 'Natural View',
-        note: 'Tư thế Yoga nhẹ nhàng và đơn giản',
-        type: 'power_vinyasa'
-    }),
-    new ClassModel({
-        timeFrom: new Date(2020, 5, 5, 8, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 9, 0, 0, 0),
-        name: 'Hip Opening',
-        price: 50000,
-        slot: 6,
-        user: {
-            id: 5,
-            name: 'Uyên Linh',
-            avatar: '/assets/images/features/staff/yoga/uyen-linh.png'
-        },
-        room: 'Natural View',
-        note: 'Tư thế Yoga nhẹ nhàng và đơn giản',
-        type: 'hip_opening'
-    }),
-    new ClassModel({
-        timeFrom: new Date(2020, 5, 5, 10, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 11, 0, 0, 0),
-        name: 'Vinyasa',
-        price: 50000,
-        slot: 2,
-        user: {
-            id: 2,
-            name: 'Trung Kiên',
-            avatar: '/assets/images/features/staff/yoga/trung-kien.png'
-        },
-        room: 'Ocean View',
-        note: 'Một chuỗi những động tác liên tục',
-        type: 'twisting'
-    }),
-    new ClassModel({
-        timeFrom: new Date(2020, 5, 5, 12, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 13, 0, 0, 0),
-        name: 'Power Vinyasa',
-        price: 50000,
-        slot: 10,
-        user: {
-            id: 4,
-            name: 'Minh Hằng',
-            avatar: '/assets/images/features/staff/yoga/minh-hang.png'
-        },
-        room: 'Natural View',
-        note: 'Tư thế Yoga nhẹ nhàng và đơn giản',
-        type: 'power_vinyasa'
-    }),
-    new ClassModel({
-        timeFrom: new Date(2020, 5, 5, 8, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 9, 0, 0, 0),
-        name: 'Hip Opening',
-        price: 50000,
-        slot: 6,
-        user: {
-            id: 5,
-            name: 'Uyên Linh',
-            avatar: '/assets/images/features/staff/yoga/uyen-linh.png'
-        },
-        room: 'Natural View',
-        note: 'Tư thế Yoga nhẹ nhàng và đơn giản',
-        type: 'hip_opening'
-    }),
-    new ClassModel({
-        timeFrom: new Date(2020, 5, 5, 10, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 11, 0, 0, 0),
-        name: 'Vinyasa',
-        price: 50000,
-        slot: 2,
-        user: {
-            id: 2,
-            name: 'Trung Kiên',
-            avatar: '/assets/images/features/staff/yoga/trung-kien.png'
-        },
-        room: 'Ocean View',
-        note: 'Một chuỗi những động tác liên tục',
-        type: 'vinyasa'
-    }),
-    new ClassModel({
-        timeFrom: new Date(2020, 5, 5, 9, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 10, 0, 0, 0),
-        name: 'Power Vinyasa',
-        price: 50000,
-        slot: 10,
-        user: {
-            id: 4,
-            name: 'Minh Hằng',
-            avatar: '/assets/images/features/staff/yoga/minh-hang.png'
-        },
-        room: 'Natural View',
-        note: 'Tư thế Yoga nhẹ nhàng và đơn giản',
-        type: 'power_vinyasa'
-    }),
-    new ClassModel({
-        timeFrom: new Date(2020, 5, 5, 11, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 12, 0, 0, 0),
-        name: 'Hip Opening',
-        price: 50000,
-        slot: 6,
-        user: {
-            id: 5,
-            name: 'Uyên Linh',
-            avatar: '/assets/images/features/staff/yoga/uyen-linh.png'
-        },
-        room: 'Natural View',
-        note: 'Tư thế Yoga nhẹ nhàng và đơn giản',
-        type: 'hip_opening'
-    }),
-    new ClassModel({
-        timeFrom: new Date(2020, 5, 5, 12, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 13, 0, 0, 0),
-        name: 'Vinyasa',
-        price: 50000,
-        slot: 2,
-        user: {
-            id: 2,
-            name: 'Trung Kiên',
-            avatar: '/assets/images/features/staff/yoga/trung-kien.png'
-        },
-        room: 'Ocean View',
-        note: 'Một chuỗi những động tác liên tục',
-        type: 'vinyasa'
-    })
-];
-
 @Component({
     selector: 'app-yoga-step1',
     templateUrl: './yoga-step1.component.html',
@@ -309,9 +37,9 @@ const CLASSES: Array<ClassModel> = [
 })
 export class YogaStep1Component implements OnInit, OnDestroy {
     marks: Array<string> = [
-        '06:00', '06:30', '07:00', '07:30', '08:00','08:30','09:00','09:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00'
-        ,'13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30','18:00','18:30','19:00','19:30','20:00','20:30',
-        '21:00','21:30','22:00'
+        '06:00', '06:30', '07:00', '07:30', '08:00', '08:30', '09:00', '09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00'
+        , '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30', '18:00', '18:30', '19:00', '19:30', '20:00',
+        '20:30', '21:00', '21:30', '22:00'
     ];
     icons: { [key: string]: IconDefinition } = {
         arrowDown: faCaretDown,
@@ -323,7 +51,8 @@ export class YogaStep1Component implements OnInit, OnDestroy {
     minDate: NgbDate = new NgbDate(this.today.getFullYear(), this.today.getMonth() + 1, this.today.getDate());
     formFilterClass: FormGroup;
     step: number = 100 / (this.marks.length - 1);
-    listClasses: Array<any> = CLASSES;
+    listClasses: Array<ClassModel> = [];
+    listClassesToShow: Array<ClassModel> = [];
     listClassFilter: Array<{ title: string; value: string | null; }> = [
         {
             title: 'Features.DemoBooking.Yoga.Step.Step1.AllClass',
@@ -382,6 +111,12 @@ export class YogaStep1Component implements OnInit, OnDestroy {
 
     ngOnInit() {
         this.initFormFilterClass();
+        this.yogaBookingService.yogaFilterData$.subscribe((data: any) => {
+            if (data) {
+                this.formFilterClass.patchValue(data);
+            }
+            this.calculateListClassesData();
+        });
         this.subscribe();
     }
 
@@ -392,18 +127,23 @@ export class YogaStep1Component implements OnInit, OnDestroy {
 
     goDate(isNext: boolean): void {
         if (isNext) {
-            this.formFilterClass.get('currentDate').setValue(this.ngbCalendar.getNext(this.formFilterClass.get('currentDate').value, 'd', 1));
+            this.formFilterClass.get('currentDate').setValue(
+                this.ngbCalendar.getNext(this.formFilterClass.get('currentDate').value, 'd', 1)
+            );
+            this.calculateListClassesData();
             return;
         }
         this.formFilterClass.get('currentDate').setValue(this.ngbCalendar.getPrev(this.formFilterClass.get('currentDate').value, 'd', 1));
+        this.calculateListClassesData();
     }
-    
+
     changeDate(event: any): void {
         this.formFilterClass.get('currentDate').setValue(new NgbDate(event.year, event.month, event.day));
     }
 
     chooseClass(index: number) {
         this.formFilterClass.patchValue({ classIndex: index });
+        this.calculateListClassesData();
     }
 
     chooseRoom(index: number): void {
@@ -415,9 +155,9 @@ export class YogaStep1Component implements OnInit, OnDestroy {
     }
 
     chooseClassAndGoToPayment(index: number): void {
-        if (this.listClasses[index].slot < 10) {
+        if (this.listClassesToShow[index].slot < 10) {
             this.yogaBookingService.setYogaFilter(this.formFilterClass.value);
-            this.yogaBookingService.setYogaData({ value: this.listClasses[index], filter: this.formFilterClass.value });
+            this.yogaBookingService.setYogaData({ value: this.listClassesToShow[index], filter: this.formFilterClass.value });
             this.yogaBookingService.goToStepYoga(2);
         }
     }
@@ -447,49 +187,104 @@ export class YogaStep1Component implements OnInit, OnDestroy {
         });
 
         this.formFilterClass.valueChanges.pipe(
-            map((value: any) => {
-                return {
-                    classIndex: value.classIndex,
-                    roomIndex: value.roomIndex,
-                    teacherIndex: value.teacherIndex,
-                    timeFrom: value.timeFrom,
-                    timeTo: value.timeTo
-                }
-            }),
+            map((value: any) => ({
+                roomIndex: value.roomIndex,
+                teacherIndex: value.teacherIndex,
+                timeFrom: value.timeFrom,
+                timeTo: value.timeTo
+            })),
             distinctUntilChanged((item: any, compareItem: any) => JSON.stringify(item) === JSON.stringify(compareItem)),
             takeUntil(this._onDestroy$)
         ).subscribe((data) => {
             this.filterClassByCondition(data);
-        })
+        });
     }
 
     private filterClassByCondition(filterValue: any): void {
-        this.listClasses = CLASSES.filter((item: ClassModel) => {
+        this.listClassesToShow = this.listClasses.filter((item: ClassModel) => {
             return (!this.listClassFilter[filterValue.roomIndex].value || item.name === this.listClassFilter[filterValue.roomIndex].value)
-                && (!this.listClassFilter[filterValue.teacherIndex].value || item.user.name === this.listTeachers[filterValue.teacherIndex].value)
+                && (
+                    !this.listClassFilter[filterValue.teacherIndex].value
+                    || item.user.name === this.listTeachers[filterValue.teacherIndex].value)
                 && (
                     (
                         isAfter(
                             item.timeFrom,
-                            new Date(2020, 5, 5, parseFloat(filterValue.timeFrom.split(':')[0]), parseFloat(filterValue.timeFrom.split(':')[1]), 0, 0)
-                            
+                            new Date(
+                                2020,
+                                5,
+                                5,
+                                parseFloat(filterValue.timeFrom.split(':')[0]),
+                                parseFloat(filterValue.timeFrom.split(':')[1]),
+                                0,
+                                0
+                            )
                         )
                         || isEqual(
-                            new Date(2020, 5, 5, parseFloat(filterValue.timeFrom.split(':')[0]), parseFloat(filterValue.timeFrom.split(':')[1]), 0, 0),
+                            new Date(
+                                2020,
+                                5,
+                                5,
+                                parseFloat(filterValue.timeFrom.split(':')[0]),
+                                parseFloat(filterValue.timeFrom.split(':')[1]),
+                                0,
+                                0
+                            ),
                             item.timeFrom
                         )
                     )
                     && (
                         isBefore(
                             item.timeTo,
-                            new Date(2020, 5, 5, parseFloat(filterValue.timeTo.split(':')[0]), parseFloat(filterValue.timeTo.split(':')[1]), 0, 0)
+                            new Date(
+                                2020,
+                                5,
+                                5,
+                                parseFloat(filterValue.timeTo.split(':')[0]),
+                                parseFloat(filterValue.timeTo.split(':')[1]),
+                                0,
+                                0
+                            )
                         )
                         || isEqual(
                             item.timeTo,
-                            new Date(2020, 5, 5, parseFloat(filterValue.timeTo.split(':')[0]), parseFloat(filterValue.timeTo.split(':')[1]), 0, 0)
+                            new Date(
+                                2020,
+                                5,
+                                5,
+                                parseFloat(filterValue.timeTo.split(':')[0]),
+                                parseFloat(filterValue.timeTo.split(':')[1]),
+                                0,
+                                0
+                            )
                         )
                     )
-                )
+                );
+        });
+    }
+
+    private calculateListClassesData(): void {
+        const currentStudioIndex: number = this.formFilterClass.get('classIndex').value;
+        const currentDate: NgbDate = this.formFilterClass.get('currentDate').value;
+        const dateIndex: number = currentDate.day;
+        const newClasses: Array<ClassModel> = [];
+        for (let i = 0; i < Classes.length; i++) {
+            if ((i >= (currentStudioIndex * 30) && i < ((1 + currentStudioIndex) * 30))
+                && (dateIndex % 2) === i % 2    
+            ) {
+                newClasses.push(Classes[i]);
+            };
+            if (newClasses.length === 15) {
+                break;
+            }
+        }
+        this.listClasses = newClasses;
+        const formValue: any = this.formFilterClass.value;
+        this.filterClassByCondition({
+            roomIndex: formValue.roomIndex,
+            teacherIndex: formValue.teacherIndex,
+            timeFrom: formValue.timeFrom,
+            timeTo: formValue.timeTo
         });
     }
 }
