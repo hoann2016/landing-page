@@ -51,7 +51,7 @@ export class YogaStep2Component implements OnInit, OnDestroy {
         this.formPaymentYoga = this.fb.group({
             quantity: [1],
             name: [null, Validators.required],
-            email: [null, Validators.compose([Validators.required, Validators.email])],
+            email: [null],
             phone: [null],
             payNow: [true],
             day: [null],
