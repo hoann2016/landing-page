@@ -66,19 +66,19 @@ export const Classes: Array<ClassModel> = [
         studio: 1
     },
     {
-        timeFrom: new Date(2020, 5, 5, 9, 0, 0, 0),
-        timeTo: new Date(2020, 5, 5, 10, 0, 0, 0),
-        name: 'Dynamic Flow',
-        type: 'dynamic_flow',
+        timeFrom: new Date(2020, 5, 5, 8, 30, 0, 0),
+        timeTo: new Date(2020, 5, 5, 9, 30, 0, 0),
+        name: 'Hatha Flow',
+        type: 'hatha_flow',
         price: 300000,
-        slot: 10,
+        slot: 7,
         user: {
             id: 3,
             name: 'Hồng Hạnh',
             avatar: '/assets/images/features/staff/yoga/hong-hanh.png'
         },
         room: 'Natural View',
-        note: 'Đây là lớp Yoga giảm cân tuyệt vời',
+        note: 'Tư thế Yoga nhẹ nhàng và đơn giản',
         studio: 1
     },
     {
@@ -130,19 +130,19 @@ export const Classes: Array<ClassModel> = [
         studio: 1
     },
     {
-        timeFrom: new Date(2020, 5, 5, 8, 30, 0, 0),
-        timeTo: new Date(2020, 5, 5, 9, 30, 0, 0),
-        name: 'Hatha Flow',
-        type: 'hatha_flow',
+        timeFrom: new Date(2020, 5, 5, 9, 0, 0, 0),
+        timeTo: new Date(2020, 5, 5, 10, 0, 0, 0),
+        name: 'Dynamic Flow',
+        type: 'dynamic_flow',
         price: 300000,
-        slot: 7,
+        slot: 10,
         user: {
             id: 3,
             name: 'Hồng Hạnh',
             avatar: '/assets/images/features/staff/yoga/hong-hanh.png'
         },
         room: 'Natural View',
-        note: 'Tư thế Yoga nhẹ nhàng và đơn giản',
+        note: 'Đây là lớp Yoga giảm cân tuyệt vời',
         studio: 1
     },
     {

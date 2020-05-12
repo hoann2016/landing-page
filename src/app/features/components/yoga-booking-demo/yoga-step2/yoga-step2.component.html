@@ -22,7 +22,7 @@
                         <label class="field-label">{{ 'Features.DemoBooking.Yoga.Step.Step2.Customer' | translate }}</label>
                         <div class="field-input">
                             <input
-                                type="text" formControlName="name" 
+                                type="text" formControlName="name"
                                 [placeholder]="'Features.DemoBooking.Yoga.Step.Step2.CustomerName' | translate"
                                 class="step-input">
                                 <div *ngIf="submit && formPaymentYoga?.get('name')?.errors" class="text-danger">
@@ -35,13 +35,9 @@
                     <div class="col-12">
                         <label class="field-label">Email</label>
                         <div class="field-input">
-                            <input type="text" formControlName="email" 
+                            <input type="text" formControlName="email"
                                 placeholder="example@ludiino.com"
                                 class="step-input">
-                                <div *ngIf="submit && formPaymentYoga?.get('email')?.errors" class="text-danger">
-                                    <div *ngIf="formPaymentYoga?.get('email')?.errors?.required">{{ "Features.DemoSteps.Step4.Validate.EmailRequired" | translate }}</div>
-                                    <div *ngIf="formPaymentYoga?.get('email')?.errors?.email">{{ "Features.DemoSteps.Step4.Validate.EmailIncorrect" | translate }}</div>
-                                </div>
                         </div>
                     </div>
                 </div>
@@ -49,7 +45,7 @@
                     <div class="col-12">
                         <label class="field-label">{{ 'Features.DemoBooking.Yoga.Step.Step2.Phone' | translate }}</label>
                         <div class="field-input">
-                            <input type="text" formControlName="phone" 
+                            <input type="text" formControlName="phone"
                                 placeholder="0988888888"
                                 class="step-input">
                         </div>
@@ -73,7 +69,7 @@
                         </div>
                         <div class="service-fee-name">
                             <span class="service-fee-type">{{ 'Features.DemoBooking.Yoga.Step.Step2.Pricing' | translate }}</span>
-                            <p class="service-fee-value" translate [translateParams]="{price: (formPaymentYoga?.get('price').value)?.toString() | priceExchangeRate | async | number}">Pricing.Transform</p>
+                            <p class="service-fee-value">{{ formPaymentYoga?.get('price').value | number }} đ</p>
                         </div>
                         <div class="service-fee-name">
                             <span class="service-fee-type">{{ "Features.DemoSteps.Step5.Quantity" | translate }}</span>
@@ -81,20 +77,20 @@
                         </div>
                         <div class="service-fee-name">
                             <span class="service-fee-type">{{ 'Features.DemoBooking.Yoga.Step.Step2.ToPricing' | translate }}</span>
-                            <p class="service-fee-value" translate [translateParams]="{price: (formPaymentYoga?.get('subTotal').value) | priceExchangeRate | async | number}">Pricing.Transform</p>
+                            <p class="service-fee-value">{{ formPaymentYoga?.get('subTotal').value | number }} đ</p>
                         </div>
                     </div>
                     <div class="total-sub">
                         <div class="left">{{ 'Features.DemoBooking.Yoga.Step.Step2.TempolaryPrice' | translate }}</div>
-                        <div class="right" translate [translateParams]="{price: (formPaymentYoga?.get('subTotal').value) | priceExchangeRate | async | number}">Pricing.Transform</div>
+                        <div class="right">{{ formPaymentYoga?.get('subTotal').value | number }}</div>
                     </div>
                     <div class="total-sub discount" *ngIf="formPaymentYoga?.get('payNow').value">
                         <div class="left">{{ 'Features.DemoBooking.Yoga.Step.Step2.DiscountOnline' | translate }}</div>
-                        <div class="right"><span translate [translateParams]="{price: (formPaymentYoga?.get('discount').value)?.toString() | priceExchangeRate | async | number}">Pricing.Transform</span></div>
+                        <div class="right"><span>- {{ formPaymentYoga?.get('discount').value | number }} đ</span></div>
                     </div>
                     <div class="total-sub">
                         <div class="left">{{ "Features.DemoSteps.Step5.Total" | translate }}</div>
-                        <div class="right" translate [translateParams]="{price: (formPaymentYoga?.get('total').value) | priceExchangeRate | async | number}">Pricing.Transform</div>
+                        <div class="right">{{ formPaymentYoga?.get('total').value | number }} đ</div>
                     </div>
                 </div>
                 <div class="booking-payment-method">
@@ -112,7 +108,7 @@
                 </div>
                 <div class="submit-booking">
                     <div class="submit-booking-button" (click)="submitForm()">
-                        {{ 'Features.DemoBooking.Yoga.Step.Step2.Payment' | translate }} &nbsp; <span translate [translateParams]="{price: (formPaymentYoga?.get('total').value) | priceExchangeRate | async | number}">Pricing.Transform</span>
+                        {{ 'Features.DemoBooking.Yoga.Step.Step2.Payment' | translate }} &nbsp; <span>{{ formPaymentYoga?.get('total').value | number }} đ</span>
                     </div>
                 </div>
             </div>

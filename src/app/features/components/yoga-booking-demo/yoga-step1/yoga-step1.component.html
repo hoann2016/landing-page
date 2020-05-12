@@ -132,7 +132,7 @@
                             <span class="time-format">{{ ({ timeFrom: item?.timeFrom, timeTo: item?.timeTo }) | yogaTimeFormat }}</span>
                         </td>
                         <td class="h-class"><span class="class-name">{{ item?.name | translate }}</span></td>
-                        <td class="h-fee"><span class="price" translate [translateParams]="{price: (item?.price) | priceExchangeRate | async | number}">Pricing.TransformDong</span></td>
+                        <td class="h-fee"><span class="price">{{ item?.price | number }} đ</span></td>
                         <td class="h-slot">
                             <span class="slot" [ngClass]="{ 'full': item?.slot === 10 }">{{ item?.slot }}/10</span>
                         </td>
