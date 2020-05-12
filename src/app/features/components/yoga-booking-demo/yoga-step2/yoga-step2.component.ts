@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation, OnDestroy, Output, EventEmitter }
 import { YogaBookingService } from '../services/yoga-booking.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Subject } from 'rxjs';
-import { distinctUntilChanged, takeUntil, pluck, map } from 'rxjs/operators';
+import { distinctUntilChanged, takeUntil, map } from 'rxjs/operators';
 import { getDay, format } from 'date-fns';
 import { StepService } from 'app/features/services/step.service';
 import { StaffList } from '../constants/staff.constant';

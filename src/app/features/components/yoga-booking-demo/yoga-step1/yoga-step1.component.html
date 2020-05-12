@@ -126,10 +126,10 @@
                 </thead>
                 <tbody>
                     <tr
-                        *ngFor="let item of listClasses; let i = index;"
+                        *ngFor="let item of listClassesToShow; let i = index;"
                         [ngClass]="{ 'full': item?.slot === 10 }" (click)="chooseClassAndGoToPayment(i)">
                         <td class="h-hour">
-                            <span class="time-format">{{ item?.getTimeFormat }}</span>
+                            <span class="time-format">{{ ({ timeFrom: item?.timeFrom, timeTo: item?.timeTo }) | yogaTimeFormat }}</span>
                         </td>
                         <td class="h-class"><span class="class-name">{{ item?.name | translate }}</span></td>
                         <td class="h-fee"><span class="price" translate [translateParams]="{price: (item?.price) | priceExchangeRate | async | number}">Pricing.TransformDong</span></td>
@@ -139,9 +139,9 @@
                         <td class="h-teacher">
                             <span class="user">
                                 <span class="user-avatar">
-                                    <img [src]="item?.getAvatar" [alt]="item?.name | translate">
+                                    <img [src]="item?.user?.avatar" [alt]="item?.name | translate">
                                 </span>
-                                <span class="user-name">{{ item?.user.name | translate }}</span>
+                                <span class="user-name">{{ item?.user?.name | translate }}</span>
                             </span>
                         </td>
                         <td class="h-room"><span class="class-room">{{ item?.room | translate }}</span></td>
