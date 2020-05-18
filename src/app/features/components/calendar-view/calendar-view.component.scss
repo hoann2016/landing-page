@@ -8,6 +8,7 @@
     overflow: hidden;
     font-family: ProximaNova;
     position: relative;
+    z-index: -1;
     @media screen and (max-width: 1370px) {
         width: 85%;
     }

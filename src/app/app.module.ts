@@ -28,53 +28,55 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 
 export function initLanguage(translateService: TranslatesService): Function {
-  return (): Promise<any> => translateService.initLanguage();
+    return (): Promise<any> => translateService.initLanguage();
 }
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+    return new TranslateHttpLoader(http);
 }
 
 const config: SocketIoConfig = { url: `${environment.rootproto}${environment.rootip}${environment.socketPort ? `:${environment.socketPort}` : ''}${environment.socketPath}`, options: {} };
+import { OverlayModule } from '@angular/cdk/overlay';
 
 @NgModule({
-  imports: [
-    BrowserModule.withServerTransition({ appId: 'my-app' }),
-    TransferHttpCacheModule,
-    HttpClientModule,
-    AppRoutes,
-    BrowserAnimationsModule,
-    CalendarModule.forRoot({
-      provide: DateAdapter,
-      useFactory: adapterFactory
-    }),
-    CookieModule.forRoot(),
-    SharedModule.forRoot(),
-    ToastrModule.forRoot({
-      timeOut: 3000,
-      positionClass: 'toast-top-right',
-      preventDuplicates: true,
-      enableHtml: true
-    }),
-    SharedMetaModule,
-    NgbModule,
-    SocketIoModule.forRoot(config)
-  ],
-  declarations: [AppComponent],
-  providers: [
-    // Guards TODO
-    // AuthGuard,
-    // UnAuthGuard,
-    // TODO Interceptors
-    // { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
-    // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-    { provide: APP_INITIALIZER, useFactory: initLanguage, multi: true, deps: [TranslatesService] },
-    CookieService,
-    UniversalStorage,
-    AppService, 
-    GlobalErrorHandlerService,
-    { provide: ErrorHandler, useClass: GlobalErrorHandlerService }, 
-  ],
+    imports: [
+        BrowserModule.withServerTransition({ appId: 'my-app' }),
+        TransferHttpCacheModule,
+        HttpClientModule,
+        AppRoutes,
+        BrowserAnimationsModule,
+        CalendarModule.forRoot({
+            provide: DateAdapter,
+            useFactory: adapterFactory
+        }),
+        CookieModule.forRoot(),
+        SharedModule.forRoot(),
+        ToastrModule.forRoot({
+            timeOut: 3000,
+            positionClass: 'toast-top-right',
+            preventDuplicates: true,
+            enableHtml: true
+        }),
+        SharedMetaModule,
+        NgbModule,
+        SocketIoModule.forRoot(config),
+        OverlayModule
+    ],
+    declarations: [AppComponent],
+    providers: [
+        // Guards TODO
+        // AuthGuard,
+        // UnAuthGuard,
+        // TODO Interceptors
+        // { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+        // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+        { provide: APP_INITIALIZER, useFactory: initLanguage, multi: true, deps: [TranslatesService] },
+        CookieService,
+        UniversalStorage,
+        AppService,
+        GlobalErrorHandlerService,
+        { provide: ErrorHandler, useClass: GlobalErrorHandlerService },
+    ],
 })
 export class AppModule {
 }

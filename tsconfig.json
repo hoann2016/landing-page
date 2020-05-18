@@ -5,6 +5,9 @@
         "paths": {
             "@shared/*": [
                 "app/shared/*"
+            ],
+            "@libs/*": [
+                "libs/*"
             ]
         },
         "outDir": "./dist/out-tsc",
@@ -24,6 +27,7 @@
         ]
     },
     "angularCompilerOptions": {
-        "preserveWhitespaces": false
+        "preserveWhitespaces": false,
+        "fullTemplateTypeCheck": true
     }
 }

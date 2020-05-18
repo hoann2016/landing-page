@@ -27,13 +27,13 @@
                     <div class="number-people">
                         <span>{{ "Features.DemoSteps.Step5.Discount" | translate }} (-10%)</span>
                         <span> - 
-                            <span translate [translateParams]="{price: (stepBookingData?.demoPrice * stepBookingData?.quantity * 10 / 100) | priceExchangeRate | async | number}">Pricing.Transform</span>
+                            <span translate [translateParams]="{price: (stepBookingData?.demoPrice * stepBookingData?.quantity * 10 / 100).toString() | priceExchangeRate | async | number}">Pricing.Transform</span>
                         </span>
                     </div>
                 </div>
                 <div class="total">
                     <div class="left">{{ "Features.DemoSteps.Step5.Total" | translate }}</div>
-                    <div class="right" translate [translateParams]="{price: price | priceExchangeRate | async | number}">Pricing.Transform</div>
+                    <div class="right" translate [translateParams]="{price: price.toString() | priceExchangeRate | async | number}">Pricing.Transform</div>
                 </div>
             </div>
             <div class="booking-payment-method">

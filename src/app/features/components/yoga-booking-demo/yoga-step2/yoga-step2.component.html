@@ -1,0 +1,117 @@
+<div class="step-wrapper">
+    <div class="step-header">
+        <h4 class="step-title"><span class="back-step-2" (click)="goToStep(1)"></span> 2. {{ 'Features.DemoBooking.Yoga.Step.Step2.Title' | translate }}</h4>
+        <div class="step-current">{{ "Features.DemoSteps.Step" | translate }} 2/2</div>
+    </div>
+    <div class="step-body">
+        <form class="payment-yoga" [formGroup]="formPaymentYoga">
+            <div class="payment-yoga-information">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label class="field-label">{{ "Features.DemoSteps.Step3.Quantity" | translate }}</label>
+                        <div class="field-input">
+                            <input type="text" class="step-input step-input-number" formControlName="quantity">
+                            <span>{{ 'Features.DemoSteps.Step3.Pax' | translate }}</span>
+                            <button class="step-input-btn dec" (click)="decrease()">-</button>
+                            <button class="step-input-btn inc" (click)="increase()">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label class="field-label">{{ 'Features.DemoBooking.Yoga.Step.Step2.Customer' | translate }}</label>
+                        <div class="field-input">
+                            <input
+                                type="text" formControlName="name"
+                                [placeholder]="'Features.DemoBooking.Yoga.Step.Step2.CustomerName' | translate"
+                                class="step-input">
+                                <div *ngIf="submit && formPaymentYoga?.get('name')?.errors" class="text-danger">
+                                    <div *ngIf="formPaymentYoga?.get('name')?.errors.required">{{ "Features.DemoSteps.Step4.Validate.NameRequired" | translate }}</div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label class="field-label">Email</label>
+                        <div class="field-input">
+                            <input type="text" formControlName="email"
+                                placeholder="example@ludiino.com"
+                                class="step-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label class="field-label">{{ 'Features.DemoBooking.Yoga.Step.Step2.Phone' | translate }}</label>
+                        <div class="field-input">
+                            <input type="text" formControlName="phone"
+                                placeholder="0988888888"
+                                class="step-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="payment-yoga-bill">
+                <div class="billing-info">
+                    <div class="date">
+                        <div class="left">{{ "Features.DemoSteps.Step5.Date" | translate }}</div>
+                        <div class="right">{{ 'Common.' + listDaysInWeek[formPaymentYoga?.get('dayTime').value] | translate }}, {{ formPaymentYoga?.get('day').value }}</div>
+                    </div>
+                    <div class="time">
+                        <div class="left">{{ "Features.DemoSteps.Step5.AppointmentTime" | translate }}</div>
+                        <div class="right">{{ formPaymentYoga?.get('time')?.value }}</div>
+                    </div>
+                    <div class="service-fee">
+                        <div class="service-fee-name">
+                            <span class="service-fee-type">{{ 'Features.DemoBooking.Yoga.Step.Step1.ClassRoom' | translate }}</span>
+                            <p class="service-fee-value">{{ formPaymentYoga?.get('serviceName')?.value }}</p>
+                        </div>
+                        <div class="service-fee-name">
+                            <span class="service-fee-type">{{ 'Features.DemoBooking.Yoga.Step.Step2.Pricing' | translate }}</span>
+                            <p class="service-fee-value">{{ formPaymentYoga?.get('price').value | number }} đ</p>
+                        </div>
+                        <div class="service-fee-name">
+                            <span class="service-fee-type">{{ "Features.DemoSteps.Step5.Quantity" | translate }}</span>
+                            <p class="service-fee-value">x{{ formPaymentYoga.get('quantity').value }}</p>
+                        </div>
+                        <div class="service-fee-name">
+                            <span class="service-fee-type">{{ 'Features.DemoBooking.Yoga.Step.Step2.ToPricing' | translate }}</span>
+                            <p class="service-fee-value">{{ formPaymentYoga?.get('subTotal').value | number }} đ</p>
+                        </div>
+                    </div>
+                    <div class="total-sub">
+                        <div class="left">{{ 'Features.DemoBooking.Yoga.Step.Step2.TempolaryPrice' | translate }}</div>
+                        <div class="right">{{ formPaymentYoga?.get('subTotal').value | number }}</div>
+                    </div>
+                    <div class="total-sub discount" *ngIf="formPaymentYoga?.get('payNow').value">
+                        <div class="left">{{ 'Features.DemoBooking.Yoga.Step.Step2.DiscountOnline' | translate }}</div>
+                        <div class="right"><span>- {{ formPaymentYoga?.get('discount').value | number }} đ</span></div>
+                    </div>
+                    <div class="total-sub">
+                        <div class="left">{{ "Features.DemoSteps.Step5.Total" | translate }}</div>
+                        <div class="right">{{ formPaymentYoga?.get('total').value | number }} đ</div>
+                    </div>
+                </div>
+                <div class="booking-payment-method">
+                    <label class="radio-orange-container">
+                        {{ "Features.DemoSteps.Step5.PayNow" | translate }}
+                        <input type="radio" formControlName="payNow" [value]="true">
+                        <span class="checkmark"></span>
+                        <span class="promotion">-10%</span>
+                    </label>
+                    <label class="radio-orange-container">
+                        {{ "Features.DemoSteps.Step5.PayAtStore" | translate }}
+                        <input type="radio" formControlName="payNow" [value]="false">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="submit-booking">
+                    <div class="submit-booking-button" (click)="submitForm()">
+                        {{ 'Features.DemoBooking.Yoga.Step.Step2.Payment' | translate }} &nbsp; <span>{{ formPaymentYoga?.get('total').value | number }} đ</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

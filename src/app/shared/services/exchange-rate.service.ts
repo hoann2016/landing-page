@@ -25,7 +25,7 @@ export class ExchangeRateService extends ApiBaseService {
 
     getCurrentExchangeRate(currencyCode: string): Observable<any> {
         const pairs: string = `${ currencyCode }/VND`;
-        const url: string = `https://fcsapi.com/api/forex/converter?symbol=${ pairs }&amount=1&access_key=xbydQMc0aweAXlccFYnnit4r8rU0Id20IBX10gsInTX03GlB7`;
+        const url: string = `https://fcsapi.com/api-v2/forex/converter?symbol=${ pairs }&amount=1&access_key=xbydQMc0aweAXlccFYnnit4r8rU0Id20IBX10gsInTX03GlB7`;
         return super.getOutsideLudiinoServer(url).pipe(
             map((result: any) => {
                 if (result && result.status && result.response && result.response['price_1x_VND']) {

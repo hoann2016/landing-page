@@ -4,7 +4,7 @@
             <div class="calendar-viewer-sidebar-menu-item"
                 *ngFor="let item of sidebarItems;"
             >
-                <img [src]="item?.icon" [alt]="item?.name | translate" loading="lazy">
+                <img [src]="item?.icon" [alt]="item?.name | translate" loading="lazy" width="25" height="25">
                 <p class="calendar-viewer-sidebar-menu-item-text">{{ item?.name | translate }}</p>
             </div>
         </div>
@@ -12,11 +12,11 @@
     <div class="calendar-viewer-content">
         <div class="calendar-viewer-content-header">
             <div class="calendar-viewer-content-header-logo">
-                <img src="/assets/images/logo/logo_orange.png" alt="Logo" loading="lazy">
+                <img src="/assets/images/logo/logo_orange.png" alt="Logo" loading="lazy" width="120" height="28">
             </div>
             <div class="calendar-viewer-content-header-box">
                 <div class="calendar-viewer-content-header-box-left">
-                    <img src="/assets/images/features/calendar/bell.png" alt="Bell" loading="lazy">
+                    <img src="/assets/images/features/calendar/bell.png" alt="Bell" loading="lazy" width="25" height="28">
                 </div>
                 <div class="calendar-viewer-content-header-box-right">
                     <div class="calendar-viewer-content-header-box-right-avatar">
@@ -37,10 +37,14 @@
             <div class="calendar-viewer-content-filter-service">
                 <div class="calendar-viewer-content-filter-service-select">
                     <span class="calendar-viewer-content-filter-service-select-icon">
-                        <img src="/assets/images/features/calendar/sort.png" alt="Sort" loading="lazy">
+                        <img src="/assets/images/features/calendar/sort.png" alt="Sort" loading="lazy" width="15" height="10">
                     </span>
                     <span class="calendar-viewer-content-filter-service-select-select">
-                        {{ 'Features.DemoBooking.Content.AllService' | translate }}
+                        {{ (solutionType === 'yoga' 
+                            ? 'Features.DemoBooking.Content.ViewByClass'
+                            : 'Features.DemoBooking.Content.AllService'
+                            ) | translate
+                        }}
                         <fa-icon [icon]="listIcons.faCaretDown"></fa-icon>
                     </span>
                 </div> 
@@ -62,11 +66,11 @@
             </div>
             <div class="calendar-viewer-content-filter-button">
                 <div class="calendar-viewer-content-filter-button-item">
-                    <img src="/assets/images/features/calendar/filter.png" alt="Sort" loading="lazy">
+                    <img src="/assets/images/features/calendar/filter.png" alt="Sort" loading="lazy" width="17" height="17">
                     <span>{{ 'Features.DemoBooking.Content.Filter' | translate }}</span>
                 </div>
                 <div class="calendar-viewer-content-filter-button-item">
-                    <img src="/assets/images/features/calendar/report.png" alt="Sort" loading="lazy">
+                    <img src="/assets/images/features/calendar/report.png" alt="Sort" loading="lazy" width="17" height="17">
                     <span>{{ 'Features.DemoBooking.Content.Report' | translate }}</span>
                 </div>
             </div>
@@ -75,10 +79,10 @@
             <div class="calendar-viewer-content-staff-list">
                 <div
                     class="calendar-viewer-content-staff-list-item"
-                    *ngFor="let staff of staffs; let i = index; trackBy: trackByCalendarStaff;"
+                    *ngFor="let staff of listStaffs; let i = index; trackBy: trackByCalendarStaff;"
                 >
                     <div class="calendar-viewer-content-staff-list-item-avatar">
-                        <img [src]="staff?.avatar" [alt]="staff?.name">
+                        <img [src]="staff?.avatar" [alt]="staff?.name" width="45" height="45">
                     </div>
                     <div class="calendar-viewer-content-staff-list-item-content">
                         <div class="calendar-viewer-content-staff-list-item-content-name">
@@ -147,22 +151,22 @@
                             </div>
                         </div>
                         <div class="calendar-viewer-content-preview-main-booking-part-item locked">
-                            <img src="/assets/images/features/calendar/lock.png" alt="Locked" loading="lazy">
+                            <img src="/assets/images/features/calendar/lock.png" alt="Locked" loading="lazy" width="15" height="20">
                         </div>
                         <div class="calendar-viewer-content-preview-main-booking-part-item locked">
-                            <img src="/assets/images/features/calendar/lock.png" alt="Locked" loading="lazy">
+                            <img src="/assets/images/features/calendar/lock.png" alt="Locked" loading="lazy" width="15" height="20">
                         </div>
                         <div class="calendar-viewer-content-preview-main-booking-part-item locked">
-                            <img src="/assets/images/features/calendar/lock.png" alt="Locked" loading="lazy">
+                            <img src="/assets/images/features/calendar/lock.png" alt="Locked" loading="lazy" width="15" height="20">
                         </div>
                         <div class="calendar-viewer-content-preview-main-booking-part-item locked">
-                            <img src="/assets/images/features/calendar/lock.png" alt="Locked" loading="lazy">
+                            <img src="/assets/images/features/calendar/lock.png" alt="Locked" loading="lazy" width="15" height="20">
                         </div>
                         <div class="calendar-viewer-content-preview-main-booking-part-item locked">
-                            <img src="/assets/images/features/calendar/lock.png" alt="Locked" loading="lazy">
+                            <img src="/assets/images/features/calendar/lock.png" alt="Locked" loading="lazy" width="15" height="20">
                         </div>
                         <div class="calendar-viewer-content-preview-main-booking-part-item locked">
-                            <img src="/assets/images/features/calendar/lock.png" alt="Locked" loading="lazy">
+                            <img src="/assets/images/features/calendar/lock.png" alt="Locked" loading="lazy" width="15" height="20">
                         </div>
                     </div>
                     <div class="calendar-viewer-content-preview-main-booking-part">

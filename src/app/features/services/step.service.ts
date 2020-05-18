@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { BehaviorSubject, Observable } from "rxjs";
+import { BookingStepConstant } from "../constants/booking-step.constant";
 
 @Injectable()
 export class StepService {
@@ -10,6 +11,9 @@ export class StepService {
 
     private dispatchCreateNewTicketBookingSource: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
     public dispatchCreateNewTicketBooking$: Observable<boolean> = this.dispatchCreateNewTicketBookingSource.asObservable();
+
+    private bookingSolutionTypeSource: BehaviorSubject<string> = new BehaviorSubject<string>(BookingStepConstant.defaultType);
+    public bookingSolutionType$: Observable<string> = this.bookingSolutionTypeSource.asObservable();
 
     constructor() { }
 
@@ -27,5 +31,11 @@ export class StepService {
 
     testBookingData(): any {
         return this.stepTestBookingData.value;
+    }
+
+    setBookingSolutionType(newValue: string): void {
+        if (newValue) {
+            this.bookingSolutionTypeSource.next(newValue);
+        }
     }
 }

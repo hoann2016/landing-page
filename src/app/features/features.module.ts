@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FeaturesRoutes } from './features.routing';
 import { FeaturesComponent } from './features.component';
 import { TranslateModule } from '@ngx-translate/core';
-import { NgbAccordionModule, NgbDatepickerModule, NgbDateParserFormatter } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAccordionModule, NgbDatepickerModule, NgbDateParserFormatter, NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemoBookingComponent } from './demo-booking/demo-booking.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -17,6 +17,13 @@ import { SharedModule } from '@shared/shared.module';
 import { FeatureHeaderComponent } from './components/feature-header/feature-header.component';
 import { CalendarViewComponent } from './components/calendar-view/calendar-view.component';
 import { NgbDateCustomParserFormatter } from './formaters/ngb-datepicker.formater';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { SalonBookingDemoComponent } from './components/salon-booking-demo/salon-booking-demo.component';
+import { YogaBookingDemoComponent } from './components/yoga-booking-demo/yoga-booking-demo.component';
+import { YogaStep1Component } from './components/yoga-booking-demo/yoga-step1/yoga-step1.component';
+import { YogaStep2Component } from './components/yoga-booking-demo/yoga-step2/yoga-step2.component';
+import { RangeSliderModule } from '@libs/slider/range-slider.module';
+import { YogaTimeFormatPipe } from './components/yoga-booking-demo/pipes/time-yoga-format.pipe';
 
 @NgModule({
     declarations: [
@@ -28,7 +35,12 @@ import { NgbDateCustomParserFormatter } from './formaters/ngb-datepicker.formate
         Step4Component,
         Step5Component,
         FeatureHeaderComponent,
-        CalendarViewComponent
+        CalendarViewComponent,
+        SalonBookingDemoComponent,
+        YogaBookingDemoComponent,
+        YogaStep1Component,
+        YogaStep2Component,
+        YogaTimeFormatPipe
     ],
     imports: [
         CommonModule,
@@ -39,12 +51,15 @@ import { NgbDateCustomParserFormatter } from './formaters/ngb-datepicker.formate
         NgbDatepickerModule,
         TranslateModule,
         FontAwesomeModule,
-        SharedModule
+        SharedModule,
+        NgbDropdownModule,
+        NgbPopoverModule,
+        RangeSliderModule
     ],
     providers: [
         StepService,
         {provide: NgbDateParserFormatter, useClass: NgbDateCustomParserFormatter}
     ],
-    entryComponents: [DemoBookingComponent]
+    entryComponents: [DemoBookingComponent, SalonBookingDemoComponent, YogaBookingDemoComponent]
 })
 export class FeaturesModule { }
