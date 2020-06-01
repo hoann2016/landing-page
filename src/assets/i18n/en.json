@@ -650,7 +650,8 @@
         "clone-merchant-site": "Initializing website.",
         "clone-merchant-site-success": "Clone website successfully",
         "preparing-merchant-site": "Your web site is being created, please wait ...",
-        "redirect-message": "Your web site is being created, please wait ..."
+        "redirect-message": "Your web site is being created, please wait ...",
+        "init-store-notifications": "Initializing store notifications template."
     },
     "Common": {
         "Discount": "Discount",

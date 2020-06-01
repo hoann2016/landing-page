@@ -672,7 +672,8 @@
         "clone-merchant-site": "Khởi tạo website",
         "clone-merchant-site-success": "Khởi tạo website thành công",
         "preparing-merchant-site": "Trang Web của bạn đang được tạo, vui lòng chờ ...",
-        "redirect-message": "Webstie của bạn đã được chuẩn bị xong. Đang chuyển đến."
+        "redirect-message": "Webstie của bạn đã được chuẩn bị xong. Đang chuyển đến.",
+        "init-store-notifications": "Khởi tạo mẫu thông báo cửa hàng"
     },
     "Common": {
         "Discount": "Khuyến mãi",
