@@ -152,7 +152,8 @@ export class PaymentComponent implements OnInit {
         if (!this.checkoutReponse || !this.paymentSession) {
             return;
         }
-        if (this.paymentSession.orderNumber === this.checkoutReponse.order_no) {
+        const [orderNum, environment] = this.checkoutReponse.order_no.split('_');
+        if (this.paymentSession.orderNumber === orderNum) {
             this.showLoading = true;
             const {checksum, session, order_no, status} = this.checkoutReponse;
             if (this.paymentSession.status === this.paymentSessionStatus.PAID) {
