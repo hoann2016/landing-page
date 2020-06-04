@@ -156,10 +156,10 @@ export class PaymentComponent implements OnInit {
         if (this.paymentSession.orderNumber === orderNum) {
             this.showLoading = true;
             const {checksum, session, order_no, status} = this.checkoutReponse;
-            if (this.paymentSession.status === this.paymentSessionStatus.PAID) {
-                return;
-            }
-            this.paymentSession.status = this.paymentSessionStatus.PAID;
+            // if (this.paymentSession.status === this.paymentSessionStatus.PAID) {
+            //     this.toastr.success(this.translate.instant('Payment.AlreadyPaid'));
+            //     this.router.navigateByUrl('/pages/sign-in');
+            // }
             sessionStorage.setItem('paymentSession', JSON.stringify(this.paymentSession));
             this.paymentService.verifyChecksum(checksum, session, order_no, status).subscribe((response: any) => {
                 if (response.success && response.data.result) {
@@ -169,6 +169,8 @@ export class PaymentComponent implements OnInit {
                         if (updateResponse.success) {
                             this.toastr.success(this.translate.instant('Payment.PaymentSuccessfully'));
                             sessionStorage.removeItem('paymentSession');
+                            sessionStorage.removeItem('order');
+                            sessionStorage.getItem('configPackages');
                             this.router.navigateByUrl('/pages/clone-site', { 
                                 state: 
                                 { 
