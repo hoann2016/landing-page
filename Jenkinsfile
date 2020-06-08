@@ -4,7 +4,7 @@ pipeline {
         HOME="."
         GIT_LOCAL_BRANCH = getGitBranchName()
         REGISTRY = "registry.gitlab.com/ludiino/lob/lb-landing-page/lb-landing-page-$GIT_LOCAL_BRANCH"
-        REGISTRY_CREDENTIAL = "gitlabhub-landingpage"
+        REGISTRY_CREDENTIAL = "gitlabhub-lob"
         REGISTRY_ENDPOINT = 'https://registry.gitlab.com'
         MAIN_VERSION = "v0.1."
         DOCKER_TAG = "$MAIN_VERSION$BUILD_NUMBER"
