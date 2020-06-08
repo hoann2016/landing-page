@@ -3,8 +3,9 @@ pipeline {
     environment {
         HOME="."
         GIT_LOCAL_BRANCH = getGitBranchName()
-        REGISTRY = "repo.treescale.com/ludiinohub/lb-landing-page-$GIT_LOCAL_BRANCH"
-        REGISTRY_CREDENTIAL = "treescalehub"
+        REGISTRY = "registry.gitlab.com/ludiino/lob/lb-landing-page/lb-landing-page-$GIT_LOCAL_BRANCH"
+        REGISTRY_CREDENTIAL = "gitlabhub-lob"
+        REGISTRY_ENDPOINT = 'https://registry.gitlab.com'
         MAIN_VERSION = "v0.1."
         DOCKER_TAG = "$MAIN_VERSION$BUILD_NUMBER"
         CONTAINER_NAME = 'lb-landing-page'
@@ -30,7 +31,7 @@ pipeline {
             }
             steps {
                 script {
-                    docker.withRegistry( "https://repo.treescale.com" , REGISTRY_CREDENTIAL ) {
+                    docker.withRegistry( REGISTRY_ENDPOINT , REGISTRY_CREDENTIAL ) {
                         dockerImage.push('latest')
                     }
                 }
@@ -45,7 +46,7 @@ pipeline {
                 echo 'DEPLOY DEVELOP'
                 sshagent (credentials: ['ssh-lobdev']) {
                     withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: REGISTRY_CREDENTIAL, usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
-                        sh "ssh -o StrictHostKeyChecking=no $LOBDEV_USER@$LOBDEV_HOST '/usr/bin/deploy $USERNAME $PASSWORD $CONTAINER_NAME'"
+                        sh "ssh -o StrictHostKeyChecking=no $LOBDEV_USER@$LOBDEV_HOST '/usr/bin/deploy $REGISTRY_ENDPOINT $USERNAME $PASSWORD $CONTAINER_NAME'"
                     }
                 }
                 echo 'DONE'
@@ -59,7 +60,7 @@ pipeline {
                 echo 'DEPLOY STAGING'
                 sshagent (credentials: ['ssh-lobstaging']) {
                     withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: REGISTRY_CREDENTIAL, usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
-                        sh "ssh -o StrictHostKeyChecking=no $LOBSTAGING_USER@$LOBSTAGING_HOST '/usr/bin/deploy $USERNAME $PASSWORD $CONTAINER_NAME'"
+                        sh "ssh -o StrictHostKeyChecking=no $LOBSTAGING_USER@$LOBSTAGING_HOST '/usr/bin/deploy $REGISTRY_ENDPOINT $USERNAME $PASSWORD $CONTAINER_NAME'"
                     }
                 }
                 echo 'DONE'
