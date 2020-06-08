@@ -16,7 +16,7 @@
                 <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line ">{{'Payment.SelectedPackage'|translate}}</div>
                 <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line align-right">
                   <select class="custom-select option-highlight" (change)="changeConfigPackage($event.target.value)" >
-                      <option *ngFor="let configPackage of configPackages; let i = index" [value]="i" [selected]="paymentSession.selectedConfigPackage.id === configPackage.id">{{configPackage?.name}}
+                      <option *ngFor="let configPackage of configPackages; let i = index" [value]="i" [selected]="paymentSession?.selectedConfigPackage?.id === configPackage.id">{{configPackage?.name}}
                   </select>
                 </div>
               </div>
@@ -71,7 +71,7 @@
               <ul class="d-flex flex-column">
                 <li class="row">
                   <label class="form-check-label" for="online"> {{'Payment.PaymentOnline'|translate}}</label>
-                  <input type="radio" class="form-check-input"  id="online" name="payment-method" value="CC" [(ngModel)]='paymentSession.paymentMethod' (change)="changePayment($event)">
+                  <input type="radio" class="form-check-input"  id="online" name="payment-method" value="CC" [(ngModel)]='paymentSession?.paymentMethod' (change)="changePayment($event)">
                   <ul class="bank-border" *ngIf="cc && paymentSession.paymentMethod === 'CC'">
                       <li class="bank-element" *ngFor="let cci of cc; index as i; trackBy: trackByCode" (click)="changeBankCode(cci?.code)" [class.active]="cci.code === paymentSession.bankCode">
                           <a title="{{cci?.code}}" href="javascript:void(0)">
@@ -82,7 +82,7 @@
                 </li>
                 <li class="row">
                   <label class="form-check-label" for="ck"> {{'Payment.PaymentTransfer'|translate}} </label>
-                  <input type="radio" class="form-check-input" id="ck" name="payment-method" value="Bank-account" [(ngModel)]='paymentSession.paymentMethod' (change)="changePayment($event)">
+                  <input type="radio" class="form-check-input" id="ck" name="payment-method" value="Bank-account" [(ngModel)]='paymentSession?.paymentMethod' (change)="changePayment($event)">
                   <ul class="bank-border" *ngIf="banks && paymentSession.paymentMethod === 'Bank-account'">
                       <li class="bank-element" *ngFor="let bank of banks; let i = index; trackBy: trackByCode" (click)="changeBankCode(bank?.code)" [class.active]="bank.code === paymentSession.bankCode">
                           <a title="{{bank?.code}}" href="javascript:void(0)">
@@ -94,7 +94,7 @@
                 <li class="row">
                   <label class="form-check-label" for="tt">{{'Payment.PaymentDirect'|translate}}
                   </label>
-                    <input type="radio" class="form-check-input" id ="tt" name="payment-method" value="Pay-later" [(ngModel)]='paymentSession.paymentMethod' (change)="changePayment($event)">
+                    <input type="radio" class="form-check-input" id ="tt" name="payment-method" value="Pay-later" [(ngModel)]='paymentSession?.paymentMethod' (change)="changePayment($event)">
                 </li>
               </ul>
               <div class="row temp-price">
