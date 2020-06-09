@@ -525,7 +525,7 @@
         "CompletePayment": "Proceed To Payment",
         "RequireSelectPayment": "You must select an payment",
         "PaymentSuccessfully": "Your payment has been proceeded successfully",
-        "AlreadyPaid": "You have already "
+        "AlreadyPaid": "You have already paid your package. Please login to route to admin dashboard"
     },
     "Shared": {
         "RegisterBtnLabel": "Register",

@@ -16,7 +16,7 @@
                 <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 one-line ">{{'Payment.SelectedPackage'|translate}}</div>
                 <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4  one-line align-right">
                   <select class="custom-select option-highlight" (change)="changeConfigPackage($event.target.value)" >
-                      <option *ngFor="let configPackage of configPackages; let i = index" [value]="i" [selected]="paymentSession.selectedConfigPackage.id === configPackage.id">{{configPackage?.name}}
+                      <option *ngFor="let configPackage of configPackages; let i = index" [value]="i" [selected]="paymentSession?.selectedConfigPackage?.id === configPackage.id">{{configPackage?.name}}
                   </select>
                 </div>
               </div>
